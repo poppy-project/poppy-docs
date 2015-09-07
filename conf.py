@@ -144,12 +144,12 @@ html_theme = 'basicstrap'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#~ html_logo = 'pypot_logo-144x144.png'
+html_logo = 'images/poppy_name_h144.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#~ html_favicon = 'pypot_logo-48x48.png'
+html_favicon = 'images/poppy_flower_logo-small.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -229,7 +229,7 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-'preamble': '\usepackage{minitoc}',
+#'preamble': '\usepackage{minitoc}',
 
 # Latex figure (float) alignment
 #'figure_align': 'htbp',
@@ -245,7 +245,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#~ latex_logo = 'pypot_logo.png'
+latex_logo ='images/poppy_flower_logo-small.png'
 
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
