@@ -13,7 +13,7 @@ It is compatible with Windows, Mac and linux and can be installed from `here <ht
 
    <a href="http://www.coppeliarobotics.com/downloads.html" target="_blank">here</a>
 
-It is free to use if you are from teh education world and you can get a limited version otherwise.
+It is free to use if you are from the education world and you can get a limited version otherwise.
 
 Warning: a physical simulation always asks for quite a lot of computation, so try to run it on a not-too-old computer.
 
@@ -21,7 +21,7 @@ Warning: a physical simulation always asks for quite a lot of computation, so tr
 Start a simulation with Poppy Humanoid
 ===========================
 
-Once you have V-rep and poppy-humanoid installed on your computer (see TODO for installing poppy-humanodi and tehrefore pypot on your desktop computer), you need to
+Once you have V-rep and poppy-humanoid installed on your computer (see TODO for installing poppy-humanoid and therefore pypot on your desktop computer), you need to
 follow these two steps:
 
 Start V-rep
@@ -92,7 +92,7 @@ You may want at some point to go back to the initial state of the simulation. He
     poppy.reset_simulation()
     
 Troubleshooting and advanced usage
-------------------------------------------------------------------------------------------------------------
+============================
 
 TODO
 
@@ -102,7 +102,7 @@ TODO
 - how to add another creature ?
 
 Usage example: determine reachable space for the arm
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------------------------------------------------
 
 Using a V-REP simulated robot, you can easily retrieve an object position and orientation. You just need to know its name in the vrep scene.
 
