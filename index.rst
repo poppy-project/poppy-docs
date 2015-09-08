@@ -16,7 +16,17 @@ Introducing the Poppy project and the Poppy creatures
 
     poppy_project.rst
     
+        
+Assembly guides
+=======================================================
 
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-humanoid/assembly_doc/index.rst
+    poppy-ergo-jr/assembly_doc/index.rst
     
     
 Quickstarts
@@ -39,6 +49,14 @@ Pypot: documentation and tutorials
     pypot/doc/index.rst
 
 
+APIs
+=======================================================
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    pypot/doc/api.rst
     
 
 Indices and tables
