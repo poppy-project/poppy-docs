@@ -27,6 +27,7 @@ Quickstarts
     :maxdepth: 2
 
     quickstarts/vrep.rst
+    quickstarts/snap.rst
 
 Pypot: documentation and tutorials
 =======================================================
