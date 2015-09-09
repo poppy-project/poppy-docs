@@ -1,10 +1,29 @@
 .. _installation:
 
-Installation
-============
+Installation with a pre-flashed system image
+=======================
+
+If you are using an official Poppy creature (Poppy Humanoid, Poppy Torso, Poppy Ergo Jr), you may receive a ready-to-use, already-flashed SD card for your Raspberry Pi 2, with everything already installed.
+
+If you are building your kit yourself, get a SD card (8 GB or more) and flash it with the TODO LINK system image, following for example `these instructions <https://www.raspberrypi.org/documentation/installation/installing-images//>`__
+
+Now simply check your installation (TODO link network check) and, if needed, update it. Your Poppy creature is ready to come alive.
+
+Manual installation
+=======================
+
+Why do this? 
+-------------------------
+
+- Because no-one offers a system image for your Poppy creature
+- Because you want to install the latest version of each library (even if they may be less stable)
+- Because your creature's brain is not a Raspberry Pi. In fact, it may even be your desktop computer, where you directly pluggued the USB2serial device.
+- Because you are using a simulator
+
 Requirements
--------------------
-Pypot is written in `python <https://www.python.org/>`__ and need a python interpreter to be run. Moreover pypot has `scipy <www.scipy.org/>`_ and `numpy <http://www.numpy.org>`_ for dependencies, as they are not fully written in python they need system side packages to be build, it easier to use pre-build binaries for your operating system.
+-------------------------
+Pypot is written in `python <https://www.python.org/>`__ and need a python interpreter to be run. Moreover pypot has `scipy <www.scipy.org/>`_ and `numpy <http://www.numpy.org>`_ for dependencies, 
+as they are not fully written in python they need system side packages to be build, it easier to use pre-build binaries for your operating system.
 
 Windows
 ~~~~~~~~~~~~~~~~~~~
@@ -105,3 +124,9 @@ On most Linux distributions you will not have the necessary permission to access
   sudo addgroup $USER uucp
 
 At this point you should have a pypot ready to be used! In the extremely unlikely case where anything went wrong during the installation, please refer to the `issue tracker <https://github.com/poppy-project/pypot/issues>`_.
+
+
+Updating
+==================
+
+TODO

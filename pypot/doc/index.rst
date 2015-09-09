@@ -13,8 +13,18 @@ Introduction
 
     about.rst
     installation.rst
-    quickstart.rst
 
+Quickstarts
+=================================
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    quickstart-lowlevel.rst
+    quickstart-configfile.rst
+    quickstart-primitive.rst    
+  
 .. _tutorial:
 
 Tutorial
