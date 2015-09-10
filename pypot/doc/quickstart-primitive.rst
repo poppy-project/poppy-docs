@@ -18,9 +18,12 @@ Some primitives are defined in Pypot. Other of specific to a robot and therefore
 Example: Record and replay moves
 -----------------------------------------------------------------
 
-MoveRecorder and MovePlayer are included in Pypot and allow you to record a move and replay it.
+The :mod:`~pypot.primitive.move` module contains utility classes to help you record and play moves. A :class:`~pypot.primitive.move.Move` object simply contains a sequence of positions.
 
-Assuming you have a pypot.robot poppy already created.
+
+The :class:`~pypot.primitive.move.MoveRecorder` and :class:`~pypot.primitive.move.MovePlayer` are primitives included in Pypot and allow you to record a move and replay it.
+
+Assuming you have a :class:`~pypot.robot` poppy already created:
 
 ::
 
@@ -48,7 +51,9 @@ Assuming you have a pypot.robot poppy already created.
     with open('mymove.json', 'w') as f:
         recorder.move.save(f)
 
-During the 20 second wait, move the robot. The angular positions will be recorded,stored in recorder.move and, at the end, saved into a file called mymove.json. You can open this file with text editor to check what it contains.
+During the 20 seconds wait, move the robot. The angular positions will be recorded, stored in recorder.move and, at the end, saved into a file called mymove.json. You can open this file with text editor to check what it contains.
+
+We can now replay the move:
 
 ::
 
