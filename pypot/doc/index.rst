@@ -27,7 +27,7 @@ Quickstarts
   
 .. _tutorial:
 
-Tutorial
+Pypot in details
 =================================
 
 .. toctree::
@@ -40,16 +40,10 @@ Tutorial
     extending.rst
     remote_access.rst
     logging.rst
-
-
-Tools
-=================================
-
-.. toctree::
-    :titlesonly:
-    :maxdepth: 2
-
     herborist.rst
-    move.rst
+
+
+    
+
 
 
