@@ -10,6 +10,12 @@ In Pypot, there is a TODO LINK Robot object that contains the configuration of y
 
 You can build a Robot object by hand, but it is much easier to launch a configuration from a configuration file. This text file contains a dictionnary, encoded in json.
 
+The important fields are:
+
+* **controllers** - This key holds the information pertaining to a controller and all the items connected to its bus.
+* **motors** - This is a description of all the custom setup values for each motor. Meta information, such as the motor access name or orientation, is also included here. It is also there that you will set the angle limits of the motor.
+* **motorgroups** - This is used to define alias of a group of motors (e.g. left_leg).
+
 This is an example of a minimal config file:
 
 ::
@@ -56,10 +62,9 @@ This is an example of a minimal config file:
 
 It contains:
 
-- two motors called head_y and head_z
-- one motor group called head and containing the head_y and head_z motors
-- one controller called head_controller, which controls teh motors of the motor group head. 
-    A controller is associated to a serial port and therefore a USB2serial device. Even if you can theoretically plug more than 100 servos on one port, it is unadvised (for electrical losses) to have more than 15.
+- two **motors** called head_y and head_z
+- one **motor group** called head and containing the head_y and head_z motors
+- one **controller** called head_controller, which controls the motors of the motor group head. A controller is associated to a serial port and therefore a USB2serial device. Even if you can theoretically plug more than 100 servos on one port, it is unadvised (for electrical losses) to have more than 15.
     
 Each robot-specific library (poppy-humanoid for example) contains its own configuration file.
 

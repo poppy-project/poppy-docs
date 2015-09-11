@@ -34,7 +34,9 @@ Pypot in details
     :titlesonly:
     :maxdepth: 2
 
-    controlling_robot.rst
+    dynamixel.rst
+    robot.rst
+    motor.rst
     primitive.rst
     vrep.rst
     extending.rst

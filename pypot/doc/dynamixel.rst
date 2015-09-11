@@ -34,7 +34,7 @@ The :mod:`~pypot.dynamixel` module offers several useful function to learn the s
 - :py:class:`~pypot.dynamixel.find_port` takes a list of motors IDs and scan the available ports until it finds the motors. 
 - :py:class:`~pypot.dynamixel.autodetect_robot` scans all ports and creates a :mod:`~pypot.robot` out of the found motors
 
-Useful example::
+::
 
     import pypot.dynamixel
     
@@ -122,8 +122,49 @@ Registers in Dynamixel servomotors allow you to (among others):
 The list of all functions is available in :class:`~pypot.dynamixel.io.DxlIO`. The syntax is the same for all registers: all the getter functions takes a list of ids as argument and the setter takes a dictionary of (id: value) pairs. 
 
 
+Set parameters for Poppy robots
+--------------------------------------------------
 
+This code can be used to initialize a new motor to the right ID, baudrate and return delay. be sure to adapt it to your configuration!
 
+::
+
+    import pypot.dynamixel, time
+
+    ports = pypot.dynamixel.get_available_ports()
+    if not ports:
+        raise IOError('no port found!')
+    print 'ports found', ports
+
+    my_port = ports[0]
+
+    old_id = 1           #Should be 1 if the motor has never been configured\n",
+    new_id = 11            #Change this value\n",
+
+    old_baudrate = 57600   #Should be 57600 for new MX-28 or MX-64, 1000000 for new AX612A or XL-320\n",
+    new_baudrate = 1000000 #Should be 1000000"
+
+    dxl_io = pypot.dynamixel.DxlIO(my_port, baudrate=old_baudrate)
+
+    found =  dxl_io.scan([old_id])
+    if old_id in found:
+        dxl_io.set_return_delay_time({old_id : 0})
+        dxl_io.change_id({old_id : new_id})
+        dxl_io.change_baudrate({new_id : new_baudrate})
+        
+    else:
+        print "motor ",old_id," not found on port ", my_port, " at baudrate ",old_baudrate
+        
+    dxl_io.close()
+
+    time.sleep(2)
+
+    dxl_io = pypot.dynamixel.DxlIO(my_port, baudrate=new_baudrate)
+    found =  dxl_io.scan([new_id])
+    if new_id in found:
+        print "success"
+    else:
+        print "motor ",new_id," not found on port ", my_port, " at baudrate ",new_baudrate
 
 
 %%%%%%%%%%%%%%%%
