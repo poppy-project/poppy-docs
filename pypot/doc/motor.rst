@@ -1,121 +1,124 @@
 .. _motor:
 
 The Motor object
-================
+===============
 
 
 Overview
 -----------------------
 
+The  :class:`~pypot.robot.robot.Robot` class contains a list of  :class:`~pypot.dynamixel.motor.DxlMotor`, each :class:`~pypot.dynamixel.motor.DxlMotor` being linked to a physical Dynamixel motor. 
 
-Usage examples
+
+Registers
++++++++++++++++
+
+This class provides access to t(see :attr:`~pypot.dynamixel.motor.DxlMotor.registers` for an exhaustive list):
+    * id: motor id 
+    * motor name
+    * motor model
+    * present position/speed/load
+    * goal position/speed/load
+    * compliant
+    * motor orientation and offset
+    * angle limit
+    * temperature
+    * voltage
+    
+Temperature and load can give you an idea of how much effort a motor produces::
+    
+    for m in robot.motors:
+        print "motor ",m.name, "(",m.model,"), id: ",m.id
+        print 'temperature: ',m.temperature
+        print "load: ", m.load
+        print "---"
+
+Torque and compliance
+++++++++++++++
+
+A motor with compliance will not exert any torque. You can move it by hand. Removing compliance will cause the motor to exert torque and therefore move to get to its goal position. The compliance can be set for each motor individually::
+
+    robot.head_z.compliant = False
+    
+or can be set at  :ref:`robot level <robot>`.
+
+You can set the compliance mode to 'safe' (as opposed to 'dummy') to have the robot set compliance at angle limits, preventing you to move it outside of the authorized range. It also prevents the brutal moves when putting back compliance and the robot wants to go back inside its angle limits.
+
+::
+
+    print robot.head_z.angle_limit
+    robot.head_z.compliant_behavior('safe')
+    robot.head_z.compliant = True
+    #now try moving the head with your hands beyond the angle limits
+
+
+You can also change the maximal torque that the robot can use. Use a value between 0 (no torque) and 100 (max torque). The resulting maximal torque depends onthe model of teh robot::
+
+    robot.head_z.max_torque = 20
+    
+Reducing the maximal torque makes your robot less powerful and therefore less harmfull and adds elasticity to the joints: if you apply a force on it,it moves because it does not have enough torque to resist, but it goes back to its goal position when you stop applying the force.
+
+
+            
+Controlling motors
 --------------------------------
 
 Controlling in position
 +++++++++++++++++++++++
 
-As shown in the examples above, the robot class let you directly access the different motors. For instance, let's assume we are working with an Ergo-robot, you could then write::
+Dynamixel servomotors will use their internal controller to reach and stay at the angle defined in the goal_position register (in degree). 
+If this angle isn't between :attr:`~pypot.dynamixel.motor.DxlMotor.lower_limit` and :attr:`~pypot.dynamixel.motor.DxlMotor.upper_limit`, the goal angle will automatically be taken back into the limits::
 
-    import pypot.robot
-
-    from pypot.robot.config import ergo_robot_config
-
-    robot = pypot.robot.from_config(ergo_robot_config)
-
-    # Note that all these calls will return immediately,
-    # and the orders will not be directly sent
-    # (they will be sent during the next write loop iteration).
-    for m in ergo_robot.base:
+    for m in robot.motors:
         m.compliant = False
         m.goal_position = 0
-
-    # This will return the last synchronized value
-    print(ergo_robot.base_pan.present_position)
-
-For a complete list of all the attributes that you can access, you should refer to the :class:`~pypot.dynamixel.motor.DxlMotor` API.
-
-As an example of what you can easily do with the Robot API, we are going to write a simple program that will make a robot with two motors move with sinusoidal motions. More precisely, we will apply a sinusoid to one motor and the other one will read the value of the first motor and use it as its own goal position. We will still use an Ergo-robot as example::
-
-    import time
-    import numpy
-
-    import pypot.robot
-
-    from pypot.robot.config import ergo_robot_config
-
-    amp = 30
-    freq = 0.5
-
-    robot = pypot.robot.from_config(ergo_robot_config)
-
-    # Put the robot in its initial position
-    for m in ergo_robot.motors: # Note that we always provide an alias for all motors.
-        m.compliant = False
-        m.goal_position = 0
-
-    # Wait for the robot to actually reach the base position.
+        
     time.sleep(2)
 
-    # Do the sinusoidal motions for 10 seconds
-    t0 = time.time()
+    for m in robot.motors:
+        print "position: ", m.present_position, "(limits: ",m.angle_limit, ")"
 
-    while True:
-        t = time.time() - t0
-
-        if t > 10:
-            break
-
-        pos = amp * numpy.sin(2 * numpy.pi * freq * t)
-
-        ergo_robot.base_pan.goal_position = pos
-
-        # In order to make the other sinus more visible,
-        # we apply it with an opposite phase and we increase the amplitude.
-        ergo_robot.head_pan.goal_position = -1.5 * ergo_robot.base_pan.present_position
-
-        # We want to run this loop at 50Hz.
-        time.sleep(0.02)
 
 
 Controlling in speed
 ++++++++++++++++++++
 
-Thanks to the :attr:`~pypot.dynamixel.motor.DxlMotor.goal_speed` property you can also control your robot in speed. More precisely, by setting :attr:`~pypot.dynamixel.motor.DxlMotor.goal_speed` you will change the :attr:`~pypot.dynamixel.motor.DxlMotor.moving_speed` of your motor but you will also automatically change the :attr:`~pypot.dynamixel.motor.DxlMotor.goal_position` that will be set to the angle limit in the desired direction.
+You can also control your robot in speed. Set the :attr:`~pypot.dynamixel.motor.DxlMotor.goal_speed` attribute to the desired value in degree per seconds.
+This automatically sets the :attr:`~pypot.dynamixel.motor.DxlMotor.goal_position` to the maximal or minimal value (depending on the sign of the speed).
+
+The motor will remain at the given speed until it gets a new order or it reaches its angle limit.
+
+Example of robot making 'yes' with its head::
+
+    goal = 20
+    
+    t_init = time.time()
+    
+    while time.time() - t_init < 20:
+    
+        if abs(robot.head_y.present_position) > abs(goal):
+            goal = -goal
+    
+        speed = 0.1*(goal - robot.head_y.present_position)
+        robot.head_y.goal_speed = speed
+        
+        time.sleep(0.1)
+    
 
 
 .. note:: You could also use the wheel mode settings where you can directly change the :attr:`~pypot.dynamixel.motor.DxlMotor.moving_speed`. Nevertheless, while the motor will turn infinitely with the wheel mode, here with the :attr:`~pypot.dynamixel.motor.DxlMotor.goal_speed` the motor will still respect the angle limits.
 
-
-As an example, you could write::
-
-    t = numpy.arange(0, 10, 0.01)
-    speeds = amp * numpy.cos(2 * numpy.pi * freq * t)
-
-    positions = []
-
-    for s in speeds:
-        ergo_robot.head_pan.goal_speed = s
-        positions.append(ergo_robot.head_pan.present_position)
-        time.sleep(0.05)
-
-    # By applying a cosinus on the speed
-    # You observe a sinusoid on the position
-    plot(positions)
-
 .. warning:: If you set both :attr:`~pypot.dynamixel.motor.DxlMotor.goal_speed` and :attr:`~pypot.dynamixel.motor.DxlMotor.goal_position` only the last command will be executed. Unless you know what you are doing, you should avoid to mix these both approaches.
 
 
-The :meth:`~pypot.robot.robot.Robot.goto_position` function
+The :meth:`~pypot.dynamixel.motor.goto_position` function
 ++++++++++++++++++++++++++++++++++++++++++
 
-The :class:`~pypot.dynamixel.motor.DxlMotor` allows you to control motors in position and speed, but, at the :class:`~pypot.dynamixel.robot.Robot` level, you can give orders to a set of motors and 
-be assured that they will be treated simultaneously. 
+If you want a servo to go to a certain position in a certain time (for synchronization reasons...), use the :meth:`~pypot.dynamixel.motor.goto_position` function. It take two mandatory arguments: position to reach (in degrees) and the duration::
 
-This is especially useful for choregraphies, because the :meth:`~pypot.robot.robot.Robot.goto_position` function ensures that all motors smoothly reach their final positions at the same time, while using the goal_position field will lead all motors to go to the same speed, without time synchronization.
+    robot.head_z.goto_position(20, 3)
 
-For example to move the head to angles (0, 20.) degrees in 3 seconds::
-
-    robot.goto_position({"head_z":0. , "head_y":20}, 3)
+To synchronize several motors, have a look at the :meth:`~pypot.robot.robot.Robot.goto_position` at robot level.
 
 By default, this function return immediatelly and is cancelled if another one is run later, even if the 3 seconds are not over.
 
@@ -128,5 +131,5 @@ The 'minijerk' controller has a more complex algorithm to slow down before and a
 
 ::
 
-    robot.goto_position({"head_z":0. , "head_y":20}, 3, control='dummy', wait=True)
+    robot.head_z.goto_position(20, 3, control='dummy', wait=True)
 
