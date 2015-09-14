@@ -1,4 +1,4 @@
-.. _controller:
+.. _robot:
 
 The Robot Object
 ================
@@ -171,6 +171,11 @@ The main fields of the :class:`~pypot.robot.robot.Robot` are:
     Each motor name is a field of the robot, so you can control a motor directly::
     
         print robot.head_z.present_position
+        
+    Each motor group is also a field::
+    
+        for m in robot.head:
+            print m.name  
         
 -   compliant: This is a shortcut to set all motors compliance to the same value in one command::
 
