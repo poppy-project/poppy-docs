@@ -1,35 +1,149 @@
-﻿.. _my_prim:
+﻿.. _primitives:
 
-Primitives everywhere
+Primitives
 =====================
 
-In the previous sections, we have shown how to make a simple behavior thanks to the :class:`~pypot.robot.robot.Robot` abstraction. But how to combine those elementary behaviors into something more complex? You could use threads and do it manually, but we provide the :class:`~pypot.primitive.primitive.Primitive` to abstract most of the work for you.
+In the previous sections, we have shown how to make a simple behavior thanks to the :class:`~pypot.robot.robot.Robot` abstraction. 
+:class:`~pypot.primitive.primitive.Primitive` allows you to create more complexe, parallelized behavior really easily.
 
-What do we call "Primitive"?
+
+What is a "Primitive"?
 ----------------------------
 
-We call :class:`~pypot.primitive.primitive.Primitive` any simple or complex behavior applied to a :class:`~pypot.robot.robot.Robot`. A primitive can access all sensors and effectors in the robot. A primitive is supposed to be independent of other primitives. In particular, a primitive is not aware of the other primitives running on the robot at the same time. We imagine those primitives as elementary blocks that can be combined to create more complex blocks in a hierarchical manner.
+We call :class:`~pypot.primitive.primitive.Primitive` any simple or complex behavior applied to a :class:`~pypot.robot.robot.Robot`. A primitive can access all sensors and effectors in the robot. It is started in a thread and can therefore run in parallel with other primitives.
 
-.. note:: The independence of primitives is really important when you create complex behaviors - such as balance - where many primitives are needed. Adding another primitive - such as walking - should be direct and not force you to rewrite everything. Furthermore, the balance primitive could also be combined with another behavior - such as shoot a ball - without modifying it.
 
-To ensure this independence, the primitive is running in a sort of sandbox. More precisely, this means that the primitive has not direct access to the robot. It can only request commands (e.g. set a new goal position of a motor) to a :class:`~pypot.primitive.manager.PrimitiveManager` which transmits them to the "real" robot. As multiple primitives can run on the robot at the same time, their request orders are combined by the manager.
+All primitives implement the :meth:`~pypot.primitive.primitive.Primitive.start`, :meth:`~pypot.primitive.primitive.Primitive.stop`, :meth:`~pypot.utils.stoppablethread.StoppableThread.pause` and
+:meth:`~pypot.utils.stoppablethread.StoppableThread.resume`. Unlike regular python thread, primitive can be restart by calling again the :meth:`~pypot.primitive.primitive.Primitive.start` method.
 
-.. note:: The primitives all share the same manager. In further versions, we would like to move from this linear combination of all primitives to a hierarchical structure and have different layer of managers.
+To check if a primitive is finished, use the :meth:`~pypot.primitive.primitive.Primitive.is_alive` method (will output True if primitive is paused but False if it has been stopped or if it's finished). =
+
+The :class:`~pypot.primitive.primitive.PrimitiveLoop` is a :class:`~pypot.primitive.primitive.Primitive` that repeats its behavior forever.
+
+
+A primitive is supposed to be independent of other primitives. In particular, a primitive is not aware of the other primitives running on the robot at the same time. 
+
+This is really important when you create complex behaviors - such as balance - where many primitives are needed. 
+Adding another primitive - such as walking - should be direct and not force you to rewrite everything. Furthermore, the balance primitive could also be combined with another behavior - such as shoot a ball - without modifying it.
+
+Primitive manager
++++++++++++++++++++++
+
+
+To ensure this independence, the primitive is running in a sort of sandbox. More precisely, this means that the primitive has not direct access to the robot. 
+It can only request commands (e.g. set a new goal position of a motor) to a :class:`~pypot.primitive.manager.PrimitiveManager` which transmits them to the "real" robot. 
+As multiple primitives can run on the robot at the same time, their request orders are combined by the manager.
+
+The primitives all share the same manager. In further versions, we would like to move from this linear combination of all primitives to a hierarchical structure and have different layer of managers.
 
 The manager uses a filter function to combine all orders sent by primitives. By default, this filter function is a simple mean but you can choose your own specific filter (e.g. add function).
 
 .. warning:: You should not mix control through primitives and direct control through the :class:`~pypot.robot.robot.Robot`. Indeed, the primitive manager will overwrite your orders at its refresh frequency: i.e. it will look like only the commands send through primitives will be taken into account.
+
+
+Default primitives
++++++++++++++++++++
+
+An example on how to run a primitive is shown :ref:`here <quickstart_primitive>`.
+
+Another primitive provided with Pypot is the :class:`~pypot.primitive.utils.Sinus` one. It allows you to apply a sinusoidal move of a given frequency and intensity to a motor or a list of motors::
+
+    from pypot.primitive.utils import Sinus
+    
+    sinus_prim_z = Sinus(poppy, 50, "head_z", amp=30, freq=0.5, offset=0, phase=0)
+    
+    #set phase to 90° to have the y sinus 1/4 of phase late compared to the z sinus
+    sinus_prim_y = Sinus(poppy, 50, "head_y", amp=20, freq=1, offset=0, phase=90)
+  
+    print "start moving"    
+    sinus_prim_z.start()
+    sinus_prim_y.start()
+
+    time.sleep(20)
+
+    print "pause move" 
+    sinus_prim_z.pause()
+    sinus_prim_y.pause()
+    
+    time.sleep(5)
+    
+    print "restart move"    
+    sinus_prim_z.resume()
+    sinus_prim_y.resume()
+
+    time.sleep(20)
+
+    print "stop moving" 
+    sinus_prim_z.stop()
+    sinus_prim_y.stop()
+
+Other default primitives are: 
+
+* :class:`~pypot.primitive.utils.Cosinus` for a cosinus move
+* :class:`~pypot.primitive.utils.Square` for a square (go to max position, wait duty*cycle time, go to minposition, wait (1 - duty)*cycle time)
+* :class:`~pypot.primitive.utils.PositionWatcher`: records and saves all positions of the given motors. You have a plot function to see your data.
+* :class:`~pypot.primitive.utils.SimplePosture`: you should define a target_position as a dictionnary and the robot will go to this position
+
+
+
 
 .. _write_own_prim:
 
 Writing your own primitive
 --------------------------
 
-To write you own primitive, you have to subclass the :class:`~pypot.primitive.primitive.Primitive` class. It provides you with basic mechanisms (e.g. connection to the manager, setup of the thread) to allow you to directly "plug" your primitive to your robot and run it.
+To write you own primitive, you have to subclass the :class:`~pypot.primitive.primitive.Primitive` class. 
+It provides you with basic mechanisms (e.g. connection to the manager, setup of the thread) to allow you to directly "plug" your primitive to your robot and run it.
+
+
+Important instructions
+++++++++++++++++
+
+When writing your own primitive, you should always keep in mind that you should never directly pass the robot or its motors as argument and access them directly. You have to access them through the self.robot and self.robot.motors properties. 
+
+Indeed, at instantiation the :class:`~pypot.robot.robot.Robot` (resp. :class:`~pypot.dynamixel.motor.DxlMotor`) instance is transformed into a :class:`~pypot.primitive.primitive.MockupRobot` (resp. :class:`~pypot.primitive.primitive.MockupMotor`). Those class are used to intercept the orders sent and forward them to the :class:`~pypot.primitive.manager.PrimitiveManager` which will combine them. By directly accessing the "real" motor or robot you circumvent this mechanism and break the sandboxing. 
+
+If you have to specify a list of motors to your primitive (e.g. apply the sinusoid primitive to the specified motors), you should either give the motors name and access the motors within the primitive or transform the list of :class:`~pypot.dynamixel.motor.DxlMotor` into :class:`~pypot.primitive.primitive.MockupMotor` thanks to the :meth:`~pypot.primitive.primitive.Primitive.get_mockup_motor` method.
+For instance::
+
+    class MyDummyPrimitive(pypot.primitive.Primitive):
+        def run(self, motors_name):
+            motors = [getattr(self.robot, name) for name in motors_name]
+
+            while True:
+                for m in fake_motors:
+                    ...
+
+or::
+
+    class MyDummyPrimitive(pypot.primitive.Primitive):
+        def run(self, motors):
+            fake_motors = [self.get_mockup_motor(m) for m in motors]
+
+            while True:
+                for m in fake_motors:
+                    ...
+
+
+
+When overriding the :class:`~pypot.primitive.primitive.Primitive`, you are responsible for correctly handling those events. 
+For instance, the stop method will only trigger the should stop event that you should watch in your run loop and break it when the event is set. 
+In particular, you should check the :meth:`~pypot.utils.stoppablethread.StoppableThread.should_stop` and :meth:`~pypot.utils.stoppablethread.StoppableThread.should_pause` in your run loop. 
+You can also use the :meth:`~pypot.utils.stoppablethread.StoppableThread.wait_to_stop` and :meth:`~pypot.utils.stoppablethread.StoppableThread.wait_to_resume` to wait until the commands have really been executed.
+
+.. note:: You can refer to the source code of the :class:`~pypot.primitive.primitive.LoopPrimitive` for an example of how to correctly handle all these events.
+
+
+Examples
++++++++++++++
+
+
+As an example, let's write a simple primitive that recreate the dance behavior written in the :ref:`dance_` section. 
+Notice that to pass arguments to your primitive, you have to override the :meth:`~pypot.primitive.primitive.Primitive.__init__` method.
 
 .. note:: You should always call the super constructor if you override the :meth:`~pypot.primitive.primitive.Primitive.__init__` method.
 
-As an example, let's write a simple primitive that recreate the dance behavior written in the :ref:`dance_` section. Notice that to pass arguments to your primitive, you have to override the :meth:`~pypot.primitive.primitive.Primitive.__init__` method::
+::
 
     import time
 
@@ -79,7 +193,7 @@ If you want to make the dance primitive infinite you can use the :class:`~pypot.
             self.robot.base_pan.goal_position = x
             self.robot.head_pan.goal_position = -x
 
-And then runs it with::
+And then run it with::
 
     ergo_robot = pypot.robot.from_config(...)
 
@@ -88,56 +202,19 @@ And then runs it with::
     dance.start()
 
 
-.. warning:: When writing your own primitive, you should always keep in mind that you should never directly pass the robot or its motors as argument and access them directly. You have to access them through the self.robot and self.robot.motors properties. Indeed, at instantiation the :class:`~pypot.robot.robot.Robot` (resp. :class:`~pypot.dynamixel.motor.DxlMotor`) instance is transformed into a :class:`~pypot.primitive.primitive.MockupRobot` (resp. :class:`~pypot.primitive.primitive.MockupMotor`). Those class are used to intercept the orders sent and forward them to the :class:`~pypot.primitive.manager.PrimitiveManager` which will combine them. By directly accessing the "real" motor or robot you circumvent this mechanism and break the sandboxing. If you have to specify a list of motors to your primitive (e.g. apply the sinusoid primitive to the specified motors), you should either give the motors name and access the motors within the primitive or transform the list of :class:`~pypot.dynamixel.motor.DxlMotor` into :class:`~pypot.primitive.primitive.MockupMotor` thanks to the :meth:`~pypot.primitive.primitive.Primitive.get_mockup_motor` method.
-    For instance::
-
-        class MyDummyPrimitive(pypot.primitive.Primitive):
-            def run(self, motors_name):
-                motors = [getattr(self.robot, name) for name in motors_name]
-
-                while True:
-                    for m in fake_motors:
-                        ...
-
-    or::
-
-        class MyDummyPrimitive(pypot.primitive.Primitive):
-            def run(self, motors):
-                fake_motors = [self.get_mockup_motor(m) for m in motors]
-
-                while True:
-                    for m in fake_motors:
-                        ...
-
-
-
-.. _start_prim:
-
-Start, Stop, Pause, and Resume
-------------------------------
-
-The primitive can be :meth:`~pypot.primitive.primitive.Primitive.start`, :meth:`~pypot.primitive.primitive.Primitive.stop`, :meth:`~pypot.utils.stoppablethread.StoppableThread.pause` and :meth:`~pypot.utils.stoppablethread.StoppableThread.resume`. Unlike regular python thread, primitive can be restart by calling again the :meth:`~pypot.primitive.primitive.Primitive.start` method.
-
-When overriding the :class:`~pypot.primitive.primitive.Primitive`, you are responsible for correctly handling those events. For instance, the stop method will only trigger the should stop event that you should watch in your run loop and break it when the event is set. In particular, you should check the :meth:`~pypot.utils.stoppablethread.StoppableThread.should_stop` and :meth:`~pypot.utils.stoppablethread.StoppableThread.should_pause` in your run loop. You can also use the :meth:`~pypot.utils.stoppablethread.StoppableThread.wait_to_stop` and :meth:`~pypot.utils.stoppablethread.StoppableThread.wait_to_resume` to wait until the commands have really been executed.
-
-.. note:: You can refer to the source code of the :class:`~pypot.primitive.primitive.LoopPrimitive` for an example of how to correctly handle all these events.
-
-
 Attaching a primitive to the robot
 ----------------------------------
 
-In the previous section, we explain that the primitives run in a sandbox in the sense that they are not aware of the other primitives running at the same time. In fact, this is not exactly true. More precisely, a primitive can access everything attached to the robot: e.g. motors, sensors. But you can also attach a primitive to the robot.
+You can also attach a primitive to the robot (at start up for example) and then use it more easily.
 
-Let's go back on our DancePrimitive example. You can write::
+For example with our DancePrimitive::
 
     ergo_robot = pypot.robot.from_config(...)
 
     ergo_robot.attach_primitive(DancePrimitive(ergo_robot), 'dance')
     ergo_robot.dance.start()
 
-By attaching a primitive to the robot, you make it accessible from within other primitive.
-
-For instance you could then write::
+By attaching a primitive to the robot, you make it accessible from within other primitive::
 
     class SelectorPrimitive(pypot.primitive.Primitive):
         def run(self):
