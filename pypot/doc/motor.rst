@@ -133,3 +133,5 @@ The 'minijerk' controller has a more complex algorithm to slow down before and a
 
     robot.head_z.goto_position(20, 3, control='dummy', wait=True)
 
+
+TODO: sensors doc, but work in progress

@@ -1,40 +1,76 @@
+.. _remote_protocol:
+
 REST API
 ========
 
-We add the possibility to remotely access and control your robot through TCP network. This can be useful both to work with client/server architecture (e.g. to separate the low-level control running on an embedded computer and higher-level computation on a more powerful computer) and to allow you to plug your existing code written in another language to the pypot's API.
+Any :class:`~pypot.robot.robot.Robot` object can be to remotely accessed and controled through TCP network. 
 
-We defined a protocol which permits the access of all the robot variables and method (including motors and primitives) via a JSON request. The protocol is entirely described in the section :ref:`remote_protocol` below. Two transport methods have been developed so far:
+This can be useful to:
+* separate the low-level control running on an embedded computer and higher-level computation on a more powerful computer
+* control your Poppy robot from any language (C++, javascript...) able to use tcp sockets
+* remote control your robot without having to install all Poppy libraries
+
+The protocol, described `here <https://github.com/poppy-project/pypot/blob/master/REST-APIs.md>`_,  allows the access of all the robot variables and method (including motors and primitives) via a JSON request. 
+Two transport methods have been developed so far:
 
 * HTTP via GET and POST request (see the :class:`~pypot.server.httpserver.HTTPRobotServer`)
 * ZMQ socket (see the :class:`~pypot.server.zmqserver.ZMQRobotServer`)
 
 The :class:`~pypot.server.rest.RESTRobot` has been abstracted from the server, so you can easily add new transport methods if needed.
 
-As an example of what you can do, here is the code of getting the load of a motor and changing its position using ZMQ socket::
+ZMQ method
+----------------------------
+
+This method is quick and powerful but needs the pyzmq library installed.
+
+Server-side code (launch on the robot)::
 
     import zmq
-    import threading
 
-    robot = pypot.robot.from_config(...)
+    from  pypot.server import ZMQRobotServer
 
-    server = pypot.server.ZMQServer(robot, host, port)
+    robot = ... #create your robot from a config file or using the PoppyHumanoid lib
+
+    server = ZMQRobotServer(robot,"0.0.0.0", 6768) 
+    
     # We launch the server inside a thread
     threading.Thread(target=lambda: server.run()).start()
+    print "ready"
+
+
+Client-side code (launch on remote computer)::
+
+    import zmq
 
     c = zmq.Context()
     s = c.socket(zmq.REQ)
+    s.connect ("tcp://poppy.local:6768") #adapt the hostname or IP to the one of your robot and the port to the one set on the server code
 
-    req = {"robot": {"get_register_value": {"motor": "m2", "register": "present_load"}}}
+    #how the read a register
+    req = {"robot": {"get_register_value": {"motor": "head_z", "register": "present_position"}}}
     s.send_json(req)
     answer = s.recv_json()
     print(answer)
 
-    req = {"robot": {"set_register_value": {"motor": "m2", "register": "goal_position", "value": 20}}}
+    #how to write in a register
+    req = {"robot": {"set_register_value": {"motor": "head_z", "register": "goal_position", "value": "40"}}}
     s.send_json(req)
     answer = s.recv_json()
     print(answer)
 
-Equivalent example using urllib in Python to send http requests::
+    
+HTTP method
+----------------------------
+
+More classical and easy to use. This example uses urllib, but there are other very good Python libraries for HTTP.
+
+To launch the HTTP server on you robot::
+
+    poppy-services --http
+    
+the default port is 8080. You can test your connection by directly entering the following URL in your browser: http://poppy.local:8080/motor/list.json
+
+Client-side example code (use on remote computer)::
 
     import urllib, urllib2, json
 
@@ -55,9 +91,3 @@ Equivalent example using urllib in Python to send http requests::
     response = urllib2.urlopen(req)
 
 
-.. _remote_protocol:
-
-Protocol
---------
-
-The entire protocol is entirely described `here <https://github.com/poppy-project/pypot/blob/master/REST-APIs.md>`_.

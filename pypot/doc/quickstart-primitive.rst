@@ -1,4 +1,4 @@
-.. _quickstart-primitive:
+.. _quickstart_primitive:
 
 QuickStart: use a primitive
 ============================================
