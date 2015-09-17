@@ -4,9 +4,33 @@
    contain the root `toctree` directive.
 
 
+
 Welcome to Poppy Project's documentation!
 #################################
 
+Introducing the Poppy project and the Poppy creatures
+============================================
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy_project.rst
+    
+        
+Assembly guides
+=======================================================
+
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    dynamixel_hardware.rst
+        
+    poppy-humanoid/assembly_doc/index.rst
+    poppy-ergo-jr/assembly_doc/index.rst
+    
     
 Quickstarts
 =======================================================
@@ -18,7 +42,8 @@ Quickstarts
     quickstarts/vrep.rst
     quickstarts/snap.rst
 
-Pypot: documentation and tutorials
+
+Pypot: documentation and tutorials-IN PROGRESS
 =======================================================
 
 .. toctree::
@@ -26,8 +51,44 @@ Pypot: documentation and tutorials
     :maxdepth: 2
 
     pypot/doc/index.rst
+    
+Poppy-creature-TODO
+==================
 
-    APIs
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-creature/doc/index.rst
+    
+Poppy-humanoid-TODO
+==================
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-humanoid/doc/index.rst
+    
+Poppy-torso-TODO
+==================
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-torso/doc/index.rst
+    
+Poppy-ergo-jr-TODO
+==================
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-ergo-jr/doc/index.rst
+
+APIs
 =======================================================
 
 .. toctree::
@@ -35,6 +96,8 @@ Pypot: documentation and tutorials
     :maxdepth: 2
 
     pypot/doc/api.rst
+    
+
     
 
 Indices and tables
