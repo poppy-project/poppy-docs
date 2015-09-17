@@ -7,7 +7,6 @@ Assembly guide for a Poppy Humanoid or Poppy Torso robot
     :titlesonly:
     :maxdepth: 2
 
-    en/dynamixel_hardware.md
     en/addressing_dynamixel.md
     en/head_assembly.md
     en/trunk_assembly.md

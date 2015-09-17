@@ -19,21 +19,14 @@ This IO can be used to:
 * start/stop/restart a simulation : :meth:`~pypot.vrep.io.VrepIO.start_simulation`, :meth:`~pypot.vrep.io.VrepIO.stop_simulation`, :meth:`~pypot.vrep.io.VrepIO.restart_simulation`
 * pause/resume the simulation : :meth:`~pypot.vrep.io.VrepIO.pause_simulation`, :meth:`~pypot.vrep.io.VrepIO.resume_simulation`
 * get/set a motor position : :meth:`~pypot.vrep.io.VrepIO.get_motor_position`, :meth:`~pypot.vrep.io.VrepIO.set_motor_position`
-* get an object position/orienation : :meth:`~pypot.vrep.io.VrepIO.get_object_position`, :meth:`~pypot.vrep.io.VrepIO.get_object_orientation`
+* get an object position/orientation : :meth:`~pypot.vrep.io.VrepIO.get_object_position`, :meth:`~pypot.vrep.io.VrepIO.get_object_orientation`
 
 Switch between the simulation and the real robot in a single line of code
 -------------------------------------------------------------------------
 
-As stated above, the bridge between V-REP and pypot has been designed to let you easily switch from the robot to the simulated version. In most case, you should only have to change the way you instantiate your robot::
+As stated above, the bridge between V-REP and pypot has been designed to let you easily switch from the robot to the simulated version.
 
-    # Working with the real robot
-    import pypot.robot
-
-    poppy = pypot.robot.from_config(config)
-
-    poppy.walk.start()
-
-will become::
+In most case, you should only have to use the :func:`~pypot.robot.config.from_vrep` method, providing the vrep host, port and scene instead of the :func:`~pypot.robot.config.from_config` method::
 
     # Working with the simulated version
     import pypot.vrep
@@ -42,6 +35,23 @@ will become::
 
     poppy.walk.start()
 
-In particular, the walking primitive should work exactly the same way in both cases without needing to change anything.
+Default host is localhost ('127.0.0.1') and default port is 19997 (the default one for V-rep), so if you launched V-rep on the same computer, you can use the :func:`~pypot.robot.config.from_vrep` function with only the config argument.
+ 'poppy.ttt')
+ 
+     :param str scene: path to the V-REP scene to load and start
+    :param list tracked_objects: list of V-REP dummy object to track
+    :param list tracked_collisions: list of V-REP collision to track
+    
+      This function tries to connect to a V-REP instance and expects to find motors with names corresponding as the ones found in the config.
 
-.. note:: Not all dynamixel registers have their V-REP equivalent. For the moment, only the control of the position is used. More advanced features can be easily added thanks to the controller abstraction (see section :ref:`extending`).
+    .. note:: The :class:`~pypot.robot.robot.Robot` returned will also provide a convenience reset_simulation method which resets the simulation and the robot position to its intial stance.
+
+
+
+The :class:`~pypot.robot.robot.Robot` object will be equivalent to the one created in the case of a real robot, but not all dynamixel registers have their V-REP equivalent. For the moment, only the control of the position is used. Primitives (that use only thr mootrs positions) can be used without problems.
+
+If you use a creature-specific library to create your :class:`~pypot.robot.robot.Robot` (as poppy-humanoid for example), you can simply use the 'simulator' argument. If V-rep is not on the same machine, specify the vrep_host and vrap-port arguments::
+
+    from poppy_humanoid import PoppyHumanoid
+    
+    poppy = PoppyHumanoid(simulator='vrep')
