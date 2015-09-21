@@ -95,7 +95,9 @@ APIs
     :titlesonly:
     :maxdepth: 2
 
-    pypot/doc/api.rst
+    pypot/doc/pypot.rst
+    poppy-humanoid/doc/poppy_humanoid.rst
+    poppy-torso/doc/poppy_torso.rst
     
 
     

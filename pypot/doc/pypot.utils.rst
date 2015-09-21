@@ -1,24 +1,54 @@
-:mod:`utils` Package
-====================
+pypot.utils package
+===================
 
-.. automodule:: pypot.utils
+Submodules
+----------
+
+pypot.utils.appdirs module
+--------------------------
+
+.. automodule:: pypot.utils.appdirs
     :members:
     :undoc-members:
     :show-inheritance:
 
+pypot.utils.interpolation module
+--------------------------------
 
-:mod:`stoppablethread` Module
+.. automodule:: pypot.utils.interpolation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pypot.utils.pypot_time module
 -----------------------------
+
+.. automodule:: pypot.utils.pypot_time
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pypot.utils.stoppablethread module
+----------------------------------
 
 .. automodule:: pypot.utils.stoppablethread
     :members:
     :undoc-members:
     :show-inheritance:
-    
-:mod:`trajectory` Module
+
+pypot.utils.trajectory module
 -----------------------------
 
 .. automodule:: pypot.utils.trajectory
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: pypot.utils
     :members:
     :undoc-members:
     :show-inheritance:
