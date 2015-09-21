@@ -1,7 +1,10 @@
 .. _installation:
 
+Installation and updating
+==================
+
 Installation with a pre-flashed system image
-=======================
+----------------------------------------------------------------------
 
 If you are using an official Poppy creature (Poppy Humanoid, Poppy Torso, Poppy Ergo Jr), you may receive a ready-to-use, already-flashed SD card for your Raspberry Pi 2, with everything already installed.
 
@@ -10,10 +13,10 @@ If you are building your kit yourself, get a SD card (8 GB or more) and flash it
 Now simply check your installation (TODO link network check) and, if needed, update it. Your Poppy creature is ready to come alive.
 
 Manual installation
-=======================
+----------------------------------------------------------------------
 
 Why do this? 
--------------------------
+++++++++++++++++++++++++++++++++++
 
 - Because no-one offers a system image for your Poppy creature
 - Because you want to install the latest version of each library (even if they may be less stable)
@@ -21,7 +24,8 @@ Why do this?
 - Because you are using a simulator
 
 Requirements
--------------------------
+++++++++++++++++++++++++++++++++++
+
 Pypot is written in `python <https://www.python.org/>`__ and need a python interpreter to be run. Moreover pypot has `scipy <www.scipy.org/>`_ and `numpy <http://www.numpy.org>`_ for dependencies, 
 as they are not fully written in python they need system side packages to be build, it easier to use pre-build binaries for your operating system.
 
@@ -65,7 +69,8 @@ After that, you can install pypot with `pip <#via-python-packages>`_.
 
 
 Via Python Packages
--------------------
+++++++++++++++++++++++++++++++++++
+
 The pypot package is entirely written in Python. So, the install process should be rather straightforward. You can directly install it via easy_install or pip::
 
     pip install pypot
@@ -79,7 +84,7 @@ The up to date archive can also be directly downloaded `here <https://pypi.pytho
 If you are on a GNU/Linux operating system, you will need to execute the above commands with **sudo**.
 
 From the source code
---------------------
+++++++++++++++++++++++++++++++++++
 
 You can also install it from the source. You can clone/fork our repo directly on `github <https://github.com/poppy-project/pypot>`_.
 
@@ -103,7 +108,7 @@ Once it is done, you can build and install pypot with the classical::
     sudo python setup.py install
 
 Testing your install
---------------------
+++++++++++++++++++++++++++++++++++
 
 You can test if the installation went well with::
 
@@ -127,6 +132,6 @@ At this point you should have a pypot ready to be used! In the extremely unlikel
 
 
 Updating
-==================
+----------------------------------------------------------------------
 
 TODO

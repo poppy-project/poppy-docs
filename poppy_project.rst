@@ -77,7 +77,11 @@ The list of parts to print is `here <https://github.com/poppy-project/poppy-ergo
 You then need 6 Dynamixel XL-320 (for example from `here <http://www.generationrobots.com/en/401692-dynamixel-xl-320-servo-motor.html/>`_ ), 
 a USB2AX to connect them to a computer and a small adaptation `board <https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/electronic.md>`_.
 
+.. _contribute:
+
 **Contribute!**
 ===============
 
 The `Poppy project's forum <https://forum.poppy-project.org/>`_ contains answer to your question, people that can help you and call for contribution. It is an important part of the project, so don't hesitate to ask, answer and contribute to it !
+
+You can for example create a new Poppy creature, :ref:`extend Pypot <extending_pypot>`, create tutorials and practicals

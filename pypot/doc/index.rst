@@ -12,7 +12,9 @@ Introduction
     :maxdepth: 2
 
     about.rst
+    architecture.rst
     installation.rst
+    extending.rst
 
 Quickstarts
 =================================
@@ -39,7 +41,6 @@ Pypot in details
     motor.rst
     primitive.rst
     vrep.rst
-    extending.rst
     remote_access.rst
     logging.rst
     herborist.rst
