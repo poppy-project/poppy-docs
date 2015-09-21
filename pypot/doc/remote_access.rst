@@ -18,6 +18,8 @@ Two transport methods have been developed so far:
 
 The :class:`~pypot.server.rest.RESTRobot` has been abstracted from the server, so you can easily add new transport methods if needed.
 
+.. note:: A third server is available in Pypot: :class:`~pypot.server.snap` allows you to run Snap! directly on the robot. 
+
 ZMQ method
 ----------------------------
 

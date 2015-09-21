@@ -1,7 +1,7 @@
 .. _robot:
 
-The Robot Object
-================
+The Robot object and the controllers
+===========================
 
 Using the robot abstraction
 ---------------------------

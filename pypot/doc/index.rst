@@ -40,6 +40,14 @@ Pypot in details
     robot.rst
     motor.rst
     primitive.rst
+    
+Other useful features
+=================================
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+    
     vrep.rst
     remote_access.rst
     logging.rst
