@@ -1,3 +1,6 @@
+
+.. _quickstart_vrep:
+
 Using V-rep to simulate a Poppy Humanoid robot
 ##################################
 
@@ -93,6 +96,8 @@ You may want at some point to go back to the initial state of the simulation. He
     
 Troubleshooting and advanced usage
 ============================
+
+See :ref:`here <pypot_vrep>` for a view on lower-level link between your robot and V-rep.
 
 TODO
 
