@@ -1,4 +1,4 @@
-pypot.tools package
+poppy_torso package
 ===================
 
 Subpackages
@@ -6,15 +6,16 @@ Subpackages
 
 .. toctree::
 
-    pypot.tools.herborist
+    poppy_torso.primitives
+    poppy_torso.utils
 
 Submodules
 ----------
 
-pypot.tools.dxl_reset module
-----------------------------
+poppy_torso.poppy_torso module
+------------------------------
 
-.. automodule:: pypot.tools.dxl_reset
+.. automodule:: poppy_torso.poppy_torso
     :members:
     :undoc-members:
     :show-inheritance:
@@ -23,7 +24,7 @@ pypot.tools.dxl_reset module
 Module contents
 ---------------
 
-.. automodule:: pypot.tools
+.. automodule:: poppy_torso
     :members:
     :undoc-members:
     :show-inheritance:

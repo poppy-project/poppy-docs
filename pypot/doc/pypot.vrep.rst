@@ -1,14 +1,26 @@
-:mod:`vrep` Package
-===================
+pypot.vrep package
+==================
 
-.. automodule:: pypot.vrep
+Subpackages
+-----------
+
+.. toctree::
+
+    pypot.vrep.remoteApiBindings
+
+Submodules
+----------
+
+pypot.vrep.controller module
+----------------------------
+
+.. automodule:: pypot.vrep.controller
     :members:
     :undoc-members:
     :show-inheritance:
 
-
-:mod:`io` Module
-----------------
+pypot.vrep.io module
+--------------------
 
 .. automodule:: pypot.vrep.io
     :members:
@@ -16,10 +28,10 @@
     :show-inheritance:
 
 
-:mod:`controller` Module
-------------------------
+Module contents
+---------------
 
-.. automodule:: pypot.vrep.controller
+.. automodule:: pypot.vrep
     :members:
     :undoc-members:
     :show-inheritance:
