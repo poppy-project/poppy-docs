@@ -10,3 +10,6 @@
 [submodule "poppy-torso/poppy-torso"]
 	path = poppy-torso/poppy-torso
 	url = https://github.com/poppy-project/poppy-torso.git
+[submodule "poppy-creature/poppy-creature"]
+	path = poppy-creature/poppy-creature
+	url = https://github.com/poppy-project/poppy-creature.git
