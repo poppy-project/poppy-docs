@@ -107,8 +107,11 @@ Let read the position of a servomotor and write a new goal position:
     dxl_io = pypot.dynamixel.DxlIO(my_port, baudrate=my_baudrate)
     
     #get position of servo my_id
-    pos = dxl_io.get_present_position((my_id, )) 
+    pos = dxl_io.get_present_position([my_id]) 
     print pos
+    
+    #allow the servomotor to move
+    dxl_io.enable_torque([my_id]) 
     
     #set position of servo m_id to 90 degrees
     dxl_io.set_goal_position({my_id: 90})
@@ -116,10 +119,12 @@ Let read the position of a servomotor and write a new goal position:
     #wait a bit
     time.sleep(2)
     
+    #put compliance back to the robot
+    dxl_io.disable_torque([my_id]) 
+    
     #end serial communication
     dxl_io.close()
     
-See TODO LINK here to find all available registers functions.
+See :mod:`pypot.dynamixel.io` here to find all available registers functions. Remember that it is always easier to use the :ref:`robot <robot>` and :ref:`motor <motor>` abstractions.
 
-TODO     dxl_io.enable_torque(ids)
     

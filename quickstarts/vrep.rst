@@ -24,7 +24,7 @@ Warning: a physical simulation always asks for quite a lot of computation, so tr
 Start a simulation with Poppy Humanoid
 ===========================
 
-Once you have V-rep and poppy-humanoid installed on your computer (see TODO for installing poppy-humanoid and therefore pypot on your desktop computer), you need to
+Once you have V-rep and poppy-humanoid installed on your computer (see `here <../poppy-humanoid/assembly_doc/en/head_assembly.html>`_  for installing poppy-humanoid and therefore pypot on your desktop computer), you need to
 follow these two steps:
 
 Start V-rep
@@ -86,7 +86,7 @@ For example, you can test it with:
     #print head_z position
     print poppy.head_z.present_position
     
-If the simulated Poppy Humanoid turns its head, well done, it works! Now you can follow this tutorial to learn how to control it! TODO LINK
+If the simulated Poppy Humanoid turns its head, well done, it works! Now you can follow :ref:`this tutorial <quickstart_discover>` to learn how to control it!
 
 You may want at some point to go back to the initial state of the simulation. Here is the command:
 

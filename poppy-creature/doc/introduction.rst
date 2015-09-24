@@ -5,14 +5,41 @@ Introduction
 
 Poppy-creature is a small library providing a link between specific robots (Poppy Humanoid, Poppy Ergo JR...) and Pypot, the generic, lower level library.
 
-It mainly contains the class definition of :class:`~creatures.abstractcreature.AbstractPoppyCreature` which takes a configuration and builds a :class:`~pypot.robot.robot.Robot` out of it, 
+It mainly contains the class definition of :class:`~poppy.creatures.abstractcreature.AbstractPoppyCreature` which takes a configuration and builds a :class:`~pypot.robot.robot.Robot` out of it, 
 but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.
+
+The arguments you can provide are:
+
+* ``base_path`` default: None Path where the creature sources are. The librarie looks in the default PATH if not set.
+* ``config`` default: None Path to the configuration file with respect to the base-path
+
+
+* ``simulator`` default: None Possible values : 'vrep' or 'threejs'. Defines if we are using a simulator (and which one) or a real robot.
+* ``scene`` default: None Path to the scene to load in the simulator. Only if simulator is vrep. Defaults to the scene present in the creature library if any (e.g. poppy_humanoid.ttt).
+* ``host`` default: 'localhost' Hostname of the machine where the simulator runs. Only if simulator is not None. 
+* ``port`` default: 19997 Port of the simulator. Only if simulator is not None. 
+
+* ``use_snap`` default: False Should we launch the Snap! server
+* ``snap_host`` default: 0.0.0.0 Hostname of the Snap! server
+* ``snap_port`` default: 6969 Port of the Snap! server
+* ``snap_quiet`` default: True Should Snap! not output logs
+
+* ``use_http`` default: False Should we launch the HTTP server (for :ref:`REST API use <remote_protocol>`)
+* ``http_host`` default: 0.0.0.0 Hostname of the HTTP server
+* ``http_port`` default: 8080 Port of the HTTP server
+* ``http_quiet`` default: True Should HTTP not output logs
+
+* ``use_remote`` default: False Should we launch the Remote Robot server (for :ref:`REST API use <remote_protocol>`)
+* ``remote_host`` default: 0.0.0.0 Hostname of the Remote Robot server
+* ``remote_port`` default: 4242 Port of the Remote Robot server
+
+* ``sync`` default: True Should we launch the synchronization loop for motor communication (see :ref:`the Dynamixel low-level Pypot section <low_level>`)
 
 Poppy services
 ===============
 
 But poppy-creature also provides a set of very useful services that can be launched directly from the command line inside your robot 
-if you installed the soft from poppy_install TODO LINK. Example::
+if you installed the soft from `poppy_install <https://github.com/poppy-project/poppy_install>`_ . Example::
 
     poppy-services poppy-humanoid --snap --no-browser
     
@@ -40,7 +67,7 @@ Create your own Poppy creature
 
 While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a :class:`~pypot.robot.robot.Robot` from Pypot directly (see :ref:`the robot object from Pypot <robot>`).
 
-But when you want to make it easily usable and available to non-geek public, the best is to create your own creature's library. It should contain a configuration file and a class that extends :class:`~creatures.abstractcreature.AbstractPoppyCreature`.
+But when you want to make it easily usable and available to non-geek public, the best is to create your own creature's library. It should contain a configuration file and a class that extends :class:`~poppy.creatures.abstractcreature.AbstractPoppyCreature`.
 You can then add your own properties and primitives.
 
 Example from Poppy Humanoid::
@@ -64,5 +91,11 @@ Example from Poppy Humanoid::
             # Safe primitives:
             robot.attach_primitive(LimitTorque(robot), 'limit_torque')
 
-Don't forget to package it properly using `setuptools <https://pythonhosted.org/an_example_pypi_project/setuptools.html>`_ and to give it to the community!
+Package your code it properly using `setuptools <https://pythonhosted.org/an_example_pypi_project/setuptools.html>`_ . 
+For a better integration with the Poppy installer scripts, please have in the root of your repo a folder named *software* containing:
+
+* the installation files (setup.py, MANIFEST, LICENCE)
+* a folder named poppy_yourcreaturename containing your actual code
+
+At the end, don't forget to give it to the community! Most interesting creatures will be added to this documentation!
 

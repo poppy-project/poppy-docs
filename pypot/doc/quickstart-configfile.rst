@@ -6,7 +6,7 @@ QuickStart: create a Robot
 What is a configuration file?
 ------------------------------------------------
 
-In Pypot, there is a TODO LINK Robot object that contains the configuration of your robot: how many motors (with what IDs, on what port), their names, angle limits, and so on.
+In Pypot, there is a :ref:`Robot <robot>` object that contains the configuration of your robot: how many motors (with what IDs, on what port), their names, angle limits, and so on.
 
 You can build a Robot object by hand, but it is much easier to launch a configuration from a configuration file. This text file contains a dictionnary, encoded in json.
 
@@ -68,7 +68,7 @@ It contains:
     
 Each robot-specific library (poppy-humanoid for example) contains its own configuration file.
 
-See TODO LINK for more details on the contents of teh configuration file and how to 
+See :ref:`the robot object description <robot>` for more details on the contents of the configuration file.
 
 Test the Ergo Jr configuration
 --------------------------------------------------
@@ -105,4 +105,4 @@ Compliance is the fact that a motor can be moved by hand, without resisting. In 
 
 .. note:: Remark the time.sleep(0.1) in the last line: at the end of the script, the serial connection is closed and, if you don't wait a little bit, the connection may close before the last order (here: ergo_robot.m6.compliant = True) is sent.
 
-See TODO LINK for more precisions on how to control a robot
+See :ref:`the discover quickstart <quickstart_discover>` or :ref:`the motor object description <motor>` for more precisions on how to control a robot

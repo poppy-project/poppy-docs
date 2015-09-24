@@ -12,7 +12,6 @@ Introduction
     :maxdepth: 2
 
     about.rst
-    architecture.rst
     installation.rst
     extending.rst
 
