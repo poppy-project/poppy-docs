@@ -79,4 +79,4 @@ We can now replay the move:
         
     time.sleep(0.1)
     
-To learn more about primitives, see TODO LINK here.
+To learn more about primitives, see :ref:`here <primitives>`.

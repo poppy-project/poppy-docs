@@ -182,7 +182,7 @@ The main fields of the :class:`~pypot.robot.robot.Robot` are:
         robot.compliant = True
         
         
--   primitives: You can attach primitives to a robot and this field lists them. See TODO LINK. 
+-   primitives: You can attach :ref:`primitives <primitives>` to a robot and this field lists them.
 -   active_primitives: from above primitives, which are currently running
 -   sensors: list of available sensors, work in progress
 

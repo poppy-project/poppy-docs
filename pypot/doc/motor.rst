@@ -13,7 +13,7 @@ The  :class:`~pypot.robot.robot.Robot` class contains a list of  :class:`~pypot.
 Registers
 +++++++++++++++
 
-This class provides access to t(see :attr:`~pypot.dynamixel.motor.DxlMotor.registers` for an exhaustive list):
+This class provides access to (see :attr:`~pypot.dynamixel.motor.DxlMotor.registers` for an exhaustive list):
     * id: motor id 
     * motor name
     * motor model

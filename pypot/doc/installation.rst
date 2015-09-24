@@ -134,4 +134,14 @@ At this point you should have a pypot ready to be used! In the extremely unlikel
 Updating
 ----------------------------------------------------------------------
 
-TODO
+Currently, Pypot is still updating 'by hand', by command line while SSH into the robot.
+
+If you are using PIP, enter::
+
+    pip install --upgrade pypot
+    
+If you are using the sources, go to the ~/dev/pypot folder and enter::
+    
+    git pull
+    python setup.py install
+    
