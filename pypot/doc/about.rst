@@ -37,9 +37,10 @@ Pypot's architecture is built upon the following basic concepts:
 
 * **I/O**: :ref:`low-level layer <quickstart-lowlevel>` handling the communication with motors or sensors. This abstract layer has been designed to be as generic as possible. The idea is to keep each specific communication protocol separated from the rest of the architecture and allow for an easy replacement of an IO by another one - such an example is detailed in the next section when `dynamixel IO <http://poppy-project.github.io/pypot/pypot.dynamixel.html#module-pypot.dynamixel.io>`_ is replaced by the `communication layout with the VREP <http://poppy-project.github.io/pypot/pypot.vrep.html#module-pypot.vrep.io>`_ simulator.
 
-* **Motor** or **Sensor** : abstraction layer allowing to command the same type of devices in the same way. Each :ref:`software motor  <motor>` or sensor is linked with its *hardware* equivalent.
+* **Motor** or **Sensor** : abstraction layer allowing to command the same type of devices in the same way. Each :ref:`software motor  <motor>` or sensor is linked with its hardware equivalent.
 
-* **Controller**: set of update loops to keep an (or multiple) "hardware" device(s) up to date with their "software" equivalent, moreover when several devices (e.g. Dynamixel motors) share the same communication bus.  
+* **Controller**: 
+    set of update loops to keep an (or multiple) "hardware" device(s) up to date with their "software" equivalent, moreover when several devices (e.g. Dynamixel motors) share the same communication bus. 
     This synchronization can goes only from the hard to the soft (e.g. in the case of a sensor) or both ways (e.g. for reading motor values and sending motor commands). 
     The calls can be asynchronous or synchronous, each controller can have its own refresh frequency. 
     An example of :class:`~pypot.robot.controller.Controller` is the :class:`~pypot.dynamixel.controller.DxlController` which synchronizes position/speed/load of all motors on a dynamixel bus in both directions. On the same bus, you can have several controllers of different frequencies.

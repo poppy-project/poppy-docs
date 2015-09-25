@@ -161,7 +161,7 @@ Be sure to set the selector in the position corresponding to the protocol you wa
 
 USB2AX is a miniatirized version of the USB2Dynamixel able to control only TTL busses.
 
-.. warning:: Due to differences in sensibilities, new MX-28 servos communicate at a 57600 baudrate with USB2AX and 57142 for USB2Dynamixel.
+.. warning:: Due to differences in sensibilities, new MX-28 and MX-64 servos communicate at a 57600 baudrate with USB2AX and 57142 for USB2Dynamixel.
 
 Powering Dynamixel servos
 -------------------------------------------------

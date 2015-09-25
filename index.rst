@@ -16,7 +16,8 @@ Introducing the Poppy project and the Poppy creatures
     :maxdepth: 2
 
     poppy_project.rst
-    
+    contribute.rst
+  
         
 Assembly guides
 =======================================================
@@ -27,9 +28,12 @@ Assembly guides
     :maxdepth: 2
 
     dynamixel_hardware.rst
+    poppy-humanoid/assembly_doc/en/addressing_dynamixel.md
         
     poppy-humanoid/assembly_doc/index.rst
     poppy-ergo-jr/assembly_doc/index.rst
+    
+      
     
 Quickstarts
 =======================================================
@@ -41,9 +45,12 @@ Quickstarts
     quickstarts/discover.rst
     quickstarts/snap.rst
     quickstarts/vrep.rst
+    
+Development guides
+==================
 
 Poppy-humanoid library
-==================
+--------------------------------------
 
 .. toctree::
     :titlesonly:
@@ -52,7 +59,7 @@ Poppy-humanoid library
     poppy-humanoid/doc/index.rst
     
 Poppy-creature library
-==================
+------------------------------------------
 
 .. toctree::
     :titlesonly:
@@ -63,7 +70,7 @@ Poppy-creature library
 
 
 Pypot library
-=======================================================
+-----------------------------
 
 .. toctree::
     :titlesonly:
@@ -75,7 +82,7 @@ Pypot library
 
    
 APIs
-=======================================================
+----------------------
 
 .. toctree::
     :titlesonly:

@@ -21,7 +21,7 @@ All these parts are open-source and available to download and modify.
 The Poppy project also consist in a very active and diverse community. People of different horizon collabore to improve the project.
 
 Poppy Humanoid
-================
+------------------------------------
 
 Description
 
@@ -35,14 +35,8 @@ You can get a full Poppy Humanoid from one of Poppy's official resellers:
 Or you can get all the parts yourself following the `Bill of Material <https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md/>`_. 
 The 3D models for the parts can be found `here <https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/>`_.
 
-.. toctree::
-    :titlesonly:
-    :maxdepth: 2
-
-    poppy-humanoid/assembly_doc/BOM.md
-
 Poppy Torso
-================
+-----------------------------
 
 Description
 
@@ -57,14 +51,8 @@ Or you can get all the parts yourself following the `Bill of Material <https://g
 The 3D models for the parts can be found `here <https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/>`_ 
 (they are the same as Poppy Humanoid, simply remove the legs and add the `support <https://github.com/poppy-project/robot-support-toolbox/>`_).
 
-.. toctree::
-    :titlesonly:
-    :maxdepth: 2
-
-    poppy-torso/BOM.md
-
 Poppy Ergo Jr
-================
+-------------------------------
 
 Description
 
@@ -76,12 +64,3 @@ The list of parts to print is `here <https://github.com/poppy-project/poppy-ergo
 
 You then need 6 Dynamixel XL-320 (for example from `here <http://www.generationrobots.com/en/401692-dynamixel-xl-320-servo-motor.html/>`_ ), 
 a USB2AX to connect them to a computer and a small adaptation `board <https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/electronic.md>`_.
-
-.. _contribute:
-
-**Contribute!**
-===============
-
-The `Poppy project's forum <https://forum.poppy-project.org/>`_ contains answer to your question, people that can help you and call for contribution. It is an important part of the project, so don't hesitate to ask, answer and contribute to it !
-
-You can for example create a new Poppy creature, :ref:`extend Pypot <extending_pypot>`, create tutorials and practicals
