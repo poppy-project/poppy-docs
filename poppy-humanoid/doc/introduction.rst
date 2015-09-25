@@ -18,7 +18,7 @@ If you didn't change the default configuration file, this should connect to the 
 Once the PoppyHumanoid object is created, you can start :ref:`discovering it <quickstart_discover>`, at a :ref:`basic level  <robot>` or using :ref:`primitives <primitives>`.
 
 
-Poppy Humanoid quickstart
+Poppy Humanoid overview
 ======================
 
 TODO
