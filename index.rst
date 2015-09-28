@@ -58,6 +58,15 @@ Poppy-humanoid library
 
     poppy-humanoid/doc/index.rst
     
+Poppy-torso library
+--------------------------------------
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-torso/doc/index.rst
+    
 Poppy-creature library
 ------------------------------------------
 
@@ -89,6 +98,7 @@ APIs
     :maxdepth: 2
 
     poppy-humanoid/doc/poppy_humanoid.rst
+    poppy-torso/doc/poppy_torso.rst
     poppy-creature/doc/poppy.rst
     pypot/doc/pypot.rst
     
