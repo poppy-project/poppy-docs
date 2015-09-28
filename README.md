@@ -43,6 +43,10 @@ To create a pdf doc:
 
 Your files are in `_build\latex`
 
+To recreate the API doc of a module, use sphinx-apidocs. For example when doc is in poppy-humanoid/poppy-humanoid/software/poppy_humanoid, output path is poppy-humanoid/doc and you want to overwrite previous doc (-f option):
+
+`sphinx-apidoc -f  -o poppy-humanoid/doc poppy-humanoid/poppy-humanoid/software/poppy_humanoid`
+
 
 
 
