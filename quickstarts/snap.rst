@@ -1,3 +1,5 @@
+.. _quickstart_snap:
+
 Control a Poppy robot using Snap!
 ##################################
 

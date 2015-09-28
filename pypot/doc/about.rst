@@ -1,3 +1,6 @@
+
+.. _pypot_about:
+
 What is pypot?
 ==============
 

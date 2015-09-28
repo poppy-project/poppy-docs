@@ -1,4 +1,6 @@
 
+.. _poppy_humanoid_assembly_doc:
+
 Assembly guide for a Poppy Humanoid or Poppy Torso robot
 =======================================================
 

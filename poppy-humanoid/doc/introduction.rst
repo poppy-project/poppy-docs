@@ -1,4 +1,4 @@
-
+.. _poppy_humanoid_lib:
 
 Introduction
 ==============
@@ -17,8 +17,9 @@ If you didn't change the default configuration file, this should connect to the 
 
 Once the PoppyHumanoid object is created, you can start :ref:`discovering it <quickstart_discover>`, at a :ref:`basic level  <robot>` or using :ref:`primitives <primitives>`.
 
+.. _poppy_humanoid_robot:
 
-Poppy Humanoid overview
+Poppy Humanoid robot overview
 ======================
 
 TODO
