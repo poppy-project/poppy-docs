@@ -43,6 +43,10 @@ It can be used as it is, or hacked to explore the shape of novel legs, arms or h
 
 From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects. 
 
+.. image:: images/poppy-le-robot-de-face.jpg
+    :width: 20%
+    :align: center
+
 Get a Poppy Humanoid robot
 +++++++++++++++++++
 
@@ -66,6 +70,10 @@ Poppy Torso
 Poppy Torso is a variation of the Poppy Humanoid robot creature: it is an open-source humanoid robot torso which can be installed easily on tabletops. Poppy Torso is more affordable than the full kit (Poppy Humanoid), which makes it especially suitable for uses in an educational, associative and makers context. Poppy Torso is an ideal medium to learn science, technology, engineering and mathematics (STEM).
 
 Like Poppy Humanoid, Poppy Torso is an open-source robot (both hardware and software), using 3D printed parts and Dynamixel servomotors, known for their reliability.
+
+.. image:: images/robot-poppy-torso.jpg
+    :width: 20%
+    :align: center
 
 
 Get a Poppy Torso
@@ -91,6 +99,10 @@ Poppy Ergo Jr
 The Poppy Ergo Jr robot is a small robot arm made of 6 cheap XL-320 Dynamixel servos, 3D-printed parts based on OpenScad and assembled with OLLO rivets. At the end of the arm, you can choose among several ends: a lamp, a gripper hand,...
 
 This robot is the 'little brother' of the ergo robots used in ` the Ergo-robot experiment <https://www.poppy-project.org/project/mathematics-a-beautiful-elsewhere/>_.
+
+.. image:: images/poppy-ergo-jr.jpg
+    :width: 20%
+    :align: center
 
 Get a Poppy Ergo Jr
 +++++++++++++++++

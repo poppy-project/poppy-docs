@@ -35,6 +35,8 @@ The arguments you can provide are:
 
 * ``sync`` default: True Should we launch the synchronization loop for motor communication (see :ref:`the Dynamixel low-level Pypot section <low_level>`)
 
+The sources are available on `Github <https://github.com/poppy-project/poppy-creature>`_.
+
 Poppy services
 ===============
 
@@ -99,3 +101,22 @@ For a better integration with the Poppy installer scripts, please have in the ro
 
 At the end, don't forget to give it to the community! Most interesting creatures will be added to this documentation!
 
+
+.. _poppy_creature_install:
+
+Installing
+===========
+
+To install the Poppy Creature library, you can use pip::
+
+    pip install poppy-creature
+    
+Then you can update it with::
+
+    pip install --upgrade poppy-creature
+    
+If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from `Github <https://github.com/poppy-project/poppy-creature>`_ and install them with (in the software folder)::
+
+    python setup.py install
+    
+The requirements for Poppy Creature are :ref:`Pypot <pypot_install>` and bottle.

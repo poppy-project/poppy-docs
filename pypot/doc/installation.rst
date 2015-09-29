@@ -1,4 +1,4 @@
-.. _installation:
+.. _pypot_install:
 
 Installation and updating
 ==================
