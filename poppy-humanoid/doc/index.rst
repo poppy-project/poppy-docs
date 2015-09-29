@@ -6,3 +6,8 @@
 
     introduction.rst
     
+    .. toctree::
+        :titlesonly:
+        :maxdepth: 2
+
+        motor_list.rst

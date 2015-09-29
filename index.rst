@@ -67,6 +67,15 @@ Poppy-torso library
 
     poppy-torso/doc/index.rst
     
+Poppy-ergo-jr library
+--------------------------------------
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-ergo-jr/doc/index.rst
+    
 Poppy-creature library
 ------------------------------------------
 
@@ -99,6 +108,7 @@ APIs
 
     poppy-humanoid/doc/poppy_humanoid.rst
     poppy-torso/doc/poppy_torso.rst
+    poppy-ergo-jr/doc/poppy_ergo_jr.rst
     poppy-creature/doc/poppy.rst
     pypot/doc/pypot.rst
     

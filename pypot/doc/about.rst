@@ -29,7 +29,7 @@ Pypot is also compatible with the `V-REP simulator <http://www.coppeliarobotics.
     So, when starting with a Poppy creature, we advise you to first discover the specific library and dive into Pypot only when you are ready to build advanced programs.
     Pypot is also a good starting point if you want to define your own Poppy Creatures.
 
-
+The sources are available on `Github <https://github.com/poppy-project/pypot>`_.
 
 .. _architecture:
 
@@ -59,5 +59,5 @@ Those main aspects of pypot's architecture are summarized in the figure below.
     :align: center
     
 
-Refer to :ref:`this <installation>` section to learn how to install pypot on your system.
+Refer to :ref:`this <pypot_install>` section to learn how to install pypot on your system.
 
