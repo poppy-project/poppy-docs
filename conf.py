@@ -123,6 +123,9 @@ autodoc_member_order = 'bysource'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
+#for translation http://sphinx-doc.org/latest/intl.html
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False 
 
 # -- Options for HTML output ----------------------------------------------
 

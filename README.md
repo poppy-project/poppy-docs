@@ -47,6 +47,12 @@ To recreate the API doc of a module, use sphinx-apidocs. For example when doc is
 
 `sphinx-apidoc -f  -o poppy-humanoid/doc poppy-humanoid/poppy-humanoid/software/poppy_humanoid`
 
+Translation:
+
+Follow the instructions of [http://sphinx-doc.org/latest/intl.html](http://sphinx-doc.org/latest/intl.html) . Warning! I had to use version 11 of transifex-client to uploads my docs (pip install transifex-client==0.11.1.beta)
+
+Transifex project is poppy-docs : https://www.transifex.com/poppy-project/poppy-docs/
+
 
 
 

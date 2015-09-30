@@ -111,7 +111,7 @@ For instance::
             motors = [getattr(self.robot, name) for name in motors_name]
 
             while True:
-                for m in fake_motors:
+                for m in motors:
                     ...
 
 or::
