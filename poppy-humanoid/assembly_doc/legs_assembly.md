@@ -8,7 +8,7 @@
 5. Assembly with the torso
 
 **3D printed parts required:**
-![image](../img/parts_legs.JPG)
+![image](img/parts_legs.JPG)
 
 
 
@@ -91,7 +91,7 @@ If you received your Poppy kit from Generation Robots, you can use the custom 22
 
 
 #### Requirement:
-![](../img/poppy_humanoid_assembly_BOM.jpg)
+![](img/poppy_humanoid_assembly_BOM.jpg)
 
 **Sub-assemblies**
 - Legs
@@ -111,7 +111,4 @@ If you received your Poppy kit from Generation Robots, you can use the custom 22
 
 #### [VIDEO INSTRUCTIONS](http://youtu.be/5i0xVlrJc-8)
 
-[**<< Back to menu**](assemblyGuide.md)
-
-[**Trunk assembly >>**](trunk_assembly.md)
 

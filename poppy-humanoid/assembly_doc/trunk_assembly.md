@@ -1,6 +1,6 @@
 ## Trunk
 
-![image](../img/parts_chest.JPG)
+![image](img/parts_chest.JPG)
 
 Motors list:
 
@@ -42,7 +42,7 @@ Motors list:
     one on the video don’t. You also have holes to screw the
     SMPS2Dynamiel, instead of sticking it (use 2.5\*8mm screws).
 
-    ![image](../img/screwed_SMPS.JPG)
+    ![image](img/screwed_SMPS.JPG)
 
 ### Assemble trunk and arms:
 
@@ -51,7 +51,7 @@ Motors list:
 
 #### Requirements
 
-![](../img/poppy_torso_assembly_BOM.jpg)
+![](img/poppy_torso_assembly_BOM.jpg)
 
 **Sub-assemblies:**
 - Trunk
@@ -77,11 +77,3 @@ Motors list:
 
 #### <a href="http://youtu.be/uDhLIS3vxM4" target="_blank">**VIDEO INSTRUCTIONS**</a>
 
-
-[**<< Back to menu**](assemblyGuide.md)
-
-[**Arms assembly >>**](arms_assembly.md)
-
-[**Legs assembly >>**](legs_assembly.md)
-
-[**Head assembly >>**](head_assembly.md)
