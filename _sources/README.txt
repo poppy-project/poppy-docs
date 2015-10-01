@@ -1,4 +1,4 @@
-# Work In Progress
+# Work In Progress ! Do not rely on this doc !
 
 #Poppy docs 
 
@@ -15,6 +15,10 @@ This documentation contains:
     * poppy_torso
     * poppy_ergo_jr
 
+
+## Links of version in development
+* [html](http://poppy-project.github.io/poppy-docs/)  
+* [pdf](http://poppy-project.github.io/poppy-docs/Poppyprojectdocumentation.pdf)
 
 ## Install Sphinx and generate the doc
 
