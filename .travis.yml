@@ -1,6 +1,4 @@
-# Language is set to c because python isn't supported on the OSX Virtual Machines
-# on Travis. Anyway, python is install from conda.
-language: c
+language: python
 
 env:
   global:
