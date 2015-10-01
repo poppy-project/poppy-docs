@@ -1,4 +1,6 @@
 
+
+
 .. _poppy_humanoid_assembly_doc:
 
 Assembly guide for a Poppy Humanoid or Poppy Torso robot
@@ -12,8 +14,8 @@ Assembly guide for a Poppy Humanoid or Poppy Torso robot
     BOM.md
     ../../poppy-torso/BOM.md
     
-    en/head_assembly.md
-    en/trunk_assembly.md
-    en/arms_assembly.md
-    en/legs_assembly.md
+    head_assembly.md
+    trunk_assembly.md
+    arms_assembly.md
+    legs_assembly.md
 

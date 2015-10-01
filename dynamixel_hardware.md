@@ -13,7 +13,7 @@ Dynamixel servomotors (each with a different ID) and command them all
 from one end of the chain: each servomotor will pass the orders to the
 next one.
 
-![image](../img/daisy_link.JPG)
+![image](images/daisy_link.JPG)
 
 ## Putting the Dynamixel horns to zero 
 
@@ -28,13 +28,13 @@ horn is put, it is most of the time **impossible to remove** ! This will
 ensure that the zero position of the servo matches with the zero
 position of the structure around.
 
-![image](../img/zero.JPG) ![image](../img/zero2.JPG)
+![image](images/zero.JPG) ![image](images/zero2.JPG)
 
 On the outside of the horn, you also have three dots indicating the
 orientation. You should find the same three dots on structural parts, so
 be sure to match them.
 
-![image](../img/zero3.JPG)
+![image](images/zero3.JPG)
 
 ## Horns of MX-28 and MX-64
 
@@ -48,7 +48,7 @@ the horn on the axis. **Be careful of the zero when putting the main
 horn!** Then put thread locker on the big screw and screw it in the
 middle.
 
-![image](../img/MX28N.JPG)
+![image](images/MX28N.JPG)
 
 Main horn mounted on a MX-28
 
@@ -57,7 +57,7 @@ without shaft shoulder. Then put the horn on servomotor (with shaft
 shoulder on servo side). Put thread locker on the big screw and screw
 it. The horn should turn freely.
 
-![image](../img/MX64I1.JPG) ![image](../img/MX64I2.JPG) ![image](../img/MX64I3.JPG)
+![image](images/MX64I1.JPG) ![image](images/MX64I2.JPG) ![image](images/MX64I3.JPG)
 
 Free horn mounted on a MX-64
 
@@ -85,12 +85,9 @@ Here’s my tip: take the nut using thin tweezers and bring it in the site
 with the right orientation. Put the end of the tweezers in the hole to
 ensure good alignment. Then use flat pincers to adjust the nut.
 
-![image](../img/nuts1.JPG) ![image](../img/nuts2.JPG) ![image](../img/nuts3.JPG)
+![image](images/nuts1.JPG) ![image](images/nuts2.JPG) ![image](images/nuts3.JPG)
 
 These nuts correspond to diameter 2.5mm screws, Allen wrench 2mm.
 
 To build a full Poppy Humanoid robot, an electrical screwdriver is
 strongly advised!
-
-[**<< Back to menu**](assemblyGuide.md)
-[**<< Addressing Dynamixel**](addressing_dynamixel.md)
