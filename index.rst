@@ -29,8 +29,72 @@ Assembly guides
     
     dynamixel_index.rst
             
+    poppy-humanoid/assembly_doc/index.rst
+    poppy-ergo-jr/assembly_doc/index.rst
+    
+    
+Quickstarts
+=======================================================
 
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    quickstarts/discover.md
+    quickstarts/snap.md
+    quickstarts/vrep.md
    
+    
+Development guides
+==================
+
+    
+Poppy-humanoid library
+--------------------------------------
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-humanoid/doc/index.rst
+    
+Poppy-torso library
+--------------------------------------
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-torso/doc/index.rst
+    
+Poppy-ergo-jr library
+--------------------------------------
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-ergo-jr/doc/index.rst
+       
+Poppy-creature library
+------------------------------------------
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    poppy-creature/doc/index.rst
+    
+
+Pypot library
+-----------------------------
+
+.. toctree::
+    :titlesonly:
+    :maxdepth: 2
+
+    pypot/doc/index.rst
+    
 APIs
 ----------------------
 
