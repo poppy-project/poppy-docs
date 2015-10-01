@@ -1,0 +1,34 @@
+# Language is set to c because python isn't supported on the OSX Virtual Machines
+# on Travis. Anyway, python is install from conda.
+language: c
+
+env:
+  global:
+    # - USE_SSH_FORWARDING=true
+    - GH_USERNAME=poppy-project
+    - GH_REPO=poppy-docs
+    # Git and Github credentials for pushing documentation 
+    - GIT_EMAIL=poppy-bot-ci@inria.fr
+    - GIT_NAME=poppy-bot
+    # GH_TOKEN encrypted below > travis encrypt GH_TOKEN=XXXXXX --add
+    - secure: LkAbWxBOLpxNwe59YQx3oRfv1OUmbSSJ6LpOTen8CpOykHOCqKTwDj3pTAhmoY9gKD3r3f+GrP2Jdrtb0a4B96YyJPQ81xF2ElVnRGc4syxW1hWiWJ0hpzA2i2OobDDup5IOzYfNDOJtghSJj/R2qR7WP3w8MyDrKsYQJ59gngtU10/DE7Vp1ABjZCjblQPz1rHxXmq7KvQY7eF2rII4en6HL71QEybRlEEUBbxudQnkJ3HgofVrScsH/irvpuJkvFrwvh6NOj8ygg9E52oozZOL9USQrhWYTyHxOcrD868bt9LGEV3Flg5Us+kGyKJfXiMH48yu4OeQgsK5pQoIOH7lQFShlVIUzV1UxFgthugVU0tdtEbeoZjcagT+DWaGtudZmgRy7BjS14+Ss/8oXNl1lu75JT1AjuIwxn/HFHK0YsGf1ppdMc2XuRTRkRNGK5vP+v+79m/WeJzhTcz0rZ7GdljIDB6LbjcNP0NbUb1/4MmBB9Rz4MOtrBPpthFO0xF4Gxvt/u6xRX/AszOFtb5NoXzPsLkXka0nVeGmxw2XZCZ/3dy0klGRQdt/+e2YYT9b1ZN1RxjeYP8cn027nFMdFAYo0HYt44qzw7hyZqix0eY5caGbimSm3BX+e1MIKlQYhczH4GbC4sWQuYrqooOxU6uPb3McGHp33QNOpgM=
+
+
+addons:
+  apt:
+    packages:
+      # For building the pdf documentation
+      - texlive 
+      - texlive-latex-extra
+      - dvipng
+script:
+  - . ./ci/update_documentation.sh
+
+
+
+notifications:
+  email: 
+    - poppy-bot-ci@inria.fr
+  on_failure: change
+  on_success: change
+
