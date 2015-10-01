@@ -1,4 +1,6 @@
 language: python
+python:
+  - 2.7
 
 env:
   global:
@@ -19,6 +21,10 @@ addons:
       - texlive 
       - texlive-latex-extra
       - dvipng
+
+before_install:
+  - . ./ci/before_install.sh
+
 script:
   - . ./ci/update_documentation.sh
 
