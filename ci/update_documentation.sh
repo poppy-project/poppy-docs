@@ -2,9 +2,11 @@
 set -e
 
 # Install pypot
-pushd pypot
+pushd pypot/pypot
     python setup.py install
 popd
+
+
 
 
 
