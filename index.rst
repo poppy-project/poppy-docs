@@ -15,8 +15,8 @@ Introducing the Poppy project and the Poppy creatures
     :titlesonly:
     :maxdepth: 2
 
-    poppy_project.rst
-    contribute.rst
+    poppy_project.md
+    contribute.md
   
         
 Assembly guides
@@ -26,10 +26,9 @@ Assembly guides
 .. toctree::
     :titlesonly:
     :maxdepth: 2
-
-    dynamixel_hardware.rst
-    poppy-humanoid/assembly_doc/en/addressing_dynamixel.md
-        
+    
+    dynamixel_index.rst
+            
     poppy-humanoid/assembly_doc/index.rst
     poppy-ergo-jr/assembly_doc/index.rst
     
@@ -42,9 +41,9 @@ Quickstarts
     :titlesonly:
     :maxdepth: 2
 
-    quickstarts/discover.rst
-    quickstarts/snap.rst
-    quickstarts/vrep.rst
+    quickstarts/discover.md
+    quickstarts/snap.md
+    quickstarts/vrep.md
     
 Development guides
 ==================

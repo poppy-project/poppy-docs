@@ -4,10 +4,10 @@
     :titlesonly:
     :maxdepth: 2
 
-    introduction.rst
+    introduction.md
     
     .. toctree::
         :titlesonly:
         :maxdepth: 2
 
-        motor_list.rst
+        motor_list.md
