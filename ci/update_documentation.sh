@@ -24,19 +24,14 @@ pushd ..
 
     make -C $doc_src clean
     make -C $doc_src html
-    make -C $doc_src latex
+    make -C $doc_src latexpdf
     if [ -d $tmp_repo ]; then
        rm -rf $tmp_repo/
     fi
     mkdir $tmp_repo
     git clone -b gh-pages $git_url $tmp_repo 
     cp -r $doc_src/_build/html/* $tmp_repo
-
-    if [[ "TRAVIS_OS_NAME" == "linux" ]]; then
-        # Using pdflatex to build the .tex files to pdf
-        make -C $doc_src latexpdf
-        cp $doc_src/_build/latex/Poppyprojectdocumentation.pdf $tmp_repo
-    fi
+    cp $doc_src/_build/latex/*.pdf $tmp_repo
     
     # Test http external links
     # set +e
