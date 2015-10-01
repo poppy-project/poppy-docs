@@ -19,11 +19,11 @@ There are two devices allowing you to connect your Dynamixel bus to your compute
 The first one is created by Robotis (the conceptors of the Dynamixel devices) and can be used to control RS-232(serial), RS-485 (4-pin) and TTL (3-pin) busses.
 Be sure to set the selector in the position corresponding to the protocol you want to use. [More info](http://support.robotis.com/en/product/auxdevice/interface/usb2dxl_manual.htm)
 
-![image](../img/usb2dynamixel.jpg)
+![image](images/usb2dynamixel.jpg)
 
 USB2AX is a miniaturized version of the USB2Dynamixel able to control only TTL busses. We are using USB2AX to the rest of the doc. 
 
-![image](../img/USB2AX.jpg)
+![image](images/USB2AX.jpg)
 
 * Due to differences in sensibilities, new MX-28 and MX-64 servos communicate at a 57600 baudrate with USB2AX and 57142 for USB2Dynamixel.*
 
@@ -66,7 +66,7 @@ It should then be directly accessible in a terminal:
 
     herborist
 
-![image](../img/herborist.png)
+![image](images/herborist.png)
 
 Connect each motor **one by one** to the USB2AX and use the ’scan’
 button in Herborist or Dynamixel Wizard to detect it. If it’s a new
