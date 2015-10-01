@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Changelog &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#v-2-9">V 2.9</a><ul>
+<li><a class="reference internal" href="#image-feature-sensors">Image feature Sensors</a></li>
+<li><a class="reference internal" href="#led-register-for-xl-320-motors">LED register for XL-320 motors</a></li>
+<li><a class="reference internal" href="#various-bug-fixes">various bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v-2-8">V 2.8</a><ul>
+<li><a class="reference internal" href="#sync-loop">Sync Loop</a></li>
+<li><a class="reference internal" href="#better-sensor-integration">Better Sensor Integration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v-2-1">V 2.1</a></li>
+<li><a class="reference internal" href="#v-2-0">V. 2.0</a><ul>
+<li><a class="reference internal" href="#major-changes">Major changes</a></li>
+<li><a class="reference internal" href="#minor-changes">Minor changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v-1-7">V. 1.7</a><ul>
+<li><a class="reference internal" href="#minor-changes">Minor changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/pypot/pypot/changelog.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Changelog</a><ul>
+<li><a class="reference internal" href="#v-2-9">V 2.9</a><ul>
+<li><a class="reference internal" href="#image-feature-sensors">Image feature Sensors</a></li>
+<li><a class="reference internal" href="#led-register-for-xl-320-motors">LED register for XL-320 motors</a></li>
+<li><a class="reference internal" href="#various-bug-fixes">various bug fixes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v-2-8">V 2.8</a><ul>
+<li><a class="reference internal" href="#sync-loop">Sync Loop</a></li>
+<li><a class="reference internal" href="#better-sensor-integration">Better Sensor Integration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v-2-1">V 2.1</a></li>
+<li><a class="reference internal" href="#v-2-0">V. 2.0</a><ul>
+<li><a class="reference internal" href="#major-changes">Major changes</a></li>
+<li><a class="reference internal" href="#minor-changes">Minor changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#v-1-7">V. 1.7</a><ul>
+<li><a class="reference internal" href="#minor-changes">Minor changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pypot/pypot/changelog.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="changelog">
+<span id="changelog"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="v-2-9">
+<span id="v-2-9"></span><h2>V 2.9<a class="headerlink" href="#v-2-9" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="image-feature-sensors">
+<span id="image-feature-sensors"></span><h3>Image feature Sensors<a class="headerlink" href="#image-feature-sensors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>face</li>
+<li>blob</li>
+<li>qrcode</li>
+</ul>
+</div>
+<div class="section" id="led-register-for-xl-320-motors">
+<span id="led-register-for-xl-320-motors"></span><h3>LED register for XL-320 motors<a class="headerlink" href="#led-register-for-xl-320-motors" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="various-bug-fixes">
+<span id="various-bug-fixes"></span><h3>various bug fixes<a class="headerlink" href="#various-bug-fixes" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="v-2-8">
+<span id="v-2-8"></span><h2>V 2.8<a class="headerlink" href="#v-2-8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sync-loop">
+<span id="sync-loop"></span><h3>Sync Loop<a class="headerlink" href="#sync-loop" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>possibility to define synchronous loop</li>
+<li>define a &#8220;light&#8221; synchronization loop</li>
+<li>can now choose sync. loop inside the config</li>
+</ul>
+</div>
+<div class="section" id="better-sensor-integration">
+<span id="better-sensor-integration"></span><h3>Better Sensor Integration<a class="headerlink" href="#better-sensor-integration" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>can specify sensor inside the config file</li>
+</ul>
+</div>
+</div>
+<div class="section" id="v-2-1">
+<span id="v-2-1"></span><h2>V 2.1<a class="headerlink" href="#v-2-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>now uses the poppy_creature package</li>
+<li>add support for present_load/torque_limit/compliant in V-REP</li>
+<li>fix a bug when using setup.py install</li>
+<li>add minimum jerk of Steve N&#8217;Guyen</li>
+<li>add safe compliance behavior</li>
+<li>add camera sensor based on opencv</li>
+</ul>
+</div>
+<div class="section" id="v-2-0">
+<span id="v-2-0"></span><h2>V. 2.0<a class="headerlink" href="#v-2-0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="major-changes">
+<span id="major-changes"></span><h3>Major changes<a class="headerlink" href="#major-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>support for V-REP simulator</li>
+<li>new controller implementation: <a class="reference external" href="http://poppy-project.github.io/pypot/extending.html">extending pypot</a></li>
+</ul>
+</div>
+<div class="section" id="minor-changes">
+<span id="minor-changes"></span><h3>Minor changes<a class="headerlink" href="#minor-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Use of descriptors for motor registers</li>
+<li>REST API / remote robot</li>
+<li>Starts automatically the synchronization</li>
+</ul>
+</div>
+</div>
+<div class="section" id="v-1-7">
+<span id="v-1-7"></span><h2>V. 1.7<a class="headerlink" href="#v-1-7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="minor-changes">
+<span id="id1"></span><h3>Minor changes<a class="headerlink" href="#minor-changes" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Autodetect robot</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

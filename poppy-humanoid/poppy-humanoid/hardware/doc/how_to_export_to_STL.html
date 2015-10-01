@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>How to export 3D printable files from Poppy Humanoid SolidWorks model &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">How to export 3D printable files from Poppy Humanoid SolidWorks model</a><ul>
+<li><a class="reference internal" href="#step-1-save-the-poppy-humanoid-assembly-as-stl-files">Step 1 - Save the Poppy Humanoid assembly as STL files</a></li>
+<li><a class="reference internal" href="#step-2-extract-the-3d-printed-parts-from-the-exported-files">Step 2 - extract the 3D printed parts from the exported files</a></li>
+<li><a class="reference internal" href="#notes">Notes</a><ul>
+<li><a class="reference internal" href="#need-more-support">Need more support ?</a></li>
+<li><a class="reference internal" href="#want-to-contribute">Want to contribute ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../../../_sources/poppy-humanoid/poppy-humanoid/hardware/doc/how_to_export_to_STL.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../../index.html">
+      <img class="logo" src="../../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How to export 3D printable files from Poppy Humanoid SolidWorks model</a><ul>
+<li><a class="reference internal" href="#step-1-save-the-poppy-humanoid-assembly-as-stl-files">Step 1 - Save the Poppy Humanoid assembly as STL files</a></li>
+<li><a class="reference internal" href="#step-2-extract-the-3d-printed-parts-from-the-exported-files">Step 2 - extract the 3D printed parts from the exported files</a></li>
+<li><a class="reference internal" href="#notes">Notes</a><ul>
+<li><a class="reference internal" href="#need-more-support">Need more support ?</a></li>
+<li><a class="reference internal" href="#want-to-contribute">Want to contribute ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/poppy-humanoid/poppy-humanoid/hardware/doc/how_to_export_to_STL.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="how-to-export-3d-printable-files-from-poppy-humanoid-solidworks-model">
+<span id="how-to-export-3d-printable-files-from-poppy-humanoid-solidworks-model"></span><h1>How to export 3D printable files from Poppy Humanoid SolidWorks model<a class="headerlink" href="#how-to-export-3d-printable-files-from-poppy-humanoid-solidworks-model" title="Permalink to this headline">¶</a></h1>
+<p>The 3D printable parts of a Poppy Humanoid are available as a zip folder in the <a class="reference external" href="https://github.com/poppy-project/Poppy-Humanoid/releases">releases</a>.</p>
+<p>Yet, if you want to regenerate these files for any reasons (e.g. changes on the structure, change the resolution, change the unit, and so on), this short tutorial will explain how to extract from the SolidWorks model of Poppy Humanoid, the STL files of the parts which have to be 3D printed.</p>
+<ul class="simple">
+<li>So open Poppy_Humanoid.SLDASM
+<img alt="" src="../../../../_images/export_STL_step1.jpg" /></li>
+</ul>
+<div class="section" id="step-1-save-the-poppy-humanoid-assembly-as-stl-files">
+<span id="step-1-save-the-poppy-humanoid-assembly-as-stl-files"></span><h2>Step 1 - Save the Poppy Humanoid assembly as STL files<a class="headerlink" href="#step-1-save-the-poppy-humanoid-assembly-as-stl-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Click on <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Save</span> <span class="pre">As</span></code> in the Solidworks interface.</li>
+<li>This panel should appear:
+<img alt="" src="../../../../_images/export_STL_step2.jpg" /></li>
+<li>Select <code class="docutils literal"><span class="pre">...poppy_humanoid\hardware\STL</span></code> as output folder.</li>
+<li>The filename is not important, keep the one suggested by Solidworks.</li>
+<li>Select **STL (<em>.stl)</em>* in the field <code class="docutils literal"><span class="pre">Save</span> <span class="pre">as</span> <span class="pre">Type</span></code></li>
+<li>Click on the <code class="docutils literal"><span class="pre">Options</span></code> button.</li>
+<li>This panel should appear:
+<img alt="" src="../../../../_images/export_STL_step3.jpg" /></li>
+<li>Select <strong>Millimeters</strong> for the <code class="docutils literal"><span class="pre">Unit</span></code> field.</li>
+<li>You can tune the output quality in the Resolution fields.</li>
+<li>**/!** Ensure the case <code class="docutils literal"><span class="pre">Save</span> <span class="pre">all</span> <span class="pre">components</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">assembly</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">single</span> <span class="pre">file</span></code> <strong>is not checked!</strong></li>
+<li>Click on button <code class="docutils literal"><span class="pre">Ok</span></code>.</li>
+<li>Click on button <code class="docutils literal"><span class="pre">Save</span></code>.</li>
+<li>Soldiworks should not respond for a while, so be patient until it finishes to generate the STL files.</li>
+<li>A new panel should appear to confirm the exportation, click <code class="docutils literal"><span class="pre">Yes</span></code>
+<img alt="" src="../../../../_images/export_STL_step4.jpg" /></li>
+</ul>
+</div>
+<div class="section" id="step-2-extract-the-3d-printed-parts-from-the-exported-files">
+<span id="step-2-extract-the-3d-printed-parts-from-the-exported-files"></span><h2>Step 2 - extract the 3D printed parts from the exported files<a class="headerlink" href="#step-2-extract-the-3d-printed-parts-from-the-exported-files" title="Permalink to this headline">¶</a></h2>
+<p>The export should have generated a bunch of STL files (near 200) but most of them are useless and unfortunately the naming made difficult to recognize which part should be kept or not.</p>
+<p><img alt="" src="../../../../_images/export_STL_step6.jpg" /></p>
+<p>To overcome this issue, we have written a quick and dirty python script to extract only the parts to be 3D printed and rename them appropriately.</p>
+<p><em>If you use windows, please check if you have python, if not you can download the version 2.7 <a class="reference external" href="https://www.python.org/downloads/">here</a>.</em></p>
+<p>On windows, double click on the <code class="docutils literal"><span class="pre">extract_3D_printable_STL_parts.py</span></code>, a black terminal windows should pop-up and desappears quickly.</p>
+<p>If everything goes right, you have now a STL folder including subfolders associated with each Poppy Humanoid modules (i.e. head, trunk, upper_limbs and lower_limbs):</p>
+<p><img alt="" src="../../../../_images/export_STL_step7.jpg" /></p>
+<p>For example in the trunk folder:</p>
+<p><img alt="" src="../../../../_images/export_STL_step8.jpg" /></p>
+<p>These files are named as described in the <a class="reference external" href="BOM.md">BOM</a>.</p>
+</div>
+<div class="section" id="notes">
+<span id="notes"></span><h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="need-more-support">
+<span id="need-more-support"></span><h3>Need more support ?<a class="headerlink" href="#need-more-support" title="Permalink to this headline">¶</a></h3>
+<p>If this tutorial does not work properly on your system, you can either create a new issue in this repository or ask for help our awesome (and handsome) <a class="reference external" href="//forum.poppy-project.org">Discourse forum</a>.</p>
+</div>
+<div class="section" id="want-to-contribute">
+<span id="want-to-contribute"></span><h3>Want to contribute ?<a class="headerlink" href="#want-to-contribute" title="Permalink to this headline">¶</a></h3>
+<p>We are not expert, we do stuffs that eventually work... If you want to contribute and improve this tutorial or the (ugly) script to extract the correct 3D printed parts, you are very welcomed!</p>
+<p>As usually, you can fork this repo, do your changes and create a pull request. You can also come on the <a class="reference external" href="//forum.poppy-project.org">forum</a> and share your ideas!</p>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

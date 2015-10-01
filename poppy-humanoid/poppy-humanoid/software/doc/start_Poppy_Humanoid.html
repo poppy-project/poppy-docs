@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Note &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Note</a></li>
+<li><a class="reference internal" href="#demarrage">Démarrage</a></li>
+<li><a class="reference internal" href="#connexion">Connexion</a></li>
+<li><a class="reference internal" href="#play">Play</a></li>
+<li><a class="reference internal" href="#eteindre">Eteindre:</a></li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../../../_sources/poppy-humanoid/poppy-humanoid/software/doc/start_Poppy_Humanoid.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../../index.html">
+      <img class="logo" src="../../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Note</a></li>
+<li><a class="reference internal" href="#demarrage">Démarrage</a></li>
+<li><a class="reference internal" href="#connexion">Connexion</a></li>
+<li><a class="reference internal" href="#play">Play</a></li>
+<li><a class="reference internal" href="#eteindre">Eteindre:</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/poppy-humanoid/poppy-humanoid/software/doc/start_Poppy_Humanoid.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="note">
+<span id="note"></span><h1>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h1>
+<p>Le robot n&#8217;est pas prêt pour les démonstrations, il n&#8217;y a pas vraiment de sécurité qui va l&#8217;empecher de s&#8217;auto-detruire en cas de mauvaise manipulation...</p>
+</div>
+<div class="section" id="demarrage">
+<span id="demarrage"></span><h1>Démarrage<a class="headerlink" href="#demarrage" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Brancher le routeur WIFI</li>
+<li>Brancher le robot (12V).</li>
+</ul>
+</div>
+<div class="section" id="connexion">
+<span id="connexion"></span><h1>Connexion<a class="headerlink" href="#connexion" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Se connecter au wifi du routeur</li>
+<li>Normalement, si tout va bien, on doit pouvoir ping le robot:
+<code class="docutils literal"><span class="pre">ping</span> <span class="pre">robot-name.local</span></code></li>
+<li>Si ça ping:<ul>
+<li>se connecter en SSH:</li>
+<li><code class="docutils literal"><span class="pre">ssh</span> <span class="pre">poppy&#64;robot-name.local</span></code></li>
+<li><code class="docutils literal"><span class="pre">password:</span> <span class="pre">odroid</span></code></li>
+</ul>
+</li>
+<li>Si ça ping pas ...<ul>
+<li>brancher un cable ethernet de la tête au routeur</li>
+<li>retenter le ping et se connecter en SSH</li>
+<li>checker ifconfig pour voir si wlan a une IP<ul>
+<li>si non: <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">reboot</span></code></li>
+<li>si oui: debrancher l&#8217;ethernet et retenter sa chance.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="play">
+<span id="play"></span><h1>Play<a class="headerlink" href="#play" title="Permalink to this headline">¶</a></h1>
+<p>Une fois connecté en SSH:</p>
+<ul class="simple">
+<li>lancer le racourci pour démarrer un ipython notebook:  <code class="docutils literal"><span class="pre">bash</span> <span class="pre">notebook-launcher</span></code></li>
+<li>se connecter à la page <code class="docutils literal"><span class="pre">poppy-humanoid.local:8888</span></code></li>
+<li>et paf tu as un notebook pour coder Poppy et il y a meme quelques trucs déjà prêts.</li>
+</ul>
+</div>
+<div class="section" id="eteindre">
+<span id="eteindre"></span><h1>Eteindre:<a class="headerlink" href="#eteindre" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>se connecter en SSH</li>
+<li><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">halt</span></code></li>
+<li>attendre un peu et débrancher le robot</li>
+</ul>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

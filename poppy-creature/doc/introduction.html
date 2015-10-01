@@ -82,7 +82,6 @@
             
               <li><a href="index.html" title="&lt;no title&gt;" accesskey="P">previous </a></li>
               <li><a href="../../pypot/doc/index.html" title="Introduction" accesskey="N">next </a></li>
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">&lt;no title&gt;</a></li>
             
@@ -171,7 +170,7 @@
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>Poppy-creature is a small library providing a link between specific robots (Poppy Humanoid, Poppy Ergo JR...) and Pypot, the generic, lower level library.</p>
-<p>It mainly contains the class definition of <a class="reference internal" href="poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature" title="poppy.creatures.abstractcreature.AbstractPoppyCreature"><code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code></a> which takes a configuration and builds a <a class="reference internal" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> out of it,
+<p>It mainly contains the class definition of <code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code> which takes a configuration and builds a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> out of it,
 but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.</p>
 <p>The arguments you can provide are:</p>
 <ul class="simple">
@@ -185,14 +184,14 @@ but also a bunch of parameters to launch Snap! or HTTP servers, or to replace th
 <li><code class="docutils literal"><span class="pre">snap_host</span></code> default: 0.0.0.0 Hostname of the Snap! server</li>
 <li><code class="docutils literal"><span class="pre">snap_port</span></code> default: 6969 Port of the Snap! server</li>
 <li><code class="docutils literal"><span class="pre">snap_quiet</span></code> default: True Should Snap! not output logs</li>
-<li><code class="docutils literal"><span class="pre">use_http</span></code> default: False Should we launch the HTTP server (for <a class="reference internal" href="../../pypot/doc/remote_access.html#remote-protocol"><span>REST API use</span></a>)</li>
+<li><code class="docutils literal"><span class="pre">use_http</span></code> default: False Should we launch the HTTP server (for <a class="reference internal" href="../../pypot/pypot/doc/remote_access.html#remote-protocol"><span>REST API use</span></a>)</li>
 <li><code class="docutils literal"><span class="pre">http_host</span></code> default: 0.0.0.0 Hostname of the HTTP server</li>
 <li><code class="docutils literal"><span class="pre">http_port</span></code> default: 8080 Port of the HTTP server</li>
 <li><code class="docutils literal"><span class="pre">http_quiet</span></code> default: True Should HTTP not output logs</li>
-<li><code class="docutils literal"><span class="pre">use_remote</span></code> default: False Should we launch the Remote Robot server (for <a class="reference internal" href="../../pypot/doc/remote_access.html#remote-protocol"><span>REST API use</span></a>)</li>
+<li><code class="docutils literal"><span class="pre">use_remote</span></code> default: False Should we launch the Remote Robot server (for <a class="reference internal" href="../../pypot/pypot/doc/remote_access.html#remote-protocol"><span>REST API use</span></a>)</li>
 <li><code class="docutils literal"><span class="pre">remote_host</span></code> default: 0.0.0.0 Hostname of the Remote Robot server</li>
 <li><code class="docutils literal"><span class="pre">remote_port</span></code> default: 4242 Port of the Remote Robot server</li>
-<li><code class="docutils literal"><span class="pre">sync</span></code> default: True Should we launch the synchronization loop for motor communication (see <a class="reference internal" href="../../pypot/doc/dynamixel.html#low-level"><span>the Dynamixel low-level Pypot section</span></a>)</li>
+<li><code class="docutils literal"><span class="pre">sync</span></code> default: True Should we launch the synchronization loop for motor communication (see <a class="reference internal" href="../../pypot/pypot/doc/dynamixel.html#low-level"><span>the Dynamixel low-level Pypot section</span></a>)</li>
 </ul>
 <p>The sources are available on <a class="reference external" href="https://github.com/poppy-project/poppy-creature">Github</a>.</p>
 </div>
@@ -223,8 +222,8 @@ inside the robot through SSH and then connect in a browser from another computer
 </div>
 <div class="section" id="create-your-own-poppy-creature">
 <h1>Create your own Poppy creature<a class="headerlink" href="#create-your-own-poppy-creature" title="Permalink to this headline">¶</a></h1>
-<p>While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a <a class="reference internal" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> from Pypot directly (see <a class="reference internal" href="../../pypot/doc/robot.html#robot"><span>the robot object from Pypot</span></a>).</p>
-<p>But when you want to make it easily usable and available to non-geek public, the best is to create your own creature&#8217;s library. It should contain a configuration file and a class that extends <a class="reference internal" href="poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature" title="poppy.creatures.abstractcreature.AbstractPoppyCreature"><code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code></a>.
+<p>While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> from Pypot directly (see <a class="reference internal" href="../../pypot/doc/robot.html#robot"><span>the robot object from Pypot</span></a>).</p>
+<p>But when you want to make it easily usable and available to non-geek public, the best is to create your own creature&#8217;s library. It should contain a configuration file and a class that extends <code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code>.
 You can then add your own properties and primitives.</p>
 <p>Example from Poppy Humanoid:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">PoppyHumanoid</span><span class="p">(</span><span class="n">AbstractPoppyCreature</span><span class="p">):</span>
@@ -293,7 +292,6 @@ For a better integration with the Poppy installer scripts, please have in the ro
       
         <li><a href="index.html" title="&lt;no title&gt;" >previous</a></li>
         <li><a href="../../pypot/doc/index.html" title="Introduction" >next</a></li>
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >&lt;no title&gt;</a></li>
         <li><a href="#">top</a></li> 

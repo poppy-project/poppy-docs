@@ -92,7 +92,6 @@
             
               <li><a href="robot.html" title="The Robot object and the controllers" accesskey="P">previous </a></li>
               <li><a href="primitive.html" title="Primitives" accesskey="N">next </a></li>
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -192,11 +191,11 @@
 <span id="motor"></span><h1>The Motor object<a class="headerlink" href="#the-motor-object" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The  <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> class contains a list of  <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor" title="pypot.dynamixel.motor.DxlMotor"><code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code></a>, each <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor" title="pypot.dynamixel.motor.DxlMotor"><code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code></a> being linked to a physical Dynamixel motor.</p>
+<p>The  <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> class contains a list of  <code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code>, each <code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code> being linked to a physical Dynamixel motor.</p>
 <div class="section" id="registers">
 <h3>Registers<a class="headerlink" href="#registers" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
-<dt>This class provides access to (see <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.registers" title="pypot.dynamixel.motor.DxlMotor.registers"><code class="xref py py-attr docutils literal"><span class="pre">registers</span></code></a> for an exhaustive list):</dt>
+<dt>This class provides access to (see <code class="xref py py-attr docutils literal"><span class="pre">registers</span></code> for an exhaustive list):</dt>
 <dd><ul class="first last simple">
 <li>id: motor id</li>
 <li>motor name</li>
@@ -260,7 +259,7 @@ If this angle isn&#8217;t between <code class="xref py py-attr docutils literal"
 </div>
 <div class="section" id="controlling-in-speed">
 <h3>Controlling in speed<a class="headerlink" href="#controlling-in-speed" title="Permalink to this headline">¶</a></h3>
-<p>You can also control your robot in speed. Set the <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.goal_speed" title="pypot.dynamixel.motor.DxlMotor.goal_speed"><code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code></a> attribute to the desired value in degree per seconds.
+<p>You can also control your robot in speed. Set the <code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code> attribute to the desired value in degree per seconds.
 This automatically sets the <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code> to the maximal or minimal value (depending on the sign of the speed).</p>
 <p>The motor will remain at the given speed until it gets a new order or it reaches its angle limit.</p>
 <p>Example of robot making &#8216;yes&#8217; with its head:</p>
@@ -281,11 +280,11 @@ This automatically sets the <code class="xref py py-attr docutils literal"><span
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You could also use the wheel mode settings where you can directly change the <code class="xref py py-attr docutils literal"><span class="pre">moving_speed</span></code>. Nevertheless, while the motor will turn infinitely with the wheel mode, here with the <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.goal_speed" title="pypot.dynamixel.motor.DxlMotor.goal_speed"><code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code></a> the motor will still respect the angle limits.</p>
+<p class="last">You could also use the wheel mode settings where you can directly change the <code class="xref py py-attr docutils literal"><span class="pre">moving_speed</span></code>. Nevertheless, while the motor will turn infinitely with the wheel mode, here with the <code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code> the motor will still respect the angle limits.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">If you set both <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.goal_speed" title="pypot.dynamixel.motor.DxlMotor.goal_speed"><code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code></a> and <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code> only the last command will be executed. Unless you know what you are doing, you should avoid to mix these both approaches.</p>
+<p class="last">If you set both <code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code> only the last command will be executed. Unless you know what you are doing, you should avoid to mix these both approaches.</p>
 </div>
 </div>
 <div class="section" id="the-goto-position-function">
@@ -294,7 +293,7 @@ This automatically sets the <code class="xref py py-attr docutils literal"><span
 <div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">goto_position</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>To synchronize several motors, have a look at the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.goto_position" title="pypot.robot.robot.Robot.goto_position"><code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code></a> at robot level.</p>
+<p>To synchronize several motors, have a look at the <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> at robot level.</p>
 <p>By default, this function return immediatelly and is cancelled if another one is run later, even if the 3 seconds are not over.</p>
 <p>You can set the optionnal <em>wait</em> parameter to True to make this function blocking, therefore the next line in the script will execute only when the 3 seconds are over.</p>
 <p>The other optionnal parameter is <em>control</em>. You can specify &#8216;dummy&#8217; or &#8216;minijerk&#8217; (default) to define which algorithm is used in used in background to bring the motor to the desired position.</p>
@@ -329,7 +328,6 @@ The &#8216;minijerk&#8217; controller has a more complex algorithm to slow down 
       
         <li><a href="robot.html" title="The Robot object and the controllers" >previous</a></li>
         <li><a href="primitive.html" title="Primitives" >next</a></li>
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

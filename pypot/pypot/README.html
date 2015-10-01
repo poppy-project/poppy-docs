@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Pypot: A Python lib for Dynamixel motors control &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Pypot: A Python lib for Dynamixel motors control</a><ul>
+<li><a class="reference internal" href="#the-poppy-project-open-source">The Poppy-project: open source</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#roadmap">Roadmap</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/pypot/pypot/README.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pypot: A Python lib for Dynamixel motors control</a><ul>
+<li><a class="reference internal" href="#the-poppy-project-open-source">The Poppy-project: open source</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#roadmap">Roadmap</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pypot/pypot/README.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <p><a class="reference external" href="https://travis-ci.org/poppy-project/pypot"><img alt="Build Status" src="https://travis-ci.org/poppy-project/pypot.svg?branch=master" /></a></p>
+<div class="section" id="pypot-a-python-lib-for-dynamixel-motors-control">
+<span id="pypot-a-python-lib-for-dynamixel-motors-control"></span><h1>Pypot: A Python lib for Dynamixel motors control<a class="headerlink" href="#pypot-a-python-lib-for-dynamixel-motors-control" title="Permalink to this headline">¶</a></h1>
+<p>Pypot is a library developed in the <a class="reference external" href="https://flowers.inria.fr/">inria FLOWERS</a> team to make it easy and fast to control custom robots based on dynamixel motors. This framework provides different levels of abstraction corresponding to different types of use. More precisely, you can use pypot to:</p>
+<ul class="simple">
+<li>directly control robotis motors (both protocol v1 and v2 are supported) through a USB2serial device,</li>
+<li>define the structure of your particular robot and control it through high-level commands,</li>
+<li>define primitives and easily combine them to create complex behavior.</li>
+</ul>
+<p>Pypot has been entirely written in Python to allow for fast development, easy deployment and quick scripting by non-necessary expert developers. It can also benefits from the scientific and machine learning libraries existing in Python. The serial communication is handled through the standard library and thus allows for rather high performance (10ms sensorimotor loop). It is crossed-platform and has been tested on Linux, Windows and Mac OS.</p>
+<p>Pypot is also compatible with the <a class="reference external" href="http://www.coppeliarobotics.com">V-REP simulator</a>. This allows you to seamlessly switch from a real robot to its simulated equivalent without having to modify your code.</p>
+<p>Finally, it has been developed to permit an easy and fast extension to other types of motors and sensors.</p>
+<div class="section" id="the-poppy-project-open-source">
+<span id="the-poppy-project-open-source"></span><h2>The Poppy-project: open source<a class="headerlink" href="#the-poppy-project-open-source" title="Permalink to this headline">¶</a></h2>
+<p>Pypot is part of the <a class="reference external" href="http://www.poppy-project.org">Poppy project</a> aiming at developping robotic creations that are easy to build, customise, deploy, and share. It promotes open-source by sharing hardware, software, and web tools.</p>
+<p>At the moment we already proposed a few Poppy Creatures:</p>
+<ul class="simple">
+<li>the <a class="reference external" href="https://github.com/poppy-project/poppy-humanoid">Poppy Humanoid</a>: a kid-size humanoid robot designed for biped locomotion and physical human-robot interaction,</li>
+<li>a <a class="reference external" href="https://www.poppy-project.org/project/mathematics-a-beautiful-elsewhere/">Poppy Ergo</a>: an art/science project where robotic creatures, endowed with algorithmic models of curiosity-driven learning and language formation, were hacked by moviemaker David Lynch,</li>
+<li>and a <a class="reference external" href="https://github.com/poppy-project/poppy-ergo-jr">PoppyErgoJr</a> with low-cost <a class="reference external" href="http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm">XL-320 robotis motors</a> and modular 3D printed parts created using <a class="reference external" href="https://github.com/openscad/openscad/">OpenSCAD</a>.</li>
+</ul>
+<p><img alt="Poppy Humanoid" src="../../_images/poppy-creatures.jpg" /></p>
+<p>All those creatures are based on a combination of standard dynamixel actuators, 3D printed parts and open-source electronics such as Arduino boards. Both the hardware (3D models, electronics...) and software can be freely used, modified and duplicated.</p>
+<p>License     |     Notebooks    |   Library      |
+| &#8212;&#8212;&#8212;&#8211; | :&#8212;&#8212;&#8212;&#8212;-: | :&#8212;&#8212;&#8212;&#8212;-: |
+| Name  | <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/">Creatives Commons BY-SA</a>  |<a class="reference external" href="http://www.gnu.org/licenses/gpl.html">GPL v3</a>  |
+| Logo  | <a class="reference external" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /> </a>  |<a class="reference external" href="http://www.gnu.org/licenses/gpl.html"><img alt="GPL V3" src="https://www.gnu.org/graphics/gplv3-88x31.png" /></a>  |</p>
+<p>Their development is tighly built upon the development of pypot.</p>
+<p>Do not hesitate to <a class="reference external" href="https://forum.poppy-project.org">contact us</a> if you want to get involved!</p>
+</div>
+<div class="section" id="documentation">
+<span id="documentation"></span><h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>The full pypot documentation on a html format can be found <a class="reference external" href="http://poppy-project.github.io/pypot/">here</a>. It provides tutorials, examples and a complete API.</p>
+<p><strong>The documentation is slowly moving toward <a class="reference external" href="http://ipython.org/notebook.html">IPython Notebooks</a> are they are such a powerful tool for writing and sharing tutorials, experiments or pedalogical contents.</strong></p>
+<p><strong>They can be found <a class="reference external" href="https://github.com/poppy-project/pypot/tree/master/samples/notebooks#notebooks-everywhere">here</a> with a detailed explanation on how they can be used, installed, and modified.</strong></p>
+</div>
+<div class="section" id="installation">
+<span id="installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Pypot is a library entirelly written in <a class="reference external" href="https://www.python.org">Python</a>. It works with Python <em>2.7</em>, <em>3.4</em> and <em>pypy-2.5</em>. It is crossed platform and has been tested on Windows, Mac, Linux - yet specific usb to serial driver may be required depending on your system (see below).</p>
+<p>Pypot also requires the following python package:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://pyserial.sourceforge.net">pyserial</a> 2.6 (or later)</li>
+<li><a class="reference external" href="http://www.numpy.org">numpy</a></li>
+<li><a class="reference external" href="http://www.scipy.org/">scipy</a></li>
+</ul>
+<p>You can build and install pypot with the typically python way:</p>
+<pre class="literal-block">
+cd pypot
+python setup.py install
+</pre>
+<p>or directly via <a class="reference external" href="https://pip.pypa.io/en/latest/index.html">pip</a>:</p>
+<pre class="literal-block">
+pip install pypot
+</pre>
+<p><em>Note: Linux users may have to run the commands above using sudo depending on their python installation</em></p>
+<pre class="literal-block">
+sudo python setup.py install
+or
+sudo pip install pypot
+</pre>
+<p><em>Note: These commands must be run in a terminal (command prompt) and not directly from within a Python IDE. If you are new to Python and don&#8217;t know how to install python packages please refer to <a class="reference external" href="https://pip.pypa.io/en/latest/index.html">the official pip documentation</a> or see our tutorial on how you can <a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/samples/notebooks/readme.md#ipython-notebooks-everywhere">connect to one of the notebook examples</a>.</em></p>
+<p><strong>If you are new to the Python&#8217;s world, we strongly recommand using a pre-packaged distribution as  <a class="reference external" href="http://continuum.io/downloads">Anaconda</a>. It comes will all dependencies pre-compiled (pip, numpy, scipy...) and it works well on Windows, Mac and Linux!</strong></p>
+<p>You will also have to install the driver for the USB2serial port. There are two devices that have been tested with pypot that could be used:</p>
+<ul class="simple">
+<li>USB2AX - this device is designed to manage TTL communication only</li>
+<li>USB2Dynamixel - this device can manage both TTL and RS485 communication.</li>
+</ul>
+<p>For more details on the installation procedure, please refer to the <a class="reference external" href="http://poppy-project.github.io/pypot/intro.html#installation">installation section</a> of the documentation.</p>
+</div>
+<div class="section" id="roadmap">
+<span id="roadmap"></span><h2>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline">¶</a></h2>
+<p>The roadmap of the project can be found <a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/roadmap.md">here</a>.</p>
+<p><img alt="Alt text" src="https://zenodo.org/badge/3914/poppy-project/pypot.png" /></p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

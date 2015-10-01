@@ -82,7 +82,6 @@
             
               <li><a href="index.html" title="&lt;no title&gt;" accesskey="P">previous </a></li>
               <li><a href="../../poppy-ergo-jr/doc/index.html" title="&lt;no title&gt;" accesskey="N">next </a></li>
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">&lt;no title&gt;</a></li>
             
@@ -170,7 +169,7 @@
                   
   <div class="section" id="introduction">
 <span id="poppy-torso-lib"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Poppy Torso is the library allowing you to create a <a class="reference internal" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> corresponding to a standard Poppy Torso robot.</p>
+<p>Poppy Torso is the library allowing you to create a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> corresponding to a standard Poppy Torso robot.</p>
 <p>Using your Poppy Torso robot is as simple as:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_torso</span> <span class="kn">import</span> <span class="n">PoppyTorso</span>
 
@@ -191,17 +190,17 @@
 </div>
 <div class="section" id="poppy-torso-specific-features">
 <h1>Poppy Torso specific features<a class="headerlink" href="#poppy-torso-specific-features" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="poppy_torso.html#poppy_torso.poppy_torso.PoppyTorso" title="poppy_torso.poppy_torso.PoppyTorso"><code class="xref py py-class docutils literal"><span class="pre">PoppyTorso</span></code></a> is not only a <a class="reference internal" href="../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature" title="poppy.creatures.abstractcreature.AbstractPoppyCreature"><code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code></a> (which contains a <a class="reference internal" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a>), it also have its own features and parameters.</p>
+<p><code class="xref py py-class docutils literal"><span class="pre">PoppyTorso</span></code> is not only a <code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code> (which contains a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code>), it also have its own features and parameters.</p>
 <p>The default goto behavior for each motor is set to &#8216;minijerk&#8217;.</p>
 <p>The following primitives are added to the robot (so you can directly use <code class="docutils literal"><span class="pre">poppy.limit_torque.start()</span></code>):</p>
 <ul class="simple">
-<li>A <a class="reference internal" href="poppy_torso.primitives.html#poppy_torso.primitives.safe.LimitTorque" title="poppy_torso.primitives.safe.LimitTorque"><code class="xref py py-class docutils literal"><span class="pre">LimitTorque</span></code></a> named <code class="docutils literal"><span class="pre">limit_torque</span></code>: Work In Progress. Each motor automatically sets the minimal torque needed to reach its goal position and therefore limit power consumption and motor heating. This primitive is looping.</li>
-<li>A <a class="reference internal" href="poppy_torso.primitives.html#poppy_torso.primitives.safe.TemperatureMonitor" title="poppy_torso.primitives.safe.TemperatureMonitor"><code class="xref py py-class docutils literal"><span class="pre">TemperatureMonitor</span></code></a> named <code class="docutils literal"><span class="pre">temperature_monitoring</span></code>: check the temperature of all motors and plays a sound if one is too hot. This primitive is looping and started by default.</li>
-<li>A <a class="reference internal" href="poppy_torso.primitives.html#poppy_torso.primitives.dance.SimpleBodyBeatMotion" title="poppy_torso.primitives.dance.SimpleBodyBeatMotion"><code class="xref py py-class docutils literal"><span class="pre">SimpleBodyBeatMotion</span></code></a> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Simple primitive to make Poppy shake its upper body following a given beat rate in bpm. This primitive is looping.</li>
-<li>A <a class="reference internal" href="poppy_torso.primitives.html#poppy_torso.primitives.idle.UpperBodyIdleMotion" title="poppy_torso.primitives.idle.UpperBodyIdleMotion"><code class="xref py py-class docutils literal"><span class="pre">UpperBodyIdleMotion</span></code></a> named <code class="docutils literal"><span class="pre">upper_body_idle_motion</span></code>: Slow and small movements of the upper body to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
-<li>A <a class="reference internal" href="poppy_torso.primitives.html#poppy_torso.primitives.idle.HeadIdleMotion" title="poppy_torso.primitives.idle.HeadIdleMotion"><code class="xref py py-class docutils literal"><span class="pre">HeadIdleMotion</span></code></a> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Slow and small movements of the head to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
-<li>A <a class="reference internal" href="poppy_torso.primitives.html#poppy_torso.primitives.interaction.ArmsTurnCompliant" title="poppy_torso.primitives.interaction.ArmsTurnCompliant"><code class="xref py py-class docutils literal"><span class="pre">ArmsTurnCompliant</span></code></a> named <code class="docutils literal"><span class="pre">arms_turn_compliant</span></code>: Automatically turns the arms compliant when a force is applied. This primitive is looping.</li>
-<li>A <a class="reference internal" href="poppy_torso.primitives.html#poppy_torso.primitives.interaction.PuppetMaster" title="poppy_torso.primitives.interaction.PuppetMaster"><code class="xref py py-class docutils literal"><span class="pre">PuppetMaster</span></code></a> named <code class="docutils literal"><span class="pre">arms_copy_motion</span></code>: Apply the motion made on the left arm to the right arm. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">LimitTorque</span></code> named <code class="docutils literal"><span class="pre">limit_torque</span></code>: Work In Progress. Each motor automatically sets the minimal torque needed to reach its goal position and therefore limit power consumption and motor heating. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">TemperatureMonitor</span></code> named <code class="docutils literal"><span class="pre">temperature_monitoring</span></code>: check the temperature of all motors and plays a sound if one is too hot. This primitive is looping and started by default.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">SimpleBodyBeatMotion</span></code> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Simple primitive to make Poppy shake its upper body following a given beat rate in bpm. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">UpperBodyIdleMotion</span></code> named <code class="docutils literal"><span class="pre">upper_body_idle_motion</span></code>: Slow and small movements of the upper body to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">HeadIdleMotion</span></code> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Slow and small movements of the head to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">ArmsTurnCompliant</span></code> named <code class="docutils literal"><span class="pre">arms_turn_compliant</span></code>: Automatically turns the arms compliant when a force is applied. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">PuppetMaster</span></code> named <code class="docutils literal"><span class="pre">arms_copy_motion</span></code>: Apply the motion made on the left arm to the right arm. This primitive is looping.</li>
 </ul>
 <p>Remember to remove compliance before starting the primitives!</p>
 </div>
@@ -243,7 +242,6 @@
       
         <li><a href="index.html" title="&lt;no title&gt;" >previous</a></li>
         <li><a href="../../poppy-ergo-jr/doc/index.html" title="&lt;no title&gt;" >next</a></li>
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >&lt;no title&gt;</a></li>
         <li><a href="#">top</a></li> 

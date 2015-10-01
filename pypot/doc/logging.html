@@ -86,7 +86,6 @@
             
               <li><a href="remote_access.html" title="REST API" accesskey="P">previous </a></li>
               <li><a href="herborist.html" title="Herborist: the configuration tool" accesskey="N">next </a></li>
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -180,7 +179,7 @@
 <h1>The logging system<a class="headerlink" href="#the-logging-system" title="Permalink to this headline">¶</a></h1>
 <p>Pypot used the Python&#8217;s builtin <a class="reference external" href="http://docs.python.org/2/library/logging.html">logging</a> module for logging.
 For details on how to use this module please refer to Python&#8217;s own documentation or the one on <a class="reference external" href="https://docs.djangoproject.com/en/1.6/topics/logging/">django website</a>.
-Here, we will only describe what pypot is logging and how it is organised. We will also present a few examples on how to use pypot logging and parse the information (see section <a class="reference internal" href="#log-ex"><span>Using Pypot&#8217;s logging</span></a>).</p>
+Here, we will only describe what pypot is logging and how it is organised. We will also present a few examples on how to use pypot logging and parse the information (see section <a class="reference internal" href="../pypot/doc/logging.html#log-ex"><span>Using Pypot&#8217;s logging</span></a>).</p>
 <div class="section" id="logging-structure">
 <span id="log-struct"></span><h2>Logging structure<a class="headerlink" href="#logging-structure" title="Permalink to this headline">¶</a></h2>
 <p>Pypot is logging information at all different levels:</p>
@@ -196,13 +195,13 @@ Here, we will only describe what pypot is logging and how it is organised. We wi
 </div>
 <p>Pypot&#8217;s logging naming convention is following pypot&#8217;s architecture. Here is the detail of what pypot is logging with the associated logger&#8217;s name:</p>
 <ul class="simple">
-<li>The logger&#8217;s name <a class="reference internal" href="pypot.dynamixel.io.html#module-pypot.dynamixel.io" title="pypot.dynamixel.io"><code class="xref py py-class docutils literal"><span class="pre">io</span></code></a> is logging information related to opening/closing port (INFO) and each sent/received package (DEBUG). The communication and timeout error are also logged (WARNING). This logger always provides you the port name, the baudrate and timeout of your connection as extra information.</li>
-<li>The logger <a class="reference internal" href="pypot.robot.html#module-pypot.robot.motor" title="pypot.robot.motor"><code class="xref py py-class docutils literal"><span class="pre">motor</span></code></a> is logging each time a register of a motor is set (DEBUG). The name of the register, the name of the motor and the set value are given in the message.</li>
-<li><a class="reference internal" href="pypot.robot.html#module-pypot.robot.config" title="pypot.robot.config"><code class="xref py py-class docutils literal"><span class="pre">config</span></code></a> is logging information regarding the creation of a robot through a config dictionary. A message is sent for each motor, controller and alias added (INFO). A WARNING message is also sent when the angle limits of a motor are changed. We provide as extra the entire config dictionary.</li>
-<li>The logger  <a class="reference internal" href="pypot.robot.html#module-pypot.robot.robot" title="pypot.robot.robot"><code class="xref py py-class docutils literal"><span class="pre">robot</span></code></a> is logging when the synchronization is started/stopped (INFO) and when a primitive is attached (INFO).</li>
-<li><a class="reference internal" href="pypot.primitive.html#module-pypot.primitive.primitive" title="pypot.primitive.primitive"><code class="xref py py-class docutils literal"><span class="pre">primitive</span></code></a> logs a message when the primitive is started/stopped and paused/resumed (INFO). Each <a class="reference internal" href="pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive.update" title="pypot.primitive.primitive.LoopPrimitive.update"><code class="xref py py-meth docutils literal"><span class="pre">update()</span></code></a> of a LoopPrimitive is also logged (DEBUG). Each time a primitive sets a value to a register a message is also logged (DEBUG).</li>
-<li><a class="reference internal" href="pypot.primitive.html#module-pypot.primitive.manager" title="pypot.primitive.manager"><code class="xref py py-class docutils literal"><span class="pre">manager</span></code></a> provides you information on how the values sent within primitives were combined (DEBUG).</li>
-<li><a class="reference internal" href="pypot.server.html#module-pypot.server" title="pypot.server"><code class="xref py py-class docutils literal"><span class="pre">server</span></code></a> logs when the server is started (INFO) and each handled request (DEBUG).</li>
+<li>The logger&#8217;s name <code class="xref py py-class docutils literal"><span class="pre">io</span></code> is logging information related to opening/closing port (INFO) and each sent/received package (DEBUG). The communication and timeout error are also logged (WARNING). This logger always provides you the port name, the baudrate and timeout of your connection as extra information.</li>
+<li>The logger <code class="xref py py-class docutils literal"><span class="pre">motor</span></code> is logging each time a register of a motor is set (DEBUG). The name of the register, the name of the motor and the set value are given in the message.</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">config</span></code> is logging information regarding the creation of a robot through a config dictionary. A message is sent for each motor, controller and alias added (INFO). A WARNING message is also sent when the angle limits of a motor are changed. We provide as extra the entire config dictionary.</li>
+<li>The logger  <code class="xref py py-class docutils literal"><span class="pre">robot</span></code> is logging when the synchronization is started/stopped (INFO) and when a primitive is attached (INFO).</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">primitive</span></code> logs a message when the primitive is started/stopped and paused/resumed (INFO). Each <code class="xref py py-meth docutils literal"><span class="pre">update()</span></code> of a LoopPrimitive is also logged (DEBUG). Each time a primitive sets a value to a register a message is also logged (DEBUG).</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">manager</span></code> provides you information on how the values sent within primitives were combined (DEBUG).</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">server</span></code> logs when the server is started (INFO) and each handled request (DEBUG).</li>
 </ul>
 </div>
 <div class="section" id="using-pypot-s-logging">
@@ -284,7 +283,6 @@ Here, we will only describe what pypot is logging and how it is organised. We wi
       
         <li><a href="remote_access.html" title="REST API" >previous</a></li>
         <li><a href="herborist.html" title="Herborist: the configuration tool" >next</a></li>
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Pypot REST APIs &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Pypot REST APIs</a></li>
+<li><a class="reference internal" href="#rest-apis">REST APIs</a><ul>
+<li><a class="reference internal" href="#robot">Robot</a><ul>
+<li><a class="reference internal" href="#motor">Motor</a></li>
+<li><a class="reference internal" href="#sensor">Sensor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#primitive">Primitive</a></li>
+<li><a class="reference internal" href="#note-for-developers">Note for developers</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/pypot/pypot/REST-APIs.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pypot REST APIs</a></li>
+<li><a class="reference internal" href="#rest-apis">REST APIs</a><ul>
+<li><a class="reference internal" href="#robot">Robot</a><ul>
+<li><a class="reference internal" href="#motor">Motor</a></li>
+<li><a class="reference internal" href="#sensor">Sensor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#primitive">Primitive</a></li>
+<li><a class="reference internal" href="#note-for-developers">Note for developers</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pypot/pypot/REST-APIs.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="pypot-rest-apis">
+<span id="pypot-rest-apis"></span><h1>Pypot REST APIs<a class="headerlink" href="#pypot-rest-apis" title="Permalink to this headline">¶</a></h1>
+<p>The pypot library provides a REST API which can be used to access the <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.robot.html">Robot</a> level and all its attached <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.robot.html#module-pypot.robot.motor">motors</a>, <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.robot.html#module-pypot.robot.sensor">sensors</a>, and <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.primitive.html">primitives</a>. Through the REST API, you can:</p>
+<ul class="simple">
+<li><strong>Motors</strong><ul>
+<li>get the motors list and get/set value from/to their registers</li>
+</ul>
+</li>
+<li><strong>Sensors</strong>:<ul>
+<li>get the sensors list and get/set value from/to their registers</li>
+</ul>
+</li>
+<li><strong>Primitives</strong>:<ul>
+<li>get the primitives list (running or not), start, stop, pause, and resume them.</li>
+<li>you can also access their publicly available properties and methods.</li>
+</ul>
+</li>
+</ul>
+<p><em>Note that only the defined as <strong>publicly available</strong> registers or methods will be accessed through the REST API. Please refer to the <a class="reference external" href="#markdown-header-note-for-developers">note for developers</a> below for details.</em></p>
+</div>
+<div class="section" id="rest-apis">
+<span id="rest-apis"></span><h1>REST APIs<a class="headerlink" href="#rest-apis" title="Permalink to this headline">¶</a></h1>
+<p><em>Please note that all answers are always sent as json dictionary.</em></p>
+<div class="section" id="robot">
+<span id="robot"></span><h2>Robot<a class="headerlink" href="#robot" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="motor">
+<span id="motor"></span><h3>Motor<a class="headerlink" href="#motor" title="Permalink to this headline">¶</a></h3>
+<p>|  | HTTP | JSON | Example of answer |
+|&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;|:&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;:|:&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;:|&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;|
+| Get the motors list | GET /motor/list.json | {&#8220;robot&#8221;: {&#8220;get_motors_list&#8221;: {&#8220;alias&#8221;: &#8220;motors&#8221;}}} | {&#8216;motors&#8217;: [&#8220;l_elbow_y&#8221;, &#8220;r_elbow_y&#8221;, &#8220;r_knee_y&#8221;, &#8220;head_y&#8221;, &#8220;head_z&#8221;]} |
+| Get the motors alias list | GET /motor/alias/list.json | {&#8220;robot&#8221;: {&#8220;get_motors_alias&#8221;: {}}} | {&#8216;alias&#8217;: [&#8220;r_leg&#8221;, &#8220;torso&#8221;, &#8220;l_leg_sagitall&#8221;]} |
+| Get the motors list of a specific alias | GET /motor/&lt;alias&gt;/list.json | {&#8220;robot&#8221;: {&#8220;get_motors_list&#8221;: {&#8220;alias&#8221;: &#8220;<alias>&#8220;}}} | {<alias>: [&#8220;l_elbow_y&#8221;, &#8220;r_elbow_y&#8221;, &#8220;r_knee_y&#8221;, &#8220;head_y&#8221;, &#8220;head_z&#8221;]} |
+| Get the registers list of a specific motor | GET /motor/&lt;motor_name&gt;/register/list.json | {&#8220;robot&#8221;: {&#8220;get_registers_list&#8221;: {&#8220;motor&#8221;: &#8220;&lt;motor_name&gt;&#8221;}}} | {&#8216;registers&#8217;: [&#8220;goal_speed&#8221;, &#8220;compliant&#8221;, &#8220;present_load&#8221;, &#8220;id&#8221;]} |
+| Get the register value | GET /motor/&lt;motor_name&gt;/register/&lt;register_name&gt; | {&#8220;robot&#8221;: {&#8220;get_register_value&#8221;: {&#8220;motor&#8221;: &#8220;&lt;motor_name&gt;&#8221;, &#8220;register&#8221;: &#8220;&lt;register_name&gt;&#8221;}}} | {&#8220;present_position&#8221;: 30} |
+| Set new value to a register | POST /motor/&lt;motor_name&gt;/register/&lt;register_name&gt;/value.json | {&#8220;robot&#8221;: {&#8220;set_register_value&#8221;: {&#8220;motor&#8221;: &#8220;&lt;motor_name&gt;&#8221;, &#8220;register&#8221;: &#8220;&lt;register_name&gt;&#8221;, &#8220;value&#8221;: {&#8220;arg1&#8221;: &#8220;val1&#8221;, &#8220;arg2&#8221;: &#8220;val2&#8221;, &#8221;...&#8221;: &#8221;...&#8221;}}} | {} |</p>
+</div>
+<div class="section" id="sensor">
+<span id="sensor"></span><h3>Sensor<a class="headerlink" href="#sensor" title="Permalink to this headline">¶</a></h3>
+<p><em>Similar to the motor API. You just replace motor by sensor (for the moment there is no alias for sensors).</em></p>
+</div>
+</div>
+<div class="section" id="primitive">
+<span id="primitive"></span><h2>Primitive<a class="headerlink" href="#primitive" title="Permalink to this headline">¶</a></h2>
+<p>|  | HTTP | JSON | Example of answer |
+|&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;|:&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-:|:&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;:|:&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-:|
+| Get the primitives list | GET /primitive/list.json | {&#8220;robot&#8221;: {&#8220;get_primitives_list&#8221;: &#8220;&#8221;}} | {&#8216;primitives&#8217;: [&#8220;stand_up&#8221;, &#8220;sit&#8221;, &#8220;head_tracking&#8221;]} |
+| Get the running primitives list | GET /primitive/running/list.json | {&#8220;robot&#8221;: {&#8220;get_running_primitives_list&#8221;: &#8220;&#8221;}} | {&#8216;primitives&#8217;: [&#8220;head_tracking&#8221;]} |
+| Start a primitive | GET /primitive/&lt;prim&gt;/start.json | {&#8220;robot&#8221;: {&#8220;start_primitive&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8220;}}} | {} |
+| Stop a primitive | GET /primitive/&lt;prim&gt;/stop.json | {&#8220;robot&#8221;: {&#8220;stop_primitive&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8220;}}} | {} |
+| Pause a primitive | GET /primitive/&lt;prim&gt;/pause.json | {&#8220;robot&#8221;: {&#8220;pause_primitive&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8220;}}} | {} |
+| Resume a primitive | GET /primitive/&lt;prim&gt;/resume.json | {&#8220;robot&#8221;: {&#8220;resume_primitive&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8220;}}} | {} |
+| Get the primitive properties list | GET /primitive/&lt;prim&gt;/property/list.json | {&#8220;robot&#8221;: {&#8220;get_primitive_properties_list&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8220;}}} | {&#8220;property&#8221;: [&#8220;filter&#8221;, &#8220;smooth&#8221;]} |
+| Get a primitive property value | GET /primitive/&lt;prim&gt;/property/<prop> | {&#8220;robot&#8221;: {&#8220;get_primitive_property&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8221;, &#8220;property&#8221;: &#8220;<prop>&#8220;}}} | {&#8220;sin.amp&#8221;: 30.0} |
+| Set a primitive property value | POST /primitive/&lt;prim&gt;/property/<prop>/value.json | {&#8220;robot&#8221;: {&#8220;set_primitive_property&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8221;, &#8220;property&#8221;: &#8220;<prop>&#8221;, &#8220;args&#8221;: {&#8220;arg1&#8221;: &#8220;val1&#8221;, &#8220;arg2&#8221;: &#8220;val2&#8221;, &#8221;...&#8221;: &#8221;...&#8221;}}}} | {} |
+| Get the primitive methods list | GET /primitive/&lt;prim&gt;/method/list.json | {&#8220;robot&#8221;: {&#8220;get_primitive_methods_list&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8220;}}} | {&#8220;methods&#8221;: [&#8220;get_tracked_faces&#8221;, &#8220;start&#8221;, &#8220;stop&#8221;, &#8220;pause&#8221;, &#8220;resume&#8221;]} |
+| Call a method of a primitive | POST /primitive/&lt;prim&gt;/method/&lt;meth&gt;/args.json | {&#8220;robot&#8221;: {&#8220;call_primitive_method&#8221;: {&#8220;primitive&#8221;: &#8220;<prim>&#8221;, &#8220;method&#8221;: &#8220;<meth>&#8221;, &#8220;args&#8221;: {&#8220;arg1&#8221;: &#8220;val1&#8221;, &#8220;arg2&#8221;: &#8220;val2&#8221;, &#8221;...&#8221;: &#8221;...&#8221;}}}} |  |</p>
+</div>
+<div class="section" id="note-for-developers">
+<span id="note-for-developers"></span><h2>Note for developers<a class="headerlink" href="#note-for-developers" title="Permalink to this headline">¶</a></h2>
+<p>In order to <strong>publicly</strong> available through the REST API, the registers of the motors/sensors and the properties/methods of the primitives should be added to specific lists.</p>
+<p>More precisely, the <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.robot.html#pypot.robot.motor.Motor">Motor</a> class sets the <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.registers">registers</a> list (similarly for the <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.sensor.html">Sensor</a> class) and the <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.primitive.html#pypot.primitive.primitive.Primitive">Primitives</a> uses the <a class="reference external" href="">methods</a> and <a class="reference external" href="">properties</a> list.</p>
+<p>Those are class variables and can be extended when defining your own subclasses (see the <a class="reference external" href="https://github.com/poppy-project/pypot/blob/REST-API-2.0/pypot/primitive/utils.py">Sinus primitive</a> as an example).</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

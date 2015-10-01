@@ -85,7 +85,6 @@
             
               <li><a href="quickstart-primitive.html" title="QuickStart: use a primitive" accesskey="P">previous </a></li>
               <li><a href="robot.html" title="The Robot object and the controllers" accesskey="N">next </a></li>
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -188,8 +187,8 @@
 <p class="first admonition-title">Note</p>
 <p class="last">All new servos have ID 1, so when using new motors, it is strongly advise to first plug them one by one and change their IDs</p>
 </div>
-<p>The <a class="reference internal" href="pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO" title="pypot.dynamixel.io.io.DxlIO"><code class="xref py py-class docutils literal"><span class="pre">DxlIO</span></code></a> class is used to handle the communication with a particular port using the version 1 of robotis protocol, allowing to communicate with Dynamixel MX and AX servomotors.</p>
-<p>The <a class="reference internal" href="pypot.dynamixel.io.html#pypot.dynamixel.io.io_320.Dxl320IO" title="pypot.dynamixel.io.io_320.Dxl320IO"><code class="xref py py-class docutils literal"><span class="pre">Dxl320IO</span></code></a> class is used to handle the communication with a particular port using the version 2 of robotis protocol, allowing to communicate with Dynamixel XL servomotors.</p>
+<p>The <code class="xref py py-class docutils literal"><span class="pre">DxlIO</span></code> class is used to handle the communication with a particular port using the version 1 of robotis protocol, allowing to communicate with Dynamixel MX and AX servomotors.</p>
+<p>The <code class="xref py py-class docutils literal"><span class="pre">Dxl320IO</span></code> class is used to handle the communication with a particular port using the version 2 of robotis protocol, allowing to communicate with Dynamixel XL servomotors.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A port can only be accessed by a single DxlIO or Dxl320IO instance. Therefore it is impossible to control XL servomotors on the same bus as MX or AX servomotors.</p>
@@ -200,11 +199,11 @@
 </div>
 <div class="section" id="finding-ports">
 <h2>Finding ports<a class="headerlink" href="#finding-ports" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference internal" href="pypot.dynamixel.html#module-pypot.dynamixel" title="pypot.dynamixel"><code class="xref py py-mod docutils literal"><span class="pre">dynamixel</span></code></a> module offers several useful function to learn the state of your connections:</p>
+<p>The <code class="xref py py-mod docutils literal"><span class="pre">dynamixel</span></code> module offers several useful function to learn the state of your connections:</p>
 <ul class="simple">
-<li><a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.get_available_ports" title="pypot.dynamixel.get_available_ports"><code class="xref py py-class docutils literal"><span class="pre">get_available_ports</span></code></a> discovers the open serial ports. An optionnal argument allows you to ask only for free (not used by a serial connection) ports.</li>
-<li><a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.find_port" title="pypot.dynamixel.find_port"><code class="xref py py-class docutils literal"><span class="pre">find_port</span></code></a> takes a list of motors IDs and scan the available ports until it finds the motors.</li>
-<li><a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.autodetect_robot" title="pypot.dynamixel.autodetect_robot"><code class="xref py py-class docutils literal"><span class="pre">autodetect_robot</span></code></a> scans all ports and creates a <a class="reference internal" href="pypot.robot.html#module-pypot.robot" title="pypot.robot"><code class="xref py py-mod docutils literal"><span class="pre">robot</span></code></a> out of the found motors</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">get_available_ports</span></code> discovers the open serial ports. An optionnal argument allows you to ask only for free (not used by a serial connection) ports.</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">find_port</span></code> takes a list of motors IDs and scan the available ports until it finds the motors.</li>
+<li><code class="xref py py-class docutils literal"><span class="pre">autodetect_robot</span></code> scans all ports and creates a <code class="xref py py-mod docutils literal"><span class="pre">robot</span></code> out of the found motors</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pypot.dynamixel</span>
 
@@ -358,7 +357,6 @@ Connect this 12V SMPS supply (switch mode power supply) to a Robotis SMPS2Dynami
       
         <li><a href="quickstart-primitive.html" title="QuickStart: use a primitive" >previous</a></li>
         <li><a href="robot.html" title="The Robot object and the controllers" >next</a></li>
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

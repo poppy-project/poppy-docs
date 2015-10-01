@@ -94,7 +94,6 @@
             
               <li><a href="dynamixel.html" title="Dynamixel Low-level IO" accesskey="P">previous </a></li>
               <li><a href="motor.html" title="The Motor object" accesskey="N">next </a></li>
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -196,17 +195,17 @@
 <span id="robot"></span><h1>The Robot object and the controllers<a class="headerlink" href="#the-robot-object-and-the-controllers" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="using-the-robot-abstraction">
 <h2>Using the robot abstraction<a class="headerlink" href="#using-the-robot-abstraction" title="Permalink to this headline">¶</a></h2>
-<p>While the <a class="reference internal" href="dynamixel.html#low-level"><span>Dynamixel Low-level IO</span></a> provides access to all functionalities of the dynamixel motors, it forces you to have one communication call for function call, which can take a non-negligible amount of time.
+<p>While the <a class="reference internal" href="../pypot/doc/dynamixel.html#low-level"><span>Dynamixel Low-level IO</span></a> provides access to all functionalities of the dynamixel motors, it forces you to have one communication call for function call, which can take a non-negligible amount of time.
 In particular, most programs will need to have a really fast read/write synchronization loop, where we typically read all motor position, speed, load and set new values,
 while in parallel we would like to have higher level code that computes those new values.</p>
-<p>This is pretty much what the robot abstraction is doing for you. More precisely, through the use of the class <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> you can:</p>
+<p>This is pretty much what the robot abstraction is doing for you. More precisely, through the use of the class <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> you can:</p>
 <ul class="simple">
 <li>automatically initialize all connections (make transparent the use of multiple USB2serial connections),</li>
 <li>define <code class="xref py py-attr docutils literal"><span class="pre">offset</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">direct</span></code> attributes   for motors,</li>
-<li>automatically define accessor for motors and their most frequently used registers (such as <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code>, <code class="xref py py-attr docutils literal"><span class="pre">present_speed</span></code>, <code class="xref py py-attr docutils literal"><span class="pre">present_load</span></code>, <code class="xref py py-attr docutils literal"><span class="pre">pid</span></code>, <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.compliant" title="pypot.dynamixel.motor.DxlMotor.compliant"><code class="xref py py-attr docutils literal"><span class="pre">compliant</span></code></a>),</li>
+<li>automatically define accessor for motors and their most frequently used registers (such as <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code>, <code class="xref py py-attr docutils literal"><span class="pre">present_speed</span></code>, <code class="xref py py-attr docutils literal"><span class="pre">present_load</span></code>, <code class="xref py py-attr docutils literal"><span class="pre">pid</span></code>, <code class="xref py py-attr docutils literal"><span class="pre">compliant</span></code>),</li>
 <li>define read/write synchronization loop that will run in background.</li>
 </ul>
-<p>We will first see how to define your robot thanks to the writing of a <a class="reference internal" href="#config-file"><span>configuration</span></a>, then we will describe how to set up <a class="reference internal" href="#sync-loop"><span>synchronization loops</span></a>. Finally, we will show how to easily <a class="reference internal" href="#control-robot"><span>control this robot through asynchronous commands</span></a>.</p>
+<p>We will first see how to define your robot thanks to the writing of a <a class="reference internal" href="../pypot/doc/controller.html#config-file"><span>configuration</span></a>, then we will describe how to set up <a class="reference internal" href="../pypot/doc/controller.html#sync-loop"><span>synchronization loops</span></a>. Finally, we will show how to easily <a class="reference internal" href="../pypot/doc/controller.html#control-robot"><span>control this robot through asynchronous commands</span></a>.</p>
 </div>
 <div class="section" id="create-the-robot-object">
 <span id="config-file"></span><h2>Create the robot object<a class="headerlink" href="#create-the-robot-object" title="Permalink to this headline">¶</a></h2>
@@ -217,7 +216,7 @@ while in parallel we would like to have higher level code that computes those ne
 <p>The important fields are:</p>
 <ol class="arabic">
 <li><dl class="first docutils">
-<dt><strong>controllers</strong>: This key holds the information pertaining to a controller and all the items connected to its bus. You can have a single or multiple <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.controller.DxlController" title="pypot.dynamixel.controller.DxlController"><code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code></a>.</dt>
+<dt><strong>controllers</strong>: This key holds the information pertaining to a controller and all the items connected to its bus. You can have a single or multiple <code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code>.</dt>
 <dd><p class="first">You must specify the attached motors (or motor groups) and port that the device is connected to, or &#8220;auto&#8221;. When loading the configuration, pypot will automatically try to find the port with the corresponding attached motor ids.
 You also have to specify the protocol (1 or 2) and you you want to use the SYNC_READ instruction (see below).</p>
 <div class="last highlight-python"><div class="highlight"><pre><span class="n">my_config</span><span class="p">[</span><span class="s">&#39;controllers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
@@ -263,17 +262,17 @@ You also have to specify the protocol (1 or 2) and you you want to use the SYNC_
 <li>Orientation: describes whether the motor will act in an anti-clockwise fashion (direct) or clockwise (indirect) when asked to increase the angle.</li>
 <li>Offset: describe the offset between physical zero of the servo and &#8216;software zero&#8217;, the position of the motor when requested to go at angle 0.</li>
 </ul>
-<p>In the source of <a class="reference internal" href="pypot.robot.html#module-pypot.robot.config" title="pypot.robot.config"><code class="xref py py-class docutils literal"><span class="pre">config</span></code></a>, you can find the configuration dictionnary of a Poppy Ergo Jr robot.</p>
+<p>In the source of <code class="xref py py-class docutils literal"><span class="pre">config</span></code>, you can find the configuration dictionnary of a Poppy Ergo Jr robot.</p>
 </div>
 <div class="section" id="use-the-configuration">
 <h3>Use the configuration<a class="headerlink" href="#use-the-configuration" title="Permalink to this headline">¶</a></h3>
-<p>To create a <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> object from a Python dictionnary, use the <a class="reference internal" href="pypot.robot.html#pypot.robot.config.from_config" title="pypot.robot.config.from_config"><code class="xref py py-func docutils literal"><span class="pre">from_config()</span></code></a> function function:</p>
+<p>To create a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> object from a Python dictionnary, use the <code class="xref py py-func docutils literal"><span class="pre">from_config()</span></code> function function:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pypot.robot</span>
 
 <span class="n">robot</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">from_config</span><span class="p">(</span><span class="n">my_config</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can also create a <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> by detecting the available Dynamixel servomotors:</p>
+<p>You can also create a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> by detecting the available Dynamixel servomotors:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pypot.dynamixel</span> <span class="kn">import</span> <span class="n">autodetect_robot</span>
 
 <span class="n">my_robot</span> <span class="o">=</span> <span class="n">autodetect_robot</span><span class="p">()</span>
@@ -295,19 +294,19 @@ You also have to specify the protocol (1 or 2) and you you want to use the SYNC_
 <span class="n">ergo</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s">&#39;ergo.json&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>While having the configuration as a file is convenient to share the same config on multiple machine, it also slows the creation of the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a>.</p>
+<p>While having the configuration as a file is convenient to share the same config on multiple machine, it also slows the creation of the <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code>.</p>
 </div>
 </div>
 <div class="section" id="dynamixel-controller-and-synchronization-loop">
 <span id="sync-loop"></span><h2>Dynamixel controller and Synchronization Loop<a class="headerlink" href="#dynamixel-controller-and-synchronization-loop" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> held instances of <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor" title="pypot.dynamixel.motor.DxlMotor"><code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code></a>. Each of these instances represents a real motor of your physical robot.
+<p>The <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> held instances of <code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code>. Each of these instances represents a real motor of your physical robot.
 The attributes of those &#8220;software&#8221; motors are automatically synchronized with the real &#8220;hardware&#8221; motors.
-In order to do that, the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> class uses a <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.controller.DxlController" title="pypot.dynamixel.controller.DxlController"><code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code></a> which defines synchronization loops that will read/write the registers of dynamixel motors at a predefined frequency.</p>
+In order to do that, the <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> class uses a <code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code> which defines synchronization loops that will read/write the registers of dynamixel motors at a predefined frequency.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">The synchronization loops will try to run at the defined frequency, however don&#8217;t forget that you are limited by the bus bandwidth! For instance, depending on your robot you will not be able to read/write the position of all motors at 100Hz. Moreover, the loops are implemented as python thread and we can thus not guarantee the exact frequency of the loop.</p>
 </div>
-<p>By default the class <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> uses a particular controller <code class="xref py py-class docutils literal"><span class="pre">BaseDxlController</span></code> which already defines synchronization loops. More precisely, this controller:</p>
+<p>By default the class <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> uses a particular controller <code class="xref py py-class docutils literal"><span class="pre">BaseDxlController</span></code> which already defines synchronization loops. More precisely, this controller:</p>
 <ul class="simple">
 <li>reads the present position, speed, load at 50Hz,</li>
 <li>writes the goal position, moving speed and torque limit at 50Hz,</li>
@@ -315,11 +314,11 @@ In order to do that, the <a class="reference internal" href="pypot.robot.html#py
 <li>reads the present temperature and voltage at 1Hz.</li>
 </ul>
 <p>So, in most case you should not have to worry about synchronization loop and it should directly work.</p>
-<p>The synchronization loops are automatically started when instantiating your robot if you set the sync_read parameter of your controller to True. Otherwise, start it with the method <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.start_sync" title="pypot.robot.robot.Robot.start_sync"><code class="xref py py-meth docutils literal"><span class="pre">start_sync()</span></code></a>.
-You can also stop the synchronization if needed (see the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.stop_sync" title="pypot.robot.robot.Robot.stop_sync"><code class="xref py py-meth docutils literal"><span class="pre">stop_sync()</span></code></a> method).</p>
+<p>The synchronization loops are automatically started when instantiating your robot if you set the sync_read parameter of your controller to True. Otherwise, start it with the method <code class="xref py py-meth docutils literal"><span class="pre">start_sync()</span></code>.
+You can also stop the synchronization if needed (see the <code class="xref py py-meth docutils literal"><span class="pre">stop_sync()</span></code> method).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">With the current version of pypot, you can not yet indicate in the configuration which subclasses of <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.controller.DxlController" title="pypot.dynamixel.controller.DxlController"><code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code></a> you want to use. If you want to use your own controller, you should either modify the config parser, modify the <code class="xref py py-class docutils literal"><span class="pre">BaseDxlController</span></code> class or directly instantiate the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> class.</p>
+<p class="last">With the current version of pypot, you can not yet indicate in the configuration which subclasses of <code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code> you want to use. If you want to use your own controller, you should either modify the config parser, modify the <code class="xref py py-class docutils literal"><span class="pre">BaseDxlController</span></code> class or directly instantiate the <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> class.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -332,9 +331,9 @@ You can also stop the synchronization if needed (see the <a class="reference int
 <span id="control-robot"></span><h2>Controlling your robot<a class="headerlink" href="#controlling-your-robot" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="robot-overview">
 <h3>Robot overview<a class="headerlink" href="#robot-overview" title="Permalink to this headline">¶</a></h3>
-<p>The main fields of the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> are:</p>
+<p>The main fields of the <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> are:</p>
 <ul>
-<li><p class="first">motors: list of <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor" title="pypot.dynamixel.motor.DxlMotor"><code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code></a>. Example: list all motors:</p>
+<li><p class="first">motors: list of <code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code>. Example: list all motors:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">m</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
@@ -361,15 +360,15 @@ You can also stop the synchronization if needed (see the <a class="reference int
 <li><p class="first">sensors: list of available sensors, work in progress</p>
 </li>
 </ul>
-<p>Some useful functions of the  <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> class:</p>
+<p>Some useful functions of the  <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> class:</p>
 <ul class="simple">
-<li><a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.power_up" title="pypot.robot.robot.Robot.power_up"><code class="xref py py-meth docutils literal"><span class="pre">power_up()</span></code></a> to set maximum torque and remove compliance.</li>
+<li><code class="xref py py-meth docutils literal"><span class="pre">power_up()</span></code> to set maximum torque and remove compliance.</li>
 </ul>
 </div>
 <div class="section" id="synchronized-moves">
 <h3>Synchronized moves<a class="headerlink" href="#synchronized-moves" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor" title="pypot.dynamixel.motor.DxlMotor"><code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code></a> allows you to control motors in position and speed, but, at the <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> level, you can give orders to a set of motors to make a synchronized move using the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.goto_position" title="pypot.robot.robot.Robot.goto_position"><code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code></a> function.</p>
-<p>This is especially useful for choregraphies, because the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.goto_position" title="pypot.robot.robot.Robot.goto_position"><code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code></a> function ensures that all motors smoothly reach their final positions at the same time, while using the goal_position field will lead all motors to go to the same speed, without time synchronization.</p>
+<p>The <code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code> allows you to control motors in position and speed, but, at the <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> level, you can give orders to a set of motors to make a synchronized move using the <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> function.</p>
+<p>This is especially useful for choregraphies, because the <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> function ensures that all motors smoothly reach their final positions at the same time, while using the goal_position field will lead all motors to go to the same speed, without time synchronization.</p>
 <p>For example to move the head to angles (0, 20.) degrees in 3 seconds:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">goto_position</span><span class="p">({</span><span class="s">&quot;head_z&quot;</span><span class="p">:</span><span class="mf">0.</span> <span class="p">,</span> <span class="s">&quot;head_y&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">},</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -386,7 +385,7 @@ The &#8216;minijerk&#8217; controller has a more complex algorithm to slow down 
 </div>
 <div class="section" id="closing-the-robot">
 <h2>Closing the robot<a class="headerlink" href="#closing-the-robot" title="Permalink to this headline">¶</a></h2>
-<p>To make sure that everything gets cleaned correctly after you are done using your <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a>, you should always call the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.close" title="pypot.robot.robot.Robot.close"><code class="xref py py-meth docutils literal"><span class="pre">close()</span></code></a> method. Doing so will ensure that all the controllers attached to this robot, and their associated dynamixel serial connection, are correctly stopped and cleaned.</p>
+<p>To make sure that everything gets cleaned correctly after you are done using your <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code>, you should always call the <code class="xref py py-meth docutils literal"><span class="pre">close()</span></code> method. Doing so will ensure that all the controllers attached to this robot, and their associated dynamixel serial connection, are correctly stopped and cleaned.</p>
 <p>It is advised to use the <a class="reference external" href="https://docs.python.org/library/contextlib.html#contextlib.closing" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">contextlib.closing()</span></code></a> decorator to make sure that the close function of your robot is always called whatever happened inside your code:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">closing</span>
 
@@ -402,12 +401,12 @@ The &#8216;minijerk&#8217; controller has a more complex algorithm to slow down 
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Note calling the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.close" title="pypot.robot.robot.Robot.close"><code class="xref py py-meth docutils literal"><span class="pre">close()</span></code></a> method on a <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> can prevent you from opening it again without terminating your current Python session. Indeed, as the destruction of object is handled by the garbage collector, there is no mechanism which guarantee that we can automatically clean it when destroyed.</p>
+<p class="last">Note calling the <code class="xref py py-meth docutils literal"><span class="pre">close()</span></code> method on a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> can prevent you from opening it again without terminating your current Python session. Indeed, as the destruction of object is handled by the garbage collector, there is no mechanism which guarantee that we can automatically clean it when destroyed.</p>
 </div>
-<p>When closing the robot, we also send a stop signal to all the primitives running and wait for them to terminate. See section <span class="xref std std-ref">my_prim</span> for details on what we call primitives.</p>
+<p>When closing the robot, we also send a stop signal to all the primitives running and wait for them to terminate. See section <a class="reference internal" href="../pypot/doc/primitive.html#my-prim"><span>Primitives everywhere</span></a> for details on what we call primitives.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">You should be careful that all your primitives correctly respond to the stop signal. Indeed, having a blocking primitive will prevent the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.close" title="pypot.robot.robot.Robot.close"><code class="xref py py-meth docutils literal"><span class="pre">close()</span></code></a> method to terminate (please refer to <span class="xref std std-ref">start_prim</span> for details).</p>
+<p class="last">You should be careful that all your primitives correctly respond to the stop signal. Indeed, having a blocking primitive will prevent the <code class="xref py py-meth docutils literal"><span class="pre">close()</span></code> method to terminate (please refer to <a class="reference internal" href="../pypot/doc/primitive.html#start-prim"><span>Start, Stop, Pause, and Resume</span></a> for details).</p>
 </div>
 </div>
 </div>
@@ -433,7 +432,6 @@ The &#8216;minijerk&#8217; controller has a more complex algorithm to slow down 
       
         <li><a href="dynamixel.html" title="Dynamixel Low-level IO" >previous</a></li>
         <li><a href="motor.html" title="The Motor object" >next</a></li>
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

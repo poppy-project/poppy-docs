@@ -65,7 +65,6 @@
           <ul class="nav navbar-nav navbar-right">
 
             
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../../_sources/pypot/doc/architecture.txt" rel="nofollow">Show Source</a></li>
@@ -148,7 +147,7 @@
 <dt><strong>Controller</strong>: set of update loops to keep an (or multiple) &#8220;hardware&#8221; device(s) up to date with their &#8220;software&#8221; equivalent, moreover when several devices (e.g. Dynamixel motors) share the same communication bus.</dt>
 <dd><p class="first last">This synchronization can goes only from the hard to the soft (e.g. in the case of a sensor) or both ways (e.g. for reading motor values and sending motor commands).
 The calls can be asynchronous or synchronous, each controller can have its own refresh frequency.
-An example of <code class="xref py py-class docutils literal"><span class="pre">Controller</span></code> is the <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.controller.DxlController" title="pypot.dynamixel.controller.DxlController"><code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code></a> which synchronizes position/speed/load of all motors on a dynamixel bus in both directions. On the same bus, you can have several controllers of different frequencies.</p>
+An example of <code class="xref py py-class docutils literal"><span class="pre">Controller</span></code> is the <code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code> which synchronizes position/speed/load of all motors on a dynamixel bus in both directions. On the same bus, you can have several controllers of different frequencies.</p>
 </dd>
 </dl>
 </li>
@@ -180,7 +179,6 @@ An example of <code class="xref py py-class docutils literal"><span class="pre">
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

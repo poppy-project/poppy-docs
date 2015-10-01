@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Poppy Torso 1.0 &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Poppy Torso 1.0</a><ul>
+<li><a class="reference internal" href="#d-printing">3D printing</a><ul>
+<li><a class="reference internal" href="#torso">torso</a></li>
+<li><a class="reference internal" href="#upper-limbs">upper_limbs</a></li>
+<li><a class="reference internal" href="#head">head</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#electronics">Electronics</a><ul>
+<li><a class="reference internal" href="#embedded-control">Embedded control</a></li>
+<li><a class="reference internal" href="#power-supply">Power Supply</a></li>
+<li><a class="reference internal" href="#audio-video">Audio/video</a></li>
+<li><a class="reference internal" href="#communication">Communication</a></li>
+<li><a class="reference internal" href="#sensors">Sensors</a></li>
+<li><a class="reference internal" href="#custom">Custom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#robotis">Robotis</a><ul>
+<li><a class="reference internal" href="#dynamixel">Dynamixel</a></li>
+<li><a class="reference internal" href="#parts">Parts</a></li>
+<li><a class="reference internal" href="#visserie">Visserie:</a></li>
+<li><a class="reference internal" href="#cables">Cables</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other">Other</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../../../_sources/poppy-torso/poppy-torso/hardware/doc/BOM.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../../index.html">
+      <img class="logo" src="../../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Poppy Torso 1.0</a><ul>
+<li><a class="reference internal" href="#d-printing">3D printing</a><ul>
+<li><a class="reference internal" href="#torso">torso</a></li>
+<li><a class="reference internal" href="#upper-limbs">upper_limbs</a></li>
+<li><a class="reference internal" href="#head">head</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#electronics">Electronics</a><ul>
+<li><a class="reference internal" href="#embedded-control">Embedded control</a></li>
+<li><a class="reference internal" href="#power-supply">Power Supply</a></li>
+<li><a class="reference internal" href="#audio-video">Audio/video</a></li>
+<li><a class="reference internal" href="#communication">Communication</a></li>
+<li><a class="reference internal" href="#sensors">Sensors</a></li>
+<li><a class="reference internal" href="#custom">Custom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#robotis">Robotis</a><ul>
+<li><a class="reference internal" href="#dynamixel">Dynamixel</a></li>
+<li><a class="reference internal" href="#parts">Parts</a></li>
+<li><a class="reference internal" href="#visserie">Visserie:</a></li>
+<li><a class="reference internal" href="#cables">Cables</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other">Other</a></li>
+<li><a class="reference internal" href="#tools">Tools</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/poppy-torso/poppy-torso/hardware/doc/BOM.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="poppy-torso-1-0">
+<span id="poppy-torso-1-0"></span><h1>Poppy Torso 1.0<a class="headerlink" href="#poppy-torso-1-0" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="d-printing">
+<span id="d-printing"></span><h2>3D printing<a class="headerlink" href="#d-printing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="torso">
+<span id="torso"></span><h3>torso<a class="headerlink" href="#torso" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1x support_for_table <em>(white polished polyamid)</em></li>
+<li>1x spine <em>(white polished polyamid)</em></li>
+<li>2x double_rotation_MX28_link <em>(white polyamid)</em></li>
+<li>1x i101-Set_to_MX28_link <em>(white polyamid)</em></li>
+<li>1x chest <em>(white polished polyamid)</em></li>
+</ul>
+</div>
+<div class="section" id="upper-limbs">
+<span id="upper-limbs"></span><h3>upper_limbs<a class="headerlink" href="#upper-limbs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1x shoulder_right <em>(white polished polyamid)</em></li>
+<li>1x shoulder_left <em>(white polished polyamid)</em></li>
+<li>2x arm_connector <em>(white polished polyamid)</em></li>
+<li>2x upper_arm <em>(white polished polyamid)</em></li>
+<li>1x forearm_left <em>(white polished polyamid)</em></li>
+<li>1x forearm_right <em>(white polished polyamid)</em></li>
+<li>1x hand_right <em>(white polished polyamid)</em></li>
+<li>1x hand_left <em>(white polished polyamid)</em></li>
+</ul>
+</div>
+<div class="section" id="head">
+<span id="head"></span><h3>head<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1x neck  <em>(white polished polyamid)</em></li>
+<li>1x head-back <em>(white polished polyamid)</em></li>
+<li>1x head-face <em>(white polished polyamid)</em></li>
+<li>1x support_camera <em>(white polyamid)</em></li>
+<li>1x screen <em>(resine transparent)</em></li>
+<li>1x hide-screen <em>(black polyamid)</em></li>
+<li>1x speaker_left <em>(black polyamid)</em></li>
+<li>1x speaker_right <em>(black polyamid)</em></li>
+<li>1x fake_manga_screen <em>(black polyamid)</em></li>
+</ul>
+</div>
+</div>
+<div class="section" id="electronics">
+<span id="electronics"></span><h2>Electronics<a class="headerlink" href="#electronics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="embedded-control">
+<span id="embedded-control"></span><h3>Embedded control<a class="headerlink" href="#embedded-control" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1x USB2AX</li>
+<li><a class="reference external" href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G138745696275">Hardkernel Odroid U3</a></li>
+<li><a class="reference external" href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G138749987644">8GB eMMC Module U Linux</a></li>
+<li><a class="reference external" href="http://%20http://www.hardkernel.com/main/products/prdt_info.php?g_code=G138760358261">Cooling Fan U3</a> (Optionnal)</li>
+<li>USB hub: <a class="reference external" href="http://%20http://www.pixmania.fr/hub-usb/abix-hub-4-ports-usb-2-0-croix-noire/19265194-a.html">here</a> ou <a class="reference external" href="http://www.amazon.fr/gp/product/B003NF0MSE?psc=1&amp;redirect=true&amp;ref_=oh_aui_detailpage_o02_s00">here</a></li>
+</ul>
+</div>
+<div class="section" id="power-supply">
+<span id="power-supply"></span><h3>Power Supply<a class="headerlink" href="#power-supply" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.hardkernel.com/main/products/prdt_info.php?g_code=G138960965859">DC Plug Cable Assembly 2.5mm</a></li>
+<li>Robotis SMPS 12V 5A PS-10</li>
+<li><a class="reference external" href="http://www.adafruit.com/product/1385">5V DC convertor</a></li>
+</ul>
+</div>
+<div class="section" id="audio-video">
+<span id="audio-video"></span><h3>Audio/video<a class="headerlink" href="#audio-video" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>2x <a class="reference external" href="http://fr.farnell.com/jsp/search/productdetail.jsp?SKU=1675524">speakers</a></li>
+<li><a class="reference external" href="http://www.adafruit.com/products/987">ampli stereo</a></li>
+</ul>
+</div>
+<div class="section" id="communication">
+<span id="communication"></span><h3>Communication<a class="headerlink" href="#communication" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://www.amazon.fr/gp/product/B003MTTJOY">Nano Wifi Dongle</a></li>
+</ul>
+</div>
+<div class="section" id="sensors">
+<span id="sensors"></span><h3>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://szsjd.en.alibaba.com/productgrouplist-212558669/usb_web_camera_module.html">Camera Videw</a> <strong>with FOV 120° or 170°!!</strong> + USB cable</li>
+<li><a class="reference external" href="https://www.sparkfun.com/products/10736">Sparkfun Razor 9DoF IMU</a> (Optionnal)</li>
+<li><a class="reference external" href="https://www.kickstarter.com/projects/1924187374/manga-screen-multi-touch-43-lcd">Manga Screen</a> (Optionnal)</li>
+</ul>
+</div>
+<div class="section" id="custom">
+<span id="custom"></span><h3>Custom<a class="headerlink" href="#custom" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="robotis">
+<span id="robotis"></span><h2>Robotis<a class="headerlink" href="#robotis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dynamixel">
+<span id="dynamixel"></span><h3>Dynamixel<a class="headerlink" href="#dynamixel" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>11 x MX-28AT</li>
+<li>2 x AX-12A</li>
+</ul>
+</div>
+<div class="section" id="parts">
+<span id="parts"></span><h3>Parts<a class="headerlink" href="#parts" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>11x HN07-N101 set</li>
+<li>6x HN07-i101 Set</li>
+</ul>
+</div>
+<div class="section" id="visserie">
+<span id="visserie"></span><h3>Visserie:<a class="headerlink" href="#visserie" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1x  Wrench Bolt M2*3 (200 pcs)</li>
+<li>1x  Wrench Bolt M2.5*4 (200 pcs)</li>
+<li>1x Wrench Bolt M2.5*6 (200 pcs)</li>
+<li>1x Wrench Bolt M2.5*8 (200 pcs)</li>
+<li>1x BIOLOID Bolt Nut Set BNS-10</li>
+<li>1x Nut M2.5 (400 pcs)</li>
+<li>1x N1 Nut M2 (400 pcs)</li>
+</ul>
+</div>
+<div class="section" id="cables">
+<span id="cables"></span><h3>Cables<a class="headerlink" href="#cables" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>1x SMPS2Dynamixel</li>
+<li>2x BIOLOID 3P Extension PCB</li>
+</ul>
+<ul class="simple">
+<li>1x Robot Cable-3P 60mm 10pcs</li>
+<li>1x Robot Cable-3P 100mm 10pcs</li>
+<li>1x Robot Cable-3P 140mm 10pcs</li>
+<li>1x Robot Cable-3P 200mm 10pcs</li>
+</ul>
+<p>Custom:</p>
+<ul class="simple">
+<li>3x cable-3P 22cm</li>
+<li>3x cable-3P 25cm</li>
+<li>2x cable-3P 50cm</li>
+<li>2x Cable-4P 200mm</li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="other">
+<span id="other"></span><h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.ventouses-soufflets.com/ventouses-avec-levier-d-appui/54-ventouse-100mm-avec-levier-d-appui-et-avec-patte-de-fixation-noire.html">100mm with lever arm suction pad</a></li>
+<li>2x M5 nuts</li>
+<li>2X M5x20mm screws</li>
+</ul>
+</div>
+<div class="section" id="tools">
+<span id="tools"></span><h2>Tools<a class="headerlink" href="#tools" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>1x http://www.leroymerlin.fr/v3/p/produits/lot-de-6-mini-pinces-dexter-e148011</li>
+<li>1x http://www.leroymerlin.fr/v3/p/produits/set-de-micro-vissage-de-precision-mixte-dexter-e140690</li>
+<li>1x http://www.leroymerlin.fr/v3/p/produits/set-de-micro-vissage-de-precision-mixte-tivoly-11501570026-e59080</li>
+<li>2x frein fillet http://fr.farnell.com/jsp/search/productdetail.jsp?SKU=1370152</li>
+<li>3x clé allen 1.5 mm</li>
+<li>2x clé allen 2 mm</li>
+<li>1x clé allen 2.5mm</li>
+<li>scotch blanc http://fr.farnell.com/jsp/search/productdetail.jsp?SKU=1825466</li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

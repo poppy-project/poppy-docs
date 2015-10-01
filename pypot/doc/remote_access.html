@@ -83,7 +83,6 @@
             
               <li><a href="vrep.html" title="Using a simulated robot with V-REP" accesskey="P">previous </a></li>
               <li><a href="logging.html" title="The logging system" accesskey="N">next </a></li>
-              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -172,7 +171,7 @@
                   
   <div class="section" id="rest-api">
 <span id="remote-protocol"></span><h1>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h1>
-<p>Any <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> object can be to remotely accessed and controled through TCP network.</p>
+<p>Any <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> object can be to remotely accessed and controled through TCP network.</p>
 <p>This can be useful to:
 * separate the low-level control running on an embedded computer and higher-level computation on a more powerful computer
 * control your Poppy robot from any language (C++, javascript...) able to use tcp sockets
@@ -180,13 +179,13 @@
 <p>The protocol, described <a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/REST-APIs.md">here</a>,  allows the access of all the robot variables and method (including motors and primitives) via a JSON request.
 Two transport methods have been developed so far:</p>
 <ul class="simple">
-<li>HTTP via GET and POST request (see the <a class="reference internal" href="pypot.server.html#pypot.server.httpserver.HTTPRobotServer" title="pypot.server.httpserver.HTTPRobotServer"><code class="xref py py-class docutils literal"><span class="pre">HTTPRobotServer</span></code></a>)</li>
-<li>ZMQ socket (see the <a class="reference internal" href="pypot.server.html#pypot.server.zmqserver.ZMQRobotServer" title="pypot.server.zmqserver.ZMQRobotServer"><code class="xref py py-class docutils literal"><span class="pre">ZMQRobotServer</span></code></a>)</li>
+<li>HTTP via GET and POST request (see the <code class="xref py py-class docutils literal"><span class="pre">HTTPRobotServer</span></code>)</li>
+<li>ZMQ socket (see the <code class="xref py py-class docutils literal"><span class="pre">ZMQRobotServer</span></code>)</li>
 </ul>
-<p>The <a class="reference internal" href="pypot.server.html#pypot.server.rest.RESTRobot" title="pypot.server.rest.RESTRobot"><code class="xref py py-class docutils literal"><span class="pre">RESTRobot</span></code></a> has been abstracted from the server, so you can easily add new transport methods if needed.</p>
+<p>The <code class="xref py py-class docutils literal"><span class="pre">RESTRobot</span></code> has been abstracted from the server, so you can easily add new transport methods if needed.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">A third server is available in Pypot: <a class="reference internal" href="pypot.server.html#module-pypot.server.snap" title="pypot.server.snap"><code class="xref py py-class docutils literal"><span class="pre">snap</span></code></a> allows you to run Snap! directly on the robot.</p>
+<p class="last">A third server is available in Pypot: <code class="xref py py-class docutils literal"><span class="pre">snap</span></code> allows you to run Snap! directly on the robot.</p>
 </div>
 <div class="section" id="zmq-method">
 <h2>ZMQ method<a class="headerlink" href="#zmq-method" title="Permalink to this headline">¶</a></h2>
@@ -278,7 +277,6 @@ Two transport methods have been developed so far:</p>
       
         <li><a href="vrep.html" title="Using a simulated robot with V-REP" >previous</a></li>
         <li><a href="logging.html" title="The logging system" >next</a></li>
-        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 
