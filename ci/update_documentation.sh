@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 
+# Install pypot
+pushd ../pypot
+    python setup.py install
+popd
+
+
+
 last_commit_sha=$(git rev-parse --short HEAD)
 
 git config --global user.email $GIT_EMAIL
@@ -14,8 +21,9 @@ git_url=https://$GH_TOKEN@github.com/$GH_USERNAME/$GH_REPO.git
 #     echo "Gevent bug, not possible to build zmq with"
 
 # Install Sphinx
+pip install -q --upgrade pip
 pip install -q Sphinx sphinxjp.themes.basicstrap bottle zerorpc
-pip install commonmark recommonmark
+pip install -q commonmark recommonmark
 
 # Build the doc
 pushd ..
