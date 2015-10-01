@@ -6,8 +6,7 @@ V-rep is a physical simulator that allows you to simulate robots in an
 enviroment with gravity, contacts and friction.
 
 It is compatible with Windows, Mac and linux and can be installed from
-[here](http://www.coppeliarobotics.com/downloads.html/). Or
-|test\_here|.
+[here](http://www.coppeliarobotics.com/downloads.html/). 
 
 It is free to use if you are from the education world and you can get a
 limited version otherwise.
@@ -75,7 +74,7 @@ For example, you can test it with:
     print poppy.head_z.present_position
 
 If the simulated Poppy Humanoid turns its head, well done, it works! Now
-you can follow this tutorial \<quickstart\_discover\> to learn how to
+you can follow [this tutorial](discover.html) to learn how to
 control it!
 
 You may want at some point to go back to the initial state of the
@@ -85,7 +84,7 @@ simulation. Here is the command:
 
 ## Troubleshooting and advanced usage
 
-See here \<pypot\_vrep\> for a view on lower-level link between your
+See [here](../pypot/doc/vrep.html) for a view on lower-level link between your
 robot and V-rep.
 
 TODO

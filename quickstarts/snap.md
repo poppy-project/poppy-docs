@@ -2,7 +2,7 @@
 
 ## Introducing Snap!
 
-|Snap\_link| is a "very powerful visual, drag-and-drop programming
+[snap visual programming language](http://snap.berkeley.edu) is a "very powerful visual, drag-and-drop programming
 language. It is an extended reimplementation of Scratch (a project of
 the Lifelong Kindergarten Group at the MIT Media Lab) that allows you to
 Build Your Own Blocks". It is an extremely efficient tool to learn how
@@ -13,9 +13,9 @@ Snap! is open-source and it is entirely written in javascript, you only
 need a browser connected to the Poppy Creature webserver. No
 installation is required on your computer!
 
-![snap visual programming language](images/snap-header.png)
+ ![image](images/snap-header.png)
 
-An introduction to this laguage can be found in the |Snap\_ref\_man|.
+An introduction to this laguage can be found in the [Snap! reference manual](http://snap.berkeley.edu/SnapManual.pdf).
 
 ## Create the Snap! server
 
@@ -31,7 +31,7 @@ The easiest way of controlling your Poppy robot with Snap! is to use the
 webapp TODO. This will launch the server and use the Snap! software
 installed on the robot.
 
-Then hit the folder button, select open...-\>example and choose
+Then hit the folder button, select open...->example and choose
 pypot-snap-block.
 
 ![snap visual programming language](images/snap-open-examples.png)
@@ -41,7 +41,7 @@ command inside the robot:
 
     poppy-snap poppy-humanoid --no-browser
 
-The command gives you an URL (something like |Snap\_berkeley\_link|).
+The command gives you an URL (something like [http://snap.berkeley.edu/snapsource/snap.html#open:http://-ROBOT-IP-:6969/snap-blocks.xml](http://snap.berkeley.edu/snapsource/snap.html#open:http://poppy.local:6969/snap-blocks.xml)).
 Open this URL in your web browser.
 
 ### Start the server on your computer
@@ -61,15 +61,15 @@ You can even use simultaneously Snap! and V-rep:
 Leave the Python script running. In you web browser, open the following
 URL:
 
-|Snap\_berkeley\_link2|
+[http://snap.berkeley.edu/snapsource/snap.html#open:http://127.0.0.1:6969/snap-blocks.xml](http://snap.berkeley.edu/snapsource/snap.html#open:http://127.0.0.1:6969/snap-blocks.xml)
 
 Last solution: you can even, if you don't have a reliable internet
 connection when you use Snap!, download and install Snap! directly on
-your computer |snap\_local|.
+your computer [from here](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks).
 
 Then, open the snap.html file with your web browser and use the folder
-button-\>import.. to import the Poppy specific blocks located in
-pypot/pypot/server/snap\_projects.
+button->import.. to import the Poppy specific blocks located in
+*pypot/pypot/server/snap\_projects*.
 
 ## Controlling the robot
 
@@ -147,7 +147,7 @@ the example called pypot-snap-record-orchestration-demo instead of
 poppy-snap-blocks to find a ready-to-use Snap! project dedicated to the
 record and replay of moves.
 
-Otherwise, use the folder button-\>import.. and select
-pypot/pypot/server/snap\_projects/pypot-snap-record-orchestration-demo.xml
+Otherwise, use the folder button->import.. and select
+*pypot/pypot/server/snap\_projects/pypot-snap-record-orchestration-demo.xml*
 
 ![record and replay moves using snap](images/snap-orchestration-demo.png)
