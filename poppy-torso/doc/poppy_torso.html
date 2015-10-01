@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>poppy_torso package &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
+    <link rel="next" title="poppy_torso.primitives package" href="poppy_torso.primitives.html" />
+    <link rel="prev" title="poppy_humanoid.primitives package" href="../../poppy-humanoid/doc/poppy_humanoid.primitives.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">poppy_torso package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.poppy_torso">poppy_torso.poppy_torso module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../poppy-humanoid/doc/poppy_humanoid.primitives.html" title="poppy_humanoid.primitives package" accesskey="P">previous </a></li>
+              <li><a href="poppy_torso.primitives.html" title="poppy_torso.primitives package" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/poppy-torso/doc/poppy_torso.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">poppy_torso package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.poppy_torso">poppy_torso.poppy_torso module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../../poppy-humanoid/doc/poppy_humanoid.primitives.html"
+                        title="previous chapter">poppy_humanoid.primitives package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="poppy_torso.primitives.html"
+                        title="next chapter">poppy_torso.primitives package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/poppy-torso/doc/poppy_torso.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="poppy-torso-package">
+<h1>poppy_torso package<a class="headerlink" href="#poppy-torso-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="poppy_torso.primitives.html">poppy_torso.primitives package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.primitives.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.primitives.html#module-poppy_torso.primitives.dance">poppy_torso.primitives.dance module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.primitives.html#module-poppy_torso.primitives.idle">poppy_torso.primitives.idle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.primitives.html#module-poppy_torso.primitives.interaction">poppy_torso.primitives.interaction module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.primitives.html#module-poppy_torso.primitives.posture">poppy_torso.primitives.posture module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.primitives.html#module-poppy_torso.primitives.safe">poppy_torso.primitives.safe module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.primitives.html#module-poppy_torso.primitives">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="poppy_torso.utils.html">poppy_torso.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.utils.html#module-poppy_torso.utils.min_jerk">poppy_torso.utils.min_jerk module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="poppy_torso.utils.html#module-poppy_torso.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-poppy_torso.poppy_torso">
+<span id="poppy-torso-poppy-torso-module"></span><h2>poppy_torso.poppy_torso module<a class="headerlink" href="#module-poppy_torso.poppy_torso" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poppy_torso.poppy_torso.PoppyTorso">
+<em class="property">class </em><code class="descclassname">poppy_torso.poppy_torso.</code><code class="descname">PoppyTorso</code><span class="sig-paren">(</span><em>motor_controllers=[]</em>, <em>sensor_controllers=[]</em>, <em>sync=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/poppy_torso.html#PoppyTorso"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.poppy_torso.PoppyTorso" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature" title="poppy.creatures.abstractcreature.AbstractPoppyCreature"><code class="xref py py-class docutils literal"><span class="pre">poppy.creatures.abstractcreature.AbstractPoppyCreature</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>motor_controllers</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#list" title="(in Python v2.7)"><em>list</em></a>) &#8211; motors controllers to attach to the robot</li>
+<li><strong>sensor_controllers</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#list" title="(in Python v2.7)"><em>list</em></a>) &#8211; sensors controllers to attach to the robot</li>
+<li><strong>sync</strong> (<a class="reference external" href="https://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; choose if automatically starts the synchronization loops</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="classmethod">
+<dt id="poppy_torso.poppy_torso.PoppyTorso.setup">
+<em class="property">classmethod </em><code class="descname">setup</code><span class="sig-paren">(</span><em>robot</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/poppy_torso.html#PoppyTorso.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.poppy_torso.PoppyTorso.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="poppy_torso.poppy_torso.PoppyTorso.vrep_hack">
+<em class="property">classmethod </em><code class="descname">vrep_hack</code><span class="sig-paren">(</span><em>robot</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/poppy_torso.html#PoppyTorso.vrep_hack"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.poppy_torso.PoppyTorso.vrep_hack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poppy_torso">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-poppy_torso" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../poppy-humanoid/doc/poppy_humanoid.primitives.html" title="poppy_humanoid.primitives package" >previous</a></li>
+        <li><a href="poppy_torso.primitives.html" title="poppy_torso.primitives package" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>The Motor object &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Introduction" href="index.html" />
+    <link rel="next" title="Primitives" href="primitive.html" />
+    <link rel="prev" title="The Robot object and the controllers" href="robot.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">The Motor object</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#registers">Registers</a></li>
+<li><a class="reference internal" href="#torque-and-compliance">Torque and compliance</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#controlling-motors">Controlling motors</a><ul>
+<li><a class="reference internal" href="#controlling-in-position">Controlling in position</a></li>
+<li><a class="reference internal" href="#controlling-in-speed">Controlling in speed</a></li>
+<li><a class="reference internal" href="#the-goto-position-function">The <code class="docutils literal"><span class="pre">goto_position()</span></code> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="robot.html" title="The Robot object and the controllers" accesskey="P">previous </a></li>
+              <li><a href="primitive.html" title="Primitives" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Introduction</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/pypot/doc/motor.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Motor object</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#registers">Registers</a></li>
+<li><a class="reference internal" href="#torque-and-compliance">Torque and compliance</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#controlling-motors">Controlling motors</a><ul>
+<li><a class="reference internal" href="#controlling-in-position">Controlling in position</a></li>
+<li><a class="reference internal" href="#controlling-in-speed">Controlling in speed</a></li>
+<li><a class="reference internal" href="#the-goto-position-function">The <code class="docutils literal"><span class="pre">goto_position()</span></code> function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="robot.html"
+                        title="previous chapter">The Robot object and the controllers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="primitive.html"
+                        title="next chapter">Primitives</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pypot/doc/motor.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="the-motor-object">
+<span id="motor"></span><h1>The Motor object<a class="headerlink" href="#the-motor-object" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The  <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> class contains a list of  <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor" title="pypot.dynamixel.motor.DxlMotor"><code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code></a>, each <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor" title="pypot.dynamixel.motor.DxlMotor"><code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code></a> being linked to a physical Dynamixel motor.</p>
+<div class="section" id="registers">
+<h3>Registers<a class="headerlink" href="#registers" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>This class provides access to (see <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.registers" title="pypot.dynamixel.motor.DxlMotor.registers"><code class="xref py py-attr docutils literal"><span class="pre">registers</span></code></a> for an exhaustive list):</dt>
+<dd><ul class="first last simple">
+<li>id: motor id</li>
+<li>motor name</li>
+<li>motor model</li>
+<li>present position/speed/load</li>
+<li>goal position/speed/load</li>
+<li>compliant</li>
+<li>motor orientation and offset</li>
+<li>angle limit</li>
+<li>temperature</li>
+<li>voltage</li>
+</ul>
+</dd>
+</dl>
+<p>Temperature and load can give you an idea of how much effort a motor produces:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;motor &quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;(&quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">model</span><span class="p">,</span><span class="s">&quot;), id: &quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">id</span>
+    <span class="k">print</span> <span class="s">&#39;temperature: &#39;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">temperature</span>
+    <span class="k">print</span> <span class="s">&quot;load: &quot;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">load</span>
+    <span class="k">print</span> <span class="s">&quot;---&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="torque-and-compliance">
+<h3>Torque and compliance<a class="headerlink" href="#torque-and-compliance" title="Permalink to this headline">¶</a></h3>
+<p>A motor with compliance will not exert any torque. You can move it by hand. Removing compliance will cause the motor to exert torque and therefore move to get to its goal position. The compliance can be set for each motor individually:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+</div>
+<p>or can be set at  <a class="reference internal" href="robot.html#robot"><span>robot level</span></a>.</p>
+<p>You can set the compliance mode to &#8216;safe&#8217; (as opposed to &#8216;dummy&#8217;) to have the robot set compliance at angle limits, preventing you to move it outside of the authorized range. It also prevents the brutal moves when putting back compliance and the robot wants to go back inside its angle limits.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">angle_limit</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">compliant_behavior</span><span class="p">(</span><span class="s">&#39;safe&#39;</span><span class="p">)</span>
+<span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="c">#now try moving the head with your hands beyond the angle limits</span>
+</pre></div>
+</div>
+<p>You can also change the maximal torque that the robot can use. Use a value between 0 (no torque) and 100 (max torque). The resulting maximal torque depends onthe model of teh robot:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">max_torque</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+<p>Reducing the maximal torque makes your robot less powerful and therefore less harmfull and adds elasticity to the joints: if you apply a force on it,it moves because it does not have enough torque to resist, but it goes back to its goal position when you stop applying the force.</p>
+</div>
+</div>
+<div class="section" id="controlling-motors">
+<h2>Controlling motors<a class="headerlink" href="#controlling-motors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="controlling-in-position">
+<h3>Controlling in position<a class="headerlink" href="#controlling-in-position" title="Permalink to this headline">¶</a></h3>
+<p>Dynamixel servomotors will use their internal controller to reach and stay at the angle defined in the goal_position register (in degree).
+If this angle isn&#8217;t between <code class="xref py py-attr docutils literal"><span class="pre">lower_limit</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">upper_limit</span></code>, the goal angle will automatically be taken back into the limits:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">m</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;position: &quot;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">,</span> <span class="s">&quot;(limits: &quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">angle_limit</span><span class="p">,</span> <span class="s">&quot;)&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="controlling-in-speed">
+<h3>Controlling in speed<a class="headerlink" href="#controlling-in-speed" title="Permalink to this headline">¶</a></h3>
+<p>You can also control your robot in speed. Set the <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.goal_speed" title="pypot.dynamixel.motor.DxlMotor.goal_speed"><code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code></a> attribute to the desired value in degree per seconds.
+This automatically sets the <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code> to the maximal or minimal value (depending on the sign of the speed).</p>
+<p>The motor will remain at the given speed until it gets a new order or it reaches its angle limit.</p>
+<p>Example of robot making &#8216;yes&#8217; with its head:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">goal</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="n">t_init</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t_init</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">goal</span><span class="p">):</span>
+        <span class="n">goal</span> <span class="o">=</span> <span class="o">-</span><span class="n">goal</span>
+
+    <span class="n">speed</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="p">(</span><span class="n">goal</span> <span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span>
+    <span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_speed</span> <span class="o">=</span> <span class="n">speed</span>
+
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You could also use the wheel mode settings where you can directly change the <code class="xref py py-attr docutils literal"><span class="pre">moving_speed</span></code>. Nevertheless, while the motor will turn infinitely with the wheel mode, here with the <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.goal_speed" title="pypot.dynamixel.motor.DxlMotor.goal_speed"><code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code></a> the motor will still respect the angle limits.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you set both <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor.goal_speed" title="pypot.dynamixel.motor.DxlMotor.goal_speed"><code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code></a> and <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code> only the last command will be executed. Unless you know what you are doing, you should avoid to mix these both approaches.</p>
+</div>
+</div>
+<div class="section" id="the-goto-position-function">
+<h3>The <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> function<a class="headerlink" href="#the-goto-position-function" title="Permalink to this headline">¶</a></h3>
+<p>If you want a servo to go to a certain position in a certain time (for synchronization reasons...), use the <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> function. It take two mandatory arguments: position to reach (in degrees) and the duration:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">goto_position</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To synchronize several motors, have a look at the <a class="reference internal" href="pypot.robot.html#pypot.robot.robot.Robot.goto_position" title="pypot.robot.robot.Robot.goto_position"><code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code></a> at robot level.</p>
+<p>By default, this function return immediatelly and is cancelled if another one is run later, even if the 3 seconds are not over.</p>
+<p>You can set the optionnal <em>wait</em> parameter to True to make this function blocking, therefore the next line in the script will execute only when the 3 seconds are over.</p>
+<p>The other optionnal parameter is <em>control</em>. You can specify &#8216;dummy&#8217; or &#8216;minijerk&#8217; (default) to define which algorithm is used in used in background to bring the motor to the desired position.</p>
+<p>&#8216;dummy&#8217; is a simple controller, where you divide the angle to travel by the time and you set the goal speed to this value. As the motor can&#8217;t go from thois speed to 0 at arrival in no time, a slight overshoot can happen.
+The &#8216;minijerk&#8217; controller has a more complex algorithm to slow down before and arrive on time without overshoot.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">goto_position</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">control</span><span class="o">=</span><span class="s">&#39;dummy&#39;</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>TODO: sensors doc, but work in progress</p>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="robot.html" title="The Robot object and the controllers" >previous</a></li>
+        <li><a href="primitive.html" title="Primitives" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Introduction</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

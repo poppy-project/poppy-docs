@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>pypot.tools.herborist.herborist &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../../index.html" />
+    <link rel="up" title="Module code" href="../../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../../index.html" accesskey="U">Module code</a></li>
+            
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../../index.html">
+      <img class="logo" src="../../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <h1>Source code for pypot.tools.herborist.herborist</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="kn">import</span> <span class="nn">PyQt4.QtCore</span>
+<span class="kn">import</span> <span class="nn">PyQt4.QtGui</span>
+<span class="kn">import</span> <span class="nn">PyQt4.uic</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">resource_filename</span>
+
+<span class="kn">import</span> <span class="nn">pypot.dynamixel</span>
+
+
+<span class="c"># MARK: - DxlIO connection</span>
+
+<span class="n">__dxl_io</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">__lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="get_dxl_connection"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.get_dxl_connection">[docs]</a><span class="k">def</span> <span class="nf">get_dxl_connection</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">baudrate</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="s">&quot;MX&quot;</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">__dxl_io</span>
+
+    <span class="n">__lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">protocol</span> <span class="o">==</span> <span class="s">&quot;XL&quot;</span><span class="p">:</span>
+        <span class="n">__dxl_io</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">dynamixel</span><span class="o">.</span><span class="n">Dxl320IO</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">baudrate</span><span class="p">,</span> <span class="n">use_sync_read</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">__dxl_io</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">dynamixel</span><span class="o">.</span><span class="n">DxlIO</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">baudrate</span><span class="p">,</span> <span class="n">use_sync_read</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">__dxl_io</span>
+
+</div>
+<div class="viewcode-block" id="release_dxl_connection"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.release_dxl_connection">[docs]</a><span class="k">def</span> <span class="nf">release_dxl_connection</span><span class="p">():</span>
+    <span class="n">__dxl_io</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">__lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="HerboristApp"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp">[docs]</a><span class="k">class</span> <span class="nc">HerboristApp</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">argv</span><span class="p">):</span>
+        <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">argv</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">PyQt4</span><span class="o">.</span><span class="n">uic</span><span class="o">.</span><span class="n">loadUi</span><span class="p">(</span><span class="n">resource_filename</span><span class="p">(</span><span class="s">&#39;pypot&#39;</span><span class="p">,</span> <span class="s">&#39;/tools/herborist/herborist.ui&#39;</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_motor_view</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="c"># slider / lcd connections</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">rdt_slider</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">rdt_lcd</span><span class="o">.</span><span class="n">display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">torque_max_slider</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">torque_max_lcd</span><span class="o">.</span><span class="n">display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">lower_limit_dial</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">lower_limit_lcd</span><span class="o">.</span><span class="n">display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">upper_limit_dial</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">upper_limit_lcd</span><span class="o">.</span><span class="n">display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">present_position_dial</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">present_position_lcd</span><span class="o">.</span><span class="n">display</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_dial</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_lcd</span><span class="o">.</span><span class="n">display</span><span class="p">)</span>
+
+        <span class="c"># Connect the button to their cb</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_scanning</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">abort_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">abort_scanning</span><span class="p">)</span>
+
+        <span class="c"># We manually uncheck most baudrates in the selection list</span>
+        <span class="c"># as unchecking them in the ui editor make the checkbox goes away</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baudrate_list</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baudrate_list</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">setCheckState</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="c"># We prevent the minimum id to be greater than the maximum id</span>
+        <span class="k">def</span> <span class="nf">min_id_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_id</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">new_id</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">max_id</span><span class="o">.</span><span class="n">value</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">min_id</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">max_id</span><span class="o">.</span><span class="n">value</span><span class="p">())</span>
+
+        <span class="k">def</span> <span class="nf">max_id_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_id</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">new_id</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">min_id</span><span class="o">.</span><span class="n">value</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">max_id</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">min_id</span><span class="o">.</span><span class="n">value</span><span class="p">())</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">min_id</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">min_id_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">max_id</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span> <span class="n">i</span><span class="p">:</span> <span class="n">max_id_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+
+        <span class="c"># We automatically refresh the port list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_port_thread</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">UpdatePortThread</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_port_thread</span><span class="o">.</span><span class="n">port_updated</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_port</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_port_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+        <span class="c"># Motor View</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="o">.</span><span class="n">itemSelectionChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_motor_view</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_dial</span><span class="o">.</span><span class="n">valueChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_motor_position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">update_eeprom_button</span><span class="o">.</span><span class="n">pressed</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update_eeprom</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">torque_checkbox</span><span class="o">.</span><span class="n">stateChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">switch_torque</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="c"># MARK: - Port update</span>
+
+<div class="viewcode-block" id="HerboristApp.UpdatePortThread"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.UpdatePortThread">[docs]</a>    <span class="k">class</span> <span class="nc">UpdatePortThread</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QThread</span><span class="p">):</span>
+        <span class="n">port_updated</span> <span class="o">=</span> <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QThread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
+
+<div class="viewcode-block" id="HerboristApp.UpdatePortThread.run"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.UpdatePortThread.run">[docs]</a>        <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+                <span class="n">new_ports</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">dynamixel</span><span class="o">.</span><span class="n">get_available_ports</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">port_updated</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">new_ports</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</div></div>
+<div class="viewcode-block" id="HerboristApp.update_port"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.update_port">[docs]</a>    <span class="k">def</span> <span class="nf">update_port</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_ports</span><span class="p">):</span>
+        <span class="n">old_ports</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="p">)):</span>
+            <span class="n">old_ports</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="o">.</span><span class="n">itemText</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+
+        <span class="n">selected_port</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">old_ports</span> <span class="o">!=</span> <span class="n">new_ports</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="o">.</span><span class="n">addItems</span><span class="p">(</span><span class="n">new_ports</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="o">.</span><span class="n">itemText</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">selected_port</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                    <span class="k">break</span>
+
+            <span class="k">if</span> <span class="n">old_ports</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">new_ports</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="n">old_ports</span> <span class="ow">and</span> <span class="n">new_ports</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c"># MARK: - Motor Scan</span></div>
+<div class="viewcode-block" id="HerboristApp.update_motor_tree"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.update_motor_tree">[docs]</a>    <span class="k">def</span> <span class="nf">update_motor_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">baud_for_ids</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">ids</span> <span class="ow">in</span> <span class="n">baud_for_ids</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="n">baud_root</span> <span class="o">=</span> <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeWidgetItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="p">,</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)])</span>
+            <span class="n">baud_root</span><span class="o">.</span><span class="n">setExpanded</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="n">f</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">baud_root</span><span class="o">.</span><span class="n">flags</span><span class="p">())</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">ItemIsSelectable</span><span class="p">)</span>
+            <span class="n">baud_root</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">ItemFlags</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+
+            <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+            <span class="n">models</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+            <span class="n">release_dxl_connection</span><span class="p">()</span>
+
+            <span class="k">for</span> <span class="nb">id</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">models</span><span class="p">):</span>
+                <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeWidgetItem</span><span class="p">(</span><span class="n">baud_root</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">model</span><span class="p">])</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.start_scanning"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.start_scanning">[docs]</a>    <span class="k">def</span> <span class="nf">start_scanning</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">abort_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="n">baudrates</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baudrate_list</span><span class="p">)):</span>
+            <span class="n">checkbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baudrate_list</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">checkbox</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">checkbox</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+                <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">57600</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">usb_device</span> <span class="o">==</span> <span class="s">&quot;USB2DYNAMIXEL&quot;</span><span class="p">:</span>
+                    <span class="n">b</span> <span class="o">=</span> <span class="mi">57142</span>
+                <span class="n">baudrates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+        <span class="n">id_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">min_id</span><span class="o">.</span><span class="n">value</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">max_id</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_progress</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">baudrates</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">id_range</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scan_thread</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ScanThread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">baudrates</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">,</span> <span class="n">id_range</span><span class="p">,</span>
+                                           <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_progress</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scan_thread</span><span class="o">.</span><span class="n">done</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">done_scanning</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scan_thread</span><span class="o">.</span><span class="n">part_done</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scan_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.abort_scanning"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.abort_scanning">[docs]</a>    <span class="k">def</span> <span class="nf">abort_scanning</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scan_thread</span><span class="o">.</span><span class="n">abort</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.done_scanning"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.done_scanning">[docs]</a>    <span class="k">def</span> <span class="nf">done_scanning</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">abort_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">scan_button</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.ScanThread"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.ScanThread">[docs]</a>    <span class="k">class</span> <span class="nc">ScanThread</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QThread</span><span class="p">):</span>
+        <span class="n">done</span> <span class="o">=</span> <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">()</span>
+        <span class="n">part_done</span> <span class="o">=</span> <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">baudrates</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">id_range</span><span class="p">,</span>
+                     <span class="n">motor_tree</span><span class="p">,</span> <span class="n">scan_progress</span><span class="p">):</span>
+
+            <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QThread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">baudrates</span> <span class="o">=</span> <span class="n">baudrates</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="n">protocol</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id_range</span> <span class="o">=</span> <span class="n">id_range</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">motor_tree</span> <span class="o">=</span> <span class="n">motor_tree</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scan_progress</span> <span class="o">=</span> <span class="n">scan_progress</span>
+
+<div class="viewcode-block" id="HerboristApp.ScanThread.run"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.ScanThread.run">[docs]</a>        <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">baudrates</span><span class="p">:</span>
+                <span class="n">baud_root</span> <span class="o">=</span> <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeWidgetItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_tree</span><span class="p">,</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">b</span><span class="p">)])</span>
+                <span class="n">baud_root</span><span class="o">.</span><span class="n">setExpanded</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+                <span class="n">f</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">baud_root</span><span class="o">.</span><span class="n">flags</span><span class="p">())</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">ItemIsSelectable</span><span class="p">)</span>
+                <span class="n">baud_root</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">ItemFlags</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+
+                <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">id_range</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>
+                        <span class="k">break</span>
+
+                    <span class="k">if</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">ping</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+                        <span class="n">model</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_model</span><span class="p">((</span><span class="nb">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QTreeWidgetItem</span><span class="p">(</span><span class="n">baud_root</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">model</span><span class="p">])</span>
+
+                    <span class="bp">self</span><span class="o">.</span><span class="n">part_done</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scan_progress</span><span class="o">.</span><span class="n">value</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+                <span class="n">release_dxl_connection</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">done</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.ScanThread.abort"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.ScanThread.abort">[docs]</a>        <span class="k">def</span> <span class="nf">abort</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scan_progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="c"># MARK: - Motor View</span></div></div>
+<div class="viewcode-block" id="HerboristApp.update_motor_view"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.update_motor_view">[docs]</a>    <span class="k">def</span> <span class="nf">update_motor_view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enable_motor_view</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_motor_view</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">itertools</span><span class="o">.</span><span class="n">chain</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="o">.</span><span class="n">values</span><span class="p">())))</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">widget_name</span> <span class="ow">in</span> <span class="p">(</span><span class="s">&#39;id_spinbox&#39;</span><span class="p">,</span>
+                                <span class="s">&#39;present_position_dial&#39;</span><span class="p">,</span>
+                                <span class="s">&#39;goal_position_dial&#39;</span><span class="p">,</span>
+                                <span class="s">&#39;present_position_lcd&#39;</span><span class="p">,</span>
+                                <span class="s">&#39;goal_position_lcd&#39;</span><span class="p">):</span>
+                <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">,</span> <span class="n">widget_name</span><span class="p">)</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">baudrate</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+        <span class="n">srl</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_status_return_level</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">),</span> <span class="n">convert</span><span class="o">=</span><span class="bp">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">srl</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">model</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_model</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">rdt</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_return_delay_time</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">firmware</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_firmware</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">torque_max</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_max_torque</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">angle_limit</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_angle_limit</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">goal_pos</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_goal_position</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">torque_enable</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">is_torque_enabled</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">release_dxl_connection</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">id_spinbox</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baud_combobox</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baud_combobox</span><span class="o">.</span><span class="n">itemText</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">baudrate</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baud_combobox</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="k">break</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">srl_combobox</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="n">srl</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">srl</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">rdt_slider</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">rdt</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">firmware_label</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">firmware</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">torque_max_slider</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">torque_max</span><span class="p">)</span>
+
+            <span class="n">limit</span> <span class="o">=</span> <span class="mi">180</span> <span class="k">if</span> <span class="n">model</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;MX&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="mi">150</span>
+            <span class="k">for</span> <span class="n">widget_name</span> <span class="ow">in</span> <span class="p">(</span><span class="s">&#39;lower_limit_dial&#39;</span><span class="p">,</span> <span class="s">&#39;upper_limit_dial&#39;</span><span class="p">,</span>
+                                <span class="s">&#39;present_position_dial&#39;</span><span class="p">,</span> <span class="s">&#39;goal_position_dial&#39;</span><span class="p">):</span>
+                <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">,</span> <span class="n">widget_name</span><span class="p">)</span><span class="o">.</span><span class="n">setMinimum</span><span class="p">(</span><span class="o">-</span><span class="n">limit</span><span class="p">)</span>
+                <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">,</span> <span class="n">widget_name</span><span class="p">)</span><span class="o">.</span><span class="n">setMaximum</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">lower_limit_dial</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">angle_limit</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">upper_limit_dial</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">angle_limit</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_dial</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">goal_pos</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">torque_checkbox</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="n">torque_enable</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">UpdateMotorThread</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">baudrate</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="o">.</span><span class="n">position_updated</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">motor_position_updated</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.update_motor_position"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.update_motor_position">[docs]</a>    <span class="k">def</span> <span class="nf">update_motor_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">torque_checkbox</span><span class="o">.</span><span class="n">checkState</span><span class="p">():</span>
+            <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">baudrate</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+            <span class="n">dxl_io</span><span class="o">.</span><span class="n">set_goal_position</span><span class="p">({</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">:</span> <span class="n">pos</span><span class="p">})</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+            <span class="n">release_dxl_connection</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.motor_position_updated"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.motor_position_updated">[docs]</a>    <span class="k">def</span> <span class="nf">motor_position_updated</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">present_position_dial</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.switch_torque"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.switch_torque">[docs]</a>    <span class="k">def</span> <span class="nf">switch_torque</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">torque_enable</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">torque_enable</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_dial</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_lcd</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_dial</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">goal_position_lcd</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">ids</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">dxl_io</span><span class="o">.</span><span class="n">enable_torque</span> <span class="k">if</span> <span class="n">torque_enable</span> <span class="k">else</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">disable_torque</span><span class="p">)(</span><span class="n">ids</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+            <span class="n">release_dxl_connection</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.enable_motor_view"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.enable_motor_view">[docs]</a>    <span class="k">def</span> <span class="nf">enable_motor_view</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enabled</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_layout</span><span class="p">)):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_layout</span><span class="o">.</span><span class="n">itemAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">widget</span><span class="p">()</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.update_eeprom"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.update_eeprom">[docs]</a>    <span class="k">def</span> <span class="nf">update_eeprom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">refresh_motor_thread</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+        <span class="n">rdt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">rdt_slider</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="n">srl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">srl_combobox</span><span class="o">.</span><span class="n">currentIndex</span><span class="p">()</span>
+        <span class="n">torque_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">torque_max_slider</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="n">lower_limit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">lower_limit_dial</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="n">upper_limit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">upper_limit_dial</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+        <span class="n">new_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">id_spinbox</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">ids</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+            <span class="n">dxl_io</span><span class="o">.</span><span class="n">set_return_delay_time</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">rdt</span><span class="p">))))</span>
+            <span class="n">dxl_io</span><span class="o">.</span><span class="n">set_status_return_level</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">srl</span><span class="p">))),</span> <span class="n">convert</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">dxl_io</span><span class="o">.</span><span class="n">set_max_torque</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">torque_max</span><span class="p">))))</span>
+            <span class="n">dxl_io</span><span class="o">.</span><span class="n">set_angle_limit</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">((</span><span class="n">lower_limit</span><span class="p">,</span> <span class="n">upper_limit</span><span class="p">)))))</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.15</span><span class="p">)</span>
+            <span class="n">release_dxl_connection</span><span class="p">()</span>
+
+        <span class="n">new_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ids</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="n">old_ids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">old_ids</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">old_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">new_id</span> <span class="o">!=</span> <span class="n">old_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="n">b</span><span class="p">,</span> <span class="n">old_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">old_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">dxl_io</span><span class="o">.</span><span class="n">change_id</span><span class="p">({</span><span class="n">old_id</span><span class="p">:</span> <span class="n">new_id</span><span class="p">})</span>
+
+                <span class="n">l</span> <span class="o">=</span> <span class="n">new_ids</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+                <span class="n">l</span><span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">old_id</span><span class="p">)]</span> <span class="o">=</span> <span class="n">new_id</span>
+                <span class="n">new_ids</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">=</span> <span class="n">l</span>
+
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtGui</span><span class="o">.</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">about</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">,</span>
+                                              <span class="s">&#39;&#39;</span><span class="p">,</span>
+                                              <span class="s">&#39;This id is already used.&#39;</span><span class="p">)</span>
+                <span class="k">pass</span>
+
+            <span class="n">release_dxl_connection</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">ids</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+            <span class="n">new_b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">baud_combobox</span><span class="o">.</span><span class="n">currentText</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">b</span> <span class="o">!=</span> <span class="n">new_b</span><span class="p">:</span>
+                <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+                <span class="n">dxl_io</span><span class="o">.</span><span class="n">change_baudrate</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">itertools</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">new_b</span><span class="p">))))</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+                <span class="n">release_dxl_connection</span><span class="p">()</span>
+
+            <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">ids</span><span class="p">:</span>
+                <span class="n">new_ids</span><span class="p">[</span><span class="n">new_b</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+                <span class="n">new_ids</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+                <span class="n">new_ids</span><span class="p">[</span><span class="n">new_b</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_motor_tree</span><span class="p">(</span><span class="n">new_ids</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.UpdateMotorThread"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.UpdateMotorThread">[docs]</a>    <span class="k">class</span> <span class="nc">UpdateMotorThread</span><span class="p">(</span><span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QThread</span><span class="p">):</span>
+        <span class="n">position_updated</span> <span class="o">=</span> <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">pyqtSignal</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">baudrate</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">mid</span><span class="p">):</span>
+            <span class="n">PyQt4</span><span class="o">.</span><span class="n">QtCore</span><span class="o">.</span><span class="n">QThread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">running</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Event</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="n">port</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">baudrate</span> <span class="o">=</span> <span class="n">baudrate</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span> <span class="o">=</span> <span class="n">protocol</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mid</span> <span class="o">=</span> <span class="n">mid</span>
+
+<div class="viewcode-block" id="HerboristApp.UpdateMotorThread.stop"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.UpdateMotorThread.stop">[docs]</a>        <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</div>
+<div class="viewcode-block" id="HerboristApp.UpdateMotorThread.run"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.HerboristApp.UpdateMotorThread.run">[docs]</a>        <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>
+                <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">get_dxl_connection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">baudrate</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">protocol</span><span class="p">)</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_present_position</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">mid</span><span class="p">,</span> <span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">release_dxl_connection</span><span class="p">()</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">position_updated</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+
+    <span class="c"># MARK: - Shortcut properties</span></div></div>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">port</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">port_box</span><span class="o">.</span><span class="n">currentText</span><span class="p">())</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">protocol</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">protocol_box</span><span class="o">.</span><span class="n">currentText</span><span class="p">())</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">usb_device</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">usb_device_box</span><span class="o">.</span><span class="n">currentText</span><span class="p">())</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">baudrate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">selected_motors</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">baudrate</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">selected_motors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">motors</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+        <span class="n">selected_items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="o">.</span><span class="n">selectedItems</span><span class="p">()</span>
+        <span class="n">selected_items</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">selected_items</span> <span class="k">if</span> <span class="n">item</span><span class="o">.</span><span class="n">parent</span><span class="p">()]</span>
+
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">selected_items</span><span class="p">:</span>
+            <span class="n">motors</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">parent</span><span class="p">()</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">))]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">motors</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ids</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+        <span class="n">root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">motor_tree</span><span class="o">.</span><span class="n">invisibleRootItem</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">childCount</span><span class="p">()):</span>
+            <span class="n">baud_node</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">child</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">baud_node</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span>
+                <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">baud_node</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+                <span class="n">ids</span><span class="p">[</span><span class="n">b</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">baud_node</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">baud_node</span><span class="o">.</span><span class="n">childCount</span><span class="p">()):</span>
+                <span class="n">id_node</span> <span class="o">=</span> <span class="n">baud_node</span><span class="o">.</span><span class="n">child</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                <span class="n">ids</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">id_node</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">ids</span>
+
+</div>
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../../../../pypot/doc/pypot.tools.herborist.html#pypot.tools.herborist.herborist.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">HerboristApp</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span>
+
+    <span class="n">__lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="../../../index.html" >Module code</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

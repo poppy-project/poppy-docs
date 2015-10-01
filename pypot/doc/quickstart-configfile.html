@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>QuickStart: create a Robot &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Introduction" href="index.html" />
+    <link rel="next" title="QuickStart: use a primitive" href="quickstart-primitive.html" />
+    <link rel="prev" title="QuickStart: discover and communicate with Dynamixel servomotors" href="quickstart-lowlevel.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">QuickStart: create a Robot</a><ul>
+<li><a class="reference internal" href="#what-is-a-configuration-file">What is a configuration file?</a></li>
+<li><a class="reference internal" href="#test-the-ergo-jr-configuration">Test the Ergo Jr configuration</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="quickstart-lowlevel.html" title="QuickStart: discover and communicate with Dynamixel servomotors" accesskey="P">previous </a></li>
+              <li><a href="quickstart-primitive.html" title="QuickStart: use a primitive" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Introduction</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/pypot/doc/quickstart-configfile.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">QuickStart: create a Robot</a><ul>
+<li><a class="reference internal" href="#what-is-a-configuration-file">What is a configuration file?</a></li>
+<li><a class="reference internal" href="#test-the-ergo-jr-configuration">Test the Ergo Jr configuration</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="quickstart-lowlevel.html"
+                        title="previous chapter">QuickStart: discover and communicate with Dynamixel servomotors</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="quickstart-primitive.html"
+                        title="next chapter">QuickStart: use a primitive</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pypot/doc/quickstart-configfile.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="quickstart-create-a-robot">
+<span id="quickstart-configfile"></span><h1>QuickStart: create a Robot<a class="headerlink" href="#quickstart-create-a-robot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-a-configuration-file">
+<h2>What is a configuration file?<a class="headerlink" href="#what-is-a-configuration-file" title="Permalink to this headline">¶</a></h2>
+<p>In Pypot, there is a <a class="reference internal" href="robot.html#robot"><span>Robot</span></a> object that contains the configuration of your robot: how many motors (with what IDs, on what port), their names, angle limits, and so on.</p>
+<p>You can build a Robot object by hand, but it is much easier to launch a configuration from a configuration file. This text file contains a dictionnary, encoded in json.</p>
+<p>The important fields are:</p>
+<ul class="simple">
+<li><strong>controllers</strong> - This key holds the information pertaining to a controller and all the items connected to its bus.</li>
+<li><strong>motors</strong> - This is a description of all the custom setup values for each motor. Meta information, such as the motor access name or orientation, is also included here. It is also there that you will set the angle limits of the motor.</li>
+<li><strong>motorgroups</strong> - This is used to define alias of a group of motors (e.g. left_leg).</li>
+</ul>
+<p>This is an example of a minimal config file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s">&quot;controllers&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">&quot;head_controller&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">&quot;sync_read&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+      <span class="s">&quot;attached_motors&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">&quot;head&quot;</span><span class="p">,</span>
+      <span class="p">],</span>
+      <span class="s">&quot;port&quot;</span><span class="p">:</span> <span class="s">&quot;auto&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s">&quot;motorgroups&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">&quot;head&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">&quot;head_z&quot;</span><span class="p">,</span>
+      <span class="s">&quot;head_y&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s">&quot;motors&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">&quot;head_y&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">&quot;offset&quot;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span>
+      <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;AX-12&quot;</span><span class="p">,</span>
+      <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+      <span class="s">&quot;angle_limit&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">-</span><span class="mi">40</span><span class="p">,</span>
+        <span class="mi">8</span>
+      <span class="p">],</span>
+      <span class="s">&quot;orientation&quot;</span><span class="p">:</span> <span class="s">&quot;indirect&quot;</span>
+    <span class="p">},</span>
+    <span class="s">&quot;head_z&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">&quot;offset&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+      <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;AX-12&quot;</span><span class="p">,</span>
+      <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span>
+      <span class="s">&quot;angle_limit&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">-</span><span class="mi">100</span><span class="p">,</span>
+        <span class="mi">100</span>
+      <span class="p">],</span>
+      <span class="s">&quot;orientation&quot;</span><span class="p">:</span> <span class="s">&quot;direct&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>It contains:</p>
+<ul class="simple">
+<li>two <strong>motors</strong> called head_y and head_z</li>
+<li>one <strong>motor group</strong> called head and containing the head_y and head_z motors</li>
+<li>one <strong>controller</strong> called head_controller, which controls the motors of the motor group head. A controller is associated to a serial port and therefore a USB2serial device. Even if you can theoretically plug more than 100 servos on one port, it is unadvised (for electrical losses) to have more than 15.</li>
+</ul>
+<p>Each robot-specific library (poppy-humanoid for example) contains its own configuration file.</p>
+<p>See <a class="reference internal" href="robot.html#robot"><span>the robot object description</span></a> for more details on the contents of the configuration file.</p>
+</div>
+<div class="section" id="test-the-ergo-jr-configuration">
+<h2>Test the Ergo Jr configuration<a class="headerlink" href="#test-the-ergo-jr-configuration" title="Permalink to this headline">¶</a></h2>
+<p>For test purposes, Pypot also contains a poppy Ergo Jr configuration, ready to use as a Python dictionnary.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pypot.robot.config</span> <span class="kn">import</span> <span class="n">ergo_robot_config</span>
+<span class="kn">import</span> <span class="nn">pypot.robot</span>
+
+<span class="n">my_config</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">ergo_robot_config</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">my_config</span><span class="p">[</span><span class="s">&quot;controllers&quot;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">my_config</span><span class="p">[</span><span class="s">&quot;motorgroups&quot;</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">my_config</span><span class="p">[</span><span class="s">&quot;motors&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If you convert this dictionnary to a robot, pypot checks if the motors are connected and tells you which motors it can&#8217;t find.
+If all the motors are found, you can directly access the motors using their names and get and set their registers directly using their names:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ergo_robot</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">from_config</span><span class="p">(</span><span class="n">my_config</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">ergo_robot</span><span class="o">.</span><span class="n">m2</span><span class="o">.</span><span class="n">present_position</span> <span class="c">#get register present_position of motor m2</span>
+
+<span class="n">ergo_robot</span><span class="o">.</span><span class="n">m6</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>       <span class="c">#enable torque of the m6 motor</span>
+<span class="n">ergo_robot</span><span class="o">.</span><span class="n">m6</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mi">20</span>      <span class="c">#set goal position of motor m6 to 20 degree</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>                                     <span class="c">#wait for the robot to move</span>
+
+<span class="n">ergo_robot</span><span class="o">.</span><span class="n">m6</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>       <span class="c">#disable torque of the m6 motor</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Compliance is the fact that a motor can be moved by hand, without resisting. In order to have the robot move by itself, you should first set the compliance to False.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Removing compliance will allow the motors to move to their goal_position, resulting in maybe sudden moves in the robot. Be sure to let it enough space to move.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Remark the time.sleep(0.1) in the last line: at the end of the script, the serial connection is closed and, if you don&#8217;t wait a little bit, the connection may close before the last order (here: ergo_robot.m6.compliant = True) is sent.</p>
+</div>
+<p>See <a class="reference internal" href="../../quickstarts/discover.html#quickstart-discover"><span>the discover quickstart</span></a> or <a class="reference internal" href="motor.html#motor"><span>the motor object description</span></a> for more precisions on how to control a robot</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="quickstart-lowlevel.html" title="QuickStart: discover and communicate with Dynamixel servomotors" >previous</a></li>
+        <li><a href="quickstart-primitive.html" title="QuickStart: use a primitive" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Introduction</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

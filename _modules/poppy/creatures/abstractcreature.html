@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>poppy.creatures.abstractcreature &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="poppy.creatures" href="../creatures.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../index.html" >Module code</a></li>
+              <li><a href="../creatures.html" accesskey="U">poppy.creatures</a></li>
+            
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <h1>Source code for poppy.creatures.abstractcreature</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+
+<span class="kn">from</span> <span class="nn">pypot.robot</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">from_json</span>
+<span class="kn">from</span> <span class="nn">pypot.server.snap</span> <span class="kn">import</span> <span class="n">SnapRobotServer</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">SERVICE_THREADS</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<div class="viewcode-block" id="DeamonThread"><a class="viewcode-back" href="../../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.DeamonThread">[docs]</a><span class="k">class</span> <span class="nc">DeamonThread</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setDaemon</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DeamonThread.run"><a class="viewcode-back" href="../../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.DeamonThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Start thread </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="p">)</span>
+            <span class="n">Thread</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="s">&quot;Error on thread </span><span class="si">%s</span><span class="s"> &quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="camelcase_to_underscore"><a class="viewcode-back" href="../../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.camelcase_to_underscore">[docs]</a><span class="k">def</span> <span class="nf">camelcase_to_underscore</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">&#39;(.)([A-Z][a-z]+)&#39;</span><span class="p">,</span> <span class="s">r&#39;\1_\2&#39;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s">&#39;([a-z0-9])([A-Z])&#39;</span><span class="p">,</span> <span class="s">r&#39;\1_\2&#39;</span><span class="p">,</span> <span class="n">s1</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="AbstractPoppyCreature"><a class="viewcode-back" href="../../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature">[docs]</a><span class="k">class</span> <span class="nc">AbstractPoppyCreature</span><span class="p">(</span><span class="n">Robot</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot; Abstract Class for Any Poppy Creature. &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">__new__</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span>
+                <span class="n">base_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                <span class="n">simulator</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">scene</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">19997</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">use_snap</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">snap_host</span><span class="o">=</span><span class="s">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">snap_port</span><span class="o">=</span><span class="mi">6969</span><span class="p">,</span> <span class="n">snap_quiet</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                <span class="n">use_http</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">http_host</span><span class="o">=</span><span class="s">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">http_port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">http_quiet</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                <span class="n">use_remote</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">remote_host</span><span class="o">=</span><span class="s">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">remote_port</span><span class="o">=</span><span class="mi">4242</span><span class="p">,</span>
+                <span class="n">sync</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Poppy Creature Factory.</span>
+
+<span class="sd">        Creates a Robot (real or simulated) and specifies it to make it a specific Poppy Creature.</span>
+
+<span class="sd">        :param str config: path to a specific json config (if None uses the default config of the poppy creature - e.g. poppy_humanoid.json)</span>
+
+<span class="sd">        :param str simulator: name of the simulator used (only vrep for the moment)</span>
+<span class="sd">        :param str scene: specify a particular simulation scene (if None uses the default scene of the poppy creature - e.g. poppy_humanoid.ttt)</span>
+<span class="sd">        :param str host: host of the simulator</span>
+<span class="sd">        :param int port: port of the simulator</span>
+<span class="sd">        :param int id: id of robot in the v-rep scene (not used yet!)</span>
+<span class="sd">        :param bool sync: choose if automatically starts the synchronization loops</span>
+
+
+<span class="sd">        .. warning:: You can not specify a particular config when using a simulated robot!</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">config</span> <span class="ow">and</span> <span class="n">simulator</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;Cannot set a specific config &#39;</span>
+                             <span class="s">&#39;when using a simulated version!&#39;</span><span class="p">)</span>
+
+        <span class="n">creature</span> <span class="o">=</span> <span class="n">camelcase_to_underscore</span><span class="p">(</span><span class="n">cls</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
+        <span class="n">base_path</span> <span class="o">=</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="nb">__import__</span><span class="p">(</span><span class="n">creature</span><span class="p">)</span><span class="o">.</span><span class="n">__file__</span><span class="p">)</span>
+                     <span class="k">if</span> <span class="n">base_path</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">base_path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">config</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="s">&#39;configuration&#39;</span><span class="p">),</span>
+                                  <span class="s">&#39;{}.json&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">creature</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">simulator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">simulator</span> <span class="o">!=</span> <span class="s">&#39;vrep&#39;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;Unknown simulation mode: &quot;{}&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">simulator</span><span class="p">))</span>
+
+            <span class="kn">from</span> <span class="nn">pypot.vrep</span> <span class="kn">import</span> <span class="n">from_vrep</span>
+
+            <span class="n">scene_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_path</span><span class="p">,</span> <span class="s">&#39;vrep-scene&#39;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">scene</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">scene</span> <span class="o">=</span> <span class="s">&#39;{}.ttt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">creature</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">scene</span><span class="p">):</span>
+                <span class="k">if</span> <span class="p">((</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">scene</span><span class="p">)</span> <span class="o">!=</span> <span class="n">scene</span><span class="p">)</span> <span class="ow">or</span>
+                        <span class="p">(</span><span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scene_path</span><span class="p">,</span> <span class="n">scene</span><span class="p">)))):</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;Could not find the scene &quot;{}&quot;!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scene</span><span class="p">))</span>
+
+                <span class="n">scene</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scene_path</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
+
+            <span class="c"># TODO: use the id so we can have multiple poppy creatures</span>
+            <span class="c"># inside a single vrep scene</span>
+            <span class="n">poppy_creature</span> <span class="o">=</span> <span class="n">from_vrep</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">scene</span><span class="p">)</span>
+            <span class="n">poppy_creature</span><span class="o">.</span><span class="n">simulated</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">poppy_creature</span> <span class="o">=</span> <span class="n">from_json</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">sync</span><span class="p">)</span>
+            <span class="n">poppy_creature</span><span class="o">.</span><span class="n">simulated</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="k">if</span> <span class="n">use_snap</span><span class="p">:</span>
+            <span class="n">poppy_creature</span><span class="o">.</span><span class="n">snap</span> <span class="o">=</span> <span class="n">SnapRobotServer</span><span class="p">(</span>
+                <span class="n">poppy_creature</span><span class="p">,</span> <span class="n">snap_host</span><span class="p">,</span> <span class="n">snap_port</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="n">snap_quiet</span><span class="p">)</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">use_http</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">pypot.server.httpserver</span> <span class="kn">import</span> <span class="n">HTTPRobotServer</span>
+            <span class="n">poppy_creature</span><span class="o">.</span><span class="n">http</span> <span class="o">=</span> <span class="n">HTTPRobotServer</span><span class="p">(</span><span class="n">poppy_creature</span><span class="p">,</span> <span class="n">http_host</span><span class="p">,</span> <span class="n">http_port</span><span class="p">,</span>
+                                                  <span class="n">cross_domain_origin</span><span class="o">=</span><span class="s">&quot;*&quot;</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="n">http_quiet</span><span class="p">)</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">use_remote</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">pypot.server</span> <span class="kn">import</span> <span class="n">RemoteRobotServer</span>
+            <span class="n">poppy_creature</span><span class="o">.</span><span class="n">remote</span> <span class="o">=</span> <span class="n">RemoteRobotServer</span><span class="p">(</span><span class="n">poppy_creature</span><span class="p">,</span> <span class="n">remote_host</span><span class="p">,</span> <span class="n">remote_port</span><span class="p">)</span>
+
+        <span class="n">cls</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">poppy_creature</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">poppy_creature</span>
+
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="AbstractPoppyCreature.start_background_services"><a class="viewcode-back" href="../../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature.start_background_services">[docs]</a>    <span class="k">def</span> <span class="nf">start_background_services</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">services</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;snap&#39;</span><span class="p">,</span> <span class="s">&#39;http&#39;</span><span class="p">,</span> <span class="s">&#39;remote&#39;</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">service</span> <span class="ow">in</span> <span class="n">services</span><span class="p">:</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">hasattr</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">service</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="n">service</span> <span class="ow">in</span> <span class="n">SERVICE_THREADS</span><span class="p">:</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                        <span class="s">&quot;A {} background service is already running, you may have to restart your script or reset your notebook kernel to start it again.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service</span><span class="p">))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">SERVICE_THREADS</span><span class="p">[</span><span class="n">service</span><span class="p">]</span> <span class="o">=</span> <span class="n">DeamonThread</span><span class="p">(</span>
+                        <span class="n">target</span><span class="o">=</span><span class="nb">getattr</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">service</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&quot;{}_server&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service</span><span class="p">))</span>
+                    <span class="n">SERVICE_THREADS</span><span class="p">[</span><span class="n">service</span><span class="p">]</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
+                    <span class="n">SERVICE_THREADS</span><span class="p">[</span><span class="n">service</span><span class="p">]</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">&quot;Starting {} service&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service</span><span class="p">))</span>
+</div>
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="AbstractPoppyCreature.setup"><a class="viewcode-back" href="../../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Classmethod used to specify your poppy creature.</span>
+
+<span class="sd">        This is where you should attach any specific primitives for instance.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="../../index.html" >Module code</a></li>
+        <li><a href="../creatures.html" >poppy.creatures</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

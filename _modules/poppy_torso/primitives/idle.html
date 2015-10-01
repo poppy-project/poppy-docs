@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>poppy_torso.primitives.idle &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../index.html" accesskey="U">Module code</a></li>
+            
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <h1>Source code for poppy_torso.primitives.idle</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">pypot.primitive</span>
+<span class="kn">from</span> <span class="nn">pypot.primitive.utils</span> <span class="kn">import</span> <span class="n">Sinus</span>
+
+
+<div class="viewcode-block" id="UpperBodyIdleMotion"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.UpperBodyIdleMotion">[docs]</a><span class="k">class</span> <span class="nc">UpperBodyIdleMotion</span><span class="p">(</span><span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+        <span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span>
+
+        <span class="n">sinus_args</span> <span class="o">=</span> <span class="p">[{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">abs_z</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">abs_z</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">l_shoulder_x</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">l_shoulder_x</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">r_shoulder_x</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="s">&#39;phase&#39;</span><span class="p">:</span> <span class="mi">66</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">r_shoulder_x</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&#39;phase&#39;</span><span class="p">:</span> <span class="mi">66</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">l_shoulder_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">l_shoulder_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">l_elbow_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">25</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">l_elbow_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">r_elbow_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s">&#39;offset&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">25</span><span class="p">,</span> <span class="s">&#39;phase&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">r_elbow_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s">&#39;phase&#39;</span><span class="p">:</span> <span class="mi">75</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">l_arm_z</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">r_arm_z</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s">&#39;phase&#39;</span><span class="p">:</span><span class="mi">78</span><span class="p">}]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">all_sinus</span> <span class="o">=</span> <span class="p">[</span><span class="n">Sinus</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="o">**</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sinus_args</span><span class="p">]</span>
+
+<div class="viewcode-block" id="UpperBodyIdleMotion.setup"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.UpperBodyIdleMotion.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">torso</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">arms</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="p">[</span><span class="n">all_sinus</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">for</span> <span class="n">all_sinus</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_sinus</span><span class="p">]</span>
+</div>
+<div class="viewcode-block" id="UpperBodyIdleMotion.teardown"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.UpperBodyIdleMotion.teardown">[docs]</a>    <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">[</span><span class="n">all_sinus</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span> <span class="k">for</span> <span class="n">all_sinus</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_sinus</span><span class="p">]</span>
+</div>
+<div class="viewcode-block" id="UpperBodyIdleMotion.update"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.UpperBodyIdleMotion.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+</div></div>
+<div class="viewcode-block" id="HeadIdleMotion"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.HeadIdleMotion">[docs]</a><span class="k">class</span> <span class="nc">HeadIdleMotion</span><span class="p">(</span><span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+        <span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span>
+
+        <span class="n">sinus_args</span> <span class="o">=</span> <span class="p">[{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.04</span><span class="p">},</span>
+                      <span class="p">{</span><span class="s">&#39;motor_list&#39;</span><span class="p">:</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="p">,</span> <span class="p">],</span> <span class="s">&#39;amp&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s">&#39;freq&#39;</span><span class="p">:</span> <span class="mf">0.09</span><span class="p">}]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">head_sinus</span> <span class="o">=</span> <span class="p">[</span><span class="n">Sinus</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="o">**</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sinus_args</span><span class="p">]</span>
+
+<div class="viewcode-block" id="HeadIdleMotion.start"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.HeadIdleMotion.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="p">[</span><span class="n">hs</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">for</span> <span class="n">hs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_sinus</span><span class="p">]</span>
+</div>
+<div class="viewcode-block" id="HeadIdleMotion.pause"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.HeadIdleMotion.pause">[docs]</a>    <span class="k">def</span> <span class="nf">pause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">[</span><span class="n">hs</span><span class="o">.</span><span class="n">pause</span><span class="p">()</span> <span class="k">for</span> <span class="n">hs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_sinus</span><span class="p">]</span>
+</div>
+<div class="viewcode-block" id="HeadIdleMotion.resume"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.HeadIdleMotion.resume">[docs]</a>    <span class="k">def</span> <span class="nf">resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">[</span><span class="n">hs</span><span class="o">.</span><span class="n">resume</span><span class="p">()</span> <span class="k">for</span> <span class="n">hs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_sinus</span><span class="p">]</span>
+</div>
+<div class="viewcode-block" id="HeadIdleMotion.stop"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.HeadIdleMotion.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">[</span><span class="n">hs</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span> <span class="k">for</span> <span class="n">hs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">head_sinus</span><span class="p">]</span>
+        <span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="HeadIdleMotion.update"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.idle.HeadIdleMotion.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div></div>
+</pre></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="../../index.html" >Module code</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

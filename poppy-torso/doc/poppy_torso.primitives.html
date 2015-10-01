@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>poppy_torso.primitives package &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="poppy_torso package" href="poppy_torso.html" />
+    <link rel="next" title="poppy_torso.utils package" href="poppy_torso.utils.html" />
+    <link rel="prev" title="poppy_torso package" href="poppy_torso.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">poppy_torso.primitives package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.dance">poppy_torso.primitives.dance module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.idle">poppy_torso.primitives.idle module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.interaction">poppy_torso.primitives.interaction module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.posture">poppy_torso.primitives.posture module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.safe">poppy_torso.primitives.safe module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="poppy_torso.html" title="poppy_torso package" accesskey="P">previous </a></li>
+              <li><a href="poppy_torso.utils.html" title="poppy_torso.utils package" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="poppy_torso.html" accesskey="U">poppy_torso package</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/poppy-torso/doc/poppy_torso.primitives.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">poppy_torso.primitives package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.dance">poppy_torso.primitives.dance module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.idle">poppy_torso.primitives.idle module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.interaction">poppy_torso.primitives.interaction module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.posture">poppy_torso.primitives.posture module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives.safe">poppy_torso.primitives.safe module</a></li>
+<li><a class="reference internal" href="#module-poppy_torso.primitives">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="poppy_torso.html"
+                        title="previous chapter">poppy_torso package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="poppy_torso.utils.html"
+                        title="next chapter">poppy_torso.utils package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/poppy-torso/doc/poppy_torso.primitives.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="poppy-torso-primitives-package">
+<h1>poppy_torso.primitives package<a class="headerlink" href="#poppy-torso-primitives-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-poppy_torso.primitives.dance">
+<span id="poppy-torso-primitives-dance-module"></span><h2>poppy_torso.primitives.dance module<a class="headerlink" href="#module-poppy_torso.primitives.dance" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="poppy_torso.primitives.dance.sinus">
+<code class="descclassname">poppy_torso.primitives.dance.</code><code class="descname">sinus</code><span class="sig-paren">(</span><em>ampl</em>, <em>t</em>, <em>freq=0.5</em>, <em>phase=0</em>, <em>offset=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/dance.html#sinus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.dance.sinus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="poppy_torso.primitives.dance.SimpleBodyBeatMotion">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.dance.</code><code class="descname">SimpleBodyBeatMotion</code><span class="sig-paren">(</span><em>robot</em>, <em>bpm</em>, <em>motion_amplitude=10</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/dance.html#SimpleBodyBeatMotion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.dance.SimpleBodyBeatMotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.LoopPrimitive</span></code></a></p>
+<p>Simple primitive to make Poppy shake its booty following a given beat rate in bpm.</p>
+<dl class="method">
+<dt id="poppy_torso.primitives.dance.SimpleBodyBeatMotion.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/dance.html#SimpleBodyBeatMotion.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.dance.SimpleBodyBeatMotion.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.dance.SimpleBodyBeatMotion.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/dance.html#SimpleBodyBeatMotion.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.dance.SimpleBodyBeatMotion.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.dance.SimpleBodyBeatMotion.teardown">
+<code class="descname">teardown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/dance.html#SimpleBodyBeatMotion.teardown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.dance.SimpleBodyBeatMotion.teardown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poppy_torso.primitives.dance.SimpleBodyBeatMotion.bpm">
+<code class="descname">bpm</code><a class="headerlink" href="#poppy_torso.primitives.dance.SimpleBodyBeatMotion.bpm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poppy_torso.primitives.dance.SimpleBodyBeatMotion.amplitude">
+<code class="descname">amplitude</code><a class="headerlink" href="#poppy_torso.primitives.dance.SimpleBodyBeatMotion.amplitude" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poppy_torso.primitives.idle">
+<span id="poppy-torso-primitives-idle-module"></span><h2>poppy_torso.primitives.idle module<a class="headerlink" href="#module-poppy_torso.primitives.idle" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poppy_torso.primitives.idle.UpperBodyIdleMotion">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.idle.</code><code class="descname">UpperBodyIdleMotion</code><span class="sig-paren">(</span><em>robot</em>, <em>freq</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#UpperBodyIdleMotion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.UpperBodyIdleMotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.LoopPrimitive</span></code></a></p>
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.UpperBodyIdleMotion.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#UpperBodyIdleMotion.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.UpperBodyIdleMotion.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.UpperBodyIdleMotion.teardown">
+<code class="descname">teardown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#UpperBodyIdleMotion.teardown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.UpperBodyIdleMotion.teardown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.UpperBodyIdleMotion.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#UpperBodyIdleMotion.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.UpperBodyIdleMotion.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="poppy_torso.primitives.idle.HeadIdleMotion">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.idle.</code><code class="descname">HeadIdleMotion</code><span class="sig-paren">(</span><em>robot</em>, <em>freq</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#HeadIdleMotion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.HeadIdleMotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.LoopPrimitive</span></code></a></p>
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.HeadIdleMotion.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#HeadIdleMotion.start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.HeadIdleMotion.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.HeadIdleMotion.pause">
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#HeadIdleMotion.pause"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.HeadIdleMotion.pause" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.HeadIdleMotion.resume">
+<code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#HeadIdleMotion.resume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.HeadIdleMotion.resume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.HeadIdleMotion.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#HeadIdleMotion.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.HeadIdleMotion.stop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.idle.HeadIdleMotion.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/idle.html#HeadIdleMotion.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.idle.HeadIdleMotion.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poppy_torso.primitives.interaction">
+<span id="poppy-torso-primitives-interaction-module"></span><h2>poppy_torso.primitives.interaction module<a class="headerlink" href="#module-poppy_torso.primitives.interaction" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poppy_torso.primitives.interaction.ArmsTurnCompliant">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.interaction.</code><code class="descname">ArmsTurnCompliant</code><span class="sig-paren">(</span><em>robot</em>, <em>freq</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/interaction.html#ArmsTurnCompliant"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.interaction.ArmsTurnCompliant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.LoopPrimitive</span></code></a></p>
+<p>Automatically turns the arms compliant when a force is applied.</p>
+<dl class="method">
+<dt id="poppy_torso.primitives.interaction.ArmsTurnCompliant.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/interaction.html#ArmsTurnCompliant.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.interaction.ArmsTurnCompliant.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.interaction.ArmsTurnCompliant.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/interaction.html#ArmsTurnCompliant.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.interaction.ArmsTurnCompliant.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="poppy_torso.primitives.interaction.PuppetMaster">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.interaction.</code><code class="descname">PuppetMaster</code><span class="sig-paren">(</span><em>robot</em>, <em>freq</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/interaction.html#PuppetMaster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.interaction.PuppetMaster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.LoopPrimitive</span></code></a></p>
+<p>Apply the motion made on the left arm to the right arm.</p>
+<dl class="method">
+<dt id="poppy_torso.primitives.interaction.PuppetMaster.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/interaction.html#PuppetMaster.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.interaction.PuppetMaster.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.interaction.PuppetMaster.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/interaction.html#PuppetMaster.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.interaction.PuppetMaster.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.interaction.PuppetMaster.teardown">
+<code class="descname">teardown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/interaction.html#PuppetMaster.teardown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.interaction.PuppetMaster.teardown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poppy_torso.primitives.posture">
+<span id="poppy-torso-primitives-posture-module"></span><h2>poppy_torso.primitives.posture module<a class="headerlink" href="#module-poppy_torso.primitives.posture" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poppy_torso.primitives.posture.InitRobot">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.posture.</code><code class="descname">InitRobot</code><span class="sig-paren">(</span><em>robot</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/posture.html#InitRobot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.posture.InitRobot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.Primitive" title="pypot.primitive.primitive.Primitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.Primitive</span></code></a></p>
+<p>At instanciation, it automatically transforms the <a class="reference internal" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> into a <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.MockupRobot" title="pypot.primitive.primitive.MockupRobot"><code class="xref py py-class docutils literal"><span class="pre">MockupRobot</span></code></a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You should not directly pass motors as argument to the primitive. If you need to, use the method <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.Primitive.get_mockup_motor" title="pypot.primitive.primitive.Primitive.get_mockup_motor"><code class="xref py py-meth docutils literal"><span class="pre">get_mockup_motor()</span></code></a> to transform them into &#8220;fake&#8221; motors. See the <a class="reference internal" href="../../pypot/doc/primitive.html#write-own-prim"><span>Writing your own primitive</span></a> section for details.</p>
+</div>
+<dl class="method">
+<dt id="poppy_torso.primitives.posture.InitRobot.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/posture.html#InitRobot.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.posture.InitRobot.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.posture.InitRobot.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/posture.html#InitRobot.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.posture.InitRobot.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poppy_torso.primitives.safe">
+<span id="poppy-torso-primitives-safe-module"></span><h2>poppy_torso.primitives.safe module<a class="headerlink" href="#module-poppy_torso.primitives.safe" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="poppy_torso.primitives.safe.LimitTorque">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.safe.</code><code class="descname">LimitTorque</code><span class="sig-paren">(</span><em>robot</em>, <em>freq=20</em>, <em>max_error=10.0</em>, <em>torque_min=20.0</em>, <em>torque_max=95.0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#LimitTorque"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.LoopPrimitive</span></code></a></p>
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.LimitTorque.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#LimitTorque.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.LimitTorque.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#LimitTorque.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.LimitTorque.adjust_torque">
+<code class="descname">adjust_torque</code><span class="sig-paren">(</span><em>motor</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#LimitTorque.adjust_torque"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.adjust_torque" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.LimitTorque.teardown">
+<code class="descname">teardown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#LimitTorque.teardown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.teardown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poppy_torso.primitives.safe.LimitTorque.change_watched_motors">
+<code class="descname">change_watched_motors</code><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.change_watched_motors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poppy_torso.primitives.safe.LimitTorque.max_error">
+<code class="descname">max_error</code><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.max_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poppy_torso.primitives.safe.LimitTorque.add_watched_motors">
+<code class="descname">add_watched_motors</code><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.add_watched_motors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="poppy_torso.primitives.safe.LimitTorque.remove_watched_motors">
+<code class="descname">remove_watched_motors</code><a class="headerlink" href="#poppy_torso.primitives.safe.LimitTorque.remove_watched_motors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="poppy_torso.primitives.safe.TemperatureMonitor">
+<em class="property">class </em><code class="descclassname">poppy_torso.primitives.safe.</code><code class="descname">TemperatureMonitor</code><span class="sig-paren">(</span><em>robot</em>, <em>freq=0.5</em>, <em>temp_limit=55</em>, <em>player='aplay'</em>, <em>sound=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#TemperatureMonitor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.TemperatureMonitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../pypot/doc/pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">pypot.primitive.primitive.LoopPrimitive</span></code></a></p>
+<p>This primitive raises an alert by playing a sound when the temperature
+of one motor reaches the &#8220;temp_limit&#8221;.
+On MacOS &#8220;Darwin&#8221; you can use &#8220;afplay&#8221; for player
+On windows vista+, you can maybe use &#8220;start wmplayer&#8221;</p>
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.TemperatureMonitor.setup">
+<code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#TemperatureMonitor.setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.TemperatureMonitor.setup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.TemperatureMonitor.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#TemperatureMonitor.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.TemperatureMonitor.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.TemperatureMonitor.teardown">
+<code class="descname">teardown</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#TemperatureMonitor.teardown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.TemperatureMonitor.teardown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.TemperatureMonitor.check_temperature">
+<code class="descname">check_temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#TemperatureMonitor.check_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.TemperatureMonitor.check_temperature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="poppy_torso.primitives.safe.TemperatureMonitor.raise_problem">
+<code class="descname">raise_problem</code><span class="sig-paren">(</span><em>motor_list</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/poppy_torso/primitives/safe.html#TemperatureMonitor.raise_problem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#poppy_torso.primitives.safe.TemperatureMonitor.raise_problem" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-poppy_torso.primitives">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-poppy_torso.primitives" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="poppy_torso.html" title="poppy_torso package" >previous</a></li>
+        <li><a href="poppy_torso.utils.html" title="poppy_torso.utils package" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="poppy_torso.html" >poppy_torso package</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

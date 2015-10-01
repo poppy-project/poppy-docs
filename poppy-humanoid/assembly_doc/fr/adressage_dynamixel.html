@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Adresser les servomoteurs Dynamixel &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Adresser les servomoteurs Dynamixel</a><ul>
+<li><a class="reference internal" href="#installation-du-driver-pour-l-usb2ax">Installation du driver pour l&#8217;USB2AX</a></li>
+<li><a class="reference internal" href="#installer-le-logiciel-de-scan">Installer le logiciel de scan</a></li>
+<li><a class="reference internal" href="#conventions-de-nommage">Conventions de nommage</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../../_sources/poppy-humanoid/assembly_doc/fr/adressage_dynamixel.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Adresser les servomoteurs Dynamixel</a><ul>
+<li><a class="reference internal" href="#installation-du-driver-pour-l-usb2ax">Installation du driver pour l&#8217;USB2AX</a></li>
+<li><a class="reference internal" href="#installer-le-logiciel-de-scan">Installer le logiciel de scan</a></li>
+<li><a class="reference internal" href="#conventions-de-nommage">Conventions de nommage</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/poppy-humanoid/assembly_doc/fr/adressage_dynamixel.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="adresser-les-servomoteurs-dynamixel">
+<span id="adresser-les-servomoteurs-dynamixel"></span><h1>Adresser les servomoteurs Dynamixel<a class="headerlink" href="#adresser-les-servomoteurs-dynamixel" title="Permalink to this headline">¶</a></h1>
+<p>Par défaut, tous les servomoteurs Dynamixel ont un ID égal à 1. Pour pouvoir utiliser plusieurs servomoteurs en série, chacun d&#8217;entre eux doit avoir un ID unique.</p>
+<div class="section" id="installation-du-driver-pour-l-usb2ax">
+<span id="installation-du-driver-pour-l-usb2ax"></span><h2>Installation du driver pour l&#8217;USB2AX<a class="headerlink" href="#installation-du-driver-pour-l-usb2ax" title="Permalink to this headline">¶</a></h2>
+<p>USB2AX est le composant qui va connecter la tête de poppy Humanoid aux servomoteurs Dynamixel. Il peut également être utilisé pour contrôler les servomoteurs directement depuis votre ordinateur et c&#8217;est ce que nous allons faire pour adresser les moteur (leur assigner un ID).</p>
+<p>Sous Linux, aucune installation n&#8217;est requise, mais vous devez ajouter votre utilisateur dans le groupe qui possède le port série. Selon la distribution c&#8217;est <em>dialout</em> ou <em>uucp</em>:</p>
+<p>sudo addgroup $USER dialout
+sudo addgroup $USER uucp</p>
+<p>Autrement, le driver est accessible <a class="reference external" href="http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart">ici</a>.</p>
+<p>N&#8217;oubliez pas d&#8217;alimenter vos moteurs (avec un SMPS2Dynamixel), sinon ils ne seront pas detectés !</p>
+</div>
+<div class="section" id="installer-le-logiciel-de-scan">
+<span id="installer-le-logiciel-de-scan"></span><h2>Installer le logiciel de scan<a class="headerlink" href="#installer-le-logiciel-de-scan" title="Permalink to this headline">¶</a></h2>
+<p>Vous pouvez utiliser l&#8217;un des deux logiciels suivants pour accéder aux registres des servomoteurs Dynamixel:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://poppy-project.github.io/pypot/herborist.html">Herborist</a>: Outil créé par l&#8217;équipe du projet Poppy.</li>
+<li><a class="reference external" href="http://support.robotis.com/en/software/roboplus/dynamixel_monitor/quickstart/dynamixel_monitor_connection.htm">Dynamixel
+Wizard</a>: Outil fourni par Robotis, fabriquant des Dynamixel (seulement pour Windows).</li>
+</ul>
+<p>Herborist est intégré dans Pypot mais nécessite une librairie supplémentaire, PyQT4, pour l&#8217;interface graphique.</p>
+<pre class="literal-block">
+sudo apt-get install python-qt4 python-numpy python-scipy python-pip
+sudo pip install pypot
+</pre>
+<p>Le logiciel est ensuite accessible directement depuis un terminal:</p>
+<pre class="literal-block">
+herborist
+</pre>
+<p><img alt="image" src="../../../_images/herborist1.png" /></p>
+<p>Connectez chaque moteur <strong>un par un</strong> à l&#8217;USB2AX et utilisez le bouton &#8216;scan&#8217; dans Herborist ou Dynamixel Wizard pour le détecter. Si c&#8217;est un moteur neuf, il devrais avoir l&#8217;ID 1 et un baudrate à 57600bps, sauf les AX-12A qui ont déjà leur baudrate à 1000000.</p>
+<p>Mettez les paramètres suivants:</p>
+<ul class="simple">
+<li>ID correspondant à la convention de nommage</li>
+<li>Baudrate à 1 000 000 bps</li>
+<li>Temps de réponse (Return delay time) à 0 ms à la place 0.5 ms</li>
+</ul>
+<p>Dans Herborist, n&#8217;oubliez pas de cliquer sur le bouton &#8216;Update EEPROM&#8217; pour que les changements soient pris en compte.</p>
+</div>
+<div class="section" id="conventions-de-nommage">
+<span id="conventions-de-nommage"></span><h2>Conventions de nommage<a class="headerlink" href="#conventions-de-nommage" title="Permalink to this headline">¶</a></h2>
+<p>Si vous voulez que votre objet PoppyHumanoid corresponde à votre robot sans avoir à modifier le fichier de configuration, il faut vous conformer à la convention de nommage et d&#8217;adressage de Poppy Humanoid. Ainsi, dans vos programmes, quand vous utiliserez le nom d&#8217;un moteur, vous enverrez bien les ordres au moteur physique correspondant.</p>
+<p><img alt="image" src="../../../_images/motor_naming_convention1.jpg" /></p>
+<p><a class="reference external" href="guideAssemblage.md"><strong>&lt;&lt; Retour au menu</strong></a>
+<a class="reference external" href="materiel_dynamixel.md"><strong>&lt;&lt; Matériel Dynamixel</strong></a></p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

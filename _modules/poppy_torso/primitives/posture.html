@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>poppy_torso.primitives.posture &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../index.html" accesskey="U">Module code</a></li>
+            
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <h1>Source code for poppy_torso.primitives.posture</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="kn">import</span> <span class="nn">pypot.primitive</span>
+
+
+<div class="viewcode-block" id="InitRobot"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.posture.InitRobot">[docs]</a><span class="k">class</span> <span class="nc">InitRobot</span><span class="p">(</span><span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">Primitive</span><span class="p">):</span>
+
+<div class="viewcode-block" id="InitRobot.setup"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.posture.InitRobot.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">power_up</span><span class="p">()</span>
+
+        <span class="c"># Change PID of Dynamixel MX motors</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">&#39;pid&#39;</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">):</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">pid</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">torso</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">pid</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c"># Reduce max torque to keep motor temperature low</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">torque_limit</span> <span class="o">=</span> <span class="mi">70</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="InitRobot.run"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.primitives.html#poppy_torso.primitives.posture.InitRobot.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+
+<span class="c">#class StandPosition(InitRobot):</span>
+    <span class="c">#def run(self):</span>
+        <span class="c">## Goto to position 0 on all motors</span>
+        <span class="c">#self.robot.goto_position(dict(zip((m.name for m in self.robot.motors), itertools.repeat(0))), 2, wait=True)</span>
+
+        <span class="c">## Specified some motor positions to keep the robot balanced</span>
+        <span class="c">#self.robot.goto_position({&#39;r_hip_z&#39;: -2,</span>
+                                  <span class="c">#&#39;l_hip_z&#39;: 2,</span>
+                                  <span class="c">#&#39;r_hip_x&#39;: -2,</span>
+                                  <span class="c">#&#39;l_hip_x&#39;: 2,</span>
+                                  <span class="c">#&#39;l_shoulder_x&#39;: 20,</span>
+                                  <span class="c">#&#39;r_shoulder_x&#39;: -20,</span>
+                                  <span class="c">#&#39;l_shoulder_y&#39;: 10,</span>
+                                  <span class="c">#&#39;r_shoulder_y&#39;: 10,</span>
+                                  <span class="c">#&#39;l_elbow_y&#39;: -20,</span>
+                                  <span class="c">#&#39;r_elbow_y&#39;: -20,</span>
+                                  <span class="c">#&#39;l_ankle_y&#39;: -7,</span>
+                                  <span class="c">#&#39;r_ankle_y&#39;: -6,</span>
+                                  <span class="c">#&#39;abs_y&#39;: -2,</span>
+                                  <span class="c">#&#39;head_y&#39;: 1,</span>
+                                  <span class="c">#&#39;head_z&#39;: 0},</span>
+                                 <span class="c">#3,</span>
+                                 <span class="c">#wait=True)</span>
+
+        <span class="c">## Restore the motor speed</span>
+        <span class="c">#self.robot.power_up()</span>
+
+        <span class="c">## Reduce max torque to keep motor temperature low</span>
+        <span class="c">#for m in self.robot.motors:</span>
+            <span class="c">#m.torque_limit = 70</span>
+
+        <span class="c">#time.sleep(1)</span>
+
+
+<span class="c">#class SitPosition(pypot.primitive.Primitive):</span>
+    <span class="c">#def run(self):</span>
+        <span class="c">#self.robot.goto_position({&#39;l_hip_y&#39;: -25,</span>
+                                  <span class="c">#&#39;r_hip_y&#39;: -25,</span>
+                                  <span class="c">#&#39;l_knee_y&#39;: 125,</span>
+                                  <span class="c">#&#39;r_knee_y&#39;: 125,</span>
+                                  <span class="c">#&#39;abs_x&#39;: 0,</span>
+                                  <span class="c">#&#39;abs_y&#39;: 3,</span>
+                                  <span class="c">#&#39;abs_z&#39;: 0,</span>
+                                  <span class="c">#&#39;bust_x&#39;: 0,</span>
+                                  <span class="c">#&#39;bust_y&#39;: 0,</span>
+                                  <span class="c">#},</span>
+                                 <span class="c">#2,</span>
+                                 <span class="c">#wait=True)</span>
+
+        <span class="c">#motor_list = [self.robot.l_knee_y, self.robot.l_ankle_y, self.robot.r_knee_y, self.robot.r_ankle_y]</span>
+
+        <span class="c">#for m in motor_list:</span>
+            <span class="c">#m.compliant = True</span>
+
+        <span class="c">#for m in self.robot.legs:</span>
+            <span class="c">#m.torque_limit = 20</span>
+
+        <span class="c">#time.sleep(2)</span></div></div>
+</pre></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="../../index.html" >Module code</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

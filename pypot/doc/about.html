@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>What is pypot? &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Introduction" href="index.html" />
+    <link rel="next" title="Installation and updating" href="installation.html" />
+    <link rel="prev" title="Introduction" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">What is pypot?</a></li>
+<li><a class="reference internal" href="#pypot-s-architecture">Pypot&#8217;s architecture</a></li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="index.html" title="Introduction" accesskey="P">previous </a></li>
+              <li><a href="installation.html" title="Installation and updating" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Introduction</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/pypot/doc/about.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">What is pypot?</a></li>
+<li><a class="reference internal" href="#pypot-s-architecture">Pypot&#8217;s architecture</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="installation.html"
+                        title="next chapter">Installation and updating</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pypot/doc/about.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="what-is-pypot">
+<span id="pypot-about"></span><h1>What is pypot?<a class="headerlink" href="#what-is-pypot" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="../../_images/banderole-pypot.jpg"><img alt="../../_images/banderole-pypot.jpg" class="align-center" src="../../_images/banderole-pypot.jpg" style="width: 100%;" /></a>
+<p>Pypot is a framework developed in the <a class="reference external" href="https://flowers.inria.fr/">Inria FLOWERS</a> team to make it easy and fast to control custom robots based on dynamixel motors.
+This framework provides different level of abstraction corresponding to different types of use. More precisely, you can use pypot to:</p>
+<ul class="simple">
+<li>directly control robotis motors through a USB2serial device (both protocols v1 and v2 are supported: you can use it with AX, RX, MX and XL320 motors),</li>
+<li>define the structure of your particular robot and control it through high-level commands.</li>
+<li>define primitives and easily combine them to create complex behavior.</li>
+<li>[work in progress] define sensors and integrate them to the creature&#8217;s control.</li>
+</ul>
+<p>Pypot has been entirely written in Python to allow for fast development, easy deployment and quick scripting by non-necessary expert developers.
+The serial communication is handled through the standard library and thus allows for rather high performance (10ms sensorimotor loop).</p>
+<p>It is crossed-platform and has been tested on Linux, Windows and Mac OS. It is distributed under the <a class="reference external" href="http://www.gnu.org/copyleft/gpl.html">GPL V3 open source license</a>.</p>
+<p>Pypot is also compatible with the <a class="reference external" href="http://www.coppeliarobotics.com">V-REP simulator</a> and allows you to seamlessly switch from a real robot to its simulated equivalent without having to modify your code.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The other libraries from the <a class="reference external" href="http://www.poppy-project.org">Poppy project</a> (<a class="reference external" href="https://github.com/poppy-project/poppy-humanoid">Poppy Humanoid</a>
+or <a class="reference external" href="https://github.com/poppy-project/poppy-ergo-jr">Poppy Ergo Jr</a>...) are built on top of pypot and abstract most of its operating and already come with convenient method for creating and starting your robot.
+So, when starting with a Poppy creature, we advise you to first discover the specific library and dive into Pypot only when you are ready to build advanced programs.
+Pypot is also a good starting point if you want to define your own Poppy Creatures.</p>
+</div>
+<p>The sources are available on <a class="reference external" href="https://github.com/poppy-project/pypot">Github</a>.</p>
+</div>
+<div class="section" id="pypot-s-architecture">
+<span id="architecture"></span><h1>Pypot&#8217;s architecture<a class="headerlink" href="#pypot-s-architecture" title="Permalink to this headline">¶</a></h1>
+<p>Pypot&#8217;s architecture is built upon the following basic concepts:</p>
+<ul>
+<li><p class="first"><strong>I/O</strong>: <a class="reference internal" href="quickstart-lowlevel.html#quickstart-lowlevel"><span>low-level layer</span></a> handling the communication with motors or sensors. This abstract layer has been designed to be as generic as possible. The idea is to keep each specific communication protocol separated from the rest of the architecture and allow for an easy replacement of an IO by another one - such an example is detailed in the next section when <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.dynamixel.html#module-pypot.dynamixel.io">dynamixel IO</a> is replaced by the <a class="reference external" href="http://poppy-project.github.io/pypot/pypot.vrep.html#module-pypot.vrep.io">communication layout with the VREP</a> simulator.</p>
+</li>
+<li><p class="first"><strong>Motor</strong> or <strong>Sensor</strong> : abstraction layer allowing to command the same type of devices in the same way. Each <a class="reference internal" href="motor.html#motor"><span>software motor</span></a> or sensor is linked with its hardware equivalent.</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Controller</strong>:</dt>
+<dd><p class="first last">set of update loops to keep an (or multiple) &#8220;hardware&#8221; device(s) up to date with their &#8220;software&#8221; equivalent, moreover when several devices (e.g. Dynamixel motors) share the same communication bus.
+This synchronization can goes only from the hard to the soft (e.g. in the case of a sensor) or both ways (e.g. for reading motor values and sending motor commands).
+The calls can be asynchronous or synchronous, each controller can have its own refresh frequency.
+An example of <code class="xref py py-class docutils literal"><span class="pre">Controller</span></code> is the <a class="reference internal" href="pypot.dynamixel.html#pypot.dynamixel.controller.DxlController" title="pypot.dynamixel.controller.DxlController"><code class="xref py py-class docutils literal"><span class="pre">DxlController</span></code></a> which synchronizes position/speed/load of all motors on a dynamixel bus in both directions. On the same bus, you can have several controllers of different frequencies.</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><strong>Robot</strong>: The <a class="reference internal" href="robot.html#robot"><span>robot layer</span></a> is a pure abstraction which aims at bringing together different types of motors and sensors. This high-level is most likely to be the one accessed by the end-user which wants to directly control the motors of its robot no matter what is the IO used underneath. The robot can be directly created using a <a class="reference external" href="http://poppy-project.github.io/pypot/controller.html#writing-the-configuration">configuration file</a> describing all IO and Controllers used.</p>
+</li>
+<li><p class="first"><strong>Primitives</strong>: independent behaviors applied to a robot. They are not directly accessing the robot registers but are first combined through a Primitive Manager which sends the results of this combination to the robot. This abstraction is used to designed behavioral-unit that can be combined into more complex behaviors (e.g. a walking primitive and and balance primitive combined to obtain a balanced-walking). <a class="reference internal" href="primitive.html#primitives"><span>Primitives</span></a> are also a convenient way to monitor or remotely access a robot - ensuring some sort of sandboxing.</p>
+</li>
+</ul>
+<p>Those main aspects of pypot&#8217;s architecture are summarized in the figure below.</p>
+<a class="reference internal image-reference" href="../../_images/pypot-archi.jpg"><img alt="../../_images/pypot-archi.jpg" class="align-center" src="../../_images/pypot-archi.jpg" style="width: 60%;" /></a>
+<p>Refer to <a class="reference internal" href="installation.html#pypot-install"><span>this</span></a> section to learn how to install pypot on your system.</p>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="index.html" title="Introduction" >previous</a></li>
+        <li><a href="installation.html" title="Installation and updating" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Introduction</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

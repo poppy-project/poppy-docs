@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>poppy_torso.utils.min_jerk &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Module code" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../../index.html" accesskey="U">Module code</a></li>
+            
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <h1>Source code for poppy_torso.utils.min_jerk</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">collections</span>
+
+<span class="kn">import</span> <span class="nn">pypot.primitive</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="c"># import kinematics</span>
+<span class="c"># import time</span>
+<span class="c"># import pypot.utils.pypot_time as time</span>
+
+
+<span class="k">class</span> <span class="nc">MJTraj</span><span class="p">():</span>
+<div class="viewcode-block" id="MJTraj"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.MJTraj">[docs]</a>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">initial</span><span class="p">,</span> <span class="n">final</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">init_vel</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">init_acc</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">final_vel</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">final_acc</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a0</span> <span class="o">=</span> <span class="n">initial</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a1</span> <span class="o">=</span> <span class="n">init_vel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a2</span> <span class="o">=</span> <span class="n">init_acc</span> <span class="o">/</span> <span class="mf">2.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d5</span> <span class="o">=</span> <span class="n">duration</span> <span class="o">**</span> <span class="mi">5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d4</span> <span class="o">=</span> <span class="n">duration</span> <span class="o">**</span> <span class="mi">4</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d3</span> <span class="o">=</span> <span class="n">duration</span> <span class="o">**</span> <span class="mi">3</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d2</span> <span class="o">=</span> <span class="n">duration</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="n">duration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">durations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">duration</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initial</span> <span class="o">=</span> <span class="n">initial</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final</span> <span class="o">=</span> <span class="n">final</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_vel</span> <span class="o">=</span> <span class="n">init_vel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final_vel</span> <span class="o">=</span> <span class="n">final_vel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_acc</span> <span class="o">=</span> <span class="n">init_acc</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final_acc</span> <span class="o">=</span> <span class="n">final_acc</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">finals</span> <span class="o">=</span> <span class="p">[</span><span class="n">final</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="bp">self</span><span class="o">.</span><span class="n">d3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">d5</span><span class="p">],</span> <span class="p">[</span>
+                          <span class="mi">3</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">d2</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">d3</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">d4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span> <span class="o">*</span> <span class="n">duration</span><span class="p">,</span> <span class="mi">12</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">d2</span><span class="p">,</span> <span class="mi">20</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">d3</span><span class="p">]])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">final</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">a0</span> <span class="o">-</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a1</span> <span class="o">*</span> <span class="n">duration</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">a2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">d2</span><span class="p">),</span>
+                           <span class="n">final_vel</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">a1</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">a2</span> <span class="o">*</span> <span class="n">duration</span><span class="p">),</span> <span class="n">final_acc</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">a2</span><span class="p">)])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compute</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">other_gen</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_mylambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">a0</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">a1</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">a2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">4</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">5</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_generators</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_mylambda</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MJTraj.compute"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.MJTraj.compute">[docs]</a>        <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">A</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">B</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">getValue</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span></div>
+<div class="viewcode-block" id="MJTraj.getValue"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.MJTraj.getValue">[docs]</a>        <span class="c"># FIXME: check time range</span>
+        <span class="c"># self.a0 + self.a1 * t + self.a2 * t ** 2 + self.X[0] * t ** 3 + self.X[1] * t ** 4 + self.X[2] * t ** 5</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mygenerator</span><span class="p">[</span><span class="o">-</span> <span class="mi">1</span><span class="p">](</span><span class="n">t</span><span class="p">)</span>
+        <span class="c"># return self._generator[ - 1](t)</span>
+
+    <span class="k">def</span> <span class="nf">domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span></div>
+<div class="viewcode-block" id="MJTraj.domain"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.MJTraj.domain">[docs]</a>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">Iterable</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">])</span>
+
+        <span class="n">domain</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">d1</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+
+                <span class="n">d1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">xi</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">[</span><span class="n">d</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">xi</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">[</span><span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span>
+
+            <span class="n">domain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">d1</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_domain</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span></div>
+<div class="viewcode-block" id="MJTraj.test_domain"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.MJTraj.test_domain">[docs]</a>        <span class="k">return</span> <span class="p">[((</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">fix_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span></div>
+<div class="viewcode-block" id="MJTraj.fix_input"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.MJTraj.fix_input">[docs]</a>        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">Iterable</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">x</span>
+
+    <span class="k">def</span> <span class="nf">getGen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="MJTraj.getGen"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.MJTraj.getGen">[docs]</a>
+        <span class="k">return</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">piecewise</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">domain</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_generators</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_generators</span><span class="p">))]</span> <span class="o">+</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">finals</span><span class="p">[</span><span class="o">-</span> <span class="mi">1</span><span class="p">]])</span>
+
+    <span class="k">def</span> <span class="nf">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">othertraj</span><span class="p">):</span></div>
+        <span class="c"># print &quot;ADD &quot;, self.initial, self.final, othertraj.initial,</span>
+        <span class="c"># othertraj.final</span>
+        <span class="k">if</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">initial</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">final</span> <span class="ow">and</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">init_vel</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">init_vel</span> <span class="ow">and</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">init_acc</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">final_acc</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">final</span> <span class="o">=</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">final</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">final_vel</span> <span class="o">=</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">final_vel</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">final_acc</span> <span class="o">=</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">final_acc</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">other_gen</span> <span class="o">=</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span>
+
+            <span class="n">tmpduration</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration</span>
+            <span class="c"># self.duration = self.duration + othertraj.duration</span>
+
+            <span class="c"># self._mygenerator(x) if filter(lambda y: y &lt; self.duration, x) else self.other_gen(x)</span>
+            <span class="c"># self._mygenerator = lambda x: np.piecewise(np.array(x), [np.array(x) &lt; self.duration, np.array(x) &gt;= self.duration ], [self._mygenerator(x), self.other_gen(x)])</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_generators</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">l1</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">l2</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">othertraj</span><span class="o">.</span><span class="n">durations</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="c"># self.durations.append(self.durations[l1] + othertraj.durations[l2])</span>
+            <span class="c"># self.durations.append(othertraj.durations[l2])</span>
+            <span class="c"># print &quot;DEBUG &quot;, len(self.durations), self.durations[l]</span>
+
+            <span class="c"># tmpgen = lambda x: self.other_gen(x - self.durations[l])</span>
+            <span class="c"># self._mygenerator.append(lambda x: np.piecewise(np.array(x), [np.array(x) &lt; self.durations[l], np.array(x) &gt;= self.durations[l]], [self._mygenerator[l], tmpgen]))</span>
+
+            <span class="n">tmpA</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="n">tmpA</span><span class="o">.</span><span class="n">durations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">[</span><span class="n">l1</span><span class="p">]</span> <span class="o">+</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">durations</span><span class="p">[</span><span class="n">l2</span><span class="p">])</span>
+            <span class="n">tmpA</span><span class="o">.</span><span class="n">finals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">othertraj</span><span class="o">.</span><span class="n">finals</span><span class="p">[</span><span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+
+            <span class="n">tmpA</span><span class="o">.</span><span class="n">_generators</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">othertraj</span><span class="o">.</span><span class="n">_mylambda</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">[</span><span class="o">-</span> <span class="mi">1</span><span class="p">]))</span>
+
+            <span class="k">return</span> <span class="n">tmpA</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">&quot;Trajectories are not matching&quot;</span>
+            <span class="k">return</span> <span class="o">-</span> <span class="mi">1</span>
+
+
+<span class="k">class</span> <span class="nc">GotoMJ</span><span class="p">(</span><span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="p">):</span></div>
+<div class="viewcode-block" id="GotoMJ"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.GotoMJ">[docs]</a>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">motors</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">refresh_freq</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+        <span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">refresh_freq</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">motors</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="GotoMJ.setup"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.GotoMJ.setup">[docs]</a>        <span class="bp">self</span><span class="o">.</span><span class="n">init_traj</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="GotoMJ.update"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.GotoMJ.update">[docs]</a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">motorname</span><span class="p">,</span> <span class="n">mj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">trajs</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+                <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="p">,</span> <span class="n">motorname</span><span class="p">)</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="n">mj</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">trajs</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motors</span><span class="p">,</span> <span class="n">duration</span><span class="p">):</span></div>
+<div class="viewcode-block" id="GotoMJ.add"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.GotoMJ.add">[docs]</a>        <span class="bp">self</span><span class="o">.</span><span class="n">motors</span> <span class="o">=</span> <span class="n">motors</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="n">duration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trajs</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c"># self.mjstarted = False</span>
+
+    <span class="k">def</span> <span class="nf">init_traj</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="GotoMJ.init_traj"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.GotoMJ.init_traj">[docs]</a>        <span class="bp">self</span><span class="o">.</span><span class="n">trajs</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">:</span> <span class="n">MJTraj</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span><span class="o">.</span><span class="n">present_position</span><span class="p">,</span>
+                      <span class="n">g</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="p">)</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span>
+                      <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">motors</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()}</span>
+        <span class="c"># self.mjstarted = True</span>
+
+
+<span class="k">class</span> <span class="nc">goto_mjtraj</span><span class="p">(</span><span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="p">):</span></div></div>
+<div class="viewcode-block" id="goto_mjtraj"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.goto_mjtraj">[docs]</a>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">motors_traj</span><span class="p">,</span> <span class="n">refresh_freq</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+        <span class="n">pypot</span><span class="o">.</span><span class="n">primitive</span><span class="o">.</span><span class="n">LoopPrimitive</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">refresh_freq</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">motors_traj</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="goto_mjtraj.update"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.goto_mjtraj.update">[docs]</a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">mjstarted</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">init_traj</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span> <span class="o">&lt;=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">durations</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+                <span class="c"># if abs(self.pos - self.mjtraj.final) &gt; 0.001:</span>
+                <span class="k">for</span> <span class="n">motorname</span><span class="p">,</span> <span class="n">mj</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">motors_traj</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+                    <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">robot</span><span class="p">,</span> <span class="n">motorname</span><span class="p">)</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="n">mj</span><span class="p">(</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">elapsed_time</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c"># FIXME</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">motors</span><span class="p">):</span></div>
+<div class="viewcode-block" id="goto_mjtraj.add"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.goto_mjtraj.add">[docs]</a>        <span class="bp">self</span><span class="o">.</span><span class="n">motors_traj</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">:</span> <span class="n">mj</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">mj</span> <span class="ow">in</span> <span class="n">motors</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">durations</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="o">.</span><span class="n">durations</span><span class="p">[</span><span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">motors</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mjstarted</span> <span class="o">=</span> <span class="bp">False</span>
+
+    <span class="k">def</span> <span class="nf">init_traj</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></div>
+<div class="viewcode-block" id="goto_mjtraj.init_traj"><a class="viewcode-back" href="../../../poppy-torso/doc/poppy_torso.utils.html#poppy_torso.utils.min_jerk.goto_mjtraj.init_traj">[docs]</a>        <span class="bp">self</span><span class="o">.</span><span class="n">mjstarted</span> <span class="o">=</span> <span class="bp">True</span>
+
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span></div></div>
+
+    <span class="n">ts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.01</span><span class="p">,</span> <span class="o">.</span><span class="mo">01</span><span class="p">)</span>
+
+    <span class="n">m1</span> <span class="o">=</span> <span class="n">MJTraj</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">m2</span> <span class="o">=</span> <span class="n">MJTraj</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">m3</span> <span class="o">=</span> <span class="n">MJTraj</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">m4</span> <span class="o">=</span> <span class="n">m1</span> <span class="o">+</span> <span class="n">m2</span> <span class="o">+</span> <span class="n">m3</span> <span class="o">+</span> <span class="n">MJTraj</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="c"># print m4.initial, m4.final, m4.duration,  m4.durations</span>
+
+    <span class="n">m1t</span> <span class="o">=</span> <span class="n">m1</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span>
+    <span class="n">m2t</span> <span class="o">=</span> <span class="n">m2</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span>
+    <span class="n">m3t</span> <span class="o">=</span> <span class="n">m3</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span>
+    <span class="n">m4t</span> <span class="o">=</span> <span class="n">m4</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span>
+
+    <span class="c"># print m1t(ts)</span>
+    <span class="c"># print m2t(ts)</span>
+    <span class="c"># print m3t(ts)</span>
+    <span class="c"># print len(m4._generators)</span>
+
+    <span class="n">m1</span> <span class="o">=</span> <span class="n">MJTraj</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">m2</span> <span class="o">=</span> <span class="n">MJTraj</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">m4</span> <span class="o">=</span> <span class="n">m1</span> <span class="o">+</span> <span class="n">m2</span> <span class="o">+</span> <span class="n">m3</span>
+    <span class="c"># m4 =  MJTraj(0, 10, 2.0)</span>
+    <span class="n">m4t</span> <span class="o">=</span> <span class="n">m4</span><span class="o">.</span><span class="n">getGen</span><span class="p">()</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">ta</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">print</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+        <span class="c"># print m4t(np.ones(10) * t)</span>
+        <span class="n">ta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">m4</span><span class="o">.</span><span class="n">domain</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="c"># print m4._generators</span>
+        <span class="c"># print m4.test_domain(t)</span>
+        <span class="k">print</span> <span class="n">t</span><span class="p">,</span> <span class="n">m4t</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="n">t</span> <span class="o">+=</span> <span class="mf">0.10</span>
+
+    <span class="n">ta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ta</span><span class="p">)</span>
+    <span class="c"># print m4.domain(1.9)</span>
+    <span class="k">print</span>
+
+    <span class="k">print</span> <span class="n">ta</span>
+    <span class="k">print</span> <span class="n">m4t</span><span class="p">(</span><span class="n">ta</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">m4</span><span class="o">.</span><span class="n">domain</span><span class="p">(</span><span class="n">ta</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">m4t</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">,</span> <span class="mf">2.4</span><span class="p">]))</span>
+
+    <span class="k">print</span> <span class="n">m4</span><span class="o">.</span><span class="n">duration</span>
+    <span class="c"># print m4.test_domain(ta)</span>
+    <span class="c"># print m4.domain(ta)</span>
+
+    <span class="c"># print m4t(ts)</span>
+
+    <span class="c"># stop</span>
+
+    <span class="c"># plt.plot(ts, m1t(ts))</span>
+    <span class="c"># plt.plot(ts, m2t(ts))</span>
+    <span class="c"># plt.plot(ts, m4t(ts))</span>
+
+    <span class="c"># plt.plot(ts, mmm(ts))</span>
+    <span class="c"># m = simpyMJ(0.0, 10.0, 0.5, final_vel = 5.0)</span>
+    <span class="c"># m = npMJ(0.0, 10.0, 0.5, final_vel = 5.0)</span>
+    <span class="c"># plt.plot(ts, m(ts))</span>
+    <span class="c"># plt.plot(kinematics.deriv(jerk))</span>
+    <span class="c"># plt.plot(jerk)</span>
+    <span class="c"># plt.plot(test)</span>
+    <span class="c"># plt.show()</span>
+</pre></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="../../index.html" >Module code</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

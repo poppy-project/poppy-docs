@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Introduction &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="&lt;no title&gt;" href="index.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../../poppy-torso/doc/index.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Introduction</a></li>
+<li><a class="reference internal" href="#poppy-humanoid-robot-overview">Poppy Humanoid robot overview</a></li>
+<li><a class="reference internal" href="#poppy-humanoid-specific-features">Poppy Humanoid specific features</a></li>
+<li><a class="reference internal" href="#installing">Installing</a></li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="index.html" title="&lt;no title&gt;" accesskey="P">previous </a></li>
+              <li><a href="../../poppy-torso/doc/index.html" title="&lt;no title&gt;" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">&lt;no title&gt;</a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/poppy-humanoid/doc/introduction.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction</a></li>
+<li><a class="reference internal" href="#poppy-humanoid-robot-overview">Poppy Humanoid robot overview</a></li>
+<li><a class="reference internal" href="#poppy-humanoid-specific-features">Poppy Humanoid specific features</a></li>
+<li><a class="reference internal" href="#installing">Installing</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">&lt;no title&gt;</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../poppy-torso/doc/index.html"
+                        title="next chapter">&lt;no title&gt;</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/poppy-humanoid/doc/introduction.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="introduction">
+<span id="poppy-humanoid-lib"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Poppy Humanoid is the library allowing you to create a <a class="reference internal" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> corresponding to a standard Poppy Humanoid robot.</p>
+<p>Using your Poppy Humanoid robot is as simple as:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
+
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span>
+</pre></div>
+</div>
+<p>If you didn&#8217;t change the default configuration file, this should connect to the 25 Dynamixel servomotors through two USB2AX.</p>
+<p>Once the PoppyHumanoid object is created, you can start <a class="reference internal" href="../../quickstarts/discover.html#quickstart-discover"><span>discovering it</span></a>, control it at a <a class="reference internal" href="../../pypot/doc/robot.html#robot"><span>basic level</span></a> or using <a class="reference internal" href="../../pypot/doc/primitive.html#primitives"><span>primitives</span></a>.</p>
+</div>
+<div class="section" id="poppy-humanoid-robot-overview">
+<span id="poppy-humanoid-robot"></span><h1>Poppy Humanoid robot overview<a class="headerlink" href="#poppy-humanoid-robot-overview" title="Permalink to this headline">¶</a></h1>
+<p>TODO</p>
+<p>Robot&#8217;s <a class="reference internal" href="motor_list.html#poppy-humanoid-motors-list"><span>motors list</span></a></p>
+<a class="reference internal image-reference" href="../../_images/motor_naming_convention2.jpg"><img alt="../../_images/motor_naming_convention2.jpg" class="align-center" src="../../_images/motor_naming_convention2.jpg" style="width: 30%;" /></a>
+</div>
+<div class="section" id="poppy-humanoid-specific-features">
+<h1>Poppy Humanoid specific features<a class="headerlink" href="#poppy-humanoid-specific-features" title="Permalink to this headline">¶</a></h1>
+<p><code class="xref py py-class docutils literal"><span class="pre">PoppyHumanoid</span></code> is not only a <a class="reference internal" href="../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature" title="poppy.creatures.abstractcreature.AbstractPoppyCreature"><code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code></a> (which contains a <a class="reference internal" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a>), it also have its own features and parameters.</p>
+<p>The default goto behavior for each motor is set to &#8216;minijerk&#8217; and each motor of the torso has the &#8216;safe&#8217; compliant behavior (see <a class="reference internal" href="../../pypot/doc/motor.html#motor"><span>the Pypot motor section</span></a>), to avoid self-collision.</p>
+<p>The following primitives are added to the robot (so you can directly use <code class="docutils literal"><span class="pre">poppy.sit_position.start()</span></code>):</p>
+<ul class="simple">
+<li>A <code class="xref py py-class docutils literal"><span class="pre">StandPosition</span></code> named <code class="docutils literal"><span class="pre">stand_position</span></code>: the robot moves to standing position (0 to all motors).</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">SitPosition</span></code> named <code class="docutils literal"><span class="pre">sit_position</span></code>: the robot moves to sitting position (legs bent with heels under the buttock)</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">LimitTorque</span></code> named <code class="docutils literal"><span class="pre">limit_torque</span></code>: Work In Progress. Each motor automatically sets the minimal torque needed to reach its goal position and therefore limit power consumption and motor heating. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">TemperatureMonitor</span></code> named <code class="docutils literal"><span class="pre">temperature_monitoring</span></code>: check the temperature of all motors and plays a sound if one is too hot. This primitive is looping and started by default.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">SimpleBodyBeatMotion</span></code> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Simple primitive to make Poppy shake its upper body following a given beat rate in bpm. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">UpperBodyIdleMotion</span></code> named <code class="docutils literal"><span class="pre">upper_body_idle_motion</span></code>: Slow and small movements of the upper body to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">HeadIdleMotion</span></code> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Slow and small movements of the head to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">ArmsTurnCompliant</span></code> named <code class="docutils literal"><span class="pre">arms_turn_compliant</span></code>: Automatically turns the arms compliant when a force is applied. This primitive is looping.</li>
+<li>A <code class="xref py py-class docutils literal"><span class="pre">PuppetMaster</span></code> named <code class="docutils literal"><span class="pre">arms_copy_motion</span></code>: Apply the motion made on the left arm to the right arm. This primitive is looping.</li>
+</ul>
+<p>Remember to remove compliance before starting the primitives!</p>
+</div>
+<div class="section" id="installing">
+<span id="poppy-humanoid-install"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
+<p>To install the Poppy Humanoid library, you can use pip:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install poppy-humanoid
+</pre></div>
+</div>
+<p>Then you can update it with:</p>
+<div class="highlight-python"><div class="highlight"><pre>pip install --upgrade poppy-humanoid
+</pre></div>
+</div>
+<p>If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from <a class="reference external" href="https://github.com/poppy-project/poppy-humanoid">Github</a> and install them with (in the software folder):</p>
+<div class="highlight-python"><div class="highlight"><pre>python setup.py install
+</pre></div>
+</div>
+<p>The requirements for Poppy Humanoid are <a class="reference internal" href="../../pypot/doc/installation.html#pypot-install"><span>Pypot</span></a> and <a class="reference internal" href="../../poppy-creature/doc/introduction.html#poppy-creature-install"><span>Poppy Creatures</span></a>.</p>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="index.html" title="&lt;no title&gt;" >previous</a></li>
+        <li><a href="../../poppy-torso/doc/index.html" title="&lt;no title&gt;" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >&lt;no title&gt;</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

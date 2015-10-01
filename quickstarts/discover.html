@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Discover your Poppy robot &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../index.html" />
+    <link rel="next" title="Control a Poppy robot using Snap!" href="snap.html" />
+    <link rel="prev" title="Assembly guide for a Poppy Ergo Jr robot" href="../poppy-ergo-jr/assembly_doc/index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Discover your Poppy robot</a><ul>
+<li><a class="reference internal" href="#where-do-i-put-my-code">Where do I put my code?</a></li>
+<li><a class="reference internal" href="#create-the-robot-object">Create the robot object</a></li>
+<li><a class="reference internal" href="#motors">Motors</a></li>
+<li><a class="reference internal" href="#sensors">Sensors</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../poppy-ergo-jr/assembly_doc/index.html" title="Assembly guide for a Poppy Ergo Jr robot" accesskey="P">previous </a></li>
+              <li><a href="snap.html" title="Control a Poppy robot using Snap!" accesskey="N">next </a></li>
+              <li><a href="../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../_sources/quickstarts/discover.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Discover your Poppy robot</a><ul>
+<li><a class="reference internal" href="#where-do-i-put-my-code">Where do I put my code?</a></li>
+<li><a class="reference internal" href="#create-the-robot-object">Create the robot object</a></li>
+<li><a class="reference internal" href="#motors">Motors</a></li>
+<li><a class="reference internal" href="#sensors">Sensors</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../poppy-ergo-jr/assembly_doc/index.html"
+                        title="previous chapter">Assembly guide for a Poppy Ergo Jr robot</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="snap.html"
+                        title="next chapter">Control a Poppy robot using Snap!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/quickstarts/discover.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="discover-your-poppy-robot">
+<span id="quickstart-discover"></span><h1>Discover your Poppy robot<a class="headerlink" href="#discover-your-poppy-robot" title="Permalink to this headline">¶</a></h1>
+<p>The Poppy robots and in particular the <a class="reference internal" href="../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot" title="pypot.robot.robot.Robot"><code class="xref py py-class docutils literal"><span class="pre">Robot</span></code></a> objects from Pypot make their best to allow you to easily discover and program you robot.</p>
+<div class="section" id="where-do-i-put-my-code">
+<h2>Where do I put my code?<a class="headerlink" href="#where-do-i-put-my-code" title="Permalink to this headline">¶</a></h2>
+<p>If you are using a simulator, program directly in your computer, in a Python console (enter <code class="docutils literal"><span class="pre">python</span></code> in your terminal) or in any editor you like (Python IDLE...). Then launch it with the run button or use the command line <code class="docutils literal"><span class="pre">python</span> <span class="pre">myProgram.py</span></code>.</p>
+<p>Otherwise, launch the Ipython notebook server (via the webapp TODO or with this command in SSH <code class="docutils literal"><span class="pre">ipython</span> <span class="pre">notebook</span> <span class="pre">--ip</span> <span class="pre">0.0.0.0</span> <span class="pre">--no-mathjax</span> <span class="pre">--no-browser</span></code>) then connect with your browser to <a class="reference external" href="http://poppy.local:8888">poppy.local:8888</a> TODO ipython screenshot
+Create a new notebook and put your code into it.</p>
+<p>Last solution, SSH into your robot (using Pytty or <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">poppy&#64;poppy.local</span></code>) and open an editor (<code class="docutils literal"><span class="pre">vim</span></code> by default on the Odroid) to put your code directly in the robot.
+Note that if you want to use a more advanced editor, you can use the -X option while connecting in SSH to get XWindows back on your desktop computer.</p>
+</div>
+<div class="section" id="create-the-robot-object">
+<h2>Create the robot object<a class="headerlink" href="#create-the-robot-object" title="Permalink to this headline">¶</a></h2>
+<p>The first (and more difficult!) step is to create this robot object.</p>
+<p>If you have a physical Poppy Humanoid, Poppy Torso or Poppy Ergo Jr, you can directly use the corresponding libraries and create your robot with (let&#8217;s call the robot <em>poppy</em>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_torso</span> <span class="kn">import</span> <span class="n">PoppyTorso</span>
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyTorso</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_ergo_jr</span> <span class="kn">import</span> <span class="n">PoppyErgoJr</span>
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyErgoJr</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Otherwise, if you use a custom robot defined in a configuration file, use (see <a class="reference internal" href="../pypot/doc/quickstart-configfile.html#quickstart-configfile"><span>here</span></a>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pypot.robot</span>
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s">&#39;my_config.json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="motors">
+<h2>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h2>
+<p>Now that we are connected to the robot, we can list all available motors:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span>
+</pre></div>
+</div>
+<p>You get something like:</p>
+<div class="highlight-python"><div class="highlight"><pre>[&lt;DxlMotor name=l_elbow_y id=44 pos=-0.0&gt;,
+ &lt;DxlMotor name=r_elbow_y id=54 pos=-0.0&gt;,
+ &lt;DxlMotor name=r_knee_y id=24 pos=0.2&gt;,
+ &lt;DxlMotor name=head_y id=37 pos=-22.7&gt;,
+ &lt;DxlMotor name=head_z id=36 pos=0.0&gt;,
+ &lt;DxlMotor name=r_arm_z id=53 pos=-0.0&gt;,
+ &lt;DxlMotor name=r_ankle_y id=25 pos=1.6&gt;,
+ &lt;DxlMotor name=r_shoulder_x id=52 pos=1.1&gt;,
+ &lt;DxlMotor name=r_shoulder_y id=51 pos=0.0&gt;,
+ &lt;DxlMotor name=r_hip_z id=22 pos=0.1&gt;,
+ &lt;DxlMotor name=r_hip_x id=21 pos=1.2&gt;,
+ &lt;DxlMotor name=r_hip_y id=23 pos=-0.0&gt;,
+ &lt;DxlMotor name=l_arm_z id=43 pos=-0.0&gt;,
+ &lt;DxlMotor name=l_hip_x id=11 pos=-0.0&gt;,
+ &lt;DxlMotor name=l_hip_y id=13 pos=-0.1&gt;,
+ &lt;DxlMotor name=l_hip_z id=12 pos=0.1&gt;,
+ &lt;DxlMotor name=abs_x id=32 pos=0.0&gt;,
+ &lt;DxlMotor name=abs_y id=31 pos=0.4&gt;,
+ &lt;DxlMotor name=abs_z id=33 pos=0.0&gt;,
+ &lt;DxlMotor name=l_ankle_y id=15 pos=0.8&gt;,
+ &lt;DxlMotor name=bust_y id=34 pos=0.8&gt;,
+ &lt;DxlMotor name=bust_x id=35 pos=0.2&gt;,
+ &lt;DxlMotor name=l_knee_y id=14 pos=0.0&gt;,
+ &lt;DxlMotor name=l_shoulder_x id=42 pos=0.4&gt;,
+ &lt;DxlMotor name=l_shoulder_y id=41 pos=0.0&gt;]
+</pre></div>
+</div>
+<p>We can make it more readable by extracting the motor&#8217;s name and position:</p>
+<div class="highlight-python"><div class="highlight"><pre>for m in poppy.motors:
+    name = m.name
+    pos = m.present_position
+    print &quot;motor &quot;,name,&quot; in position &#39;,pos
+</pre></div>
+</div>
+<p>The motors are grouped into motor groups:</p>
+<div class="highlight-python"><div class="highlight"><pre>for group in poppy.alias:
+    print &quot;motor group &quot;,group
+
+#assuming &quot;head&quot; is one of the motor groups (use &quot;top&quot; for a ergo_jr)
+for m in poppy.head:
+     name = m.name
+    pos = m.present_position
+    print &quot;motor &quot;,name,&quot; in position &#39;,pos
+</pre></div>
+</div>
+<p>Motors are said compliant if they do not apply torque to reach their goal position. They are safe and can be moved by hand. To have the robot move by itself, you must remove the compliance.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Before removing compliance, be sure each motor is in its allowed angle range, otherwise, the robot may move very quickly to get back to an <em>allowed</em> position</p>
+</div>
+<p>You can do it for the whole robot, for a motor group or for each motor:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#set the whole robot non-compliant</span>
+<span class="n">poppy</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">poppy</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="n">poppy</span><span class="o">.</span><span class="n">l_shoulder_x</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+</div>
+<p>Now that compliance is removed, let make the robot move! Put it in an open place, far from your coffee, fingers and screen and let&#8217;s go.
+The <code class="docutils literal"><span class="pre">present_position</span></code> of a Dynamixel motor is its angular position (in degree) sensed by the integrated rotationnal encoder.
+Its``goal_position`` is the angular position we ask it to achieve and the motor will therefore move toward it:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mf">20.</span>
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mf">10.</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c">#wait 2 seconds</span>
+
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.</span>
+</pre></div>
+</div>
+<p>see <a class="reference internal" href="../pypot/doc/motor.html#motor"><span>the motors documentation</span></a> for more advanced control.</p>
+</div>
+<div class="section" id="sensors">
+<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<p>TODO</p>
+<p>Next step is to use primitives, which is decribed in <a class="reference internal" href="../pypot/doc/quickstart-primitive.html#quickstart-primitive"><span>this tuto</span></a></p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../poppy-ergo-jr/assembly_doc/index.html" title="Assembly guide for a Poppy Ergo Jr robot" >previous</a></li>
+        <li><a href="snap.html" title="Control a Poppy robot using Snap!" >next</a></li>
+        <li><a href="../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

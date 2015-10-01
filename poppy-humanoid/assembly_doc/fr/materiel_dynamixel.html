@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Materiel Dynamixel &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Materiel Dynamixel</a><ul>
+<li><a class="reference internal" href="#mettre-le-zero-des-palonniers-dynamixel">Mettre le zéro des palonniers Dynamixel</a></li>
+<li><a class="reference internal" href="#palonniers-des-mx-28-et-mx-64">Palonniers des MX-28 et MX-64</a></li>
+<li><a class="reference internal" href="#mettre-les-ecrous">Mettre les écrous</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../../_sources/poppy-humanoid/assembly_doc/fr/materiel_dynamixel.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Materiel Dynamixel</a><ul>
+<li><a class="reference internal" href="#mettre-le-zero-des-palonniers-dynamixel">Mettre le zéro des palonniers Dynamixel</a></li>
+<li><a class="reference internal" href="#palonniers-des-mx-28-et-mx-64">Palonniers des MX-28 et MX-64</a></li>
+<li><a class="reference internal" href="#mettre-les-ecrous">Mettre les écrous</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/poppy-humanoid/assembly_doc/fr/materiel_dynamixel.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="materiel-dynamixel">
+<span id="materiel-dynamixel"></span><h1>Materiel Dynamixel<a class="headerlink" href="#materiel-dynamixel" title="Permalink to this headline">¶</a></h1>
+<p>Le robot Poppy Humanoid est principalement actionné par des servomoteurs <a class="reference external" href="http://www.generationrobots.com/fr/401858-servomotor-dynamixel-mx-28at.html">Dynamixel MX-28AT</a> (les MX-28T sont la version précédente et peuvent être utilisés sans aucun problème). Les autres servomoteurs sont des MX-64T (plus gros et plus puissants) et des AX-12A (plus petits, utilisés pour la tête).</p>
+<p>Chaque servomoteur Dynamixel embarque une carte électronique qui lui permet de recevoir différents types d&#8217;ordres (en position, vitesse, couple maximal...) et de communiquer avec d&#8217;autres servomoteurs Dynamixel.C&#8217;est pourquoi vous pouvez brancher les servomoteurs en série (avec un ID différent pour chacun) et les commander tous depuis l&#8217;un des bouts de la chaîne: chaque servomoteur transmettra les ordres au suivant.</p>
+<p><img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/daisy_link.JPG" /></p>
+<div class="section" id="mettre-le-zero-des-palonniers-dynamixel">
+<span id="mettre-le-zero-des-palonniers-dynamixel"></span><h2>Mettre le zéro des palonniers Dynamixel<a class="headerlink" href="#mettre-le-zero-des-palonniers-dynamixel" title="Permalink to this headline">¶</a></h2>
+<p>** Cette étape est cruciale pour éviter d&#8217;endommager vos servomoteurs de façon permanente !**</p>
+<p>Quand vous recevez vos servomoteurs Dynamixel, les palonniers (les pièces mobiles qui se fixent dans l&#8217;axe du moteur) ne sont pas montés. Ils sont inclus dans les boites si le servomoteurs est en boite individuelle ou sont fournis à part si les servomoteurs sont en boites de 6 (la section suivante vous indique quel palonnier va avec quel servo).</p>
+<p>En mettant le palonnier asservi, faites très attention à <strong>aligner la marque sur le palonnier à celle sur le servo</strong>. Une fois que le palonnier est mis, il est la plupart du temps <strong>impossible à enlever</strong> ! Ceci assure que la position zéro du servomoteur correspond à la position zéro de la structure mécanique.</p>
+<p><img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/zero.JPG" /> <img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/zero2.JPG" /></p>
+<p>Sur l&#8217;extérieur du palonnier, vous avez trois points indiquant l&#8217;orientation. Vous trouverez les mêmes trois points sur les pièces de structure, soyez attentif à les aligner correctement.</p>
+<p><img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/zero3.JPG" /></p>
+</div>
+<div class="section" id="palonniers-des-mx-28-et-mx-64">
+<span id="palonniers-des-mx-28-et-mx-64"></span><h2>Palonniers des MX-28 et MX-64<a class="headerlink" href="#palonniers-des-mx-28-et-mx-64" title="Permalink to this headline">¶</a></h2>
+<p>Sur chaque servomoteur Dynamixel à part les AX-12A, you aurez à monter le palonnier sur l&#8217;axe du moteur. Très souvent, vous devrez également monter un palonnier libre de l&#8217;autre côté pour assurer une meilleure fixation aux éléments de structure.</p>
+<p>Pour assembler le palonnier principal, mettez d&#8217;abord la rondelle de plastique (blanche ou noire) puis enfoncez le palonnier sur l&#8217;axe. <strong>Attention à la position du zéro en mettant le palonnier principal !</strong> Mettez ensuite du frein filet sur la grosse vis et vissez là au centre.</p>
+<p><img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/MX28N.JPG" /></p>
+<p>Palonnier principal monté sur un MX-28.</p>
+<p>Pour le palonnier libre, positionnez le roulement à billes et le capuchon du côté côté avec un renfoncement. Mettez le palonnier sur le servomoteur avec le capuchon vers l&#8217;extérieur. Mettz du frein filet sur la grosse vis et vissez là au centre. Le palonnier doit tourner librement.</p>
+<p><img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/MX64I1.JPG" /> <img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/MX64I2.JPG" /> <img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/MX64I3.JPG" /></p>
+<p>Palonnier libre monté sur un MX-24</p>
+<p>Références des noms de palonniers et des tailles de vis:</p>
+<p>| Servomoteur | Palonnier | Palonnier | grosse vis   | petites vis  | vis du  |
+|&#8212;&#8212;&#8212;&#8212;| :&#8212;&#8212;&#8212;&#8211;: | :&#8212;&#8212;&#8212;&#8211;: | :&#8212;&#8212;&#8212;&#8212;&#8212;-:| :&#8212;&#8212;&#8212;&#8212;-: | :&#8212;&#8212;&#8212;&#8212;-:|
+|             | principal | libre     | du palonnier | du palonnier | boitier |
+|AX12-A |      aucun |       aucun      |    M3x10mm |           M2      |       M2
+|  MX28   |   HN07-N101 |  HN07-I101   |   M2.5x8mm  |       M2x3mm    |    M2.5x6mm
+|  MX64    |  HN05-N102  | HN05-I101  |     M3x8mm  |        M2.5x4mm   |    M2.5x6mm |</p>
+<p>Utilisez une clé Allen de taille 1.5mm pour les vis M2, 2mm pour les vis de M2.5, 2.5mm pour les vis M3. Les vis M2 plus longues sont cruciformes.</p>
+</div>
+<div class="section" id="mettre-les-ecrous">
+<span id="mettre-les-ecrous"></span><h2>Mettre les écrous<a class="headerlink" href="#mettre-les-ecrous" title="Permalink to this headline">¶</a></h2>
+<p>Pour attacher les pièces de structure sur le boitier des servomoteurs, il faut d&#8217;abord insérer les écrous dans leurs emplacements. Cette étape peut être assez longue et pénible si vous n&#8217;avez pas des doigts de fée (les vidéos montres des servomoteurs de modèles T, il y a moins d&#8217;écrous à mettre dans les modèles AT car certains trous sont directement filetés).</p>
+<p>Voici une astuce: Manipulez l&#8217;écrou en utilisant une brucelle. Approchez le de son emplacement avec la bonne orientation et mettez le bout de la brucelle dans le trou pour assurer l&#8217;alignement. Utilisez ensuite une pince plate pour insérer l&#8217;écrou.</p>
+<p><img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/nuts1.JPG" /> <img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/nuts2.JPG" /> <img alt="image" src="poppy-humanoid/assembly_doc/fr/../img/nuts3.JPG" /></p>
+<p>Ces écrous correspondent à des vis de diamètre 2.5.</p>
+<p>Pour construire un Poppy Humanoid entier, un tournevis electrique est fortement conseillé !</p>
+<p><a class="reference external" href="guideAssemblage.md"><strong>&lt;&lt; Retour au menu</strong></a>
+<a class="reference external" href="addressage_dynamixel.md"><strong>&lt;&lt; Addressage des Dynamixel</strong></a></p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Poppy Humanoid Robot Assembly Guide &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Poppy Humanoid Robot Assembly Guide</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#the-poppy-project">The Poppy project</a></li>
+<li><a class="reference internal" href="#safety-warning">Safety warning</a></li>
+<li><a class="reference internal" href="#about-this-documentation">About this documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#content">Content</a></li>
+<li><a class="reference internal" href="#useful-links">Useful links</a><ul>
+<li><a class="reference internal" href="#assembly-instructions">Assembly instructions</a></li>
+<li><a class="reference internal" href="#forum-and-docs">Forum and docs</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../../_sources/poppy-humanoid/assembly_doc/en/assemblyGuide.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../../index.html">
+      <img class="logo" src="../../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Poppy Humanoid Robot Assembly Guide</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#the-poppy-project">The Poppy project</a></li>
+<li><a class="reference internal" href="#safety-warning">Safety warning</a></li>
+<li><a class="reference internal" href="#about-this-documentation">About this documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#content">Content</a></li>
+<li><a class="reference internal" href="#useful-links">Useful links</a><ul>
+<li><a class="reference internal" href="#assembly-instructions">Assembly instructions</a></li>
+<li><a class="reference internal" href="#forum-and-docs">Forum and docs</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/poppy-humanoid/assembly_doc/en/assemblyGuide.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="poppy-humanoid-robot-assembly-guide">
+<span id="poppy-humanoid-robot-assembly-guide"></span><h1>Poppy Humanoid Robot Assembly Guide<a class="headerlink" href="#poppy-humanoid-robot-assembly-guide" title="Permalink to this headline">¶</a></h1>
+<p>Author : <a class="reference external" href="http://www.generationrobots.com/en/278-le-robot-poppy-humanoid">Manon Cortial, Génération Robots</a></p>
+<p><img alt="image" src="../../../_images/poppy-logo.png" /> <img alt="image" src="../../../_images/GR-logo.png" /></p>
+</div>
+<div class="section" id="introduction">
+<span id="introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-poppy-project">
+<span id="the-poppy-project"></span><h2>The Poppy project<a class="headerlink" href="#the-poppy-project" title="Permalink to this headline">¶</a></h2>
+<p>Poppy is an open hardware and open-source robotics project. It has been designed to allow researchers and students to easily remove and replace some parts of the body.</p>
+<p>For example, different leg shapes have been tested on the Poppy Humanoid robot to make the robot walk.</p>
+<p><img alt="image" src="../../../_images/humanoids2013_Experiments.png" /></p>
+</div>
+<div class="section" id="safety-warning">
+<span id="safety-warning"></span><h2>Safety warning<a class="headerlink" href="#safety-warning" title="Permalink to this headline">¶</a></h2>
+<p>The Poppy humanoid robot is built using mainly MX-28 Dynamixel servomotors, which are pretty powerful and may be harmful to your fingers or materials.</p>
+<p>So be very careful and put the robot in a free space while testing your programs.</p>
+</div>
+<div class="section" id="about-this-documentation">
+<span id="about-this-documentation"></span><h2>About this documentation<a class="headerlink" href="#about-this-documentation" title="Permalink to this headline">¶</a></h2>
+<p>This documentation will guide you through the complete assembly of a Poppy Humanoid robot, giving your links to the instruction videos, but also pictures of all the parts to help you name them and assembly tips</p>
+<p>Get started by reading a bit about Dynamixel servomotors and how to assemble them (<a class="reference external" href="dynamixel_hardware.md">Dynamixel Hardware</a>) and also how to set the right parameters for them (<a class="reference external" href="addressing_dynamixel.md">Addressing Dynamixel</a>).</p>
+<p>Please don’t hesitate to comment and correct this documentation on the Poppy forum, on the <a class="reference external" href="https://forum.poppy-project.org/t/quickstart-assembly-and-programming-plus-some-code-examples/1228">dedicated topic</a>.</p>
+</div>
+</div>
+<div class="section" id="content">
+<span id="content"></span><h1>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="dynamixel_hardware.md"><strong>Dynamixel Hardware &gt;&gt;</strong></a></li>
+<li><a class="reference external" href="addressing_dynamixel.md"><strong>Addressing Dynamixel &gt;&gt;</strong></a></li>
+<li><a class="reference external" href="arms_assembly.md"><strong>Arms assembly &gt;&gt;</strong></a></li>
+<li><a class="reference external" href="trunk_assembly.md"><strong>Trunk assembly &gt;&gt;</strong></a></li>
+<li><a class="reference external" href="legs_assembly.md"><strong>Legs assembly &gt;&gt;</strong></a></li>
+<li><a class="reference external" href="head_assembly.md"><strong>Head assembly &gt;&gt;</strong></a></li>
+</ul>
+</div>
+<div class="section" id="useful-links">
+<span id="useful-links"></span><h1>Useful links<a class="headerlink" href="#useful-links" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="assembly-instructions">
+<span id="assembly-instructions"></span><h2>Assembly instructions<a class="headerlink" href="#assembly-instructions" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md">https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md</a></p>
+<p>Bill of Material:</p>
+<p><a class="reference external" href="https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/BOM.md">https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/BOM.md</a></p>
+</div>
+<div class="section" id="forum-and-docs">
+<span id="forum-and-docs"></span><h2>Forum and docs<a class="headerlink" href="#forum-and-docs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Poppy project website: https://www.poppy-project.org/</li>
+<li>Poppy project forum: https://forum.poppy-project.org/</li>
+<li>herborist doc.: http://poppy-project.github.io/pypot/herborist.html</li>
+<li>Dynamixel wizard doc.: http://support.robotis.com/en/software/roboplus/dynamixel_monitor/quickstart/dynamixel_monitor_connection.htm</li>
+<li>Bonjour software: https://support.apple.com/kb/DL999?locale=fr_FR&amp;viewlocale=fr_FR</li>
+<li>STL files: https://github.com/poppy-project/poppy-humanoid/releases/download/hardware_1.0.1/STL_3D_printed_parts.zip</li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

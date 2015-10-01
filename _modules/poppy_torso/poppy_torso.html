@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>poppy_torso.poppy_torso &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="../index.html" accesskey="U">Module code</a></li>
+            
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../../index.html">
+      <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <h1>Source code for poppy_torso.poppy_torso</h1><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+
+<span class="kn">from</span> <span class="nn">poppy.creatures</span> <span class="kn">import</span> <span class="n">AbstractPoppyCreature</span>
+
+<span class="kn">from</span> <span class="nn">.primitives.safe</span> <span class="kn">import</span> <span class="n">LimitTorque</span><span class="p">,</span> <span class="n">TemperatureMonitor</span>
+<span class="kn">from</span> <span class="nn">.primitives.dance</span> <span class="kn">import</span> <span class="n">SimpleBodyBeatMotion</span>
+<span class="c">#from .primitives.posture import StandPosition, SitPosition</span>
+<span class="kn">from</span> <span class="nn">.primitives.idle</span> <span class="kn">import</span> <span class="n">UpperBodyIdleMotion</span><span class="p">,</span> <span class="n">HeadIdleMotion</span>
+<span class="kn">from</span> <span class="nn">.primitives.interaction</span> <span class="kn">import</span> <span class="n">ArmsTurnCompliant</span><span class="p">,</span> <span class="n">PuppetMaster</span>
+
+
+<div class="viewcode-block" id="PoppyTorso"><a class="viewcode-back" href="../../poppy-torso/doc/poppy_torso.html#poppy_torso.poppy_torso.PoppyTorso">[docs]</a><span class="k">class</span> <span class="nc">PoppyTorso</span><span class="p">(</span><span class="n">AbstractPoppyCreature</span><span class="p">):</span>
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="PoppyTorso.setup"><a class="viewcode-back" href="../../poppy-torso/doc/poppy_torso.html#poppy_torso.poppy_torso.PoppyTorso.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">_primitive_manager</span><span class="o">.</span><span class="n">_filter</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">robot</span><span class="o">.</span><span class="n">simulated</span><span class="p">:</span>
+            <span class="n">cls</span><span class="o">.</span><span class="n">vrep_hack</span><span class="p">(</span><span class="n">robot</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">compliant_behavior</span> <span class="o">=</span> <span class="s">&#39;dummy&#39;</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">goto_behavior</span> <span class="o">=</span> <span class="s">&#39;minjerk&#39;</span>
+
+
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">LimitTorque</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">torque_max</span><span class="o">=</span><span class="mi">80</span><span class="p">),</span> <span class="s">&#39;limit_torque&#39;</span><span class="p">)</span>
+        <span class="c">#robot.limit_torque.start()</span>
+
+        <span class="c"># Temperature monitoring</span>
+        <span class="n">sound_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)),</span>
+                                  <span class="s">&#39;media&#39;</span><span class="p">,</span> <span class="s">&#39;sounds&#39;</span><span class="p">,</span> <span class="s">&#39;error.wav&#39;</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">TemperatureMonitor</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="n">sound</span><span class="o">=</span><span class="n">sound_file</span><span class="p">),</span> <span class="s">&#39;temperature_monitoring&#39;</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">temperature_monitoring</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">SimpleBodyBeatMotion</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="s">&#39;dance_beat_motion&#39;</span><span class="p">)</span>
+
+
+
+        <span class="c"># Idle primitives</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">UpperBodyIdleMotion</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="s">&#39;upper_body_idle_motion&#39;</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">HeadIdleMotion</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="s">&#39;head_idle_motion&#39;</span><span class="p">)</span>
+
+        <span class="c"># Interaction primitives</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">ArmsTurnCompliant</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="s">&#39;arms_turn_compliant&#39;</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">PuppetMaster</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="s">&#39;arms_copy_motion&#39;</span><span class="p">)</span>
+</div>
+    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="PoppyTorso.vrep_hack"><a class="viewcode-back" href="../../poppy-torso/doc/poppy_torso.html#poppy_torso.poppy_torso.PoppyTorso.vrep_hack">[docs]</a>    <span class="k">def</span> <span class="nf">vrep_hack</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
+        <span class="c"># fix vrep orientation bug</span>
+        <span class="n">wrong_motor</span> <span class="o">=</span> <span class="p">[</span><span class="n">robot</span><span class="o">.</span><span class="n">bust_x</span><span class="p">,</span> <span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">wrong_motor</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">direct</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">m</span><span class="o">.</span><span class="n">direct</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">offset</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span><span class="o">.</span><span class="n">offset</span></div></div>
+</pre></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../../genindex.html" title="General Index" >index</a></li>
+        <li><a href="../index.html" >Module code</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>
