@@ -41,7 +41,7 @@ can directly use the corresponding libraries and create your robot with
     poppy = PoppyErgoJr()
 
 Otherwise, if you use a custom robot defined in a configuration file,
-use (see here \<quickstart-configfile\>):
+use (see [here](../pypot/doc/quickstart-configfile.html):
 
     import pypot.robot
     poppy = pypot.robot.from_json('my_config.json')
@@ -96,7 +96,7 @@ The motors are grouped into motor groups:
 
     #assuming "head" is one of the motor groups (use "top" for a ergo_jr)
     for m in poppy.head:
-         name = m.name
+        name = m.name
         pos = m.present_position
         print "motor ",name," in position ',pos 
 
@@ -134,11 +134,11 @@ therefore move toward it:
 
     poppy.head_y.goal_position = -10.
 
-see the motors documentation \<motor\> for more advanced control.
+see the [motors documentation](../pypot/doc/motor.html) for more advanced control.
 
 ## Sensors
 
 TODO
 
 Next step is to use primitives, which is decribed in
-this tuto \<quickstart\_primitive\>
+[this tuto](../pypot/quickstart-primitive.html).
