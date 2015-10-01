@@ -1,11 +1,13 @@
 
 .. _dynamixel_hardware:
 
+
+
 Dynamixel hardware
-=====================
+======================
 
 Introduction
---------------------------
+-----------------------------------
 
 Dynamixel is a brand of 'smart' servomotors for modelism and robots. It has many different servos of different sizes and powers.
 
@@ -31,7 +33,7 @@ next one.
 .. _dynamixel_zero:
 
 **Putting the Dynamixel horns to zero**
----------------------------------------------------------------------
+-----------------------------------
 
 When you receive your Dynamixel servomotors, the horns are not mounted.
 They are included in the packaging if the servo is packaged alone or
@@ -63,7 +65,7 @@ be sure to match them.
 
 
 Horns of MX-28 and MX-64
----------------------------------------------------------------------
+-----------------------------------
 
 On each Dynamixel servomotor apart from the AX-12A, you will have to
 mount a horn to the motor axis. Most of the time, you will also have to
@@ -121,7 +123,7 @@ You need an allen wrench of size 1.5mm for M2 screws, 2mm for M2.5 screws
 and 2.5mm for M3 screws. The longer M2 screws need a Phillips screwdriver.
 
 Putting the nuts
----------------------------------------------------------------------
+-----------------------------------
 
 To attach structural parts on the body of the servomotors, you have to
 first insert the nuts in their sites. This step may be quite painful if
@@ -152,7 +154,7 @@ strongly advised!
 
 
 Connection Dynamixel - computer
-----------------------------------------------------
+-----------------------------------
 
 There are two devices allowing you to connect you Dynamixel bus to your computer: USB2Dynamixel and USB2AX.
 
@@ -164,7 +166,7 @@ USB2AX is a miniatirized version of the USB2Dynamixel able to control only TTL b
 .. warning:: Due to differences in sensibilities, new MX-28 and MX-64 servos communicate at a 57600 baudrate with USB2AX and 57142 for USB2Dynamixel.
 
 Powering Dynamixel servos
--------------------------------------------------
+-----------------------------------
 
 The USB port of your computer can't deliver enough power (well, enough current) to make your servos move.
 
