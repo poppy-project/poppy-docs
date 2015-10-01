@@ -1,6 +1,6 @@
 ## Arms assembly
 
-![image](../img/parts_arms.JPG)\
+![image](img/parts_arms.JPG)\
 
 
 Motors lists:
@@ -24,7 +24,7 @@ Motors lists:
     forearm** The hand design slightly changed from the videos, but the
     nuts and screws remain the same.
 
-    ![image](../img/hand_nut.JPG)
+    ![image](img/hand_nut.JPG)
 
 -   **[Right](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/right_upper_arm_assembly.md)/[Left](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/left_upper_arm_assembly.md)
     upper arm** Plug a 200mm cable in the unused plug before screwing
@@ -42,9 +42,3 @@ Motors lists:
     To distinguish between left and right shoulder parts, look at the
     three dots: the single dot should be down when the shoulder is in
     “zero” position (along the shoulder\_y motor).
-
-
-
-[**<< Back to menu**](assemblyGuide.md)
-
-[**Trunk assembly >>**](trunk_assembly.md)
