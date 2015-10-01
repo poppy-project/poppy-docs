@@ -4,5 +4,5 @@
     :titlesonly:
     :maxdepth: 2
 
-    introduction.rst
+    introduction.md
     
