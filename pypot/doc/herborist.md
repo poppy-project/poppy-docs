@@ -1,7 +1,7 @@
 # Herborist: the configuration tool
 
 Herborist is a graphical tool that helps you detect and configure motors
-before using them in your robot.
+before using them in your robot. See [the assembly docs](../../addressing_dynamixel.html) for a tuto.
 
 > **warning**
 >
@@ -28,7 +28,7 @@ your terminal.
 > You can always find the script in the folder
 > \$(PYPOT\_SRC)/pypot/tools/herborist.
 
-![image](herborist.png%0A%20:align:%20center)
+![image](herborist.png)
 
 > **warning**
 >

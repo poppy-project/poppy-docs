@@ -1,12 +1,15 @@
 # REST API
 
-Any \~pypot.robot.robot.Robot object can be to remotely accessed and
+Any [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) object can be to remotely accessed and
 controled through TCP network.
 
-This can be useful to: \* separate the low-level control running on an
+This can be useful to: 
+- separate the low-level control running on an
 embedded computer and higher-level computation on a more powerful
-computer \* control your Poppy robot from any language (C++,
-javascript...) able to use tcp sockets \* remote control your robot
+computer 
+- control your Poppy robot from any language (C++,
+javascript...) able to use tcp sockets 
+- remote control your robot
 without having to install all Poppy libraries
 
 The protocol, described
@@ -16,15 +19,15 @@ motors and primitives) via a JSON request. Two transport methods have
 been developed so far:
 
 -   HTTP via GET and POST request (see the
-    \~pypot.server.httpserver.HTTPRobotServer)
--   ZMQ socket (see the \~pypot.server.zmqserver.ZMQRobotServer)
+    [pypot.server.httpserver.HTTPRobotServer](pypot.server.html#pypot.server.httpserver.HTTPRobotServer))
+-   ZMQ socket (see the [pypot.server.zmqserver.ZMQRobotServer](pypot.server.html#pypot.server.zmqserver.ZMQRobotServer))
 
-The \~pypot.server.rest.RESTRobot has been abstracted from the server,
+The [pypot.server.rest.RESTRobot](pypot.server.html#pypot.server.rest.RESTRobot) has been abstracted from the server,
 so you can easily add new transport methods if needed.
 
 > **note**
 >
-> A third server is available in Pypot: \~pypot.server.snap allows you
+> A third server is available in Pypot: [pypot.server.snap.SnapRobotServer](pypot.server.html#pypot.server.snap.SnapRobotServer) allows you
 > to run Snap! directly on the robot.
 
 ## ZMQ method

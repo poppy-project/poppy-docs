@@ -11,33 +11,32 @@ load and set new values, while in parallel we would like to have higher
 level code that computes those new values.
 
 This is pretty much what the robot abstraction is doing for you. More
-precisely, through the use of the class \~pypot.robot.robot.Robot you
+precisely, through the use of the class [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) you
 can:
 
 -   automatically initialize all connections (make transparent the use
     of multiple USB2serial connections),
--   define \~pypot.dynamixel.motor.DxlMotor.offset and
-    \~pypot.dynamixel.motor.DxlMotor.direct attributes for motors,
+-   define [pypot.dynamixel.motor.DxlMotor.offset](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) and
+    [pypot.dynamixel.motor.DxlMotor.direct](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) attributes for motors,
 -   automatically define accessor for motors and their most frequently
     used registers (such as
-    \~pypot.dynamixel.motor.DxlMotor.goal\_position,
-    \~pypot.dynamixel.motor.DxlMotor.present\_speed,
-    \~pypot.dynamixel.motor.DxlMotor.present\_load,
-    \~pypot.dynamixel.motor.DxlMXMotor.pid,
-    \~pypot.dynamixel.motor.DxlMotor.compliant),
+    [pypot.dynamixel.motor.DxlMotor.goal\_position](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor),
+    [pypot.dynamixel.motor.DxlMotor.present\_speed](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor),
+    [pypot.dynamixel.motor.DxlMotor.present\_load](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor),
+    [pypot.dynamixel.motor.DxlMXMotor.pid](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMXMotor),
+    [pypot.dynamixel.motor.DxlMotor.compliant](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor)),
 -   define read/write synchronization loop that will run in background.
 
 We will first see how to define your robot thanks to the writing of a
-configuration \<config\_file\>, then we will describe how to set up
-synchronization loops \<sync\_loop\>. Finally, we will show how to
-easily
-control this robot through asynchronous commands \<control\_robot\>.
+configuration, then we will describe how to set up
+synchronization loops. Finally, we will show how to
+easily control this robot through asynchronous commands.
 
 ## Create the robot object
 
 ### The configuration file
 
-See \_quickstart-configfile for a quick intro on how to use the
+See [this quickstart](quickstart-configfile.html) for a quick intro on how to use the
 configuration files.
 
 The configuration, described as a Python dictionary, contains several
@@ -47,7 +46,7 @@ that can be loaded as a dict (e.g. a JSON file).
 
 The important fields are:
 
-1.  **controllers**: This key holds the information pertaining to a controller and all the items connected to its bus. You can have a single or multiple \~pypot.dynamixel.controller.DxlController.
+1.  **controllers**: This key holds the information pertaining to a controller and all the items connected to its bus. You can have a single or multiple [pypot.dynamixel.controller.DxlController](pypot.dynamixel.html#pypot.dynamixel.controller.DxlController).
     :   You must specify the attached motors (or motor groups) and port
         that the device is connected to, or "auto". When loading the
         configuration, pypot will automatically try to find the port
@@ -101,19 +100,19 @@ Mandatory information for each motor is:
     'software zero', the position of the motor when requested to go at
     angle 0.
 
-In the source of \~pypot.robot.config, you can find the configuration
+In the source of [pypot.robot.config](https://github.com/poppy-project/pypot/blob/master/pypot/robot/config.py), you can find the configuration
 dictionnary of a Poppy Ergo Jr robot.
 
 ### Use the configuration
 
-To create a \~pypot.robot.robot.Robot object from a Python dictionnary,
-use the \~pypot.robot.config.from\_config function function:
+To create a [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) object from a Python dictionnary,
+use the [pypot.robot.config.from\_config](pypot.robot.html#pypot.robot.config.from_config) function function:
 
     import pypot.robot
 
     robot = pypot.robot.from_config(my_config)
 
-You can also create a \~pypot.robot.robot.Robot by detecting the
+You can also create a [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) by detecting the
 available Dynamixel servomotors:
 
     from pypot.dynamixel import autodetect_robot
@@ -138,16 +137,16 @@ If you have your configuration in a json file, here is how to open it:
 
 While having the configuration as a file is convenient to share the same
 config on multiple machine, it also slows the creation of the
-\~pypot.robot.robot.Robot.
+[pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot).
 
 ## Dynamixel controller and Synchronization Loop
 
-The \~pypot.robot.robot.Robot held instances of
-\~pypot.dynamixel.motor.DxlMotor. Each of these instances represents a
+The [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) held instances of
+[pypot.dynamixel.motor.DxlMotor](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor). Each of these instances represents a
 real motor of your physical robot. The attributes of those "software"
 motors are automatically synchronized with the real "hardware" motors.
-In order to do that, the \~pypot.robot.robot.Robot class uses a
-\~pypot.dynamixel.controller.DxlController which defines synchronization
+In order to do that, the [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) class uses a
+[pypot.dynamixel.controller.DxlController](pypot.dynamixel.html#pypot.dynamixel.controller.DxlController) which defines synchronization
 loops that will read/write the registers of dynamixel motors at a
 predefined frequency.
 
@@ -160,8 +159,8 @@ predefined frequency.
 > implemented as python thread and we can thus not guarantee the exact
 > frequency of the loop.
 
-By default the class \~pypot.robot.robot.Robot uses a particular
-controller \~pypot.dynamixel.controller.BaseDxlController which already
+By default the class [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) uses a particular
+controller [pypot.dynamixel.syncloop.BaseDxlController](pypot.dynamixel.html#pypot.dynamixel.syncloop.BaseDxlController) which already
 defines synchronization loops. More precisely, this controller:
 
 -   reads the present position, speed, load at 50Hz,
@@ -176,18 +175,18 @@ and it should directly work.
 The synchronization loops are automatically started when instantiating
 your robot if you set the sync\_read parameter of your controller to
 True. Otherwise, start it with the method
-\~pypot.robot.robot.Robot.start\_sync. You can also stop the
-synchronization if needed (see the \~pypot.robot.robot.Robot.stop\_sync
+[pypot.robot.robot.Robot.start\_sync](pypot.robot.html#pypot.robot.robot.Robot). You can also stop the
+synchronization if needed (see the [pypot.robot.robot.Robot.stop\_sync](pypot.robot.html#pypot.robot.robot.Robot)
 method).
 
 > **note**
 >
 > With the current version of pypot, you can not yet indicate in the
 > configuration which subclasses of
-> \~pypot.dynamixel.controller.DxlController you want to use. If you
+> [pypot.dynamixel.controller.DxlController](pypot.dynamixel.html#pypot.dynamixel.controller.DxlController) you want to use. If you
 > want to use your own controller, you should either modify the config
-> parser, modify the \~pypot.dynamixel.controller.BaseDxlController
-> class or directly instantiate the \~pypot.robot.robot.Robot class.
+> parser, modify the [pypot.dynamixel.syncloop.BaseDxlController](pypot.dynamixel.html#pypot.dynamixel.syncloop.BaseDxlController)
+> class or directly instantiate the [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) class.
 
 > **warning**
 >
@@ -209,9 +208,9 @@ Now you are ready to create some behaviors for your robot.
 
 ### Robot overview
 
-The main fields of the \~pypot.robot.robot.Robot are:
+The main fields of the [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) are:
 
--   motors: list of \~pypot.dynamixel.motor.DxlMotor. Example: list all
+-   motors: list of [pypot.dynamixel.motor.DxlMotor](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor). Example: list all
     motors:
 
         for m in robot.motors:
@@ -232,26 +231,26 @@ The main fields of the \~pypot.robot.robot.Robot are:
 
         robot.compliant = True
 
--   primitives: You can attach primitives \<primitives\> to a robot and
+-   primitives: You can attach [primitives](primitive.html) to a robot and
     this field lists them.
 -   active\_primitives: from above primitives, which are currently
     running
 -   sensors: list of available sensors, work in progress
 
-Some useful functions of the \~pypot.robot.robot.Robot class:
+Some useful functions of the [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) class:
 
--   \~pypot.robot.robot.Robot.power\_up to set maximum torque and remove
+-   [pypot.robot.robot.Robot.power\_up](pypot.robot.html#pypot.robot.robot.Robot) to set maximum torque and remove
     compliance.
 
 ### Synchronized moves
 
-The \~pypot.dynamixel.motor.DxlMotor allows you to control motors in
-position and speed, but, at the \~pypot.dynamixel.robot.Robot level, you
+The [pypot.dynamixel.motor.DxlMotor](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) allows you to control motors in
+position and speed, but, at the [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) level, you
 can give orders to a set of motors to make a synchronized move using the
-\~pypot.robot.robot.Robot.goto\_position function.
+[pypot.robot.robot.Robot.goto\_position](pypot.robot.html#pypot.robot.robot.Robot) function.
 
 This is especially useful for choregraphies, because the
-\~pypot.robot.robot.Robot.goto\_position function ensures that all
+[pypot.robot.robot.Robot.goto\_position](pypot.robot.html#pypot.robot.robot.Robot) function ensures that all
 motors smoothly reach their final positions at the same time, while
 using the goal\_position field will lead all motors to go to the same
 speed, without time synchronization.
@@ -282,8 +281,8 @@ down before and arrive on time without overshoot.
 ## Closing the robot
 
 To make sure that everything gets cleaned correctly after you are done
-using your \~pypot.robot.robot.Robot, you should always call the
-\~pypot.robot.robot.Robot.close method. Doing so will ensure that all
+using your [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot), you should always call the
+[pypot.robot.robot.Robot.close](pypot.robot.html#pypot.robot.robot.Robot) method. Doing so will ensure that all
 the controllers attached to this robot, and their associated dynamixel
 serial connection, are correctly stopped and cleaned.
 
@@ -304,20 +303,20 @@ inside your code:
 
 > **note**
 >
-> Note calling the \~pypot.robot.robot.Robot.close method on a
-> \~pypot.robot.robot.Robot can prevent you from opening it again
+> Note calling the [pypot.robot.robot.Robot.close](pypot.robot.html#pypot.robot.robot.Robot) method on a
+> [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) can prevent you from opening it again
 > without terminating your current Python session. Indeed, as the
 > destruction of object is handled by the garbage collector, there is no
 > mechanism which guarantee that we can automatically clean it when
 > destroyed.
 
 When closing the robot, we also send a stop signal to all the primitives
-running and wait for them to terminate. See section my\_prim for details
+running and wait for them to terminate. See section [primitives](primitive.html) for details
 on what we call primitives.
 
 > **warning**
 >
 > You should be careful that all your primitives correctly respond to
 > the stop signal. Indeed, having a blocking primitive will prevent the
-> \~pypot.robot.robot.Robot.close method to terminate (please refer to
-> start\_prim for details).
+> [pypot.robot.robot.Robot.close](pypot.robot.html#pypot.robot.robot.Robot) method to terminate (please refer to
+> [primitives](primitive.html) for details).

@@ -7,7 +7,7 @@ own documentation or the one on [django
 website](https://docs.djangoproject.com/en/1.6/topics/logging/). Here,
 we will only describe what pypot is logging and how it is organised. We
 will also present a few examples on how to use pypot logging and parse
-the information (see section log\_ex).
+the information.
 
 ## Logging structure
 
@@ -28,29 +28,29 @@ Pypot's logging naming convention is following pypot's architecture.
 Here is the detail of what pypot is logging with the associated logger's
 name:
 
--   The logger's name \~pypot.dynamixel.io is logging information
+-   The logger's name *pypot.dynamixel.io* is logging information
     related to opening/closing port (INFO) and each sent/received
     package (DEBUG). The communication and timeout error are also logged
     (WARNING). This logger always provides you the port name, the
     baudrate and timeout of your connection as extra information.
--   The logger \~pypot.robot.motor is logging each time a register of a
+-   The logger *pypot.robot.motor* is logging each time a register of a
     motor is set (DEBUG). The name of the register, the name of the
     motor and the set value are given in the message.
--   \~pypot.robot.config is logging information regarding the creation
+-   *pypot.robot.config* is logging information regarding the creation
     of a robot through a config dictionary. A message is sent for each
     motor, controller and alias added (INFO). A WARNING message is also
     sent when the angle limits of a motor are changed. We provide as
     extra the entire config dictionary.
--   The logger \~pypot.robot.robot is logging when the synchronization
+-   The logger *pypot.robot* is logging when the synchronization
     is started/stopped (INFO) and when a primitive is attached (INFO).
--   \~pypot.primitive.primitive logs a message when the primitive is
+-   *pypot.primitive* logs a message when the primitive is
     started/stopped and paused/resumed (INFO). Each
-    \~pypot.primitive.primitive.LoopPrimitive.update of a LoopPrimitive
+    [pypot.primitive.primitive.LoopPrimitive.update](pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive.update) of a LoopPrimitive
     is also logged (DEBUG). Each time a primitive sets a value to a
     register a message is also logged (DEBUG).
--   \~pypot.primitive.manager provides you information on how the values
+-   *pypot.primitive.manager* provides you information on how the values
     sent within primitives were combined (DEBUG).
--   \~pypot.server logs when the server is started (INFO) and each
+-   *pypot.server* logs when the server is started (INFO) and each
     handled request (DEBUG).
 
 ## Using Pypot's logging
