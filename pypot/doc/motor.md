@@ -2,23 +2,23 @@
 
 ## Overview
 
-The \~pypot.robot.robot.Robot class contains a list of
-\~pypot.dynamixel.motor.DxlMotor, each \~pypot.dynamixel.motor.DxlMotor
+The  [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) class contains a list of
+ [pypot.dynamixel.motor.DxlMotor](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor), each [pypot.dynamixel.motor.DxlMotor](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor)
 being linked to a physical Dynamixel motor.
 
 ### Registers
 
-This class provides access to (see \~pypot.dynamixel.motor.DxlMotor.registers for an exhaustive list):
-:   -   id: motor id
-    -   motor name
-    -   motor model
-    -   present position/speed/load
-    -   goal position/speed/load
-    -   compliant
-    -   motor orientation and offset
-    -   angle limit
-    -   temperature
-    -   voltage
+This class provides access to (see [pypot.dynamixel.motor.DxlMotor.registers](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) for an exhaustive list):
+-   id: motor id
+-   motor name
+-   motor model
+-   present position/speed/load
+-   goal position/speed/load
+-   compliant
+-   motor orientation and offset
+-   angle limit
+-   temperature
+-   voltage
 
 Temperature and load can give you an idea of how much effort a motor
 produces:
@@ -28,7 +28,6 @@ produces:
         print 'temperature: ',m.temperature
         print "load: ", m.load
 
-## print ""
 
 ### Torque and compliance
 
@@ -39,7 +38,7 @@ for each motor individually:
 
     robot.head_z.compliant = False
 
-or can be set at robot level \<robot\>.
+or can be set at [robot level](robot.html).
 
 You can set the compliance mode to 'safe' (as opposed to 'dummy') to
 have the robot set compliance at angle limits, preventing you to move it
@@ -54,7 +53,7 @@ limits.
 
 You can also change the maximal torque that the robot can use. Use a
 value between 0 (no torque) and 100 (max torque). The resulting maximal
-torque depends onthe model of teh robot:
+torque depends onthe model of the robot:
 
     robot.head_z.max_torque = 20
 
@@ -69,8 +68,7 @@ goes back to its goal position when you stop applying the force.
 
 Dynamixel servomotors will use their internal controller to reach and
 stay at the angle defined in the goal\_position register (in degree). If
-this angle isn't between \~pypot.dynamixel.motor.DxlMotor.lower\_limit
-and \~pypot.dynamixel.motor.DxlMotor.upper\_limit, the goal angle will
+this angle isn't between the minimum and maximum angle (see [pypot.dynamixel.motor.DxlMotor.angle\_limit](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor)), the goal angle will
 automatically be taken back into the limits:
 
     for m in robot.motors:
@@ -85,9 +83,9 @@ automatically be taken back into the limits:
 ### Controlling in speed
 
 You can also control your robot in speed. Set the
-\~pypot.dynamixel.motor.DxlMotor.goal\_speed attribute to the desired
+[pypot.dynamixel.motor.DxlMotor.goal\_speed](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) attribute to the desired
 value in degree per seconds. This automatically sets the
-\~pypot.dynamixel.motor.DxlMotor.goal\_position to the maximal or
+[pypot.dynamixel.motor.DxlMotor.goal\_position](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) to the maximal or
 minimal value (depending on the sign of the speed).
 
 The motor will remain at the given speed until it gets a new order or it
@@ -112,29 +110,29 @@ Example of robot making 'yes' with its head:
 > **note**
 >
 > You could also use the wheel mode settings where you can directly
-> change the \~pypot.dynamixel.motor.DxlMotor.moving\_speed.
+> change the [pypot.dynamixel.motor.DxlMotor.moving\_speed](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor).
 > Nevertheless, while the motor will turn infinitely with the wheel
-> mode, here with the \~pypot.dynamixel.motor.DxlMotor.goal\_speed the
+> mode, here with the [pypot.dynamixel.motor.DxlMotor.goal\_speed](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) the
 > motor will still respect the angle limits.
 
 > **warning**
 >
-> If you set both \~pypot.dynamixel.motor.DxlMotor.goal\_speed and
-> \~pypot.dynamixel.motor.DxlMotor.goal\_position only the last command
+> If you set both [pypot.dynamixel.motor.DxlMotor.goal\_speed](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) and
+> [pypot.dynamixel.motor.DxlMotor.goal\_position](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) only the last command
 > will be executed. Unless you know what you are doing, you should avoid
 > to mix these both approaches.
 
-### The \~pypot.dynamixel.motor.goto\_position function
+### The [pypot.dynamixel.motor.DxlMotor.goto\_position](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) function
 
 If you want a servo to go to a certain position in a certain time (for
 synchronization reasons...), use the
-\~pypot.dynamixel.motor.goto\_position function. It take two mandatory
+ [pypot.dynamixel.motor.DxlMotor.goto\_position](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor)  function. It take two mandatory
 arguments: position to reach (in degrees) and the duration:
 
     robot.head_z.goto_position(20, 3)
 
 To synchronize several motors, have a look at the
-\~pypot.robot.robot.Robot.goto\_position at robot level.
+[pypot.robot.robot.Robot.goto\_position](pypot.robot.html#pypot.robot.robot.Robot) at robot level.
 
 By default, this function return immediatelly and is cancelled if
 another one is run later, even if the 3 seconds are not over.

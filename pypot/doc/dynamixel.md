@@ -18,11 +18,11 @@ All servomotors on a bus must have a unique ID and the same baudrate.
 > All new servos have ID 1, so when using new motors, it is strongly
 > advise to first plug them one by one and change their IDs
 
-The :py\~pypot.dynamixel.io.io.DxlIO class is used to handle the
+The [pypot.dynamixel.io.io.DxlIO](pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO) class is used to handle the
 communication with a particular port using the version 1 of robotis
 protocol, allowing to communicate with Dynamixel MX and AX servomotors.
 
-The :py\~pypot.dynamixel.io.io\_320.Dxl320IO class is used to handle the
+The [pypot.dynamixel.io.io\_320.Dxl320IO](pypot.dynamixel.io.html#pypot.dynamixel.io.io_320.Dxl320IO) class is used to handle the
 communication with a particular port using the version 2 of robotis
 protocol, allowing to communicate with Dynamixel XL servomotors.
 
@@ -39,16 +39,16 @@ protocol, allowing to communicate with Dynamixel XL servomotors.
 
 ## Finding ports
 
-The \~pypot.dynamixel module offers several useful function to learn the
+The [pypot.dynamixel](pypot.dynamixel.html) module offers several useful function to learn the
 state of your connections:
 
--   :py\~pypot.dynamixel.get\_available\_ports discovers the open serial
+-   [pypot.dynamixel.get\_available\_ports](pypot.dynamixel.html#pypot.dynamixel.get_available_ports) discovers the open serial
     ports. An optionnal argument allows you to ask only for free (not
     used by a serial connection) ports.
--   :py\~pypot.dynamixel.find\_port takes a list of motors IDs and scan
+-   [pypot.dynamixel.find\_port](pypot.dynamixel.html#pypot.dynamixel.find_port) takes a list of motors IDs and scan
     the available ports until it finds the motors.
--   :py\~pypot.dynamixel.autodetect\_robot scans all ports and creates a
-    \~pypot.robot out of the found motors
+-   [pypot.dynamixel.autodetect\_robot](pypot.dynamixel.html#pypot.dynamixel.autodetect_robot) scans all ports and creates a
+    [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) out of the found motors
 
 <!-- -->
 
@@ -100,7 +100,7 @@ The communication can be closed using the
 
 > **note**
 >
-> The class \~pypot.dynamixel.io.DxlIO can also be used as a [Context Manager](https://docs.python.org/2/library/contextlib.html) (the \~pypot.dynamixel.io.DxlIO.close method will automatically be called at the end).
+> The class [pypot.dynamixel.io.io.DxlIO](pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO) can also be used as a [Context Manager](https://docs.python.org/2/library/contextlib.html) (the [pypot.dynamixel.io.io.DxlIO.close](pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO) method will automatically be called at the end).
 > :   For instance:
 >
 > with pypot.dynamixel.DxlIO('/dev/ttyUSB0') as dxl\_io:
@@ -150,7 +150,7 @@ equivalent: can turn forever, speed control only) - Read and write angle
 limits: if you ask a servo to go beyond a limit, it will stop at the
 limit - Read and write the maximum torque (between 0 and 100)
 
-The list of all functions is available in \~pypot.dynamixel.io.DxlIO.
+The list of all functions is available in [pypot.dynamixel.io.io.DxlIO](pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO).
 The syntax is the same for all registers: all the getter functions takes
 a list of ids as argument and the setter takes a dictionary of (id:
 value) pairs.
