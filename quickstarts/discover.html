@@ -49,7 +49,7 @@
     <link rel="shortcut icon" href="../_static/poppy_flower_logo-small.png"/>
     <link rel="top" title="Poppy project 1.1.0 documentation" href="../index.html" />
     <link rel="next" title="Control a Poppy robot using Snap!" href="snap.html" />
-    <link rel="prev" title="Assembly guide for a Poppy Ergo Jr robot" href="../poppy-ergo-jr/assembly_doc/index.html" /> 
+    <link rel="prev" title="Assembly guide for Poppy ErgoJr" href="../poppy-ergo-jr/assembly_doc/index.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -74,6 +74,7 @@
 <li><a class="reference internal" href="#create-the-robot-object">Create the robot object</a></li>
 <li><a class="reference internal" href="#motors">Motors</a></li>
 <li><a class="reference internal" href="#sensors">Sensors</a></li>
+<li><a class="reference internal" href="#go-further">Go further</a></li>
 </ul>
 </li>
 </ul>
@@ -82,8 +83,9 @@
               </li>
 
             
-              <li><a href="../poppy-ergo-jr/assembly_doc/index.html" title="Assembly guide for a Poppy Ergo Jr robot" accesskey="P">previous </a></li>
+              <li><a href="../poppy-ergo-jr/assembly_doc/index.html" title="Assembly guide for Poppy ErgoJr" accesskey="P">previous </a></li>
               <li><a href="snap.html" title="Control a Poppy robot using Snap!" accesskey="N">next </a></li>
+              <li><a href="../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../_sources/quickstarts/discover.txt" rel="nofollow">Show Source</a></li>
@@ -128,13 +130,14 @@
 <li><a class="reference internal" href="#create-the-robot-object">Create the robot object</a></li>
 <li><a class="reference internal" href="#motors">Motors</a></li>
 <li><a class="reference internal" href="#sensors">Sensors</a></li>
+<li><a class="reference internal" href="#go-further">Go further</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../poppy-ergo-jr/assembly_doc/index.html"
-                        title="previous chapter">Assembly guide for a Poppy Ergo Jr robot</a></p>
+                        title="previous chapter">Assembly guide for Poppy ErgoJr</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="snap.html"
                         title="next chapter">Control a Poppy robot using Snap!</a></p>
@@ -172,122 +175,175 @@
                 <div class="body">
                   
   <div class="section" id="discover-your-poppy-robot">
-<span id="quickstart-discover"></span><h1>Discover your Poppy robot<a class="headerlink" href="#discover-your-poppy-robot" title="Permalink to this headline">¶</a></h1>
-<p>The Poppy robots and in particular the <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> objects from Pypot make their best to allow you to easily discover and program you robot.</p>
+<span id="discover-your-poppy-robot"></span><h1>Discover your Poppy robot<a class="headerlink" href="#discover-your-poppy-robot" title="Permalink to this headline">¶</a></h1>
+<p>The Poppy robots and in particular the <a class="reference external" href="../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.Robot</a> objects from pypot make their best to allow you to easily discover and program
+you robot.</p>
 <div class="section" id="where-do-i-put-my-code">
-<h2>Where do I put my code?<a class="headerlink" href="#where-do-i-put-my-code" title="Permalink to this headline">¶</a></h2>
-<p>If you are using a simulator, program directly in your computer, in a Python console (enter <code class="docutils literal"><span class="pre">python</span></code> in your terminal) or in any editor you like (Python IDLE...). Then launch it with the run button or use the command line <code class="docutils literal"><span class="pre">python</span> <span class="pre">myProgram.py</span></code>.</p>
-<p>Otherwise, launch the Ipython notebook server (via the webapp TODO or with this command in SSH <code class="docutils literal"><span class="pre">ipython</span> <span class="pre">notebook</span> <span class="pre">--ip</span> <span class="pre">0.0.0.0</span> <span class="pre">--no-mathjax</span> <span class="pre">--no-browser</span></code>) then connect with your browser to <a class="reference external" href="http://poppy.local:8888">poppy.local:8888</a> TODO ipython screenshot
-Create a new notebook and put your code into it.</p>
-<p>Last solution, SSH into your robot (using Pytty or <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">poppy&#64;poppy.local</span></code>) and open an editor (<code class="docutils literal"><span class="pre">vim</span></code> by default on the Odroid) to put your code directly in the robot.
-Note that if you want to use a more advanced editor, you can use the -X option while connecting in SSH to get XWindows back on your desktop computer.</p>
+<span id="where-do-i-put-my-code"></span><h2>Where do I put my code?<a class="headerlink" href="#where-do-i-put-my-code" title="Permalink to this headline">¶</a></h2>
+<p>If you are using a simulator, program directly in your computer, in a
+Python console (enter <code class="docutils literal"><span class="pre">python</span></code> in your terminal) or in any editor you
+like (Python IDLE...). Then launch it with the run button or use the
+command line <code class="docutils literal"><span class="pre">python</span> <span class="pre">myprogram.py</span></code>.</p>
+<p>Otherwise, launch the IPython notebook server (via the webapp TODO or
+with this command in SSH
+<code class="docutils literal"><span class="pre">ipython</span> <span class="pre">notebook</span> <span class="pre">--ip</span> <span class="pre">0.0.0.0</span> <span class="pre">--no-mathjax</span> <span class="pre">--no-browser</span></code>) then connect
+with your browser to <a class="reference external" href="http://poppy.local:8888">poppy.local:8888</a> TODO
+ipython screenshot Create a new notebook and put your code into it.</p>
+<p>Last solution, SSH into your robot (using Putty or
+<code class="docutils literal"><span class="pre">ssh</span> <span class="pre">poppy&#64;poppy.local</span></code>) and open an editor (<code class="docutils literal"><span class="pre">vim</span></code> by default on the
+Odroid) to put your code directly in the robot. Note that if you want to
+use a more advanced editor, you can use the -X option while connecting
+in SSH to get XWindows back on your desktop computer.</p>
 </div>
 <div class="section" id="create-the-robot-object">
-<h2>Create the robot object<a class="headerlink" href="#create-the-robot-object" title="Permalink to this headline">¶</a></h2>
+<span id="create-the-robot-object"></span><h2>Create the robot object<a class="headerlink" href="#create-the-robot-object" title="Permalink to this headline">¶</a></h2>
 <p>The first (and more difficult!) step is to create this robot object.</p>
-<p>If you have a physical Poppy Humanoid, Poppy Torso or Poppy Ergo Jr, you can directly use the corresponding libraries and create your robot with (let&#8217;s call the robot <em>poppy</em>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
+<p>If you have a physical Poppy Humanoid, Poppy Torso or Poppy Ergo Jr, you
+can directly use the corresponding libraries and create your robot with
+(let&#8217;s call the robot <em>poppy</em>):</p>
+<pre class="code highlight python literal-block">
+<span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
 <span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_torso</span> <span class="kn">import</span> <span class="n">PoppyTorso</span>
+
+<span class="kn">from</span> <span class="nn">poppy_torso</span> <span class="kn">import</span> <span class="n">PoppyTorso</span>
 <span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyTorso</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_ergo_jr</span> <span class="kn">import</span> <span class="n">PoppyErgoJr</span>
+
+<span class="kn">from</span> <span class="nn">poppy_ergo_jr</span> <span class="kn">import</span> <span class="n">PoppyErgoJr</span>
 <span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyErgoJr</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Otherwise, if you use a custom robot defined in a configuration file, use (see <a class="reference internal" href="../pypot/doc/quickstart-configfile.html#quickstart-configfile"><span>here</span></a>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pypot.robot</span>
-<span class="n">poppy</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s">&#39;my_config.json&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
+</pre>
+<p>Otherwise, if you use a custom robot defined in a configuration file,
+use (see <a class="reference external" href="../pypot/doc/quickstart-configfile.html">here</a>):</p>
+<pre class="code highlight python literal-block">
+<span class="kn">import</span> <span class="nn">pypot.robot</span>
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s">'my_config.json'</span><span class="p">)</span>
+</pre>
 </div>
 <div class="section" id="motors">
-<h2>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h2>
-<p>Now that we are connected to the robot, we can list all available motors:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span>
-</pre></div>
-</div>
+<span id="motors"></span><h2>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h2>
+<p>Now that we are connected to the robot, we can list all available
+motors:</p>
+<pre class="code highlight python literal-block">
+<span class="k">print</span><span class="p">(</span><span class="n">poppy</span><span class="o">.</span><span class="n">motors</span><span class="p">)</span>
+</pre>
 <p>You get something like:</p>
-<div class="highlight-python"><div class="highlight"><pre>[&lt;DxlMotor name=l_elbow_y id=44 pos=-0.0&gt;,
- &lt;DxlMotor name=r_elbow_y id=54 pos=-0.0&gt;,
- &lt;DxlMotor name=r_knee_y id=24 pos=0.2&gt;,
- &lt;DxlMotor name=head_y id=37 pos=-22.7&gt;,
- &lt;DxlMotor name=head_z id=36 pos=0.0&gt;,
- &lt;DxlMotor name=r_arm_z id=53 pos=-0.0&gt;,
- &lt;DxlMotor name=r_ankle_y id=25 pos=1.6&gt;,
- &lt;DxlMotor name=r_shoulder_x id=52 pos=1.1&gt;,
- &lt;DxlMotor name=r_shoulder_y id=51 pos=0.0&gt;,
- &lt;DxlMotor name=r_hip_z id=22 pos=0.1&gt;,
- &lt;DxlMotor name=r_hip_x id=21 pos=1.2&gt;,
- &lt;DxlMotor name=r_hip_y id=23 pos=-0.0&gt;,
- &lt;DxlMotor name=l_arm_z id=43 pos=-0.0&gt;,
- &lt;DxlMotor name=l_hip_x id=11 pos=-0.0&gt;,
- &lt;DxlMotor name=l_hip_y id=13 pos=-0.1&gt;,
- &lt;DxlMotor name=l_hip_z id=12 pos=0.1&gt;,
- &lt;DxlMotor name=abs_x id=32 pos=0.0&gt;,
- &lt;DxlMotor name=abs_y id=31 pos=0.4&gt;,
- &lt;DxlMotor name=abs_z id=33 pos=0.0&gt;,
- &lt;DxlMotor name=l_ankle_y id=15 pos=0.8&gt;,
- &lt;DxlMotor name=bust_y id=34 pos=0.8&gt;,
- &lt;DxlMotor name=bust_x id=35 pos=0.2&gt;,
- &lt;DxlMotor name=l_knee_y id=14 pos=0.0&gt;,
- &lt;DxlMotor name=l_shoulder_x id=42 pos=0.4&gt;,
- &lt;DxlMotor name=l_shoulder_y id=41 pos=0.0&gt;]
-</pre></div>
-</div>
-<p>We can make it more readable by extracting the motor&#8217;s name and position:</p>
-<div class="highlight-python"><div class="highlight"><pre>for m in poppy.motors:
-    name = m.name
-    pos = m.present_position
-    print &quot;motor &quot;,name,&quot; in position &#39;,pos
-</pre></div>
-</div>
+<pre class="code highlight python literal-block">
+<span class="p">[</span><span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_elbow_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">44</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_elbow_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">54</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_knee_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">24</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.2</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">head_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">37</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">22.7</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">head_z</span> <span class="nb">id</span><span class="o">=</span><span class="mi">36</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_arm_z</span> <span class="nb">id</span><span class="o">=</span><span class="mi">53</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_ankle_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">25</span> <span class="n">pos</span><span class="o">=</span><span class="mf">1.6</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_shoulder_x</span> <span class="nb">id</span><span class="o">=</span><span class="mi">52</span> <span class="n">pos</span><span class="o">=</span><span class="mf">1.1</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_shoulder_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">51</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_hip_z</span> <span class="nb">id</span><span class="o">=</span><span class="mi">22</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.1</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_hip_x</span> <span class="nb">id</span><span class="o">=</span><span class="mi">21</span> <span class="n">pos</span><span class="o">=</span><span class="mf">1.2</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">r_hip_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">23</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_arm_z</span> <span class="nb">id</span><span class="o">=</span><span class="mi">43</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_hip_x</span> <span class="nb">id</span><span class="o">=</span><span class="mi">11</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_hip_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">13</span> <span class="n">pos</span><span class="o">=-</span><span class="mf">0.1</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_hip_z</span> <span class="nb">id</span><span class="o">=</span><span class="mi">12</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.1</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">abs_x</span> <span class="nb">id</span><span class="o">=</span><span class="mi">32</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">abs_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">31</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.4</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">abs_z</span> <span class="nb">id</span><span class="o">=</span><span class="mi">33</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_ankle_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">15</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.8</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">bust_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">34</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.8</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">bust_x</span> <span class="nb">id</span><span class="o">=</span><span class="mi">35</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.2</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_knee_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">14</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_shoulder_x</span> <span class="nb">id</span><span class="o">=</span><span class="mi">42</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.4</span><span class="o">&gt;</span><span class="p">,</span>
+ <span class="o">&lt;</span><span class="n">DxlMotor</span> <span class="n">name</span><span class="o">=</span><span class="n">l_shoulder_y</span> <span class="nb">id</span><span class="o">=</span><span class="mi">41</span> <span class="n">pos</span><span class="o">=</span><span class="mf">0.0</span><span class="o">&gt;</span><span class="p">]</span>
+</pre>
+<p>We can make it more readable by extracting the motor&#8217;s name and
+position:</p>
+<pre class="code highlight python literal-block">
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'motor {} in position {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span>
+</pre>
 <p>The motors are grouped into motor groups:</p>
-<div class="highlight-python"><div class="highlight"><pre>for group in poppy.alias:
-    print &quot;motor group &quot;,group
+<pre class="code highlight python literal-block">
+<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">alias</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">&quot;motor group &quot;</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
 
-#assuming &quot;head&quot; is one of the motor groups (use &quot;top&quot; for a ergo_jr)
-for m in poppy.head:
-     name = m.name
-    pos = m.present_position
-    print &quot;motor &quot;,name,&quot; in position &#39;,pos
-</pre></div>
-</div>
-<p>Motors are said compliant if they do not apply torque to reach their goal position. They are safe and can be moved by hand. To have the robot move by itself, you must remove the compliance.</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Before removing compliance, be sure each motor is in its allowed angle range, otherwise, the robot may move very quickly to get back to an <em>allowed</em> position</p>
-</div>
+<span class="c"># assuming &quot;head&quot; is one of the motor groups (use &quot;top&quot; for a ergo_jr)</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'motor {} in position {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span>
+</pre>
+<p>Motors are said compliant if they do not apply torque to reach their
+goal position. They are safe and can be moved by hand. To have the robot
+move by itself, you must remove the compliance.</p>
+<blockquote>
+<div><p><strong>warning</strong></p>
+<p>Before removing compliance, be sure each motor is in its allowed angle
+range, otherwise, the robot may move very quickly to get back to an
+<em>allowed</em> position</p>
+</div></blockquote>
 <p>You can do it for the whole robot, for a motor group or for each motor:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#set the whole robot non-compliant</span>
+<pre class="code highlight python literal-block">
+<span class="c"># set the whole robot non-compliant</span>
 <span class="n">poppy</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="n">poppy</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="n">poppy</span><span class="o">.</span><span class="n">l_shoulder_x</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
-</pre></div>
-</div>
-<p>Now that compliance is removed, let make the robot move! Put it in an open place, far from your coffee, fingers and screen and let&#8217;s go.
-The <code class="docutils literal"><span class="pre">present_position</span></code> of a Dynamixel motor is its angular position (in degree) sensed by the integrated rotationnal encoder.
-Its``goal_position`` is the angular position we ask it to achieve and the motor will therefore move toward it:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
+</pre>
+<p>Now that compliance is removed, let make the robot move! Put it in an
+open place, far from your coffee, fingers and screen and let&#8217;s go. The
+<code class="docutils literal"><span class="pre">present_position</span></code> of a Dynamixel motor is its angular position (in
+degree) sensed by the integrated rotationnal encoder. Its<code class="docutils literal"><span class="pre">goal_position</span></code>
+is the angular position we ask it to achieve and the motor will
+therefore move toward it:</p>
+<pre class="code highlight python literal-block">
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">poppy</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mf">20.</span>
 <span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mf">10.</span>
 
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c">#wait 2 seconds</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c"># wait 2 seconds</span>
 
 <span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.</span>
-</pre></div>
-</div>
-<p>see <a class="reference internal" href="../pypot/doc/motor.html#motor"><span>the motors documentation</span></a> for more advanced control.</p>
+</pre>
+<p>See the <a class="reference external" href="../pypot/doc/motor.html">motors documentation</a> for more advanced control.</p>
 </div>
 <div class="section" id="sensors">
-<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
-<p>TODO</p>
-<p>Next step is to use primitives, which is decribed in <a class="reference internal" href="../pypot/doc/quickstart-primitive.html#quickstart-primitive"><span>this tuto</span></a></p>
+<span id="sensors"></span><h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<p>As Poppy Creatures are made of both motors and sensors, you can naturally also access those sensors.</p>
+<p>First, you can retrieve all sensors attached to your robot via:</p>
+<pre class="code highlight python literal-block">
+<span class="k">print</span><span class="p">(</span><span class="n">poppy</span><span class="o">.</span><span class="n">sensors</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pypot</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">imagefeature</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">MarkerDetector</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7fb11f05f4d0</span><span class="o">&gt;</span><span class="p">,</span>
+     <span class="o">&lt;</span><span class="n">pypot</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">opencvcam</span><span class="o">.</span><span class="n">OpenCVCamera</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7fb11f042650</span><span class="o">&gt;</span><span class="p">]</span>
+</pre>
+<p>You can also get their names:</p>
+<pre class="code highlight python literal-block">
+<span class="k">print</span><span class="p">([</span><span class="n">sensor</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">sensor</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">sensors</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s">'marker_detector'</span><span class="p">,</span> <span class="s">'camera'</span><span class="p">]</span>
+</pre>
+<p>and then directly use this name to access the sensor:</p>
+<pre class="code highlight python literal-block">
+<span class="k">print</span> <span class="p">(</span><span class="n">poppy</span><span class="o">.</span><span class="n">camera</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">&lt;</span><span class="n">pypot</span><span class="o">.</span><span class="n">sensor</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">opencvcam</span><span class="o">.</span><span class="n">OpenCVCamera</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x7fb11f042650</span><span class="o">&gt;</span>
+</pre>
+<p>The present sensors vary depending on which Poppy Creature you are using. For instance, the ErgoJr has:</p>
+<ul class="simple">
+<li>a camera</li>
+<li>image feature detection (marker detection in the example above)</li>
+</ul>
+<p>You can then introspect each sensor to get available registers:</p>
+<pre class="code highlight python literal-block">
+<span class="k">print</span><span class="p">(</span><span class="n">poppy</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">registers</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="s">'frame'</span><span class="p">,</span> <span class="s">'resolution'</span><span class="p">,</span> <span class="s">'fps'</span><span class="p">,</span> <span class="s">'index'</span><span class="p">]</span>
+</pre>
+<p>And then read the value you are interested in:</p>
+<pre class="code highlight python literal-block">
+<span class="k">print</span><span class="p">(</span><span class="n">poppy</span><span class="o">.</span><span class="n">camera</span><span class="o">.</span><span class="n">resolution</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">]</span>
+</pre>
+<p>More details on the sensors and how you can add extra sensors are given in the <a class="reference external" href="TODO">extending sensors</a> section.</p>
+<p>.. note:: We separate motors and sensors even if this is kind of an artificial definition here. Indeed, we used servomotors which can be seen both as motors and sensors.</p>
+</div>
+<div class="section" id="go-further">
+<span id="go-further"></span><h2>Go further<a class="headerlink" href="#go-further" title="Permalink to this headline">¶</a></h2>
+<p>Next step is to use primitives, which is decribed in
+<a class="reference external" href="../pypot/quickstart-primitive.html">this tuto</a>.</p>
 </div>
 </div>
 
@@ -310,8 +366,9 @@ Its``goal_position`` is the angular position we ask it to achieve and the motor 
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="../poppy-ergo-jr/assembly_doc/index.html" title="Assembly guide for a Poppy Ergo Jr robot" >previous</a></li>
+        <li><a href="../poppy-ergo-jr/assembly_doc/index.html" title="Assembly guide for Poppy ErgoJr" >previous</a></li>
         <li><a href="snap.html" title="Control a Poppy robot using Snap!" >next</a></li>
+        <li><a href="../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

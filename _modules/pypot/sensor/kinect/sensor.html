@@ -160,14 +160,14 @@
 <span class="n">skeleton_joints</span> <span class="o">=</span> <span class="n">torso_joints</span> <span class="o">+</span> <span class="n">left_arm_joints</span> <span class="o">+</span> <span class="n">right_arm_joints</span> <span class="o">+</span> <span class="n">left_leg_joints</span> <span class="o">+</span> <span class="n">right_leg_joints</span>
 
 
-<div class="viewcode-block" id="Skeleton"><a class="viewcode-back" href="../../../../pypot/doc/pypot.sensor.kinect.html#pypot.sensor.kinect.sensor.Skeleton">[docs]</a><span class="k">class</span> <span class="nc">Skeleton</span><span class="p">(</span><span class="n">namedtuple</span><span class="p">(</span><span class="s">&#39;Skeleton&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;timestamp&#39;</span><span class="p">,</span> <span class="s">&#39;user_id&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">skeleton_joints</span><span class="p">)):</span>
+<div class="viewcode-block" id="Skeleton"><a class="viewcode-back" href="../../../../pypot/pypot/doc/pypot.sensor.html#pypot.sensor.kinect.sensor.Skeleton">[docs]</a><span class="k">class</span> <span class="nc">Skeleton</span><span class="p">(</span><span class="n">namedtuple</span><span class="p">(</span><span class="s">&#39;Skeleton&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;timestamp&#39;</span><span class="p">,</span> <span class="s">&#39;user_id&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">skeleton_joints</span><span class="p">)):</span>
     <span class="n">joints</span> <span class="o">=</span> <span class="n">skeleton_joints</span>
 
 </div>
 <span class="n">Joint</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s">&#39;Joint&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;position&#39;</span><span class="p">,</span> <span class="s">&#39;orientation&#39;</span><span class="p">,</span> <span class="s">&#39;pixel_coordinate&#39;</span><span class="p">))</span>
 
 
-<div class="viewcode-block" id="KinectSensor"><a class="viewcode-back" href="../../../../pypot/doc/pypot.sensor.kinect.html#pypot.sensor.kinect.sensor.KinectSensor">[docs]</a><span class="k">class</span> <span class="nc">KinectSensor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="KinectSensor"><a class="viewcode-back" href="../../../../pypot/pypot/doc/pypot.sensor.html#pypot.sensor.kinect.sensor.KinectSensor">[docs]</a><span class="k">class</span> <span class="nc">KinectSensor</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_skeleton</span> <span class="o">=</span> <span class="p">{}</span>
@@ -181,11 +181,11 @@
         <span class="n">t</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
         <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
-<div class="viewcode-block" id="KinectSensor.remove_user"><a class="viewcode-back" href="../../../../pypot/doc/pypot.sensor.kinect.html#pypot.sensor.kinect.sensor.KinectSensor.remove_user">[docs]</a>    <span class="k">def</span> <span class="nf">remove_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_index</span><span class="p">):</span>
+<div class="viewcode-block" id="KinectSensor.remove_user"><a class="viewcode-back" href="../../../../pypot/pypot/doc/pypot.sensor.html#pypot.sensor.kinect.sensor.KinectSensor.remove_user">[docs]</a>    <span class="k">def</span> <span class="nf">remove_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_index</span><span class="p">):</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
             <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_skeleton</span><span class="p">[</span><span class="n">user_index</span><span class="p">]</span>
 </div>
-<div class="viewcode-block" id="KinectSensor.remove_all_users"><a class="viewcode-back" href="../../../../pypot/doc/pypot.sensor.kinect.html#pypot.sensor.kinect.sensor.KinectSensor.remove_all_users">[docs]</a>    <span class="k">def</span> <span class="nf">remove_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="KinectSensor.remove_all_users"><a class="viewcode-back" href="../../../../pypot/pypot/doc/pypot.sensor.html#pypot.sensor.kinect.sensor.KinectSensor.remove_all_users">[docs]</a>    <span class="k">def</span> <span class="nf">remove_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_skeleton</span> <span class="o">=</span> <span class="p">{}</span>
 </div>
@@ -199,7 +199,7 @@
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_skeleton</span><span class="p">[</span><span class="n">skeleton</span><span class="o">.</span><span class="n">user_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">skeleton</span>
 
-<div class="viewcode-block" id="KinectSensor.get_skeleton"><a class="viewcode-back" href="../../../../pypot/doc/pypot.sensor.kinect.html#pypot.sensor.kinect.sensor.KinectSensor.get_skeleton">[docs]</a>    <span class="k">def</span> <span class="nf">get_skeleton</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="KinectSensor.get_skeleton"><a class="viewcode-back" href="../../../../pypot/pypot/doc/pypot.sensor.html#pypot.sensor.kinect.sensor.KinectSensor.get_skeleton">[docs]</a>    <span class="k">def</span> <span class="nf">get_skeleton</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
             <span class="n">md</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sub_skel</span><span class="o">.</span><span class="n">recv_json</span><span class="p">()</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sub_skel</span><span class="o">.</span><span class="n">recv</span><span class="p">()</span>
@@ -217,7 +217,7 @@
 
             <span class="bp">self</span><span class="o">.</span><span class="n">tracked_skeleton</span> <span class="o">=</span> <span class="n">Skeleton</span><span class="p">(</span><span class="n">md</span><span class="p">[</span><span class="s">&#39;timestamp&#39;</span><span class="p">],</span> <span class="n">md</span><span class="p">[</span><span class="s">&#39;user_index&#39;</span><span class="p">],</span> <span class="o">*</span><span class="n">joints</span><span class="p">)</span>
 </div>
-<div class="viewcode-block" id="KinectSensor.run"><a class="viewcode-back" href="../../../../pypot/doc/pypot.sensor.kinect.html#pypot.sensor.kinect.sensor.KinectSensor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="KinectSensor.run"><a class="viewcode-back" href="../../../../pypot/pypot/doc/pypot.sensor.html#pypot.sensor.kinect.sensor.KinectSensor.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">cv2</span><span class="o">.</span><span class="n">startWindowThread</span><span class="p">()</span>
         <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
             <span class="n">img</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">480</span><span class="p">,</span> <span class="mi">640</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>

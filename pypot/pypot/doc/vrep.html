@@ -78,6 +78,7 @@
               </li>
 
             
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../../../_sources/pypot/pypot/doc/vrep.txt" rel="nofollow">Show Source</a></li>
@@ -164,15 +165,15 @@
 <p>As it is often easier to work in simulation rather than with the real robot, pypot has been linked with the <a class="reference external" href="http://www.coppeliarobotics.com">V-REP simulator</a>. It is described as the &#8220;Swiss army knife among robot simulators&#8221; and is a very powerful tool to quickly (re)create robotics setup. As presenting V-REP is way beyond the scope of this tutorial, we will here assume that you are already familiar with this tool. Otherwise, you should directly refer to <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/index.html">V-REP documentation</a>.</p>
 <p>Details about how to connect pypot and V-REP can be found in <a class="reference external" href="https://forum.poppy-project.org/t/howto-connect-pypot-to-your-simulated-version-of-poppy-humanoid-in-v-rep/332">this post</a>.</p>
 <p>The connection between pypot and V-REP was designed to let you seamlessly switch from your real robot to the simulated one. It is based on <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">V-REP&#8217;s remote API</a>.</p>
-<p>In order to connect to V-REP through pypot, you will only need to install the <a class="reference external" href="http://www.coppeliarobotics.com/downloads.html">V-REP</a> simulator. Pypot comes with a specific <code class="xref py py-class docutils literal"><span class="pre">VrepIO</span></code> designed to communicate with V-REP through its <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">remote API</a>.</p>
+<p>In order to connect to V-REP through pypot, you will only need to install the <a class="reference external" href="http://www.coppeliarobotics.com/downloads.html">V-REP</a> simulator. Pypot comes with a specific <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO" title="pypot.vrep.io.VrepIO"><code class="xref py py-class docutils literal"><span class="pre">VrepIO</span></code></a> designed to communicate with V-REP through its <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">remote API</a>.</p>
 <p>This IO can be used to:</p>
 <ul class="simple">
-<li>connect to the V-REP server : <code class="xref py py-class docutils literal"><span class="pre">VrepIO</span></code></li>
-<li>load a scene : <code class="xref py py-meth docutils literal"><span class="pre">load_scene()</span></code></li>
-<li>start/stop/restart a simulation : <code class="xref py py-meth docutils literal"><span class="pre">start_simulation()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">stop_simulation()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">restart_simulation()</span></code></li>
-<li>pause/resume the simulation : <code class="xref py py-meth docutils literal"><span class="pre">pause_simulation()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">resume_simulation()</span></code></li>
-<li>get/set a motor position : <code class="xref py py-meth docutils literal"><span class="pre">get_motor_position()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">set_motor_position()</span></code></li>
-<li>get an object position/orienation : <code class="xref py py-meth docutils literal"><span class="pre">get_object_position()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">get_object_orientation()</span></code></li>
+<li>connect to the V-REP server : <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO" title="pypot.vrep.io.VrepIO"><code class="xref py py-class docutils literal"><span class="pre">VrepIO</span></code></a></li>
+<li>load a scene : <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.load_scene" title="pypot.vrep.io.VrepIO.load_scene"><code class="xref py py-meth docutils literal"><span class="pre">load_scene()</span></code></a></li>
+<li>start/stop/restart a simulation : <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.start_simulation" title="pypot.vrep.io.VrepIO.start_simulation"><code class="xref py py-meth docutils literal"><span class="pre">start_simulation()</span></code></a>, <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.stop_simulation" title="pypot.vrep.io.VrepIO.stop_simulation"><code class="xref py py-meth docutils literal"><span class="pre">stop_simulation()</span></code></a>, <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.restart_simulation" title="pypot.vrep.io.VrepIO.restart_simulation"><code class="xref py py-meth docutils literal"><span class="pre">restart_simulation()</span></code></a></li>
+<li>pause/resume the simulation : <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.pause_simulation" title="pypot.vrep.io.VrepIO.pause_simulation"><code class="xref py py-meth docutils literal"><span class="pre">pause_simulation()</span></code></a>, <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.resume_simulation" title="pypot.vrep.io.VrepIO.resume_simulation"><code class="xref py py-meth docutils literal"><span class="pre">resume_simulation()</span></code></a></li>
+<li>get/set a motor position : <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.get_motor_position" title="pypot.vrep.io.VrepIO.get_motor_position"><code class="xref py py-meth docutils literal"><span class="pre">get_motor_position()</span></code></a>, <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.set_motor_position" title="pypot.vrep.io.VrepIO.set_motor_position"><code class="xref py py-meth docutils literal"><span class="pre">set_motor_position()</span></code></a></li>
+<li>get an object position/orienation : <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.get_object_position" title="pypot.vrep.io.VrepIO.get_object_position"><code class="xref py py-meth docutils literal"><span class="pre">get_object_position()</span></code></a>, <a class="reference internal" href="pypot.vrep.html#pypot.vrep.io.VrepIO.get_object_orientation" title="pypot.vrep.io.VrepIO.get_object_orientation"><code class="xref py py-meth docutils literal"><span class="pre">get_object_orientation()</span></code></a></li>
 </ul>
 </div>
 <div class="section" id="switch-between-the-simulation-and-the-real-robot-in-a-single-line-of-code">
@@ -222,6 +223,7 @@
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

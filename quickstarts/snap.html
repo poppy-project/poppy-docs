@@ -93,6 +93,7 @@
             
               <li><a href="discover.html" title="Discover your Poppy robot" accesskey="P">previous </a></li>
               <li><a href="vrep.html" title="Using V-rep to simulate a Poppy Humanoid robot" accesskey="N">next </a></li>
+              <li><a href="../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../_sources/quickstarts/snap.txt" rel="nofollow">Show Source</a></li>
@@ -190,83 +191,91 @@
                 <div class="body">
                   
   <div class="section" id="control-a-poppy-robot-using-snap">
-<span id="quickstart-snap"></span><h1>Control a Poppy robot using Snap!<a class="headerlink" href="#control-a-poppy-robot-using-snap" title="Permalink to this headline">¶</a></h1>
+<span id="control-a-poppy-robot-using-snap"></span><h1>Control a Poppy robot using Snap!<a class="headerlink" href="#control-a-poppy-robot-using-snap" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introducing-snap">
-<h2>Introducing Snap!<a class="headerlink" href="#introducing-snap" title="Permalink to this headline">¶</a></h2>
-<p><a href="http://snap.berkeley.edu" target="_blank">Snap!</a> is a &#8220;very powerful visual, drag-and-drop programming language.
-It is an extended reimplementation of Scratch (a project of the Lifelong Kindergarten Group at the MIT Media Lab) that allows you to Build Your Own Blocks&#8221;.
-It is an extremely efficient tool to learn how to program for kids or even college students and also a powerful prototyping method for artists.</p>
-<p>Snap! is open-source and it is entirely written in javascript, you only need a browser connected to the Poppy Creature webserver. No installation is required on your computer!</p>
-<a class="reference internal image-reference" href="../_images/snap-header.png"><img alt="snap visual programming language" class="align-center" src="../_images/snap-header.png" style="width: 600px;" /></a>
-<p>An introduction to this laguage can be found in the <a href="http://snap.berkeley.edu/SnapManual.pdf" target="_blank">Snap! reference manual</a>.</p>
+<span id="introducing-snap"></span><h2>Introducing Snap!<a class="headerlink" href="#introducing-snap" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://snap.berkeley.edu">snap visual programming language</a> is a &#8220;very powerful visual, drag-and-drop programming
+language. It is an extended reimplementation of Scratch (a project of
+the Lifelong Kindergarten Group at the MIT Media Lab) that allows you to
+Build Your Own Blocks&#8221;. It is an extremely efficient tool to learn how
+to program for kids or even college students and also a powerful
+prototyping method for artists.</p>
+<p>Snap! is open-source and it is entirely written in javascript, you only
+need a browser connected to the Poppy Creature webserver. No
+installation is required on your computer!</p>
+<p><img alt="image" src="../_images/snap-header.png" /></p>
+<p>An introduction to this laguage can be found in the <a class="reference external" href="http://snap.berkeley.edu/SnapManual.pdf">Snap! reference manual</a>.</p>
 </div>
 <div class="section" id="create-the-snap-server">
-<h2>Create the Snap! server<a class="headerlink" href="#create-the-snap-server" title="Permalink to this headline">¶</a></h2>
+<span id="create-the-snap-server"></span><h2>Create the Snap! server<a class="headerlink" href="#create-the-snap-server" title="Permalink to this headline">¶</a></h2>
 <p>There are several ways of creating a Snap! server to control your robot.</p>
-<p>Warning! At some point of this tutorial, you will have to import Poppy Humanoid&#8217;s specific Snap! blocks.
-This may take a few minutes, so keep the script running if your browser asks what to do.</p>
+<p>Warning! At some point of this tutorial, you will have to import Poppy
+Humanoid&#8217;s specific Snap! blocks. This may take a few minutes, so keep
+the script running if your browser asks what to do.</p>
 <div class="section" id="start-the-server-on-the-robot">
-<h3>Start the server on the robot<a class="headerlink" href="#start-the-server-on-the-robot" title="Permalink to this headline">¶</a></h3>
-<p>The easiest way of controlling your Poppy robot with Snap! is to use the webapp TODO.
-This will launch the server and use the Snap! software installed on the robot.</p>
-<p>Then hit the folder button, select open...-&gt;example and choose pypot-snap-block.</p>
-<a class="reference internal image-reference" href="../_images/snap-open-examples.png"><img alt="snap visual programming language" class="align-center" src="../_images/snap-open-examples.png" style="width: 300px;" /></a>
-<p>Alternately (if you don&#8217;t have the webapp), you can use the following command inside the robot:</p>
-<div class="highlight-python"><div class="highlight"><pre>poppy-snap poppy-humanoid --no-browser
-</pre></div>
-</div>
-<p>The command gives you an URL (something like <a href="http://snap.berkeley.edu/snapsource/snap.html#open:http://poppy.local:6969/snap-blocks.xml" target="_blank">http://snap.berkeley.edu/snapsource/snap.html#open:http://-ROBOT-IP-:6969/snap-blocks.xml</a>). Open this URL in your web browser.</p>
+<span id="start-the-server-on-the-robot"></span><h3>Start the server on the robot<a class="headerlink" href="#start-the-server-on-the-robot" title="Permalink to this headline">¶</a></h3>
+<p>The easiest way of controlling your Poppy robot with Snap! is to use the
+webapp TODO. This will launch the server and use the Snap! software
+installed on the robot.</p>
+<p>Then hit the folder button, select open...-&gt;example and choose
+pypot-snap-block.</p>
+<p><img alt="snap visual programming language" src="../_images/snap-open-examples.png" /></p>
+<p>Alternately (if you don&#8217;t have the webapp), you can use the following
+command inside the robot:</p>
+<pre class="literal-block">
+poppy-snap poppy-humanoid --no-browser
+</pre>
+<p>The command gives you an URL (something like <a class="reference external" href="http://snap.berkeley.edu/snapsource/snap.html#open:http://poppy.local:6969/snap-blocks.xml">http://snap.berkeley.edu/snapsource/snap.html#open:http://-ROBOT-IP-:6969/snap-blocks.xml</a>).
+Open this URL in your web browser.</p>
 </div>
 <div class="section" id="start-the-server-on-your-computer">
-<h3>Start the server on your computer<a class="headerlink" href="#start-the-server-on-your-computer" title="Permalink to this headline">¶</a></h3>
+<span id="start-the-server-on-your-computer"></span><h3>Start the server on your computer<a class="headerlink" href="#start-the-server-on-your-computer" title="Permalink to this headline">¶</a></h3>
 <p>Use this method if you use the motors directly linked to your computer:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
-<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">(</span><span class="n">use_snap</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">poppy</span><span class="o">.</span><span class="n">snap</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
-</div>
+<pre class="literal-block">
+from poppy_humanoid import PoppyHumanoid
+poppy = PoppyHumanoid(use_snap=True)
+poppy.snap.run()
+</pre>
 <p>You can even use simultaneously Snap! and V-rep:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
-<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">(</span><span class="n">simulator</span><span class="o">=</span><span class="s">&#39;vrep&#39;</span><span class="p">,</span> <span class="n">use_snap</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">poppy</span><span class="o">.</span><span class="n">snap</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Leave the Python script running. In you web browser, open the following URL:</p>
-<p><a href="http://snap.berkeley.edu/snapsource/snap.html#open:http://127.0.0.1:6969/snap-blocks.xml" target="_blank">http://snap.berkeley.edu/snapsource/snap.html#open:http://127.0.0.1:6969/snap-blocks.xml</a></p>
-<p>Last solution: you can even, if you don&#8217;t have a reliable internet connection when you use Snap!, download and install Snap! directly on your computer <a href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks" target="_blank">from here</a>.</p>
-<p>Then, open the snap.html file with your web browser and use the folder button-&gt;import.. to import the Poppy specific blocks located in pypot/pypot/server/snap_projects.</p>
+<pre class="literal-block">
+from poppy_humanoid import PoppyHumanoid
+poppy = PoppyHumanoid(simulator='vrep', use_snap=True)
+poppy.snap.run()
+</pre>
+<p>Leave the Python script running. In you web browser, open the following
+URL:</p>
+<p><a class="reference external" href="http://snap.berkeley.edu/snapsource/snap.html#open:http://127.0.0.1:6969/snap-blocks.xml">http://snap.berkeley.edu/snapsource/snap.html#open:http://127.0.0.1:6969/snap-blocks.xml</a></p>
+<p>Last solution: you can even, if you don&#8217;t have a reliable internet
+connection when you use Snap!, download and install Snap! directly on
+your computer <a class="reference external" href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks">from here</a>.</p>
+<p>Then, open the snap.html file with your web browser and use the folder
+button-&gt;import.. to import the Poppy specific blocks located in
+<em>pypot/pypot/server/snap_projects</em>.</p>
 </div>
 </div>
 <div class="section" id="controlling-the-robot">
-<h2>Controlling the robot<a class="headerlink" href="#controlling-the-robot" title="Permalink to this headline">¶</a></h2>
+<span id="controlling-the-robot"></span><h2>Controlling the robot<a class="headerlink" href="#controlling-the-robot" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="pypot-snap-blocks">
-<h3>Pypot Snap! blocks<a class="headerlink" href="#pypot-snap-blocks" title="Permalink to this headline">¶</a></h3>
+<span id="pypot-snap-blocks"></span><h3>Pypot Snap! blocks<a class="headerlink" href="#pypot-snap-blocks" title="Permalink to this headline">¶</a></h3>
 <p>The Poppy Snap! blocks are the following:</p>
-<a class="reference internal image-reference" href="../_images/snap-basic-blocks.png"><img alt="poppy specific snap blocks" class="align-left" src="../_images/snap-basic-blocks.png" style="width: 300px;" /></a>
+<p><img alt="poppy specific snap blocks" src="../_images/snap-basic-blocks.png" /></p>
 <p>Those blocks can be used to respectively:</p>
 <ul class="simple">
 <li>test if connection with poppy robot is working well</li>
 <li>get a list of all motors name</li>
 <li>get a list of all motors refered by an alias</li>
-<li>get the value of a register motor (e.g. get motor &#8220;head_z&#8221; register &#8220;present_load&#8221;)</li>
+<li>get the value of a register motor (e.g. get motor &#8220;head_z&#8221; register
+&#8220;present_load&#8221;)</li>
 <li>get the index of a motor</li>
 <li>get all alias avaible for the current robot</li>
 </ul>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
 <ul class="simple">
 <li>set a motor position in a specified time</li>
 <li>turn a motor compliant or not</li>
-<li>set a register of a motor (e.g. set motor &#8220;head_z&#8221; register &#8220;present_load&#8221; to 10)</li>
-<li>create/attach a move to some motors (you have to create a move before to record or replay it)</li>
+<li>set a register of a motor (e.g. set motor &#8220;head_z&#8221; register
+&#8220;present_load&#8221; to 10)</li>
+<li>create/attach a move to some motors (you have to create a move
+before to record or replay it)</li>
 <li>stop the record of a move</li>
 <li>start the record of a move</li>
 <li>play a move at a defined speed</li>
@@ -274,44 +283,42 @@ This will launch the server and use the Snap! software installed on the robot.</
 <li>play concurently many moves</li>
 <li>play sequentialy many moves</li>
 </ul>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-<p>You can easily see all blocks relative to poppy in Snap! with the &#8220;find blocks&#8221; feature. You have to right-click in the left part of Snap! page and select &#8220;find blocks&#8221;:</p>
-<a class="reference internal image-reference" href="../_images/snap-right-click.png"><img alt="poppy specific snap blocks" class="align-center" src="../_images/snap-right-click.png" style="width: 400px;" /></a>
+<p>You can easily see all blocks relative to poppy in Snap! with the &#8220;find
+blocks&#8221; feature. You have to right-click in the left part of Snap! page
+and select &#8220;find blocks&#8221;:</p>
+<p><img alt="poppy specific snap blocks" src="../_images/snap-right-click.png" /></p>
 </div>
 <div class="section" id="use-a-slider-to-move-a-motor">
-<h3>Use a slider to move a motor<a class="headerlink" href="#use-a-slider-to-move-a-motor" title="Permalink to this headline">¶</a></h3>
-<p>To control a motor via a slider you need to make a variable - we will call it head position.</p>
-<a class="reference internal image-reference" href="../_images/snap-create-variable.png"><img alt="create a variable with snap" class="align-center" src="../_images/snap-create-variable.png" style="width: 400px;" /></a>
-<p>Then right click on it and use the slider option. Change the slider min/max to (-50, 50).</p>
-<a class="reference internal image-reference" href="../_images/snap-slider.png"><img alt="create a variable with snap" class="align-center" src="../_images/snap-slider.png" style="width: 200px;" /></a>
-<p>Then, connect it to a motor: use the motor(s) goto position block and put it inside a forever loop. Add a wait for performance issue.</p>
-<a class="reference internal image-reference" href="../_images/snap-slider-example.png"><img alt="create a variable with snap" class="align-center" src="../_images/snap-slider-example.png" style="width: 400px;" /></a>
+<span id="use-a-slider-to-move-a-motor"></span><h3>Use a slider to move a motor<a class="headerlink" href="#use-a-slider-to-move-a-motor" title="Permalink to this headline">¶</a></h3>
+<p>To control a motor via a slider you need to make a variable - we will
+call it head position.</p>
+<p><img alt="create a variable with snap" src="../_images/snap-create-variable.png" /></p>
+<p>Then right click on it and use the slider option. Change the slider
+min/max to (-50, 50).</p>
+<p><img alt="create a variable with snap" src="../_images/snap-slider.png" /></p>
+<p>Then, connect it to a motor: use the motor(s) goto position block and
+put it inside a forever loop. Add a wait for performance issue.</p>
+<p><img alt="create a variable with snap" src="../_images/snap-slider-example.png" /></p>
 </div>
 <div class="section" id="example-playing-a-sinus-on-a-motor">
-<h3>Example: playing a sinus on a motor<a class="headerlink" href="#example-playing-a-sinus-on-a-motor" title="Permalink to this headline">¶</a></h3>
-<p>Having a motor position follow a sinus function is very useful to get smooth periodic moves, as waving with the hand or saying &#8216;no&#8217; with the head.</p>
-<p>Can you, from this image, program your robot to say &#8216;yes&#8217; or &#8216;no&#8217; with the head?</p>
-<a class="reference internal image-reference" href="../_images/snap-sinus.png"><img alt="create a variable with snap" class="align-center" src="../_images/snap-sinus.png" style="width: 800px;" /></a>
+<span id="example-playing-a-sinus-on-a-motor"></span><h3>Example: playing a sinus on a motor<a class="headerlink" href="#example-playing-a-sinus-on-a-motor" title="Permalink to this headline">¶</a></h3>
+<p>Having a motor position follow a sinus function is very useful to get
+smooth periodic moves, as waving with the hand or saying &#8216;no&#8217; with the
+head.</p>
+<p>Can you, from this image, program your robot to say &#8216;yes&#8217; or &#8216;no&#8217; with
+the head?</p>
+<p><img alt="create a variable with snap" src="../_images/snap-sinus.png" /></p>
 </div>
 </div>
 <div class="section" id="record-and-play-moves-using-snap">
-<h2>Record and play moves using Snap!<a class="headerlink" href="#record-and-play-moves-using-snap" title="Permalink to this headline">¶</a></h2>
-<p>If you opened the Snap! server using the webapp, you can directly load the example called pypot-snap-record-orchestration-demo
-instead of poppy-snap-blocks to find a ready-to-use Snap! project dedicated to the record and replay of moves.</p>
-<p>Otherwise, use the folder button-&gt;import.. and select pypot/pypot/server/snap_projects/pypot-snap-record-orchestration-demo.xml</p>
-<a class="reference internal image-reference" href="../_images/snap-orchestration-demo.png"><img alt="record and replay moves using snap" class="align-center" src="../_images/snap-orchestration-demo.png" style="width: 800px;" /></a>
+<span id="record-and-play-moves-using-snap"></span><h2>Record and play moves using Snap!<a class="headerlink" href="#record-and-play-moves-using-snap" title="Permalink to this headline">¶</a></h2>
+<p>If you opened the Snap! server using the webapp, you can directly load
+the example called pypot-snap-record-orchestration-demo instead of
+poppy-snap-blocks to find a ready-to-use Snap! project dedicated to the
+record and replay of moves.</p>
+<p>Otherwise, use the folder button-&gt;import.. and select
+<em>pypot/pypot/server/snap_projects/pypot-snap-record-orchestration-demo.xml</em></p>
+<p><img alt="record and replay moves using snap" src="../_images/snap-orchestration-demo.png" /></p>
 </div>
 </div>
 
@@ -336,6 +343,7 @@ instead of poppy-snap-blocks to find a ready-to-use Snap! project dedicated to t
       
         <li><a href="discover.html" title="Discover your Poppy robot" >previous</a></li>
         <li><a href="vrep.html" title="Using V-rep to simulate a Poppy Humanoid robot" >next</a></li>
+        <li><a href="../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

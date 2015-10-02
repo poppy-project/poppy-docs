@@ -161,7 +161,7 @@
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="from_config"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.from_config">[docs]</a><span class="k">def</span> <span class="nf">from_config</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">sync</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">use_dummy_io</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+<div class="viewcode-block" id="from_config"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.from_config">[docs]</a><span class="k">def</span> <span class="nf">from_config</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">sync</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">use_dummy_io</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Returns a :class:`~pypot.robot.robot.Robot` instance created from a configuration dictionnary.</span>
 
 <span class="sd">        :param dict config: robot configuration dictionary</span>
@@ -227,7 +227,7 @@
     <span class="k">return</span> <span class="n">robot</span>
 
 </div>
-<div class="viewcode-block" id="motor_from_confignode"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.motor_from_confignode">[docs]</a><span class="k">def</span> <span class="nf">motor_from_confignode</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">motor_name</span><span class="p">):</span>
+<div class="viewcode-block" id="motor_from_confignode"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.motor_from_confignode">[docs]</a><span class="k">def</span> <span class="nf">motor_from_confignode</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">motor_name</span><span class="p">):</span>
     <span class="n">params</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s">&#39;motors&#39;</span><span class="p">][</span><span class="n">motor_name</span><span class="p">]</span>
 
     <span class="nb">type</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">]</span>
@@ -254,7 +254,7 @@
     <span class="k">return</span> <span class="n">m</span>
 
 </div>
-<div class="viewcode-block" id="sensor_from_confignode"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.sensor_from_confignode">[docs]</a><span class="k">def</span> <span class="nf">sensor_from_confignode</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">s_name</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
+<div class="viewcode-block" id="sensor_from_confignode"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.sensor_from_confignode">[docs]</a><span class="k">def</span> <span class="nf">sensor_from_confignode</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">s_name</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
     <span class="n">args</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s">&#39;sensors&#39;</span><span class="p">][</span><span class="n">s_name</span><span class="p">]</span>
     <span class="n">cls_name</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">)</span>
 
@@ -265,7 +265,7 @@
     <span class="k">return</span> <span class="n">SensorCls</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">s_name</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="dxl_io_from_confignode"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.dxl_io_from_confignode">[docs]</a><span class="k">def</span> <span class="nf">dxl_io_from_confignode</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">c_params</span><span class="p">,</span> <span class="n">ids</span><span class="p">,</span> <span class="n">strict</span><span class="p">):</span>
+<div class="viewcode-block" id="dxl_io_from_confignode"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.dxl_io_from_confignode">[docs]</a><span class="k">def</span> <span class="nf">dxl_io_from_confignode</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">c_params</span><span class="p">,</span> <span class="n">ids</span><span class="p">,</span> <span class="n">strict</span><span class="p">):</span>
     <span class="n">port</span> <span class="o">=</span> <span class="n">c_params</span><span class="p">[</span><span class="s">&#39;port&#39;</span><span class="p">]</span>
 
     <span class="k">if</span> <span class="n">port</span> <span class="o">==</span> <span class="s">&#39;auto&#39;</span><span class="p">:</span>
@@ -305,7 +305,7 @@
     <span class="k">return</span> <span class="n">dxl_io</span>
 
 </div>
-<div class="viewcode-block" id="check_motor_limits"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.check_motor_limits">[docs]</a><span class="k">def</span> <span class="nf">check_motor_limits</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">dxl_io</span><span class="p">,</span> <span class="n">motor_names</span><span class="p">):</span>
+<div class="viewcode-block" id="check_motor_limits"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.check_motor_limits">[docs]</a><span class="k">def</span> <span class="nf">check_motor_limits</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">dxl_io</span><span class="p">,</span> <span class="n">motor_names</span><span class="p">):</span>
     <span class="n">changed_angle_limits</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">motor_names</span><span class="p">:</span>
@@ -330,7 +330,7 @@
         <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="instatiate_motors"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.instatiate_motors">[docs]</a><span class="k">def</span> <span class="nf">instatiate_motors</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
+<div class="viewcode-block" id="instatiate_motors"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.instatiate_motors">[docs]</a><span class="k">def</span> <span class="nf">instatiate_motors</span><span class="p">(</span><span class="n">config</span><span class="p">):</span>
     <span class="n">motors</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">for</span> <span class="n">m_name</span><span class="p">,</span> <span class="n">m_params</span> <span class="ow">in</span> <span class="n">config</span><span class="p">[</span><span class="s">&#39;motors&#39;</span><span class="p">]:</span>
@@ -351,7 +351,7 @@
     <span class="k">return</span> <span class="n">motors</span>
 
 </div>
-<div class="viewcode-block" id="make_alias"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.make_alias">[docs]</a><span class="k">def</span> <span class="nf">make_alias</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
+<div class="viewcode-block" id="make_alias"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.make_alias">[docs]</a><span class="k">def</span> <span class="nf">make_alias</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
     <span class="n">alias</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s">&#39;motorgroups&#39;</span><span class="p">]</span>
 
     <span class="c"># Create the alias for the motorgroups</span>
@@ -365,7 +365,7 @@
                     <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;config&#39;</span><span class="p">:</span> <span class="n">config</span><span class="p">})</span>
 
 </div>
-<div class="viewcode-block" id="from_json"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.from_json">[docs]</a><span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="n">json_file</span><span class="p">,</span> <span class="n">sync</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">use_dummy_io</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+<div class="viewcode-block" id="from_json"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.from_json">[docs]</a><span class="k">def</span> <span class="nf">from_json</span><span class="p">(</span><span class="n">json_file</span><span class="p">,</span> <span class="n">sync</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">use_dummy_io</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Returns a :class:`~pypot.robot.robot.Robot` instance created from a JSON configuration file.</span>
 
 <span class="sd">    For details on how to write such a configuration file, you should refer to the section :ref:`config_file`.</span>
@@ -377,7 +377,7 @@
     <span class="k">return</span> <span class="n">from_config</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">sync</span><span class="o">=</span><span class="n">sync</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="n">strict</span><span class="p">,</span> <span class="n">use_dummy_io</span><span class="o">=</span><span class="n">use_dummy_io</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="use_dummy_robot"><a class="viewcode-back" href="../../../pypot/doc/pypot.robot.html#pypot.robot.config.use_dummy_robot">[docs]</a><span class="k">def</span> <span class="nf">use_dummy_robot</span><span class="p">(</span><span class="n">json_file</span><span class="p">):</span>
+<div class="viewcode-block" id="use_dummy_robot"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.robot.html#pypot.robot.config.use_dummy_robot">[docs]</a><span class="k">def</span> <span class="nf">use_dummy_robot</span><span class="p">(</span><span class="n">json_file</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">from_json</span><span class="p">(</span><span class="n">json_file</span><span class="p">,</span> <span class="n">use_dummy_io</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
 </div>

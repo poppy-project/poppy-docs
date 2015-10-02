@@ -79,7 +79,7 @@
 <li><a class="reference internal" href="#controlling-motors">Controlling motors</a><ul>
 <li><a class="reference internal" href="#controlling-in-position">Controlling in position</a></li>
 <li><a class="reference internal" href="#controlling-in-speed">Controlling in speed</a></li>
-<li><a class="reference internal" href="#the-goto-position-function">The <code class="docutils literal"><span class="pre">goto_position()</span></code> function</a></li>
+<li><a class="reference internal" href="#the-pypot-dynamixel-motor-dxlmotor-goto-position-function">The pypot.dynamixel.motor.DxlMotor.goto_position function</a></li>
 </ul>
 </li>
 </ul>
@@ -92,6 +92,7 @@
             
               <li><a href="robot.html" title="The Robot object and the controllers" accesskey="P">previous </a></li>
               <li><a href="primitive.html" title="Primitives" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -141,7 +142,7 @@
 <li><a class="reference internal" href="#controlling-motors">Controlling motors</a><ul>
 <li><a class="reference internal" href="#controlling-in-position">Controlling in position</a></li>
 <li><a class="reference internal" href="#controlling-in-speed">Controlling in speed</a></li>
-<li><a class="reference internal" href="#the-goto-position-function">The <code class="docutils literal"><span class="pre">goto_position()</span></code> function</a></li>
+<li><a class="reference internal" href="#the-pypot-dynamixel-motor-dxlmotor-goto-position-function">The pypot.dynamixel.motor.DxlMotor.goto_position function</a></li>
 </ul>
 </li>
 </ul>
@@ -188,15 +189,16 @@
                 <div class="body">
                   
   <div class="section" id="the-motor-object">
-<span id="motor"></span><h1>The Motor object<a class="headerlink" href="#the-motor-object" title="Permalink to this headline">¶</a></h1>
+<span id="the-motor-object"></span><h1>The Motor object<a class="headerlink" href="#the-motor-object" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The  <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> class contains a list of  <code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code>, each <code class="xref py py-class docutils literal"><span class="pre">DxlMotor</span></code> being linked to a physical Dynamixel motor.</p>
+<span id="overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The  <a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> class contains a list of
+<a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor</a>, each <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor</a>
+being linked to a physical Dynamixel motor.</p>
 <div class="section" id="registers">
-<h3>Registers<a class="headerlink" href="#registers" title="Permalink to this headline">¶</a></h3>
-<dl class="docutils">
-<dt>This class provides access to (see <code class="xref py py-attr docutils literal"><span class="pre">registers</span></code> for an exhaustive list):</dt>
-<dd><ul class="first last simple">
+<span id="registers"></span><h3>Registers<a class="headerlink" href="#registers" title="Permalink to this headline">¶</a></h3>
+<p>This class provides access to (see <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.registers</a> for an exhaustive list):</p>
+<ul class="simple">
 <li>id: motor id</li>
 <li>motor name</li>
 <li>motor model</li>
@@ -208,100 +210,135 @@
 <li>temperature</li>
 <li>voltage</li>
 </ul>
-</dd>
-</dl>
-<p>Temperature and load can give you an idea of how much effort a motor produces:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">&quot;motor &quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s">&quot;(&quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">model</span><span class="p">,</span><span class="s">&quot;), id: &quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">id</span>
-    <span class="k">print</span> <span class="s">&#39;temperature: &#39;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">temperature</span>
-    <span class="k">print</span> <span class="s">&quot;load: &quot;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">load</span>
-    <span class="k">print</span> <span class="s">&quot;---&quot;</span>
-</pre></div>
-</div>
+<p>Temperature and load can give you an idea of how much effort a motor
+produces:</p>
+<pre class="literal-block">
+for m in robot.motors:
+    print &quot;motor &quot;,m.name, &quot;(&quot;,m.model,&quot;), id: &quot;,m.id
+    print 'temperature: ',m.temperature
+    print &quot;load: &quot;, m.load
+</pre>
 </div>
 <div class="section" id="torque-and-compliance">
-<h3>Torque and compliance<a class="headerlink" href="#torque-and-compliance" title="Permalink to this headline">¶</a></h3>
-<p>A motor with compliance will not exert any torque. You can move it by hand. Removing compliance will cause the motor to exert torque and therefore move to get to its goal position. The compliance can be set for each motor individually:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
-</pre></div>
-</div>
-<p>or can be set at  <a class="reference internal" href="robot.html#robot"><span>robot level</span></a>.</p>
-<p>You can set the compliance mode to &#8216;safe&#8217; (as opposed to &#8216;dummy&#8217;) to have the robot set compliance at angle limits, preventing you to move it outside of the authorized range. It also prevents the brutal moves when putting back compliance and the robot wants to go back inside its angle limits.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">angle_limit</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">compliant_behavior</span><span class="p">(</span><span class="s">&#39;safe&#39;</span><span class="p">)</span>
-<span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="c">#now try moving the head with your hands beyond the angle limits</span>
-</pre></div>
-</div>
-<p>You can also change the maximal torque that the robot can use. Use a value between 0 (no torque) and 100 (max torque). The resulting maximal torque depends onthe model of teh robot:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">max_torque</span> <span class="o">=</span> <span class="mi">20</span>
-</pre></div>
-</div>
-<p>Reducing the maximal torque makes your robot less powerful and therefore less harmfull and adds elasticity to the joints: if you apply a force on it,it moves because it does not have enough torque to resist, but it goes back to its goal position when you stop applying the force.</p>
+<span id="torque-and-compliance"></span><h3>Torque and compliance<a class="headerlink" href="#torque-and-compliance" title="Permalink to this headline">¶</a></h3>
+<p>A motor with compliance will not exert any torque. You can move it by
+hand. Removing compliance will cause the motor to exert torque and
+therefore move to get to its goal position. The compliance can be set
+for each motor individually:</p>
+<pre class="literal-block">
+robot.head_z.compliant = False
+</pre>
+<p>or can be set at <a class="reference external" href="robot.html">robot level</a>.</p>
+<p>You can set the compliance mode to &#8216;safe&#8217; (as opposed to &#8216;dummy&#8217;) to
+have the robot set compliance at angle limits, preventing you to move it
+outside of the authorized range. It also prevents the brutal moves when
+putting back compliance and the robot wants to go back inside its angle
+limits.</p>
+<pre class="literal-block">
+print robot.head_z.angle_limit
+robot.head_z.compliant_behavior('safe')
+robot.head_z.compliant = True
+#now try moving the head with your hands beyond the angle limits
+</pre>
+<p>You can also change the maximal torque that the robot can use. Use a
+value between 0 (no torque) and 100 (max torque). The resulting maximal
+torque depends onthe model of the robot:</p>
+<pre class="literal-block">
+robot.head_z.max_torque = 20
+</pre>
+<p>Reducing the maximal torque makes your robot less powerful and therefore
+less harmfull and adds elasticity to the joints: if you apply a force on
+it,it moves because it does not have enough torque to resist, but it
+goes back to its goal position when you stop applying the force.</p>
 </div>
 </div>
 <div class="section" id="controlling-motors">
-<h2>Controlling motors<a class="headerlink" href="#controlling-motors" title="Permalink to this headline">¶</a></h2>
+<span id="controlling-motors"></span><h2>Controlling motors<a class="headerlink" href="#controlling-motors" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="controlling-in-position">
-<h3>Controlling in position<a class="headerlink" href="#controlling-in-position" title="Permalink to this headline">¶</a></h3>
-<p>Dynamixel servomotors will use their internal controller to reach and stay at the angle defined in the goal_position register (in degree).
-If this angle isn&#8217;t between <code class="xref py py-attr docutils literal"><span class="pre">lower_limit</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">upper_limit</span></code>, the goal angle will automatically be taken back into the limits:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mi">0</span>
+<span id="controlling-in-position"></span><h3>Controlling in position<a class="headerlink" href="#controlling-in-position" title="Permalink to this headline">¶</a></h3>
+<p>Dynamixel servomotors will use their internal controller to reach and
+stay at the angle defined in the goal_position register (in degree). If
+this angle isn&#8217;t between the minimum and maximum angle (see <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.angle_limit</a>), the goal angle will
+automatically be taken back into the limits:</p>
+<pre class="literal-block">
+for m in robot.motors:
+    m.compliant = False
+    m.goal_position = 0
 
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+time.sleep(2)
 
-<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">&quot;position: &quot;</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">,</span> <span class="s">&quot;(limits: &quot;</span><span class="p">,</span><span class="n">m</span><span class="o">.</span><span class="n">angle_limit</span><span class="p">,</span> <span class="s">&quot;)&quot;</span>
-</pre></div>
-</div>
+for m in robot.motors:
+    print &quot;position: &quot;, m.present_position, &quot;(limits: &quot;,m.angle_limit, &quot;)&quot;
+</pre>
 </div>
 <div class="section" id="controlling-in-speed">
-<h3>Controlling in speed<a class="headerlink" href="#controlling-in-speed" title="Permalink to this headline">¶</a></h3>
-<p>You can also control your robot in speed. Set the <code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code> attribute to the desired value in degree per seconds.
-This automatically sets the <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code> to the maximal or minimal value (depending on the sign of the speed).</p>
-<p>The motor will remain at the given speed until it gets a new order or it reaches its angle limit.</p>
+<span id="controlling-in-speed"></span><h3>Controlling in speed<a class="headerlink" href="#controlling-in-speed" title="Permalink to this headline">¶</a></h3>
+<p>You can also control your robot in speed. Set the
+<a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.goal_speed</a> attribute to the desired
+value in degree per seconds. This automatically sets the
+<a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.goal_position</a> to the maximal or
+minimal value (depending on the sign of the speed).</p>
+<p>The motor will remain at the given speed until it gets a new order or it
+reaches its angle limit.</p>
 <p>Example of robot making &#8216;yes&#8217; with its head:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">goal</span> <span class="o">=</span> <span class="mi">20</span>
+<pre class="literal-block">
+goal = 20
 
-<span class="n">t_init</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+t_init = time.time()
 
-<span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">t_init</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+while time.time() - t_init &lt; 20:
 
-    <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">abs</span><span class="p">(</span><span class="n">goal</span><span class="p">):</span>
-        <span class="n">goal</span> <span class="o">=</span> <span class="o">-</span><span class="n">goal</span>
+    if abs(robot.head_y.present_position) &gt; abs(goal):
+        goal = -goal
 
-    <span class="n">speed</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="p">(</span><span class="n">goal</span> <span class="o">-</span> <span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span>
-    <span class="n">robot</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_speed</span> <span class="o">=</span> <span class="n">speed</span>
+    speed = 0.1*(goal - robot.head_y.present_position)
+    robot.head_y.goal_speed = speed
 
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
-</pre></div>
+    time.sleep(0.1)
+</pre>
+<blockquote>
+<div><p><strong>note</strong></p>
+<p>You could also use the wheel mode settings where you can directly
+change the <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.moving_speed</a>.
+Nevertheless, while the motor will turn infinitely with the wheel
+mode, here with the <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.goal_speed</a> the
+motor will still respect the angle limits.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>warning</strong></p>
+<p>If you set both <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.goal_speed</a> and
+<a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.goal_position</a> only the last command
+will be executed. Unless you know what you are doing, you should avoid
+to mix these both approaches.</p>
+</div></blockquote>
 </div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">You could also use the wheel mode settings where you can directly change the <code class="xref py py-attr docutils literal"><span class="pre">moving_speed</span></code>. Nevertheless, while the motor will turn infinitely with the wheel mode, here with the <code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code> the motor will still respect the angle limits.</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">If you set both <code class="xref py py-attr docutils literal"><span class="pre">goal_speed</span></code> and <code class="xref py py-attr docutils literal"><span class="pre">goal_position</span></code> only the last command will be executed. Unless you know what you are doing, you should avoid to mix these both approaches.</p>
-</div>
-</div>
-<div class="section" id="the-goto-position-function">
-<h3>The <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> function<a class="headerlink" href="#the-goto-position-function" title="Permalink to this headline">¶</a></h3>
-<p>If you want a servo to go to a certain position in a certain time (for synchronization reasons...), use the <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> function. It take two mandatory arguments: position to reach (in degrees) and the duration:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">goto_position</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>To synchronize several motors, have a look at the <code class="xref py py-meth docutils literal"><span class="pre">goto_position()</span></code> at robot level.</p>
-<p>By default, this function return immediatelly and is cancelled if another one is run later, even if the 3 seconds are not over.</p>
-<p>You can set the optionnal <em>wait</em> parameter to True to make this function blocking, therefore the next line in the script will execute only when the 3 seconds are over.</p>
-<p>The other optionnal parameter is <em>control</em>. You can specify &#8216;dummy&#8217; or &#8216;minijerk&#8217; (default) to define which algorithm is used in used in background to bring the motor to the desired position.</p>
-<p>&#8216;dummy&#8217; is a simple controller, where you divide the angle to travel by the time and you set the goal speed to this value. As the motor can&#8217;t go from thois speed to 0 at arrival in no time, a slight overshoot can happen.
-The &#8216;minijerk&#8217; controller has a more complex algorithm to slow down before and arrive on time without overshoot.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">robot</span><span class="o">.</span><span class="n">head_z</span><span class="o">.</span><span class="n">goto_position</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">control</span><span class="o">=</span><span class="s">&#39;dummy&#39;</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-</div>
+<div class="section" id="the-pypot-dynamixel-motor-dxlmotor-goto-position-function">
+<span id="the-pypot-dynamixel-motor-dxlmotor-goto-position-function"></span><h3>The <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.goto_position</a> function<a class="headerlink" href="#the-pypot-dynamixel-motor-dxlmotor-goto-position-function" title="Permalink to this headline">¶</a></h3>
+<p>If you want a servo to go to a certain position in a certain time (for
+synchronization reasons...), use the
+<a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor">pypot.dynamixel.motor.DxlMotor.goto_position</a>  function. It take two mandatory
+arguments: position to reach (in degrees) and the duration:</p>
+<pre class="literal-block">
+robot.head_z.goto_position(20, 3)
+</pre>
+<p>To synchronize several motors, have a look at the
+<a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot.goto_position</a> at robot level.</p>
+<p>By default, this function return immediatelly and is cancelled if
+another one is run later, even if the 3 seconds are not over.</p>
+<p>You can set the optionnal <em>wait</em> parameter to True to make this function
+blocking, therefore the next line in the script will execute only when
+the 3 seconds are over.</p>
+<p>The other optionnal parameter is <em>control</em>. You can specify &#8216;dummy&#8217; or
+&#8216;minijerk&#8217; (default) to define which algorithm is used in used in
+background to bring the motor to the desired position.</p>
+<p>&#8216;dummy&#8217; is a simple controller, where you divide the angle to travel by
+the time and you set the goal speed to this value. As the motor can&#8217;t go
+from thois speed to 0 at arrival in no time, a slight overshoot can
+happen. The &#8216;minijerk&#8217; controller has a more complex algorithm to slow
+down before and arrive on time without overshoot.</p>
+<pre class="literal-block">
+robot.head_z.goto_position(20, 3, control='dummy', wait=True)
+</pre>
 <p>TODO: sensors doc, but work in progress</p>
 </div>
 </div>
@@ -328,6 +365,7 @@ The &#8216;minijerk&#8217; controller has a more complex algorithm to slow down 
       
         <li><a href="robot.html" title="The Robot object and the controllers" >previous</a></li>
         <li><a href="primitive.html" title="Primitives" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

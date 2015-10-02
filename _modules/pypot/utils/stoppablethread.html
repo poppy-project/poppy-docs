@@ -137,7 +137,7 @@
 <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">pypot_time</span> <span class="k">as</span> <span class="n">time</span>
 
 
-<div class="viewcode-block" id="StoppableThread"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread">[docs]</a><span class="k">class</span> <span class="nc">StoppableThread</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread">[docs]</a><span class="k">class</span> <span class="nc">StoppableThread</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Stoppable version of python Thread.</span>
 
 <span class="sd">    This class provides the following mechanism on top of &quot;classical&quot; python Thread:</span>
@@ -163,7 +163,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run</span> <span class="k">if</span> <span class="n">target</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">target</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_teardown</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">teardown</span> <span class="k">if</span> <span class="n">teardown</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">teardown</span>
 
-<div class="viewcode-block" id="StoppableThread.start"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.start"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.start">[docs]</a>    <span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Start the run method as a new thread.</span>
 
 <span class="sd">        It will first stop the thread if it is already running.</span>
@@ -176,7 +176,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_thread</span><span class="o">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.stop"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.stop"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Stop the thread.</span>
 
 <span class="sd">        More precisely, sends the stopping signal to the thread. It is then up top the run method to correctly responds.</span>
@@ -192,7 +192,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_started</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_resume</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.join"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.join">[docs]</a>    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.join"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.join">[docs]</a>    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Wait for the thread termination. &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">started</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s">&#39;cannot join thread before it is started&#39;</span><span class="p">)</span>
@@ -208,25 +208,25 @@
         <span class="sd">&quot;&quot;&quot; Whether the thread has been started. &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_started</span><span class="o">.</span><span class="n">is_set</span><span class="p">()</span>
 
-<div class="viewcode-block" id="StoppableThread.wait_to_start"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.wait_to_start">[docs]</a>    <span class="k">def</span> <span class="nf">wait_to_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.wait_to_start"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.wait_to_start">[docs]</a>    <span class="k">def</span> <span class="nf">wait_to_start</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Wait for the thread to actually starts. &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_started</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.should_stop"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.should_stop">[docs]</a>    <span class="k">def</span> <span class="nf">should_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.should_stop"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.should_stop">[docs]</a>    <span class="k">def</span> <span class="nf">should_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Signals if the thread should be stopped or not. &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">running</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.wait_to_stop"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.wait_to_stop">[docs]</a>    <span class="k">def</span> <span class="nf">wait_to_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.wait_to_stop"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.wait_to_stop">[docs]</a>    <span class="k">def</span> <span class="nf">wait_to_stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Wait for the thread to terminate. &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">started</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">wait_to_start</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.setup"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.setup"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Setup method call just before the run. &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.run"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.run"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Run method of the thread.</span>
 
 <span class="sd">        .. note:: In order to be stoppable (resp. pausable), this method has to check the running property - as often as possible to improve responsivness - and terminate when :meth:`~pypot.utils.stoppablethread.StoppableThread.should_stop` (resp. :meth:`~pypot.utils.stoppablethread.StoppableThread.should_pause`) becomes True.</span>
@@ -239,7 +239,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.teardown"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.teardown">[docs]</a>    <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.teardown"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.teardown">[docs]</a>    <span class="k">def</span> <span class="nf">teardown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Teardown method call just after the run. &quot;&quot;&quot;</span>
         <span class="k">pass</span>
 </div>
@@ -255,7 +255,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_teardown</span><span class="p">()</span>
 
-<div class="viewcode-block" id="StoppableThread.should_pause"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.should_pause">[docs]</a>    <span class="k">def</span> <span class="nf">should_pause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.should_pause"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.should_pause">[docs]</a>    <span class="k">def</span> <span class="nf">should_pause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Signals if the thread should be paused or not. &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">paused</span>
 </div>
@@ -263,20 +263,20 @@
     <span class="k">def</span> <span class="nf">paused</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resume</span><span class="o">.</span><span class="n">is_set</span><span class="p">()</span>
 
-<div class="viewcode-block" id="StoppableThread.pause"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.pause">[docs]</a>    <span class="k">def</span> <span class="nf">pause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.pause"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.pause">[docs]</a>    <span class="k">def</span> <span class="nf">pause</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Requests the thread to pause. &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_resume</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.resume"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.resume">[docs]</a>    <span class="k">def</span> <span class="nf">resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.resume"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.resume">[docs]</a>    <span class="k">def</span> <span class="nf">resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Requests the thread to resume. &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_resume</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="StoppableThread.wait_to_resume"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.wait_to_resume">[docs]</a>    <span class="k">def</span> <span class="nf">wait_to_resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableThread.wait_to_resume"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableThread.wait_to_resume">[docs]</a>    <span class="k">def</span> <span class="nf">wait_to_resume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Waits until the thread is resumed. &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_resume</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 
 </div></div>
-<div class="viewcode-block" id="make_update_loop"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.make_update_loop">[docs]</a><span class="k">def</span> <span class="nf">make_update_loop</span><span class="p">(</span><span class="n">thread</span><span class="p">,</span> <span class="n">update_func</span><span class="p">):</span>
+<div class="viewcode-block" id="make_update_loop"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.make_update_loop">[docs]</a><span class="k">def</span> <span class="nf">make_update_loop</span><span class="p">(</span><span class="n">thread</span><span class="p">,</span> <span class="n">update_func</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Makes a run loop which calls an update function at a predefined frequency. &quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">thread</span><span class="o">.</span><span class="n">should_stop</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">thread</span><span class="o">.</span><span class="n">should_pause</span><span class="p">():</span>
@@ -292,7 +292,7 @@
             <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="StoppableLoopThread"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableLoopThread">[docs]</a><span class="k">class</span> <span class="nc">StoppableLoopThread</span><span class="p">(</span><span class="n">StoppableThread</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableLoopThread"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableLoopThread">[docs]</a><span class="k">class</span> <span class="nc">StoppableLoopThread</span><span class="p">(</span><span class="n">StoppableThread</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; LoopThread calling an update method at a pre-defined frequency.</span>
 
 <span class="sd">    .. note:: This class does not mean to be accurate. The given frequency will be approximately followed - depending for instance on CPU load - and only reached if the update method takes less time than the chosen loop period.</span>
@@ -308,11 +308,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">frequency</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_update</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">update</span> <span class="k">if</span> <span class="n">update</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">update</span>
 
-<div class="viewcode-block" id="StoppableLoopThread.run"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableLoopThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableLoopThread.run"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableLoopThread.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Called the update method at the pre-defined frequency. &quot;&quot;&quot;</span>
         <span class="n">make_update_loop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update</span><span class="p">)</span>
 </div>
-<div class="viewcode-block" id="StoppableLoopThread.update"><a class="viewcode-back" href="../../../pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableLoopThread.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="StoppableLoopThread.update"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.utils.html#pypot.utils.stoppablethread.StoppableLoopThread.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Update method called at the pre-defined frequency. &quot;&quot;&quot;</span>
         <span class="k">pass</span></div></div>
 </pre></div>

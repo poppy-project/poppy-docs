@@ -69,7 +69,7 @@
                 <ul>
 <li><a class="reference internal" href="#">pypot.tools package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#pypot-tools-dxl-reset-module">pypot.tools.dxl_reset module</a></li>
+<li><a class="reference internal" href="#module-pypot.tools.dxl_reset">pypot.tools.dxl_reset module</a></li>
 </ul>
 </li>
 </ul>
@@ -78,6 +78,7 @@
               </li>
 
             
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../../../_sources/pypot/pypot/doc/pypot.tools.txt" rel="nofollow">Show Source</a></li>
@@ -119,7 +120,7 @@
   <ul>
 <li><a class="reference internal" href="#">pypot.tools package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#pypot-tools-dxl-reset-module">pypot.tools.dxl_reset module</a></li>
+<li><a class="reference internal" href="#module-pypot.tools.dxl_reset">pypot.tools.dxl_reset module</a></li>
 </ul>
 </li>
 </ul>
@@ -167,8 +168,30 @@
 </ul>
 </div>
 </div>
-<div class="section" id="pypot-tools-dxl-reset-module">
-<h2>pypot.tools.dxl_reset module<a class="headerlink" href="#pypot-tools-dxl-reset-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pypot.tools.dxl_reset">
+<span id="pypot-tools-dxl-reset-module"></span><h2>pypot.tools.dxl_reset module<a class="headerlink" href="#module-pypot.tools.dxl_reset" title="Permalink to this headline">¶</a></h2>
+<p>Reset a dynamixel motor to &#8220;poppy&#8221; configuration.</p>
+<p>This utility should only be used with a single motor connected to the bus. For the moment it&#8217;s only working with robotis protocol v1 (AX, RX, MX motors).</p>
+<p>To run it:
+$ poppy-reset-motor 42</p>
+<p>The motor will now have the id 42, use a 1000000 baud rates, a 0µs return delay time. The angle limit are also set (by default to (-180, 180)). Its position is also set to its base position (default: 0).</p>
+<p>For more complex use cases, see:
+$ poppy-reset-motor &#8211;help</p>
+<dl class="function">
+<dt id="pypot.tools.dxl_reset.leave">
+<code class="descclassname">pypot.tools.dxl_reset.</code><code class="descname">leave</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/tools/dxl_reset.html#leave"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.tools.dxl_reset.leave" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pypot.tools.dxl_reset.almost_equal">
+<code class="descclassname">pypot.tools.dxl_reset.</code><code class="descname">almost_equal</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/tools/dxl_reset.html#almost_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.tools.dxl_reset.almost_equal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pypot.tools.dxl_reset.main">
+<code class="descclassname">pypot.tools.dxl_reset.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/tools/dxl_reset.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.tools.dxl_reset.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 
@@ -191,6 +214,7 @@
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

@@ -82,6 +82,7 @@
             
               <li><a href="index.html" title="&lt;no title&gt;" accesskey="P">previous </a></li>
               <li><a href="../../pypot/doc/index.html" title="Introduction" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">&lt;no title&gt;</a></li>
             
@@ -168,107 +169,147 @@
                 <div class="body">
                   
   <div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Poppy-creature is a small library providing a link between specific robots (Poppy Humanoid, Poppy Ergo JR...) and Pypot, the generic, lower level library.</p>
-<p>It mainly contains the class definition of <code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code> which takes a configuration and builds a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> out of it,
-but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.</p>
+<span id="introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Poppy-creature is a small library providing a link between specific
+robots (Poppy Humanoid, Poppy Ergo JR...) and Pypot, the generic, lower
+level library.</p>
+<p>It mainly contains the class definition of
+<a class="reference external" href="poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature">poppy.creatures.abstractcreature.AbstractPoppyCreature</a> which takes a
+configuration and builds a <a class="reference external" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> out of it, but also
+a bunch of parameters to launch Snap! or HTTP servers, or to replace the
+communication toward Dynamixel servos by a communication with a
+simulator.</p>
 <p>The arguments you can provide are:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">base_path</span></code> default: None Path where the creature sources are. The librarie looks in the default PATH if not set.</li>
-<li><code class="docutils literal"><span class="pre">config</span></code> default: None Path to the configuration file with respect to the base-path</li>
-<li><code class="docutils literal"><span class="pre">simulator</span></code> default: None Possible values : &#8216;vrep&#8217; or &#8216;threejs&#8217;. Defines if we are using a simulator (and which one) or a real robot.</li>
-<li><code class="docutils literal"><span class="pre">scene</span></code> default: None Path to the scene to load in the simulator. Only if simulator is vrep. Defaults to the scene present in the creature library if any (e.g. poppy_humanoid.ttt).</li>
-<li><code class="docutils literal"><span class="pre">host</span></code> default: &#8216;localhost&#8217; Hostname of the machine where the simulator runs. Only if simulator is not None.</li>
-<li><code class="docutils literal"><span class="pre">port</span></code> default: 19997 Port of the simulator. Only if simulator is not None.</li>
+<li><code class="docutils literal"><span class="pre">base_path</span></code> default: None Path where the creature sources are. The
+librarie looks in the default PATH if not set.</li>
+<li><code class="docutils literal"><span class="pre">config</span></code> default: None Path to the configuration file with respect
+to the base-path</li>
+<li><code class="docutils literal"><span class="pre">simulator</span></code> default: None Possible values : &#8216;vrep&#8217; or &#8216;threejs&#8217;.
+Defines if we are using a simulator (and which one) or a real robot.</li>
+<li><code class="docutils literal"><span class="pre">scene</span></code> default: None Path to the scene to load in the simulator.
+Only if simulator is vrep. Defaults to the scene present in the
+creature library if any (e.g. poppy_humanoid.ttt).</li>
+<li><code class="docutils literal"><span class="pre">host</span></code> default: &#8216;localhost&#8217; Hostname of the machine where the
+simulator runs. Only if simulator is not None.</li>
+<li><code class="docutils literal"><span class="pre">port</span></code> default: 19997 Port of the simulator. Only if simulator is
+not None.</li>
 <li><code class="docutils literal"><span class="pre">use_snap</span></code> default: False Should we launch the Snap! server</li>
 <li><code class="docutils literal"><span class="pre">snap_host</span></code> default: 0.0.0.0 Hostname of the Snap! server</li>
 <li><code class="docutils literal"><span class="pre">snap_port</span></code> default: 6969 Port of the Snap! server</li>
 <li><code class="docutils literal"><span class="pre">snap_quiet</span></code> default: True Should Snap! not output logs</li>
-<li><code class="docutils literal"><span class="pre">use_http</span></code> default: False Should we launch the HTTP server (for <a class="reference internal" href="../../pypot/pypot/doc/remote_access.html#remote-protocol"><span>REST API use</span></a>)</li>
+<li><code class="docutils literal"><span class="pre">use_http</span></code> default: False Should we launch the HTTP server (for
+<a class="reference external" href="../../pypot/doc/remote_access.html">REST API use</a>)</li>
 <li><code class="docutils literal"><span class="pre">http_host</span></code> default: 0.0.0.0 Hostname of the HTTP server</li>
 <li><code class="docutils literal"><span class="pre">http_port</span></code> default: 8080 Port of the HTTP server</li>
 <li><code class="docutils literal"><span class="pre">http_quiet</span></code> default: True Should HTTP not output logs</li>
-<li><code class="docutils literal"><span class="pre">use_remote</span></code> default: False Should we launch the Remote Robot server (for <a class="reference internal" href="../../pypot/pypot/doc/remote_access.html#remote-protocol"><span>REST API use</span></a>)</li>
+<li><code class="docutils literal"><span class="pre">use_remote</span></code> default: False Should we launch the Remote Robot server
+(for  <a class="reference external" href="../../pypot/doc/remote_access.html">REST API use</a>)</li>
 <li><code class="docutils literal"><span class="pre">remote_host</span></code> default: 0.0.0.0 Hostname of the Remote Robot server</li>
 <li><code class="docutils literal"><span class="pre">remote_port</span></code> default: 4242 Port of the Remote Robot server</li>
-<li><code class="docutils literal"><span class="pre">sync</span></code> default: True Should we launch the synchronization loop for motor communication (see <a class="reference internal" href="../../pypot/pypot/doc/dynamixel.html#low-level"><span>the Dynamixel low-level Pypot section</span></a>)</li>
+<li><code class="docutils literal"><span class="pre">sync</span></code> default: True Should we launch the synchronization loop for
+motor communication (see <a class="reference external" href="../../pypot/doc/dynamixel.html">the Dynamixel low-level Pypot section</a>)</li>
 </ul>
-<p>The sources are available on <a class="reference external" href="https://github.com/poppy-project/poppy-creature">Github</a>.</p>
+<p>The sources are available on
+<a class="reference external" href="https://github.com/poppy-project/poppy-creature">Github</a>.</p>
 </div>
 <div class="section" id="poppy-services">
-<h1>Poppy services<a class="headerlink" href="#poppy-services" title="Permalink to this headline">¶</a></h1>
-<p>But poppy-creature also provides a set of very useful services that can be launched directly from the command line inside your robot
-if you installed the soft from <a class="reference external" href="https://github.com/poppy-project/poppy_install">poppy_install</a> . Example:</p>
-<div class="highlight-python"><div class="highlight"><pre>poppy-services poppy-humanoid --snap --no-browser
-</pre></div>
-</div>
-<p>This will launch the snap server for a Poppy Humanoid robot without opening the browser page for Snap!
-(if you have a screen, mouse and keyboard connected directly on the head of the robot, you can remove this argument, but in most cases, you launch this
-inside the robot through SSH and then connect in a browser from another computer).</p>
+<span id="poppy-services"></span><h1>Poppy services<a class="headerlink" href="#poppy-services" title="Permalink to this headline">¶</a></h1>
+<p>But poppy-creature also provides a set of very useful services that can
+be launched directly from the command line inside your robot if you
+installed the soft from
+<a class="reference external" href="https://github.com/poppy-project/poppy_install">poppy_install</a> .
+Example:</p>
+<pre class="literal-block">
+poppy-services poppy-humanoid --snap --no-browser
+</pre>
+<p>This will launch the snap server for a Poppy Humanoid robot without
+opening the browser page for Snap! (if you have a screen, mouse and
+keyboard connected directly on the head of the robot, you can remove
+this argument, but in most cases, you launch this inside the robot
+through SSH and then connect in a browser from another computer).</p>
 <p>The way to use it is:</p>
-<div class="highlight-python"><div class="highlight"><pre>poppy-services &lt;creature_name&gt; &lt;options&gt;
-</pre></div>
-</div>
+<pre class="literal-block">
+poppy-services &lt;creature_name&gt; &lt;options&gt;
+</pre>
 <p>the available options are:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">--vrep</span></code>:  creates the specified creature for using with V-rep simulator</li>
-<li><code class="docutils literal"><span class="pre">--threejs</span></code>: creates the specified creature for using with Three.js simulator (in-browser 3D modelisation) and also maunches the HTTP server needed by the Three.js simulation.</li>
-<li><code class="docutils literal"><span class="pre">--snap</span></code>: launches the Snap! server and directly imports the specific Poppy blocks.</li>
-<li><code class="docutils literal"><span class="pre">-nb</span></code> or <code class="docutils literal"><span class="pre">--no-browser</span></code>: avoid automatic start of Snap! in web browser, use only with &#8211;snap</li>
+<li><code class="docutils literal"><span class="pre">--vrep</span></code>: creates the specified creature for using with V-rep
+simulator</li>
+<li><code class="docutils literal"><span class="pre">--threejs</span></code>: creates the specified creature for using with Three.js
+simulator (in-browser 3D modelisation) and also maunches the HTTP
+server needed by the Three.js simulation.</li>
+<li><code class="docutils literal"><span class="pre">--snap</span></code>: launches the Snap! server and directly imports the
+specific Poppy blocks.</li>
+<li><code class="docutils literal"><span class="pre">-nb</span></code> or <code class="docutils literal"><span class="pre">--no-browser</span></code>: avoid automatic start of Snap! in web
+browser, use only with &#8211;snap</li>
 <li><code class="docutils literal"><span class="pre">--http</span></code>: start a http robot server</li>
 <li><code class="docutils literal"><span class="pre">--remote</span></code>: start a remote robot server</li>
 <li><code class="docutils literal"><span class="pre">-v</span></code> or <code class="docutils literal"><span class="pre">--verbose</span></code>: start services in verbose mode (more logs)</li>
 </ul>
 </div>
 <div class="section" id="create-your-own-poppy-creature">
-<h1>Create your own Poppy creature<a class="headerlink" href="#create-your-own-poppy-creature" title="Permalink to this headline">¶</a></h1>
-<p>While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> from Pypot directly (see <a class="reference internal" href="../../pypot/doc/robot.html#robot"><span>the robot object from Pypot</span></a>).</p>
-<p>But when you want to make it easily usable and available to non-geek public, the best is to create your own creature&#8217;s library. It should contain a configuration file and a class that extends <code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code>.
-You can then add your own properties and primitives.</p>
+<span id="create-your-own-poppy-creature"></span><h1>Create your own Poppy creature<a class="headerlink" href="#create-your-own-poppy-creature" title="Permalink to this headline">¶</a></h1>
+<p>While developping a new Poppy creature, it is first easier to simply
+define it in a configuration file or dictionnary and instanciate a
+<a class="reference external" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> from Pypot directly (see
+the robot object from <a class="reference external" href="../../pypot/doc/robot.html">Pypot</a>).</p>
+<p>But when you want to make it easily usable and available to non-geek
+public, the best is to create your own creature&#8217;s library. It should
+contain a configuration file and a class that extends
+~poppy.creatures.abstractcreature.AbstractPoppyCreature. You can then
+add your own properties and primitives.</p>
 <p>Example from Poppy Humanoid:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">PoppyHumanoid</span><span class="p">(</span><span class="n">AbstractPoppyCreature</span><span class="p">):</span>
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
-        <span class="n">robot</span><span class="o">.</span><span class="n">_primitive_manager</span><span class="o">.</span><span class="n">_filter</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<pre class="literal-block">
+class PoppyHumanoid(AbstractPoppyCreature):
+    &#64;classmethod
+    def setup(cls, robot):
+        robot._primitive_manager._filter = partial(numpy.sum, axis=0)
 
-        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
-            <span class="n">m</span><span class="o">.</span><span class="n">goto_behavior</span> <span class="o">=</span> <span class="s">&#39;minjerk&#39;</span>
+        for m in robot.motors:
+            m.goto_behavior = 'minjerk'
 
-        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">torso</span><span class="p">:</span>
-            <span class="n">m</span><span class="o">.</span><span class="n">compliant_behavior</span> <span class="o">=</span> <span class="s">&#39;safe&#39;</span>
+        for m in robot.torso:
+            m.compliant_behavior = 'safe'
 
-        <span class="c"># Attach default primitives:</span>
-        <span class="c"># basic primitives:</span>
-        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">StandPosition</span><span class="p">(</span><span class="n">robot</span><span class="p">),</span> <span class="s">&#39;stand_position&#39;</span><span class="p">)</span>
-        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">SitPosition</span><span class="p">(</span><span class="n">robot</span><span class="p">),</span> <span class="s">&#39;sit_position&#39;</span><span class="p">)</span>
+        # Attach default primitives:
+        # basic primitives:
+        robot.attach_primitive(StandPosition(robot), 'stand_position')
+        robot.attach_primitive(SitPosition(robot), 'sit_position')
 
-        <span class="c"># Safe primitives:</span>
-        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">LimitTorque</span><span class="p">(</span><span class="n">robot</span><span class="p">),</span> <span class="s">&#39;limit_torque&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Package your code it properly using <a class="reference external" href="https://pythonhosted.org/an_example_pypi_project/setuptools.html">setuptools</a> .
-For a better integration with the Poppy installer scripts, please have in the root of your repo a folder named <em>software</em> containing:</p>
+        # Safe primitives:
+        robot.attach_primitive(LimitTorque(robot), 'limit_torque')
+</pre>
+<p>Package your code it properly using
+<a class="reference external" href="https://pythonhosted.org/an_example_pypi_project/setuptools.html">setuptools</a>
+. For a better integration with the Poppy installer scripts, please have
+in the root of your repo a folder named <em>software</em> containing:</p>
 <ul class="simple">
 <li>the installation files (setup.py, MANIFEST, LICENCE)</li>
 <li>a folder named poppy_yourcreaturename containing your actual code</li>
 </ul>
-<p>At the end, don&#8217;t forget to give it to the community! Most interesting creatures will be added to this documentation!</p>
+<p>At the end, don&#8217;t forget to give it to the community! Most interesting
+creatures will be added to this documentation!</p>
 </div>
 <div class="section" id="installing">
-<span id="poppy-creature-install"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
+<span id="installing"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
 <p>To install the Poppy Creature library, you can use pip:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install poppy-creature
-</pre></div>
-</div>
+<pre class="literal-block">
+pip install poppy-creature
+</pre>
 <p>Then you can update it with:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install --upgrade poppy-creature
-</pre></div>
-</div>
-<p>If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from <a class="reference external" href="https://github.com/poppy-project/poppy-creature">Github</a> and install them with (in the software folder):</p>
-<div class="highlight-python"><div class="highlight"><pre>python setup.py install
-</pre></div>
-</div>
-<p>The requirements for Poppy Creature are <a class="reference internal" href="../../pypot/doc/installation.html#pypot-install"><span>Pypot</span></a> and bottle.</p>
+<pre class="literal-block">
+pip install --upgrade poppy-creature
+</pre>
+<p>If you prefer to work from the sources (latest but possibly unstable
+releases), you can clone them from
+<a class="reference external" href="https://github.com/poppy-project/poppy-creature">Github</a> and install
+them with (in the software folder):</p>
+<pre class="literal-block">
+python setup.py install
+</pre>
+<p>The requirements for Poppy Creature are <a class="reference external" href="../../pypot/doc/installation.html">Pypot</a> and
+bottle.</p>
 </div>
 
 
@@ -292,6 +333,7 @@ For a better integration with the Poppy installer scripts, please have in the ro
       
         <li><a href="index.html" title="&lt;no title&gt;" >previous</a></li>
         <li><a href="../../pypot/doc/index.html" title="Introduction" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >&lt;no title&gt;</a></li>
         <li><a href="#">top</a></li> 

@@ -145,20 +145,20 @@
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="get_snap_user_projects_directory"><a class="viewcode-back" href="../../../pypot/doc/pypot.server.html#pypot.server.snap.get_snap_user_projects_directory">[docs]</a><span class="k">def</span> <span class="nf">get_snap_user_projects_directory</span><span class="p">():</span>
+<div class="viewcode-block" id="get_snap_user_projects_directory"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.server.html#pypot.server.snap.get_snap_user_projects_directory">[docs]</a><span class="k">def</span> <span class="nf">get_snap_user_projects_directory</span><span class="p">():</span>
     <span class="n">snap_user_projects_directory</span> <span class="o">=</span> <span class="n">user_data_dir</span><span class="p">(</span><span class="s">&#39;pypot&#39;</span><span class="p">,</span> <span class="s">&#39;SnapRobotServer&#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">snap_user_projects_directory</span><span class="p">):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">snap_user_projects_directory</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">snap_user_projects_directory</span>
 
 </div>
-<div class="viewcode-block" id="find_local_ip"><a class="viewcode-back" href="../../../pypot/doc/pypot.server.html#pypot.server.snap.find_local_ip">[docs]</a><span class="k">def</span> <span class="nf">find_local_ip</span><span class="p">():</span>
+<div class="viewcode-block" id="find_local_ip"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.server.html#pypot.server.snap.find_local_ip">[docs]</a><span class="k">def</span> <span class="nf">find_local_ip</span><span class="p">():</span>
     <span class="c"># see here: http://stackoverflow.com/questions/166506/</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s">&#39;8.8.8.8&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)),</span> <span class="n">s</span><span class="o">.</span><span class="n">getsockname</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">())</span>
             <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="p">[</span><span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)]][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 
 </div>
-<div class="viewcode-block" id="set_snap_server_variables"><a class="viewcode-back" href="../../../pypot/doc/pypot.server.html#pypot.server.snap.set_snap_server_variables">[docs]</a><span class="k">def</span> <span class="nf">set_snap_server_variables</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">snap_extension</span><span class="o">=</span><span class="s">&#39;.xml&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="set_snap_server_variables"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.server.html#pypot.server.snap.set_snap_server_variables">[docs]</a><span class="k">def</span> <span class="nf">set_snap_server_variables</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">snap_extension</span><span class="o">=</span><span class="s">&#39;.xml&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Allow to change dynamically port and host variable in xml Snap! project file&quot;&quot;&quot;</span>
 
     <span class="n">localdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
@@ -179,7 +179,7 @@
     <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">localdir</span><span class="p">)</span>
 
 </div>
-<div class="viewcode-block" id="SnapRobotServer"><a class="viewcode-back" href="../../../pypot/doc/pypot.server.html#pypot.server.snap.SnapRobotServer">[docs]</a><span class="k">class</span> <span class="nc">SnapRobotServer</span><span class="p">(</span><span class="n">AbstractServer</span><span class="p">):</span>
+<div class="viewcode-block" id="SnapRobotServer"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.server.html#pypot.server.snap.SnapRobotServer">[docs]</a><span class="k">class</span> <span class="nc">SnapRobotServer</span><span class="p">(</span><span class="n">AbstractServer</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
         <span class="n">AbstractServer</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">robot</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">)</span>
@@ -386,7 +386,7 @@
             <span class="n">rr</span><span class="o">.</span><span class="n">stop_primitive</span><span class="p">(</span><span class="s">&#39;_{}_player&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">move_name</span><span class="p">))</span>
             <span class="k">return</span> <span class="s">&#39;Done!&#39;</span>
 
-<div class="viewcode-block" id="SnapRobotServer.run"><a class="viewcode-back" href="../../../pypot/doc/pypot.server.html#pypot.server.snap.SnapRobotServer.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SnapRobotServer.run"><a class="viewcode-back" href="../../../pypot/pypot/doc/pypot.server.html#pypot.server.snap.SnapRobotServer.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">bottle</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">quiet</span><span class="p">)</span></div></div>
 </pre></div>
 

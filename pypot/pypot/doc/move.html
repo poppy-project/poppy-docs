@@ -65,6 +65,7 @@
           <ul class="nav navbar-nav navbar-right">
 
             
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../../../_sources/pypot/pypot/doc/move.txt" rel="nofollow">Show Source</a></li>
@@ -137,18 +138,18 @@
                   
   <div class="section" id="move-recording-and-playing">
 <span id="move"></span><h1>Move recording and playing<a class="headerlink" href="#move-recording-and-playing" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="xref py py-mod docutils literal"><span class="pre">move</span></code> module contains utility classes to help you record and play moves. Those <code class="xref py py-class docutils literal"><span class="pre">Move</span></code> is simply defined as a sequence of positions.</p>
+<p>The <a class="reference internal" href="pypot.primitive.html#module-pypot.primitive.move" title="pypot.primitive.move"><code class="xref py py-mod docutils literal"><span class="pre">move</span></code></a> module contains utility classes to help you record and play moves. Those <a class="reference internal" href="pypot.primitive.html#pypot.primitive.move.Move" title="pypot.primitive.move.Move"><code class="xref py py-class docutils literal"><span class="pre">Move</span></code></a> is simply defined as a sequence of positions.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">To keep the <code class="xref py py-mod docutils literal"><span class="pre">move</span></code> module as simple as possible, you can only define <code class="xref py py-class docutils literal"><span class="pre">Move</span></code> as a predefined frequency and you can not define keyframes whenever you want. This could be added if it seems like it would be useful.</p>
+<p class="last">To keep the <a class="reference internal" href="pypot.primitive.html#module-pypot.primitive.move" title="pypot.primitive.move"><code class="xref py py-mod docutils literal"><span class="pre">move</span></code></a> module as simple as possible, you can only define <a class="reference internal" href="pypot.primitive.html#pypot.primitive.move.Move" title="pypot.primitive.move.Move"><code class="xref py py-class docutils literal"><span class="pre">Move</span></code></a> as a predefined frequency and you can not define keyframes whenever you want. This could be added if it seems like it would be useful.</p>
 </div>
-<p>You can use the <code class="xref py py-mod docutils literal"><span class="pre">move</span></code> module to:</p>
+<p>You can use the <a class="reference internal" href="pypot.primitive.html#module-pypot.primitive.move" title="pypot.primitive.move"><code class="xref py py-mod docutils literal"><span class="pre">move</span></code></a> module to:</p>
 <ul class="simple">
 <li>record moves,</li>
 <li>play moves,</li>
 <li>save/load them on the disk.</li>
 </ul>
-<p>The <code class="xref py py-class docutils literal"><span class="pre">MoveRecorder</span></code> and <code class="xref py py-class docutils literal"><span class="pre">MovePlayer</span></code> are defined as subclass of <code class="xref py py-class docutils literal"><span class="pre">LoopPrimitive</span></code> and can thus be used as such. For instance, if you want to record a 50Hz move on all the motor of an ergo-robot you can simply use the following code:</p>
+<p>The <a class="reference internal" href="pypot.primitive.html#pypot.primitive.move.MoveRecorder" title="pypot.primitive.move.MoveRecorder"><code class="xref py py-class docutils literal"><span class="pre">MoveRecorder</span></code></a> and <a class="reference internal" href="pypot.primitive.html#pypot.primitive.move.MovePlayer" title="pypot.primitive.move.MovePlayer"><code class="xref py py-class docutils literal"><span class="pre">MovePlayer</span></code></a> are defined as subclass of <a class="reference internal" href="pypot.primitive.html#pypot.primitive.primitive.LoopPrimitive" title="pypot.primitive.primitive.LoopPrimitive"><code class="xref py py-class docutils literal"><span class="pre">LoopPrimitive</span></code></a> and can thus be used as such. For instance, if you want to record a 50Hz move on all the motor of an ergo-robot you can simply use the following code:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">pypot.robot</span>
 
@@ -182,7 +183,7 @@
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">It is important to note that you should be sure that you primitive actually runs at the same speed that the move has been recorded. If the player can not run as fast as the framerate of the recorded <code class="xref py py-class docutils literal"><span class="pre">Move</span></code>, it will be played slowly resulting in a slower version of your move.</p>
+<p class="last">It is important to note that you should be sure that you primitive actually runs at the same speed that the move has been recorded. If the player can not run as fast as the framerate of the recorded <a class="reference internal" href="pypot.primitive.html#pypot.primitive.move.Move" title="pypot.primitive.move.Move"><code class="xref py py-class docutils literal"><span class="pre">Move</span></code></a>, it will be played slowly resulting in a slower version of your move.</p>
 </div>
 </div>
 
@@ -205,6 +206,7 @@
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

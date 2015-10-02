@@ -83,6 +83,7 @@
             
               <li><a href="vrep.html" title="Using a simulated robot with V-REP" accesskey="P">previous </a></li>
               <li><a href="logging.html" title="The logging system" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -170,89 +171,105 @@
                 <div class="body">
                   
   <div class="section" id="rest-api">
-<span id="remote-protocol"></span><h1>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h1>
-<p>Any <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> object can be to remotely accessed and controled through TCP network.</p>
-<p>This can be useful to:
-* separate the low-level control running on an embedded computer and higher-level computation on a more powerful computer
-* control your Poppy robot from any language (C++, javascript...) able to use tcp sockets
-* remote control your robot without having to install all Poppy libraries</p>
-<p>The protocol, described <a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/REST-APIs.md">here</a>,  allows the access of all the robot variables and method (including motors and primitives) via a JSON request.
-Two transport methods have been developed so far:</p>
+<span id="rest-api"></span><h1>REST API<a class="headerlink" href="#rest-api" title="Permalink to this headline">¶</a></h1>
+<p>Any <a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> object can be to remotely accessed and
+controled through TCP network.</p>
+<p>This can be useful to:</p>
 <ul class="simple">
-<li>HTTP via GET and POST request (see the <code class="xref py py-class docutils literal"><span class="pre">HTTPRobotServer</span></code>)</li>
-<li>ZMQ socket (see the <code class="xref py py-class docutils literal"><span class="pre">ZMQRobotServer</span></code>)</li>
+<li>separate the low-level control running on an
+embedded computer and higher-level computation on a more powerful
+computer</li>
+<li>control your Poppy robot from any language (C++,
+javascript...) able to use tcp sockets</li>
+<li>remote control your robot
+without having to install all Poppy libraries</li>
 </ul>
-<p>The <code class="xref py py-class docutils literal"><span class="pre">RESTRobot</span></code> has been abstracted from the server, so you can easily add new transport methods if needed.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">A third server is available in Pypot: <code class="xref py py-class docutils literal"><span class="pre">snap</span></code> allows you to run Snap! directly on the robot.</p>
-</div>
+<p>The protocol, described
+<a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/REST-APIs.md">here</a>,
+allows the access of all the robot variables and method (including
+motors and primitives) via a JSON request. Two transport methods have
+been developed so far:</p>
+<ul class="simple">
+<li>HTTP via GET and POST request (see the
+<a class="reference external" href="pypot.server.html#pypot.server.httpserver.HTTPRobotServer">pypot.server.httpserver.HTTPRobotServer</a>)</li>
+<li>ZMQ socket (see the <a class="reference external" href="pypot.server.html#pypot.server.zmqserver.ZMQRobotServer">pypot.server.zmqserver.ZMQRobotServer</a>)</li>
+</ul>
+<p>The <a class="reference external" href="pypot.server.html#pypot.server.rest.RESTRobot">pypot.server.rest.RESTRobot</a> has been abstracted from the server,
+so you can easily add new transport methods if needed.</p>
+<blockquote>
+<div><p><strong>note</strong></p>
+<p>A third server is available in Pypot: <a class="reference external" href="pypot.server.html#pypot.server.snap.SnapRobotServer">pypot.server.snap.SnapRobotServer</a> allows you
+to run Snap! directly on the robot.</p>
+</div></blockquote>
 <div class="section" id="zmq-method">
-<h2>ZMQ method<a class="headerlink" href="#zmq-method" title="Permalink to this headline">¶</a></h2>
+<span id="zmq-method"></span><h2>ZMQ method<a class="headerlink" href="#zmq-method" title="Permalink to this headline">¶</a></h2>
 <p>This method is quick and powerful but needs the pyzmq library installed.</p>
 <p>Server-side code (launch on the robot):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zmq</span>
+<pre class="literal-block">
+import zmq
 
-<span class="kn">from</span>  <span class="nn">pypot.server</span> <span class="kn">import</span> <span class="n">ZMQRobotServer</span>
+from  pypot.server import ZMQRobotServer
 
-<span class="n">robot</span> <span class="o">=</span> <span class="o">...</span> <span class="c">#create your robot from a config file or using the PoppyHumanoid lib</span>
+robot = ... #create your robot from a config file or using the PoppyHumanoid lib
 
-<span class="n">server</span> <span class="o">=</span> <span class="n">ZMQRobotServer</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span><span class="s">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="mi">6768</span><span class="p">)</span>
+server = ZMQRobotServer(robot,&quot;0.0.0.0&quot;, 6768) 
 
-<span class="c"># We launch the server inside a thread</span>
-<span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">server</span><span class="o">.</span><span class="n">run</span><span class="p">())</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<span class="k">print</span> <span class="s">&quot;ready&quot;</span>
-</pre></div>
-</div>
+# We launch the server inside a thread
+threading.Thread(target=lambda: server.run()).start()
+print &quot;ready&quot;
+</pre>
 <p>Client-side code (launch on remote computer):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">zmq</span>
+<pre class="literal-block">
+import zmq
 
-<span class="n">c</span> <span class="o">=</span> <span class="n">zmq</span><span class="o">.</span><span class="n">Context</span><span class="p">()</span>
-<span class="n">s</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">zmq</span><span class="o">.</span><span class="n">REQ</span><span class="p">)</span>
-<span class="n">s</span><span class="o">.</span><span class="n">connect</span> <span class="p">(</span><span class="s">&quot;tcp://poppy.local:6768&quot;</span><span class="p">)</span> <span class="c">#adapt the hostname or IP to the one of your robot and the port to the one set on the server code</span>
+c = zmq.Context()
+s = c.socket(zmq.REQ)
+s.connect (&quot;tcp://poppy.local:6768&quot;) #adapt the hostname or IP to the one of your robot and the port to the one set on the server code
 
-<span class="c">#how the read a register</span>
-<span class="n">req</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;robot&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s">&quot;get_register_value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s">&quot;motor&quot;</span><span class="p">:</span> <span class="s">&quot;head_z&quot;</span><span class="p">,</span> <span class="s">&quot;register&quot;</span><span class="p">:</span> <span class="s">&quot;present_position&quot;</span><span class="p">}}}</span>
-<span class="n">s</span><span class="o">.</span><span class="n">send_json</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-<span class="n">answer</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv_json</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+#how the read a register
+req = {&quot;robot&quot;: {&quot;get_register_value&quot;: {&quot;motor&quot;: &quot;head_z&quot;, &quot;register&quot;: &quot;present_position&quot;}}}
+s.send_json(req)
+answer = s.recv_json()
+print(answer)
 
-<span class="c">#how to write in a register</span>
-<span class="n">req</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;robot&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s">&quot;set_register_value&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s">&quot;motor&quot;</span><span class="p">:</span> <span class="s">&quot;head_z&quot;</span><span class="p">,</span> <span class="s">&quot;register&quot;</span><span class="p">:</span> <span class="s">&quot;goal_position&quot;</span><span class="p">,</span> <span class="s">&quot;value&quot;</span><span class="p">:</span> <span class="s">&quot;40&quot;</span><span class="p">}}}</span>
-<span class="n">s</span><span class="o">.</span><span class="n">send_json</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-<span class="n">answer</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv_json</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-</pre></div>
-</div>
+#how to write in a register
+req = {&quot;robot&quot;: {&quot;set_register_value&quot;: {&quot;motor&quot;: &quot;head_z&quot;, &quot;register&quot;: &quot;goal_position&quot;, &quot;value&quot;: &quot;40&quot;}}}
+s.send_json(req)
+answer = s.recv_json()
+print(answer)
+</pre>
 </div>
 <div class="section" id="http-method">
-<h2>HTTP method<a class="headerlink" href="#http-method" title="Permalink to this headline">¶</a></h2>
-<p>More classical and easy to use. This example uses urllib, but there are other very good Python libraries for HTTP.</p>
+<span id="http-method"></span><h2>HTTP method<a class="headerlink" href="#http-method" title="Permalink to this headline">¶</a></h2>
+<p>More classical and easy to use. This example uses urllib, but there are
+other very good Python libraries for HTTP.</p>
 <p>To launch the HTTP server on you robot:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">poppy</span><span class="o">-</span><span class="n">services</span> <span class="o">--</span><span class="n">http</span>
-</pre></div>
-</div>
-<p>the default port is 8080. You can test your connection by directly entering the following URL in your browser: <a class="reference external" href="http://poppy.local:8080/motor/list.json">http://poppy.local:8080/motor/list.json</a></p>
+<pre class="literal-block">
+poppy-services --http
+</pre>
+<p>the default port is 8080. You can test your connection by directly
+entering the following URL in your browser:
+<a class="reference external" href="http://poppy.local:8080/motor/list.json">http://poppy.local:8080/motor/list.json</a></p>
 <p>Client-side example code (use on remote computer):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">urllib</span><span class="o">,</span> <span class="nn">urllib2</span><span class="o">,</span> <span class="nn">json</span>
+<pre class="literal-block">
+import urllib, urllib2, json
 
-<span class="c">#make a GET request to read the names of all motors</span>
-<span class="n">allmotors</span><span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s">&quot;http://poppy.local:8080/motor/list.json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">allmotors</span>
+#make a GET request to read the names of all motors
+allmotors= urllib2.urlopen(&quot;http://poppy.local:8080/motor/list.json&quot;).read()
+print allmotors
 
-<span class="c">#transform json into Python dictionnary</span>
-<span class="n">allmotors_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">allmotors</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">allmotors_dict</span><span class="p">[</span><span class="s">&quot;motors&quot;</span><span class="p">]:</span>
-    <span class="k">print</span> <span class="n">m</span>
+#transform json into Python dictionnary
+allmotors_dict = json.loads(allmotors)
+for m in allmotors_dict[&quot;motors&quot;]:
+    print m
 
-<span class="c">#make POST request to move a motor</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">&#39;http://poppy.local:8080/motor/head_z/register/goal_position/value.json&#39;</span>
-<span class="n">values</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
-<span class="n">req</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="s">&#39;application/json&#39;</span><span class="p">)</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-</pre></div>
-</div>
+#make POST request to move a motor
+url = 'http://poppy.local:8080/motor/head_z/register/goal_position/value.json'
+values = json.dumps(-20)
+req = urllib2.Request(url, values)
+req.add_header(&quot;Content-Type&quot;,'application/json')
+response = urllib2.urlopen(req)
+</pre>
 </div>
 </div>
 
@@ -277,6 +294,7 @@ Two transport methods have been developed so far:</p>
       
         <li><a href="vrep.html" title="Using a simulated robot with V-REP" >previous</a></li>
         <li><a href="logging.html" title="The logging system" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

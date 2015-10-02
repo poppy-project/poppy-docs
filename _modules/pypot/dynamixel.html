@@ -178,7 +178,7 @@
     <span class="k">return</span> <span class="p">[]</span>
 
 
-<div class="viewcode-block" id="get_available_ports"><a class="viewcode-back" href="../../pypot/doc/pypot.dynamixel.html#pypot.dynamixel.get_available_ports">[docs]</a><span class="k">def</span> <span class="nf">get_available_ports</span><span class="p">(</span><span class="n">only_free</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+<div class="viewcode-block" id="get_available_ports"><a class="viewcode-back" href="../../pypot/pypot/doc/pypot.dynamixel.html#pypot.dynamixel.get_available_ports">[docs]</a><span class="k">def</span> <span class="nf">get_available_ports</span><span class="p">(</span><span class="n">only_free</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="n">ports</span> <span class="o">=</span> <span class="n">_get_available_ports</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="n">only_free</span><span class="p">:</span>
@@ -203,7 +203,7 @@
     <span class="k">return</span> <span class="n">port_info_dict</span><span class="p">[</span><span class="n">port</span><span class="p">]</span> <span class="k">if</span> <span class="n">port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">port_info_dict</span>
 
 </div>
-<div class="viewcode-block" id="find_port"><a class="viewcode-back" href="../../pypot/doc/pypot.dynamixel.html#pypot.dynamixel.find_port">[docs]</a><span class="k">def</span> <span class="nf">find_port</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+<div class="viewcode-block" id="find_port"><a class="viewcode-back" href="../../pypot/pypot/doc/pypot.dynamixel.html#pypot.dynamixel.find_port">[docs]</a><span class="k">def</span> <span class="nf">find_port</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Find the port with the specified attached motor ids.</span>
 
 <span class="sd">        :param list ids: list of motor ids to find</span>
@@ -238,7 +238,7 @@
         <span class="n">ids</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">ids_founds</span><span class="p">))))</span>
 
 </div>
-<div class="viewcode-block" id="autodetect_robot"><a class="viewcode-back" href="../../pypot/doc/pypot.dynamixel.html#pypot.dynamixel.autodetect_robot">[docs]</a><span class="k">def</span> <span class="nf">autodetect_robot</span><span class="p">():</span>
+<div class="viewcode-block" id="autodetect_robot"><a class="viewcode-back" href="../../pypot/pypot/doc/pypot.dynamixel.html#pypot.dynamixel.autodetect_robot">[docs]</a><span class="k">def</span> <span class="nf">autodetect_robot</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot; Creates a :class:`~pypot.robot.robot.Robot` by detecting dynamixel motors on all available ports. &quot;&quot;&quot;</span>
     <span class="n">motor_controllers</span> <span class="o">=</span> <span class="p">[]</span>
 

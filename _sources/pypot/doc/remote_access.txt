@@ -1,31 +1,40 @@
-.. _remote_protocol:
+# REST API
 
-REST API
-========
+Any [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) object can be to remotely accessed and
+controled through TCP network.
 
-Any :class:`~pypot.robot.robot.Robot` object can be to remotely accessed and controled through TCP network. 
+This can be useful to: 
+- separate the low-level control running on an
+embedded computer and higher-level computation on a more powerful
+computer 
+- control your Poppy robot from any language (C++,
+javascript...) able to use tcp sockets 
+- remote control your robot
+without having to install all Poppy libraries
 
-This can be useful to:
-* separate the low-level control running on an embedded computer and higher-level computation on a more powerful computer
-* control your Poppy robot from any language (C++, javascript...) able to use tcp sockets
-* remote control your robot without having to install all Poppy libraries
+The protocol, described
+[here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md),
+allows the access of all the robot variables and method (including
+motors and primitives) via a JSON request. Two transport methods have
+been developed so far:
 
-The protocol, described `here <https://github.com/poppy-project/pypot/blob/master/REST-APIs.md>`_,  allows the access of all the robot variables and method (including motors and primitives) via a JSON request. 
-Two transport methods have been developed so far:
+-   HTTP via GET and POST request (see the
+    [pypot.server.httpserver.HTTPRobotServer](pypot.server.html#pypot.server.httpserver.HTTPRobotServer))
+-   ZMQ socket (see the [pypot.server.zmqserver.ZMQRobotServer](pypot.server.html#pypot.server.zmqserver.ZMQRobotServer))
 
-* HTTP via GET and POST request (see the :class:`~pypot.server.httpserver.HTTPRobotServer`)
-* ZMQ socket (see the :class:`~pypot.server.zmqserver.ZMQRobotServer`)
+The [pypot.server.rest.RESTRobot](pypot.server.html#pypot.server.rest.RESTRobot) has been abstracted from the server,
+so you can easily add new transport methods if needed.
 
-The :class:`~pypot.server.rest.RESTRobot` has been abstracted from the server, so you can easily add new transport methods if needed.
+> **note**
+>
+> A third server is available in Pypot: [pypot.server.snap.SnapRobotServer](pypot.server.html#pypot.server.snap.SnapRobotServer) allows you
+> to run Snap! directly on the robot.
 
-.. note:: A third server is available in Pypot: :class:`~pypot.server.snap` allows you to run Snap! directly on the robot. 
-
-ZMQ method
-----------------------------
+## ZMQ method
 
 This method is quick and powerful but needs the pyzmq library installed.
 
-Server-side code (launch on the robot)::
+Server-side code (launch on the robot):
 
     import zmq
 
@@ -34,13 +43,12 @@ Server-side code (launch on the robot)::
     robot = ... #create your robot from a config file or using the PoppyHumanoid lib
 
     server = ZMQRobotServer(robot,"0.0.0.0", 6768) 
-    
+
     # We launch the server inside a thread
     threading.Thread(target=lambda: server.run()).start()
     print "ready"
 
-
-Client-side code (launch on remote computer)::
+Client-side code (launch on remote computer):
 
     import zmq
 
@@ -60,19 +68,20 @@ Client-side code (launch on remote computer)::
     answer = s.recv_json()
     print(answer)
 
-    
-HTTP method
-----------------------------
+## HTTP method
 
-More classical and easy to use. This example uses urllib, but there are other very good Python libraries for HTTP.
+More classical and easy to use. This example uses urllib, but there are
+other very good Python libraries for HTTP.
 
-To launch the HTTP server on you robot::
+To launch the HTTP server on you robot:
 
     poppy-services --http
-    
-the default port is 8080. You can test your connection by directly entering the following URL in your browser: http://poppy.local:8080/motor/list.json
 
-Client-side example code (use on remote computer)::
+the default port is 8080. You can test your connection by directly
+entering the following URL in your browser:
+<http://poppy.local:8080/motor/list.json>
+
+Client-side example code (use on remote computer):
 
     import urllib, urllib2, json
 
@@ -91,5 +100,3 @@ Client-side example code (use on remote computer)::
     req = urllib2.Request(url, values)
     req.add_header("Content-Type",'application/json')
     response = urllib2.urlopen(req)
-
-

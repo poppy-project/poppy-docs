@@ -148,7 +148,7 @@
 <span class="n">Quaternion</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s">&#39;Quaternion&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="s">&#39;y&#39;</span><span class="p">,</span> <span class="s">&#39;z&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">))</span>
 
 
-<div class="viewcode-block" id="attrsetter"><a class="viewcode-back" href="../../pypot/doc/pypot.utils.html#pypot.utils.attrsetter">[docs]</a><span class="k">def</span> <span class="nf">attrsetter</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+<div class="viewcode-block" id="attrsetter"><a class="viewcode-back" href="../../pypot/pypot/doc/pypot.utils.html#pypot.utils.attrsetter">[docs]</a><span class="k">def</span> <span class="nf">attrsetter</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">resolve_attr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">attr</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">attr</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">obj</span>
@@ -163,7 +163,7 @@
     <span class="k">return</span> <span class="n">g</span>
 
 </div>
-<div class="viewcode-block" id="SyncEvent"><a class="viewcode-back" href="../../pypot/doc/pypot.utils.html#pypot.utils.SyncEvent">[docs]</a><span class="k">class</span> <span class="nc">SyncEvent</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="SyncEvent"><a class="viewcode-back" href="../../pypot/pypot/doc/pypot.utils.html#pypot.utils.SyncEvent">[docs]</a><span class="k">class</span> <span class="nc">SyncEvent</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">period</span><span class="o">=.</span><span class="mi">1</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_event</span> <span class="o">=</span> <span class="n">Event</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_needed</span> <span class="o">=</span> <span class="bp">False</span>
@@ -171,12 +171,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_last_sync</span> <span class="o">=</span> <span class="mf">0.</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="n">period</span>
 
-<div class="viewcode-block" id="SyncEvent.request"><a class="viewcode-back" href="../../pypot/doc/pypot.utils.html#pypot.utils.SyncEvent.request">[docs]</a>    <span class="k">def</span> <span class="nf">request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SyncEvent.request"><a class="viewcode-back" href="../../pypot/pypot/doc/pypot.utils.html#pypot.utils.SyncEvent.request">[docs]</a>    <span class="k">def</span> <span class="nf">request</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_needed</span> <span class="o">=</span> <span class="bp">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_event</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_event</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </div>
-<div class="viewcode-block" id="SyncEvent.done"><a class="viewcode-back" href="../../pypot/doc/pypot.utils.html#pypot.utils.SyncEvent.done">[docs]</a>    <span class="k">def</span> <span class="nf">done</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="SyncEvent.done"><a class="viewcode-back" href="../../pypot/pypot/doc/pypot.utils.html#pypot.utils.SyncEvent.done">[docs]</a>    <span class="k">def</span> <span class="nf">done</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_event</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_last_sync</span> <span class="o">=</span> <span class="n">time</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_needed</span> <span class="o">=</span> <span class="bp">False</span>

@@ -84,6 +84,7 @@
             
               <li><a href="extending.html" title="Extending pypot" accesskey="P">previous </a></li>
               <li><a href="quickstart-configfile.html" title="QuickStart: create a Robot" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -172,107 +173,129 @@
                 <div class="body">
                   
   <div class="section" id="quickstart-discover-and-communicate-with-dynamixel-servomotors">
-<span id="quickstart-lowlevel"></span><h1>QuickStart: discover and communicate with Dynamixel servomotors<a class="headerlink" href="#quickstart-discover-and-communicate-with-dynamixel-servomotors" title="Permalink to this headline">¶</a></h1>
-<p>Assume you have a Dynamixel servomotor connected to the computer, using a USB2AX or a USB2Dynamixel.
-The servomotor has to be powered by a SMPS2Dynamixel (or any other external power source), because the USB port does not deliver enough current.</p>
+<span id="quickstart-discover-and-communicate-with-dynamixel-servomotors"></span><h1>QuickStart: discover and communicate with Dynamixel servomotors<a class="headerlink" href="#quickstart-discover-and-communicate-with-dynamixel-servomotors" title="Permalink to this headline">¶</a></h1>
+<p>Assume you have a Dynamixel servomotor connected to the computer, using
+a USB2AX or a USB2Dynamixel. The servomotor has to be powered by a
+SMPS2Dynamixel (or any other external power source), because the USB
+port does not deliver enough current.</p>
 <div class="section" id="ports-scan">
-<h2>Ports scan<a class="headerlink" href="#ports-scan" title="Permalink to this headline">¶</a></h2>
+<span id="ports-scan"></span><h2>Ports scan<a class="headerlink" href="#ports-scan" title="Permalink to this headline">¶</a></h2>
 <p>First we are going to discover all serial ports open on your computer.
-These ports (called &#8216;COM&#8217; in Windows, &#8216;/dev/tty&#8217; in Linux) are used by serial devices (mainly USB devices usingserial communication), like a USB2AX, a Razor board...</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pypot.dynamixel</span>
+These ports (called &#8216;COM&#8217; in Windows, &#8216;/dev/tty&#8217; in Linux) are used by
+serial devices (mainly USB devices usingserial communication), like a
+USB2AX, a Razor board...</p>
+<pre class="literal-block">
+import pypot.dynamixel
 
-<span class="n">ports</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">dynamixel</span><span class="o">.</span><span class="n">get_available_ports</span><span class="p">()</span>
+ports = pypot.dynamixel.get_available_ports()
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">ports</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="s">&#39;no port found!&#39;</span><span class="p">)</span>
+if not ports:
+    raise IOError('no port found!')
 
-<span class="k">print</span> <span class="s">&#39;ports found&#39;</span><span class="p">,</span> <span class="n">ports</span>
-</pre></div>
-</div>
-<p>We start by importing the <em>dynamixel</em> (low-level) part of pypot. Then we use the <em>get_available_ports</em> function to create a list of all ports names.</p>
-<p>Then we check if there is something in the port variable and raise an error if it&#8217;s not the case.</p>
-<p>The last line prints &#8216;ports found&#8217; and the list of ports, which should result in something like (for Linux):</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; ports found [&quot;/dev/ttyACM0&quot;, &quot;/dev/ttyUSB0&quot;]
-</pre></div>
-</div>
+print 'ports found', ports
+</pre>
+<p>We start by importing the <em>dynamixel</em> (low-level) part of pypot. Then we
+use the <a class="reference external" href="pypot.dynamixel.html#pypot.dynamixel.get_available_ports">pypot.dynamixel.get_available_ports</a> function to create a list of all ports
+names.</p>
+<p>Then we check if there is something in the port variable and raise an
+error if it&#8217;s not the case.</p>
+<p>The last line prints &#8216;ports found&#8217; and the list of ports, which should
+result in something like (for Linux):</p>
+<pre class="literal-block">
+&gt; ports found [&quot;/dev/ttyACM0&quot;, &quot;/dev/ttyUSB0&quot;]
+</pre>
 </div>
 <div class="section" id="id-scan">
-<h2>ID scan<a class="headerlink" href="#id-scan" title="Permalink to this headline">¶</a></h2>
-<p>We use only one USB port, but we can plug several Dynamixel servomotors in serial. To be able to communicate with a given servo, we need to know its ID.</p>
+<span id="id-scan"></span><h2>ID scan<a class="headerlink" href="#id-scan" title="Permalink to this headline">¶</a></h2>
+<p>We use only one USB port, but we can plug several Dynamixel servomotors
+in serial. To be able to communicate with a given servo, we need to know
+its ID.</p>
 <p><strong>Never connect two servomotors with the same ID on the same bus !</strong></p>
-<p>We also have to know its baudrate (the frequency at which it talks) and its protocol (version 1 for MX and AX servos, version 2 for XL servos).</p>
+<p>We also have to know its baudrate (the frequency at which it talks) and
+its protocol (version 1 for MX and AX servos, version 2 for XL servos).</p>
 <p>Its baudrate 57600 for a MX, 1000000 for a AX or XL and its ID should be 1.</p>
-<p>Let start by defining the baudrate and protocol values (change them according to your setup):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">using_XL320</span> <span class="o">=</span> <span class="bp">False</span>
-<span class="n">my_baudrate</span> <span class="o">=</span> <span class="mi">1000000</span>
-</pre></div>
-</div>
-<p>Then we scan the ports: for each port, for the 60 first IDs, we ask if a servomotor has this ID on this port (with the previously defined protocol and baudrate).</p>
-<p>The IDs can theoretically go up to 254, but IDs above 60 are rarely used (ans the scanning takes some time).</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">port</span> <span class="ow">in</span> <span class="n">ports</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">port</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">using_XL320</span><span class="p">:</span>
-            <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">dynamixel</span><span class="o">.</span><span class="n">Dxl320IO</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="n">my_baudrate</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">dxl_io</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">dynamixel</span><span class="o">.</span><span class="n">DxlIO</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="n">my_baudrate</span><span class="p">)</span>
+<p>Let start by defining the baudrate and protocol values (change them
+according to your setup):</p>
+<pre class="literal-block">
+using_XL320 = False
+my_baudrate = 1000000
+</pre>
+<p>Then we scan the ports: for each port, for the 60 first IDs, we ask if a
+servomotor has this ID on this port (with the previously defined
+protocol and baudrate).</p>
+<p>The IDs can theoretically go up to 254, but IDs above 60 are rarely used
+(ans the scanning takes some time).</p>
+<pre class="literal-block">
+for port in ports:
+    print port
+    try:
+        if using_XL320:
+            dxl_io = pypot.dynamixel.Dxl320IO(port, baudrate=my_baudrate)
+        else:
+            dxl_io = pypot.dynamixel.DxlIO(port, baudrate=my_baudrate)
 
-        <span class="k">print</span> <span class="s">&quot;scanning&quot;</span>
-        <span class="n">found</span> <span class="o">=</span>  <span class="n">dxl_io</span><span class="o">.</span><span class="n">scan</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">60</span><span class="p">))</span>
-        <span class="k">print</span> <span class="n">found</span>
-        <span class="n">dxl_io</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span> <span class="n">e</span>
-</pre></div>
-</div>
+        print &quot;scanning&quot;
+        found =  dxl_io.scan(range(60))
+        print found
+        dxl_io.close()
+    except Exception, e:
+        print e
+</pre>
 <p>You should get something like:</p>
-<div class="highlight-python"><div class="highlight"><pre>/dev/ttyACM0
+<pre class="literal-block">
+/dev/ttyACM0
 scanning
 [11, 12, 13, 14, 15]
 /dev/ttyUSB0
 scanning
 []
-</pre></div>
-</div>
-<p>here, there are 5 servomotors connected on the /dev/ttyACM0 port and none one the &#8216;/dev/ttyUSB0&#8217; one.</p>
+</pre>
+<p>here, there are 5 servomotors connected on the /dev/ttyACM0 port and
+none one the &#8216;/dev/ttyUSB0&#8217; one.</p>
 </div>
 <div class="section" id="reading-and-writing-in-registers">
-<h2>Reading and writing in registers<a class="headerlink" href="#reading-and-writing-in-registers" title="Permalink to this headline">¶</a></h2>
-<p>Dynamixel servomotors are called &#8216;smart servos&#8217;, because they are not controlled through a PWM signal as simple DC motors or servomotors, but they contain an electronical board with a memory.
-You write the goal position in a given register and the board controls the servomotor to reach the position.
-You can also write in the speed or max_torque registers. The full protocol is available <a class="reference external" href="http://support.robotis.com/en/">on Robotis website</a></p>
+<span id="reading-and-writing-in-registers"></span><h2>Reading and writing in registers<a class="headerlink" href="#reading-and-writing-in-registers" title="Permalink to this headline">¶</a></h2>
+<p>Dynamixel servomotors are called &#8216;smart servos&#8217;, because they are not
+controlled through a PWM signal as simple DC motors or servomotors, but
+they contain an electronical board with a memory. You write the goal
+position in a given register and the board controls the servomotor to
+reach the position. You can also write in the speed or max_torque
+registers. The full protocol is available <a class="reference external" href="http://support.robotis.com/en/">on Robotis
+website</a></p>
 <p>Let read the position of a servomotor and write a new goal position:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">pypot.dynamixel</span>
-<span class="kn">import</span> <span class="nn">time</span>
+<pre class="literal-block">
+import pypot.dynamixel
+import time
 
-<span class="n">my_port</span> <span class="o">=</span> <span class="s">&quot;/dev/ttyACM0&quot;</span> <span class="c">#Modify to fit your setup!</span>
-<span class="n">my_baudrate</span> <span class="o">=</span> <span class="mi">1000000</span>   <span class="c">#Modify to fit your setup!</span>
-<span class="n">my_id</span> <span class="o">=</span> <span class="mi">11</span>                        <span class="c">#Modify to fit your setup!</span>
+my_port = &quot;/dev/ttyACM0&quot; #Modify to fit your setup!
+my_baudrate = 1000000   #Modify to fit your setup!
+my_id = 11                        #Modify to fit your setup!
 
-<span class="c">#start serial communication</span>
-<span class="n">dxl_io</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">dynamixel</span><span class="o">.</span><span class="n">DxlIO</span><span class="p">(</span><span class="n">my_port</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="n">my_baudrate</span><span class="p">)</span>
+#start serial communication
+dxl_io = pypot.dynamixel.DxlIO(my_port, baudrate=my_baudrate)
 
-<span class="c">#get position of servo my_id</span>
-<span class="n">pos</span> <span class="o">=</span> <span class="n">dxl_io</span><span class="o">.</span><span class="n">get_present_position</span><span class="p">([</span><span class="n">my_id</span><span class="p">])</span>
-<span class="k">print</span> <span class="n">pos</span>
+#get position of servo my_id
+pos = dxl_io.get_present_position([my_id]) 
+print pos
 
-<span class="c">#allow the servomotor to move</span>
-<span class="n">dxl_io</span><span class="o">.</span><span class="n">enable_torque</span><span class="p">([</span><span class="n">my_id</span><span class="p">])</span>
+#allow the servomotor to move
+dxl_io.enable_torque([my_id]) 
 
-<span class="c">#set position of servo m_id to 90 degrees</span>
-<span class="n">dxl_io</span><span class="o">.</span><span class="n">set_goal_position</span><span class="p">({</span><span class="n">my_id</span><span class="p">:</span> <span class="mi">90</span><span class="p">})</span>
+#set position of servo m_id to 90 degrees
+dxl_io.set_goal_position({my_id: 90})
 
-<span class="c">#wait a bit</span>
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+#wait a bit
+time.sleep(2)
 
-<span class="c">#put compliance back to the robot</span>
-<span class="n">dxl_io</span><span class="o">.</span><span class="n">disable_torque</span><span class="p">([</span><span class="n">my_id</span><span class="p">])</span>
+#put compliance back to the robot
+dxl_io.disable_torque([my_id]) 
 
-<span class="c">#end serial communication</span>
-<span class="n">dxl_io</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>See <code class="xref py py-mod docutils literal"><span class="pre">pypot.dynamixel.io</span></code> here to find all available registers functions. Remember that it is always easier to use the <a class="reference internal" href="robot.html#robot"><span>robot</span></a> and <a class="reference internal" href="motor.html#motor"><span>motor</span></a> abstractions.</p>
+#end serial communication
+dxl_io.close()
+</pre>
+<p>See pypot.dynamixel.io here to find all available registers functions.
+Remember that it is always easier to use the <a class="reference external" href="robot.html">robot</a> and
+<a class="reference external" href="motor.html">motor</a> abstractions.</p>
 </div>
 </div>
 
@@ -297,6 +320,7 @@ You can also write in the speed or max_torque registers. The full protocol is av
       
         <li><a href="extending.html" title="Extending pypot" >previous</a></li>
         <li><a href="quickstart-configfile.html" title="QuickStart: create a Robot" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

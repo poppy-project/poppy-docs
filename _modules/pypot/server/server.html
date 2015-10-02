@@ -145,12 +145,12 @@
 <span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">zerorpc</span>
 
-    <span class="k">class</span> <span class="nc">RemoteRobotServer</span><span class="p">(</span><span class="n">AbstractServer</span><span class="p">):</span>
-        <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="RemoteRobotServer"><a class="viewcode-back" href="../../../pypot/doc/pypot.server.html#pypot.server.server.RemoteRobotServer">[docs]</a>    <span class="k">class</span> <span class="nc">RemoteRobotServer</span><span class="p">(</span><span class="n">AbstractServer</span><span class="p">):</span>
+<div class="viewcode-block" id="RemoteRobotServer.run"><a class="viewcode-back" href="../../../pypot/doc/pypot.server.html#pypot.server.server.RemoteRobotServer.run">[docs]</a>        <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="n">server</span> <span class="o">=</span> <span class="n">zerorpc</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">restfull_robot</span><span class="p">)</span>
             <span class="n">server</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s">&#39;tcp://{}:{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">))</span>
             <span class="n">server</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-
+</div></div>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>

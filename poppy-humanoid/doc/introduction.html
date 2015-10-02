@@ -82,6 +82,7 @@
             
               <li><a href="index.html" title="&lt;no title&gt;" accesskey="P">previous </a></li>
               <li><a href="../../poppy-torso/doc/index.html" title="&lt;no title&gt;" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">&lt;no title&gt;</a></li>
             
@@ -168,58 +169,93 @@
                 <div class="body">
                   
   <div class="section" id="introduction">
-<span id="poppy-humanoid-lib"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Poppy Humanoid is the library allowing you to create a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> corresponding to a standard Poppy Humanoid robot.</p>
+<span id="introduction"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Poppy Humanoid is the library allowing you to create a
+<a class="reference external" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> corresponding to a standard Poppy Humanoid
+robot.</p>
 <p>Using your Poppy Humanoid robot is as simple as:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
+<pre class="literal-block">
+from poppy_humanoid import PoppyHumanoid
 
-<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">()</span>
+poppy = PoppyHumanoid()
 
-<span class="k">print</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span>
-</pre></div>
-</div>
-<p>If you didn&#8217;t change the default configuration file, this should connect to the 25 Dynamixel servomotors through two USB2AX.</p>
-<p>Once the PoppyHumanoid object is created, you can start <a class="reference internal" href="../../quickstarts/discover.html#quickstart-discover"><span>discovering it</span></a>, control it at a <a class="reference internal" href="../../pypot/doc/robot.html#robot"><span>basic level</span></a> or using <a class="reference internal" href="../../pypot/doc/primitive.html#primitives"><span>primitives</span></a>.</p>
+print poppy.motors
+</pre>
+<p>If you didn&#8217;t change the default configuration file, this should connect
+to the 25 Dynamixel servomotors through two USB2AX.</p>
+<p>Once the PoppyHumanoid object is created, you can start
+<a class="reference external" href="../../quickstarts/discover.html">discovering it</a>, control it at a
+<a class="reference external" href="../../pypot/doc/robot.html">basic level</a> or using <a class="reference external" href="../../pypot/doc/primitive.html">primitives</a></p>
 </div>
 <div class="section" id="poppy-humanoid-robot-overview">
-<span id="poppy-humanoid-robot"></span><h1>Poppy Humanoid robot overview<a class="headerlink" href="#poppy-humanoid-robot-overview" title="Permalink to this headline">¶</a></h1>
+<span id="poppy-humanoid-robot-overview"></span><h1>Poppy Humanoid robot overview<a class="headerlink" href="#poppy-humanoid-robot-overview" title="Permalink to this headline">¶</a></h1>
 <p>TODO</p>
-<p>Robot&#8217;s <a class="reference internal" href="motor_list.html#poppy-humanoid-motors-list"><span>motors list</span></a></p>
-<a class="reference internal image-reference" href="../../_images/motor_naming_convention2.jpg"><img alt="../../_images/motor_naming_convention2.jpg" class="align-center" src="../../_images/motor_naming_convention2.jpg" style="width: 30%;" /></a>
+<p>Robot&#8217;s <a class="reference external" href="motor_list.html">motors list</a></p>
+<p><img alt="image" src="../../_images/motor_naming_convention1.jpg" /></p>
 </div>
 <div class="section" id="poppy-humanoid-specific-features">
-<h1>Poppy Humanoid specific features<a class="headerlink" href="#poppy-humanoid-specific-features" title="Permalink to this headline">¶</a></h1>
-<p><code class="xref py py-class docutils literal"><span class="pre">PoppyHumanoid</span></code> is not only a <code class="xref py py-class docutils literal"><span class="pre">AbstractPoppyCreature</span></code> (which contains a <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code>), it also have its own features and parameters.</p>
-<p>The default goto behavior for each motor is set to &#8216;minijerk&#8217; and each motor of the torso has the &#8216;safe&#8217; compliant behavior (see <a class="reference internal" href="../../pypot/doc/motor.html#motor"><span>the Pypot motor section</span></a>), to avoid self-collision.</p>
-<p>The following primitives are added to the robot (so you can directly use <code class="docutils literal"><span class="pre">poppy.sit_position.start()</span></code>):</p>
+<span id="poppy-humanoid-specific-features"></span><h1>Poppy Humanoid specific features<a class="headerlink" href="#poppy-humanoid-specific-features" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="poppy_humanoid.html#poppy_humanoid.poppy_humanoid.PoppyHumanoid">poppy_humanoid.poppy_humanoid.PoppyHumanoid</a> is not only a
+<a class="reference external" href="../../poppy-creature/doc/poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature">poppy.creatures.abstractcreature.AbstractPoppyCreature</a> (which contains
+a <a class="reference external" href="../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a>), it also have its own features and
+parameters.</p>
+<p>The default goto behavior for each motor is set to &#8216;minijerk&#8217; and each
+motor of the torso has the &#8216;safe&#8217; compliant behavior (see
+the <a class="reference external" href="../../pypot/doc/motor.html">Pypot motor section</a>), to avoid self-collision.</p>
+<p>The following primitives are added to the robot (so you can directly use
+<code class="docutils literal"><span class="pre">poppy.sit_position.start()</span></code>):</p>
 <ul class="simple">
-<li>A <code class="xref py py-class docutils literal"><span class="pre">StandPosition</span></code> named <code class="docutils literal"><span class="pre">stand_position</span></code>: the robot moves to standing position (0 to all motors).</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">SitPosition</span></code> named <code class="docutils literal"><span class="pre">sit_position</span></code>: the robot moves to sitting position (legs bent with heels under the buttock)</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">LimitTorque</span></code> named <code class="docutils literal"><span class="pre">limit_torque</span></code>: Work In Progress. Each motor automatically sets the minimal torque needed to reach its goal position and therefore limit power consumption and motor heating. This primitive is looping.</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">TemperatureMonitor</span></code> named <code class="docutils literal"><span class="pre">temperature_monitoring</span></code>: check the temperature of all motors and plays a sound if one is too hot. This primitive is looping and started by default.</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">SimpleBodyBeatMotion</span></code> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Simple primitive to make Poppy shake its upper body following a given beat rate in bpm. This primitive is looping.</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">UpperBodyIdleMotion</span></code> named <code class="docutils literal"><span class="pre">upper_body_idle_motion</span></code>: Slow and small movements of the upper body to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">HeadIdleMotion</span></code> named <code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Slow and small movements of the head to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">ArmsTurnCompliant</span></code> named <code class="docutils literal"><span class="pre">arms_turn_compliant</span></code>: Automatically turns the arms compliant when a force is applied. This primitive is looping.</li>
-<li>A <code class="xref py py-class docutils literal"><span class="pre">PuppetMaster</span></code> named <code class="docutils literal"><span class="pre">arms_copy_motion</span></code>: Apply the motion made on the left arm to the right arm. This primitive is looping.</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.posture.StandPosition">poppy_humanoid.primitives.posture.StandPosition</a> named
+<code class="docutils literal"><span class="pre">stand_position</span></code>: the robot moves to standing position (0 to all
+motors).</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.posture.SitPosition">poppy_humanoid.primitives.posture.SitPosition</a> named
+<code class="docutils literal"><span class="pre">sit_position</span></code>: the robot moves to sitting position (legs bent with
+heels under the buttock)</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.safe.LimitTorque">poppy_humanoid.primitives.safe.LimitTorque</a>named
+<code class="docutils literal"><span class="pre">limit_torque</span></code>: Work In Progress. Each motor automatically sets the
+minimal torque needed to reach its goal position and therefore limit
+power consumption and motor heating. This primitive is looping.</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.safe.TemperatureMonitor">poppy_humanoid.primitives.safe.TemperatureMonitor </a> named
+<code class="docutils literal"><span class="pre">temperature_monitoring</span></code>: check the temperature of all motors and
+plays a sound if one is too hot. This primitive is looping and
+started by default.</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.dance.SimpleBodyBeatMotion">poppy_humanoid.primitives.dance.SimpleBodyBeatMotion</a> named
+<code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Simple primitive to make Poppy shake its upper
+body following a given beat rate in bpm. This primitive is looping.</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.idle.UpperBodyIdleMotion">poppy_humanoid.primitives.idle.UpperBodyIdleMotion</a> named
+<code class="docutils literal"><span class="pre">upper_body_idle_motion</span></code>: Slow and small movements of the upper body
+to have the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.idle.HeadIdleMotion">poppy_humanoid.primitives.idle.HeadIdleMotion</a> named
+<code class="docutils literal"><span class="pre">dance_beat_motion</span></code>: Slow and small movements of the head to have
+the robot look less &#8216;dead&#8217;. This primitive is looping.</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.interaction.ArmsTurnCompliant">poppy_humanoid.primitives.interaction.ArmsTurnCompliant</a> named
+<code class="docutils literal"><span class="pre">arms_turn_compliant</span></code>: Automatically turns the arms compliant when a
+force is applied. This primitive is looping.</li>
+<li>A <a class="reference external" href="poppy_humanoid.primitives.html#poppy_humanoid.primitives.interaction.PuppetMaster">poppy_humanoid.primitives.interaction.PuppetMaster</a> named
+<code class="docutils literal"><span class="pre">arms_copy_motion</span></code>: Apply the motion made on the left arm to the
+right arm. This primitive is looping.</li>
 </ul>
 <p>Remember to remove compliance before starting the primitives!</p>
 </div>
 <div class="section" id="installing">
-<span id="poppy-humanoid-install"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
+<span id="installing"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
 <p>To install the Poppy Humanoid library, you can use pip:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install poppy-humanoid
-</pre></div>
-</div>
+<pre class="literal-block">
+pip install poppy-humanoid
+</pre>
 <p>Then you can update it with:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install --upgrade poppy-humanoid
-</pre></div>
-</div>
-<p>If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from <a class="reference external" href="https://github.com/poppy-project/poppy-humanoid">Github</a> and install them with (in the software folder):</p>
-<div class="highlight-python"><div class="highlight"><pre>python setup.py install
-</pre></div>
-</div>
-<p>The requirements for Poppy Humanoid are <a class="reference internal" href="../../pypot/doc/installation.html#pypot-install"><span>Pypot</span></a> and <a class="reference internal" href="../../poppy-creature/doc/introduction.html#poppy-creature-install"><span>Poppy Creatures</span></a>.</p>
+<pre class="literal-block">
+pip install --upgrade poppy-humanoid
+</pre>
+<p>If you prefer to work from the sources (latest but possibly unstable
+releases), you can clone them from
+<a class="reference external" href="https://github.com/poppy-project/poppy-humanoid">Github</a> and install
+them with (in the software folder):</p>
+<pre class="literal-block">
+python setup.py install
+</pre>
+<p>The requirements for Poppy Humanoid are <a class="reference external" href="../../pypot/doc/installation.html">Pypot</a> and
+<a class="reference external" href="../../poppy-creature/doc/introduction.html">Poppy Creatures</a>.</p>
 </div>
 
 
@@ -243,6 +279,7 @@
       
         <li><a href="index.html" title="&lt;no title&gt;" >previous</a></li>
         <li><a href="../../poppy-torso/doc/index.html" title="&lt;no title&gt;" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >&lt;no title&gt;</a></li>
         <li><a href="#">top</a></li> 

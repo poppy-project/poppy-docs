@@ -83,6 +83,7 @@
             
               <li><a href="primitive.html" title="Primitives" accesskey="P">previous </a></li>
               <li><a href="remote_access.html" title="REST API" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -170,49 +171,92 @@
                 <div class="body">
                   
   <div class="section" id="using-a-simulated-robot-with-v-rep">
-<span id="pypot-vrep"></span><h1>Using a simulated robot with V-REP<a class="headerlink" href="#using-a-simulated-robot-with-v-rep" title="Permalink to this headline">¶</a></h1>
-<p>See <a class="reference internal" href="../../quickstarts/vrep.html#quickstart-vrep"><span>here</span></a> for a quickstart using Poppy Humanoid</p>
+<span id="using-a-simulated-robot-with-v-rep"></span><h1>Using a simulated robot with V-REP<a class="headerlink" href="#using-a-simulated-robot-with-v-rep" title="Permalink to this headline">¶</a></h1>
+<p>See <a class="reference external" href="../../quickstarts/vrep.html">here</a> for a quickstart using Poppy Humanoid.</p>
 <div class="section" id="what-is-v-rep">
-<h2>What is V-rep ?<a class="headerlink" href="#what-is-v-rep" title="Permalink to this headline">¶</a></h2>
-<p>As it is often easier to work in simulation rather than with the real robot, pypot has been linked with the <a class="reference external" href="http://www.coppeliarobotics.com">V-REP simulator</a>. It is described as the &#8220;Swiss army knife among robot simulators&#8221; and is a very powerful tool to quickly (re)create robotics setup. As presenting V-REP is way beyond the scope of this tutorial, we will here assume that you are already familiar with this tool. Otherwise, you should directly refer to <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/index.html">V-REP documentation</a>.</p>
-<p>Details about how to connect pypot and V-REP can be found in <a class="reference external" href="https://forum.poppy-project.org/t/howto-connect-pypot-to-your-simulated-version-of-poppy-humanoid-in-v-rep/332">this post</a>.</p>
-<p>The connection between pypot and V-REP was designed to let you seamlessly switch from your real robot to the simulated one. It is based on <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">V-REP&#8217;s remote API</a>.</p>
-<p>In order to connect to V-REP through pypot, you will only need to install the <a class="reference external" href="http://www.coppeliarobotics.com/downloads.html">V-REP</a> simulator. Pypot comes with a specific <code class="xref py py-class docutils literal"><span class="pre">VrepIO</span></code> designed to communicate with V-REP through its <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">remote API</a>.</p>
+<span id="what-is-v-rep"></span><h2>What is V-rep ?<a class="headerlink" href="#what-is-v-rep" title="Permalink to this headline">¶</a></h2>
+<p>As it is often easier to work in simulation rather than with the real
+robot, pypot has been linked with the <a class="reference external" href="http://www.coppeliarobotics.com">V-REP
+simulator</a>. It is described as the
+&#8220;Swiss army knife among robot simulators&#8221; and is a very powerful tool to
+quickly (re)create robotics setup. As presenting V-REP is way beyond the
+scope of this tutorial, we will here assume that you are already
+familiar with this tool. Otherwise, you should directly refer to <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/index.html">V-REP
+documentation</a>.</p>
+<p>Details about how to connect pypot and V-REP can be found in <a class="reference external" href="https://forum.poppy-project.org/t/howto-connect-pypot-to-your-simulated-version-of-poppy-humanoid-in-v-rep/332">this
+post</a>.</p>
+<p>The connection between pypot and V-REP was designed to let you
+seamlessly switch from your real robot to the simulated one. It is based
+on <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">V-REP&#8217;s remote
+API</a>.</p>
+<p>In order to connect to V-REP through pypot, you will only need to
+install the <a class="reference external" href="http://www.coppeliarobotics.com/downloads.html">V-REP</a>
+simulator. Pypot comes with a specific <a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO</a> designed
+to communicate with V-REP through its <a class="reference external" href="http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm">remote
+API</a>.</p>
 <p>This IO can be used to:</p>
 <ul class="simple">
-<li>connect to the V-REP server : <code class="xref py py-class docutils literal"><span class="pre">VrepIO</span></code></li>
-<li>load a scene : <code class="xref py py-meth docutils literal"><span class="pre">load_scene()</span></code></li>
-<li>start/stop/restart a simulation : <code class="xref py py-meth docutils literal"><span class="pre">start_simulation()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">stop_simulation()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">restart_simulation()</span></code></li>
-<li>pause/resume the simulation : <code class="xref py py-meth docutils literal"><span class="pre">pause_simulation()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">resume_simulation()</span></code></li>
-<li>get/set a motor position : <code class="xref py py-meth docutils literal"><span class="pre">get_motor_position()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">set_motor_position()</span></code></li>
-<li>get an object position/orientation : <code class="xref py py-meth docutils literal"><span class="pre">get_object_position()</span></code>, <code class="xref py py-meth docutils literal"><span class="pre">get_object_orientation()</span></code></li>
+<li>connect to the V-REP server : <a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO</a></li>
+<li>load a scene : <a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.load_scene</a></li>
+<li>start/stop/restart a simulation :
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.start_simulation</a>,
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.stop_simulation</a>,
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.restart_simulation</a></li>
+<li>pause/resume the simulation :
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.pause_simulation</a>
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.resume_simulation</a></li>
+<li>get/set a motor position :
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.get_motor_position</a>,
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.set_motor_position</a></li>
+<li>get an object position/orientation :
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.get_object_position</a>,
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.io.VrepIO">pypot.vrep.io.VrepIO.get_object_orientation</a></li>
 </ul>
 </div>
 <div class="section" id="connecting-to-v-rep">
-<h2>Connecting to V-REP<a class="headerlink" href="#connecting-to-v-rep" title="Permalink to this headline">¶</a></h2>
+<span id="connecting-to-v-rep"></span><h2>Connecting to V-REP<a class="headerlink" href="#connecting-to-v-rep" title="Permalink to this headline">¶</a></h2>
 <p>First launch V-rep.</p>
-<p>Then create your <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> using the <code class="xref py py-func docutils literal"><span class="pre">from_vrep()</span></code> method, providing the vrep host, port and scene instead of the <code class="xref py py-func docutils literal"><span class="pre">from_config()</span></code> method:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># Working with the simulated version</span>
-<span class="kn">import</span> <span class="nn">pypot.vrep</span>
+<p>Then create your <a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> using the
+<a class="reference external" href="pypot.vrep.html#pypot.vrep.from_vrep">pypot.vrep.from_vrep</a> method, providing the vrep host, port
+and scene instead of the <a class="reference external" href="pypot.robot.html#pypot.robot.config.from_config">pypot.robot.config.from_config</a> method:</p>
+<pre class="literal-block">
+# Working with the simulated version
+import pypot.vrep
 
-<span class="n">poppy</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">vrep</span><span class="o">.</span><span class="n">from_vrep</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">vrep_host</span><span class="p">,</span> <span class="n">vrep_port</span><span class="p">,</span> <span class="n">vrep_scene</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>This function tries to connect to a V-REP instance and expects to find motors with names corresponding as the ones found in the config.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> returned will also provide a convenience reset_simulation method which resets the simulation and the robot position to its intial stance.</p>
-</div>
-<p>Default host is localhost (&#8216;127.0.0.1&#8217;) and default port is 19997 (the default one for V-rep), so if you launched V-rep on the same computer, you can use the <code class="xref py py-func docutils literal"><span class="pre">from_vrep()</span></code> function with only the config argument.</p>
-<p>The default vrep_scene is None, you can set it to the path of any .ttt file (containing, for example, additionnal objects that your robot can interact with).</p>
-<p>The tracked_objects optionnal parameter is a list of V-REP dummy object to track, while the tracked_collisions is a list of V-REP collision to track.</p>
-<p>The <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> object will be equivalent to the one created in the case of a real robot, but not all dynamixel registers have their V-REP equivalent. For the moment, only the control of the position is used. Primitives (that use only thr mootrs positions) can be used without problems.</p>
-<p>If you use a creature-specific library to create your <code class="xref py py-class docutils literal"><span class="pre">Robot</span></code> (as poppy-humanoid for example), you can simply use the &#8216;simulator&#8217; argument. If V-rep is not on the same machine, specify the vrep_host and vrap-port arguments:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
+poppy = pypot.vrep.from_vrep(config, vrep_host, vrep_port, vrep_scene)
+</pre>
+<p>This function tries to connect to a V-REP instance and expects to find
+motors with names corresponding as the ones found in the config.</p>
+<blockquote>
+<div><p><strong>note</strong></p>
+<p>The returned <a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> will also provide a convenient
+reset_simulation method which resets the simulation and the robot
+position to its intial stance.</p>
+</div></blockquote>
+<p>Default host is localhost (&#8216;127.0.0.1&#8217;) and default port is 19997 (the
+default one for V-rep), so if you launched V-rep on the same computer,
+you can use the <a class="reference external" href="pypot.vrep.html#pypot.vrep.from_vrep">pypot.vrep.from_vrep</a> function with only the
+config argument.</p>
+<p>The default vrep_scene is None, you can set it to the path of any .ttt
+file (containing, for example, additionnal objects that your robot can
+interact with).</p>
+<p>The tracked_objects optionnal parameter is a list of V-REP dummy object
+to track, while the tracked_collisions is a list of V-REP collision to
+track.</p>
+<p>The <a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> object will be equivalent to the one
+created in the case of a real robot, but not all dynamixel registers
+have their V-REP equivalent. For the moment, only the control of the
+position is used. Primitives (that use only thr mootrs positions) can be
+used without problems.</p>
+<p>If you use a creature-specific library to create your
+<a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a>  (as poppy-humanoid for example), you can
+simply use the &#8216;simulator&#8217; argument. If V-rep is not on the same
+machine, specify the vrep_host and vrep_port arguments:</p>
+<pre class="literal-block">
+from poppy_humanoid import PoppyHumanoid
 
-<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">(</span><span class="n">simulator</span><span class="o">=</span><span class="s">&#39;vrep&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
+poppy = PoppyHumanoid(simulator='vrep')
+</pre>
 </div>
 </div>
 
@@ -237,6 +281,7 @@
       
         <li><a href="primitive.html" title="Primitives" >previous</a></li>
         <li><a href="remote_access.html" title="REST API" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 

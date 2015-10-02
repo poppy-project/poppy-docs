@@ -68,8 +68,8 @@
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
 <li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">sensor</span></code> Package</a><ul>
-<li><a class="reference internal" href="#kinect-module"><code class="docutils literal"><span class="pre">kinect</span></code> Module</a></li>
-<li><a class="reference internal" href="#optitrack-module"><code class="docutils literal"><span class="pre">optitrack</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.kinect.sensor"><code class="docutils literal"><span class="pre">kinect</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.optitrack"><code class="docutils literal"><span class="pre">optitrack</span></code> Module</a></li>
 </ul>
 </li>
 </ul>
@@ -78,6 +78,7 @@
               </li>
 
             
+              <li><a href="../../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../../../_sources/pypot/pypot/doc/pypot.sensor.txt" rel="nofollow">Show Source</a></li>
@@ -118,8 +119,8 @@
   <h3><a href="../../../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#"><code class="docutils literal"><span class="pre">sensor</span></code> Package</a><ul>
-<li><a class="reference internal" href="#kinect-module"><code class="docutils literal"><span class="pre">kinect</span></code> Module</a></li>
-<li><a class="reference internal" href="#optitrack-module"><code class="docutils literal"><span class="pre">optitrack</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.kinect.sensor"><code class="docutils literal"><span class="pre">kinect</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.optitrack"><code class="docutils literal"><span class="pre">optitrack</span></code> Module</a></li>
 </ul>
 </li>
 </ul>
@@ -157,13 +158,120 @@
               <div class="bodywrapper">
                 <div class="body">
                   
-  <div class="section" id="sensor-package">
-<h1><code class="xref py py-mod docutils literal"><span class="pre">sensor</span></code> Package<a class="headerlink" href="#sensor-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="kinect-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">kinect</span></code> Module<a class="headerlink" href="#kinect-module" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-pypot.sensor">
+<span id="sensor-package"></span><h1><code class="xref py py-mod docutils literal"><span class="pre">sensor</span></code> Package<a class="headerlink" href="#module-pypot.sensor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-pypot.sensor.kinect.sensor">
+<span id="kinect-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">kinect</span></code> Module<a class="headerlink" href="#module-pypot.sensor.kinect.sensor" title="Permalink to this headline">¶</a></h2>
+<p>This code has been developed by Baptiste Busch: <a class="reference external" href="https://github.com/buschbapti">https://github.com/buschbapti</a></p>
+<p>This module allows you to retrieve Skeleton information from a Kinect device.
+It is only the client side of a zmq client/server application.</p>
+<p>The server part can be found at: <a class="reference external" href="https://bitbucket.org/buschbapti/kinectserver/src">https://bitbucket.org/buschbapti/kinectserver/src</a>
+It used the Microsoft Kinect SDK and thus only work on Windows.</p>
+<p>Of course, the client side can be used on any platform.</p>
+<dl class="class">
+<dt id="pypot.sensor.kinect.sensor.Skeleton">
+<em class="property">class </em><code class="descclassname">pypot.sensor.kinect.sensor.</code><code class="descname">Skeleton</code><a class="reference internal" href="../../../_modules/pypot/sensor/kinect/sensor.html#Skeleton"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.kinect.sensor.Skeleton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pypot.sensor.kinect.sensor.Skeleton" title="pypot.sensor.kinect.sensor.Skeleton"><code class="xref py py-class docutils literal"><span class="pre">pypot.sensor.kinect.sensor.Skeleton</span></code></a></p>
+<dl class="attribute">
+<dt id="pypot.sensor.kinect.sensor.Skeleton.joints">
+<code class="descname">joints</code><em class="property"> = ('hip_center', 'spine', 'shoulder_center', 'head', 'shoulder_left', 'elbow_left', 'wrist_left', 'hand_left', 'shoulder_right', 'elbow_right', 'wrist_right', 'hand_right', 'hip_left', 'knee_left', 'ankle_left', 'foot_left', 'hip_right', 'knee_right', 'ankle_right', 'foot_right')</em><a class="headerlink" href="#pypot.sensor.kinect.sensor.Skeleton.joints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pypot.sensor.kinect.sensor.Joint">
+<em class="property">class </em><code class="descclassname">pypot.sensor.kinect.sensor.</code><code class="descname">Joint</code><span class="sig-paren">(</span><em>position</em>, <em>orientation</em>, <em>pixel_coordinate</em><span class="sig-paren">)</span><a class="headerlink" href="#pypot.sensor.kinect.sensor.Joint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="pypot.sensor.kinect.sensor.Joint.orientation">
+<code class="descname">orientation</code><a class="headerlink" href="#pypot.sensor.kinect.sensor.Joint.orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.kinect.sensor.Joint.pixel_coordinate">
+<code class="descname">pixel_coordinate</code><a class="headerlink" href="#pypot.sensor.kinect.sensor.Joint.pixel_coordinate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.kinect.sensor.Joint.position">
+<code class="descname">position</code><a class="headerlink" href="#pypot.sensor.kinect.sensor.Joint.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pypot.sensor.kinect.sensor.KinectSensor">
+<em class="property">class </em><code class="descclassname">pypot.sensor.kinect.sensor.</code><code class="descname">KinectSensor</code><span class="sig-paren">(</span><em>addr</em>, <em>port</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/sensor/kinect/sensor.html#KinectSensor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.kinect.sensor.KinectSensor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="pypot.sensor.kinect.sensor.KinectSensor.remove_user">
+<code class="descname">remove_user</code><span class="sig-paren">(</span><em>user_index</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/sensor/kinect/sensor.html#KinectSensor.remove_user"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.kinect.sensor.KinectSensor.remove_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypot.sensor.kinect.sensor.KinectSensor.remove_all_users">
+<code class="descname">remove_all_users</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/sensor/kinect/sensor.html#KinectSensor.remove_all_users"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.kinect.sensor.KinectSensor.remove_all_users" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.kinect.sensor.KinectSensor.tracked_skeleton">
+<code class="descname">tracked_skeleton</code><a class="headerlink" href="#pypot.sensor.kinect.sensor.KinectSensor.tracked_skeleton" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypot.sensor.kinect.sensor.KinectSensor.get_skeleton">
+<code class="descname">get_skeleton</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/sensor/kinect/sensor.html#KinectSensor.get_skeleton"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.kinect.sensor.KinectSensor.get_skeleton" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypot.sensor.kinect.sensor.KinectSensor.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/sensor/kinect/sensor.html#KinectSensor.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.kinect.sensor.KinectSensor.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="optitrack-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">optitrack</span></code> Module<a class="headerlink" href="#optitrack-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pypot.sensor.optitrack">
+<span id="optitrack-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">optitrack</span></code> Module<a class="headerlink" href="#module-pypot.sensor.optitrack" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pypot.sensor.optitrack.TrackedObject">
+<em class="property">class </em><code class="descclassname">pypot.sensor.optitrack.</code><code class="descname">TrackedObject</code><span class="sig-paren">(</span><em>position</em>, <em>quaternion</em>, <em>orientation</em>, <em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#pypot.sensor.optitrack.TrackedObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tuple</span></code></p>
+<dl class="attribute">
+<dt id="pypot.sensor.optitrack.TrackedObject.orientation">
+<code class="descname">orientation</code><a class="headerlink" href="#pypot.sensor.optitrack.TrackedObject.orientation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.optitrack.TrackedObject.position">
+<code class="descname">position</code><a class="headerlink" href="#pypot.sensor.optitrack.TrackedObject.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.optitrack.TrackedObject.quaternion">
+<code class="descname">quaternion</code><a class="headerlink" href="#pypot.sensor.optitrack.TrackedObject.quaternion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.optitrack.TrackedObject.timestamp">
+<code class="descname">timestamp</code><a class="headerlink" href="#pypot.sensor.optitrack.TrackedObject.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pypot.sensor.optitrack.quat2euler">
+<code class="descclassname">pypot.sensor.optitrack.</code><code class="descname">quat2euler</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/pypot/sensor/optitrack.html#quat2euler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.optitrack.quat2euler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 
@@ -186,6 +294,7 @@
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
+        <li><a href="../../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

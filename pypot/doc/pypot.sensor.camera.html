@@ -72,10 +72,10 @@
                 <ul>
 <li><a class="reference internal" href="#">pypot.sensor.camera package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#pypot-sensor-camera-abstractcam-module">pypot.sensor.camera.abstractcam module</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.camera.abstractcam">pypot.sensor.camera.abstractcam module</a></li>
 <li><a class="reference internal" href="#pypot-sensor-camera-opencvcam-module">pypot.sensor.camera.opencvcam module</a></li>
 <li><a class="reference internal" href="#pypot-sensor-camera-rpicam-module">pypot.sensor.camera.rpicam module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.camera">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -86,6 +86,7 @@
             
               <li><a href="pypot.sensor.html" title="pypot.sensor package" accesskey="P">previous </a></li>
               <li><a href="pypot.sensor.imagefeature.html" title="pypot.sensor.imagefeature package" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="pypot.html" >pypot package</a></li>
               <li><a href="pypot.sensor.html" accesskey="U">pypot.sensor package</a></li>
@@ -129,10 +130,10 @@
   <ul>
 <li><a class="reference internal" href="#">pypot.sensor.camera package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#pypot-sensor-camera-abstractcam-module">pypot.sensor.camera.abstractcam module</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.camera.abstractcam">pypot.sensor.camera.abstractcam module</a></li>
 <li><a class="reference internal" href="#pypot-sensor-camera-opencvcam-module">pypot.sensor.camera.opencvcam module</a></li>
 <li><a class="reference internal" href="#pypot-sensor-camera-rpicam-module">pypot.sensor.camera.rpicam module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-pypot.sensor.camera">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -181,8 +182,44 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="pypot-sensor-camera-abstractcam-module">
-<h2>pypot.sensor.camera.abstractcam module<a class="headerlink" href="#pypot-sensor-camera-abstractcam-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pypot.sensor.camera.abstractcam">
+<span id="pypot-sensor-camera-abstractcam-module"></span><h2>pypot.sensor.camera.abstractcam module<a class="headerlink" href="#module-pypot.sensor.camera.abstractcam" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pypot.sensor.camera.abstractcam.AbstractCamera">
+<em class="property">class </em><code class="descclassname">pypot.sensor.camera.abstractcam.</code><code class="descname">AbstractCamera</code><span class="sig-paren">(</span><em>name</em>, <em>resolution</em>, <em>fps</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pypot/sensor/camera/abstractcam.html#AbstractCamera"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.camera.abstractcam.AbstractCamera" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../pypot/doc/pypot.robot.html#pypot.robot.sensor.Sensor" title="pypot.robot.sensor.Sensor"><code class="xref py py-class docutils literal"><span class="pre">pypot.robot.sensor.Sensor</span></code></a></p>
+<dl class="attribute">
+<dt id="pypot.sensor.camera.abstractcam.AbstractCamera.registers">
+<code class="descname">registers</code><em class="property"> = ['frame', 'resolution', 'fps']</em><a class="headerlink" href="#pypot.sensor.camera.abstractcam.AbstractCamera.registers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.camera.abstractcam.AbstractCamera.frame">
+<code class="descname">frame</code><a class="headerlink" href="#pypot.sensor.camera.abstractcam.AbstractCamera.frame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypot.sensor.camera.abstractcam.AbstractCamera.post_processing">
+<code class="descname">post_processing</code><span class="sig-paren">(</span><em>image</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pypot/sensor/camera/abstractcam.html#AbstractCamera.post_processing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.camera.abstractcam.AbstractCamera.post_processing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypot.sensor.camera.abstractcam.AbstractCamera.grab">
+<code class="descname">grab</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pypot/sensor/camera/abstractcam.html#AbstractCamera.grab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.camera.abstractcam.AbstractCamera.grab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.camera.abstractcam.AbstractCamera.resolution">
+<code class="descname">resolution</code><a class="headerlink" href="#pypot.sensor.camera.abstractcam.AbstractCamera.resolution" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pypot.sensor.camera.abstractcam.AbstractCamera.fps">
+<code class="descname">fps</code><a class="headerlink" href="#pypot.sensor.camera.abstractcam.AbstractCamera.fps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="pypot-sensor-camera-opencvcam-module">
 <h2>pypot.sensor.camera.opencvcam module<a class="headerlink" href="#pypot-sensor-camera-opencvcam-module" title="Permalink to this headline">¶</a></h2>
@@ -190,8 +227,14 @@
 <div class="section" id="pypot-sensor-camera-rpicam-module">
 <h2>pypot.sensor.camera.rpicam module<a class="headerlink" href="#pypot-sensor-camera-rpicam-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pypot.sensor.camera">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pypot.sensor.camera" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pypot.sensor.camera.CameraController">
+<em class="property">class </em><code class="descclassname">pypot.sensor.camera.</code><code class="descname">CameraController</code><span class="sig-paren">(</span><em>camera</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pypot/sensor/camera.html#CameraController"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypot.sensor.camera.CameraController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../pypot/doc/pypot.robot.html#pypot.robot.controller.SensorsController" title="pypot.robot.controller.SensorsController"><code class="xref py py-class docutils literal"><span class="pre">pypot.robot.controller.SensorsController</span></code></a></p>
+</dd></dl>
+
 </div>
 </div>
 
@@ -216,6 +259,7 @@
       
         <li><a href="pypot.sensor.html" title="pypot.sensor package" >previous</a></li>
         <li><a href="pypot.sensor.imagefeature.html" title="pypot.sensor.imagefeature package" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="pypot.html" >pypot package</a></li>
         <li><a href="pypot.sensor.html" >pypot.sensor package</a></li>

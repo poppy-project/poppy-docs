@@ -83,6 +83,7 @@
             
               <li><a href="quickstart-configfile.html" title="QuickStart: create a Robot" accesskey="P">previous </a></li>
               <li><a href="dynamixel.html" title="Dynamixel Low-level IO" accesskey="N">next </a></li>
+              <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
               <li><a href="index.html" accesskey="U">Introduction</a></li>
             
@@ -170,71 +171,84 @@
                 <div class="body">
                   
   <div class="section" id="quickstart-use-a-primitive">
-<span id="quickstart-primitive"></span><h1>QuickStart: use a primitive<a class="headerlink" href="#quickstart-use-a-primitive" title="Permalink to this headline">¶</a></h1>
+<span id="quickstart-use-a-primitive"></span><h1>QuickStart: use a primitive<a class="headerlink" href="#quickstart-use-a-primitive" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-a-primitive">
-<h2>What is a primitive?<a class="headerlink" href="#what-is-a-primitive" title="Permalink to this headline">¶</a></h2>
-<p>A primitive is a behavior, simple or complex, that can be started, stopped and executes in parallel of your script.</p>
-<p>Primitives allow you to build really easily complex and modular behavior. For example, you can have one primitive to move the head, one to walk and one to check if someone moves your arm.</p>
-<p>A primitive must first be created, then you call the <em>start()</em> function to start it. When you want to stop it, simply use the <em>stop()</em> function.
+<span id="what-is-a-primitive"></span><h2>What is a primitive?<a class="headerlink" href="#what-is-a-primitive" title="Permalink to this headline">¶</a></h2>
+<p>A primitive is a behavior, simple or complex, that can be started,
+stopped and executes in parallel of your script.</p>
+<p>Primitives allow you to build really easily complex and modular
+behavior. For example, you can have one primitive to move the head, one
+to walk and one to check if someone moves your arm.</p>
+<p>A primitive must first be created, then you call the <em>start()</em> function
+to start it. When you want to stop it, simply use the <em>stop()</em> function.
 While the primitive runs, it call the <em>run()</em> function in a loop.</p>
-<p>Some primitives are defined in Pypot. Other of specific to a robot and therefore defined in the specific libraries. You can of course define you own primitives.</p>
+<p>Some primitives are defined in Pypot. Other of specific to a robot and
+therefore defined in the specific libraries. You can of course define
+you own primitives.</p>
 </div>
 <div class="section" id="example-record-and-replay-moves">
-<h2>Example: Record and replay moves<a class="headerlink" href="#example-record-and-replay-moves" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="xref py py-mod docutils literal"><span class="pre">move</span></code> module contains utility classes to help you record and play moves. A <code class="xref py py-class docutils literal"><span class="pre">Move</span></code> object simply contains a sequence of positions.</p>
-<p>The <code class="xref py py-class docutils literal"><span class="pre">MoveRecorder</span></code> and <code class="xref py py-class docutils literal"><span class="pre">MovePlayer</span></code> are primitives included in Pypot and allow you to record a move and replay it.</p>
-<p>Assuming you have a <code class="xref py py-class docutils literal"><span class="pre">robot</span></code> poppy already created:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pypot.primitive.move</span> <span class="kn">import</span> <span class="n">Move</span><span class="p">,</span> <span class="n">MoveRecorder</span><span class="p">,</span> <span class="n">MovePlayer</span>
+<span id="example-record-and-replay-moves"></span><h2>Example: Record and replay moves<a class="headerlink" href="#example-record-and-replay-moves" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="pypot.primitive.html#pypot.primitive.move.Move">pypot.primitive.move</a> module contains utility classes to help you
+record and play moves. A <a class="reference external" href="pypot.primitive.html#pypot.primitive.move.Move">pypot.primitive.move.Move</a> object simply
+contains a sequence of positions.</p>
+<p>The <a class="reference external" href="pypot.primitive.html#pypot.primitive.move.MoveRecorder">pypot.primitive.move.MoveRecorder</a>  and
+<a class="reference external" href="pypot.primitive.html#pypot.primitive.move.MovePlayer">pypot.primitive.move.MovePlayer</a> are primitives included in Pypot and
+allow you to record a move and replay it.</p>
+<p>Assuming you have a <a class="reference external" href="pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.robot.Robot</a> poppy already created:</p>
+<pre class="literal-block">
+from pypot.primitive.move import Move, MoveRecorder, MovePlayer
 
-<span class="n">record_frequency</span> <span class="o">=</span> <span class="mf">20.0</span> <span class="c"># This means that a new position will be recorded 50 times per second.</span>
-<span class="n">recorded_motors</span> <span class="o">=</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span> <span class="c"># We will record the position of all motors</span>
+record_frequency = 20.0 # This means that a new position will be recorded 50 times per second.
+recorded_motors = poppy.motors # We will record the position of all motors
 
-<span class="c">#disable torque for all motors</span>
-<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">recorded_motors</span><span class="p">:</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>
+#disable torque for all motors
+for m in recorded_motors:
+    m.compliant = True
 
-<span class="c">#create the recorder primitive</span>
-<span class="n">recorder</span> <span class="o">=</span> <span class="n">MoveRecorder</span><span class="p">(</span><span class="n">poppy</span><span class="p">,</span> <span class="n">record_frequency</span><span class="p">,</span> <span class="n">recorded_motors</span><span class="p">)</span>
+#create the recorder primitive
+recorder = MoveRecorder(poppy, record_frequency, recorded_motors)
 
-<span class="k">print</span> <span class="s">&quot;start recording&quot;</span>
-<span class="n">recorder</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+print &quot;start recording&quot;    
+recorder.start()
 
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+time.sleep(20)
 
-<span class="k">print</span> <span class="s">&quot;stop recording&quot;</span>
-<span class="n">recorder</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+print &quot;stop recording&quot; 
+recorder.stop()
 
-<span class="c">#save the recorded move in a file</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;mymove.json&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">recorder</span><span class="o">.</span><span class="n">move</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>During the 20 seconds wait, move the robot. The angular positions will be recorded, stored in recorder.move and, at the end, saved into a file called mymove.json. You can open this file with text editor to check what it contains.</p>
+#save the recorded move in a file
+with open('mymove.json', 'w') as f:
+    recorder.move.save(f)
+</pre>
+<p>During the 20 seconds wait, move the robot. The angular positions will
+be recorded, stored in recorder.move and, at the end, saved into a file
+called mymove.json. You can open this file with text editor to check
+what it contains.</p>
 <p>We can now replay the move:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#read the file containing the move</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;mymove.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">loaded_move</span> <span class="o">=</span> <span class="n">Move</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<pre class="literal-block">
+#read the file containing the move
+with open('mymove.json') as f:
+    loaded_move = Move.load(f)
 
-<span class="c">#create the primitive</span>
-<span class="n">player</span> <span class="o">=</span> <span class="n">MovePlayer</span><span class="p">(</span><span class="n">poppy</span><span class="p">,</span> <span class="n">loaded_move</span><span class="p">)</span>
+#create the primitive
+player = MovePlayer(poppy, loaded_move)
 
-<span class="c">#enable torque for all motors</span>
-<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
+#enable torque for all motors
+for m in poppy.motors:
+    m.compliant = False
 
-<span class="k">print</span> <span class="s">&quot;starting&quot;</span>
-<span class="n">player</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-<span class="n">player</span><span class="o">.</span><span class="n">wait_to_stop</span><span class="p">()</span>
-<span class="k">print</span> <span class="s">&quot;finished&quot;</span>
+print &quot;starting&quot;
+player.start()
+player.wait_to_stop()
+print &quot;finished&quot;
 
-<span class="c">#disable torque for all motors</span>
-<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>
+#disable torque for all motors
+for m in poppy.motors:
+    m.compliant = True
 
-<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>To learn more about primitives, see <a class="reference internal" href="primitive.html#primitives"><span>here</span></a>.</p>
+time.sleep(0.1)
+</pre>
+<p>To learn more about primitives, see <a class="reference external" href="primitive.html">here</a>.</p>
 </div>
 </div>
 
@@ -259,6 +273,7 @@ While the primitive runs, it call the <em>run()</em> function in a loop.</p>
       
         <li><a href="quickstart-configfile.html" title="QuickStart: create a Robot" >previous</a></li>
         <li><a href="dynamixel.html" title="Dynamixel Low-level IO" >next</a></li>
+        <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="index.html" >Introduction</a></li>
         <li><a href="#">top</a></li> 
