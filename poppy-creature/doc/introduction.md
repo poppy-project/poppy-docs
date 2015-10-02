@@ -5,8 +5,8 @@ robots (Poppy Humanoid, Poppy Ergo JR...) and Pypot, the generic, lower
 level library.
 
 It mainly contains the class definition of
-\~poppy.creatures.abstractcreature.AbstractPoppyCreature which takes a
-configuration and builds a \~pypot.robot.robot.Robot out of it, but also
+[poppy.creatures.abstractcreature.AbstractPoppyCreature](poppy.creatures.html#poppy.creatures.abstractcreature.AbstractPoppyCreature) which takes a
+configuration and builds a [pypot.robot.robot.Robot](../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot) out of it, but also
 a bunch of parameters to launch Snap! or HTTP servers, or to replace the
 communication toward Dynamixel servos by a communication with a
 simulator.
@@ -31,17 +31,16 @@ The arguments you can provide are:
 -   `snap_port` default: 6969 Port of the Snap! server
 -   `snap_quiet` default: True Should Snap! not output logs
 -   `use_http` default: False Should we launch the HTTP server (for
-    REST API use \<remote\_protocol\>)
+    [REST API use](../../pypot/doc/remote_access.html))
 -   `http_host` default: 0.0.0.0 Hostname of the HTTP server
 -   `http_port` default: 8080 Port of the HTTP server
 -   `http_quiet` default: True Should HTTP not output logs
 -   `use_remote` default: False Should we launch the Remote Robot server
-    (for REST API use \<remote\_protocol\>)
+    (for  [REST API use](../../pypot/doc/remote_access.html))
 -   `remote_host` default: 0.0.0.0 Hostname of the Remote Robot server
 -   `remote_port` default: 4242 Port of the Remote Robot server
 -   `sync` default: True Should we launch the synchronization loop for
-    motor communication (see
-    the Dynamixel low-level Pypot section \<low\_level\>)
+    motor communication (see [the Dynamixel low-level Pypot section](../../pypot/doc/dynamixel.html))
 
 The sources are available on
 [Github](https://github.com/poppy-project/poppy-creature).
@@ -85,8 +84,8 @@ the available options are:
 
 While developping a new Poppy creature, it is first easier to simply
 define it in a configuration file or dictionnary and instanciate a
-\~pypot.robot.robot.Robot from Pypot directly (see
-the robot object from Pypot \<robot\>).
+[pypot.robot.robot.Robot](../../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot) from Pypot directly (see
+the robot object from [Pypot](../../pypot/doc/robot.html)).
 
 But when you want to make it easily usable and available to non-geek
 public, the best is to create your own creature's library. It should
@@ -143,5 +142,5 @@ them with (in the software folder):
 
     python setup.py install
 
-The requirements for Poppy Creature are Pypot \<pypot\_install\> and
+The requirements for Poppy Creature are [Pypot](../../pypot/doc/installation.html) and
 bottle.

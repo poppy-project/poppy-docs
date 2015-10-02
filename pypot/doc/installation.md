@@ -163,8 +163,7 @@ better you can add yourself to the *dialout* or the *uucp* group
 
 At this point you should have a pypot ready to be used! In the extremely
 unlikely case where anything went wrong during the installation, please
-refer to the [issue
-tracker](https://github.com/poppy-project/pypot/issues).
+refer to the [issue tracker](https://github.com/poppy-project/pypot/issues).
 
 ## Updating
 

@@ -33,12 +33,11 @@ communication:
 -   open/close the communication channel,
 -   encapsulate the protocol.
 
-For example, the \~pypot.dynamixel.io.DxlIO (for dynamixel buses)
+For example, the [pypot.dynamixel.io.io.DxlIO](pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO) (for dynamixel buses)
 open/closes the serial port and provides high-level methods for sending
 dynamixel packet - e.g. for getting a motor position. Similarly, writing
-the \~pypot.vrep.io.VrepIO consists in opening the communication socket
-to the V-REP simulator (thanks to [V-REP's remote
-API](http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm))
+the [pypot.vrep.io.VrepIO](pypot.vrep.html#pypot.vrep.io.VrepIO) consists in opening the communication socket
+to the V-REP simulator (thanks to [V-REP's remote API](http://www.coppeliarobotics.com/helpFiles/en/remoteApiFunctionsPython.htm))
 and then encapsulating all methods for getting/setting all the simulated
 motors registers.
 
@@ -47,10 +46,10 @@ motors registers.
 > While this is not by any mean mandatory, it is often a good practice
 > to write all IO access as synchronous calls. The higher-level
 > synchronization loop is usually written as a
-> \~pypot.robot.controller.AbstractController.
+> [pypot.robot.controller.AbstractController](pypot.robot.html#pypot.robot.controller.AbstractController).
 
 The IO should also handle the low-level communication errors. For
-instance, the \~pypot.dynamixel.io.DxlIO automatically handles the
+instance, the [pypot.dynamixel.io.io.DxlIO](pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO) automatically handles the
 timeout error to prevent the whole communication to stop.
 
 > **note**
@@ -58,30 +57,30 @@ timeout error to prevent the whole communication to stop.
 > Once the new IO is written most of the integration into pypot should
 > be done! To facilitate the integration of the new IO with the higher
 > layer, we strongly recommend to take inspiration from the existing IO
-> - especially the \~pypot.dynamixel.io.DxlIO and the
-> \~pypot.vrep.io.VrepIO ones.
+> - especially the [pypot.dynamixel.io.io.DxlIO](pypot.dynamixel.io.html#pypot.dynamixel.io.io.DxlIO) and the
+> [pypot.vrep.io.VrepIO](pypot.vrep.html#pypot.vrep.io.VrepIO) ones.
 
 ## Writing a new Controller
 
-A \~pypot.robot.controller.Controller is basically a synchronization
+A [pypot.robot.controller](pypot.robot.html#pypot.robot.controller.AbstractController) is basically a synchronization
 loop which role is to keep up to date the state of the device and its
 "software" equivalent - through the associated IO.
 
-In the case of the \~pypot.dynamixel.controller.DxlController, it runs a
+In the case of the [pypot.dynamixel.controller.DxlController](pypot.dynamixel.html#pypot.dynamixel.controller.DxlController), it runs a
 50Hz loop which reads the actual position/speed/load of the real motor
 and sets it to the associated register in the
-\~pypot.dynamixel.motor.DxlMotor. It also reads the goal
-position/speed/load set in the \~pypot.dynamixel.motor.DxlMotor and
+[pypot.dynamixel.motor.DxlMotor](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor). It also reads the goal
+position/speed/load set in the [pypot.dynamixel.motor.DxlMotor](pypot.dynamixel.html#pypot.dynamixel.motor.DxlMotor) and
 sends them to the "real" motor.
 
 As most controller will have the same general structure - i.e. calling a
 sync. method at a predefined frequency - pypot provides an abstract
-class, the \~pypot.robot.controller.AbstractController, which does
+class, the [pypot.robot.controller.AbstractController](pypot.robot.html#pypot.robot.controller.AbstractController), which does
 exactly that. If your controller fits within this conception, you should
 only have to overide the
-\~pypot.robot.controller.AbstractController.update method.
+[pypot.robot.controller.AbstractController.update](pypot.robot.html#pypot.robot.controller.AbstractController) method.
 
-In the case of the \~pypot.vrep.controller.VrepController, the update
+In the case of the [pypot.vrep.controller.VrepController](pypot.vrep.html#pypot.vrep.controller.VrepController), the update
 loop simply retrieves each motor's present position and send the new
 target position. A similar approach is used to retrieve values form
 V-REP sensors.
@@ -97,13 +96,13 @@ V-REP sensors.
 ## Integrate it into the Robot
 
 Once you have defined your Controller, you most likely want to define a
-convenient factory functions (such as \~pypot.robot.config.from\_config
-or \~pypot.vrep.from\_vrep) allowing users to easily instantiate their
-\~pypot.robot.robot.Robot with the new Controller.
+convenient factory functions (such as [pypot.robot.config.from\_config](pypot.robot.html#pypot.robot.config.from_config)
+or [pypot.vrep.from\_vrep](pypot.vrep.html#pypot.vrep.from_vrep)) allowing users to easily instantiate their
+[pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) with the new Controller.
 
 By doing so you will permit them to seamlessly uses your interface with
 this new device without changing the high-level API. For instance, as
-both the \~pypot.dynamixel.controller.DxlController and the
-\~pypot.vrep.controller.VrepController only interact with the
-\~pypot.robot.robot.Robot through getting and setting values into
-\~pypot.robot.motor.Motor instances, they can be directly switch.
+both the [pypot.dynamixel.controller.DxlController](pypot.dynamixel.html#pypot.dynamixel.controller.DxlController) and the
+[pypot.vrep.controller.VrepController](pypot.vrep.html#pypot.vrep.controller.VrepController) only interact with the
+[pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot)  through getting and setting values into
+[pypot.robot.motor.Motor](pypot.robot.html#pypot.robot.motor.Motor)  instances, they can be directly switch.

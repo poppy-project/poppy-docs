@@ -22,7 +22,7 @@ USB2AX, a Razor board...
     print 'ports found', ports
 
 We start by importing the *dynamixel* (low-level) part of pypot. Then we
-use the *get\_available\_ports* function to create a list of all ports
+use the [pypot.dynamixel.get_available_ports](pypot.dynamixel.html#pypot.dynamixel.get_available_ports) function to create a list of all ports
 names.
 
 Then we check if there is something in the port variable and raise an
@@ -44,8 +44,7 @@ its ID.
 We also have to know its baudrate (the frequency at which it talks) and
 its protocol (version 1 for MX and AX servos, version 2 for XL servos).
 
-Its baudrate 57600 for a MX, 1000000 for a AX or XL and its ID should be
-1.
+Its baudrate 57600 for a MX, 1000000 for a AX or XL and its ID should be 1.
 
 Let start by defining the baudrate and protocol values (change them
 according to your setup):
@@ -129,5 +128,5 @@ Let read the position of a servomotor and write a new goal position:
     dxl_io.close()
 
 See pypot.dynamixel.io here to find all available registers functions.
-Remember that it is always easier to use the robot \<robot\> and
-motor \<motor\> abstractions.
+Remember that it is always easier to use the [robot](robot.html) and
+[motor](motor.html) abstractions.

@@ -2,7 +2,7 @@
 
 ## What is a configuration file?
 
-In Pypot, there is a Robot \<robot\> object that contains the
+In Pypot, there is a [Robot](robot.html) object that contains the
 configuration of your robot: how many motors (with what IDs, on what
 port), their names, angle limits, and so on.
 
@@ -77,7 +77,7 @@ It contains:
 Each robot-specific library (poppy-humanoid for example) contains its
 own configuration file.
 
-See the robot object description \<robot\> for more details on the
+See the [robot object description](robot.html) for more details on the
 contents of the configuration file.
 
 ## Test the Ergo Jr configuration
@@ -126,6 +126,6 @@ set the compliance to False.
 > the connection may close before the last order (here:
 > ergo\_robot.m6.compliant = True) is sent.
 
-See the discover quickstart \<quickstart\_discover\> or
-the motor object description \<motor\> for more precisions on how to
+See the [discover quickstart](../../quickstarts/discover.html) or
+the [motor object description](motor.html) for more precisions on how to
 control a robot
