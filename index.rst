@@ -8,7 +8,7 @@
 Welcome to Poppy Project's documentation!
 #################################
 
-Introducing the Poppy project and the Poppy creatures
+Introducing the Poppy Project and the Poppy Creatures
 ============================================
 
 .. toctree::
@@ -17,8 +17,8 @@ Introducing the Poppy project and the Poppy creatures
 
     poppy_project.md
     contribute.md
-  
-        
+
+
 Assembly guides
 =======================================================
 
@@ -26,13 +26,13 @@ Assembly guides
 .. toctree::
     :titlesonly:
     :maxdepth: 2
-    
+
     dynamixel_index.rst
-            
+
     poppy-humanoid/assembly_doc/index.rst
-    poppy-ergo-jr/assembly_doc/index.rst
-    
-    
+    poppy-ergo-jr/assembly_doc/index.md
+
+
 Quickstarts
 =======================================================
 
@@ -44,7 +44,7 @@ Quickstarts
     quickstarts/snap.md
     quickstarts/vrep.md
    
-    
+
 Development guides
 ==================
 
@@ -57,7 +57,7 @@ Poppy-humanoid library
     :maxdepth: 2
 
     poppy-humanoid/doc/index.rst
-    
+
 Poppy-torso library
 --------------------------------------
 
@@ -66,7 +66,7 @@ Poppy-torso library
     :maxdepth: 2
 
     poppy-torso/doc/index.rst
-    
+
 Poppy-ergo-jr library
 --------------------------------------
 
@@ -75,7 +75,7 @@ Poppy-ergo-jr library
     :maxdepth: 2
 
     poppy-ergo-jr/doc/index.rst
-       
+
 Poppy-creature library
 ------------------------------------------
 
@@ -84,7 +84,8 @@ Poppy-creature library
     :maxdepth: 2
 
     poppy-creature/doc/index.rst
-    
+
+
 
 Pypot library
 -----------------------------
@@ -94,7 +95,10 @@ Pypot library
     :maxdepth: 2
 
     pypot/doc/index.rst
-    
+
+
+
+
 APIs
 ----------------------
 
@@ -107,9 +111,9 @@ APIs
     poppy-ergo-jr/doc/poppy_ergo_jr.rst
     poppy-creature/doc/poppy.rst
     pypot/doc/pypot.rst
-    
 
-    
+
+
 
 Indices and tables
 ==================
