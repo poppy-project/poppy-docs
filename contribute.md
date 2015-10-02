@@ -1,4 +1,4 @@
-# Version and changelogs 
+# Version and changelogs
 
 ## Version
 
@@ -31,15 +31,15 @@ be noted here.
 The [Poppy project's forum](https://forum.poppy-project.org/) contains
 answer to your question, people that can help you and call for
 contribution. It is an important part of the project, so don't hesitate
-to ask, answer and contribute to it !
+to ask, answer and contribute to it!
 
 You can for example create a new Poppy creature,
- [extend Pypot](pypot/doc/extending.html), create tutorials and practicals
+ [extend Pypot](pypot/doc/extending.html), create tutorials and practicals.
 
 ## Call for contributions
 
 
-Calls for contributions are regularly added in the forum.
+[Calls for contributions](https://forum.poppy-project.org/tags/call-for-contributions) are regularly added in the forum.
 
 Here is the list of current calls for contribution:
 
@@ -82,7 +82,7 @@ If you want to modify one or our repositories, create a Github account
 (it's free of course) and
 [fork](https://help.github.com/articles/fork-a-repo/) the corresponding
 repo. When your modifications are done and tested, do a [pull
-request](https://help.github.com/articles/fork-a-repo/) witha meaningful
+request](https://help.github.com/articles/fork-a-repo/) with a meaningful
 name and comments if needed. The Poppy team will look at it as soon as
 possible and merge it if possible.
 
