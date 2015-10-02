@@ -1,6 +1,6 @@
 # What is pypot?
 
-![image](banderole-pypot.jpg%0A%20:width:%20100%%0A%20:align:%20center)
+![image](banderole-pypot.jpg)
 
 Pypot is a framework developed in the [Inria
 FLOWERS](https://flowers.inria.fr/) team to make it easy and fast to
@@ -34,9 +34,9 @@ modify your code.
 
 > **note**
 >
-> The other libraries from the [Poppy project](http://www.poppy-project.org) ([Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid)
+> The other libraries from the [Poppy project](http://www.poppy-project.org) ([Poppy Humanoid](../../poppy-humanoid/doc/introduction.html)
 > :   or [Poppy Ergo
->     Jr](https://github.com/poppy-project/poppy-ergo-jr)...) are built
+>     Jr](../../poppy-ergo-jr/doc/introduction.html)...) are built
 >     on top of pypot and abstract most of its operating and already
 >     come with convenient method for creating and starting your robot.
 >     So, when starting with a Poppy creature, we advise you to first
@@ -44,26 +44,20 @@ modify your code.
 >     are ready to build advanced programs. Pypot is also a good
 >     starting point if you want to define your own Poppy Creatures.
 >
-The sources are available on
-[Github](https://github.com/poppy-project/pypot).
+
 
 # Pypot's architecture
 
 Pypot's architecture is built upon the following basic concepts:
 
--   **I/O**: low-level layer \<quickstart-lowlevel\> handling the
+-   **I/O**: [low-level layer](quickstart-lowlevel.html) handling the
     communication with motors or sensors. This abstract layer has been
     designed to be as generic as possible. The idea is to keep each
     specific communication protocol separated from the rest of the
     architecture and allow for an easy replacement of an IO by another
-    one - such an example is detailed in the next section when
-    [dynamixel
-    IO](http://poppy-project.github.io/pypot/pypot.dynamixel.html#module-pypot.dynamixel.io)
-    is replaced by the [communication layout with the
-    VREP](http://poppy-project.github.io/pypot/pypot.vrep.html#module-pypot.vrep.io)
-    simulator.
+    one - such an example is detailed in the [vrep](vrep.html) section.
 -   **Motor** or **Sensor** : abstraction layer allowing to command the
-    same type of devices in the same way. Each software motor  \<motor\>
+    same type of devices in the same way. Each software [motor](motor.html)
     or sensor is linked with its hardware equivalent.
 -   **Controller**:
     :   set of update loops to keep an (or multiple) "hardware"
@@ -73,20 +67,18 @@ Pypot's architecture is built upon the following basic concepts:
         hard to the soft (e.g. in the case of a sensor) or both ways
         (e.g. for reading motor values and sending motor commands). The
         calls can be asynchronous or synchronous, each controller can
-        have its own refresh frequency. An example of
-        \~pypot.robot.controller.Controller is the
-        \~pypot.dynamixel.controller.DxlController which synchronizes
+        have its own refresh frequency. An example of [pypot.robot.controller](pypot.robot.html#pypot.robot.controller.AbstractController)
+        is the [pypot.dynamixel.controller.DxlController](pypot.dynamixel.html#pypot.dynamixel.controller.DxlController) which synchronizes
         position/speed/load of all motors on a dynamixel bus in both
         directions. On the same bus, you can have several controllers of
         different frequencies.
 
--   **Robot**: The robot layer \<robot\> is a pure abstraction which
+-   **Robot**: The [robot layer](robot.html) is a pure abstraction which
     aims at bringing together different types of motors and sensors.
     This high-level is most likely to be the one accessed by the
     end-user which wants to directly control the motors of its robot no
     matter what is the IO used underneath. The robot can be directly
-    created using a [configuration
-    file](http://poppy-project.github.io/pypot/controller.html#writing-the-configuration)
+    created using a [configuration file](robot.html)
     describing all IO and Controllers used.
 -   **Primitives**: independent behaviors applied to a robot. They are
     not directly accessing the robot registers but are first combined
@@ -94,14 +86,14 @@ Pypot's architecture is built upon the following basic concepts:
     combination to the robot. This abstraction is used to designed
     behavioral-unit that can be combined into more complex behaviors
     (e.g. a walking primitive and and balance primitive combined to
-    obtain a balanced-walking). Primitives \<primitives\> are also a
+    obtain a balanced-walking). [Primitives](primitive.html) are also a
     convenient way to monitor or remotely access a robot - ensuring some
     sort of sandboxing.
 
 Those main aspects of pypot's architecture are summarized in the figure
 below.
 
-![image](pypot-archi.jpg%0A%20:width:%2060%%0A%20:align:%20center)
+![image](pypot-archi.jpg)
 
-Refer to this \<pypot\_install\> section to learn how to install pypot
+Refer to this [section](installation.html) to learn how to install pypot
 on your system.

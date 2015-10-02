@@ -19,15 +19,15 @@ you own primitives.
 
 ## Example: Record and replay moves
 
-The \~pypot.primitive.move module contains utility classes to help you
-record and play moves. A \~pypot.primitive.move.Move object simply
+The [pypot.primitive.move](pypot.primitive.html#pypot.primitive.move.Move) module contains utility classes to help you
+record and play moves. A [pypot.primitive.move.Move](pypot.primitive.html#pypot.primitive.move.Move) object simply
 contains a sequence of positions.
 
-The \~pypot.primitive.move.MoveRecorder and
-\~pypot.primitive.move.MovePlayer are primitives included in Pypot and
+The [pypot.primitive.move.MoveRecorder](pypot.primitive.html#pypot.primitive.move.MoveRecorder)  and
+[pypot.primitive.move.MovePlayer](pypot.primitive.html#pypot.primitive.move.MovePlayer) are primitives included in Pypot and
 allow you to record a move and replay it.
 
-Assuming you have a \~pypot.robot poppy already created:
+Assuming you have a [pypot.robot.robot.Robot](pypot.robot.html#pypot.robot.robot.Robot) poppy already created:
 
     from pypot.primitive.move import Move, MoveRecorder, MovePlayer
 
@@ -82,4 +82,4 @@ We can now replay the move:
 
     time.sleep(0.1)
 
-To learn more about primitives, see here \<primitives\>.
+To learn more about primitives, see [here](primitive.html).
