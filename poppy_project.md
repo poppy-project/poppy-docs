@@ -70,7 +70,7 @@ You then need 6 Dynamixel XL-320 (for example from
 
 After [assembling your robot ](poppy-ergo-jr/assembly_doc/index.html), try the
 [discover quickstart ](quickstarts/discover.html), then have a look at the
-[ poppy\_ergo\_jr library]( poppy-ergo-jr/doc/index.html)
+[ poppy\_ergo\_jr library]( poppy-ergo-jr/doc/index.html).
 
 ![image](images/poppy-ergo-jr.jpg)
 
