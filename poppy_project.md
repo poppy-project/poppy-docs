@@ -7,7 +7,7 @@
 
 The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customise, deploy, and share. We promote open-source by sharing hardware, software, and web tools.  
 
-The Poppy project has been originally released by the [INRIA Flowers](http://www.inria.fr/equipes/flowers/).
+#####The Poppy project has been originally released by the [INRIA Flowers](http://www.inria.fr/equipes/flowers/).
 
 This project aims to have a robotic open-source and open-hardware kit, for the conception and programming of robotic creatures. This kit also contains an integrated software environment, easily installable, dedicated to the use of the robot, and associated with a web platform enabling the community to share experiences and to contribute to the improvements of the platform.
 
@@ -24,7 +24,7 @@ Poppy creature is an open-source and open-hardware/software robot, available to 
 You can get a full Poppy Creature robot from one of Poppy's official resellers:
 -   [Génération Robots](http://www.generationrobots.com/en/402077-poppy-humanoid-kit-with-3d-printed-parts.html/), or you can get all the parts yourself.
 
-There are 3 types of Poppy creatures :
+####There are 3 types of Poppy creatures :
 
 ###Poppy Humanoid
 
