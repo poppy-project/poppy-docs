@@ -95,24 +95,27 @@ add your own properties and primitives.
 
 Example from Poppy Humanoid:
 
-    class PoppyHumanoid(AbstractPoppyCreature):
-        @classmethod
-        def setup(cls, robot):
-            robot._primitive_manager._filter = partial(numpy.sum, axis=0)
+```python
+class PoppyHumanoid(AbstractPoppyCreature):
+    @classmethod
+    def setup(cls, robot):
+        robot._primitive_manager._filter = partial(numpy.sum, axis=0)
 
-            for m in robot.motors:
-                m.goto_behavior = 'minjerk'
+        for m in robot.motors:
+            m.goto_behavior = 'minjerk'
 
-            for m in robot.torso:
-                m.compliant_behavior = 'safe'
+        for m in robot.torso:
+            m.compliant_behavior = 'safe'
 
-            # Attach default primitives:
-            # basic primitives:
-            robot.attach_primitive(StandPosition(robot), 'stand_position')
-            robot.attach_primitive(SitPosition(robot), 'sit_position')
+        # Attach default primitives:
+        # basic primitives:
+        robot.attach_primitive(StandPosition(robot), 'stand_position')
+        robot.attach_primitive(SitPosition(robot), 'sit_position')
 
-            # Safe primitives:
-            robot.attach_primitive(LimitTorque(robot), 'limit_torque')
+        # Safe primitives:
+        robot.attach_primitive(LimitTorque(robot), 'limit_torque')
+```
+
 
 Package your code it properly using
 [setuptools](https://pythonhosted.org/an_example_pypi_project/setuptools.html)
@@ -122,7 +125,7 @@ in the root of your repo a folder named *software* containing:
 -   the installation files (setup.py, MANIFEST, LICENCE)
 -   a folder named poppy\_yourcreaturename containing your actual code
 
-At the end, don't forget to give it to the community! Most interesting
+At the end, don't forget to share it to the community! Most interesting
 creatures will be added to this documentation!
 
 # Installing
