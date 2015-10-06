@@ -187,7 +187,7 @@ print(poppy.camera.resolution)
 
 More details on the sensors and how you can add extra sensors are given in the [extending sensors](TODO) section.
 
-.. note:: We separate motors and sensors even if this is kind of an artificial definition here. Indeed, we used servomotors which can be seen both as motors and sensors.
+> **note:**  We separate motors and sensors even if this is kind of an artificial definition here. Indeed, we used servomotors which can be seen both as motors and sensors.
 
 ## Go further
 
