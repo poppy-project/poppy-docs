@@ -260,25 +260,25 @@ contain a configuration file and a class that extends
 ~poppy.creatures.abstractcreature.AbstractPoppyCreature. You can then
 add your own properties and primitives.</p>
 <p>Example from Poppy Humanoid:</p>
-<pre class="literal-block">
-class PoppyHumanoid(AbstractPoppyCreature):
-    &#64;classmethod
-    def setup(cls, robot):
-        robot._primitive_manager._filter = partial(numpy.sum, axis=0)
+<pre class="code highlight python literal-block">
+<span class="k">class</span> <span class="nc">PoppyHumanoid</span><span class="p">(</span><span class="n">AbstractPoppyCreature</span><span class="p">):</span>
+    <span class="nd">&#64;classmethod</span>
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">robot</span><span class="p">):</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">_primitive_manager</span><span class="o">.</span><span class="n">_filter</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-        for m in robot.motors:
-            m.goto_behavior = 'minjerk'
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">goto_behavior</span> <span class="o">=</span> <span class="s">'minjerk'</span>
 
-        for m in robot.torso:
-            m.compliant_behavior = 'safe'
+        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">robot</span><span class="o">.</span><span class="n">torso</span><span class="p">:</span>
+            <span class="n">m</span><span class="o">.</span><span class="n">compliant_behavior</span> <span class="o">=</span> <span class="s">'safe'</span>
 
-        # Attach default primitives:
-        # basic primitives:
-        robot.attach_primitive(StandPosition(robot), 'stand_position')
-        robot.attach_primitive(SitPosition(robot), 'sit_position')
+        <span class="c"># Attach default primitives:</span>
+        <span class="c"># basic primitives:</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">StandPosition</span><span class="p">(</span><span class="n">robot</span><span class="p">),</span> <span class="s">'stand_position'</span><span class="p">)</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">SitPosition</span><span class="p">(</span><span class="n">robot</span><span class="p">),</span> <span class="s">'sit_position'</span><span class="p">)</span>
 
-        # Safe primitives:
-        robot.attach_primitive(LimitTorque(robot), 'limit_torque')
+        <span class="c"># Safe primitives:</span>
+        <span class="n">robot</span><span class="o">.</span><span class="n">attach_primitive</span><span class="p">(</span><span class="n">LimitTorque</span><span class="p">(</span><span class="n">robot</span><span class="p">),</span> <span class="s">'limit_torque'</span><span class="p">)</span>
 </pre>
 <p>Package your code it properly using
 <a class="reference external" href="https://pythonhosted.org/an_example_pypi_project/setuptools.html">setuptools</a>
@@ -288,7 +288,7 @@ in the root of your repo a folder named <em>software</em> containing:</p>
 <li>the installation files (setup.py, MANIFEST, LICENCE)</li>
 <li>a folder named poppy_yourcreaturename containing your actual code</li>
 </ul>
-<p>At the end, don&#8217;t forget to give it to the community! Most interesting
+<p>At the end, don&#8217;t forget to share it to the community! Most interesting
 creatures will be added to this documentation!</p>
 </div>
 <div class="section" id="installing">
