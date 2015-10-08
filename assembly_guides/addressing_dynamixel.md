@@ -9,7 +9,7 @@ several servomotors in a serial way, each of them must have a unique ID.
 
 This is the prefered solution, but it implies that you have a ready-to-use Odroid or Raspberry Pi board, connected to the network, with ipython notebook server started (or a webapp to start the server).
 
-Connect to your robot's jupyter server by entering the URL poppy.local:8888 
+Connect to your robot's jupyter server by entering the URL poppy.local:8888
 
 ## Installing the driver for USB2AX
 
@@ -19,11 +19,11 @@ There are two devices allowing you to connect your Dynamixel bus to your compute
 The first one is created by Robotis (the conceptors of the Dynamixel devices) and can be used to control RS-232(serial), RS-485 (4-pin) and TTL (3-pin) busses.
 Be sure to set the selector in the position corresponding to the protocol you want to use. [More info](http://support.robotis.com/en/product/auxdevice/interface/usb2dxl_manual.htm)
 
-![image](images/usb2dynamixel.jpg)
+![image](../images/usb2dynamixel.jpg)
 
-USB2AX is a miniaturized version of the USB2Dynamixel able to control only TTL busses. We are using USB2AX to the rest of the doc. 
+USB2AX is a miniaturized version of the USB2Dynamixel able to control only TTL busses. We are using USB2AX to the rest of the doc.
 
-![image](images/USB2AX.jpg)
+![image](../images/USB2AX.jpg)
 
 * Due to differences in sensibilities, new MX-28 and MX-64 servos communicate at a 57600 baudrate with USB2AX and 57142 for USB2Dynamixel.*
 
@@ -60,13 +60,13 @@ PyQt4 for graphical interface (sudo may not be needed).
 
     sudo apt-get install python-qt4 python-numpy python-scipy python-pip
     sudo pip install pypot
-    
+
 
 It should then be directly accessible in a terminal:
 
     herborist
 
-![image](images/herborist.png)
+![image](../images/herborist.png)
 
 Connect each motor **one by one** to the USB2AX and use the ’scan’
 button in Herborist or Dynamixel Wizard to detect it. If it’s a new
@@ -91,4 +91,3 @@ without having to modify the configuration file, you should stick to the
 robot naming and addressing convention, described in the assembly doc and in each robot's library. This will ensure
 that, in your code, when you use a motor’s name, you will really send
 orders to the corresponding physical motor.
-
