@@ -1,5 +1,15 @@
 # Assembly guide for Poppy ErgoJr
 
+## Introduction
+
+
+The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm. 
+It consists of very simple forms to be able to print in 3D as easily as possible.
+The engines have the same functionality as other Poppy  creatures but are slightly less powerful and less precise. The advantage being that are also less expensive.
+The electronic card is not integrated, everything is visible, which is very advantageous to manipulate and change.
+Its end can be easily modified (At the end of his arm, you can choose among several ends: a lamp, a hand gripper, ...) thanks to OLLO  rivets that are very simple to remove. These rivets can be removed and added very quickly with the OLLO tool, which allows great design freedom.
+The software used for other creatures Poppy are the same as for the Poppy ergo, and also has a simulator.
+
 ## BOM for Poppy Ergo Jr 1.0
 
 For building a Poppy Ergo Jr, you will need:
