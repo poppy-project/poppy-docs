@@ -98,6 +98,11 @@ Pypot library
     pypot/doc/index.rst
 
 
+Setup  the internal board
+-------------------------
+
+.. toctree::
+    poppy-board.md
 
 
 APIs
