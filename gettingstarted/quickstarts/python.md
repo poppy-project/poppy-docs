@@ -1,9 +1,10 @@
-# Discover your Poppy robot
+
+## Avec Python
 
 The Poppy robots and in particular the [pypot.robot.Robot](../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot) objects from pypot make their best to allow you to easily discover and program
 you robot.
 
-## Where do I put my code?
+### Where do I put my code?
 
 If you are using a simulator, program directly in your computer, in a
 Python console (enter `python` in your terminal) or in any editor you
@@ -22,7 +23,7 @@ Odroid) to put your code directly in the robot. Note that if you want to
 use a more advanced editor, you can use the -X option while connecting
 in SSH to get XWindows back on your desktop computer.
 
-## Create the robot object
+### Create the robot object
 
 The first (and more difficult!) step is to create this robot object.
 
@@ -49,7 +50,7 @@ import pypot.robot
 poppy = pypot.robot.from_json('my_config.json')
 ```
 
-## Motors
+### Motors
 
 Now that we are connected to the robot, we can list all available
 motors:
@@ -150,7 +151,7 @@ poppy.head_y.goal_position = -10.
 
 See the [motors documentation](../pypot/doc/motor.html) for more advanced control.
 
-## Sensors
+### Sensors
 
 As Poppy Creatures are made of both motors and sensors, you can naturally also access those sensors.
 
@@ -192,7 +193,7 @@ More details on the sensors and how you can add extra sensors are given in the [
 
 > **note:**  We separate motors and sensors even if this is kind of an artificial definition here. Indeed, we used servomotors which can be seen both as motors and sensors.
 
-## Go further
+### Go further
 
 Next step is to use primitives, which is decribed in
 [this tuto](../pypot/quickstart-primitive.html).

@@ -1,7 +1,7 @@
 
 # Introducing the Poppy project
 
-![image](images/poppy_name_h144.png)
+![image](../images/poppy_name_h144.png)
 
 [Poppy](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists, that all share a vision: robots are powerful tools to learn and be creative.
 
@@ -13,7 +13,7 @@ This project aims to have a robotic open-source and open-hardware kit, for the c
 
 Recently, Poppy has been used as a "robotic tool". It can be a great educational and motivational tool to learn engineering and digital sciences.
 
-The Poppy project also consists of a very active and diverse [community]( contribute.html). People of different horizons collaborate to improve the project ; they add features to the core libraries, release advanced behaviors, create pedagogical content or even new robots.
+The Poppy project also consists of a very active and diverse [community](../contribute.html). People of different horizons collaborate to improve the project ; they add features to the core libraries, release advanced behaviors, create pedagogical content or even new robots.
 To facilitate these exchanges two supports are available:
 - [the forum](https://forum.poppy-project.org/) "poppy-project" for help, dialogue and to share ideas
 - [github](https://github.com/poppy-project) to deposit your contributions
@@ -27,7 +27,7 @@ Poppy creatures are open-source and open-hardware/software robots, available to 
 All Poppy Creatures are:
 - made from pieces of printable 3D and low cost engines,
 - using an embedded board for control (a Raspberry Pi-2 or Odroid for older versions),
-- based on a Python library, [Pypot]( pypot/doc/about.html), allowing to control Dynamixel servomotors in an easy way,
+- based on a Python library, [pypot](../pypot/doc/about.html), allowing to control Dynamixel servomotors in an easy way,
 - have a simulator available (based on vrep),
 - have a visual programming language (Snap! a variation of Scratch),
 - and textual language Python.
@@ -49,11 +49,11 @@ It's a 25-degree of freedom humanoid robot with a fully actuated torso. Used for
 
 You can get all the parts yourself following the [Bill of Material](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md/). The 3D models for the parts can be found [here](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/).
 
-After [assembling your robot](poppy-humanoid/assembly_doc/index.html), try the
+After [assembling your robot](../poppy-humanoid/assembly_doc/index.html), try the
 [discover quickstart](quickstarts/discover.html), then have a look at the
-[poppy\_humanoid library]( poppy-humanoid/doc/index.html).
+[poppy\_humanoid library](../poppy-humanoid/doc/index.html).
 
-![image](images/poppy-le-robot-de-face.jpg)
+![image](../images/poppy-le-robot-de-face.jpg)
 
 ### Poppy Torso
 It's an upper part of Poppy Humanoid (13 degrees of freedom).
@@ -64,11 +64,11 @@ You can get all the parts yourself following the [Bill of Material](https://gith
 The 3D models for the parts can be found [here](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/)
 (they are the same as Poppy Humanoid, simply remove the legs and add the [support](https://github.com/poppy-project/robot-support-toolbox/)).
 
-After [assembling your robot](poppy-humanoid/assembly_doc/index.html), try the
+After [assembling your robot](../poppy-humanoid/assembly_doc/index.html), try the
 [discover quickstart](quickstarts/discover.html), then have a look at the
-[poppy\_torso library]( poppy-torso/doc/index.html).
+[poppy\_torso library](../poppy-torso/doc/index.html).
 
-![image](images/robot-poppy-torso.jpg)
+![image](../images/robot-poppy-torso.jpg)
 
 ### Poppy Ergo Jr
 
@@ -87,11 +87,11 @@ and the 3D files
 [here](http://www.generationrobots.com/en/401692-dynamixel-xl-320-servo-motor.html/)), a USB2AX to connect them to a computer and a small adaptation
 [board](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/electronic.md).
 
-After [assembling your robot](poppy-ergo-jr/assembly_doc/index.html), try the
+After [assembling your robot](../poppy-ergo-jr/assembly_doc/index.html), try the
 [discover quickstart](quickstarts/discover.html), then have a look at the
-[poppy\_ergo\_jr library]( poppy-ergo-jr/doc/index.html).
+[poppy\_ergo\_jr library](../poppy-ergo-jr/doc/index.html).
 
-![image](images/poppy-ergo-jr.jpg)
+![image](../images/poppy-ergo-jr.jpg)
 
 ## Other interesting Poppy Creatures
 
@@ -101,7 +101,7 @@ poppy-6dof-right-arm is a Poppy creature based on a right arm of Poppy Humanoid,
 
 The 3D-printed gripper can grab current objects, as shown in the video below:
 
-[![IMAGE ALT TEXT HERE](images/6dof-arm-video.jpg)](https://www.youtube.com/watch?v=47-JBuZhTWU&feature=youtu.be)
+[![IMAGE ALT TEXT HERE](../images/6dof-arm-video.jpg)](https://www.youtube.com/watch?v=47-JBuZhTWU&feature=youtu.be)
 
 This robot can be controlled with Python using Pypot as any Poppy creature, but also with **Matlab**. There is even a inverse kinematics algorithm allowing you to manipulate the arm in cartesian coordinate.
 
