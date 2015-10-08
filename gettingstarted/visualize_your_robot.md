@@ -1,4 +1,4 @@
-# Using V-rep to simulate a Poppy Humanoid robot
+# Visualize your robot in a simulator
 
 ## Introducing V-rep
 
@@ -6,7 +6,7 @@ V-rep is a physical simulator that allows you to simulate robots in an
 enviroment with gravity, contacts and friction.
 
 It is compatible with Windows, Mac and linux and can be installed from
-[here](http://www.coppeliarobotics.com/downloads.html/). 
+[here](http:/www.coppeliarobotics.com/downloads.html/).
 
 It is free to use if you are from the education world and you can get a
 limited version otherwise.
@@ -26,11 +26,11 @@ you need to follow these two steps:
 On Windows, find the .exe file and execute it. On linux and mac, open a
 terminal, go to the folder where v-rep is install and launch it with:
 
-    ./vrep.sh 
+    ./vrep.sh
 
 You get a window that looks like this:
 
-![vrep screenshot](images/vrep-screenshot.png)
+![vrep screenshot](quickstarts/images/vrep-screenshot.png)
 
 You should get an empty world with a floor and a tree structure of the
 elements of the world on the right.
@@ -54,7 +54,7 @@ and start it with:
 You should see a Poppy Humanoid appear in the middle of the scene in the
 V-rep window:
 
-![vrep with poppy humanoid screenshot](images/vrep-header.png)
+![vrep with poppy humanoid screenshot](quickstarts/images/vrep-header.png)
 
 The *poppy* object that we just created can now be used exactly as a
 PoppyHumanoid object created for a physical robot.
@@ -104,7 +104,7 @@ scene.
 have to look for them in the v-rep window. Hopefully in future version
 of pypot, you will be able to directly retrieve them.*
 
-![vrep reachable space with poppy humanoid left forearm](images/vrep-finding-names.png)
+![vrep reachable space with poppy humanoid left forearm](quickstarts/images/vrep-finding-names.png)
 
 For instance, to get the 3D position of the left hand, you just have to
 do:
@@ -122,7 +122,7 @@ To discover the reachable space of the left hand of the robot (with
 respect to its head), you can for example generate many random positions
 for the arm (here, 25) and store the reached positions:
 
-    import random 
+    import random
 
     reached_positions = [] #we will store the positions here
 
@@ -147,6 +147,6 @@ data:
     ax = axes(projection='3d')
     ax.scatter(*array(reached_pt).T)
 
-![vrep reachable space with poppy humanoid left forearm](images/vrep_reachable_space.png)
+![vrep reachable space with poppy humanoid left forearm](quickstarts/images/vrep_reachable_space.png)
 
 TODO: can someone confirm that code and imports are OK ?
