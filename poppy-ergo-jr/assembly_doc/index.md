@@ -110,9 +110,7 @@ Mount two other shift_one_sides and a motor. Repeat this twice. All the pulley s
 
 ### Step 10
 
-Grab your [favorite drink](https://www.flickr.com/photos/poppy-project/16488256337/) and relax.
-
-## Electronics
+#### Electronics
 
 A small bit of electronic hacking is required for now. You need to power the Xl320 motors with 7.5V.
 
@@ -129,3 +127,7 @@ Then connect the USB2Dynamixel on one end and the first motor on the other end. 
 The communication with the motor is TTL, thus configure the USB2Dynamixel in TTL mode as show below.
 
 ![Power Board](../img/electronic/usb2dynamixel.jpg)
+
+### Step 11
+
+Grab your [favorite drink](https://www.flickr.com/photos/poppy-project/16488256337/) and relax.
