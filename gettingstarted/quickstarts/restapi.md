@@ -21,4 +21,4 @@ The REST API gives you access to most of the Poppy Creature's sensors and motors
 > *Note:* All answers are returned using JSON format.
 
 This image sumarizes how the REST API works:
-![image](../images/restapi_final.png)
+![image](../../images/restapi_final.png)
