@@ -72,13 +72,10 @@ After [assembling your robot](poppy-humanoid/assembly_doc/index.html), try the
 
 ### Poppy Ergo Jr
 
-The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with 3D-printed parts (based on OpenScad and assembled with OLLO rivets).
-At the end of his arm, you can choose among several ends: a lamp, a gripper hand,... The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20$ each.
+The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with 3D-printed parts (based on OpenScad and assembled with OLLO rivets) simple to design.
+At the end of his arm, you can choose among several ends: a lamp, a gripper hand,... And you can change the end easily with easy to handle rivets. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20$ each. Unlike others Poppy creatures, the electronic card is not integrated, which is very advantageous to manipulate.
 
 This robot is the ‘little brother’ of the ergo robots used in [the Ergo-robot experiment](https://www.poppy-project.org/project/mathematics-a-beautiful-elsewhere).
-
-Poppy Ergo Jr is still in development. However, you can already get the parts and motors ; during the next development phases we will probably add new pieces and not modify the existing ones.
-
 
 The list of parts to print is
 [here](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/parts/BOM.md/)
