@@ -257,7 +257,7 @@ motors:</p>
 position:</p>
 <pre class="code highlight python literal-block">
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">motors</span><span class="p">:</span>
-  <span class="k">print</span><span class="p">(</span><span class="s">'motor {} in position {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">'motor {} in position {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">))</span>
 </pre>
 <p>The motors are grouped into motor groups:</p>
 <pre class="code highlight python literal-block">
@@ -266,7 +266,7 @@ position:</p>
 
 <span class="c"># assuming &quot;head&quot; is one of the motor groups (use &quot;top&quot; for a ergo_jr)</span>
 <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">poppy</span><span class="o">.</span><span class="n">head</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'motor {} in position {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'motor {} in position {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">present_position</span><span class="p">))</span>
 </pre>
 <p>Motors are said compliant if they do not apply torque to reach their
 goal position. They are safe and can be moved by hand. To have the robot
@@ -279,10 +279,13 @@ range, otherwise, the robot may move very quickly to get back to an
 </div></blockquote>
 <p>You can do it for the whole robot, for a motor group or for each motor:</p>
 <pre class="code highlight python literal-block">
-<span class="c"># set the whole robot non-compliant</span>
+<span class="c"># set the whole robot compliant</span>
 <span class="n">poppy</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c"># set the whole motor group non-compliant</span>
 <span class="n">poppy</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
 
+<span class="c"># set thone motor non-compliant</span>
 <span class="n">poppy</span><span class="o">.</span><span class="n">l_shoulder_x</span><span class="o">.</span><span class="n">compliant</span> <span class="o">=</span> <span class="bp">False</span>
 </pre>
 <p>Now that compliance is removed, let make the robot move! Put it in an

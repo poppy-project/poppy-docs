@@ -186,6 +186,11 @@
 <p><code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">commonmark</span> <span class="pre">recommonmark</span></code></p>
 <p>If you want to generate Latex or pdf documents:</p>
 <p><code class="docutils literal"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">-qq</span> <span class="pre">texlive</span> <span class="pre">texlive-latex-extra</span> <span class="pre">dvipng</span></code></p>
+<p><strong>Latex Mac:</strong></p>
+<p>Install the full <a class="reference external" href="http://www.tug.org/mactex/">MacTex</a> installation or install the smaller <a class="reference external" href="http://www.tug.org/mactex/morepackages.html">BasicTex</a> and add <em>ucs</em> and <em>dvipng</em> packages:</p>
+<pre class="code highlight sh literal-block">
+sudo tlmgr install ucs dvipng
+</pre>
 <p>Then, to create HTML doc:</p>
 <p><code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code></p>
 <p>Your files are in <code class="docutils literal"><span class="pre">_build\html</span></code></p>

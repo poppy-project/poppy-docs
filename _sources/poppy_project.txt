@@ -40,7 +40,7 @@ They can be used as it is, or hacked to explore the shape of novel legs, arms, h
 You can get a full Poppy Creature robot from one of Poppy's official resellers:
 -   [Génération Robots](http://www.generationrobots.com/en/402077-poppy-humanoid-kit-with-3d-printed-parts.html/), or you can get all the parts yourself.
 
-## There are 3 types of Poppy Creatures:
+## The 3 main Poppy Creatures:
 
 ### Poppy Humanoid
 
@@ -92,3 +92,19 @@ After [assembling your robot](poppy-ergo-jr/assembly_doc/index.html), try the
 [poppy\_ergo\_jr library]( poppy-ergo-jr/doc/index.html).
 
 ![image](images/poppy-ergo-jr.jpg)
+
+## Other interesting Poppy Creatures
+
+### Poppy right arm (work in progress)
+
+poppy-6dof-right-arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additionnal XL-320 motors at the end to improve the reach and agility of the arm.
+
+The 3D-printed gripper can grab current objects, as shown in the video below:
+
+[![IMAGE ALT TEXT HERE](images/6dof-arm-video.jpg)](https://www.youtube.com/watch?v=47-JBuZhTWU&feature=youtu.be)
+
+This robot can be controlled with Python using Pypot as any Poppy creature, but also with **Matlab**. There is even a inverse kinematics algorithm allowing you to manipulate the arm in cartesian coordinate.
+
+Find more info and the sources in [https://github.com/poppy-project/poppy-6dof-right-arm](https://github.com/poppy-project/poppy-6dof-right-arm).
+
+The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa.

@@ -71,10 +71,14 @@
                 <ul>
 <li><a class="reference internal" href="#">Introducing the Poppy project</a><ul>
 <li><a class="reference internal" href="#the-poppy-creatures">The Poppy Creatures</a></li>
-<li><a class="reference internal" href="#there-are-3-types-of-poppy-creatures">There are 3 types of Poppy Creatures:</a><ul>
+<li><a class="reference internal" href="#the-3-main-poppy-creatures">The 3 main Poppy Creatures:</a><ul>
 <li><a class="reference internal" href="#poppy-humanoid">Poppy Humanoid</a></li>
 <li><a class="reference internal" href="#poppy-torso">Poppy Torso</a></li>
 <li><a class="reference internal" href="#poppy-ergo-jr">Poppy Ergo Jr</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-interesting-poppy-creatures">Other interesting Poppy Creatures</a><ul>
+<li><a class="reference internal" href="#poppy-right-arm-work-in-progress">Poppy right arm (work in progress)</a></li>
 </ul>
 </li>
 </ul>
@@ -129,10 +133,14 @@
   <ul>
 <li><a class="reference internal" href="#">Introducing the Poppy project</a><ul>
 <li><a class="reference internal" href="#the-poppy-creatures">The Poppy Creatures</a></li>
-<li><a class="reference internal" href="#there-are-3-types-of-poppy-creatures">There are 3 types of Poppy Creatures:</a><ul>
+<li><a class="reference internal" href="#the-3-main-poppy-creatures">The 3 main Poppy Creatures:</a><ul>
 <li><a class="reference internal" href="#poppy-humanoid">Poppy Humanoid</a></li>
 <li><a class="reference internal" href="#poppy-torso">Poppy Torso</a></li>
 <li><a class="reference internal" href="#poppy-ergo-jr">Poppy Ergo Jr</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-interesting-poppy-creatures">Other interesting Poppy Creatures</a><ul>
+<li><a class="reference internal" href="#poppy-right-arm-work-in-progress">Poppy right arm (work in progress)</a></li>
 </ul>
 </li>
 </ul>
@@ -212,8 +220,8 @@ To facilitate these exchanges two supports are available:</p>
 <li><a class="reference external" href="http://www.generationrobots.com/en/402077-poppy-humanoid-kit-with-3d-printed-parts.html/">Génération Robots</a>, or you can get all the parts yourself.</li>
 </ul>
 </div>
-<div class="section" id="there-are-3-types-of-poppy-creatures">
-<span id="there-are-3-types-of-poppy-creatures"></span><h2>There are 3 types of Poppy Creatures:<a class="headerlink" href="#there-are-3-types-of-poppy-creatures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-3-main-poppy-creatures">
+<span id="the-3-main-poppy-creatures"></span><h2>The 3 main Poppy Creatures:<a class="headerlink" href="#the-3-main-poppy-creatures" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="poppy-humanoid">
 <span id="poppy-humanoid"></span><h3>Poppy Humanoid<a class="headerlink" href="#poppy-humanoid" title="Permalink to this headline">¶</a></h3>
 <p>It&#8217;s a 25-degree of freedom humanoid robot with a fully actuated torso. Used for education, research (walk, human-robot interactions) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.</p>
@@ -251,6 +259,18 @@ and the 3D files
 <a class="reference external" href="quickstarts/discover.html">discover quickstart</a>, then have a look at the
 <a class="reference external" href="poppy-ergo-jr/doc/index.html">poppy_ergo_jr library</a>.</p>
 <p><img alt="image" src="_images/poppy-ergo-jr.jpg" /></p>
+</div>
+</div>
+<div class="section" id="other-interesting-poppy-creatures">
+<span id="other-interesting-poppy-creatures"></span><h2>Other interesting Poppy Creatures<a class="headerlink" href="#other-interesting-poppy-creatures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="poppy-right-arm-work-in-progress">
+<span id="poppy-right-arm-work-in-progress"></span><h3>Poppy right arm (work in progress)<a class="headerlink" href="#poppy-right-arm-work-in-progress" title="Permalink to this headline">¶</a></h3>
+<p>poppy-6dof-right-arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additionnal XL-320 motors at the end to improve the reach and agility of the arm.</p>
+<p>The 3D-printed gripper can grab current objects, as shown in the video below:</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=47-JBuZhTWU&amp;feature=youtu.be"><img alt="IMAGE ALT TEXT HERE" src="_images/6dof-arm-video.jpg" /></a></p>
+<p>This robot can be controlled with Python using Pypot as any Poppy creature, but also with <strong>Matlab</strong>. There is even a inverse kinematics algorithm allowing you to manipulate the arm in cartesian coordinate.</p>
+<p>Find more info and the sources in <a class="reference external" href="https://github.com/poppy-project/poppy-6dof-right-arm">https://github.com/poppy-project/poppy-6dof-right-arm</a>.</p>
+<p>The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa.</p>
 </div>
 </div>
 </div>

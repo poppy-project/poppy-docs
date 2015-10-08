@@ -33,6 +33,13 @@ If you want to generate Latex or pdf documents:
 
 `sudo apt-get install -qq texlive texlive-latex-extra dvipng`
 
+**Latex Mac:**
+
+Install the full [MacTex](http://www.tug.org/mactex/) installation or install the smaller [BasicTex](http://www.tug.org/mactex/morepackages.html) and add *ucs* and *dvipng* packages:
+```sh
+sudo tlmgr install ucs dvipng
+```
+
 
 Then, to create HTML doc:
 

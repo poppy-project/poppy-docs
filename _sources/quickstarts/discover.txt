@@ -93,7 +93,7 @@ position:
 
 ```python
 for m in poppy.motors:
-  print('motor {} in position {}'.format(m.name, m.present_position)
+  print('motor {} in position {}'.format(m.name, m.present_position))
 ```
 
 The motors are grouped into motor groups:
@@ -104,7 +104,7 @@ for group in poppy.alias:
 
 # assuming "head" is one of the motor groups (use "top" for a ergo_jr)
 for m in poppy.head:
-    print('motor {} in position {}'.format(m.name, m.present_position)
+    print('motor {} in position {}'.format(m.name, m.present_position))
 ```
 
 Motors are said compliant if they do not apply torque to reach their
@@ -120,10 +120,13 @@ move by itself, you must remove the compliance.
 You can do it for the whole robot, for a motor group or for each motor:
 
 ```python
-# set the whole robot non-compliant
+# set the whole robot compliant
 poppy.compliant = True
+
+# set the whole motor group non-compliant
 poppy.head.compliant = False
 
+# set thone motor non-compliant
 poppy.l_shoulder_x.compliant = False
 ```
 

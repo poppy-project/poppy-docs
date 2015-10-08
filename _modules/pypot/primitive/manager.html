@@ -188,7 +188,14 @@
                     <span class="n">to_set</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
 
             <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">to_set</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
-                <span class="n">filtred_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s">&#39;led&#39;</span><span class="p">:</span>
+                    <span class="n">colors</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                        <span class="n">colors</span> <span class="o">-=</span> <span class="p">{</span><span class="s">&#39;off&#39;</span><span class="p">}</span>
+                    <span class="n">filtred_val</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">filtred_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
                 <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&#39;Combined </span><span class="si">%s</span><span class="s">.</span><span class="si">%s</span><span class="s"> from </span><span class="si">%s</span><span class="s"> to </span><span class="si">%s</span><span class="s">&#39;</span><span class="p">,</span>
                              <span class="n">m</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">filtred_val</span><span class="p">)</span>
                 <span class="nb">setattr</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">filtred_val</span><span class="p">)</span>

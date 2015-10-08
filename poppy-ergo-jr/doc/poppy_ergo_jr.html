@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>&lt;no title&gt; &mdash; Poppy project 1.1.0 documentation</title>
+    <title>poppy_ergo_jr package &mdash; Poppy project 1.1.0 documentation</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -48,8 +48,8 @@
 </script>
     <link rel="shortcut icon" href="../../_static/poppy_flower_logo-small.png"/>
     <link rel="top" title="Poppy project 1.1.0 documentation" href="../../index.html" />
-    <link rel="next" title="Introduction" href="introduction.html" />
-    <link rel="prev" title="Using V-rep to simulate a Poppy Humanoid robot" href="../../quickstarts/vrep.html" /> 
+    <link rel="next" title="poppy-creature package" href="../../poppy-creature/doc/poppy.html" />
+    <link rel="prev" title="poppy_torso.utils package" href="../../poppy-torso/doc/poppy_torso.utils.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -65,14 +65,32 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">poppy_ergo_jr package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-dance-module">poppy_ergo_jr.dance module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-headfollow-module">poppy_ergo_jr.headfollow module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-jump-module">poppy_ergo_jr.jump module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-poppy-ergo-jr-module">poppy_ergo_jr.poppy_ergo_jr module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-postures-module">poppy_ergo_jr.postures module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
 
             
-              <li><a href="../../quickstarts/vrep.html" title="Using V-rep to simulate a Poppy Humanoid robot" accesskey="P">previous </a></li>
-              <li><a href="introduction.html" title="Introduction" accesskey="N">next </a></li>
+              <li><a href="../../poppy-torso/doc/poppy_torso.utils.html" title="poppy_torso.utils package" accesskey="P">previous </a></li>
+              <li><a href="../../poppy-creature/doc/poppy.html" title="poppy-creature package" accesskey="N">next </a></li>
               <li><a href="../../py-modindex.html" title="Python Module Index" >modules </a></li>
               <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
             
-            <li class="visible-xs"><a href="../../_sources/poppy-humanoid/doc/index.txt" rel="nofollow">Show Source</a></li>
+            <li class="visible-xs"><a href="../../_sources/poppy-ergo-jr/doc/poppy_ergo_jr.txt" rel="nofollow">Show Source</a></li>
 
             <li class="visible-xs">
                 <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
@@ -107,16 +125,30 @@
     <p class="logo"><a href="../../index.html">
       <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
     </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">poppy_ergo_jr package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-dance-module">poppy_ergo_jr.dance module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-headfollow-module">poppy_ergo_jr.headfollow module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-jump-module">poppy_ergo_jr.jump module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-poppy-ergo-jr-module">poppy_ergo_jr.poppy_ergo_jr module</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr-postures-module">poppy_ergo_jr.postures module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../../quickstarts/vrep.html"
-                        title="previous chapter">Using V-rep to simulate a Poppy Humanoid robot</a></p>
+  <p class="topless"><a href="../../poppy-torso/doc/poppy_torso.utils.html"
+                        title="previous chapter">poppy_torso.utils package</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="introduction.html"
-                        title="next chapter">Introduction</a></p>
+  <p class="topless"><a href="../../poppy-creature/doc/poppy.html"
+                        title="next chapter">poppy-creature package</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/poppy-humanoid/doc/index.txt"
+      <li><a href="../../_sources/poppy-ergo-jr/doc/poppy_ergo_jr.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -146,14 +178,29 @@
               <div class="bodywrapper">
                 <div class="body">
                   
-  <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html#poppy-humanoid-robot-overview">Poppy Humanoid robot overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html#poppy-humanoid-specific-features">Poppy Humanoid specific features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html#installing">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="motor_list.html">Poppy Humanoid motors List</a></li>
-</ul>
+  <div class="section" id="poppy-ergo-jr-package">
+<h1>poppy_ergo_jr package<a class="headerlink" href="#poppy-ergo-jr-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="poppy-ergo-jr-dance-module">
+<h2>poppy_ergo_jr.dance module<a class="headerlink" href="#poppy-ergo-jr-dance-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="poppy-ergo-jr-headfollow-module">
+<h2>poppy_ergo_jr.headfollow module<a class="headerlink" href="#poppy-ergo-jr-headfollow-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="poppy-ergo-jr-jump-module">
+<h2>poppy_ergo_jr.jump module<a class="headerlink" href="#poppy-ergo-jr-jump-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="poppy-ergo-jr-poppy-ergo-jr-module">
+<h2>poppy_ergo_jr.poppy_ergo_jr module<a class="headerlink" href="#poppy-ergo-jr-poppy-ergo-jr-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="poppy-ergo-jr-postures-module">
+<h2>poppy_ergo_jr.postures module<a class="headerlink" href="#poppy-ergo-jr-postures-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -175,8 +222,8 @@
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="../../quickstarts/vrep.html" title="Using V-rep to simulate a Poppy Humanoid robot" >previous</a></li>
-        <li><a href="introduction.html" title="Introduction" >next</a></li>
+        <li><a href="../../poppy-torso/doc/poppy_torso.utils.html" title="poppy_torso.utils package" >previous</a></li>
+        <li><a href="../../poppy-creature/doc/poppy.html" title="poppy-creature package" >next</a></li>
         <li><a href="../../py-modindex.html" title="Python Module Index" >modules</a></li>
         <li><a href="../../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
