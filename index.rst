@@ -43,12 +43,13 @@ Quickstarts
     quickstarts/discover.md
     quickstarts/snap.md
     quickstarts/vrep.md
-   
+    quickstarts/restapi.md
+
 
 Development guides
 ==================
 
-    
+
 Poppy-humanoid library
 --------------------------------------
 
