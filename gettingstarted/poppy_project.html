@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Introducing the Poppy project &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Getting Started" href="index.html" />
+    <link rel="next" title="Version and changelogs" href="contribute.html" />
+    <link rel="prev" title="Getting Started" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Introducing the Poppy project</a><ul>
+<li><a class="reference internal" href="#the-poppy-creatures">The Poppy Creatures</a></li>
+<li><a class="reference internal" href="#the-3-main-poppy-creatures">The 3 main Poppy Creatures:</a><ul>
+<li><a class="reference internal" href="#poppy-humanoid">Poppy Humanoid</a></li>
+<li><a class="reference internal" href="#poppy-torso">Poppy Torso</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr">Poppy Ergo Jr</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-interesting-poppy-creatures">Other interesting Poppy Creatures</a><ul>
+<li><a class="reference internal" href="#poppy-right-arm-work-in-progress">Poppy right arm (work in progress)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="index.html" title="Getting Started" accesskey="P">previous </a></li>
+              <li><a href="contribute.html" title="Version and changelogs" accesskey="N">next </a></li>
+              <li><a href="../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Getting Started</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/gettingstarted/poppy_project.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introducing the Poppy project</a><ul>
+<li><a class="reference internal" href="#the-poppy-creatures">The Poppy Creatures</a></li>
+<li><a class="reference internal" href="#the-3-main-poppy-creatures">The 3 main Poppy Creatures:</a><ul>
+<li><a class="reference internal" href="#poppy-humanoid">Poppy Humanoid</a></li>
+<li><a class="reference internal" href="#poppy-torso">Poppy Torso</a></li>
+<li><a class="reference internal" href="#poppy-ergo-jr">Poppy Ergo Jr</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-interesting-poppy-creatures">Other interesting Poppy Creatures</a><ul>
+<li><a class="reference internal" href="#poppy-right-arm-work-in-progress">Poppy right arm (work in progress)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Getting Started</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="contribute.html"
+                        title="next chapter">Version and changelogs</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/gettingstarted/poppy_project.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="introducing-the-poppy-project">
+<span id="introducing-the-poppy-project"></span><h1>Introducing the Poppy project<a class="headerlink" href="#introducing-the-poppy-project" title="Permalink to this headline">¶</a></h1>
+<p><img alt="image" src="../_images/poppy_name_h144.png" /></p>
+<p><a class="reference external" href="https://www.poppy-project.org/">Poppy</a> is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists, that all share a vision: robots are powerful tools to learn and be creative.</p>
+<p>The <a class="reference external" href="https://forum.poppy-project.org/">Poppy community</a> develops robotic creations that are easy to build, customise, deploy, and share. We promote open-source by sharing hardware, software, and web tools.</p>
+<p><strong>The Poppy project has been originally released by the <a class="reference external" href="http://www.inria.fr/equipes/flowers/">INRIA Flowers</a>.</strong></p>
+<p>This project aims to have a robotic open-source and open-hardware kit, for the conception and programming of robotic creatures. This kit also contains an integrated software environment, easily installable, dedicated to the use of the robot, and associated with a web platform enabling the community to share experiences and to contribute to the improvement of the platform.</p>
+<p>Recently, Poppy has been used as a &#8220;robotic tool&#8221;. It can be a great educational and motivational tool to learn engineering and digital sciences.</p>
+<p>The Poppy project also consists of a very active and diverse <a class="reference external" href="../contribute.html">community</a>. People of different horizons collaborate to improve the project ; they add features to the core libraries, release advanced behaviors, create pedagogical content or even new robots.
+To facilitate these exchanges two supports are available:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://forum.poppy-project.org/">the forum</a> &#8220;poppy-project&#8221; for help, dialogue and to share ideas</li>
+<li><a class="reference external" href="https://github.com/poppy-project">github</a> to deposit your contributions</li>
+</ul>
+<p>All sources of the Poppy project (software and hardware) are available on our <a class="reference external" href="https://github.com/poppy-project">Github</a>.</p>
+<div class="section" id="the-poppy-creatures">
+<span id="the-poppy-creatures"></span><h2>The Poppy Creatures<a class="headerlink" href="#the-poppy-creatures" title="Permalink to this headline">¶</a></h2>
+<p>Poppy creatures are open-source and open-hardware/software robots, available to download and modify (Creative Commons License, BY-SA). They are created with the same characteristics.</p>
+<p>All Poppy Creatures are:</p>
+<ul class="simple">
+<li>made from pieces of printable 3D and low cost engines,</li>
+<li>using an embedded board for control (a Raspberry Pi-2 or Odroid for older versions),</li>
+<li>based on a Python library, <a class="reference external" href="../pypot/doc/about.html">pypot</a>, allowing to control Dynamixel servomotors in an easy way,</li>
+<li>have a simulator available (based on vrep),</li>
+<li>have a visual programming language (Snap! a variation of Scratch),</li>
+<li>and textual language Python.</li>
+</ul>
+<p>Poppy robots (real or in the free simulator) are programmable through a &#8220;Rest API&#8221;, which enables the control with any programming language through simple http requests (connection for Matlab and Processing already exists).</p>
+<p>They can be used as it is, or hacked to explore the shape of novel legs, arms, hands...</p>
+<p>You can get a full Poppy Creature robot from one of Poppy&#8217;s official resellers:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.generationrobots.com/en/402077-poppy-humanoid-kit-with-3d-printed-parts.html/">Génération Robots</a>, or you can get all the parts yourself.</li>
+</ul>
+</div>
+<div class="section" id="the-3-main-poppy-creatures">
+<span id="the-3-main-poppy-creatures"></span><h2>The 3 main Poppy Creatures:<a class="headerlink" href="#the-3-main-poppy-creatures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="poppy-humanoid">
+<span id="poppy-humanoid"></span><h3>Poppy Humanoid<a class="headerlink" href="#poppy-humanoid" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s a 25-degree of freedom humanoid robot with a fully actuated torso. Used for education, research (walk, human-robot interactions) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.</p>
+<p>You can get all the parts yourself following the <a class="reference external" href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md/">Bill of Material</a>. The 3D models for the parts can be found <a class="reference external" href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/">here</a>.</p>
+<p>After <a class="reference external" href="../poppy-humanoid/assembly_doc/index.html">assembling your robot</a>, try the
+<a class="reference external" href="quickstarts/discover.html">discover quickstart</a>, then have a look at the
+<a class="reference external" href="../poppy-humanoid/doc/index.html">poppy_humanoid library</a>.</p>
+<p><img alt="image" src="../_images/poppy-le-robot-de-face.jpg" /></p>
+</div>
+<div class="section" id="poppy-torso">
+<span id="poppy-torso"></span><h3>Poppy Torso<a class="headerlink" href="#poppy-torso" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s an upper part of Poppy Humanoid (13 degrees of freedom).
+Poppy Torso is more affordable than the full kit (Poppy Humanoid), which makes it especially suitable for uses in an educational, associative and makers context. Poppy Torso is an ideal medium to learn science, technology, engineering and mathematics (STEM).</p>
+<p>You can get all the parts yourself following the <a class="reference external" href="https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md/">Bill of Material</a>.
+The 3D models for the parts can be found <a class="reference external" href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/">here</a>
+(they are the same as Poppy Humanoid, simply remove the legs and add the <a class="reference external" href="https://github.com/poppy-project/robot-support-toolbox/">support</a>).</p>
+<p>After <a class="reference external" href="../poppy-humanoid/assembly_doc/index.html">assembling your robot</a>, try the
+<a class="reference external" href="quickstarts/discover.html">discover quickstart</a>, then have a look at the
+<a class="reference external" href="../poppy-torso/doc/index.html">poppy_torso library</a>.</p>
+<p><img alt="image" src="../_images/robot-poppy-torso.jpg" /></p>
+</div>
+<div class="section" id="poppy-ergo-jr">
+<span id="poppy-ergo-jr"></span><h3>Poppy Ergo Jr<a class="headerlink" href="#poppy-ergo-jr" title="Permalink to this headline">¶</a></h3>
+<p>The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with 3D-printed parts (based on OpenScad and assembled with OLLO rivets) simple to design.
+At the end of his arm, you can choose among several ends: a lamp, a gripper hand,... And you can change the end easily with easy to handle rivets. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20$ each. Unlike others Poppy creatures, the electronic card is not integrated, which is very advantageous to manipulate.</p>
+<p>This robot is the ‘little brother’ of the ergo robots used in <a class="reference external" href="https://www.poppy-project.org/project/mathematics-a-beautiful-elsewhere">the Ergo-robot experiment</a>.</p>
+<p>The list of parts to print is
+<a class="reference external" href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/parts/BOM.md/">here</a>
+and the 3D files
+<a class="reference external" href="https://github.com/poppy-project/poppy-ergo-jr/releases/">there</a>. You need 6 Dynamixel XL-320 (for example from
+<a class="reference external" href="http://www.generationrobots.com/en/401692-dynamixel-xl-320-servo-motor.html/">here</a>), a USB2AX to connect them to a computer and a small adaptation
+<a class="reference external" href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/electronic.md">board</a>.</p>
+<p>After <a class="reference external" href="../poppy-ergo-jr/assembly_doc/index.html">assembling your robot</a>, try the
+<a class="reference external" href="quickstarts/discover.html">discover quickstart</a>, then have a look at the
+<a class="reference external" href="../poppy-ergo-jr/doc/index.html">poppy_ergo_jr library</a>.</p>
+<p><img alt="image" src="../_images/poppy-ergo-jr.jpg" /></p>
+</div>
+</div>
+<div class="section" id="other-interesting-poppy-creatures">
+<span id="other-interesting-poppy-creatures"></span><h2>Other interesting Poppy Creatures<a class="headerlink" href="#other-interesting-poppy-creatures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="poppy-right-arm-work-in-progress">
+<span id="poppy-right-arm-work-in-progress"></span><h3>Poppy right arm (work in progress)<a class="headerlink" href="#poppy-right-arm-work-in-progress" title="Permalink to this headline">¶</a></h3>
+<p>poppy-6dof-right-arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additionnal XL-320 motors at the end to improve the reach and agility of the arm.</p>
+<p>The 3D-printed gripper can grab current objects, as shown in the video below:</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=47-JBuZhTWU&amp;feature=youtu.be"><img alt="IMAGE ALT TEXT HERE" src="../_images/6dof-arm-video.jpg" /></a></p>
+<p>This robot can be controlled with Python using Pypot as any Poppy creature, but also with <strong>Matlab</strong>. There is even a inverse kinematics algorithm allowing you to manipulate the arm in cartesian coordinate.</p>
+<p>Find more info and the sources in <a class="reference external" href="https://github.com/poppy-project/poppy-6dof-right-arm">https://github.com/poppy-project/poppy-6dof-right-arm</a>.</p>
+<p>The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa.</p>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="index.html" title="Getting Started" >previous</a></li>
+        <li><a href="contribute.html" title="Version and changelogs" >next</a></li>
+        <li><a href="../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Getting Started</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

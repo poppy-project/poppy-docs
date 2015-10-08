@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Dynamixel hardware &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Working with Dynamixel servomotor" href="dynamixel_index.html" />
+    <link rel="next" title="Addressing Dynamixel motors" href="addressing_dynamixel.html" />
+    <link rel="prev" title="Working with Dynamixel servomotor" href="dynamixel_index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Dynamixel hardware</a><ul>
+<li><a class="reference internal" href="#putting-the-dynamixel-horns-to-zero">Putting the Dynamixel horns to zero</a></li>
+<li><a class="reference internal" href="#horns-of-mx-28-and-mx-64">Horns of MX-28 and MX-64</a></li>
+<li><a class="reference internal" href="#putting-the-nuts">Putting the nuts</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="dynamixel_index.html" title="Working with Dynamixel servomotor" accesskey="P">previous </a></li>
+              <li><a href="addressing_dynamixel.html" title="Addressing Dynamixel motors" accesskey="N">next </a></li>
+              <li><a href="../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" >Assembly Guides</a></li>
+              <li><a href="dynamixel_index.html" accesskey="U">Working with Dynamixel servomotor</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/assembly_guides/dynamixel_hardware.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Dynamixel hardware</a><ul>
+<li><a class="reference internal" href="#putting-the-dynamixel-horns-to-zero">Putting the Dynamixel horns to zero</a></li>
+<li><a class="reference internal" href="#horns-of-mx-28-and-mx-64">Horns of MX-28 and MX-64</a></li>
+<li><a class="reference internal" href="#putting-the-nuts">Putting the nuts</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="dynamixel_index.html"
+                        title="previous chapter">Working with Dynamixel servomotor</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="addressing_dynamixel.html"
+                        title="next chapter">Addressing Dynamixel motors</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/assembly_guides/dynamixel_hardware.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="dynamixel-hardware">
+<span id="dynamixel-hardware"></span><h1>Dynamixel hardware<a class="headerlink" href="#dynamixel-hardware" title="Permalink to this headline">¶</a></h1>
+<p>The Poppy Humanoid robot is mainly built with <a class="reference external" href="http://www.generationrobots.com/en/401858-servomotor-dynamixel-mx-28at.html">MX-28AT Dynamixel
+servomotors</a>
+(MX-28T are the previous version and can be used without any problem).
+The other servomotors are MX-64T (bigger and stronger) and AX-12A
+(smaller, used for the head).</p>
+<p>Each Dynamixel servomotor embeds an electronic board allowing it to
+receive different kind of orders (about goal, torque...) and communicate
+with other Dynamixel servos. Therefore, you can chain up several
+Dynamixel servomotors (each with a different ID) and command them all
+from one end of the chain: each servomotor will pass the orders to the
+next one.</p>
+<p><img alt="image" src="../_images/daisy_link.JPG" /></p>
+<div class="section" id="putting-the-dynamixel-horns-to-zero">
+<span id="putting-the-dynamixel-horns-to-zero"></span><h2>Putting the Dynamixel horns to zero<a class="headerlink" href="#putting-the-dynamixel-horns-to-zero" title="Permalink to this headline">¶</a></h2>
+<p>When you receive your Dynamixel servomotors, the horns are not mounted.
+They are included in the packaging if the servo is packaged alone or
+packaged separately for 6-pieces bulks (see next section to know what
+horn goes to what servo).</p>
+<p>When putting the controlled horn, be very careful to <strong>put the dot on
+the horn at the same point than the dot on the servo axis</strong>. Once the
+horn is put, it is most of the time <strong>impossible to remove</strong> ! This will
+ensure that the zero position of the servo matches with the zero
+position of the structure around.</p>
+<p><img alt="image" src="../_images/zero.JPG" /> <img alt="image" src="../_images/zero2.JPG" /></p>
+<p>On the outside of the horn, you also have three dots indicating the
+orientation. You should find the same three dots on structural parts, so
+be sure to match them.</p>
+<p><img alt="image" src="../_images/zero3.JPG" /></p>
+</div>
+<div class="section" id="horns-of-mx-28-and-mx-64">
+<span id="horns-of-mx-28-and-mx-64"></span><h2>Horns of MX-28 and MX-64<a class="headerlink" href="#horns-of-mx-28-and-mx-64" title="Permalink to this headline">¶</a></h2>
+<p>On each Dynamixel servomotor apart from the AX-12A, you will have to
+mount a horn to the motor axis. Most of the time, you will also have to
+mount a free horn on the opposite side to provide better fixation points
+for the structure parts.</p>
+<p>To mount the main horn, put the plastic ring (white or black) and drive
+the horn on the axis. <strong>Be careful of the zero when putting the main
+horn!</strong> Then put thread locker on the big screw and screw it in the
+middle.</p>
+<p><img alt="image" src="../_images/MX28N.JPG" /></p>
+<p>Main horn mounted on a MX-28</p>
+<p>For the free horn, first clip the ball bearing and the cap on the side
+without shaft shoulder. Then put the horn on servomotor (with shaft
+shoulder on servo side). Put thread locker on the big screw and screw
+it. The horn should turn freely.</p>
+<p><img alt="image" src="../_images/MX64I1.JPG" /> <img alt="image" src="../_images/MX64I2.JPG" /> <img alt="image" src="../_images/MX64I3.JPG" /></p>
+<p>Free horn mounted on a MX-64</p>
+<p>Quick reminder of horn names and screw sizes:</p>
+<p>| Servomotor | main horn | free horn | big horn screw | horn screws | case screws|
+|&#8212;&#8212;&#8212;&#8212;| :&#8212;&#8212;&#8212;&#8211;: | :&#8212;&#8212;&#8212;&#8211;: | :&#8212;&#8212;&#8212;&#8212;&#8212;-:| :&#8212;&#8212;&#8212;&#8212;-: | :&#8212;&#8212;&#8212;&#8212;-:|
+|AX12-A |      none |       none      |    M3x10mm |           M2      |       M2
+|  MX28   |   HN07-N101 |  HN07-I101   |   M2.5x8mm  |       M2x3mm    |    M2.5x6mm
+|  MX64    |  HN05-N102  | HN05-I101  |     M3x8mm  |        M2.5x4mm   |    M2.5x6mm |</p>
+<p>You need an allen wrench of size 1.5mm for M2 screws, 2mm for M2.5 screws
+and 2.5mm for M3 screws. The longer M2 screws need a Phillips screwdriver.</p>
+</div>
+<div class="section" id="putting-the-nuts">
+<span id="putting-the-nuts"></span><h2>Putting the nuts<a class="headerlink" href="#putting-the-nuts" title="Permalink to this headline">¶</a></h2>
+<p>To attach structural parts on the body of the servomotors, you have to
+first insert the nuts in their sites. This step may be quite painful if
+you don’t have elfic fingers (there are less nuts to insert in the AT
+servomotors than in the T version used for the videos).</p>
+<p>Here’s my tip: take the nut using thin tweezers and bring it in the site
+with the right orientation. Put the end of the tweezers in the hole to
+ensure good alignment. Then use flat pincers to adjust the nut.</p>
+<p><img alt="image" src="../_images/nuts1.JPG" /> <img alt="image" src="../_images/nuts2.JPG" /> <img alt="image" src="../_images/nuts3.JPG" /></p>
+<p>These nuts correspond to diameter 2.5mm screws, Allen wrench 2mm.</p>
+<p>To build a full Poppy Humanoid robot, an electrical screwdriver is
+strongly advised!</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="dynamixel_index.html" title="Working with Dynamixel servomotor" >previous</a></li>
+        <li><a href="addressing_dynamixel.html" title="Addressing Dynamixel motors" >next</a></li>
+        <li><a href="../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Assembly Guides</a></li>
+        <li><a href="dynamixel_index.html" >Working with Dynamixel servomotor</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

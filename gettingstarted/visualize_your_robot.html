@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Visualize your robot in a simulator &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Getting Started" href="index.html" />
+    <link rel="next" title="Assembly Guides" href="../assembly_guides/index.html" />
+    <link rel="prev" title="Accessing your robot through the Rest API" href="quickstarts/restapi.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Visualize your robot in a simulator</a><ul>
+<li><a class="reference internal" href="#introducing-v-rep">Introducing V-rep</a></li>
+<li><a class="reference internal" href="#start-a-simulation-with-poppy-humanoid">Start a simulation with Poppy Humanoid</a><ul>
+<li><a class="reference internal" href="#start-v-rep">Start V-rep</a></li>
+<li><a class="reference internal" href="#launch-a-scene-containing-a-poppy-humanoid-robot">Launch a scene containing a Poppy Humanoid robot</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting-and-advanced-usage">Troubleshooting and advanced usage</a><ul>
+<li><a class="reference internal" href="#usage-example-determine-reachable-space-for-the-arm">Usage example: determine reachable space for the arm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="quickstarts/restapi.html" title="Accessing your robot through the Rest API" accesskey="P">previous </a></li>
+              <li><a href="../assembly_guides/index.html" title="Assembly Guides" accesskey="N">next </a></li>
+              <li><a href="../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Getting Started</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/gettingstarted/visualize_your_robot.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Visualize your robot in a simulator</a><ul>
+<li><a class="reference internal" href="#introducing-v-rep">Introducing V-rep</a></li>
+<li><a class="reference internal" href="#start-a-simulation-with-poppy-humanoid">Start a simulation with Poppy Humanoid</a><ul>
+<li><a class="reference internal" href="#start-v-rep">Start V-rep</a></li>
+<li><a class="reference internal" href="#launch-a-scene-containing-a-poppy-humanoid-robot">Launch a scene containing a Poppy Humanoid robot</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting-and-advanced-usage">Troubleshooting and advanced usage</a><ul>
+<li><a class="reference internal" href="#usage-example-determine-reachable-space-for-the-arm">Usage example: determine reachable space for the arm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="quickstarts/restapi.html"
+                        title="previous chapter">Accessing your robot through the Rest API</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../assembly_guides/index.html"
+                        title="next chapter">Assembly Guides</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/gettingstarted/visualize_your_robot.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="visualize-your-robot-in-a-simulator">
+<span id="visualize-your-robot-in-a-simulator"></span><h1>Visualize your robot in a simulator<a class="headerlink" href="#visualize-your-robot-in-a-simulator" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introducing-v-rep">
+<span id="introducing-v-rep"></span><h2>Introducing V-rep<a class="headerlink" href="#introducing-v-rep" title="Permalink to this headline">¶</a></h2>
+<p>V-rep is a physical simulator that allows you to simulate robots in an
+enviroment with gravity, contacts and friction.</p>
+<p>It is compatible with Windows, Mac and linux and can be installed from
+<a class="reference external" href="http:/www.coppeliarobotics.com/downloads.html/">here</a>.</p>
+<p>It is free to use if you are from the education world and you can get a
+limited version otherwise.</p>
+<p>Warning: a physical simulation always asks for quite a lot of
+computation, so try to run it on a not-too-old computer.</p>
+</div>
+<div class="section" id="start-a-simulation-with-poppy-humanoid">
+<span id="start-a-simulation-with-poppy-humanoid"></span><h2>Start a simulation with Poppy Humanoid<a class="headerlink" href="#start-a-simulation-with-poppy-humanoid" title="Permalink to this headline">¶</a></h2>
+<p>Once you have V-rep and poppy-humanoid installed on your computer (see
+<a class="reference external" href="../poppy-humanoid/assembly_doc/en/head_assembly.html">here</a> for
+installing poppy-humanoid and therefore pypot on your desktop computer),
+you need to follow these two steps:</p>
+<div class="section" id="start-v-rep">
+<span id="start-v-rep"></span><h3>Start V-rep<a class="headerlink" href="#start-v-rep" title="Permalink to this headline">¶</a></h3>
+<p>On Windows, find the .exe file and execute it. On linux and mac, open a
+terminal, go to the folder where v-rep is install and launch it with:</p>
+<pre class="literal-block">
+./vrep.sh
+</pre>
+<p>You get a window that looks like this:</p>
+<p><img alt="vrep screenshot" src="../_images/vrep-screenshot.png" /></p>
+<p>You should get an empty world with a floor and a tree structure of the
+elements of the world on the right.</p>
+<p>You can explore the world by drag-and-dropping the simulated world and
+you can start/pause/stop the simulation with the up-right corresponding
+buttons. As v-rep uses a lots a computing power, it is advised to pause
+the simulation while your robot don&#8217;t move.</p>
+</div>
+<div class="section" id="launch-a-scene-containing-a-poppy-humanoid-robot">
+<span id="launch-a-scene-containing-a-poppy-humanoid-robot"></span><h3>Launch a scene containing a Poppy Humanoid robot<a class="headerlink" href="#launch-a-scene-containing-a-poppy-humanoid-robot" title="Permalink to this headline">¶</a></h3>
+<p>The 3D model for the Poppy Humanoid robot is included in the
+poppy-humanoid package.</p>
+<p>So, all you have to do is open a Python console or start a Python file
+and start it with:</p>
+<pre class="literal-block">
+from poppy_humanoid import PoppyHumanoid
+poppy = PoppyHumanoid(simulator='vrep')
+</pre>
+<p>You should see a Poppy Humanoid appear in the middle of the scene in the
+V-rep window:</p>
+<p><img alt="vrep with poppy humanoid screenshot" src="../_images/vrep-header.png" /></p>
+<p>The <em>poppy</em> object that we just created can now be used exactly as a
+PoppyHumanoid object created for a physical robot.</p>
+<p>For example, you can test it with:</p>
+<pre class="literal-block">
+# print all motors
+print poppy.motors
+#ask a new position for the head
+poppy.head_z.goal_position = -10
+
+#wait a bit
+import time
+time.sleep(2.)
+
+#print head_z position
+print poppy.head_z.present_position
+</pre>
+<p>If the simulated Poppy Humanoid turns its head, well done, it works! Now
+you can follow <a class="reference external" href="discover.html">this tutorial</a> to learn how to
+control it!</p>
+<p>You may want at some point to go back to the initial state of the
+simulation. Here is the command:</p>
+<pre class="literal-block">
+poppy.reset_simulation()
+</pre>
+</div>
+</div>
+<div class="section" id="troubleshooting-and-advanced-usage">
+<span id="troubleshooting-and-advanced-usage"></span><h2>Troubleshooting and advanced usage<a class="headerlink" href="#troubleshooting-and-advanced-usage" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="../pypot/doc/vrep.html">here</a> for a view on lower-level link between your
+robot and V-rep.</p>
+<p>TODO</p>
+<ul class="simple">
+<li>what if it doesn&#8217;t connect ?</li>
+<li>what if it freezes ?</li>
+<li>how to create a scene with objects ?</li>
+<li>how to add another creature ?</li>
+</ul>
+<div class="section" id="usage-example-determine-reachable-space-for-the-arm">
+<span id="usage-example-determine-reachable-space-for-the-arm"></span><h3>Usage example: determine reachable space for the arm<a class="headerlink" href="#usage-example-determine-reachable-space-for-the-arm" title="Permalink to this headline">¶</a></h3>
+<p>Using a V-REP simulated robot, you can easily retrieve an object
+position and orientation. You just need to know its name in the vrep
+scene.</p>
+<p><em>Note: at the moment to know the name of object in the vrep scene, you
+have to look for them in the v-rep window. Hopefully in future version
+of pypot, you will be able to directly retrieve them.</em></p>
+<p><img alt="vrep reachable space with poppy humanoid left forearm" src="../_images/vrep-finding-names.png" /></p>
+<p>For instance, to get the 3D position of the left hand, you just have to
+do:</p>
+<pre class="literal-block">
+poppy.get_object_position('l_forearm_visual')
+</pre>
+<p>You get a list of 3 positions in the V-REP scene referential (the zero
+is somewhere between Poppy Humanoid&#8217;s feet). You can use any object as
+referential and thus get the left forearm position related to the head
+for instance:</p>
+<pre class="literal-block">
+poppy.get_object_position('l_forearm_visual', 'head_visual')
+</pre>
+<p>To discover the reachable space of the left hand of the robot (with
+respect to its head), you can for example generate many random positions
+for the arm (here, 25) and store the reached positions:</p>
+<pre class="literal-block">
+import random
+
+reached_positions = [] #we will store the positions here
+
+for _ in range(25):
+    poppy.reset_simulation()
+
+    # Generate a position by setting random position (within the angle limit) to each joint
+    pos = {m.name: random.randint(min(m.angle_limit), max(m.angle_limit)) for m in poppy.l_arm}    
+    print &quot;Getting forearm position when motors ar at &quot;,pos
+
+    #make the robot reach position
+    poppy.goto_position(pos, 2., wait=True)
+
+    #get and store forearm position
+    reached_pt.append(poppy.get_object_position('l_forearm_visual'))
+</pre>
+<p>Now matplotlib or any other plot library can help you visualize the
+data:</p>
+<pre class="literal-block">
+from mpl_toolkits.mplot3d import Axes3D
+
+ax = axes(projection='3d')
+ax.scatter(*array(reached_pt).T)
+</pre>
+<p><img alt="vrep reachable space with poppy humanoid left forearm" src="../_images/vrep_reachable_space.png" /></p>
+<p>TODO: can someone confirm that code and imports are OK ?</p>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="quickstarts/restapi.html" title="Accessing your robot through the Rest API" >previous</a></li>
+        <li><a href="../assembly_guides/index.html" title="Assembly Guides" >next</a></li>
+        <li><a href="../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Getting Started</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Use Poppy ready images &mdash; Poppy project 1.1.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '1.1.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../_static/poppy_flower_logo-small.png"/>
+    <link rel="top" title="Poppy project 1.1.0 documentation" href="../index.html" />
+    <link rel="up" title="Development Guides" href="index.html" />
+    <link rel="next" title="poppy_humanoid package" href="../poppy-humanoid/doc/poppy_humanoid.html" />
+    <link rel="prev" title="Herborist: the configuration tool" href="../pypot/doc/herborist.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Poppy project 1.1.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Use Poppy ready images</a></li>
+<li><a class="reference internal" href="#use-an-raspberrypi-2-board">Use an RaspberryPi-2 board</a><ul>
+<li><a class="reference internal" href="#install-raspbian">Install Raspbian</a></li>
+<li><a class="reference internal" href="#remove-some-stuff-2min">Remove some stuff (~2min)</a></li>
+<li><a class="reference internal" href="#install-python-anaconda-1min">Install Python Anaconda (~1min)</a></li>
+<li><a class="reference internal" href="#create-a-poppy-python-environment-1min">Create a Poppy Python environment (~1min)</a></li>
+<li><a class="reference internal" href="#install-the-main-scientific-python-packages-5min">Install the main scientific python packages (~5min)</a></li>
+<li><a class="reference internal" href="#poppy-creature-packages-1min">Poppy Creature Packages (~1min)</a></li>
+<li><a class="reference internal" href="#camera-support-1min-raspberry-only">Camera support (~1min) - <em>Raspberry only!</em></a><ul>
+<li><a class="reference internal" href="#opencv-and-image-features">OpenCV and Image features</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-an-odroid-board">Use an ODROID board</a></li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../pypot/doc/herborist.html" title="Herborist: the configuration tool" accesskey="P">previous </a></li>
+              <li><a href="../poppy-humanoid/doc/poppy_humanoid.html" title="poppy_humanoid package" accesskey="N">next </a></li>
+              <li><a href="../py-modindex.html" title="Python Module Index" >modules </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Development Guides</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/development_guides/poppy-board.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+    <p class="logo"><a href="../index.html">
+      <img class="logo" src="../_static/poppy_name_h144.png" alt="Logo"/>
+    </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Use Poppy ready images</a></li>
+<li><a class="reference internal" href="#use-an-raspberrypi-2-board">Use an RaspberryPi-2 board</a><ul>
+<li><a class="reference internal" href="#install-raspbian">Install Raspbian</a></li>
+<li><a class="reference internal" href="#remove-some-stuff-2min">Remove some stuff (~2min)</a></li>
+<li><a class="reference internal" href="#install-python-anaconda-1min">Install Python Anaconda (~1min)</a></li>
+<li><a class="reference internal" href="#create-a-poppy-python-environment-1min">Create a Poppy Python environment (~1min)</a></li>
+<li><a class="reference internal" href="#install-the-main-scientific-python-packages-5min">Install the main scientific python packages (~5min)</a></li>
+<li><a class="reference internal" href="#poppy-creature-packages-1min">Poppy Creature Packages (~1min)</a></li>
+<li><a class="reference internal" href="#camera-support-1min-raspberry-only">Camera support (~1min) - <em>Raspberry only!</em></a><ul>
+<li><a class="reference internal" href="#opencv-and-image-features">OpenCV and Image features</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-an-odroid-board">Use an ODROID board</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../pypot/doc/herborist.html"
+                        title="previous chapter">Herborist: the configuration tool</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../poppy-humanoid/doc/poppy_humanoid.html"
+                        title="next chapter">poppy_humanoid package</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/development_guides/poppy-board.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="use-poppy-ready-images">
+<span id="use-poppy-ready-images"></span><h1>Use Poppy ready images<a class="headerlink" href="#use-poppy-ready-images" title="Permalink to this headline">¶</a></h1>
+<p>The easiest way to setup the control board of your Poppy Creature is to used one of the pre-made SD-card images. Those images come with everything installed and ready, you just need to copy it on a SD-card and you are good to go.
+.
+For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board:</p>
+<ul class="simple">
+<li><a class="reference external" href="">RaspberryPi-2 image</a> for ErgoJr</li>
+<li><a class="reference external" href="">Odroid image</a> for Torso or Humanoid</li>
+</ul>
+<p>Then to copy it on your SD-card.</p>
+</div>
+<div class="section" id="use-an-raspberrypi-2-board">
+<span id="use-an-raspberrypi-2-board"></span><h1>Use an RaspberryPi-2 board<a class="headerlink" href="#use-an-raspberrypi-2-board" title="Permalink to this headline">¶</a></h1>
+<p><em>All details and resources nessary to make your own &#8220;Poppy Ready&#8221; image for RaspberryPi-2 can be found on this <a class="reference external" href="https://github.com/pierre-rouanet/raspoppy">github repository</a>.</em></p>
+<p>We are here describing the set of tools we use to setup a Raspberry board for a Poppy Creature. While we try to keep this procedure as simple as possible, it still requires a good knowledge of Linux OS and of Python. For those who are not interrested in digging into those details, we will soon provide ready-to-use SD-card images which you can directly download and put in your Raspberry.</p>
+<p><em>While this procedure is mainly designed for the Raspberypi-2, most of it (especially all conda recipes) should also work for the <a class="reference external" href="http://www.hardkernel.com/main/main.php">odroid XU4 </a> as both boards used an armv7 CPU. It is important to also note that this procedure is only given as an example: i.e. this is how we build the SD-card images we provide.  Yet, you can freely adapt to better match your needs.</em></p>
+<p><em>Pull Requests are welcomed!</em></p>
+<div class="section" id="install-raspbian">
+<span id="install-raspbian"></span><h2>Install Raspbian<a class="headerlink" href="#install-raspbian" title="Permalink to this headline">¶</a></h2>
+<p>Just follow standard <a class="reference external" href="https://www.raspberrypi.org/downloads/raspbian/">instructions</a> from raspberry.org. We use the latest standard Raspbian OS.</p>
+<p><em>Note: the rest of the procedure will require to have an internet access on the Raspberry.</em></p>
+</div>
+<div class="section" id="remove-some-stuff-2min">
+<span id="remove-some-stuff-2min"></span><h2>Remove some stuff (~2min)<a class="headerlink" href="#remove-some-stuff-2min" title="Permalink to this headline">¶</a></h2>
+<p>To save some spaces on the card, we removed some package which are not useful for our needs.</p>
+<p>First, make sure the package list is updated:</p>
+<pre class="code highlight bash literal-block">
+sudo apt-get update
+</pre>
+<p>Then, remove some package which are not useful here (of course if you need to keep playing minecraft we won&#8217;t judge you):</p>
+<pre class="code highlight bash literal-block">
+sudo apt-get remove --purge wolfram-* minecraft-pi scratch penguinspuzzle -y
+
+sudo apt-get autoremove -y
+</pre>
+</div>
+<div class="section" id="install-python-anaconda-1min">
+<span id="install-python-anaconda-1min"></span><h2>Install Python <a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a> (~1min)<a class="headerlink" href="#install-python-anaconda-1min" title="Permalink to this headline">¶</a></h2>
+<p>To make sure that we can rely on a clean and somewhat better controlled the environment and dependencies we install our own Python environment instead of using the OS packages. If you are not a Python wizard, we strongly advise you to do the same.</p>
+<p>We chose the <a class="reference external" href="http://conda.pydata.org/miniconda.html">Miniconda</a> distribution has they recently add <a class="reference external" href="http://continuum.io/blog/new-arch">support for Raspberry</a> and that we can benefit from their <a class="reference external" href="http://conda.pydata.org/docs/building/recipe.html">recipe concept</a> which makes installation so much faster and simpler.</p>
+<ul class="simple">
+<li>Download and install the latest Miniconda</li>
+</ul>
+<pre class="code highlight bash literal-block">
+wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-armv7l.sh
+bash Miniconda-latest-Linux-armv7l.sh -b
+rm Miniconda-latest-Linux-armv7l.sh
+</pre>
+</div>
+<div class="section" id="create-a-poppy-python-environment-1min">
+<span id="create-a-poppy-python-environment-1min"></span><h2>Create a Poppy Python environment (~1min)<a class="headerlink" href="#create-a-poppy-python-environment-1min" title="Permalink to this headline">¶</a></h2>
+<p>To make things simpler for those who are not familiar with Python ecosystem which can be sometimes <a class="reference external" href="http://captiongenerator.com/30052/Hitler-reacts-to-the-Python-ecosystem">confusing</a>, we are creating a dedicated Poppy Environment for the conda distribution (please refer to <a class="reference external" href="http://conda.pydata.org/docs/using/envs.html">this doc</a> for details).</p>
+<pre class="code highlight bash literal-block">
+~/miniconda/bin/conda create -n poppy <span class="nv">python</span><span class="o">=</span><span class="m">2</span> -y
+<span class="nb">source</span> ~/miniconda/bin/activate poppy
+</pre>
+<ul class="simple">
+<li>Add <a class="reference external" href="https://anaconda.org/poppy-project">external poppy-project recipes</a> for conda: we have defined our own recipe and pre-built them so you do not need to compile them on you own board. The full list of available recipes can be seen <a class="reference external" href="https://anaconda.org/poppy-project">here</a> (Do not hesitate to contribute and add other recipes!)</li>
+</ul>
+<pre class="code highlight bash literal-block">
+conda config --add channels poppy-project
+conda config --set show_channel_urls True
+</pre>
+<ul class="simple">
+<li>Set Poppy Environment as default</li>
+</ul>
+<pre class="code highlight bash literal-block">
+<span class="nb">echo</span> <span class="s2">&quot;
+export PATH=\$HOME/miniconda/envs/poppy/bin:\$PATH&quot;</span> &gt;&gt; ~/.bashrc
+</pre>
+</div>
+<div class="section" id="install-the-main-scientific-python-packages-5min">
+<span id="install-the-main-scientific-python-packages-5min"></span><h2>Install the main scientific python packages (~5min)<a class="headerlink" href="#install-the-main-scientific-python-packages-5min" title="Permalink to this headline">¶</a></h2>
+<p>This is just the basic packages which are used by most poppy softwares and demos:</p>
+<pre class="code highlight bash literal-block">
+conda install jupyter numpy scipy matplotlib -y
+</pre>
+</div>
+<div class="section" id="poppy-creature-packages-1min">
+<span id="poppy-creature-packages-1min"></span><h2>Poppy Creature Packages (~1min)<a class="headerlink" href="#poppy-creature-packages-1min" title="Permalink to this headline">¶</a></h2>
+<p>Each Poppy Creature comes with its own specific software. Each of this package is based on <a class="reference external" href="https://github.com/poppy-project/pypot">pypot</a> which handles all the low-level communication with the robot.</p>
+<p>So, first we install pypot:</p>
+<pre class="code highlight bash literal-block">
+conda install pypot -y
+</pre>
+<p>Then, the software for your specific creature. For isntance, if you want to use an <a class="reference external" href="https://github.com/poppy-project/poppy-ergo-jr">Ergo-Jr</a>:</p>
+<pre class="code highlight bash literal-block">
+conda install poppy-ergo-jr -y
+</pre>
+<p>The list of available poppy creatures can be found via:</p>
+<pre class="code highlight bash literal-block">
+conda search poppy
+</pre>
+<p><em>Note that you can install as many creatures as you want.</em></p>
+</div>
+<div class="section" id="camera-support-1min-raspberry-only">
+<span id="camera-support-1min-raspberry-only"></span><h2>Camera support (~1min) - <em>Raspberry only!</em><a class="headerlink" href="#camera-support-1min-raspberry-only" title="Permalink to this headline">¶</a></h2>
+<p>First you need to setup your camera according to the <a class="reference external" href="https://www.raspberrypi.org/documentation/usage/camera/README.md">official documentation</a>. You do not need to install the picamera package as we will not use it but uses opencv instead.</p>
+<p>Once you have enabled the camera using raspi-config, you can check if it worked via:</p>
+<pre class="code highlight bash literal-block">
+raspistill -o cam.jpg
+</pre>
+<p><em>Note this will only work if you boot to the Desktop!</em>*</p>
+<p>Then, we launch the driver:</p>
+<pre class="code highlight bash literal-block">
+sudo modprobe bcm2835-v4l2
+</pre>
+<p>You can also configure the OS so it automatically launches the driver at startup (otherwise you have to use the previous line each time you reboot your card):</p>
+<pre class="code highlight bash literal-block">
+sudo sed -i /bcm2835-v4l2/d /etc/modules
+<span class="nb">echo</span> <span class="s2">&quot;bcm2835-v4l2&quot;</span> <span class="p">|</span> sudo tee -a /etc/modules
+</pre>
+<div class="section" id="opencv-and-image-features">
+<span id="opencv-and-image-features"></span><h3>OpenCV and Image features<a class="headerlink" href="#opencv-and-image-features" title="Permalink to this headline">¶</a></h3>
+<p>Then we install the standard computer vision library <a class="reference external" href="http://opencv.org">OpenCV</a> using a conda recipe as well as it is very long to compile. Make sure it will install the version 3.</p>
+<pre class="code highlight bash literal-block">
+conda install opencv -y
+</pre>
+<p>For marker detection we use the <a class="reference external" href="https://github.com/pierre-rouanet/hampy">hampy</a> library:</p>
+<pre class="code highlight bash literal-block">
+conda install hampy -y
+</pre>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<span id="troubleshooting"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Please check and report any unknown <a class="reference external" href="https://github.com/pierre-rouanet/raspoppy/issues">issue</a>!</p>
+</div>
+</div>
+<div class="section" id="use-an-odroid-board">
+<span id="use-an-odroid-board"></span><h1>Use an ODROID board<a class="headerlink" href="#use-an-odroid-board" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">Poppy project 1.1.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../pypot/doc/herborist.html" title="Herborist: the configuration tool" >previous</a></li>
+        <li><a href="../poppy-humanoid/doc/poppy_humanoid.html" title="poppy_humanoid package" >next</a></li>
+        <li><a href="../py-modindex.html" title="Python Module Index" >modules</a></li>
+        <li><a href="../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Development Guides</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2015, INRIA.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>
