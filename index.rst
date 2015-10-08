@@ -43,12 +43,13 @@ Quickstarts
     quickstarts/discover.md
     quickstarts/snap.md
     quickstarts/vrep.md
-   
+    quickstarts/restapi.md
+
 
 Development guides
 ==================
 
-    
+
 Poppy-humanoid library
 --------------------------------------
 
@@ -97,6 +98,11 @@ Pypot library
     pypot/doc/index.rst
 
 
+Setup  the internal board
+-------------------------
+
+.. toctree::
+    poppy-board.md
 
 
 APIs
