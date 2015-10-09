@@ -1,6 +1,6 @@
 # Assembly guide for Poppy ErgoJr
 
-#Image 5
+![Ergo-tool](../img/ergo-tool-1.jpg)
 
 ## Introduction
 
@@ -120,9 +120,9 @@ Mount two other shift_one_sides and a motor. Repeat this twice. All the pulley s
 
 ### Step 10
 
-Always with the OLLO rivets, you can add the end of your choice (you can choose among several ends: a lamp, a hand gripper, ...) 
+Always with the OLLO rivets, you can add the end of your choice (you can choose among several ends: a lamp, a hand gripper, ...)
 
-#Image 6
+![image](../img/ergo-tool-2.jpg)
 
 ### Step 11
 
