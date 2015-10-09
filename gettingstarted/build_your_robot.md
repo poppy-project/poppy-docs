@@ -18,28 +18,28 @@ This robot was designed to be assembled as soon as possible (within one hour): i
 
 * You need to collect all the necessary parts to build the robot (6 motors, 6 wires, the 3D printed parts, many OLLO rivets, etc...), you can find the complete list in the assembly section.
 
-![BOM](../img/bom.jpg)
+![BOM](../poppy-ergo-jr/img/bom.jpg)
 
 * You assemble all the rivets
 
 * Once assembled, you use rivets to put the motors on 3D printed parts. For this, you have the OLLO tools, it's really convenient. This tool allows you to put and remove the rivets easily.
 
-![OLLO Tool](../img/assembly/ollo-tool.jpg)
+![OLLO Tool](../poppy-ergo-jr/img/assembly/ollo-tool.jpg)
 
 *Start assembling from below, remembering to connect wires.
 The cables between motors have two purposes:
 - distribute alimentation to each motor
 - convey messages to each motor (ordering them to move or asking them for sensors' values)
 
-![Another Step](../img/assembly/step-4-1.jpg)
+![Another Step](../poppy-ergo-jr/img/assembly/step-4-1.jpg)
 
 *Put motors one after the other...
 
-![Another Step](../img/assembly/step-6.jpg)
+![Another Step](../poppy-ergo-jr/img/assembly/step-6.jpg)
 
 * ... until the end !
 
-![Another Step](../img/assembly/step-9.jpg)
+![Another Step](../poppy-ergo-jr/img/assembly/step-9.jpg)
 
 * You can add the tool of your choice !
 
