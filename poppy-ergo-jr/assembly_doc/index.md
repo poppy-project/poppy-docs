@@ -3,7 +3,7 @@
 ## Introduction
 
 
-The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm. 
+The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm.
 It consists of very simple forms to be able to print in 3D as easily as possible.
 The engines have the same functionality as other Poppy  creatures but are slightly less powerful and less precise. The advantage being that are also less expensive.
 The electronic card is not integrated, everything is visible, which is very advantageous to manipulate and change.
@@ -34,19 +34,18 @@ For building a Poppy Ergo Jr, you will need:
 ### General advices
 
 * You can assemble all the rivets before the construction, it will be easier after.
-* You have to put the edges of the first part in the second part raynures. This will then be able to remove them.
+* You have to put the edges of the first part in the second part holes. This will then be able to remove them.
 
-IMAGE 1,  2 et 3 ?
+![OLLO Rivet Assembly](../img/ollo_rivet.png)
 
 After, use the OLLO Tool for the rivets, it's really convenient. This tool allows to put and remove the rivets easily.
 
 ![OLLO Tool](../img/assembly/ollo-tool.jpg)
 
-* Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favorite side). 
-* If you want, there are slots for getting the most beautifully wires.
+* Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favorite side).
+* If you want, there are slots for getting the most beautifully wires and avoid damaging them.
 
-IMAGE 4
-
+![image](../img/xl320_gap.jpg)
 
 * Always align the horn with the motor before assembling them! Otherwise your Poppy Ergo Jr will look all weird.
 
