@@ -1,7 +1,7 @@
 
 ## With Python
 
-The Poppy robots and in particular the [pypot.robot.Robot](../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot) objects from pypot make their best to allow you to easily discover and program
+The Poppy robots and in particular the [pypot.robot.Robot](../../pypot/doc/pypot.robot.rst#pypot.robot.robot.Robot) objects from pypot make their best to allow you to easily discover and program
 you robot.
 
 ### Where do I put my code? In Jupyter...
