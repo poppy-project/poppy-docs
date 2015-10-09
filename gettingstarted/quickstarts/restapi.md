@@ -1,6 +1,6 @@
 # With other languages and/or connect it to the outside world
 
-As Poppy Creatures are made to be easily integrated into educational, research or artistic projects, it is central that they can be easily connected with the external world. Thus, we desgined a [REST API](http://www.restapitutorial.com) which permits the access of all main features of a Poppy Creature through HTTP requests.
+As Poppy Creatures are made to be easily integrated into educational, research or artistic projects, it is central that they can be easily connected with the external world and used with a large variety of programming languages. Thus, we desgined a [REST API](http://www.restapitutorial.com) which permits the access of all main features of a Poppy Creature through HTTP requests.
 
 Thanks to this REST API it is easy to:
 * control your robot through any connected device (such as a smartphone),
