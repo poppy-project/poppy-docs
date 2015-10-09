@@ -8,7 +8,7 @@ you robot.
 
 ![image](images/ip_logo.png) 
 
-** Jupyter, iPython - Notebook ** is an interactive computational environment, in which you can combine code execution, rich text, mathematics, plots and rich media. Jupyter is open source, interactive data science and scientific computing across over 40 programming languages.
+**Jupyter, iPython - Notebook** is an interactive computational environment, in which you can combine code execution, rich text, mathematics, plots and rich media. Jupyter is open source, interactive data science and scientific computing across over 40 programming languages.
 
 A notebook is very simple to use, especially to create a tutorial for any project or for teaching.
 
