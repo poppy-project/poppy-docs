@@ -51,6 +51,7 @@ After, use the OLLO Tool for the rivets, it's really convenient. This tool allow
 
 ![Align Horn](../img/assembly/align-horn.png)
 
+In all pictures we put only the necessary rivets for the proper functioning of the Poppy Ergo jr. You can put more if you want it to be stronger.
 
 ### Step 1
 
@@ -80,11 +81,9 @@ Mount another motor on top.
 
 ![Another Step](../img/assembly/step-4-1.jpg)
 
-The OLLO Pulley is inside and you should assemble it with the bigger rivet. Bonus, you can watch this step in [slow motion](https://vimeo.com/125704291).
+You have to put a OLLO Pulley inside and for this you should use the bigger rivet. Bonus, you can watch this step in [slow motion](https://vimeo.com/125704291). Do not forget the cable!
 
 ![Another Step](../img/assembly/step-4-2.jpg)
-
-Do not forget the cable!
 
 
 ### Step 5
