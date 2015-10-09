@@ -10,7 +10,7 @@ You need only a web-browser (like firefox or chrome) and be on the same network.
 
 This page opens and you have many option:
 
-![image](poppy_home.png)
+![image](../../poppy_home.png)
 
 - Configure wifi: connecte wifi and enter the access key
 - Change hostname: if you change a hostname, the url to acces in robot change also. *Exemple: if you change poppy to my_robot, the url to connect becomes my_robot.local*
