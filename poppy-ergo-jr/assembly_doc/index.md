@@ -1,5 +1,7 @@
 # Assembly guide for Poppy ErgoJr
 
+#Image 5
+
 ## Introduction
 
 
@@ -119,6 +121,12 @@ Mount two other shift_one_sides and a motor. Repeat this twice. All the pulley s
 
 ### Step 10
 
+Always with the OLLO rivets, you can add the end of your choice (you can choose among several ends: a lamp, a hand gripper, ...) 
+
+#Image 6
+
+### Step 11
+
 #### Electronics
 
 A small bit of electronic hacking is required for now. You need to power the Xl320 motors with 7.5V.
@@ -137,6 +145,6 @@ The communication with the motor is TTL, thus configure the USB2Dynamixel in TTL
 
 ![Power Board](../img/electronic/usb2dynamixel.jpg)
 
-### Step 11
+### Step 12
 
 Grab your [favorite drink](https://www.flickr.com/photos/poppy-project/16488256337/) and relax.
