@@ -47,7 +47,7 @@ The cables between motors have two purposes:
 
 * A small bit of electronic hacking is required for now. You need to power the Xl320 motors with 7.5V.
 
-*It's finish, you have a Poppy Ergo Jr
+* It's finish, you have a Poppy Ergo Jr
 
 #IMAGE 5 et/ou 7
 
