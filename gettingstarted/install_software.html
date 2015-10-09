@@ -66,6 +66,23 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Install the required softwares</a><ul>
+<li><a class="reference internal" href="#control-a-real-robot-from-your-web-browser-no-installation-required">Control a real robot from your web browser - no installation required</a></li>
+<li><a class="reference internal" href="#using-a-simulated-robot">Using a simulated robot</a><ul>
+<li><a class="reference internal" href="#install-python-and-poppy-libraries">Install Python and Poppy libraries</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#control-it-from-your-personal-computer-the-hard-way">Control it from your personal computer - the hard way</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
 
             
               <li><a href="build_your_robot.html" title="Build your own robot" accesskey="P">previous </a></li>
@@ -109,6 +126,19 @@
     <p class="logo"><a href="../index.html">
       <img class="logo" src="../_static/poppy_name_h144.png" alt="Logo"/>
     </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Install the required softwares</a><ul>
+<li><a class="reference internal" href="#control-a-real-robot-from-your-web-browser-no-installation-required">Control a real robot from your web browser - no installation required</a></li>
+<li><a class="reference internal" href="#using-a-simulated-robot">Using a simulated robot</a><ul>
+<li><a class="reference internal" href="#install-python-and-poppy-libraries">Install Python and Poppy libraries</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#control-it-from-your-personal-computer-the-hard-way">Control it from your personal computer - the hard way</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="build_your_robot.html"
                         title="previous chapter">Build your own robot</a></p>
@@ -150,6 +180,79 @@
                   
   <div class="section" id="install-the-required-softwares">
 <span id="install-the-required-softwares"></span><h1>Install the required softwares<a class="headerlink" href="#install-the-required-softwares" title="Permalink to this headline">¶</a></h1>
+<p>Once you have built your Poppy Creature or if you just want to try a simulated one, the next step is to start playing with it! Poppy Creatures can be controlled using the <a class="reference external" href="https://www.python.org">Python</a> programming language and via <a class="reference external" href="http://snap.berkeley.edu">Snap!</a> a variant of the well-known visual programming language <a class="reference external" href="https://scratch.mit.edu">Scratch</a> (or with other languages via the REST API, see <a class="reference external" href="program_your_robot.html">this section</a> for details).</p>
+<p>Depending on what exactly you want to do - e.g. use Snap! to make your real robot moves or program in Python to interact with a simulated robot, different procedures must be followed.</p>
+<p>Poppy Creature comes with an embedded board, all the needed softwares is already installed on their internal computer. They also comes with a webserver which allows you to directly program them - both in Python and Snap! - without needing to install anything. This method is described in the <a class="reference external" href="">Control the robot from your web browser</a> section. This is by far the easiest way but of course this is <strong>only possible with a real robot and not in simulation</strong>.</p>
+<p>If you want to control a simulated Poppy Creature you will have to install the libraries on your own computer. The main Poppy libraries are written in Python and can thus be easily installed on any computer under Windows, Mac or Linux. The section <a class="reference external" href="">Using a simulated robot</a> describes those steps.</p>
+<p>A diagram summarizing these different approaches can be seen below:</p>
+<p><img alt="image" src="https://raw.githubusercontent.com/poppy-project/community-notebooks/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/png/diagramme.png" /></p>
+<p><em>They are also other advanced approaches to directly control the robot from your own computer, but a solid knowledge of the linux and Python environments is required! Those approaches are described at the end of this page and detailed in the chapter <a class="reference external" href="">Control your robot using your own computer</a>.</em></p>
+<div class="section" id="control-a-real-robot-from-your-web-browser-no-installation-required">
+<span id="control-a-real-robot-from-your-web-browser-no-installation-required"></span><h2>Control a real robot from your web browser - no installation required<a class="headerlink" href="#control-a-real-robot-from-your-web-browser-no-installation-required" title="Permalink to this headline">¶</a></h2>
+<p>As explained above, Poppy Creature comes with an embedded board where Python and Poppy libraries are already installed and setup. They also comes with a server which permits a direct control of the robot from your web browser without needing to install anything on your computer.</p>
+<p>To control your robot - either in Python or Snap! - from your computer a few steps are required:</p>
+<ul class="simple">
+<li>First, you need to make sure both your robot and your computer are on the same local network, e.g. on the same wifi or even better on the same ethernet network.</li>
+<li>Then, you need to either know the <a class="reference external" href="https://en.wikipedia.org/wiki/IP_address">IP address</a> of your robot or use the <a class="reference external" href="">Bonjour</a> services to automatically discover it - this service is already installed on most MacOS and Linux but must be <a class="reference external" href="https://support.apple.com/downloads/Bonjour_for_Windows">installed</a> on Windows.</li>
+<li>Finally, connect to <a class="reference external" href="http://poppy.local">http://poppy.local</a> (replace <em>poppy.local</em> by the <em>IP address</em> if you do not use Bonjour) and you should see something similar to this:</li>
+</ul>
+<p><img alt="image" src="../_images/poppy_home.png" /></p>
+<p>From their you just have to follow the links and start programming your robot in Python or Snap! This is described in th next page.</p>
+</div>
+<div class="section" id="using-a-simulated-robot">
+<span id="using-a-simulated-robot"></span><h2>Using a simulated robot<a class="headerlink" href="#using-a-simulated-robot" title="Permalink to this headline">¶</a></h2>
+<p>If you want to program a simulated version of a Poppy Creature you will have to install the Poppy software on your computer. Those libraries are written in Python and should be rather easily installed on any computer (Windows, MacOS and Linux).</p>
+<div class="section" id="install-python-and-poppy-libraries">
+<span id="install-python-and-poppy-libraries"></span><h3>Install Python and Poppy libraries<a class="headerlink" href="#install-python-and-poppy-libraries" title="Permalink to this headline">¶</a></h3>
+<p>There are many ways to install Python and the needed packages, yet if you are not a Python guru we strongly recommend you to follow the process described below. You will avoid most of the common pitfalls. Of course if you are familiar with Python the classical <em>pip install poppy-ergo-jr</em> (or with any other creature name) you should be good to go.</p>
+<ul>
+<li><p class="first">Install the <a class="reference external" href="https://www.continuum.io/anaconda">Anaconda</a> Python 2.7 distribution: it exists for Windows, Mac and Linux and comes with most of the dependencies pre-packaged. We recommend using Python 2.7 as this is our test environment, yet everything should work as well with Python 3.4 (or later).</p>
+</li>
+<li><p class="first">Install the Poppy libraries. You will need three main libraries:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/poppy-project/pypot">pypot</a>: it is the low-level library which handles all the communication with the motors and the sensors.</li>
+<li><a class="reference external" href="https://github.com/poppy-project/poppy-creature">poppy-creature</a>: it a light abstraction layer on top of the pypot library which defines everything which is common among all Poppy Creatures.</li>
+<li>the library spefic for your creature such as <a class="reference external" href="https://github.com/poppy-project/poppy-ergo-jr">poppy-ergo-jr</a>, <a class="reference external" href="https://github.com/poppy-project/poppy-torso">poppy-torso</a> or <a class="reference external" href="https://github.com/poppy-project/poppy-humanoid">poppy-humanoid</a>. This is where everything specific to the creature is defined. You can install multiple of them if you want to use different creatures.</li>
+</ul>
+</li>
+<li><p class="first">To install them you have to open a command line. How to do this depends on your operating system. On recent Windows you can do it by following this <a class="reference external" href="http://www.7tutorials.com/7-ways-launch-command-prompt-windows-7-windows-8">guide</a> for instance.</p>
+</li>
+<li><p class="first">Once the command line is opened simply type:</p>
+<pre class="code highlight bash literal-block">
+pip install pypot
+</pre>
+</li>
+<li><p class="first">Then:</p>
+<pre class="code highlight bash literal-block">
+pip install poppy-creature
+</pre>
+</li>
+<li><p class="first">And finally - you can obviously replace <em>poppy-ergo-jr</em> by the name of any other creature you want to install:</p>
+<pre class="code highlight bash literal-block">
+pip install poppy-ergo-jr
+</pre>
+</li>
+</ul>
+<p>To make sure everything is installed correctly you can type in the command line (replace PoppyErgoJr by the name of the creature you have installed: PoppyTorso or PoppyHumanoid):</p>
+<pre class="code highlight bash literal-block">
+python -c <span class="s2">&quot;from poppy.creatures import PoppyErgoJr&quot;</span>
+</pre>
+<p>You can also install <a class="reference external" href="http://jupyter.org">jupyter</a> so you can use the notebooks:</p>
+<pre class="code highlight bash literal-block">
+pip install jupyter
+</pre>
+<p>If you do not see any error, it means everything is installed and you can continue and install the simulator. This is explained in the section <a class="reference external" href="visualize_your_robot.html">Visualize your robot in a simulator</a>.</p>
+</div>
+</div>
+<div class="section" id="control-it-from-your-personal-computer-the-hard-way">
+<span id="control-it-from-your-personal-computer-the-hard-way"></span><h2>Control it from your personal computer - the hard way<a class="headerlink" href="#control-it-from-your-personal-computer-the-hard-way" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>embedded board - computer running linux</li>
+<li>ssh</li>
+<li>usb2dxl driver</li>
+<li>sensors</li>
+</ul>
+</div>
 </div>
 
 
