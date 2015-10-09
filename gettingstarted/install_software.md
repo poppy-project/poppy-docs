@@ -72,9 +72,19 @@ pip install jupyter
 If you do not see any error, it means everything is installed and you can continue and install the simulator. This is explained in the section [Visualize your robot in a simulator](visualize_your_robot.html).
 
 ## Control it from your personal computer - the hard way
-* embedded board - computer running linux
 
-* ssh
+**Warning: While the rest of this page was meant to be as accessible as possible, this section presents complex techniques reserved to advance users with a strong knowledge of linux and python environments.**
 
-* usb2dxl driver
-* sensors
+![image](../images/no-place-like-home.jpg)
+
+The embedded board on Poppy Creature are simply tiny computer running Linux. They can be directly access via ssh or you can plug a keyboard and a screen and use it as any other computer.
+
+You can also directly control the robot from your computer. You will need to install the same Python libraries as those needed if you use a simulated robot (pypot, poppy-creature and poppy-ergo-jr for instance).
+
+The tricky parts concern the communication with motors. We use usb to serial communication, you will need either a USB2Dynamixel or a USB2AX. Depending on your operating system you may need a [FTDI driver](http://www.ftdichip.com/Drivers/VCP.htm). On Linux make sure you have the necessary permissions to access the serial port, see [here](http://poppy-project.github.io/pypot/installation.html#testing-your-install) for details.
+
+*Warning: note that the ftdi driver on MacOS add a 16ms timeout which will make fast communication with motors impossible. If anyone know how to circumvent this please [let us know](https://github.com/poppy-project/pypot/issues)! We recommend using Linux or Windows in the meantime. It also works great inside a VM.*
+
+Finally, accessing the sensors (e.g. the raspberry-pi camera) can be problematic from a computer but replacing it by any equivalent (any camera compatible with OpenCV) should do the trick.
+
+For more details, you can refer to the exact procedure we follow for creating the image used in the embedded board to know all the details. It is described in the [Setup the internal board]() section.
