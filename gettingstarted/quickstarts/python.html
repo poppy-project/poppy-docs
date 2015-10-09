@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Avec Python &mdash; Poppy project 1.1.0 documentation</title>
+    <title>With Python &mdash; Poppy project 1.1.0 documentation</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -70,9 +70,9 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">Avec Python</a><ul>
-<li><a class="reference internal" href="#where-do-i-put-my-code">Where do I put my code?</a></li>
-<li><a class="reference internal" href="#create-the-robot-object">Create the robot object</a></li>
+<li><a class="reference internal" href="#">With Python</a><ul>
+<li><a class="reference internal" href="#where-do-i-put-my-code-in-jupyter">Where do I put my code? In Jupyter...</a></li>
+<li><a class="reference internal" href="#how-to-create-and-manipulate-the-robot-object">How to create and manipulate the robot object</a></li>
 <li><a class="reference internal" href="#motors">Motors</a></li>
 <li><a class="reference internal" href="#sensors">Sensors</a></li>
 <li><a class="reference internal" href="#go-further">Go further</a></li>
@@ -128,9 +128,9 @@
     </a></p>
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Avec Python</a><ul>
-<li><a class="reference internal" href="#where-do-i-put-my-code">Where do I put my code?</a></li>
-<li><a class="reference internal" href="#create-the-robot-object">Create the robot object</a></li>
+<li><a class="reference internal" href="#">With Python</a><ul>
+<li><a class="reference internal" href="#where-do-i-put-my-code-in-jupyter">Where do I put my code? In Jupyter...</a></li>
+<li><a class="reference internal" href="#how-to-create-and-manipulate-the-robot-object">How to create and manipulate the robot object</a></li>
 <li><a class="reference internal" href="#motors">Motors</a></li>
 <li><a class="reference internal" href="#sensors">Sensors</a></li>
 <li><a class="reference internal" href="#go-further">Go further</a></li>
@@ -177,29 +177,26 @@
               <div class="bodywrapper">
                 <div class="body">
                   
-  <div class="section" id="avec-python">
-<span id="avec-python"></span><h1>Avec Python<a class="headerlink" href="#avec-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="with-python">
+<span id="with-python"></span><h1>With Python<a class="headerlink" href="#with-python" title="Permalink to this headline">¶</a></h1>
 <p>The Poppy robots and in particular the <a class="reference external" href="../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot">pypot.robot.Robot</a> objects from pypot make their best to allow you to easily discover and program
 you robot.</p>
-<div class="section" id="where-do-i-put-my-code">
-<span id="where-do-i-put-my-code"></span><h2>Where do I put my code?<a class="headerlink" href="#where-do-i-put-my-code" title="Permalink to this headline">¶</a></h2>
-<p>If you are using a simulator, program directly in your computer, in a
-Python console (enter <code class="docutils literal"><span class="pre">python</span></code> in your terminal) or in any editor you
-like (Python IDLE...). Then launch it with the run button or use the
-command line <code class="docutils literal"><span class="pre">python</span> <span class="pre">myprogram.py</span></code>.</p>
-<p>Otherwise, launch the IPython notebook server (via the webapp TODO or
-with this command in SSH
-<code class="docutils literal"><span class="pre">ipython</span> <span class="pre">notebook</span> <span class="pre">--ip</span> <span class="pre">0.0.0.0</span> <span class="pre">--no-mathjax</span> <span class="pre">--no-browser</span></code>) then connect
-with your browser to <a class="reference external" href="http://poppy.local:8888">poppy.local:8888</a> TODO
-ipython screenshot Create a new notebook and put your code into it.</p>
-<p>Last solution, SSH into your robot (using Putty or
-<code class="docutils literal"><span class="pre">ssh</span> <span class="pre">poppy&#64;poppy.local</span></code>) and open an editor (<code class="docutils literal"><span class="pre">vim</span></code> by default on the
-Odroid) to put your code directly in the robot. Note that if you want to
-use a more advanced editor, you can use the -X option while connecting
-in SSH to get XWindows back on your desktop computer.</p>
+<div class="section" id="where-do-i-put-my-code-in-jupyter">
+<span id="where-do-i-put-my-code-in-jupyter"></span><h2>Where do I put my code? In Jupyter...<a class="headerlink" href="#where-do-i-put-my-code-in-jupyter" title="Permalink to this headline">¶</a></h2>
+<p><img alt="image" src="../../_images/ip_logo.png" /></p>
+<p>** Jupyter, iPython - Notebook ** is an interactive computational environment, in which you can combine code execution, rich text, mathematics, plots and rich media. Jupyter is open source, interactive data science and scientific computing across over 40 programming languages.</p>
+<p>A notebook is very simple to use, especially to create a tutorial for any project or for teaching.</p>
+<p>After you have launched Jupyter, a page opens in your web browser.
+In the first tab of this page you will find the folders and files available. In the second tab displays the running files.</p>
+<p>Top right an icon &#8220;new&#8221; you can create a notebook.</p>
+<p>The notebook is constituted block can contain text, images or code. The block can be run independent way. Once a code block execute, variables and functions it contains are valid for any other code block in the notebook.</p>
+<p>View an exemple:</p>
+<p><img alt="image" src="../../_images/exemple_notebook.PNG" /></p>
+<p>For more information to manipulate a notebook go to the official website <a class="reference external" href="https://jupyter.org/index.html">Jupyter.org</a> and <a class="reference external" href="http://ipython.org/notebook.html">ipython.org</a></p>
+<p>You can find many notebook about Poppy in Github of poppy-project in the repositories <a class="reference external" href="https://github.com/poppy-project/community-notebooks">community-notebooks</a></p>
 </div>
-<div class="section" id="create-the-robot-object">
-<span id="create-the-robot-object"></span><h2>Create the robot object<a class="headerlink" href="#create-the-robot-object" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-to-create-and-manipulate-the-robot-object">
+<span id="how-to-create-and-manipulate-the-robot-object"></span><h2>How to create and manipulate the robot object<a class="headerlink" href="#how-to-create-and-manipulate-the-robot-object" title="Permalink to this headline">¶</a></h2>
 <p>The first (and more difficult!) step is to create this robot object.</p>
 <p>If you have a physical Poppy Humanoid, Poppy Torso or Poppy Ergo Jr, you
 can directly use the corresponding libraries and create your robot with
@@ -215,7 +212,7 @@ can directly use the corresponding libraries and create your robot with
 <span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyErgoJr</span><span class="p">()</span>
 </pre>
 <p>Otherwise, if you use a custom robot defined in a configuration file,
-use (see <a class="reference external" href="../pypot/doc/quickstart-configfile.html">here</a>):</p>
+use (see <a class="reference external" href="../../pypot/doc/quickstart-configfile.md">here</a>):</p>
 <pre class="code highlight python literal-block">
 <span class="kn">import</span> <span class="nn">pypot.robot</span>
 <span class="n">poppy</span> <span class="o">=</span> <span class="n">pypot</span><span class="o">.</span><span class="n">robot</span><span class="o">.</span><span class="n">from_json</span><span class="p">(</span><span class="s">'my_config.json'</span><span class="p">)</span>
@@ -307,7 +304,23 @@ therefore move toward it:</p>
 
 <span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.</span>
 </pre>
-<p>See the <a class="reference external" href="../pypot/doc/motor.html">motors documentation</a> for more advanced control.</p>
+<p>You can also change the speed of the motors to run the movement:</p>
+<pre class="code highlight python literal-block">
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">moving_speed</span> <span class="o">=</span> <span class="mf">150.</span>
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="mf">10.</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c"># wait 2 seconds</span>
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">moving_speed</span> <span class="o">=</span> <span class="mf">50.</span>
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goal_position</span> <span class="o">=</span> <span class="o">-</span><span class="mf">10.</span>
+</pre>
+<p>It is also possible to specify the time (in second) to perform the movement and specify whether to wait until reaches the position to move to the next line. GoTo function takes 3 paramettres, angle, time, and wait:</p>
+<pre class="code highlight python literal-block">
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goto_position</span><span class="p">(</span><span class="mf">10.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">poppy</span><span class="o">.</span><span class="n">head_y</span><span class="o">.</span><span class="n">goto_position</span><span class="p">(</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span><span class="mf">2.</span><span class="p">,</span><span class="n">wait</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre>
+<p>See the <a class="reference external" href="../../pypot/doc/motor.md">motors documentation</a> for more advanced control.</p>
 </div>
 <div class="section" id="sensors">
 <span id="sensors"></span><h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
@@ -350,7 +363,7 @@ therefore move toward it:</p>
 <div class="section" id="go-further">
 <span id="go-further"></span><h2>Go further<a class="headerlink" href="#go-further" title="Permalink to this headline">¶</a></h2>
 <p>Next step is to use primitives, which is decribed in
-<a class="reference external" href="../pypot/quickstart-primitive.html">this tuto</a>.</p>
+<a class="reference external" href="../../pypot/doc/primitive.md">this tuto</a>.</p>
 </div>
 </div>
 

@@ -1,29 +1,34 @@
 
-## Avec Python
+## With Python
 
 The Poppy robots and in particular the [pypot.robot.Robot](../pypot/doc/pypot.robot.html#pypot.robot.robot.Robot) objects from pypot make their best to allow you to easily discover and program
 you robot.
 
-### Where do I put my code?
+### Where do I put my code? In Jupyter...
 
-If you are using a simulator, program directly in your computer, in a
-Python console (enter `python` in your terminal) or in any editor you
-like (Python IDLE...). Then launch it with the run button or use the
-command line `python myprogram.py`.
+![image](images/ip_logo.png) 
 
-Otherwise, launch the IPython notebook server (via the webapp TODO or
-with this command in SSH
-`ipython notebook --ip 0.0.0.0 --no-mathjax --no-browser`) then connect
-with your browser to [poppy.local:8888](http://poppy.local:8888) TODO
-ipython screenshot Create a new notebook and put your code into it.
+** Jupyter, iPython - Notebook ** is an interactive computational environment, in which you can combine code execution, rich text, mathematics, plots and rich media. Jupyter is open source, interactive data science and scientific computing across over 40 programming languages.
 
-Last solution, SSH into your robot (using Putty or
-`ssh poppy@poppy.local`) and open an editor (`vim` by default on the
-Odroid) to put your code directly in the robot. Note that if you want to
-use a more advanced editor, you can use the -X option while connecting
-in SSH to get XWindows back on your desktop computer.
+A notebook is very simple to use, especially to create a tutorial for any project or for teaching.
 
-### Create the robot object
+After you have launched Jupyter, a page opens in your web browser.
+In the first tab of this page you will find the folders and files available. In the second tab displays the running files.
+
+Top right an icon "new" you can create a notebook.
+
+The notebook is constituted block can contain text, images or code. The block can be run independent way. Once a code block execute, variables and functions it contains are valid for any other code block in the notebook.
+
+View an exemple:
+
+![image](images/exemple_notebook.PNG)
+
+
+For more information to manipulate a notebook go to the official website [Jupyter.org](https://jupyter.org/index.html) and [ipython.org](http://ipython.org/notebook.html)
+
+You can find many notebook about Poppy in Github of poppy-project in the repositories [community-notebooks](https://github.com/poppy-project/community-notebooks)
+
+### How to create and manipulate the robot object
 
 The first (and more difficult!) step is to create this robot object.
 
@@ -43,7 +48,7 @@ poppy = PoppyErgoJr()
 ```
 
 Otherwise, if you use a custom robot defined in a configuration file,
-use (see [here](../pypot/doc/quickstart-configfile.html)):
+use (see [here](../../pypot/doc/quickstart-configfile.md)):
 
 ```python
 import pypot.robot
@@ -148,8 +153,25 @@ time.sleep(2) # wait 2 seconds
 
 poppy.head_y.goal_position = -10.
 ```
+You can also change the speed of the motors to run the movement:
 
-See the [motors documentation](../pypot/doc/motor.html) for more advanced control.
+```python
+import time
+
+poppy.head_y.moving_speed = 150.
+poppy.head_y.goal_position = 10.
+
+time.sleep(2) # wait 2 seconds
+poppy.head_y.moving_speed = 50.
+poppy.head_y.goal_position = -10.
+```
+It is also possible to specify the time (in second) to perform the movement and specify whether to wait until reaches the position to move to the next line. GoTo function takes 3 paramettres, angle, time, and wait:
+```python
+poppy.head_y.goto_position(10.,1.,wait=True)
+poppy.head_y.goto_position(-10.,2.,wait=False)
+```
+
+See the [motors documentation](../../pypot/doc/motor.md) for more advanced control.
 
 ### Sensors
 
@@ -196,4 +218,4 @@ More details on the sensors and how you can add extra sensors are given in the [
 ### Go further
 
 Next step is to use primitives, which is decribed in
-[this tuto](../pypot/quickstart-primitive.html).
+[this tuto](../../pypot/doc/primitive.md).
