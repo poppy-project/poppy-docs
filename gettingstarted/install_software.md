@@ -10,7 +10,7 @@ If you want to control a simulated Poppy Creature you will have to install the l
 
 A diagram summarizing these different approaches can be seen below:
 
-![image](https://raw.githubusercontent.com/poppy-project/community-notebooks/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/png/diagramme.png)
+![image](../images/install-diagram-en.png)
 
 *They are also other advanced approaches to directly control the robot from your own computer, but a solid knowledge of the linux and Python environments is required! Those approaches are described at the end of this page and detailed in the chapter [Control your robot using your own computer]().*
 
