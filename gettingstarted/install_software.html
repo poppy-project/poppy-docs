@@ -246,12 +246,14 @@ pip install jupyter
 </div>
 <div class="section" id="control-it-from-your-personal-computer-the-hard-way">
 <span id="control-it-from-your-personal-computer-the-hard-way"></span><h2>Control it from your personal computer - the hard way<a class="headerlink" href="#control-it-from-your-personal-computer-the-hard-way" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>embedded board - computer running linux</li>
-<li>ssh</li>
-<li>usb2dxl driver</li>
-<li>sensors</li>
-</ul>
+<p><strong>Warning: While the rest of this page was meant to be as accessible as possible, this section presents complex techniques reserved to advance users with a strong knowledge of linux and python environments.</strong></p>
+<p><img alt="image" src="../_images/no-place-like-home.jpg" /></p>
+<p>The embedded board on Poppy Creature are simply tiny computer running Linux. They can be directly access via ssh or you can plug a keyboard and a screen and use it as any other computer.</p>
+<p>You can also directly control the robot from your computer. You will need to install the same Python libraries as those needed if you use a simulated robot (pypot, poppy-creature and poppy-ergo-jr for instance).</p>
+<p>The tricky parts concern the communication with motors. We use usb to serial communication, you will need either a USB2Dynamixel or a USB2AX. Depending on your operating system you may need a <a class="reference external" href="http://www.ftdichip.com/Drivers/VCP.htm">FTDI driver</a>. On Linux make sure you have the necessary permissions to access the serial port, see <a class="reference external" href="http://poppy-project.github.io/pypot/installation.html#testing-your-install">here</a> for details.</p>
+<p><em>Warning: note that the ftdi driver on MacOS add a 16ms timeout which will make fast communication with motors impossible. If anyone know how to circumvent this please <a class="reference external" href="https://github.com/poppy-project/pypot/issues">let us know</a>! We recommend using Linux or Windows in the meantime. It also works great inside a VM.</em></p>
+<p>Finally, accessing the sensors (e.g. the raspberry-pi camera) can be problematic from a computer but replacing it by any equivalent (any camera compatible with OpenCV) should do the trick.</p>
+<p>For more details, you can refer to the exact procedure we follow for creating the image used in the embedded board to know all the details. It is described in the <a class="reference external" href="">Setup the internal board</a> section.</p>
 </div>
 </div>
 
