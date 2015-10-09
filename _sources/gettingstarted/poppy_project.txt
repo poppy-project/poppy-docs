@@ -98,7 +98,7 @@ poppy-6dof-right-arm is a Poppy creature based on a right arm of Poppy Humanoid,
 
 The 3D-printed gripper can grab current objects, as shown in the video below:
 
-[![IMAGE ALT TEXT HERE](../images/6dof-arm-video.jpg)](https://www.youtube.com/watch?v=47-JBuZhTWU&feature=youtu.be)
+[![Poppy Right Arm](../images/6dof-arm-video.jpg)](https://www.youtube.com/watch?v=47-JBuZhTWU&feature=youtu.be)
 
 This robot can be controlled with Python using Pypot as any Poppy creature, but also with **Matlab**. There is even a inverse kinematics algorithm allowing you to manipulate the arm in cartesian coordinate.
 
