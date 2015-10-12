@@ -66,6 +66,19 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Connect your robot</a><ul>
+<li><a class="reference internal" href="#simulated-robot">Simulated robot</a></li>
+<li><a class="reference internal" href="#real-robot-no-installation-required">Real robot (no installation required)</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
 
             
               <li><a href="../program_your_robot.html" title="Program your robot using Python, Snap!, etc..." accesskey="P">previous </a></li>
@@ -110,6 +123,15 @@
     <p class="logo"><a href="../../index.html">
       <img class="logo" src="../../_static/poppy_name_h144.png" alt="Logo"/>
     </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Connect your robot</a><ul>
+<li><a class="reference internal" href="#simulated-robot">Simulated robot</a></li>
+<li><a class="reference internal" href="#real-robot-no-installation-required">Real robot (no installation required)</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../program_your_robot.html"
                         title="previous chapter">Program your robot using Python, Snap!, etc...</a></p>
@@ -151,20 +173,40 @@
                   
   <div class="section" id="connect-your-robot">
 <span id="connect-your-robot"></span><h1>Connect your robot<a class="headerlink" href="#connect-your-robot" title="Permalink to this headline">¶</a></h1>
-<p>After install the required softwares (instruction <a class="reference external" href="http://poppy-project.github.io/poppy-docs/gettingstarted/install_software.html">here</a>) you can connect your robot.</p>
+<hr class="docutils" />
+<div class="section" id="simulated-robot">
+<span id="simulated-robot"></span><h2>Simulated robot<a class="headerlink" href="#simulated-robot" title="Permalink to this headline">¶</a></h2>
+<p>After install the required softwares (instruction <a class="reference external" href="http://poppy-project.github.io/poppy-docs/gettingstarted/install_software.html">here</a> for robot ; and <a class="reference external" href="http://poppy-project.github.io/poppy-docs/gettingstarted/visualize_your_robot.html">here</a> for V-rep) you can connect your robot.</p>
+<p>So, all you have to do is open a Python console or start a Python file
+and start it with:</p>
+<pre class="code highlight python literal-block">
+<span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">(</span><span class="n">simulator</span><span class="o">=</span><span class="s">'vrep'</span><span class="p">)</span>
+</pre>
+<p>Or if you want to use Snap  to control Poppy, type:</p>
+<pre class="code highlight python literal-block">
+<span class="kn">from</span> <span class="nn">poppy_humanoid</span> <span class="kn">import</span> <span class="n">PoppyHumanoid</span>
+<span class="n">poppy</span> <span class="o">=</span> <span class="n">PoppyHumanoid</span><span class="p">(</span><span class="n">simulator</span><span class="o">=</span><span class="s">'vrep'</span><span class="p">,</span> <span class="n">use_snap</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre>
+</div>
+<hr class="docutils" />
+<div class="section" id="real-robot-no-installation-required">
+<span id="real-robot-no-installation-required"></span><h2>Real robot (no installation required)<a class="headerlink" href="#real-robot-no-installation-required" title="Permalink to this headline">¶</a></h2>
 <p>You need only a web-browser (like firefox or chrome) and be on the same network.</p>
 <p><em>NB: in the first time a Poppy robot must connect via ethernet cable.</em></p>
-<p><strong>Enter this web url in your browser: poppy.local</strong></p>
-<p>This page opens and you have many option:</p>
+<p><strong>Enter this web url in your browser: <a class="reference external" href="http://poppy.local">http://poppy.local</a></strong></p>
+<p><em>For windows users to use the alias poppy.local you must have installed Bonjour service. Otherwise you need to know the IP address of the robot or install the Bonjour service (<a class="reference external" href="https://support.apple.com/downloads/Bonjour_for_Windows">here</a>)</em></p>
+<p>When you are in poppy.local, this page opens and you have many option:</p>
 <p><img alt="image" src="../../_images/poppy_home1.png" /></p>
 <ul class="simple">
 <li>Configure wifi: connecte wifi and enter the access key</li>
-<li>Change hostname: if you change a hostname, the url to acces in robot change also. <em>Exemple: if you change poppy to my_robot, the url to connect becomes my_robot.local</em></li>
+<li>Change hostname: if you change a hostname, the url to acces in robot change also. <em>Exemple: if you change poppy to my_robot, the url to connect becomes http://my_robot.local</em></li>
 <li>Open Ipython notebook (go <a class="reference external" href="http://poppy-project.github.io/poppy-docs/gettingstarted/quickstarts/python.html">here</a>)</li>
 <li>Open snap (go <a class="reference external" href="http://poppy-project.github.io/poppy-docs/gettingstarted/quickstarts/snap.html">here</a>)</li>
 <li>Open Poppy monitor</li>
 <li>Debug option: display log and remove motor acces</li>
 </ul>
+</div>
 </div>
 
 
