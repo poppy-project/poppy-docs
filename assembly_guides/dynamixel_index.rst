@@ -1,6 +1,7 @@
 
 Working with Dynamixel servomotor
-==========================
+=================================
+
 .. toctree::
     :titlesonly:
     :maxdepth: 2
