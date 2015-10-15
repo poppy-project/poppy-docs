@@ -1,11 +1,12 @@
-# Accessing your robot through the Rest API
+# With other languages and/or connect it to the outside world
 
-As Poppy Creatures are made to be easily integrated into educational, research or artistic projects, it is central that they can be easily connected with the external world. Thus, we desgined a [REST API](http://www.restapitutorial.com) which permits the access of all main features of a Poppy Creature through HTTP requests.
+As Poppy Creatures are made to be easily integrated into educational, research or artistic projects, it is central that they can be easily connected with the external world and used with a large variety of programming languages. Thus, we desgined a [REST API](http://www.restapitutorial.com) which permits the access of all main features of a Poppy Creature through HTTP requests.
 
 Thanks to this REST API it is easy to:
 * control your robot through any connected device (such as a smartphone),
 * build bridges to control a Poppy Creature with any language (bridges already exist for [Matlab](https://github.com/joelortizsosa/Connection-Poppy-Matlab) and [Processing](https://github.com/poppy-project/pypot/tree/master/samples/REST/ruby) thanks to our awesome contributors!),
 * connect multiple Poppy Creatures so they can easily interact.
+
 
 > *Warning:* The REST API is still under active development and should be improved and stabilized soon.
 
@@ -21,4 +22,4 @@ The REST API gives you access to most of the Poppy Creature's sensors and motors
 > *Note:* All answers are returned using JSON format.
 
 This image sumarizes how the REST API works:
-![image](../images/restapi_final.png)
+![image](../../images/restapi_final.png)
