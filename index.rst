@@ -15,8 +15,8 @@ Introducing the Poppy Project and the Poppy Creatures
     :titlesonly:
     :maxdepth: 2
 
-    poppy_project.md
-    contribute.md
+    poppy_project.rst
+    contribute.rst
 
 
 Assembly guides
