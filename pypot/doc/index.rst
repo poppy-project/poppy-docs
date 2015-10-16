@@ -11,9 +11,9 @@ Introduction
     :titlesonly:
     :maxdepth: 2
 
-    about.md
-    installation.md
-    extending.md
+    about.rst
+    installation.rst
+    extending.rst
 
 Quickstarts
 =================================
@@ -22,9 +22,9 @@ Quickstarts
     :titlesonly:
     :maxdepth: 2
 
-    quickstart-lowlevel.md
-    quickstart-configfile.md
-    quickstart-primitive.md  
+    quickstart-lowlevel.rst
+    quickstart-configfile.rst
+    quickstart-primitive.rst  
   
 .. _tutorial:
 
@@ -35,10 +35,10 @@ Pypot in details
     :titlesonly:
     :maxdepth: 2
 
-    dynamixel.md
-    robot.md
-    motor.md
-    primitive.md
+    dynamixel.rst
+    robot.rst
+    motor.rst
+    primitive.rst
     
 Other useful features
 =================================
@@ -47,10 +47,10 @@ Other useful features
     :titlesonly:
     :maxdepth: 2
     
-    vrep.md
-    remote_access.md
-    logging.md
-    herborist.md
+    vrep.rst
+    remote_access.rst
+    logging.rst
+    herborist.rst
 
 
     
