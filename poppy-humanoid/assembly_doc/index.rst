@@ -12,10 +12,10 @@ Assembly guide for a Poppy Humanoid or Poppy Torso robot
     :maxdepth: 2
 
     BOM.md
-    ../../poppy-torso/BOM.md
+    ../../poppy-torso/BOM.rst
     
-    head_assembly.md
-    trunk_assembly.md
-    arms_assembly.md
-    legs_assembly.md
+    head_assembly.rst
+    trunk_assembly.rst
+    arms_assembly.rst
+    legs_assembly.rst
 
