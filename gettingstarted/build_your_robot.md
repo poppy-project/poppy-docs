@@ -65,7 +65,7 @@ Patience and precision are your allies, but in case of error not panic: Poppy is
 
 *Warning 2: adjusts the three dots of the motors with three dots of structural parts.*
 
-![image](../images/three_dots.png)
+![image](../images/three_dots.jpg)
 
 1. Trunk [(Text instruction)](https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/5_DoFs_humanoid_spine.md)  [(Video demonstration)](http://youtu.be/LEHLdoBEr4Q)
   - Double MX28 [Text instruction)](https://github.com/poppy-project/Robotis-library/blob/master/doc/fr/double_MX28_assembly.md) [(Video demonstration)](http://youtu.be/9oNGV9ggHaE)
