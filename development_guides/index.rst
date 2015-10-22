@@ -53,7 +53,7 @@ Setup  the internal board
 -------------------------
 
 .. toctree::
-    poppy-board.rst
+    poppy-board.md
 
 APIs
 ----
