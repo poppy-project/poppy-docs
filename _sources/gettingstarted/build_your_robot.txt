@@ -52,3 +52,48 @@ The cables between motors have two purposes:
 ![image](../poppy-ergo-jr/img/ergo-tool-3.jpg) 
 
 ## Poppy Torso
+
+Building a PoppyTorso is more complex than Poppy ErgorJr but is no more complicated than a Meccano or some Swedish furniture.
+
+Patience and precision are your allies, but in case of error not panic: Poppy is a robot intended to be assembled and disassembled and even modify.
+
+**That building is divided into seven major steps:**
+
+*Warning: put the dot on the horn at the same point than the dot on the servo axis*
+
+![image](../images/zero.JPG)
+
+*Warning 2: adjusts the three dots of the motors with three dots of structural parts.*
+
+![image](../images/three_dots.jpg)
+
+1. Trunk [(Text instruction)](https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/5_DoFs_humanoid_spine.md)  [(Video demonstration)](http://youtu.be/LEHLdoBEr4Q)
+  - Double MX28 [Text instruction)](https://github.com/poppy-project/Robotis-library/blob/master/doc/fr/double_MX28_assembly.md) [(Video demonstration)](http://youtu.be/9oNGV9ggHaE)
+  - Double MX64 (only for Humanoid version) [Text instruction)](https://github.com/poppy-project/Robotis-library/blob/master/doc/fr/double_MX64_assembly.md) [(Video demonstration)](http://youtu.be/83lrhXVNHYE)
+
+2. Chess [(Text instruction)](https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/subassembly/chest_assembly_instructions.md) [(Video demonstration)](http://youtu.be/qwrgV6tKTO8)
+  - Spine [(Text instruction)](https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/subassembly/spine_assembly_instructions.md) [(Video demonstration)](http://youtu.be/LXktU4MTITE)
+
+3. Right Arm [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/right_arm_assembly_instructions.md) [(Video demonstration)](http://youtu.be/Oe5v21sTst8)
+  - Right Forearm [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/right_forearm_assembly_instructions.md) [(Video demonstration)](http://youtu.be/SUlM_mE3plc)
+  - Right upper arm [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/right_upper_arm_assembly.md) [(Video demonstration)](http://youtu.be/cYhGwD6r6NQ)
+  - Right upper-arm/shoulder [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/right_upper_arm_shoulder_assembly.md) [(Video demonstration)](http://youtu.be/BdQcOAwZbMY)
+
+4. Left Arm [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/left_arm_assembly_instructions.md) [(Video demonstration)](http://youtu.be/TZb6_hVlmcA)
+  - Left Forearm [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/left_forearm_assembly_instructions.md) [(Video demonstration)](http://youtu.be/5FsPgEt4cfA)
+  - Left upper arm [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/left_upper_arm_assembly.md) [(Video demonstration)](http://youtu.be/MIjfAXShLJ4)
+  - Left upper-arm/shoulder [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/subassemblies/left_upper_arm_shoulder_assembly.md) [(Video demonstration)](http://youtu.be/qCF_8-M5k1o)
+
+5. Legs (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/legs_assembly_instructions.md)[(Video demonstration)](http://youtu.be/Am1XBYv134Y)
+  - Left leg [(Text instruction)](https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/subassemblies/left_leg_assembly_instructions.md) [(Video demonstration)](http://youtu.be/m6hKNlVGYlU)
+  - Right leg [(Text instruction)](https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/subassemblies/right_leg_assembly_instructions.md) [(Video demonstration)](http://youtu.be/_NwoFPaXKUg),
+  - Pelvis [(Text instruction)](https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/subassemblies/pelvis_assembly_instructions.md) [(Video demonstration)](http://youtu.be/zrZhuS5VkG8)
+
+6. Legs + Trunk (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md#3--legstorso-asembly) [(Video demonstration)](http://youtu.be/5i0xVlrJc-8) 
+
+7. Head [(Text instruction)](https://github.com/poppy-project/poppy-docs/blob/master/poppy-humanoid/assembly_doc/head_assembly.md)
+
+**After completing these steps, you must install the software part**: This tutorial describe how to install a clean poppy embedded linux environment from scratch: [poppy_install]( https://github.com/poppy-project/poppy_install/blob/master/README.md)
+
+**Your robot is built!** you can connect to it via your web browser through [http://poppy.local](http://poppy.local) more information in the chapter [connect_your_robot / real_robot](https://github.com/poppy-project/poppy-docs/blob/master/gettingstarted/quickstarts/connect_your_robot.md).
+
