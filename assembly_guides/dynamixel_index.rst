@@ -6,5 +6,5 @@ Working with Dynamixel servomotor
     :titlesonly:
     :maxdepth: 2
 
-    dynamixel_hardware.rst
-    addressing_dynamixel.rst
+    dynamixel_hardware.md
+    addressing_dynamixel.md

@@ -4,6 +4,6 @@
     :titlesonly:
     :maxdepth: 2
 
-    introduction.rst
+    introduction.md
 
-    motor_list.rst
+    motor_list.md
