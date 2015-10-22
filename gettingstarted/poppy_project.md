@@ -1,7 +1,7 @@
 
 # Introducing the Poppy project
 
-![image](../images/poppy_name_h144.png)
+![image](../images/poppy_name.pdf)
 
 [Poppy](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists, that all share a vision: robots are powerful tools to learn and be creative.
 
