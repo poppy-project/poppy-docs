@@ -160,7 +160,10 @@
 </ul>
 <blockquote>
 <div><em>Warning:</em> The REST API is still under active development and should be improved and stabilized soon.</div></blockquote>
-<p>The REST API gives you access to most of the Poppy Creature&#8217;s sensors and motors registers. You can retrieve and send values to the moros. You can also control primitives (start and stop them for instance). The exhaustive list can be seen <a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/REST-APIs.md">here</a>. A few examples are given in the table below:</p>
+<p>The REST API gives you access to most of the Poppy Creature&#8217;s sensors and motors registers. You can retrieve and send values to the moros. You can also control primitives (start and stop them for instance). The exhaustive list can be seen <a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/REST-APIs.md">here</a>.</p>
+<p>To use the REST API, run it via the homepage Poppy: <a class="reference external" href="http://poppy.local">http://poppy.local</a> by launching &#8220;poppy-monitor.&#8221; Then send your HTTP request preceded by poppy.local:8080,
+exemple: http://poppy.local:8080/motor/list.json</p>
+<p>A few requests are given in the table below: (all is <a class="reference external" href="https://github.com/poppy-project/pypot/blob/master/REST-APIs.md">here</a>)</p>
 <p>| Functionality                                 | URL                                     |
 |&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;|&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;|
 | Get motors list.                              | GET /motor/list.json                    |
