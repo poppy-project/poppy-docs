@@ -34,7 +34,7 @@ contribution. It is an important part of the project, so don't hesitate
 to ask, answer and contribute to it!
 
 You can for example create a new Poppy creature,
- [extend Pypot](pypot/doc/extending.html), create tutorials and practicals.
+ [extend Pypot](http://poppy-project.github.io/poppy-docs/pypot/doc/extending.html), create tutorials and practicals.
 
 ## Call for contributions
 
@@ -82,7 +82,7 @@ If you want to modify one or our repositories, create a Github account
 (it's free of course) and
 [fork](https://help.github.com/articles/fork-a-repo/) the corresponding
 repo. When your modifications are done and tested, do a [pull
-request](https://help.github.com/articles/fork-a-repo/) with a meaningful
+request](https://help.github.com/articles/using-pull-requests/) with a meaningful
 name and comments if needed. The Poppy team will look at it as soon as
 possible and merge it if possible.
 
