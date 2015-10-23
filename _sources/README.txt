@@ -1,8 +1,29 @@
-* [html](http://poppy-project.github.io/poppy-docs/)  
-* [pdf](http://poppy-project.github.io/poppy-docs/Poppyprojectdocumentation.pdf)
-* [![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs)
+# Work In Progress ! Do not rely on this doc !
+
+[![image](images/cover.png)](http://poppy-project.github.io/poppy-docs/)
+###It brings together all the hardware and software documentation for Poppy-creature: Humanoid, Torso, ErgoJr... <br/> It also includes the documentation of PyPot library!
+
+This documentation is available in HTML and PDF:
+* Go to the **HTML version**: [Click here](http://poppy-project.github.io/poppy-docs/)
+* Go to the **PDF version**: [Click here](http://poppy-project.github.io/poppy-docs/Poppyprojectdocumentation.pdf)
+
+You can find or share many examples of use Poppy-creature in this repository: 
+* [poppy-project/ community-notebooks](https://github.com/poppy-project/community-notebooks)
+
+**You need help**, or you just want to speak your project, go to the [Poppy-forum](https://forum.poppy-project.org/)
+
+You want to know more about Poppy. Here are some helpful links:
+* [poppy-project website](https://www.poppy-project.org/)
+* [poppy-forum](https://forum.poppy-project.org/)
+* [you-tube poppy](https://www.youtube.com/channel/UC3iVGSr-vMgnFlIfPBH2p7Q/playlists)
+* [poppy pics (flickr)](https://www.flickr.com/photos/poppy-project/)
+* [twitter #poppy_project](https://twitter.com/poppy_project)
 
 # Work In Progress ! Do not rely on this doc !
+
+* [html](http://poppy-project.github.io/poppy-docs/)
+* [pdf](http://poppy-project.github.io/poppy-docs/Poppyprojectdocumentation.pdf)
+* [![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs)
 
 #Poppy docs 
 
