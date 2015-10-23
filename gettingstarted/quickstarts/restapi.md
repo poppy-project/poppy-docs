@@ -10,8 +10,12 @@ Thanks to this REST API it is easy to:
 
 > *Warning:* The REST API is still under active development and should be improved and stabilized soon.
 
-The REST API gives you access to most of the Poppy Creature's sensors and motors registers. You can retrieve and send values to the moros. You can also control primitives (start and stop them for instance). The exhaustive list can be seen [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md). A few examples are given in the table below:
+The REST API gives you access to most of the Poppy Creature's sensors and motors registers. You can retrieve and send values to the moros. You can also control primitives (start and stop them for instance). The exhaustive list can be seen [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md).
 
+To use the REST API, run it via the homepage Poppy: [http://poppy.local](http://poppy.local) by launching "poppy-monitor." Then send your HTTP request preceded by poppy.local:8080,
+exemple: http://poppy.local:8080/motor/list.json
+
+A few requests are given in the table below: (all is [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md))
 
 | Functionality                                 | URL                                     |
 |-----------------------------------------------|-----------------------------------------|
