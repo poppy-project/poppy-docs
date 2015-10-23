@@ -1,12 +1,12 @@
 # Install the required softwares
 
-Once you have built your Poppy Creature or if you just want to try a simulated one, the next step is to start playing with it! Poppy Creatures can be controlled using the [Python](https://www.python.org) programming language and via [Snap!](http://snap.berkeley.edu) a variant of the well-known visual programming language [Scratch](https://scratch.mit.edu) (or with other languages via the REST API, see [this section](program_your_robot.html) for details).
+Once you have built your Poppy Creature or if you just want to try a simulated one, the next step is to start playing with it! Poppy Creatures can be controlled using the [Python](https://www.python.org) programming language and via [Snap!](http://snap.berkeley.edu) a variant of the well-known visual programming language [Scratch](https://scratch.mit.edu) (or with other languages via the REST API, see [this section](http://poppy-project.github.io/poppy-docs/gettingstarted/quickstarts/restapi.html) for details).
 
 Depending on what exactly you want to do - e.g. use Snap! to make your real robot moves or program in Python to interact with a simulated robot, different procedures must be followed.
 
-Poppy Creature comes with an embedded board, all the needed softwares is already installed on their internal computer. They also comes with a webserver which allows you to directly program them - both in Python and Snap! - without needing to install anything. This method is described in the [Control the robot from your web browser]() section. This is by far the easiest way but of course this is **only possible with a real robot and not in simulation**.
+Poppy Creature comes with an embedded board, all the needed softwares is already installed on their internal computer. They also comes with a webserver which allows you to directly program them - both in Python and Snap! - without needing to install anything. This method is described in the [Control the robot from your web browser](http://poppy-project.github.io/poppy-docs/gettingstarted/quickstarts/connect_your_robot.html) section. This is by far the easiest way but of course this is **only possible with a real robot and not in simulation**.
 
-If you want to control a simulated Poppy Creature you will have to install the libraries on your own computer. The main Poppy libraries are written in Python and can thus be easily installed on any computer under Windows, Mac or Linux. The section [Using a simulated robot]() describes those steps.
+If you want to control a simulated Poppy Creature you will have to install the libraries on your own computer. The main Poppy libraries are written in Python and can thus be easily installed on any computer under Windows, Mac or Linux. The section [Using a simulated robot](http://poppy-project.github.io/poppy-docs/gettingstarted/visualize_your_robot.html) describes those steps.
 
 A diagram summarizing these different approaches can be seen below:
 
@@ -22,7 +22,7 @@ To control your robot - either in Python or Snap! - from your computer a few ste
 
 * First, you need to make sure both your robot and your computer are on the same local network, e.g. on the same wifi or even better on the same ethernet network.
 
-* Then, you need to either know the [IP address](https://en.wikipedia.org/wiki/IP_address) of your robot or use the [Bonjour]() services to automatically discover it - this service is already installed on most MacOS and Linux but must be [installed](https://support.apple.com/downloads/Bonjour_for_Windows) on Windows.
+* Then, you need to either know the [IP address](https://en.wikipedia.org/wiki/IP_address) of your robot or use the [Bonjour](https://www.apple.com/fr/support/bonjour/) services to automatically discover it - this service is already installed on most MacOS and Linux but must be [installed](https://support.apple.com/downloads/Bonjour_for_Windows) on Windows.
 
 * Finally, connect to [http://poppy.local](http://poppy.local) (replace *poppy.local* by the *IP address* if you do not use Bonjour) and you should see something similar to this:
 
@@ -87,4 +87,4 @@ The tricky parts concern the communication with motors. We use usb to serial com
 
 Finally, accessing the sensors (e.g. the raspberry-pi camera) can be problematic from a computer but replacing it by any equivalent (any camera compatible with OpenCV) should do the trick.
 
-For more details, you can refer to the exact procedure we follow for creating the image used in the embedded board to know all the details. It is described in the [Setup the internal board]() section.
+For more details, you can refer to the exact procedure we follow for creating the image used in the embedded board to know all the details. It is described in the [Setup the internal board](http://poppy-project.github.io/poppy-docs/development_guides/index.html#setup-the-internal-board) section.
