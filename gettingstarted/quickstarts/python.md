@@ -48,7 +48,7 @@ poppy = PoppyErgoJr()
 ```
 
 Otherwise, if you use a custom robot defined in a configuration file,
-use (see [here](../../pypot/doc/quickstart-configfile.md)):
+use (see [here](https://github.com/poppy-project/poppy-docs/blob/master/pypot/doc/quickstart-configfile.md)):
 
 ```python
 import pypot.robot
@@ -171,7 +171,7 @@ poppy.head_y.goto_position(10.,1.,wait=True)
 poppy.head_y.goto_position(-10.,2.,wait=False)
 ```
 
-See the [motors documentation](../../pypot/doc/motor.md) for more advanced control.
+See the [motors documentation](https://github.com/poppy-project/poppy-docs/blob/master/pypot/doc/motor.md) for more advanced control.
 
 ### Sensors
 
@@ -218,4 +218,4 @@ More details on the sensors and how you can add extra sensors are given in the [
 ### Go further
 
 Next step is to use primitives, which is decribed in
-[this tuto](../../pypot/doc/primitive.md).
+[this tuto](https://github.com/poppy-project/poppy-docs/blob/master/pypot/doc/primitive.md).
