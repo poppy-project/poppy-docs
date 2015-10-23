@@ -1,7 +1,7 @@
 
 # Introducing the Poppy project
 
-![image](../images/poppy_name.pdf)
+![image](../images/poppy_name_h144.png)
 
 [Poppy](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists, that all share a vision: robots are powerful tools to learn and be creative.
 
@@ -38,7 +38,7 @@ They can be used as it is, or hacked to explore the shape of novel legs, arms, h
 
 
 You can get a full Poppy Creature robot from one of Poppy's official resellers:
--   [Génération Robots](http://www.generationrobots.com/en/402077-poppy-humanoid-kit-with-3d-printed-parts.html/), or you can get all the parts yourself.
+-   [Génération Robots](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform), or you can get all the parts yourself.
 
 ## The 3 main Poppy Creatures:
 
@@ -47,10 +47,10 @@ You can get a full Poppy Creature robot from one of Poppy's official resellers:
 It's a 25-degree of freedom humanoid robot with a fully actuated torso. Used for education, research (walk, human-robot interactions) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.
 
 
-You can get all the parts yourself following the [Bill of Material](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md/). The 3D models for the parts can be found [here](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/).
+You can get all the parts yourself following the [Bill of Material](http://poppy-project.github.io/poppy-docs/poppy-humanoid/assembly_doc/BOM.html). The 3D models for the parts can be found [here](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/).
 
 After [assembling your robot](../poppy-humanoid/assembly_doc/index.html), try the
-[discover quickstart](quickstarts/discover.html), then have a look at the
+[Getting Started](http://poppy-project.github.io/poppy-docs/gettingstarted/index.html), then have a look at the
 [poppy\_humanoid library](../poppy-humanoid/doc/index.html).
 
 ![image](../images/poppy-le-robot-de-face.jpg)
@@ -60,12 +60,12 @@ It's an upper part of Poppy Humanoid (13 degrees of freedom).
 Poppy Torso is more affordable than the full kit (Poppy Humanoid), which makes it especially suitable for uses in an educational, associative and makers context. Poppy Torso is an ideal medium to learn science, technology, engineering and mathematics (STEM).
 
 
-You can get all the parts yourself following the [Bill of Material](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md/).
+You can get all the parts yourself following the [Bill of Material](http://poppy-project.github.io/poppy-docs/poppy-torso/BOM.html).
 The 3D models for the parts can be found [here](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/)
 (they are the same as Poppy Humanoid, simply remove the legs and add the [support](https://github.com/poppy-project/robot-support-toolbox/)).
 
 After [assembling your robot](../poppy-humanoid/assembly_doc/index.html), try the
-[discover quickstart](quickstarts/discover.html), then have a look at the
+[Getting Started](http://poppy-project.github.io/poppy-docs/gettingstarted/index.html), then have a look at the
 [poppy\_torso library](../poppy-torso/doc/index.html).
 
 ![image](../images/robot-poppy-torso.jpg)
@@ -81,11 +81,11 @@ The list of parts to print is
 [here](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/parts/BOM.md/)
 and the 3D files
 [there](https://github.com/poppy-project/poppy-ergo-jr/releases/). You need 6 Dynamixel XL-320 (for example from
-[here](http://www.generationrobots.com/en/401692-dynamixel-xl-320-servo-motor.html/)), a USB2AX to connect them to a computer and a small adaptation
+[here](http://www.generationrobots.com/en/401692-dynamixel-xl-320-servo-motor.html)), a USB2AX to connect them to a computer and a small adaptation
 [board](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/electronic.md).
 
 After [assembling your robot](../poppy-ergo-jr/assembly_doc/index.html), try the
-[discover quickstart](quickstarts/discover.html), then have a look at the
+[Getting Started](http://poppy-project.github.io/poppy-docs/gettingstarted/index.html), then have a look at the
 [poppy\_ergo\_jr library](../poppy-ergo-jr/doc/index.html).
 
 ![image](../images/poppy-ergo-jr.jpg)
