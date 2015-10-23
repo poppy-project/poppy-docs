@@ -6,7 +6,7 @@ V-rep is a physical simulator that allows you to simulate robots in an
 enviroment with gravity, contacts and friction.
 
 It is compatible with Windows, Mac and linux and can be installed from
-[here](http:/www.coppeliarobotics.com/downloads.html/).
+[here](http:/www.coppeliarobotics.com).
 
 It is free to use if you are from the education world and you can get a
 limited version otherwise.
@@ -17,7 +17,7 @@ computation, so try to run it on a not-too-old computer.
 ## Start a simulation with Poppy Humanoid
 
 Once you have V-rep and poppy-humanoid installed on your computer (see
-[here](../poppy-humanoid/assembly_doc/en/head_assembly.html) for
+[here](http://poppy-project.github.io/poppy-docs/gettingstarted/install_software.html) for
 installing poppy-humanoid and therefore pypot on your desktop computer),
 you need to follow these two steps:
 
@@ -74,7 +74,7 @@ For example, you can test it with:
     print poppy.head_z.present_position
 
 If the simulated Poppy Humanoid turns its head, well done, it works! Now
-you can follow [this tutorial](discover.html) to learn how to
+you can follow [this tutorial](http://poppy-project.github.io/poppy-docs/gettingstarted/program_your_robot.html) to learn how to
 control it!
 
 You may want at some point to go back to the initial state of the
@@ -84,7 +84,7 @@ simulation. Here is the command:
 
 ## Troubleshooting and advanced usage
 
-See [here](../pypot/doc/vrep.html) for a view on lower-level link between your
+See [here](http://poppy-project.github.io/poppy-docs/pypot/doc/vrep.html) for a view on lower-level link between your
 robot and V-rep.
 
 TODO
