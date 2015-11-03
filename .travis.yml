@@ -23,6 +23,7 @@ addons:
       - texlive
       - texlive-latex-extra
       - dvipng
+      - lmodern
 
 before_install:
   - . ./ci/before_install.sh
