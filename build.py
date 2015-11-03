@@ -10,7 +10,7 @@ app = Application()
 
 
 builder = 'pandoc'
-sources = glob('*/*.md')
+sources = sorted(glob('*/*.md'))
 common_options = ['--standalone',
                   '-f', 'markdown_github+pandoc_title_block',
                   '--toc', '--chapters', '--number-sections']
