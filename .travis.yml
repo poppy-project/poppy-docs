@@ -5,9 +5,9 @@ python:
 env:
   global:
     # - USE_SSH_FORWARDING=true
-    - GH_USERNAME=poppy-project
+    - GH_USERNAME=pierre-rouanet
     - GH_REPO=poppy-docs
-    # Git and Github credentials for pushing documentation 
+    # Git and Github credentials for pushing documentation
     - GIT_EMAIL=poppy-bot-ci@inria.fr
     - GIT_NAME=poppy-bot
     # GH_TOKEN encrypted below > travis encrypt GH_TOKEN=XXXXXX --add
@@ -18,12 +18,11 @@ addons:
   apt:
     packages:
       # For building the pdf documentation
-      - texlive 
+      - texlive
       - texlive-latex-extra
       - dvipng
+      - pandoc
 
-before_install:
-  - . ./ci/before_install.sh
 
 script:
   - . ./ci/update_documentation.sh
@@ -31,8 +30,7 @@ script:
 
 
 notifications:
-  email: 
+  email:
     - poppy-bot-ci@inria.fr
   on_failure: change
   on_success: change
-
