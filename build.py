@@ -22,7 +22,7 @@ def build(format, extra_options):
     print('Generating {}...'.format(format))
 
     p1 = Popen(['cat'] + sources, stdout=PIPE)
-    p2 = Popen(['./path-corrector.py'], stdin=p1.stdout, stdout=PIPE)
+    p2 = Popen(['python', 'path-corrector.py'], stdin=p1.stdout, stdout=PIPE)
     p3 = Popen([builder] + common_options + extra_options, stdin=p2.stdout, stdout=PIPE)
 
     return p3.communicate()[0]
