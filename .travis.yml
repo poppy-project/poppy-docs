@@ -2,6 +2,8 @@ language: python
 python:
   - 2.7
 
+sudo: required
+
 env:
   global:
     # - USE_SSH_FORWARDING=true
@@ -21,8 +23,9 @@ addons:
       - texlive
       - texlive-latex-extra
       - dvipng
-      - pandoc
 
+before_install:
+  - . ./ci/before_install.sh
 
 script:
   - . ./ci/update_documentation.sh
