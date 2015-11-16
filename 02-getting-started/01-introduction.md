@@ -44,7 +44,7 @@ The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. 
 
 ![Poppy Ergo Jr](../img/ergo-jr/vecto.png)
 
-The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20$ each. Unlike others Poppy creatures, the electronic card is easily accessible to make it easy to connect extra sensors and for pedagogical purposes.
+The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20€ each. Unlike others Poppy creatures, the electronic card is easily accessible to make it easy to connect extra sensors and for pedagogical purposes.
 
 <!-- TODO: ajouter une photo des différents outils -->
 
