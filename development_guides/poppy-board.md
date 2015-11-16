@@ -74,8 +74,8 @@ conda config --set show_channel_urls True
 * Set Poppy Environment as default
 
 ```bash
-echo "
-export PATH=\$HOME/miniconda/envs/poppy/bin:\$PATH" >> ~/.bashrc
+echo "source ~/miniconda/bin/activate poppy" >> ~/.bashrc
+echo "export PATH=\$HOME/miniconda/envs/poppy/bin:\$PATH" >> ~/.bashrc
 ```
 
 ## Install the main scientific python packages (~5min)
