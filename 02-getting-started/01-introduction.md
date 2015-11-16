@@ -73,7 +73,6 @@ You can get all the parts yourself following the [bill of materials](http://popp
 It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is more affordable than the full kit (Poppy Humanoid), which makes it more suitable for uses in an educational, associative and makers context. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
 
 You can get all the parts yourself following the [bill of material](http://poppy-project.github.io/poppy-docs/poppy-torso/BOM.html). The 3D models for the parts can be found [in the github](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/). They are the same as Poppy Humanoid, simply without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/)).
->>>>>>> master
 
 ![Poppy Torso Vecto](../img/torso/vecto.png)
 
@@ -91,29 +90,3 @@ Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with
 The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa. Find more info and the sources in [the dedicated github repository](https://github.com/poppy-project/poppy-6dof-right-arm).
 
 <!-- #### Heol and Poppyrate -->
-<!--
-### Simulated Poppy Creatures
-
-All three main Poppy robots (Humanoid, Torso, and Ergo Jr) are also available in the [V-REP simulator](http://www.coppeliarobotics.com). This can be particularly useful if one is interested in discovering the programming possibilities before having a real robot or to design complex and time consuming experiments.
-
-
-We try to make the switch from a simulated poppy robot to the real one as transparent as possible and most of the documentation is valid for both simulated and real robots. A dedicated chapter *[Use a simulated robot](#todo)* will describe in details how you can use a simulated poppy robot.
-
-<<<<<<< HEAD
-Yet, some differences are inevitables. In particular:
-
-* the [Build the robot](#build-the-robot) section can be skipped as it details the robot assembly. It is still worth reading if you are planning to have a real robot in the future.
-* in the [Connect to the robot](#connect-to-the-robot) section, you will have to follow the advanced approach and install the required software on your computer.
-
-After that, the way you control the robot will not differ from a simulated to a real robot, it is easy to switch from one to the other (in a classroom context for instance).
-You can refer to the [Visualize the robot in a simulator](#visualize-the-robot-in-a-simulator) section for more informations.
-=======
-**Warning: One important difference still remains! While the physical robots already come with all softwares required pre-installed and you can thus start programming the robot by accessing its internal web interface, when using the robot in simulation you will have to manually installed the required libraries on your local computer.**
-
-The rest of this chapter has been written for users who use a real robot as this is the simpler case and thus everything described below may not apply to simulated robot. In particular,
-
-* the [Build the robot](#build-the-robot) section can be skipped as it presents the robot physical assembly.
-* the [Start and connect](#connect-to-the-robot) section describe how to access the web interface hosted by the robot and can not thus be applied when using a simulated robot.
-
-[Programming the robot](#program-the-robot) still applies to simulated robot as the same language and API are available. The way you control the robot will not differ from a simulated to a real robot, so it is easy to switch from one to the other (in a classroom context for instance). -->
->>>>>>> master
