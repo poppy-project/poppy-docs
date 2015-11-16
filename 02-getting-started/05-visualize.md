@@ -1,12 +1,22 @@
 ## Visualize the robot in a simulator
 
-A simulated version of all Poppy robots is also available. It was designed so you can switch from a simulated to a real robot in a very transparent and easy manner.
+### Simulated Poppy Creatures
 
-This allows the development and test of programs without having a real robot. This is particularly useful in a context where multiple groups share a robot: for instance in a classroom where each group can work using the simulator and validate their program on the real robot. This is also a good way to discover the project and start playing with robots without having to spend any money.
+A simulated version of all Poppy robots (Humanoid, Torso, and Ergo Jr) is also available.
 
-**Note: If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.** Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulator. More detailed of what you will have to do is given in the section below.
+This allows the development and test of programs without having a real robot. This is particularly useful:
+* To discover and try the robot possibilities without having to spend money.
+* In a context where multiple groups share a robot: for instance in a classroom where each group can work using the simulator and validate their program on the real robot. This is also a good way to discover the project and start playing with robots without having to spend any money.
+* To design and complex and time consuming experiments.
 
-At the moment, only one simulator can be used. In further versions, we will also develop a web visualization hopefully simpler and lighter than the existing solutions.
+We try to make the switch from a simulated poppy robot to the real one as transparent and as simple as possible. Most of the documentation is actually valid for both simulated and real robots. Yet, a dedicated chapter *[Use a simulated robot](#todo)* will describe in details everything you need to know and do to use a simulated Poppy robot.
+
+**Warning: If you want to use Poppy robots on a simulator, you will have to install the poppy libraries locally on your computer.** Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulator. Moreover, you will not have access to the robot web interface, but you will have to manually launched the different services to start programming your robot (jupyter for Python, or the Snap! server).
+
+**Once your computer is setup, you will be able to write a program for the simulator and directly use it on a real robot (or vice-versa).**
+
+At the moment, only one simulator can be used - V-REP. In further versions, we will also develop a web visualization hopefully simpler and lighter than the existing solutions.
+
 
 ### Using V-REP
 
