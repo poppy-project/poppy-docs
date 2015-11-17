@@ -67,16 +67,16 @@ Then, you need to choose among the two different possibilities:
 
 ### Use the control and monitoring interface
 
-One you managed to have either Zeroconf working or the IP address of you robot, you can directly access its control and monitoring interface. This web interface can be used to:
+One you managed to have either Zeroconf working or the IP address of you robot, you can directly access the control and monitoring interface. This web interface can be used to:
 
-* setup your wifi and change the name of the robot - the one you will use to connect to it,
+* setup your wifi and change the name of the robot - the one you will use to connect,
 * to launch demo primitives,
-* and monitor the state of your robot (if motors are too hot for instance)
+* and monitor the state of your robot (if motors are too hot for instance).
 
-To access this interface, you simply have to go to this url using your favorite web browser:
+To access this interface, you simply have to go to the url using your favorite web browser:
 
 * http://poppy.local (if you changed the name of your robot, simply replace *poppy* by its new name)
-* or using directly its IP, something as http://192.168.0.42
+* or using directly its IP, something similar as http://192.168.0.42
 
 You should see something like:
 
