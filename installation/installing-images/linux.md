@@ -10,7 +10,7 @@
 - Click "ok" and be patient 
 
 ### If you are using Linux Mint
-A programm called "Usb key creator" is already installed and allow you to do the sames operations than above.
+A program called "Usb key creator" is already installed and allow you to do the same operations than above.
 
 
 ## Command line
@@ -48,4 +48,4 @@ Please note that the use of the `dd` tool can overwrite any partition of your ma
 
 ---
 
-*This article uses content from the eLinux wiki page [RPi_Easy_SD_Card_Setup](http://elinux.org/RPi_Easy_SD_Card_Setup), which is shared under the [Creative Commons Attribution-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by-sa/3.0/)*
+*This article uses content from the Raspberry Pi documentation page [linux.md](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md), which is shared under the [Creative Commons Attribution-ShareAlike 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/)*
