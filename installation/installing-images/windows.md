@@ -6,7 +6,7 @@
 - Select the image file you extracted above.
 - Select the drive letter of the SD card in the device box. Be careful to select the correct drive; if you get the wrong one you can destroy your data on the computer's hard disk! If you are using an SD card slot in your computer and can't see the drive in the Win32DiskImager window, try using a cheap SD adaptor in a USB port.
 - Click `Write` and wait for the write to complete.
-- Exit the imager and eject the SD card.
+- Exit the image and eject the SD card.
 
 ---
 
