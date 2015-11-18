@@ -1,6 +1,6 @@
 ## Program the robot
 
-In this section we will present the different options to program your robot ranging from the possibility to trigger high level behaviors using [Snap!](#using-snap), the visual programming language, to the low-level API written in [Python](#using-python).
+In this section we will present the different options to program your robot ranging from the high level behaviours triggered using [Snap!](#using-snap), the visual programming language, to the low-level API written in [Python](#using-python).
 
 We will also say a few words on how you can interface Poppy robots with other devices or any programming language using [Poppy's REST API](#through-the-rest-api).
 
@@ -36,9 +36,11 @@ Most of the tutorials, experiments or pedagogical activities that we and the com
 
 ![Notebook example](../img/notebook-example.png)
 
+An update gallery of notebooks can be found [here](#TODO).
+
 ### Through the REST API
 
-On top of the Snap! and Python options, it was really important to us to provide another way of accessing and controlling your robot accessible from any device or language. Thus, all our Poppy robots are providing a REST API, meaning the most important features of the robot can be access through HTTP request.
+On top of the Snap! and Python options, it was really important for us to provide another way of accessing and controlling your robot accessible from any device or language. Thus, all our Poppy robots are providing a REST API, meaning that the most important features of the robot can be access through HTTP GET/POST requests.
 
 From a more practical point of view, this allows to:
 * **Write bridges to control Poppy robot in any language** (awesome contributors have already written [Matlab](#TODO) and [Ruby](#TODO) wrappers).
