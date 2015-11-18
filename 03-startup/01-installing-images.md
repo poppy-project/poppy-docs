@@ -1,4 +1,5 @@
-# Install a Poppy Operating System Image
+# Setup your Raspberry-Pi
+
 Poppy creatures are controlled by a small computer: a Raspberry Pi or a Odroid for the older versions. You have to install the Operating System on this board before using it.
 
 The Poppy creatures Operating System use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi.
@@ -26,6 +27,3 @@ See our guide for your system:
 - [Windows](windows.md)
 
 ## Put the SD card on the board (Raspberry Pi)
-
-
-

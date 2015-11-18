@@ -1,19 +1,19 @@
-# Installing Poppy Operating System Images from a GNU/Linux computer
+### Installing Poppy Operating System Images from a GNU/Linux computer
 
-## Graphical interface
+#### Graphical interface
 
-### With Any distribution (Ubuntu, Fedora, Arch, Debian, ...)
+##### With Any distribution (Ubuntu, Fedora, Arch, Debian, ...)
 - Download [UNetbootin binaries](https://unetbootin.github.io/linux_download.html)
 - To run these binaries go to Right Click->Properties->Permissions and check "Execute"), or  chmod +x ./unetbootin-linux in a Terminal then start the application by running ./unetbootin-linux
 - Select the Poppy image in the DiskImage section
 - Select the drive corresponding to your SD card
-- Click "ok" and be patient 
+- Click "ok" and be patient
 
-### If you are using Linux Mint
+##### If you are using Linux Mint
 A program called "Usb key creator" is already installed and allow you to do the same operations than above.
 
 
-## Command line
+#### Command line
 Please note that the use of the `dd` tool can overwrite any partition of your machine. If you specify the wrong device in the instructions below you could delete your primary Linux partition. Please be careful.
 
 - Run `df -h` to see what devices are currently mounted.
