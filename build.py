@@ -13,7 +13,7 @@ builder = 'pandoc'
 sources = sorted(glob('*/*.md'))
 common_options = ['--standalone',
                   '-f', 'markdown_github+pandoc_title_block',
-                  '--toc', '--toc-depth', '2', 
+                  '--toc', '--toc-depth', '2',
                   '--chapters', '--number-sections']
 
 filename = 'poppy-docs'
@@ -24,6 +24,10 @@ def build(format, extra_options):
 
     p1 = Popen(['cat'] + sources, stdout=PIPE)
     p2 = Popen(['python', 'path-corrector.py'], stdin=p1.stdout, stdout=PIPE)
+
+    if format == 'pdf':
+        p2 = Popen(['python', 'pdf-adaptator.py'], stdin=p2.stdout, stdout=PIPE)
+
     p3 = Popen([builder] + common_options + extra_options, stdin=p2.stdout, stdout=PIPE)
 
     return p3.communicate()[0]
