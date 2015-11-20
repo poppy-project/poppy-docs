@@ -1,4 +1,4 @@
-# Install Poppy softwares: when using a simulator or for advanced users
+# Manual softwares installation: when using simulator or for advanced users
 
 You may want to install Poppy softwares only if you are in one of these situation:
 1. You want to control a simulated robot
