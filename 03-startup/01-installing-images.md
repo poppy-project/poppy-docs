@@ -1,6 +1,11 @@
-# Install a Poppy Operating System Image
+<<<<<<< HEAD
+# Setup your Raspberry-Pi
 Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or a Odroid for the older versions. 
 The Operating System of this computer is hosted on a SD card. If you have a pre-formatted SD card with the Poppy system (provided by one of the Poppy distributors for example) on it
+=======
+
+Poppy creatures are controlled by a small computer: a Raspberry Pi or a Odroid for the older versions. You have to install the Operating System on this board before using it.
+>>>>>>> 0de3cda4e09dffbe2c2866f9f0c418c5cea739f3
 
 You have to install the Operating System on this board before using it.
 
@@ -29,6 +34,3 @@ See our guide for your system:
 - [Windows](windows.md)
 
 ## Put the SD card on the board (Raspberry Pi)
-
-
-
