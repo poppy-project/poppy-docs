@@ -1,8 +1,8 @@
-# Installing Poppy Operating System Images from a Mac OS computer
+### Installing Poppy Operating System Images from a Mac OS computer
 
 On Mac OS you have the choice of the command line `dd` tool or using the graphical tool ImageWriter to write the image to your SD card.
 
-## (Mostly) graphical interface
+### (Mostly) graphical interface
 
 - Connect the SD card reader with the SD card inside. Note that it must be formatted in FAT32.
 - From the Apple menu, choose About This Mac, then click on More info...; if you are using Mac OS X 10.8.x Mountain Lion or newer then click on System Report.
@@ -17,12 +17,12 @@ On Mac OS you have the choice of the command line `dd` tool or using the graphic
     Remember to replace `n` with the number that you noted before!
 
    - If this command fails, try using `disk` instead of `rdisk`:
-    
+
        ```
        sudo dd bs=1m if=path_of_your_image.iso of=/dev/diskn
        ```
 
-## Command line
+#### Command line
 
 - If you are comfortable with the command line, you can write the image to a SD card without any additional software. Open a terminal, then run:
 
@@ -34,7 +34,7 @@ On Mac OS you have the choice of the command line `dd` tool or using the graphic
     `diskutil unmountDisk /dev/disk<disk# from diskutil>`
 
     e.g. `diskutil unmountDisk /dev/disk4`
-    
+
 - Copy the data to your SD card:
 
     `sudo dd bs=1m if=image.img of=/dev/rdisk<disk# from diskutil>`
@@ -48,9 +48,9 @@ On Mac OS you have the choice of the command line `dd` tool or using the graphic
 
     This will take a few minutes, depending on the image file size.
     You can check the progress by sending a `SIGINFO` signal pressing <kbd>Ctrl</kbd>+<kbd>T</kbd>.
-    
+
     - If this command still fails, try using `disk` instead of `rdisk`:
-    
+
        ```
        e.g. `sudo dd bs=1m if=poppy-ergojr.iso of=/dev/disk4`
        ```
@@ -59,7 +59,7 @@ On Mac OS you have the choice of the command line `dd` tool or using the graphic
        e.g. `sudo dd bs=1M if=poppy-ergojr.iso of=/dev/disk4`
        ```
 
-## Alternative method
+#### Alternative method
 
 **Note: Some users have reported issues with using Mac OS X to create SD cards.**
 

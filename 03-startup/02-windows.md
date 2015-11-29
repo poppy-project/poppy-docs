@@ -1,4 +1,4 @@
-# Installing Poppy Operating System Images from a Windows computer
+### Installing Poppy Operating System Images from a Windows computer
 
 - Insert the SD card into your SD card reader and check which drive letter was assigned. You can easily see the drive letter (for example `G:`) by looking in the left column of Windows Explorer. You can use the SD Card slot (if you have one) or a cheap SD adaptor in a USB port.
 - Download the Win32DiskImager utility from the [Sourceforge Project page](http://sourceforge.net/projects/win32diskimager/) (it is also a zip file); you can run this from a USB drive.
