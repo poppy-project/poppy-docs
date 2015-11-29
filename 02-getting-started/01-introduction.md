@@ -54,7 +54,7 @@ At the end of its arm, you can choose among several tools:
 
 You can change them easily thanks to rivets. depending on the type of activities you are planning.
 
-<!-- TODO: ajouter une photo des différents outils -->
+![Ergo Jr tools](../img/ergo-jr/3D/multitool.gif)
 
 The Ergo Poppy Jr is ideal for start manipulating robots and for learning robotic without difficulties. It is particularly well suited for educational purposes (cheap, simple to assemble, and easily controllable) or can be a very nice desk decoration for geeks and makers...
 
