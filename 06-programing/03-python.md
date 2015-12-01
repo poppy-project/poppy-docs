@@ -26,6 +26,18 @@ We also strongly advise to use the [Anaconda Python distribution](https://www.co
 
 ## Overview of the different libraries
 
+Before jumping into the code, we will briefly introduce the different existing Poppy libraries and how they interact with each other.
+
+They are three main library levels:
+
+* [pypot:](https://github.com/poppy-project/pypot) This is the core of the Poppy software architecture. Pypot handles all the low level communication with the hardware (both sensors and motors), defines synchronization loops so your command are always up to date. It also provides the primitives mechanism which allows the definition of simple behavior that can be - more of less - automatically combined.
+
+* [poppy-creature:](https://github.com/poppy-project/poppy-creature) This library defines the common tools shared by all Poppy robots, for instance how to automatically launch the simulator or start the HTTP API attached to any robot.
+
+* [poppy-ergo-jr](https://github.com/poppy-project/poppy-ergo-jr), [poppy-torso](https://github.com/poppy-project/poppy-torso), and [poppy-humanoid:](https://github.com/poppy-project/poppy-humanoid) Those libraries are specific to their respective Poppy robot. They define the particular configuration of the robot, the sensors it uses, which motors are connected to which buses... This is also were behaviors specific to a creature are defined (the stand primitive for the humanoid for instance).
+
+This is summarized in the diagram below:
+
 ![Poppy softwares architecture](../img/python/architecture.png)
 
 ## Installation
