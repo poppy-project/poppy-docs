@@ -64,7 +64,7 @@ You can get all the parts yourself following the [bill of materials](https://git
 
 It is a 25-degrees of freedom humanoid robot with a fully actuated torso. Used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.
 
-You can get all the parts yourself following the [bill of materials](http://poppy-project.github.io/poppy-docs/poppy-humanoid/assembly_doc/BOM.html)(BOM)and printing the [3D files](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) available as STL, STEP and Solidworks 2014 format.
+You can get all the parts yourself following the [bill of materials](http://poppy-project.github.io/poppy-docs/poppy-humanoid/assembly_doc/BOM.html)(BOM) and printing the [3D files](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) available as STL, STEP and Solidworks 2014 format.
 
 ![Poppy Humanoid Vecto](../img/humanoid/vecto.png)
 
@@ -86,7 +86,23 @@ Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with
 
 <!-- TODO: belle photo de Poppy Right Arm -->
 
-
 The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa. Find more info and the sources in [the dedicated github repository](https://github.com/poppy-project/poppy-6dof-right-arm).
 
-<!-- #### Heol and Poppyrate -->
+#### Small and low-cost humanoid
+
+##### Heol
+
+Heol est un robot humanoïde de 34 cm conçus par l’association [Heol robotics](). Il est composé de 23 moteurs, le reste des pièces étant imprimées en 3D. Il est basé sur la librairie pypot qui lui permet de se mouvoir tel un petit homme. Heol qui signifie soleil en Breton, a pour but de redonner le sourire aux enfants malades, grâce à diverses applications. Il a la capacité d’être un outil pédagogique en devenant un support d’apprentissage pour des matières tel que la programmation, la conception mécanique, etc. La participation à la robocup (coupe du monde de football pour robot) est aussi envisagee.
+
+![Heol](../img/heol.jpg)
+
+ ##### Poppyrate
+
+ Un robot humanoïde open source basé sur Poppy plus abordable grâce à une taille plus petite et à des moteurs moins chers. La réduction de taille a aussi l'avantage de le rendre plus facilement imprimable sur les imprimante 3D grand public. Il a aussi l'objectif d'être le plus nomade possible et d'être personnalisable et extensible tout en restant compatible avec le logiciel de Poppy. A terme Poppyrate sera vendu en kit avec ou sans les pièces imprimés en 3D, pour tous les publics intéressé par la robotique humanoïde. Poppyrate est réalisé par la société ZeCloud.
+
+ ![Poppyrate](../img/poppyrate.jpg)
+
+Poppyrate.com
+Réseaux sociaux :
+Twitter.com/poppyratproject
+facebook.com/poppyrate
