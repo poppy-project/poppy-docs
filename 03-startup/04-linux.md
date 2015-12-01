@@ -12,7 +12,6 @@
 ##### If you are using Linux Mint
 A program called "Usb key creator" is already installed and allow you to do the same operations than above.
 
-
 #### Command line
 Please note that the use of the `dd` tool can overwrite any partition of your machine. If you specify the wrong device in the instructions below you could delete your primary Linux partition. Please be careful.
 
