@@ -42,6 +42,22 @@ This is summarized in the diagram below:
 
 ## Installation
 
+**First, note that if you only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the [web interface](#TODO) and have nothing to install on your machine!**
+
+Yet, if you are planning to either
+
+* use a simulator (e.g. V-REP),
+* or want to directly plug the robot to your computer
+
+you will have to install Poppy libraries locally. They work on Windows, Mac OS, Linux, and have been tested on:
+
+* Python >= 2.6
+* Python >= 3.4
+
+Also note that if you are planning to directly plug your robot to your USB port, specific drivers should be installed.
+
+All steps are detailed in the chapter [Manual installation](#TODO).
+
 ## Jupyter Notebooks gallery
 
 ## Services
