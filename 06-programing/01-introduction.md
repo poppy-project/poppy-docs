@@ -1,1 +1,0 @@
-# Programing Poppy robots
