@@ -52,7 +52,7 @@ On peut donc alors construire l'instruction suivante, qui fera bouger le moteur 
 
 ### Remarques diverses
 
-* Il peut être utile de créer un bloc *map* (une version [ici](/block_map.xml)) équivalent à la fonction éponyme d'Arduino, permettant de mettre à l'échelle automatiquement une valeur dans une plage donnée :
+* Il peut être utile de créer un bloc *map* (une version [ici](https://raw.githubusercontent.com/pierre-rouanet/poppy-docs/master/resources/block_map.xml)) équivalent à la fonction éponyme d'Arduino, permettant de mettre à l'échelle automatiquement une valeur dans une plage donnée :
 
 ![map](../img/activity/snap4arduino/map.png)
 
