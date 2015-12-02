@@ -22,7 +22,9 @@ We suggest you to use Anaconda Python distribution, but if you already have a Py
 Download Anaconda Python distribution (400Mo) [here for 64-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe).
 
 Install it and be sure that the two check-boxes of the PATH and the default Python are checked.
-![](../img/python/anaconda_install_path.png)
+![Anaconda install](../img/python/anaconda_install_path.png)
+
+Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
 
 
 ##### Miniconda (alternative to Anaconda)
@@ -35,7 +37,7 @@ Open the Command Prompt (press the windows key and type "Command Prompt"), type 
 
 `conda install numpy scipy ipython-notebook matplotlib`
 
-Now you have a Python distribution ready to install Poppy softwares. 
+Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
 #### Install Poppy softwares
 Open the terminal prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda), type and press Enter to execute the command below:
 
@@ -100,6 +102,9 @@ You can now install some required and other useful dependencies for Poppy softwa
 You can now [install Poppy softwares](#install-poppy-softwares).
 
 ## Install the robotic simulator V-REP
+### On Windows
+### On 
+### On GNU/Linux
 
 ## Install drivers
 **Note: this chapter is only for people who want to control a tangible robot without an embedded board (Raspberry Pi or Odroid). It is a special case for advanced users**
