@@ -96,11 +96,11 @@ Heol est un robot humanoïde de 34 cm conçus par l’association [Heol robotics
 
 ![Heol](../img/heol.jpg)
 
- ##### Poppyrate
+##### Poppyrate
 
- Un robot humanoïde open source basé sur Poppy plus abordable grâce à une taille plus petite et à des moteurs moins chers. La réduction de taille a aussi l'avantage de le rendre plus facilement imprimable sur les imprimante 3D grand public. Il a aussi l'objectif d'être le plus nomade possible et d'être personnalisable et extensible tout en restant compatible avec le logiciel de Poppy. A terme Poppyrate sera vendu en kit avec ou sans les pièces imprimés en 3D, pour tous les publics intéressé par la robotique humanoïde. Poppyrate est réalisé par la société ZeCloud.
+Un robot humanoïde open source basé sur Poppy plus abordable grâce à une taille plus petite et à des moteurs moins chers. La réduction de taille a aussi l'avantage de le rendre plus facilement imprimable sur les imprimante 3D grand public. Il a aussi l'objectif d'être le plus nomade possible et d'être personnalisable et extensible tout en restant compatible avec le logiciel de Poppy. A terme Poppyrate sera vendu en kit avec ou sans les pièces imprimés en 3D, pour tous les publics intéressé par la robotique humanoïde. Poppyrate est réalisé par la société ZeCloud.
 
- ![Poppyrate](../img/poppyrate.jpg)
+![Poppyrate](../img/poppyrate.jpg)
 
 Poppyrate.com
 Réseaux sociaux :
