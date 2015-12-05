@@ -1,8 +1,8 @@
 # Installation for advanced users
 
-You may want to install Poppy softwares only if you are in one of these situation:
+You may want to install Poppy softwares only if you are in one of these situations:
 1. You want to control a simulated robot
-2. [special case for advanced users] You want to install yourself the operating system of your robot instead of using a [pre-made ISO image](../installing-images/README.md)
+2. [special case for advanced users] You want to install yourself the operating system of your robot instead of using a [pre-made ISO image](../installing-images/README.md).
 3. [special case for advanced users] You want to control a Poppy creature from your computer WITHOUT using the Raspberry Pi board.
 
 **Note: The first situation is a "normal case" but the second and third are special usages affordable only by advanced users who have a good comprehension of the global system.**
@@ -11,7 +11,7 @@ You may want to install Poppy softwares only if you are in one of these situatio
 
 Poppy is run by Python computer code. Depending on your Operating System you will have to install Python and in any case you'll have to install the required software libraries.
 
-Whatever your Operating System if you are getting started with Python and want to install a full Python environment for scientific computing, we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda).
+Whatever your Operating System if you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
 
 ### Install Python and Poppy softwares on Windows
 <!-- TODO ajouter Schéma installation Thibault -->
@@ -39,7 +39,7 @@ Open the Command Prompt (press the windows key and type "Command Prompt"), type 
 
 Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
 #### Install Poppy softwares
-Open the terminal prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda), type and press Enter to execute the command below:
+Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
 
 `pip install poppy-humanoid --user -U`
 
@@ -102,9 +102,41 @@ You can now install some required and other useful dependencies for Poppy softwa
 You can now [install Poppy softwares](#install-poppy-softwares).
 
 ## Install the robotic simulator V-REP
-### On Windows
-### On 
-### On GNU/Linux
+[V-REP](http://www.coppeliarobotics.com/downloads.html) is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free licence for educational entities and have a commercial licence for other purposes. 
+There is also an *PRO EVAL* version which limit the right to backup. As you don't need to backup the scene to use V-REP with Pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.
+If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the [educational licence](http://www.coppeliarobotics.com/licensing-plugin-edu.html)).
+### Install on Windows
+[Download V-REP](http://www.coppeliarobotics.com/downloads.html) PRO EVAL or EDU (if you are an educational entity).
+As V-REP is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation.
+![VREP_smartscreen](../img/vrep/vrep2.png)
+
+**After the installation you can [test if V-REP works well](#test-your-installation)**.
+<!-- TODO
+### Install on MAC OSX 
+### Install on GNU/Linux -->
+
+### Test your installation
+Open V-REP with a double click on the desktop icon.
+Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
+`poppy-services --snap --vrep --no-browser poppy-humanoid`
+After a few seconds, you will have an error like the picture below in your Command prompt.
+![VREP_terminal](../img/vrep/vrep3_1.png)
+If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. **You have to check the check-box "Do not show this message again" and press "Ok".**
+![VREP_checkbox](../img/vrep/vrep3_2.png)
+Switch the the command prompt window. You'll have to type the last command (poppy-services --snap --vrep --no-browser poppy-humanoid) and click to the vrep popup (with the checkbox checked) *three times* to make it works well ! 
+
+**Note: to avoid retyping the same command again and again, you can simply press the up arrow key to call the last typed line**.
+
+Now type the last command without the "--no-browser" part. 
+`poppy-services --snap --vrep poppy-humanoid`
+
+If you see a firewall popup like the picture below, be sure to check the "private network" checkbox.
+![firewall](../img/vrep/vrep4.png)
+
+If everything works, you new tab may be opened on your default web-browser.
+
+
+
 
 ## Install drivers
 **Note: this chapter is only for people who want to control a tangible robot without an embedded board (Raspberry Pi or Odroid). It is a special case for advanced users**
@@ -112,11 +144,11 @@ You can now [install Poppy softwares](#install-poppy-softwares).
 If you intend to control tangible robots from your computer **without** a Raspberry Pi or a Ordoid, and you use a computer with Windows (vs GNU/Linux or MAC OSX), you may need to install manually drivers for the USB2AX or the USB2Dynamixel.
 
 ### If you use a [USB2AX](http://www.xevelabs.com/doku.php?id=product:usb2ax:usb2ax)
-If the USB2AX is not recognized out of the box (its LED become green after having bee plugged) on windows, you probably need to install manually its drivers.
+If the USB2AX is not recognized out of the box (its LED stay red after having been plugged) on your computer, you probably need to install manually its drivers.
 The installation process and the files to download can be found on the [USB2AX documentation](http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart).
-You don't need drivers for GNU/Linux or MAC OSX, but note that it doesn't works well with MAC OSX.
+You don't need drivers for GNU/Linux or MAC OSX, but note that it doesn't works very well with MAC OSX.
 
 ### If you use a [USB2Dynamixel](http://support.robotis.com/en/product/auxdevice/interface/usb2dxl_manual.htm)
 
-You need to install FTDI drivers on your computer. To reduce timeout, you have to low the "Latency Timer Value" from 16ms to 1ms (minumum allowed value) as explained in the [FTDI documentation](http://www.ftdichip.com/Support/Knowledgebase/index.html?settingacustomdefaultlaten.htm)  
+You need to install FTDI drivers on your computer. You have to low the "Latency Timer Value" from 16ms to 1ms (minimum allowed value) as explained in the [FTDI documentation](http://www.ftdichip.com/Support/Knowledgebase/index.html?settingacustomdefaultlaten.htm) to avoid pypot timeouts.  
 
