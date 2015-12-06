@@ -12,11 +12,31 @@ There is three way of saving a project in Snap!
 When you are not logged in Snap! cloud, the default behaviour of Snap! is to save you project in **your browser**.
 Technically this use the Local Storage which is a memory space in your web browser where websites are allowed to store offline datas. This is very convenient because you have not to register or to see Snap! project files, but keep in mind that **these projects are only visible in this specific web browser in this specific computer**.
 ##### Snap! Cloud
-« There is no Cloud, it's just someone else's computer »
+« There is no Cloud, it's just someone else's computer ».
 
-Instead of saving your projects on your web browser, you can save them in Snap! servers.
+Instead of saving your projects on your web browser, you can save them in Snap! servers, called "cloud". Moreover, this allow you to share your project with anyone, with a simple HTML link. 
 
-For that, you need first to create 
+###### Create an account on Snap! cloud
+Click on the cloud button -> signup.
+![Create account](../img/snap/snap_cloud_1.png)
+
+Fill the required fields in the popup for signing up.
+![Create account](../img/snap/dialog-cloud-signup.png)
+
+You will soon receive a validation email with a random password.
+You can now login with your username and password 
+![Login1](../img/snap/snap_login1.png)
+If you are in your personal computer, think to check the "stay signed in on this computer ..." checkbox.
+![Login2](../img/snap/snap_login2.png)
+
+After login with your new account, you are free to change your password: click on the cloud button -> Change Password.
+![Create account](../img/snap/logout-menu.png)
+
+###### Share your Snap! project
+The big advantage 
+##### Export your Snap! project
+
+
 
 
 
