@@ -9,7 +9,9 @@ Snap! is entirely browser made, you can use it from the [official website](http:
 ### Saving in Snap!
 There is three way of saving a project in Snap!
 #### Save the project in your web browser
+
 ![Save click](../img/snap/snap_save.png)
+
 When you are not logged in Snap! cloud, the default behaviour of Snap! is to save you project in **your browser**.
 Technically this use the Local Storage which is a memory space in your web browser where websites are allowed to store offline datas. This is very convenient because you have not to register or to see Snap! project files, but keep in mind that **these projects are only visible in this specific web browser in this specific computer**.
 #### Snap! Cloud
@@ -19,18 +21,24 @@ Instead of saving your projects on your web browser, you can save them in Snap! 
 
 ##### Create an account on Snap! cloud
 Click on the cloud button -> "signup...".
+
 ![Create account](../img/snap/snap_cloud_1.png)
 
 Fill the required fields in the popup for signing up.
+
 ![Create account](../img/snap/dialog-cloud-signup.png)
 
 You will soon receive a validation email with a random password.
 You can now login with your username and password 
+
 ![Login1](../img/snap/snap_login1.png)
+
 If you are in your personal computer, think to check the "stay signed in on this computer [...]" checkbox.
+
 ![Login2](../img/snap/snap_login2.png)
 
 After login with your new account, you are free to change your password: click on the cloud button -> "Change Password".
+
 ![Create account](../img/snap/logout-menu.png)
 
 ##### Share your Snap! project
@@ -38,11 +46,17 @@ The big advantage of using Snap! cloud is the ability to share a copy of your pr
 To share a Snap! project, you first need to be logged in Snap! cloud and having your current project saved ("save" or "save as"). Go to the "open" menu:
  
 ![Open](../img/snap/snap_open.png)
+
 In the cloud section, select the project you want to share and click on "Share" button.
+
 ![Open](../img/snap/snap_cloud_3.png)
-**Here is the trick step:** to have the share link, you have to click to the "Open" button.
+
+**Here is the trick step:** to see the share link, you have to click on the "Open" button.
+
 ![Open](../img/snap/snap_cloud_4.png)
+
 And this will re-open your project with the public sharing URL
+
 ![Open](../img/snap/snap_cloud_5.png)
 
 
