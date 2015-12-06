@@ -5,6 +5,7 @@ Snap! is entirely browser made, you can use it from the [official website](http:
 **Note: Even if Snap! use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap! is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.** 
 
 ## Introduction to Snap! programming 
+### Interface and general idea
 ### Saving in Snap!
 There is three way of saving a project in Snap!
 #### Save the project in your web browser
@@ -17,7 +18,7 @@ Technically this use the Local Storage which is a memory space in your web brows
 Instead of saving your projects on your web browser, you can save them in Snap! servers ins UC Bercley, called "cloud". Moreover, this allow you to share your project with anyone, with a simple HTML link. 
 
 ##### Create an account on Snap! cloud
-Click on the cloud button -> signup.
+Click on the cloud button -> "signup...".
 ![Create account](../img/snap/snap_cloud_1.png)
 
 Fill the required fields in the popup for signing up.
@@ -26,24 +27,32 @@ Fill the required fields in the popup for signing up.
 You will soon receive a validation email with a random password.
 You can now login with your username and password 
 ![Login1](../img/snap/snap_login1.png)
-If you are in your personal computer, think to check the "stay signed in on this computer ..." checkbox.
+If you are in your personal computer, think to check the "stay signed in on this computer [...]" checkbox.
 ![Login2](../img/snap/snap_login2.png)
 
-After login with your new account, you are free to change your password: click on the cloud button -> Change Password.
+After login with your new account, you are free to change your password: click on the cloud button -> "Change Password".
 ![Create account](../img/snap/logout-menu.png)
 
 ##### Share your Snap! project
-The big advantage 
+The big advantage of using Snap! cloud is the ability to share a copy of your project with anyone.
+To share a Snap! project, you first need to be logged in Snap! cloud and having your current project saved ("save" or "save as"). Go to the "open" menu:
+ 
+![Open](../img/snap/snap_open.png)
+In the cloud section, select the project you want to share and click on "Share" button.
+![Open](../img/snap/snap_cloud_3.png)
+**Here is the trick step:** to have the share link, you have to click to the "Open" button.
+![Open](../img/snap/snap_cloud_4.png)
+And this will re-open your project with the public sharing URL
+![Open](../img/snap/snap_cloud_5.png)
+
+
 #### Export your Snap! project
 
 
 
-
-
-
-### Saving in Snap!
 ## Presentation of 
 ## Short description of Poppy blocks
 
-### Short examples
+## Quick examples
+
 #### Record and by demonstration movement  
