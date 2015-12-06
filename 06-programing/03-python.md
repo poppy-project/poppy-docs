@@ -4,7 +4,7 @@
 
 This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, we will show you how to access all the different levels of control, from the lower to the higher.
 
-We will detail everything you need to know to directly program you robot using its embedded Python or to install everything locally.
+We will detail everything you need to know to directly program you robot using its embedded Python or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.
 
 We will try to provide as many examples as possible (as a collection of [Jupyter notebooks](#TODO-BELOW)) and point to the complete API so you can find and use the least famous features.
 
@@ -57,6 +57,352 @@ you will have to install Poppy libraries locally. They work on Windows, Mac OS, 
 Also note that if you are planning to directly plug your robot to your USB port, specific drivers should be installed.
 
 All steps are detailed in the chapter [Manual installation](#TODO).
+
+## Quickstart: Hello Poppy world!
+
+To give you a rapid overview of what you can do using Python to program Poppy robots, this section will show you how to:
+
+* Create and connect your robot
+* Retrieve values from the sensor and send motor commands
+* Start playing with primitive by recording motions by demonstration
+
+This section does not intend to cover everything that can be done in Python with Poppy but to give you sneak peak of the most common features. For more advanced used, you should refer to the next section where we present a list of Jupyter notebooks each detailing a specific aspect or feature.  
+
+In the following examples, we assume that you have a working environment meaning that you either:
+
+* are using the Python embedded in your robot: through the Jupyter Notebook server,
+* or you have installed everything locally to work with a simulator.
+
+
+
+### Create and connect to a Poppy robot
+
+#### Import the library
+The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called [module or package](https://docs.python.org/2/tutorial/modules.html).
+
+To do that, you write something similar to:
+
+```python
+from poppy.creatures import *
+```
+
+This will actually import all Poppy robots installed on the Python distribution you are using. If you want to use a specific robot, you can replace the *\** (which means all here) by the name of the robot you want.
+
+For the ErgoJr:
+```python
+from poppy.creatures import PoppyErgoJr
+```
+For the Torso:
+```python
+from poppy.creatures import PoppyTorso
+```
+For the Humanoid:
+```python
+from poppy.creatures import PoppyHumanoid
+```
+
+
+> Note: If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section TODO
+
+```python
+In [1]: from poppy.creatures import PoppyHumanoid
+---------------------------------------------------------------------------
+ImportError                               Traceback (most recent call last)
+<ipython-input-1-18e4c5a36525> in <module>()
+----> 1 from poppy.creatures import PoppyHumanoid
+
+ImportError: cannot import name PoppyHumanoid
+```
+
+#### Create the Robot object - with a real robot
+
+Then, you can actually create the Python object that will represent your robot. Depending on the Poppy robot you are using:
+
+```python
+# if you are using an Ergo Jr
+poppy = PoppyErgoJr()
+```
+
+or
+
+```python
+# if you are using a Torso
+poppy = PoppyTorso()
+```
+
+or
+
+```python
+# if you are using a Humanoid
+poppy = PoppyHumanoid()
+```
+And that's it, if you did not see any error message it means that you are connected to your robot. If you see an exception like the one shown below, you should check the wire connection and try again:
+
+```python
+IOError: Connection to the robot failed! No suitable port found for ids [3, 5, 7, 11, 13, 17]. These ids are missing [3, 5, 7, 11, 13, 17] !
+```
+
+#### Create the Robot object - with V-REP
+
+To use a simulated robot instead of a real one, you only have to specify it when creating the Robot object. For instance, if you want to create a simulated Poppy Torso, you simply have to execute the following line:
+
+```python
+poppy = PoppyTorso(simulated='vrep')
+```
+
+All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with V-REP.
+
+If you see an error message like this, check that you have launched V-REP and that you have close the popup in V-REP (see #TODO for details).
+
+```python
+IOError: Connection to V-REP failed!
+```
+
+### Access the sensors and motors
+
+The robot object you just created contains two main groups of objects:
+* motors
+* sensors
+
+that can be easily access using *poppy.motors* and *poppy.sensors*. As soon as the robot object is created it automatically starts synchronization loops which will ensure that the last available value are received/sent to the robot.
+
+> Note: The servomotors that are used in Poppy robots can be seen as both motors and sensors. Indeed, on top of being "simple" motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.
+
+#### Get data from your robot
+
+<!-- TODO: connecter un ergo et ajouter les res. des differentes lignes -->
+
+
+Now that you have created your robot object, you can directly use Python to discover which motors are attached.
+
+>Note: In all examples below the results are shown for an ErgoJr. If you are using a Torso or a Humanoid you will see more motors with different names.
+
+For instance, to know how many motors your robot have you can execute:
+
+```python
+print(len(poppy.motors))
+```
+
+*poppy.motors* is actually a list of all motors connected to your robot. Thus, if you want to get the present position of all motors, you can do:
+
+```python
+for m in poppy.motors:
+    print(m.present_position)
+```
+
+Of course, you can also access a specific motor. To do that, you need to know the name fo the motor you want to access. You can find this list in the assembly documentation of your robot.
+
+You can also obtain a list of all motors name directly from python:
+```python
+for m in poppy.motors:
+    print(m.name)
+```
+or using a motor pythonic expression:
+```python
+print([m.name for m in poppy.motors])
+```
+
+Then you can directly access the desired motor by its name:
+
+```python
+m = poppy.m3
+```
+or get its position:
+```python
+print(poppy.m3.present_position)
+```
+The most common values for motors are:
+* present_position
+* present_speed
+* present_load
+
+Similarly, you can get data from your sensors. Depending on the Poppy robot you have different sensors available. You can get the list of all sensors in the exact same way you did for motors:
+```python
+print([s.name for s in poppy.sensors])
+```
+And then access a specific sensors by its name. For instance, to get an image from the camera of the Ergo Jr:
+```python
+img = poppy.camera.frame
+```
+
+> Note: This section just presented some of the available values that you can get from your motors/sensors. They are many other - some are specific to a particular robot - we will present them through the different notebooks.
+
+#### Send motor commands
+
+ Now that we have shown you how to read values from your robot, it is time to learn how to make it move!
+
+This is actually really similar to what you have just seen. Instead of getting the *present_position* of a motor you simply have to set its *goal_position*.
+
+But first, you have to make sure your motor is stiff, meaning that you cannot move it by hand. To do that we will turn off its compliancy. Assuming you have an Ergo Jr and want to make the motor *m3* moves - feel free to use any other motor but make sure the motor can freely move without hurting any of your finger:
+
+```python
+poppy.m3.compliant = False
+```
+
+The motor should now be stiff. And then, to make it move to its zero position:
+
+```python
+poppy.m3.goal_position = 0
+```
+
+>Note: *present_position* and *goal_position* are actually two different registers. The first refers to the current position of the motor (read only) while the second corresponds to the target position you want your robot to reach. Thus, they can have different values while the motor is still moving to reach its *goal_position*.
+
+
+As a slightly more complex example we will make it go to 30 degrees then -30° three times:
+
+```python
+import time
+
+for _ in range(3):
+    poppy.m3.goal_position = 30
+    time.sleep(0.5)
+    poppy.m3.goal_position = -30
+    time.sleep(0.5)
+```
+
+Note that after each new value set to *goal_position* we wait so the motor has enough time to actually reach this new position. Another way to do the same thing is to use the goto_position method:
+
+```python
+import time
+
+for _ in range(3):
+    poppy.m3.goto_position(30, 0.5, wait=True)
+    poppy.m3.goto_position(-30, 0.5, wait=True)
+```
+
+As you can see, this method takes three arguments, the target position, the duration of the move and whether to wait or not the end of the motion.
+
+If you want to move multiple motors at the same time, you can simply do something like:
+```python
+for _ in range(3):
+    poppy.m1.goal_position = -20
+    poppy.m3.goal_position = 30
+    time.sleep(0.5)
+    poppy.m1.goal_position = 20
+    poppy.m3.goal_position = -30
+    time.sleep(0.5)
+```
+
+or use a python dictionary storing the target position per motor you want to move, that can be given to the goto_position method:
+```python
+pos_1 = {'m1': -20, 'm3': 30}
+pos_2 = {'m1': 20, 'm3': -30}
+
+for _ in range(3):
+    poppy.goto_position(pos_1, 0.5, wait=True)
+    poppy.goto_position(pos_2, 0.5, wait=True)
+```
+
+>Note: You can turn a motor back to its compliant mode (where you can freely move it) by setting its compliant register to True:
+```python
+poppy.m3.compliant = True
+```
+
+### Record and play motion by demonstration using primitives
+
+Pypot provides you with the primitive mechanism, which are simply pre-defined behaviors that can be attached to your robot. In this section, we will show you how to use some primitives already existing for recording and playing motions. You can also define your own primitive but this is out of the scope of this section, you will find details on how to do this in dedicated notebooks.
+
+#### Record a motion by demonstration
+Designing choreographies for your robot using *goal_position* or *goto_position* can be long and kind of troublesome. Fortunately, there is a much more efficient way of doing this: recording motions by directly demonstrating the move on the robot.
+
+This can be summarized into few steps:
+* make the robot compliant so you can move it by hand
+* start the recording
+* actually moves the robot so it follows whatever move/choreography you can think of
+* stop the recording
+
+And now to do that in Python:
+
+So, first we turn off the compliance of all motors of the robot:
+```python
+for m in poppy.motors:
+    m.compliant = True
+```
+
+Then, we have to include the primitive used for recording motion:
+```python
+from pypot.primitive.move import MoveRecorder
+```
+
+To create this primitive, you have to give the following arguments:
+* on which robot you want to use this primitive (this can be useful if you are working with multiple robot at a time - for instance you can record a move on a robot and at the same time make it reproduce by another one: this [notebook](#TODO) will guide you on how to do this).
+* the record frequency of the move you want to register: how many position per second will be recorded - the higher the more accurate the record will be but also more data will have to be processed - good values are usually between 10Hz and 50Hz.
+* the motors that you want to record. you can record a move on a subpart of you robot, for instance only on the left arm.
+
+Here, we will record a move on the whole robot at 50Hz:
+```python
+recorder = MoveRecorder(poppy, 50, poppy.motors)
+```
+>Note: we used *poppy.motors* to specify that we want all motors if you only want let's say the two first motors of an Ergo Jr you could have used *[poppy.m1, poppy.m2]* instead.
+
+Now it is time to record. As it can be hard to both move the robot and type Python command at the same time, we will make a small script, that:
+* wait 5s so you can get ready to record
+* start the record
+* record for 10 seconds
+* stop the records
+
+```python
+import time
+
+# Give you time to get ready
+print('Get ready to record a move...')
+time.sleep(5)
+
+# Start the record
+record.start()
+print('Now recording !')
+
+# Wait for 10s so you can record what you want
+time.sleep(10)
+
+# Stop the record
+print('The record is over!')
+record.stop()
+```
+
+Now, you should have a move recorded. You can retrieve it from the recorder primitive:
+```python
+my_recorded_move = record.move
+```
+and check how many positions where recorded:
+```python
+print(len(my_recorded_move.positions()))
+```
+
+#### Replay recorded moves
+
+Now to play back recorded motions you have to use another primitive: MovePlayer
+
+```python
+from pypot.primitive.move import MovePlayer
+
+player = MovePlayer(poppy, my_recorded_move)
+```
+
+As you can see, to create it you have to specify the robot (as for the MoveRecorder) and the move you want to play.
+
+We also have to make sure that the motors of the robot are stiff again so we can move them:
+
+```python
+for m in poppy.motors:
+    m.compliant = False
+```
+
+Then, you can simply start the replay:
+```python
+player.start()
+```
+
+And if you want to play it three times in a row:
+```python
+for _ in range(3):
+    player.start()
+    player.wait_to_stop()
+```
+
+We use the *wait_to_stop* method to make sure we wait for the first move to finish before we start another. By default, playing a move we will not block to allow you to play multiple move in parallel.
+
+
 
 ## Jupyter Notebooks gallery
 
