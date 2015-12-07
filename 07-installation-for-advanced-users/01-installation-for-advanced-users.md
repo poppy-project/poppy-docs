@@ -41,10 +41,10 @@ Now you have a Python distribution ready to [install Poppy softwares](#install-p
 #### Install Poppy softwares
 Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
 
-`pip install poppy-humanoid --user -U`
+`pip install poppy-torso --user -U`
 
 This will install everything necessary to control a Poppy Humanoid.
-Substitute 'poppy-humanoid' with 'poppy-torso' or 'poppy-ergojr' to install respectively a Poppy Torso or a Poppy Ergo Jr.
+Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
  
 ### Install Python and Poppy softwares on Mac OSX
 Mac OSX has a Python distribution installed by default. Before installing Poppy softwares, you need to install the Python package manager pip.
@@ -52,9 +52,9 @@ Open a terminal and execute the command below:
 `curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python`
 
 You can now install Poppy softwares for the creature of your choice:
-`pip install poppy-humanoid --user -U`
+`pip install poppy-torso --user -U`
 
-Substitute 'poppy-humanoid' with 'poppy-torso' or 'poppy-ergojr' to install respectively a Poppy Torso or a Poppy Ergo Jr.
+Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
 
 ### Install Python and Poppy softwares on GNU/Linux
 Most of GNU/Linux distributions, have already a Python distribution installed by default.
@@ -118,17 +118,17 @@ As V-REP is not signed, you will have to pass the Windows SmartScreen (on Window
 ### Test your installation
 Open V-REP with a double click on the desktop icon.
 Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
-`poppy-services --snap --vrep --no-browser poppy-humanoid`
+`poppy-services --snap --vrep --no-browser poppy-torso`
 After a few seconds, you will have an error like the picture below in your Command prompt.
 ![VREP_terminal](../img/vrep/vrep3_1.png)
 If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. **You have to check the check-box "Do not show this message again" and press "Ok".**
 ![VREP_checkbox](../img/vrep/vrep3_2.png)
-Switch the the command prompt window. You'll have to type the last command (poppy-services --snap --vrep --no-browser poppy-humanoid) and click to the vrep popup (with the checkbox checked) *three times* to make it works well ! 
+Switch the the command prompt window. You'll have to type the last command (poppy-services --snap --vrep --no-browser poppy-torso) and click to the vrep popup (with the checkbox checked) *three times* to make it works well ! 
 
 **Note: to avoid retyping the same command again and again, you can simply press the up arrow key to call the last typed line**.
 
 Now type the last command without the "--no-browser" part. 
-`poppy-services --snap --vrep poppy-humanoid`
+`poppy-services --snap --vrep poppy-torso`
 
 If you see a firewall popup like the picture below, be sure to check the "private network" checkbox.
 ![firewall](../img/vrep/vrep4.png)
