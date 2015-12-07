@@ -94,11 +94,12 @@ First, you must be connected to the same network LAN area than your robot (e.g. 
 
 You have to go on the web homage of your robot with its URL. You can use its IP address (for example http://192.168.1.42) if you have a way to know it or its hostname like http://poppy.local. To find its IP address you can see it in your router administration web page, or with a network scanner like ["Fing"](http://www.overlooksoft.com/download) (for smartphone and desktop OS). To use directly its hostname http://poppy.local you must have a [Zeroconf](https://fr.wikipedia.org/wiki/Zeroconf) software installed on your computer, install "Bonjour print services for Windows" if you are running a Windows OS.
 
-<!-- TODO screenshot interface-->
 The home page of your poppy creature should look like the snapshot below:
 ![find blocks](../img/snap/homepage.png)
 
-Open the Snap!
+Click on the "Start Snap!" link to open the Snap! interface at start the connection with the Poppy robot.
+
+Poppy special blocks are stored in the Examples. Go to "file" icon -> open -> Examples -> click on "Poppy blocks". It may take some time to load the blocks (~5-15 seconds), be patient. 
 
 ##### If you are using the V-REP simulator
 Open V-REP, open a terminal (called *Command Prompt* on Windows), type and press Enter to execute the command below:
@@ -109,9 +110,16 @@ Open V-REP, open a terminal (called *Command Prompt* on Windows), type and press
 
 If you have issues, look at the <!-- TODO --> section to see have more detailed informations.
 
-After having executed this command
+After having executed this command a tab in your web browser should have be opened to Snap! have loaded Poppy blocks.
 
 #### Network
+First test your connection with the (tangible or simulated) robot with the "test connection" block.
+![test connection](../img/snap/test_connection.png).
+if the block answer is "You may have connection troubles", your "host" variable inside the Snap! project is probably wrong. The host variable must be the IP or the hostname+".local" of your robot ; if you're using V-REP localhost is used to point to your own computer.
+
+![test connection3](../img/snap/test_connection3.png).
+
+
 Be sure to 
 You can explore
 You can explore
