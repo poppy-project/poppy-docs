@@ -2,9 +2,9 @@
 
 ![Programming in Python banner](../img/python/banner.png)
 
-This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, we will show you how to access all the different levels of control, from the lower to the higher.
+This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, you will see how to access all the different levels of control, from the higher to the lower.
 
-We will detail everything you need to know to directly program you robot using its embedded Python or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.
+We will detail everything you need to know to directly program you robot using the Python embedded in the Poppy robot or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.
 
 We will try to provide as many examples as possible (as a collection of [Jupyter notebooks](#TODO-BELOW)) and point to the complete API so you can find and use the least famous features.
 
@@ -44,6 +44,10 @@ This is summarized in the diagram below:
 
 **First, note that if you only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the [web interface](#TODO) and have nothing to install on your machine!**
 
+What you need to install is summarized in the diagram below:
+
+![What to install](../img/python/what-to-install.png)
+
 Yet, if you are planning to either
 
 * use a simulator (e.g. V-REP),
@@ -66,7 +70,7 @@ To give you a rapid overview of what you can do using Python to program Poppy ro
 * Retrieve values from the sensor and send motor commands
 * Start playing with primitive by recording motions by demonstration
 
-This section does not intend to cover everything that can be done in Python with Poppy but to give you sneak peak of the most common features. For more advanced used, you should refer to the next section where we present a list of Jupyter notebooks each detailing a specific aspect or feature.  
+This section does not intend to cover everything that can be done in Python with Poppy but to give you sneak peaks of the most common features. For more advanced used, you should refer to the next section where we present a list of Jupyter notebooks each detailing a specific aspect or feature.  
 
 In the following examples, we assume that you have a working environment meaning that you either:
 
@@ -402,15 +406,29 @@ for _ in range(3):
 
 We use the *wait_to_stop* method to make sure we wait for the first move to finish before we start another. By default, playing a move we will not block to allow you to play multiple move in parallel.
 
+## Going further: Jupyter Notebooks gallery
+
+To go further and discover the many other possibilities of what you can do with Poppy robots in Python, you can find many Notebooks each describing a specific aspect or feature.
+
+Here are only listed the Notebooks with a focus on Python programming but you may find other interesting Notebooks such as the ones on [pedagogical activities](#TODO), [demo interface](#TODO) or [scientific experiments](#TODO).
 
 
-## Jupyter Notebooks gallery
+### Low-level communication with motor/sensor
 
-## Services
-### HTTP/REST API
+* Low-level communication with dynamixel motors
+* Connecting an Arduino board
+* Configuring motors in Python
 
-## Advanced use case: extending poppy softwares
-### Adding support for a new sensor/motor
-### Defining a new creature
+### Remote access
 
-<!-- ## pypot library? (appendix ?) -->
+* starting the HTTP API server
+* low-latency remote control of Poppy robots using zeromq
+
+### Using V-REP
+
+* adding object to the scene
+
+### Extending Poppy softwares
+
+* Adding support for a new sensor/motor
+* Defining a new poppy creature
