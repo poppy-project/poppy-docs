@@ -406,6 +406,137 @@ for _ in range(3):
 
 We use the *wait_to_stop* method to make sure we wait for the first move to finish before we start another. By default, playing a move we will not block to allow you to play multiple move in parallel.
 
+### Write a simple sensori-motor loop
+
+Robotic is all about sensori-motor loops, meaning that motor commands will be more or less directly related to the sensor readings. In other terms the robot actions will be determined by what it perceives from its environment.
+
+Poppy libraries and more particularly pypot provides you with tools to easily write sensori-motor loops. We will show here a very simple example where some motor of an Ergo Jr will be controlled by the position of other motors in order to keep the head of the Ergo Jr straight.
+
+To do that, we will free the two first motors, so they can be moved by hand. Two other motors will try to lively compensate the motion applied on the free motors.
+
+We need few simple steps:
+1. read values from sensors (here the two free motors)
+* compute command from those readings
+* set new motor command
+* go back to step 1.
+
+> Note: this example is designed for the Ergo Jr. It could be adapted to other Poppy robots, by changing the motors used. Yet, it is not that obvious which one to use to have a "cool" result.
+
+#### Demo version
+
+Before writing the sensori-motor loop, we will first set the Ergo Jr in a base position.
+
+```python
+from poppy.creatures import PoppyErgoJr
+
+jr = PoppyErgoJr()
+
+jr.goto_position({'m1': 0.,
+                  'm2': -60.,
+                  'm3': 55.,
+                  'm4': 0.,
+                  'm5': -55.,
+                  'm6': 60.}, 2., wait=True)
+```
+
+Then, we make sure the *moving speed* of the motors are not too high to prevent shaky motions:
+
+```python
+for m in jr.motors:
+    m.moving_speed = 250
+```
+
+Finally, we free the two first motors:
+```python
+jr.m1.compliant = True        
+jr.m2.compliant = True
+```
+
+Now, that everything is setup we write our very simple sensori-motor loop like this:
+```python
+import time
+
+while True:
+    # Step 1
+    p1 = jr.m1.present_position
+    p2 = jr.m2.present_position
+
+    # Step 2
+    g1 = -p1
+    g2 = -p2
+
+    # Step 3
+    jr.m4.goal_position = g1
+    jr.m6.goal_position = g2
+
+    time.sleep(.02)
+```
+
+* **Step 1:** As you can see, here our readings step is simply to retrieve the *present_position* of the motors *m1* and *m2*.
+* **Step 2:** Here, we defined the base position so the motors *m1*/*m4* and *m2*/*m6* are parallel. Thus, to compensate the head position, we simply have to define the new motor goal position as the opposite of the read present position.
+* **Step 3:** We simply set the goal position as the just computed command
+
+Those steps are included inside an infinite loop - with a time.sleep to avoid CPU overhead.
+
+> Note: to stop this *while True* loop, you will have to use the classical Ctrl-c, or use the stop button if you are running it through Jupyter.
+
+#### Now with a primitive
+
+But what about if you want to make this behavior an independent "brick" that you can start/stop on demand combine with other behaviors. Well, primitives are meant to do just that.
+
+There is two main types of primitive: *Primitive* and *LoopPrimitive*. The first one basically gives you access to just a *run* method where you can do everything you want on a robot. The second one as the name indicates is an infinite loop which calls an *update* method at a pre-defined frequency. In our case it is the more suited one.
+
+Here is the entire definition of this primitive:
+
+```python
+class KeepYourHeadStraight(LoopPrimitive):
+    def setup(self):
+        for m in self.robot.motors:
+            m.compliant = False
+
+        self.robot.goto_position({'m1': 0.,
+                                  'm2': -60.,
+                                  'm3': 55.,
+                                  'm4': 0.,
+                                  'm5': -55.,
+                                  'm6': 60.}, 2., wait=True)
+
+        for m in self.robot.motors:
+            m.moving_speed = 250
+
+        self.robot.m1.compliant = True        
+        self.robot.m2.compliant = True
+
+    def update(self):
+        self.robot.m4.goal_position = -self.robot.m1.present_position
+        self.robot.m6.goal_position = -self.robot.m2.present_position
+```
+
+As you can see, there is two main parts. The *setup* method which defines what needs to be done to prepare the robot before starting the behavior - here simply puts it in its base position and turn on the compliance for the two first motors.
+
+And the *update* method which will be regularly called: here is where we put the actual code for the sensori-motor loop: reading sensor - computing the new command - and sending the new command to the motors.
+
+Now that we have defined our primitive, we can instantiate it and start it:
+```python
+# we specify we want the primitive to apply on the jr robot
+# and that the update method should be called at 50Hz
+head_straight = KeepYourHeadStraight(jr, 50.0)
+
+head_straight.start()
+```
+
+You can stop it whenever you want:
+```python
+head_straight.stop()
+```
+
+And re-starting it again...
+```python
+head_straight.start()
+```
+
+The huge advantage of using a primitive in this case is that after starting it, you can still easily run any other codes that you want. The primitive starts its own thread and thus runs in background without blocking the execution of the rest of the code.
+
 ## Going further: Jupyter Notebooks gallery
 
 To go further and discover the many other possibilities of what you can do with Poppy robots in Python, you can find many Notebooks each describing a specific aspect or feature.
