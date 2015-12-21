@@ -13,6 +13,27 @@ Poppy is run by Python computer code. Depending on your Operating System you wil
 
 Whatever your Operating System if you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
 
+### Install everything needed for a Poppy Board
+The easiest way to setup the control board of your Poppy Creature is to used one of the pre-made SD-card images. Those images come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card. This procedure is described in the [Setup section](#setup-your-poppy-board).
+
+#### Use a Raspberry 2 board
+Download the Raspbian Jessie image on the [Raspberry Pi website](https://www.raspberrypi.org/downloads/raspbian/).
+Write the image to the SD-card with you favourite disk writer tool as explained in [this part](#write-an-image-to-the-sd-card).
+Connect to your Raspberry Pi in ssh with the user "pi" and password "raspberrypi"
+`ssh pi@raspberrypi.local` 
+
+Download the install script and execute it
+
+
+#### Use a Odroid U3
+Download the Ubuntu 14.04 distribution for Odroid U3 [here](http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&tag=ODROID-U3&bid=243). Write the image to your MMC with you favourite disk writer tool as explained in [this part](#write-an-image-to-the-sd-card).
+Connect to your odroid in ssh with the user and password "odroid"
+`ssh odroid@odroid.local` 
+
+Download the install script 
+
+wget 
+
 ### Install Python and Poppy softwares on Windows
 <!-- TODO ajouter Schéma installation Thibault -->
 If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see [these videos](lientodo).
@@ -163,6 +184,9 @@ If you see a firewall popup like the picture below, be sure to check the "privat
 If everything works, a new tab have been opened on your default web-browser.
 <!-- TODO: lien doc -->
 You can program you robot in Snap! or in Python.
+
+
+![firewall](../img/vrep/luc_vincent-070.jpg)
 
 
 ## Install drivers
