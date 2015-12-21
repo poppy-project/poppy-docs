@@ -4,7 +4,8 @@ Manon Cortial (Generation Robot)
 Marie Demangeat
 Thibault Deprez
 Matthieu Lapeyre
+Gilles Lassus (Eduation Nationale)
 Pierre Rouanet
 Didier Roy
 Théo Segonds
-Luc Vincent
+Luc Vincent (Eduation Nationale)
