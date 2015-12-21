@@ -15,15 +15,22 @@ Whatever your Operating System if you are getting started with Python and want t
 
 ### Install Python and Poppy softwares on Windows
 <!-- TODO ajouter Schéma installation Thibault -->
-If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see [these videos](lientodo). 
+If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see [these videos](lientodo).
 #### Install Python
 We suggest you to use Anaconda Python distribution, but if you already have a Python distribution like Canopy with scientific packages (Numpy and Scipy) you can directly [install Poppy softwares](#install-poppy-softwares).
+
 ##### Anaconda
 Download Anaconda Python distribution (400Mo) [here for 64-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe).
 
 
-Install it and be sure that the two check-boxes of the PATH and the default Python are checked.
+Install it by clicking on "next" at each step. If you intend to install Anaconda for all users of your computer, be sure to select "all users".
+
+![Anaconda all users](../img/python/luc_vincent-012.png).
+
+It is also very important that the two check-boxes of the PATH and the default Python are checked.
+
 ![Anaconda install](../img/python/anaconda_install_path.png)
+
 
 Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
 
@@ -39,21 +46,30 @@ Open the Command Prompt (press the windows key and type "Command Prompt"), type 
 `conda install numpy scipy ipython-notebook matplotlib`
 
 Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
+
 #### Install Poppy softwares
 Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
+![Anaconda all users](../img/python/luc_vincent-031.png).
 
-`pip install poppy-torso --user -U`
+`pip install poppy-torso --user -U --no-deps`
 
 This will install everything necessary to control a Poppy Humanoid.
 Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
- 
+
+In case of update, it is advised to upgrade pypot (the motor library control) and the creature package separately :
+```
+pip install pypot --user -U --no-deps
+pip install poppy-torso --user -U --no-deps
+```
+
+
 ### Install Python and Poppy softwares on Mac OSX
 Mac OSX has a Python distribution installed by default. Before installing Poppy softwares, you need to install the Python package manager pip.
 Open a terminal and execute the command below:
 `curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python`
 
 You can now install Poppy softwares for the creature of your choice:
-`pip install poppy-torso --user -U`
+`pip install poppy-torso --user -U --no-deps`
 
 Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
 
@@ -103,7 +119,7 @@ You can now install some required and other useful dependencies for Poppy softwa
 You can now [install Poppy softwares](#install-poppy-softwares).
 
 ## Install the robotic simulator V-REP
-[V-REP](http://www.coppeliarobotics.com/downloads.html) is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free licence for educational entities and have a commercial licence for other purposes. 
+[V-REP](http://www.coppeliarobotics.com/downloads.html) is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free licence for educational entities and have a commercial licence for other purposes.
 There is also an *PRO EVAL* version which limit the right to backup. As you don't need to backup the scene to use V-REP with Pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.
 If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the [educational licence](http://www.coppeliarobotics.com/licensing-plugin-edu.html)).
 ### Install on Windows
@@ -111,32 +127,42 @@ If you want to modify the V-REP scene for adding or customizing a Poppy creature
 As V-REP is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation.
 ![VREP_smartscreen](../img/vrep/vrep2.png)
 
+During the installation, make sure to install *Visual C++ Redistributable 2010* and *Visual C++ Redistributable 2012*.
+![cpp2010](../img/vrep/luc_vincent-056.png)
+
+![cpp2012](../img/vrep/luc_vincent-059.png)
+
+Even if you already have *Visual C++ Redistributable 2010* or *Visual C++ Redistributable 2012*, it is advised to "repair" them (it is a re-installation process).
+
+![cpp2012](../img/vrep/luc_vincent-060.png)
+
 **After the installation you can [test if V-REP works well](#test-your-installation)**.
-<!-- TODO
-### Install on MAC OSX 
+
+<!-- TODO ### Install on MAC OSX
 ### Install on GNU/Linux -->
 
 ### Test your installation
 Open V-REP with a double click on the desktop icon.
 Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
 `poppy-services --snap --vrep --no-browser poppy-torso`
+
 After a few seconds, you will have an error like the picture below in your Command prompt.
 ![VREP_terminal](../img/vrep/vrep3_1.png)
 If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. **You have to check the check-box "Do not show this message again" and press "Ok".**
 ![VREP_checkbox](../img/vrep/vrep3_2.png)
-Switch the the command prompt window. You'll have to type the last command (poppy-services --snap --vrep --no-browser poppy-torso) and click to the vrep popup (with the checkbox checked) *three times* to make it works well ! 
+Switch the the command prompt window. You'll have to type the last command (poppy-services --snap --vrep --no-browser poppy-torso) and click to the vrep popup (with the checkbox checked) *three times* to make it works well !
 
 **Note: to avoid retyping the same command again and again, you can simply press the up arrow key to call the last typed line**.
 
-Now type the last command without the "--no-browser" part. 
+Now type the last command without the "--no-browser" part.
 `poppy-services --snap --vrep poppy-torso`
 
 If you see a firewall popup like the picture below, be sure to check the "private network" checkbox.
 ![firewall](../img/vrep/vrep4.png)
 
-If everything works, you new tab may be opened on your default web-browser.
-
-
+If everything works, a new tab have been opened on your default web-browser.
+<!-- TODO: lien doc -->
+You can program you robot in Snap! or in Python.
 
 
 ## Install drivers
@@ -152,4 +178,3 @@ You don't need drivers for GNU/Linux or MAC OSX, but note that it doesn't works 
 ### If you use a [USB2Dynamixel](http://support.robotis.com/en/product/auxdevice/interface/usb2dxl_manual.htm)
 
 You need to install FTDI drivers on your computer. You have to low the "Latency Timer Value" from 16ms to 1ms (minimum allowed value) as explained in the [FTDI documentation](http://www.ftdichip.com/Support/Knowledgebase/index.html?settingacustomdefaultlaten.htm) to avoid pypot timeouts.  
-
