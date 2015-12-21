@@ -1,5 +1,5 @@
 
-# Setup your Raspberry-Pi
+# Setup your Poppy Board
 **Note: this chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, go to the [installation for advanced users section](../07-installation-for-advanced-users/01-install-poppy-softwares.md)** 
 
 Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or a Odroid for the older versions. 
