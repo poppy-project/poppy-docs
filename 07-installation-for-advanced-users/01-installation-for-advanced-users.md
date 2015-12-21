@@ -21,6 +21,7 @@ We suggest you to use Anaconda Python distribution, but if you already have a Py
 ##### Anaconda
 Download Anaconda Python distribution (400Mo) [here for 64-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe).
 
+
 Install it and be sure that the two check-boxes of the PATH and the default Python are checked.
 ![Anaconda install](../img/python/anaconda_install_path.png)
 
