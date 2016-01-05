@@ -536,30 +536,3 @@ head_straight.start()
 ```
 
 The huge advantage of using a primitive in this case is that after starting it, you can still easily run any other codes that you want. The primitive starts its own thread and thus runs in background without blocking the execution of the rest of the code.
-
-## Going further: Jupyter Notebooks gallery
-
-To go further and discover the many other possibilities of what you can do with Poppy robots in Python, you can find many Notebooks each describing a specific aspect or feature.
-
-Here are only listed the Notebooks with a focus on Python programming but you may find other interesting Notebooks such as the ones on [pedagogical activities](#TODO), [demo interface](#TODO) or [scientific experiments](#TODO).
-
-
-### Low-level communication with motor/sensor
-
-* Low-level communication with dynamixel motors
-* Connecting an Arduino board
-* Configuring motors in Python
-
-### Remote access
-
-* starting the HTTP API server
-* low-latency remote control of Poppy robots using zeromq
-
-### Using V-REP
-
-* adding object to the scene
-
-### Extending Poppy softwares
-
-* Adding support for a new sensor/motor
-* Defining a new poppy creature
