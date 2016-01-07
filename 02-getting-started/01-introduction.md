@@ -94,13 +94,13 @@ The project was realized during an internship at INRIA Flowers by Joel Ortiz Sos
 
 Heol est un robot humanoïde de 34 cm conçus par l’association [Heol robotics](). Il est composé de 23 moteurs, le reste des pièces étant imprimées en 3D. Il est basé sur la librairie pypot qui lui permet de se mouvoir tel un petit homme. Heol qui signifie soleil en Breton, a pour but de redonner le sourire aux enfants malades, grâce à diverses applications. Il a la capacité d’être un outil pédagogique en devenant un support d’apprentissage pour des matières tel que la programmation, la conception mécanique, etc. La participation à la robocup (coupe du monde de football pour robot) est aussi envisagee.
 
-![Heol](../img/heol.jpg)
+![Heol](../img/heol.jpg){height=250px}
 
 ##### Poppyrate
 
 Un robot humanoïde open source basé sur Poppy plus abordable grâce à une taille plus petite et à des moteurs moins chers. La réduction de taille a aussi l'avantage de le rendre plus facilement imprimable sur les imprimante 3D grand public. Il a aussi l'objectif d'être le plus nomade possible et d'être personnalisable et extensible tout en restant compatible avec le logiciel de Poppy. A terme Poppyrate sera vendu en kit avec ou sans les pièces imprimés en 3D, pour tous les publics intéressé par la robotique humanoïde. Poppyrate est réalisé par la société ZeCloud.
 
-![Poppyrate](../img/poppyrate.jpg)
+![Poppyrate](../img/poppyrate.jpg){height=250px}
 
 Poppyrate.com
 Réseaux sociaux :

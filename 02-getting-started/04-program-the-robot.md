@@ -1,6 +1,6 @@
 ## Program the robot
 
-In this section we will present the different options to program your robot ranging from the high level behaviours triggered using [Snap!](#using-snap), the visual programming language, to the low-level API written in [Python](#using-python).
+In this section we will present the different options to program your robot ranging from the high level behaviors triggered using [Snap!](#using-snap), the visual programming language, to the low-level API written in [Python](#using-python).
 
 We will also say a few words on how you can interface Poppy robots with other devices or any programming language using [Poppy's REST API](#through-the-rest-api).
 
