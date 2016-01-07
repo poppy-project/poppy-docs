@@ -26,7 +26,7 @@ git clone -b gh-pages $git_url $tmp_repo
 cp $GH_REPO.html $tmp_repo
 cp $GH_REPO.pdf $tmp_repo
 cp -r img $tmp_repo/img
-
+cp -r css $tmp_repo/css
 
 # Upload it to gh-pages
 # Exit if commit is untrusted
