@@ -1,17 +1,31 @@
 # Programming Poppy robots using Snap!
 Snap! is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas. 
 
-Snap! was inspired by Scratch, but also targets both novice and more advanced users by including and expanding Scratch's features.
+Snap! was inspired by Scratch (a project of
+the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch's features.
 
-Snap! is entirely browser made, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip) in your personal computer and open the snap.html file in your browser.
+Snap! is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip) in your personal computer and open the snap.html file in your browser. 
 
 **Note: Even if Snap! use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap! is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.** 
 
 ## Introduction to Snap! programming 
 This chapter will focus on things necessary to understand in Snap! for using Poppy creatures. 
-If you want a well designed online lesson on Snap! we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students.
+A complete manuel of Snap! can be found in the [Snap! reference manual](http://snap.berkeley.edu/SnapManual.pdf).
+If you want a well designed online lesson on Snap! we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students. 
 Some of the snapshots and concepts of BJC have been used for writing this chapter.
-### Interface and general idea
+### Connect your robot to Snap!
+#### With a simulated robot with V-REP
+
+#### With a tangible robot
+Open the web interface of your robot in your web browser.
+Click on the "Start Snap! link" ; it will start the python REST API to the robot and open the Snap! interface.
+
+Click on the file icon -> Examples -> click on "pypot snap blocks" and the "open" button.
+
+
+
+### Interface and general ideas
+
 ### Saving in Snap!
 There is three way of saving a project in Snap!
 #### Save the project in your web browser
