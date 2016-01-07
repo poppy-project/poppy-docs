@@ -1,17 +1,18 @@
 # Programming Poppy robots using Snap!
-Snap! is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas. 
+Snap! is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.
 
 Snap! was inspired by Scratch (a project of
 the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch's features.
 
 Snap! is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip) in your personal computer and open the snap.html file in your browser. 
 
-**Note: Even if Snap! use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap! is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.** 
+**Note: Even if Snap! use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap! is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.**
 
-## Introduction to Snap! programming 
-This chapter will focus on things necessary to understand in Snap! for using Poppy creatures. 
-A complete manuel of Snap! can be found in the [Snap! reference manual](http://snap.berkeley.edu/SnapManual.pdf).
-If you want a well designed online lesson on Snap! we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students. 
+## Introduction to Snap! programming
+This chapter will focus on things necessary to understand in Snap! for using Poppy creatures.
+
+If you want a well designed online lesson on Snap! we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students.
+
 Some of the snapshots and concepts of BJC have been used for writing this chapter.
 ### Connect your robot to Snap!
 #### With a simulated robot with V-REP
@@ -38,7 +39,7 @@ Technically this use the Local Storage which is a memory space in your web brows
 #### Snap! Cloud
 « There is no Cloud, it's just someone else's computer ».
 
-Instead of saving your projects on your web browser, you can save them in Snap! servers in UC Bercley, called "cloud". Moreover, this allow you to share your project with anyone, with a simple HTML link. 
+Instead of saving your projects on your web browser, you can save them in Snap! servers in UC Bercley, called "cloud". Moreover, this allow you to share your project with anyone, with a simple HTML link.
 
 ##### Create an account on Snap! cloud
 Click on the cloud button -> "signup...".
@@ -50,7 +51,7 @@ Fill the required fields in the popup for signing up.
 ![Create account](../img/snap/dialog-cloud-signup.png)
 
 You will soon receive a validation email with a random password.
-You can now login with your username and password 
+You can now login with your username and password
 
 ![Login1](../img/snap/snap_login1.png)
 
@@ -65,7 +66,7 @@ After login with your new account, you are free to change your password: click o
 ##### Share your Snap! project
 The big advantage of using Snap! cloud is the ability to share a copy of your project with anyone.
 To share a Snap! project, you first need to be logged in Snap! cloud and having your current project saved ("save" or "save as"). Go to the "open" menu:
- 
+
 ![Open menu](../img/snap/snap_open.png)
 
 In the cloud section, select the project you want to share and click on "Share" button.
@@ -88,12 +89,12 @@ When you open a share project, the project is automatically opened in full scree
 #### Export/Import your Snap! project
 If you have a limited access to internet and you want to share project with other people, the best way is to export it:
 ![Export section](../img/snap/snap_cloud_5.png)
-A new tab in your web browser will be opened with an XML file like the picture below. 
+A new tab in your web browser will be opened with an XML file like the picture below.
 ![Export section](../img/snap/snap_xml_save_as.png)
 This file describe all your Snap! project in a a simple file. It's not made to be human readable so don't be afraid, you just have to save it on your computer. For that, do a right click, chose "save as" and a proper name and location on you computer for this project.
 
 
-If you want to import a previously exported project, you simply have to click on the import section of the file icon. 
+If you want to import a previously exported project, you simply have to click on the import section of the file icon.
 ![import section](../img/snap/snap_import.png)
 
 ### Search Poppy blocks
@@ -113,7 +114,7 @@ The home page of your poppy creature should look like the snapshot below:
 
 Click on the "Start Snap!" link to open the Snap! interface at start the connection with the Poppy robot.
 
-Poppy special blocks are stored in the Examples. Go to "file" icon -> open -> Examples -> click on "Poppy blocks". It may take some time to load the blocks (~5-15 seconds), be patient. 
+Poppy special blocks are stored in the Examples. Go to "file" icon -> open -> Examples -> click on "Poppy blocks". It may take some time to load the blocks (~5-15 seconds), be patient.
 
 ##### If you are using the V-REP simulator
 Open V-REP, open a terminal (called *Command Prompt* on Windows), type and press Enter to execute the command below:
@@ -134,7 +135,7 @@ if the block answer is "You may have connection troubles", your "host" variable 
 ![test connection3](../img/snap/test_connection3.png).
 
 
-Be sure to 
+Be sure to
 You can explore
 You can explore
 
@@ -163,3 +164,5 @@ or just a subset of your creature
 
 
 #### Record and by demonstration movement  
+
+fskjgjk
