@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="css/normalize.css" media="screen">
+  <link rel="stylesheet" href="css/skeleton.css" media="screen">
+  <link rel="stylesheet" href="css/custom.css" media="screen">
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -37,31 +40,33 @@ $for(header-includes)$
 $endfor$
 </head>
 <body>
+  <div class="container">
 $for(include-before)$
 $include-before$
 $endfor$
 $if(title)$
-<header>
-<h1 class="title">$title$</h1>
+    <section class="header">
+      <h1 class="title">$title$</h1>
 $if(subtitle)$
-<h1 class="subtitle">$subtitle$</h1>
+      <h1 class="title">$subtitle$</h1>
 $endif$
 $for(author)$
-<h2 class="author">$author$</h2>
+      <h2 class="author">$author$</h2>
 $endfor$
 $if(date)$
-<h3 class="date">$date$</h3>
+      <h3 class="date">$date$</h3>
 $endif$
-</header>
+    </section>
 $endif$
 $if(toc)$
-<nav id="$idprefix$TOC">
+    <nav class="toc">
 $toc$
-</nav>
+    </nav>
 $endif$
 $body$
 $for(include-after)$
 $include-after$
 $endfor$
+  </div>
 </body>
 </html>
