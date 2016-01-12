@@ -60,7 +60,7 @@ Download Anaconda Python distribution (400Mo) [here for 64-bit](https://repo.con
 
 Install it by clicking on "next" at each step. If you intend to install Anaconda for all users of your computer, be sure to select "all users".
 
-![Anaconda all users](../img/python/luc_vincent-012.png).
+![Anaconda all users](../img/python/lucvincent/luc_vincent-012.png).
 
 It is also very important that the two check-boxes of the PATH and the default Python are checked.
 
@@ -84,7 +84,7 @@ Now you have a Python distribution ready to [install Poppy softwares](#install-p
 
 #### Install Poppy softwares
 Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
-![Anaconda all users](../img/python/luc_vincent-031.png).
+![Anaconda all users](../img/python/lucvincent/luc_vincent-031.png).
 
 `pip install poppy-torso --user -U --no-deps`
 
@@ -163,13 +163,13 @@ As V-REP is not signed, you will have to pass the Windows SmartScreen (on Window
 ![VREP_smartscreen](../img/vrep/vrep2.png)
 
 During the installation, make sure to install *Visual C++ Redistributable 2010* and *Visual C++ Redistributable 2012*.
-![cpp2010](../img/vrep/luc_vincent-056.png)
+![cpp2010](../img/vrep/lucvincent/luc_vincent-056.png)
 
-![cpp2012](../img/vrep/luc_vincent-059.png)
+![cpp2012](../img/vrep/lucvincent/luc_vincent-059.png)
 
 Even if you already have *Visual C++ Redistributable 2010* or *Visual C++ Redistributable 2012*, it is advised to "repair" them (it is a re-installation process).
 
-![cpp2012](../img/vrep/luc_vincent-060.png)
+![cpp2012](../img/vrep/lucvincent/luc_vincent-060.png)
 
 **After the installation you can [test if V-REP works well](#test-your-installation)**.
 
@@ -200,7 +200,7 @@ If everything works, a new tab have been opened on your default web-browser.
 You can program you robot in Snap! or in Python.
 
 
-![firewall](../img/vrep/luc_vincent-070.jpg)
+![firewall](../img/vrep/lucvincent/luc_vincent-070.jpg)
 
 
 ## Install drivers
