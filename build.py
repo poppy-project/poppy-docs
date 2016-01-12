@@ -54,7 +54,10 @@ def all():
 
 @app.cmd
 def clean():
-    [remove('{}.{}'.format(filename, ext)) for ext in 'html', 'pdf']
-
+    try:
+        for ext in 'html', 'pdf':
+            remove('{}.{}'.format(filename, ext))
+    except Exception as e:
+        print 'Could not clean properly: {}'.format(e.strerror)
 
 app.run()
