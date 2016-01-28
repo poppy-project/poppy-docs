@@ -23,7 +23,7 @@ fi
 mkdir $tmp_repo
 
 git clone -b gh-pages $git_url $tmp_repo
-cp $GH_REPO.html $tmp_repo
+cp $GH_REPO.html $tmp_repo/index.html
 cp $GH_REPO.pdf $tmp_repo
 cp -r img/ $tmp_repo/
 cp -r css/ $tmp_repo/
