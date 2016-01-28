@@ -4,7 +4,7 @@ python:
 sudo: required
 env:
   global:
-  - GH_USERNAME=pierre-rouanet
+  - GH_USERNAME=poppy-project
   - GH_REPO=poppy-docs
   - GIT_EMAIL=poppy-bot-ci@inria.fr
   - GIT_NAME=poppy-bot
