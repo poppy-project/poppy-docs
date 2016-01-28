@@ -30,7 +30,7 @@ All Poppy creatures:
 - are based on a Python library, [pypot](#TODO), allowing to control Dynamixel servomotors in an easy way,
 - have a simulated version available (based on V-REP),
 - can be controlled using a visual programming language ([Snap!](http://snap.berkeley.edu) a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language (connection for Matlab and Processing already exists) - see Chapter #TODO for details,
-- come with associated documentation, tutorials, examples, pedagogical activites.
+- come with associated documentation, tutorials, examples, pedagogical activities.
 
 They can be used as it is, or hacked to explore the shape of novel legs, arms, hands...
 

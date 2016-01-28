@@ -26,10 +26,12 @@ First, configure one XL-320 motor as "m1". To do that, connect it to your Raspbe
 ![XL320 configuration](../img/ergo-jr/motorconfig.jpg)
 
 Then, from the [assembly notebook](#TODO), you should run the cell #TODO. If you prefer the geek way, you can run from the Raspberry-Pi terminal command line:
+
 ```bash
 poppy-ergo-jr motorconfig m1
 ```
- When it is done and everything went well, disconnect it from your Raspberry-Pi.
+
+When it is done and everything went well, disconnect it from your Raspberry-Pi.
 
 Then, connect the longest cable to this motor. Connect a regular cable to the other side.
 
@@ -71,6 +73,7 @@ Mount both shift_one_sides on the motors.
 ![Another Step](../img/ergo-jr/assembly/step-5.jpg)
 
 ### Step 6
+
 Configure a third motor: "m3" (cell TODO).
 
 Add it on top. Make sure to have the pulley on the same side.
