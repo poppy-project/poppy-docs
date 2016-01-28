@@ -10,11 +10,12 @@ We recommend to configure motors in parallel of the hardware assembly. Meaning, 
 
 <!-- TODO: image notebook d'assembly -->
 
-### Configuring motor one at a time
+### Configuring motors one at a time
 
 As explained above, all motors have the same ID by default. Thus, it is important to **connect one motor at a time when configuring them.** Otherwise, it will not work as all motors connected will think that the order sent on the line is intended for them, they will all try to answer resulting in a big mess :-)
 
 Your electronic setup when configuring a motor should look like this:
+
 * the Raspberry-Pi
 * the shield on top and the AC plugged
 * a wire from the shield to the motor you want to configure
@@ -26,6 +27,7 @@ Pre-installed on your Raspberry-Pi also comes a [utility tool](https://gist.gith
 <!-- TODO: image du notebook  -->
 
 *Note: advanced users may directly use it from the command line terminal. For instance, to configure the motor "m3":*
+
 ```bash
 $ poppy-ergo-jr motorconfig m3
 

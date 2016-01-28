@@ -1,6 +1,6 @@
 % Poppy Documentation
 % Version 1.0
-% Nov. 2015
+% Jan. 2016
 
 # Introduction
 
@@ -12,7 +12,7 @@ In this documentation, we will try to cover everything from the short overview o
 
 In the first chapter, we will give you a simple but exhaustive overview of what you can do within this project, so you can quickly focus on the following chapters that cover what you are really interested in. While some advanced chapters may require a good understanding of mechanics, electronics or computer sciences, the [Getting Started](#getting-started) section is intended to be easily accessible by all readers.
 
-This book is licensed under the Creative Commons License, BY-SA. The source can be found in  [github](https://github.com/poppy-project/poppy-docs).
+This book is licensed under the Creative Commons License, BY-SA. The source can be found in [github](https://github.com/poppy-project/poppy-docs).
 
 ## Version
 
