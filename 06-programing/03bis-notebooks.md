@@ -15,9 +15,9 @@ This chapter presents a gallery of notebooks and tries to organize them into dif
 
 For each notebook, we provide a short description of what it does, with which robot/simulator it can be used and of course a link. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
 
-**If you see a notebook missing or want to submit your own, please [let us know](https://github.com/pierre-rouanet/poppy-docs/labels/notebooks)!**
+**If you see a notebook missing or want to submit your own, please [let us know](https://github.com/poppy-project/poppy-docs/labels/notebooks)!**
 
-## Getting started  
+## Getting started
 
 * **Controlling a Poppy Humanoid in V-REP: [Notebook](https://github.com/poppy-project/poppy-humanoid/blob/master/software/samples/notebooks/Controlling%20a%20Poppy%20humanoid%20in%20V-REP%20using%20pypot.ipynb)** - Describe how to setup a Poppy Humanoid in V-REP and how to control it (motor control and sensor reading) from pypot in Python.
 
