@@ -6,7 +6,7 @@ This chapter will guide you through how to control Poppy robots in Python. As it
 
 We will detail everything you need to know to directly program you robot using the Python embedded in the Poppy robot or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.
 
-We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of [Jupyter notebooks](http://jupyter.org). The next chapter, [Jupyter Notebooks Gallery](#jupyter-notebooks-gallery-using-python), presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc. 
+We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of [Jupyter notebooks](http://jupyter.org). The next chapter, [Jupyter Notebooks Gallery](#jupyter-notebooks-gallery-using-python), presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.
 
 All Poppy libraries are open source and are released under the [GPL v3](http://www.gnu.org/licenses/gpl.html) license. So you can freely access the source code on [github](https://github.com/poppy-project). Do not hesitate to fork them, send pull request and contribute!
 
@@ -42,7 +42,7 @@ This is summarized in the diagram below:
 
 ## Installation
 
-**First, note that if you only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the [web interface](#TODO) and have nothing to install on your machine!**
+**First, note that if you are only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the [web interface](#TODO) and have nothing to install on your machine!**
 
 What you need to install is summarized in the diagram below:
 
@@ -50,7 +50,7 @@ What you need to install is summarized in the diagram below:
 
 Yet, if you are planning to either
 
-* use a simulator (e.g. V-REP),
+* use a simulator (e.g. V-REP, or web simulator),
 * or want to directly plug the robot to your computer
 
 you will have to install Poppy libraries locally. They work on Windows, Mac OS, Linux, and have been tested on:
@@ -70,7 +70,7 @@ To give you a rapid overview of what you can do using Python to program Poppy ro
 * Retrieve values from the sensor and send motor commands
 * Start playing with primitive by recording motions by demonstration
 
-This section does not intend to cover everything that can be done in Python with Poppy but to give you sneak peaks of the most common features. For more advanced used, you should refer to the next section where we present a list of Jupyter notebooks each detailing a specific aspect or feature.  
+This section does not intend to cover everything that can be done in Python with Poppy but to give you sneak peaks of the most common features. For more advanced use, you should refer to the next section where we present a list of Jupyter notebooks each detailing a specific aspect or feature.
 
 In the following examples, we assume that you have a working environment meaning that you either:
 
@@ -82,6 +82,7 @@ In the following examples, we assume that you have a working environment meaning
 ### Create and connect to a Poppy robot
 
 #### Import the library
+
 The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called [module or package](https://docs.python.org/2/tutorial/modules.html).
 
 To do that, you write something similar to:
@@ -93,20 +94,25 @@ from poppy.creatures import *
 This will actually import all Poppy robots installed on the Python distribution you are using. If you want to use a specific robot, you can replace the *\** (which means all here) by the name of the robot you want.
 
 For the ErgoJr:
+
 ```python
 from poppy.creatures import PoppyErgoJr
 ```
+
 For the Torso:
+
 ```python
 from poppy.creatures import PoppyTorso
 ```
+
 For the Humanoid:
+
 ```python
 from poppy.creatures import PoppyHumanoid
 ```
 
 
-> Note: If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section TODO
+> Note: If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section TODO.
 
 ```python
 In [1]: from poppy.creatures import PoppyHumanoid
@@ -140,6 +146,7 @@ or
 # if you are using a Humanoid
 poppy = PoppyHumanoid()
 ```
+
 And that's it, if you did not see any error message it means that you are connected to your robot. If you see an exception like the one shown below, you should check the wire connection and try again:
 
 ```python
@@ -161,6 +168,15 @@ If you see an error message like this, check that you have launched V-REP and th
 ```python
 IOError: Connection to V-REP failed!
 ```
+
+#### Create the Robot object - with web simulator
+
+Currently only the Ergo Jr is usable with the web simulator.
+
+```python
+poppy = PoppyErgoJr(simulated='poppy-sim')
+```
+
 
 ### Access the sensors and motors
 
@@ -504,7 +520,7 @@ class KeepYourHeadStraight(LoopPrimitive):
         for m in self.robot.motors:
             m.moving_speed = 250
 
-        self.robot.m1.compliant = True        
+        self.robot.m1.compliant = True
         self.robot.m2.compliant = True
 
     def update(self):
@@ -517,6 +533,7 @@ As you can see, there is two main parts. The *setup* method which defines what n
 And the *update* method which will be regularly called: here is where we put the actual code for the sensori-motor loop: reading sensor - computing the new command - and sending the new command to the motors.
 
 Now that we have defined our primitive, we can instantiate it and start it:
+
 ```python
 # we specify we want the primitive to apply on the jr robot
 # and that the update method should be called at 50Hz
@@ -526,11 +543,13 @@ head_straight.start()
 ```
 
 You can stop it whenever you want:
+
 ```python
 head_straight.stop()
 ```
 
 And re-starting it again...
+
 ```python
 head_straight.start()
 ```
