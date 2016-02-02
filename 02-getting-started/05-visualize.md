@@ -2,26 +2,25 @@
 
 ### Simulated Poppy Creatures
 
-A simulated version of all Poppy robots (Humanoid, Torso, and Ergo Jr) is also available.
+Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are also available.
 
-**Note: If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.** 
+At the moment, only Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP.
 
-Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulator. More detailed of what you will have to do is given in the [section below](#using-v-rep).
+**Note: If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.**
 
-At the moment, only one simulator can be used. In further versions, we will also develop a web visualization hopefully simpler and lighter than the existing solution.
+Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulators. More detailed of what you will have to do is given in the [section below](#using-v-rep).
+
+Moreover, you will not have access to the robot web interface, but you will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the Snap! server).
 
 This allows the development and test of programs without having a real robot. This is particularly useful:
+
 * To discover and try the robot possibilities without having to spend money.
-* In a context where multiple users share a robot: for instance in a classroom where each group can work using the simulator and validate their program on the real robot.
+* In a context where multiple users share a robot; for instance in a classroom where each group can work using the simulator and validate their program on the real robot.
 * To design and run complex and time consuming experiments.
 
 We try to make the switch from a simulated Poppy robot to the real one as transparent and as simple as possible. Most of the documentation is actually valid for both simulated and real robots. Yet, a dedicated chapter *[Use a simulated robot](#todo)* will describe in details everything you need to know and do to use a simulated Poppy robot.
 
-**Warning: If you want to use Poppy robots on a simulator, you will have to install the poppy libraries locally on your computer.** Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulator. Moreover, you will not have access to the robot web interface, but you will have to manually launched the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap! server).
-
 **Once your computer is setup, you will be able to write a program for the simulator and directly use it on a real robot (or vice-versa).**
-
-At the moment, only one simulator can be used - V-REP. In further versions, we will also develop a web visualization, hopefully simpler and lighter than the existing solution.
 
 ### Using V-REP
 
@@ -32,9 +31,10 @@ At the moment, only one simulator can be used - V-REP. In further versions, we w
 ![Poppy Humanoid in V-REP](../img/humanoid/vrep.png)
 
 All main Poppy robots are available in V-REP:
+
 * Poppy Humanoid
 * Poppy Torso
-* Poppy ErgoJr
+* Poppy Ergo Jr
 
 To start using V-REP for controlling Poppy robots, you will need:
 * to install V-REP (work under Mac OS, Windows and GNU/Linux)
@@ -52,4 +52,3 @@ V-REP can be used to learn how to control motors, get information from sensors b
 ![Torso V-REP](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
 
 *Note: Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world.*
-
