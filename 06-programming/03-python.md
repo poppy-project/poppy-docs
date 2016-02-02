@@ -171,16 +171,29 @@ IOError: Connection to V-REP failed!
 
 #### Create the Robot object - with web simulator
 
-Currently only the Ergo Jr is usable with the web simulator.
+Currently only the Ergo Jr is usable within the web simulator.  
+It also requires specific versions of libraries to be used properly.
 
-```python
-poppy = PoppyErgoJr(simulated='poppy-sim')
+To make sure you meet these requirements, you can type this command from your shell:
+
+```pash
+pip install pypot>=2.12 poppy-creature>=1.8 poppy-ergo-jr>=1.6 --upgrade
 ```
 
+You can then instantiate the poppy-ergo-jr creature:
+
+```bash
+poppy-services --threejs --snap --no-browser poppy-ergo-jr
+```
+
+This will create a server for _Snap!_ on port `6969`, and a server for the visualizer on port `8080`.
+
+You can then head to the [visualizer page](https://poppy-project.github.io/poppy-docs).
 
 ### Access the sensors and motors
 
 The robot object you just created contains two main groups of objects:
+
 * motors
 * sensors
 
@@ -210,7 +223,7 @@ for m in poppy.motors:
     print(m.present_position)
 ```
 
-Of course, you can also access a specific motor. To do that, you need to know the name fo the motor you want to access. You can find this list in the assembly documentation of your robot.
+Of course, you can also access a specific motor. To do that, you need to know the name for the motor you want to access. You can find this list in the assembly documentation of your robot.
 
 You can also obtain a list of all motors name directly from python:
 ```python
@@ -237,10 +250,13 @@ The most common values for motors are:
 * present_load
 
 Similarly, you can get data from your sensors. Depending on the Poppy robot you have different sensors available. You can get the list of all sensors in the exact same way you did for motors:
+
 ```python
 print([s.name for s in poppy.sensors])
 ```
+
 And then access a specific sensors by its name. For instance, to get an image from the camera of the Ergo Jr:
+
 ```python
 img = poppy.camera.frame
 ```
@@ -249,7 +265,7 @@ img = poppy.camera.frame
 
 #### Send motor commands
 
- Now that we have shown you how to read values from your robot, it is time to learn how to make it move!
+Now that we have shown you how to read values from your robot, it is time to learn how to make it move!
 
 This is actually really similar to what you have just seen. Instead of getting the *present_position* of a motor you simply have to set its *goal_position*.
 
@@ -265,7 +281,7 @@ The motor should now be stiff. And then, to make it move to its zero position:
 poppy.m3.goal_position = 0
 ```
 
->Note: *present_position* and *goal_position* are actually two different registers. The first refers to the current position of the motor (read only) while the second corresponds to the target position you want your robot to reach. Thus, they can have different values while the motor is still moving to reach its *goal_position*.
+> Note: *present_position* and *goal_position* are actually two different registers. The first refers to the current position of the motor (read only) while the second corresponds to the target position you want your robot to reach. Thus, they can have different values while the motor is still moving to reach its *goal_position*.
 
 
 As a slightly more complex example we will make it go to 30 degrees then -30° three times:
@@ -293,6 +309,7 @@ for _ in range(3):
 As you can see, this method takes three arguments, the target position, the duration of the move and whether to wait or not the end of the motion.
 
 If you want to move multiple motors at the same time, you can simply do something like:
+
 ```python
 for _ in range(3):
     poppy.m1.goal_position = -20
@@ -304,6 +321,7 @@ for _ in range(3):
 ```
 
 or use a python dictionary storing the target position per motor you want to move, that can be given to the goto_position method:
+
 ```python
 pos_1 = {'m1': -20, 'm3': 30}
 pos_2 = {'m1': 20, 'm3': -30}
@@ -313,7 +331,7 @@ for _ in range(3):
     poppy.goto_position(pos_2, 0.5, wait=True)
 ```
 
->Note: You can turn a motor back to its compliant mode (where you can freely move it) by setting its compliant register to True:
+> Note: You can turn a motor back to its compliant mode (where you can freely move it) by setting its compliant register to True:
 ```python
 poppy.m3.compliant = True
 ```
@@ -323,9 +341,11 @@ poppy.m3.compliant = True
 Pypot provides you with the primitive mechanism, which are simply pre-defined behaviors that can be attached to your robot. In this section, we will show you how to use some primitives already existing for recording and playing motions. You can also define your own primitive but this is out of the scope of this section, you will find details on how to do this in dedicated notebooks.
 
 #### Record a motion by demonstration
+
 Designing choreographies for your robot using *goal_position* or *goto_position* can be long and kind of troublesome. Fortunately, there is a much more efficient way of doing this: recording motions by directly demonstrating the move on the robot.
 
 This can be summarized into few steps:
+
 * make the robot compliant so you can move it by hand
 * start the recording
 * actually moves the robot so it follows whatever move/choreography you can think of
@@ -334,28 +354,34 @@ This can be summarized into few steps:
 And now to do that in Python:
 
 So, first we turn off the compliance of all motors of the robot:
+
 ```python
 for m in poppy.motors:
     m.compliant = True
 ```
 
 Then, we have to include the primitive used for recording motion:
+
 ```python
 from pypot.primitive.move import MoveRecorder
 ```
 
 To create this primitive, you have to give the following arguments:
+
 * on which robot you want to use this primitive (this can be useful if you are working with multiple robot at a time - for instance you can record a move on a robot and at the same time make it reproduce by another one: this [notebook](#TODO) will guide you on how to do this).
 * the record frequency of the move you want to register: how many position per second will be recorded - the higher the more accurate the record will be but also more data will have to be processed - good values are usually between 10Hz and 50Hz.
 * the motors that you want to record. you can record a move on a subpart of you robot, for instance only on the left arm.
 
 Here, we will record a move on the whole robot at 50Hz:
+
 ```python
 recorder = MoveRecorder(poppy, 50, poppy.motors)
 ```
->Note: we used *poppy.motors* to specify that we want all motors if you only want let's say the two first motors of an Ergo Jr you could have used *[poppy.m1, poppy.m2]* instead.
+
+> Note: we used *poppy.motors* to specify that we want all motors if you only want let's say the two first motors of an Ergo Jr you could have used *[poppy.m1, poppy.m2]* instead.
 
 Now it is time to record. As it can be hard to both move the robot and type Python command at the same time, we will make a small script, that:
+
 * wait 5s so you can get ready to record
 * start the record
 * record for 10 seconds
@@ -381,10 +407,13 @@ record.stop()
 ```
 
 Now, you should have a move recorded. You can retrieve it from the recorder primitive:
+
 ```python
 my_recorded_move = record.move
 ```
+
 and check how many positions where recorded:
+
 ```python
 print(len(my_recorded_move.positions()))
 ```
@@ -409,11 +438,13 @@ for m in poppy.motors:
 ```
 
 Then, you can simply start the replay:
+
 ```python
 player.start()
 ```
 
 And if you want to play it three times in a row:
+
 ```python
 for _ in range(3):
     player.start()
@@ -431,10 +462,11 @@ Poppy libraries and more particularly pypot provides you with tools to easily wr
 To do that, we will free the two first motors, so they can be moved by hand. Two other motors will try to lively compensate the motion applied on the free motors.
 
 We need few simple steps:
+
 1. read values from sensors (here the two free motors)
-* compute command from those readings
-* set new motor command
-* go back to step 1.
+1. compute command from those readings
+1. set new motor command
+1. go back to step 1.
 
 > Note: this example is designed for the Ergo Jr. It could be adapted to other Poppy robots, by changing the motors used. Yet, it is not that obvious which one to use to have a "cool" result.
 
@@ -463,12 +495,14 @@ for m in jr.motors:
 ```
 
 Finally, we free the two first motors:
+
 ```python
-jr.m1.compliant = True        
+jr.m1.compliant = True
 jr.m2.compliant = True
 ```
 
 Now, that everything is setup we write our very simple sensori-motor loop like this:
+
 ```python
 import time
 
@@ -492,7 +526,7 @@ while True:
 * **Step 2:** Here, we defined the base position so the motors *m1*/*m4* and *m2*/*m6* are parallel. Thus, to compensate the head position, we simply have to define the new motor goal position as the opposite of the read present position.
 * **Step 3:** We simply set the goal position as the just computed command
 
-Those steps are included inside an infinite loop - with a time.sleep to avoid CPU overhead.
+Those steps are included inside an infinite loop - with a `time.sleep` to avoid CPU overhead.
 
 > Note: to stop this *while True* loop, you will have to use the classical Ctrl-c, or use the stop button if you are running it through Jupyter.
 
