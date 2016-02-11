@@ -87,3 +87,7 @@ For each notebook, we provide a short description of what it does, with which ro
 ### Extending Poppy softwares
 
 * **Define your own Poppy creature: [Notebook]()** -
+
+## Contributing to this gallery
+
+Do not hesitate to let us know if some cool Notebooks are missing! You can directly send pull-request on github or uses the [issue tracker](https://github.com/poppy-project/poppy-docs/labels/notebooks) using the *notebooks* label.
