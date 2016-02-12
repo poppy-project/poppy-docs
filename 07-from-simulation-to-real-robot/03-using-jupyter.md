@@ -8,7 +8,7 @@ Thus to switch from simulation to a real robot, you need to switch from your loc
 
 ### Connect to the Jupyter on the robot
 
-Once connected to the robot web interface (we will assume here its hostname is *poppy.local*, just replace it by the new hostname if you changed it), you should see a **open Ipython notebook** link.
+Once connected to the robot web interface (we will assume here its hostname is *poppy*, just replace it by the new hostname if you changed it), you should see a **open Ipython notebook** link.
 
 ![open notebook link](../img/poppy_home.png)
 
