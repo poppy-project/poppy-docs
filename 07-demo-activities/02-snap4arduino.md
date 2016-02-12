@@ -37,7 +37,7 @@ poppy.snap.run()
 
 * Lancez Snap4Arduino et importez les blocs *pypot-snap-blocks.xml*.
 (une fenêtre avertissant que le projet importé a été créé par Snap! apparaît ; elle est sans conséquence.)
-* Dans les blocs Arduino, cliquez sur *Connect Arduino *pour établir la connexion entre Snap4Arduino et votre platine.
+* Dans les blocs Arduino, cliquez sur *Connect Arduino* pour établir la connexion entre Snap4Arduino et votre platine.
 ![connect](../img/activity/snap4arduino/connect.png)
 
 Un message de confirmation apparaît, signe que la connexion est effective.
@@ -59,5 +59,5 @@ On peut donc alors construire l'instruction suivante, qui fera bouger le moteur 
 Le script de commande du moteur *head_z* de Poppy entre -40° et 40° deviendrait alors :
 ![script avec map](../img/activity/snap4arduino/instructions_avec_map.png)
 
-* Cette méthode de contrôle a pour principal défaut de "bloquer" la carte Arduino avec le StandardFirmata : il serait plus agréable de pouvoir simplement lire les données du port série envoyées par l'Arduino, et ainsi pouvoir téléverser le programme de son choix dans l'Arduino. Ceci est discuté [ici](https://forum.poppy-project.org/t/snap-et-arduino/1892/2 ).
+Cette méthode de contrôle a pour principal défaut de "bloquer" la carte Arduino avec le StandardFirmata : il serait plus agréable de pouvoir simplement lire les données du port série envoyées par l'Arduino, et ainsi pouvoir téléverser le programme de son choix dans l'Arduino. Ceci est discuté [ici](https://forum.poppy-project.org/t/snap-et-arduino/1892/2 ).
 Toutefois, la page du projet  [Snap4Arduino](http://s4a.cat/snap/) liste les composants annexes (LCD display, UltraSound Sensor) pouvant être directement contrôlés, et explique en [détail](http://blog.s4a.cat/2015/03/13/Extending-Firmata-for-Snap4Arduino.html) comment modifier le StandardFirmata pour intégrer un nouveau composant.
