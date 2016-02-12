@@ -14,7 +14,7 @@ Once connected to the robot web interface (we will assume here its hostname is *
 
 When clicked it will start Jupyter on the robot and redirect you to the Jupyter webserver. You should then see the root of the notebook folder hosted on the robot:
 
-![notebook folder on poppy](#TODO)
+![notebook folder on poppy](../img/jupyter/root-folder.jpg)
 
 This is where you can put your own notebooks. Of course, you can create folder, organize them as you want, etc...
 
@@ -81,7 +81,10 @@ The main drawback of this client/server way of working is that the versions and 
 
 The Python installed on the robot is Python 2.7 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed python packages will be available soon (TODO!). At the moment, the easier way to obtain it, is to used a *terminal notebook* which can be directly run from the Jupyter interface.
 
-![Launch a terminal](#TODO)
+![Launch a terminal](../img/jupyter/open-terminal.jpg)
+
+![Jupyter terminal](../img/jupyter/terminal.jpg)
+
 
 Using the same technique, you can install 3rd pary libraries directly on the robot. The [pip](https://pip.readthedocs.org) and [conda](http://conda.pydata.org/docs/) utility tool are installed and should be used when possible.
 
