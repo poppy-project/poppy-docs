@@ -38,7 +38,7 @@ if [[ "$TRAVIS" == "true" ]]; then
         set +e
         # Push the new documentation only if it is not a pull request and we are on master
         pushd $tmp_repo
-            git push origin --delete gh-pages
+            git push origin --delete --quiet gh-pages
             git add -A
             git commit -m "Doc generated after commit $last_commit_sha (travis build #$TRAVIS_BUILD_NUMBER)"
             git push origin gh-pages --quiet
