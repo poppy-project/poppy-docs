@@ -31,9 +31,8 @@
             ]
         }
     },
-    "pdf": {
-        "headerTemplate": "_TITLE_",
-        "footerTemplate": " _SECTION_ _PAGENUM_"
+    "variables": {
+        "poppy_doc_version": "1.0"
     }
     
 }
