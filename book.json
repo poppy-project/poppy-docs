@@ -1,0 +1,40 @@
+{
+    "structure": {
+        "readme": "introduction/README.md"
+    },
+    "plugins": [
+        "-share",
+        "versions", 
+        "github", 
+        "mathjax",
+        "numbered-headings", 
+        "printlinks", 
+        "copy-code-button", 
+        "youtubex"
+    ],
+    "pluginsConfig": {
+        "versions": {
+            "type": "languages"
+        },
+        "github": {
+            "url": "https://github.com/poppy-project/poppy-docs"
+        },
+        "sharing": {
+            "facebook": true,
+            "twitter": true,
+            "google": false,
+            "weibo": false,
+            "instapaper": false,
+            "vk": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper"
+            ]
+        }
+    },
+    "pdf": {
+        "headerTemplate": "_TITLE_",
+        "footerTemplate": " _SECTION_ _PAGENUM_"
+    }
+    
+}
