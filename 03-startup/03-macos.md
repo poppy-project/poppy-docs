@@ -61,8 +61,6 @@ On Mac OS you have the choice of the command line `dd` tool or using the graphic
 
 #### Alternative method
 
-**Note: Some users have reported issues with using Mac OS X to create SD cards.**
-
 These commands and actions need to be performed from an account that has administrator privileges.
 
 - From the terminal run `df -h`.
@@ -98,6 +96,3 @@ These commands and actions need to be performed from an account that has adminis
 
     (or: open Disk Utility and eject the SD card)
 
----
-
-*This article uses content from the Raspberry Pi documentation page [mac.md](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md), which is shared under the [Creative Commons Attribution-ShareAlike 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/)*
