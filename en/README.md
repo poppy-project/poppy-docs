@@ -12,7 +12,7 @@ This book is licensed under the Creative Commons License, BY-SA. The source can 
 
 ## Version
 
-This is the version 1.0 of the Poppy documentation.
+This is the version {{ book.poppy_doc_version }} of the Poppy documentation.
 
 It contains the documentation for:
 
