@@ -1,6 +1,6 @@
 # Setup your Poppy Board
 
-**Note: this chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, go to the [installation for advanced users section](../07-installation-for-advanced-users/01-install-poppy-softwares.md)**
+**Note: this chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, go to the [installation for advanced users section](../installation-for-advanced-users/README.md)**
 
 Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or a Odroid for the older versions.
 
@@ -15,7 +15,7 @@ You will only need a computer with a SD card reader to write the image on the SD
 
 ## Download the image
 
-<!-- TODO: AJouter lien images (et les uploader aussi) -->
+<!-- TODO: add image links (et les uploader aussi) -->
 You have to choose the image to download depending on your Poppy creature and the targeted board:
 
 * [Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)
@@ -30,6 +30,6 @@ With the image file corresponding to your Poppy creature, you need to use an ima
 
 See our guide for your system:
 
-- [Windows](02-windows.md)
-- [Mac OS](03-macos.md)
-- [GNU/Linux](04-linux.md)
+- [Windows](windows.md)
+- [Mac OS](macos.md)
+- [GNU/Linux](linux.md)
