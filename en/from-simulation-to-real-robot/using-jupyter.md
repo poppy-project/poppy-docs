@@ -1,6 +1,6 @@
 ## Using Jupyter Python Notebooks
 
-One of the advantages of working with Jupyter Notebooks is the possibility to use it as a client/server approach. Each Poppy robot hosts a Jupyter server that can be accessed via the web interface (see [section quickstart](#use-the-web-interface) for details).
+One of the advantages of working with Jupyter Notebooks is the possibility to use it as a client/server approach. Each Poppy robot hosts a Jupyter server that can be accessed via the web interface (see [section quickstart](#TODO) for details).
 
 When working in simulation, everything is run and stored locally on your computer. While when working with a real robot you can program it from a web browser on your own machine but your notebooks are actually stored and run in the robot.
 

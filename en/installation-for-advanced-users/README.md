@@ -16,14 +16,14 @@ Whatever your Operating System if you are getting started with Python and want t
 
 ### Install everything needed for a Poppy Board
 
-The easiest way to setup the control board of your Poppy Creature is to use one of the pre-made SD-card images. Those images come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card. This procedure is described in the [Setup section](#setup-your-poppy-board).
+The easiest way to setup the control board of your Poppy Creature is to use one of the pre-made SD-card images. Those images come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card. This procedure is described in the [Startup section](../startup/README.md).
 
 Download the image of your system :
 
 * [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) if you are using a **Raspberry Pi 2**
 * [A special Ubuntu 14.04](http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&tag=ODROID-U3&bid=243) if you are using a Odroid U3
 
-Write the image to the SD-card with you favourite disk writer tool as explained in [this part](#write-an-image-to-the-sd-card).
+Write the image to the SD-card with you favourite disk writer tool as explained in the [startup section](../startup/README.md).
 
 Connect to your board in SSH. Use
 
