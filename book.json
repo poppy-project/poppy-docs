@@ -1,7 +1,6 @@
 {
-    "structure": {
-        "readme": "introduction/README.md"
-    },
+    "title": "Documentation of the Poppy Platform",
+
     "plugins": [
         "-share",
         "versions", 
