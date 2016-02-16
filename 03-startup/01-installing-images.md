@@ -18,10 +18,9 @@ You will only need a computer with a SD card reader to write the image on the SD
 <!-- TODO: AJouter lien images (et les uploader aussi) -->
 You have to choose the image to download depending on your Poppy creature and the targeted board:
 
-* Poppy ErgoJr
-* Poppy Torso
-* Poppy Humanoid
-
+* [Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)
+* [Poppy Torso](#TODO)
+* [Poppy Humanoid](#TODO)
 
 The .zip file you have downloaded need to be unzipped to get the image file for writing to your SD card.
 
