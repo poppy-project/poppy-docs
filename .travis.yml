@@ -1,28 +1,8 @@
-language: python
-python:
-- 2.7
-sudo: required
-env:
-  global:
-  - GH_USERNAME: poppy-project
-  - GH_REPO: poppy-docs
-  - GIT_EMAIL: poppy-bot-ci@inria.fr
-  - GIT_NAME: poppy-bot
-  - secure: "XEjzjNj3b0IzkqLW9bFpdDerMTMZ7TAbY8TzjXKqtTKUPuXL5Tu5X+l99KM5i0qDo5cfnSz2czMwdzgOUtrL6gtaZsuI0hN002KhWub0s6m+mWKM8MMP3drIcJFXts81mXYA8gxOXYBHCSi+4u7/HAMx9zzE866yEc+QPlC8y7fIys2nE/+4HtLs2rDuBQ3OAz9Mrzp4dujhiBu9ZLx57ryrInl2ugCLmJqJ73T+amMqd7tAe3fw/mS/Jm/2ouXZvBQppRkCjYRB3CgAJZMgqbyEbJzeFE5dAieeifxhH8xDkmjbP9KqTlQ+u+dNFjI8o/Katgbqf9tpDNYUYSU55wt4Zar6x5jKklbYko6bXNxyRx80UJOI3AY0YjtVlJq/gGuaTh6kNyKvzpTlKrW+JMjuOh6rabDUpe8z755V1L7DMRL/orCyhQTOlMZ218e8RVnHuGx+sk3RMcgPBtOi7nVclKgOdtCHWLPHKhL0G++vUEnDJ8KUtyyqingpNX3xVKoxmnrlz+oK3xasAV4RJmOEW6CaASE6s4SG5DJBNBRCJgcM9czfG6lpr1LmgmpKzY5ii8eJ4NnZXoULPqD7RQPFpc0onhVjsLannll5pvXCfI/HJU7d1AKj2KWq9o4SU92AcaM/GaD3OLqwXI77/MOhis7bF+J/NlXNoGianzQ="
-
-addons:
-  apt:
-    packages:
-    - texlive
-    - texlive-latex-extra
-    - dvipng
-    - lmodern
+sudo: false
+language: node_js
+node_js:
+  - "stable"
+  - "4.1"
+  - "0.12"
 before_install:
-- ". ./ci/before_install.sh"
-script:
-- ". ./ci/update_documentation.sh"
-notifications:
-  email:
-  - poppy-bot-ci@inria.fr
-  on_failure: change
-  on_success: change
+  - npm install svgexport -g
