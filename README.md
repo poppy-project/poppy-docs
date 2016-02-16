@@ -2,7 +2,12 @@
 # Poppy docs
 This doc is automatically built with [GitBooks](https://www.gitbook.com/book/poppy-project/poppy-docs/details).
 
-You edit this documentation with the [GitBooks web editor](https://www.gitbook.com/book/poppy-project/poppy-docs/edit)(preferred version), edit it directly with the GitHub interface or with your favourite text editor and git command line.
+You edit this documentation with the [GitBooks web editor](https://www.gitbook.com/book/poppy-project/poppy-docs/edit) (preferred version), edit it directly with the GitHub interface or with your favourite text editor and git command line.
+## Download
+You can view this documentation with different formats: 
+* [html version](https://poppy-project.gitbooks.io/poppy-docs/content/en/)
+* [pdf version](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs)
+* [epub version](https://www.gitbook.com/download/epub/book/poppy-project/poppy-docs)
 
 ## Edit this documentation
 ### If you are in the [poppy-project](https://github.com/poppy-project) team
@@ -23,5 +28,4 @@ GitBook is used as a continuous integration service, but you can also build the 
   gitbook build ./
   ```
 
-[![image](en/img/cover.png)](http://poppy-project.GitHub.io/poppy-docs/)
 
