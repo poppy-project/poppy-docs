@@ -10,7 +10,7 @@ env:
 
 before_install:
   - npm install gitbook-cli -g
-  - "sudo -v && wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()""
+  - sudo -v && wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
 install:
   - gitbook install
 script:
@@ -19,8 +19,4 @@ script:
 
 after_success:
   -  ./ci/update_documentation.sh
-notifications:
-  email:
-  - poppy-bot-ci@inria.fr
-  on_failure: change
-  on_success: change
+
