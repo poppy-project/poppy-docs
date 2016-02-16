@@ -47,6 +47,4 @@ Please note that the use of the `dd` tool can overwrite any partition of your ma
 
 - Remove the SD card from the card reader.
 
----
 
-*This article uses content from the Raspberry Pi documentation page [linux.md](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md), which is shared under the [Creative Commons Attribution-ShareAlike 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/)*
