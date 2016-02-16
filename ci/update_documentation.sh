@@ -9,12 +9,6 @@ git_url=https://$GH_TOKEN@github.com/$GH_USERNAME/$GH_REPO.git
 # Configure Git to push with GitHub Oauth token
 # git remote set-url origin $git_url
 
-# Install Sphinx
-pip install -q --upgrade argvee
-
-# Build the doc
-python build.py all
-
 tmp_repo=/tmp/$GH_REPO-doc
 
 if [ -d $tmp_repo ]; then
@@ -23,10 +17,7 @@ fi
 mkdir $tmp_repo
 
 git clone -b gh-pages $git_url $tmp_repo
-cp $GH_REPO.html $tmp_repo/index.html
-cp $GH_REPO.pdf $tmp_repo
-cp -r img/ $tmp_repo/
-cp -r css/ $tmp_repo/
+cp -r _book/* $tmp_repo/
 
 # Upload it to gh-pages
 # Exit if commit is untrusted

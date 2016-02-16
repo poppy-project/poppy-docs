@@ -14,7 +14,7 @@
 * Connectez votre platine, ouvrez Arduino et téléversez le firmware StandardFirmata. (disponible via Fichier - Exemples - Firmata).
 * Branchez un potentiomètre sur la sortie analogique A0, comme illustré ci-dessous  :
 
-![montage](../img/activity/snap4arduino/montage.jpg)
+![montage](../../img/activity/snap4arduino/montage.jpg)
 
 
 ### Lancement de la simulation (dans le cas d'un Poppy simulé dans Vrep)

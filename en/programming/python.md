@@ -6,7 +6,7 @@ This chapter will guide you through how to control Poppy robots in Python. As it
 
 We will detail everything you need to know to directly program you robot using the Python embedded in the Poppy robot or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.
 
-We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of [Jupyter notebooks](http://jupyter.org). The next chapter, [Jupyter Notebooks Gallery](#jupyter-notebooks-gallery-using-python), presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.
+We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of [Jupyter notebooks](http://jupyter.org). The next chapter, [Jupyter Notebooks Gallery](notebooks.md), presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.
 
 All Poppy libraries are open source and are released under the [GPL v3](http://www.gnu.org/licenses/gpl.html) license. So you can freely access the source code on [github](https://github.com/poppy-project). Do not hesitate to fork them, send pull request and contribute!
 
