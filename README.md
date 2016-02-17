@@ -17,11 +17,11 @@ If you are looking for something to contribute in the documentation, you have ma
 ## Editing basics
 The source code of the documentation is [hosted on Github](http://github.com/poppy-project/poppy-docs). The Github [Fork & Pull workflow](https://help.github.com/articles/using-pull-requests) is used to accept and review changes.
 
-The documentation uses the [GitBook](https://www.gitbook.com/book/poppy-project/poppy-docs/details) service for publishing the rended website. [See more information about how GitBook works](http://help.gitbook.com/).
+The documentation uses the [GitBook](https://www.gitbook.com/book/poppy-project/poppy-docs/details) service for publishing the rendered website. [See more information about how GitBook works](http://help.gitbook.com/).
 
-The documentation is written in [Markdown mark up language](https://help.github.com/articles/markdown-basics).
+The documentation is written in the [Markdown mark up language](https://help.github.com/articles/markdown-basics).
 
-You can find any discussions about the contents of the documentation on the [Github issue tracker](https://github.com/poppy-project/poppy-docs/issues).
+You can find discussions about the contents of the documentation on the [Github issue tracker](https://github.com/poppy-project/poppy-docs/issues).
 
 ## Getting started and prerequisites
 
