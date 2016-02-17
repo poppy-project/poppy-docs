@@ -17,7 +17,7 @@
     ],
     "pluginsConfig": {
         "versions": {
-            "type": "languages"
+            "type": "tags"
         },
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"

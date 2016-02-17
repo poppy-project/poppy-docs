@@ -15,7 +15,7 @@ If you are looking for something to contribute in the documentation, you have ma
 * Check the broken links in the travis-ci logs (the ci build will fail if there is broken links) [![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs)
 
 ## Editing basics
-The source code of the tutorial is [hosted on Github](http://github.com/poppy-project/poppy-docs). The Github [Fork & Pull workflow](https://help.github.com/articles/using-pull-requests) is used to accept and review changes.
+The source code of the documentation is [hosted on Github](http://github.com/poppy-project/poppy-docs). The Github [Fork & Pull workflow](https://help.github.com/articles/using-pull-requests) is used to accept and review changes.
 
 The documentation uses the [GitBook](https://www.gitbook.com/book/poppy-project/poppy-docs/details) service for publishing the rended website. [See more information about how GitBook works](http://help.gitbook.com/).
 
@@ -50,7 +50,7 @@ and you can edit the chapter directly on github.com.
 
 ![Edit button](contributing/img/edit.png)
 
-Markdown syntax is used to edit the individual pages of the tutorial.
+Markdown syntax is used to edit the individual pages of the documentation.
 
 ![Github editor](contributing/img/github_editor.png)
 
@@ -58,7 +58,7 @@ Click on "Commit changes" to save your changes and create a pull request as [exp
 
 ### New content and complex changes
 
-For adding new chapters, writing longer snippets of text or adding images, you need to get a copy of the tutorial to your local computer.
+For adding new chapters, writing longer snippets of text or adding images, you need to get a copy of the documentation to your local computer.
 
 Either use the Github app for your operating system (mentioned above) or `git` command line to get the repository locally. You get the repository address from the front page of your own Github repository fork:
 
@@ -72,7 +72,7 @@ Download the [Gitbook Editor](https://www.gitbook.com/editor/) application to yo
 
 Then you can open the documentation in Gitbook Editor (*File* > *Open book*).
 
-Make any changes in the tutorial using Gitbook and then save changes (*Book* > *Save all*).
+Make any changes in the documentation using Gitbook and then save changes (*Book* > *Save all*).
 <!-- TODO push or not-->
 
 If you don't want to download the Gitbook Editor app you can also go to the [Gitbook website](http://gitbook.com), sign up for free with your GitHub account and work directly in your browser.
@@ -93,6 +93,8 @@ Github emails will notify you for the follow up process.
 
 # Building the documentation (advanced users)
 If you want to build the html version in your comptuter, without installing the desktop application of the [Gitbook Editor](https://www.gitbook.com/editor/), you can also build the book with a command line tool.
+
+You have to install npm and [calibre](https://calibre-ebook.com/download) (the way depends on your OS).
 
 ```bash
 git clone https://github.com/poppy-project/poppy-docs.git
