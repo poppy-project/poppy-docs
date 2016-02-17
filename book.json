@@ -5,6 +5,7 @@
         "-share",
         "versions", 
         "github", 
+        "richquotes",
         "mathjax",
         "numbered-headings", 
         "printlinks", 
