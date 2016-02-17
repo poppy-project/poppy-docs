@@ -34,12 +34,6 @@
         "ga": {
             "token": "UA-44384879-1"
         },
-        "numbered-headings": {
-            h1:before, h2:before, h3:before, h4:before, h5:before {
-              color: #aaa;
-              width: 40px;
-            }
-        },
         "sharing": {
             "facebook": false,
             "twitter": false,
