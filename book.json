@@ -17,9 +17,6 @@
         "youtube"
     ],
     "pluginsConfig": {
-        "versions": {
-            "type": "tags"
-        },
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
         },
