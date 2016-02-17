@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs)
 # Poppy documentation
 This is the source code repository for the documentation of the [Poppy Project](http://poppy-project.org). The documentation is visible on [docs.poppy-project.org](http://docs.poppy-project.org/) so if you want to read it, please go there. If you want to contribute please do go further with this file.
 
@@ -8,6 +7,12 @@ You can view the documentation in these different formats:
 
 # How to contribute
 The Poppy Documentation is licensed under a Creative Commons Attribution-ShareAlike 4.0 license. Everyone is free to add, edit and correct the documentation.
+
+## Looking for where to contribute ?
+If you are looking for something to contribute in the documentation, you have many choices:
+* Look at the issues in the [GitHub issue tracker](https://github.com/poppy-project/poppy-docs/issues)
+* Check the [TODO links or comments](https://github.com/poppy-project/poppy-docs/search?utf8=%E2%9C%93&q=TODO) in the mardkown files
+* Check the broken links in the travis-ci logs (the ci build will fail if there is broken links) [![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs)
 
 ## Editing basics
 The source code of the tutorial is [hosted on Github](http://github.com/poppy-project/poppy-docs). The Github [Fork & Pull workflow](https://help.github.com/articles/using-pull-requests) is used to accept and review changes.
@@ -29,7 +34,7 @@ For contributing to the documentation the following is needed to get started:
 
 First fork the [poppy-project/poppy-docs](https://github.com/poppy-project/poppy-docs) repository to your personal Github account:
 
-![Fork button](contributing/images/fork.png)
+![Fork button](contributing/img/fork.png)
 
 ## Editing chapter content
 
@@ -43,11 +48,11 @@ For simple changes like typo corrections you can use the Github online editor:
 
 and you can edit the chapter directly on github.com.
 
-![Edit button](contributing/images/edit.png)
+![Edit button](contributing/img/edit.png)
 
 Markdown syntax is used to edit the individual pages of the tutorial.
 
-![Github editor](contributing/images/github_editor.png)
+![Github editor](contributing/img/github_editor.png)
 
 Click on "Commit changes" to save your changes and create a pull request as [explained below](#making-a-pull-request).
 
@@ -78,7 +83,7 @@ After you have finished your changes you need to create [a pull request](https:/
 
 In your own repository on Github press do *Compare & pull request*
 
-![PR](contributing/images/pull_request.png)
+![PR](contributing/img/pull_request.png)
 
 Fill in the information *why* this change is being made. The reviewer can see the details of the actual change, so you don't need repeat the content of the change.
 
