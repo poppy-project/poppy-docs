@@ -10,7 +10,7 @@ The Poppy Documentation is licensed under a Creative Commons Attribution-ShareAl
 
 ## Looking for where to contribute ?
 If you are looking for something to contribute in the documentation, you have many choices:
-* Look at the issues in the [GitHub issue tracker](https://github.com/poppy-project/poppy-docs/issues)
+* Look at the issues in the [Github issue tracker](https://github.com/poppy-project/poppy-docs/issues)
 * Check the [TODO links or comments](https://github.com/poppy-project/poppy-docs/search?utf8=%E2%9C%93&q=TODO) in the mardkown files
 * Check the broken links in the travis-ci logs (the ci build will fail if there is broken links) [![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs)
 
@@ -92,7 +92,7 @@ Then press *Create pull request*.
 Github emails will notify you for the follow up process.
 
 # Building the documentation (advanced users)
-If you want to build the html version in your comptuter, without installing the desktop application of the [Gitbook Editor](https://www.gitbook.com/editor/), you can also build the book with a command line tool.
+If you want to build the html version in your computer, without installing the desktop application of the [Gitbook Editor](https://www.gitbook.com/editor/), you can also build the book with a command line tool.
 
 You have to install npm and [calibre](https://calibre-ebook.com/download) (the way depends on your OS).
 
@@ -108,6 +108,6 @@ gitbook pdf ./
 
 # Further information and help
 
-GitHub has an excellent [documentation](https://help.github.com/). Check it out if you need help!
+Github has an excellent [documentation](https://help.github.com/). Check it out if you need help!
 For further questions feel free to post thread in the [Poppy Project forum](forum.poppy-project.org).
 
