@@ -1,5 +1,7 @@
 language: node_js
 # sudo: required
+node_js:
+  - "4.0"
 env:
   global:
   - GH_USERNAME: poppy-project
