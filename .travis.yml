@@ -3,12 +3,20 @@ language: node_js
 node_js:
   - "4.0"
 env:
+  - CXX=g++-4.8
   global:
   - GH_USERNAME: poppy-project
   - GH_REPO: poppy-docs
   - GIT_EMAIL: poppy-bot-ci@inria.fr
   - GIT_NAME: poppy-bot
   - secure: "rq7pyyNMfmK5oQCeL5jspFLCLuEhLFQ/fr640apMoZD+wD4ZAVPUOUR6qK9Va09LF1uNtPZFGFpleo7r2J4lEPtI0Jl70u6SVDfybYT2nwNt/6q8FJmOEqKqKRnWv3Q4UHfI4EA22vBzJV4IOsc/BA8sR9JP++DRTlyGZeJYTrPseOOmVsl2IHvpWW95D5kxxHdivXA3w60o9HU2Y7InqB5jVX1eVqcoheJs8KRqQBYlKmrrkrEuBrMao0zJsvFtROUGaAszdZpiYUsp3oliIvu4DCSKa+rs5pPkB2Y396OAakbvpWBVWGeqpPOsB5W2Vi7lEwnnzMo6Ct8sOLDSraqjGyU8xEiyGapg4fop+oj9u15wNOtjjOqm+OCzuTzpxj/LthNnGkWoYaQVQP2fKqEuHhPw6RQN4c8rKZKNl1sFO/9Irb639S7jdCvqxtipVuGOSd1KwMkC8CpxnVTtxdVRhXTfqhiq2qmMcPXCa10I19a1LcZFSFkh/YRIWwP0HmS8St46yGg4kHc5SKZUZE2ZcPAAIrCqX+a53rWUOyZaixsyW+3l9WuHCef+oIDsI15iQ4KWhjc/lPl77QzGmSmT46c9fitm2SR+XH8ooCYBrkcICLzVpVT8kU2iqErIivVIQEviQGwKZL/+Wp9CAYjpghPenVok+3WotNTmX7c="
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 
 before_install:
   - npm install gitbook-cli -g
