@@ -5,7 +5,7 @@
 
 Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
 
-This section intends at giving you hints and stressing some critical points so you aware of of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
+This section intends at giving you hints and stressing some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
 
 
 ### Assembling an Ergo Jr
