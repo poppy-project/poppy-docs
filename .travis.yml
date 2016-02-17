@@ -10,11 +10,17 @@ env:
 
 before_install:
   - npm install gitbook-cli -g
+  - npm install broken-link-checker -g
+  - npm install http-server -g
+
   # - sudo -v && wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | sudo python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
 install:
   - gitbook install
 script:
   - gitbook build ./
+  - cd _book/ && http-server -p 8081 -s &
+  - blc http://localhost:8081/en/index.html -ro --exclude poppy.local
+
   # - gitbook build pdf ./
 
 after_success:
