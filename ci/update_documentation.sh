@@ -9,6 +9,12 @@ git_url=https://$GH_TOKEN@github.com/$GH_USERNAME/$GH_REPO.git
 # Configure Git to push with GitHub Oauth token
 # git remote set-url origin $git_url
 
+# Push the broken links
+git add contributing/broken_links.txt
+git commit -m "Update broken links after commit $last_commit_sha"
+git push --quiet origin git_url > /dev/null 2>&1
+
+
 tmp_repo=/tmp/$GH_REPO-doc
 
 if [ -d $tmp_repo ]; then
@@ -30,10 +36,11 @@ if [[ "$TRAVIS" == "true" ]]; then
         set +e
         # Push the new documentation only if it is not a pull request and we are on master
         pushd $tmp_repo
-            git push origin --delete --quiet gh-pages
+            # /dev/null to hide any sensitive credential data that might otherwise be exposed.
+            git push origin --delete --quiet gh-pages > /dev/null 2>&1
             git add -A
             git commit -m "Doc generated after commit $last_commit_sha (travis build #$TRAVIS_BUILD_NUMBER)"
-            git push origin gh-pages --quiet
+            git push --force --quiet origin gh-pages > /dev/null 2>&1
         popd
     fi
 fi
