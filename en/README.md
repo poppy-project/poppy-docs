@@ -16,10 +16,9 @@ This is the version {{ book.poppy_doc_version }} of the Poppy documentation.
 
 It contains the documentation for:
 
--   Poppy Humanoid 1.0.1 hardware
--   Poppy Torso 1.0.1 hardware
--   Poppy ErgoJr beta 6 hardware
-
+-   Poppy Humanoid hardware version 1.0.1
+-   Poppy Torso hardware version 1.0.1 
+-   Poppy ErgoJr hardware version beta 6 
 -   poppy_humanoid library version 1.1.1
 -   poppy_torso library version 1.1.5
 -   poppy_ergo_jr library version 1.4.0

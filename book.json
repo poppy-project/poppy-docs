@@ -19,20 +19,25 @@
             "url": "https://github.com/poppy-project/poppy-docs"
         },
         "sharing": {
-            "facebook": true,
-            "twitter": true,
+            "facebook": false,
+            "twitter": false,
             "google": false,
             "weibo": false,
             "instapaper": false,
             "vk": false,
             "all": [
-                "facebook", "google", "twitter",
-                "weibo", "instapaper"
+                "facebook", "google", "twitter", "instapaper"      
             ]
         }
     },
     "variables": {
-        "poppy_doc_version": "1.0"
+        "poppy_doc_version": "1.0",
+        "poppy-humanoid_humanoid_hardware_version": "1.0",
+        "poppy-humanoid_humanoid_software_version": "1.0",
+        "poppy-torso_hardware_version": "1.0",
+        "poppy-torso_software_version": "1.0",
+        "poppy-ergo-jr_hardware_version": "1.0",
+        "poppy-ergo-jr_software_version": "1.0",
     }
     
 }
