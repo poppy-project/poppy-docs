@@ -1,5 +1,4 @@
 # Summary
-* [Introduction](introduction/README.md)
 * [Getting started](getting-started/README.md)
     * [Build a robot](getting-started/build.md)
     * [Connect to the robot](getting-started/connect.md)
