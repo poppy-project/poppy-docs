@@ -18,6 +18,7 @@ mkdir $tmp_repo
 
 git clone -b gh-pages $git_url $tmp_repo
 cp -r _book/* $tmp_repo/
+cp *.pdf $tmp_repo/
 
 # Upload it to gh-pages
 # Exit if commit is untrusted
