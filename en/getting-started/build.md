@@ -34,7 +34,7 @@ Also make sure, to **configure your motors** before assembling the robot as it i
 ![Poppy Humanoid BOM](../img/humanoid/bom.jpg)
 
 
-Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is not really more complicated than building a Meccano or some Swedish furnitures. It mainly consists on those few steps:
+Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is not really more complicated than building a Meccano or some Swedish furniture. It mainly consists on those few steps:
 
 
 <!-- TODO: add links of the advanced doc -->
