@@ -2,17 +2,21 @@
 # Poppy documentation
 This is the source code repository for the documentation of the [Poppy Project](http://poppy-project.org). The documentation is visible on [docs.poppy-project.org](http://docs.poppy-project.org/) so if you want to read it, please go there. If you want to contribute please do go further with this file.
 
+You can view the documentation in these different formats: 
+* [html version](https://poppy-project.gitbooks.io/poppy-docs/content/en/)
+* [pdf version](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs)
+
 # How to contribute
 The Poppy Documentation is licensed under a Creative Commons Attribution-ShareAlike 4.0 license. Everyone is free to add, edit and correct the documentation.
 
 ## Editing basics
 The source code of the tutorial is [hosted on Github](http://github.com/poppy-project/poppy-docs). The Github [Fork & Pull workflow](https://help.github.com/articles/using-pull-requests) is used to accept and review changes.
 
-The documentation uses the [GitBook](https://www.gitbook.com/book/poppy-project/poppy-docs/details) service for publishing its documentation. [See more information about how GitBook works](http://help.gitbook.com/).
+The documentation uses the [GitBook](https://www.gitbook.com/book/poppy-project/poppy-docs/details) service for publishing the rended website. [See more information about how GitBook works](http://help.gitbook.com/).
 
-The tutorial is written in [Markdown mark up language](https://help.github.com/articles/markdown-basics).
+The documentation is written in [Markdown mark up language](https://help.github.com/articles/markdown-basics).
 
-You can find any discussions about the contents of the tutorial on the [Github issue tracker](https://github.com/poppy-project/poppy-docs/issues).
+You can find any discussions about the contents of the documentation on the [Github issue tracker](https://github.com/poppy-project/poppy-docs/issues).
 
 ## Getting started and prerequisites
 
@@ -98,5 +102,4 @@ gitbook build ./
 
 GitHub has an excellent [documentation](https://help.github.com/). Check it out if you need help!
 For further questions feel free to post thread in the [Poppy Project forum](forum.poppy-project.org).
-
 
