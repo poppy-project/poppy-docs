@@ -31,7 +31,7 @@ script:
   - cd _book/ && http-server -p 8081 -s &
   - blc http://localhost:8081/en/index.html -ro --exclude poppy.local
 
-  # - gitbook build pdf ./
+  - gitbook pdf ./
 
 after_success:
   -  ./ci/update_documentation.sh
