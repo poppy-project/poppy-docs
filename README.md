@@ -101,6 +101,7 @@ cd poppy-docs/
 npm install gitbook-cli -g
 gitbook install
 gitbook build ./
+gitbook pdf ./
 ```
 
 # Further information and help
