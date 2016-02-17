@@ -7,11 +7,11 @@ In this section, we will describe how to start your robot and a give an overview
 Poppy creatures come with an embedded board which job is to control motors and access the sensors. This computer can be access through a web interface which makes it easy to control the robot from your own computer or a tablet without having to locally install anything specific.
 
 There are two ways to setup the board for your Poppy:
-* [**the easy way**]((#easy-way-use-the-poppy-sd-card): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
-* [**the hard way for advanced users**](diy-install-everything-from-scratch): install everything from scratch
+* **[the easy way](#easy-way-use-the-poppy-sd-card)**: use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
+* **[the hard way for advanced users](diy-install-everything-from-scratch)**: install everything from scratch
 
 
-*Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [TODO USE SIMU](#TODO) will guide you through all the detailed steps.*
+*Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre-made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [TODO USE SIMU](#TODO) will guide you through all the detailed steps.*
 
 #### Easy way: use the Poppy SD-card
 
@@ -25,8 +25,8 @@ The images can be found in the [github of the project](#TODO):
 * [for the Humanoid](#TODO)
 
 
-They can be writed to a SD-card (at least 8Go) by using classical utility tools. Details can be found on the procedure of <!-- TODO :lien interne -->
-One the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.
+They can be written to a SD-card (at least 8Go) by using classical utility tools. Details can be found on the procedure of <!-- TODO :lien interne -->
+Once the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.
 
 #### Advanced way: DIY, install everything from scratch
 
