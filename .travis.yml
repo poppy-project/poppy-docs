@@ -22,7 +22,7 @@ before_install:
   - npm install broken-link-checker -g
   - npm install http-server -g
   - gitbook install
-  - wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)"
+  - $(wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)") >/dev/null 2>&1
 
 script:
   - export PATH=$PATH:$HOME/calibre-bin/calibre
@@ -33,5 +33,5 @@ script:
   - blc http://localhost:8081/en/index.html -ro --exclude poppy.local
 
 after_success:
-  -  ./ci/update_documentation.sh
+  - . ./ci/update_documentation.sh
 
