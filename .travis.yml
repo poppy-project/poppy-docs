@@ -30,7 +30,7 @@ script:
   - gitbook pdf ./
 
   - cd _book/ && http-server -p 8081 -s &
-  - blc http://localhost:8081/en/index.html -ro --exclude poppy.local  | tee contributing/broken_links.txt
+  - blc http://localhost:8081/en/index.html -ro --exclude poppy.local  | tee contributing/checked_links.txt
   - grep -e 'BROKEN' -e 'Getting links from' -e 'Error' contributing/checked_links.txt > contributing/broken_links.txt
 
 after_success:
