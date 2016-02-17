@@ -4,13 +4,16 @@
     "plugins": [
         "-share",
         "versions", 
-        "github", 
         "richquotes",
-        "mathjax",
+        "github", 
+        "katex",
+        "retina",
+        "edit-link",
+        "language-picker",
         "numbered-headings", 
-        "printlinks", 
         "copy-code-button", 
-        "youtubex"
+        "todo",
+        "youtube"
     ],
     "pluginsConfig": {
         "versions": {
@@ -19,15 +22,19 @@
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
         },
+        "edit-link": {
+                "base": "https://github.com/poppy-project/poppy-docs/edit/master/",
+                "label": {
+                    "en": "Edit this page",
+                    "de": "Seite bearbeiten",
+                    "fr": "Editez cette page"
+                }
+            },
         "sharing": {
             "facebook": false,
             "twitter": false,
-            "google": false,
-            "weibo": false,
-            "instapaper": false,
-            "vk": false,
             "all": [
-                "facebook", "google", "twitter", "instapaper"      
+                "twitter", "facebook", "google", "instapaper"      
             ]
         }
     },
