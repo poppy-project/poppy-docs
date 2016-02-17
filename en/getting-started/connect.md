@@ -8,7 +8,7 @@ Poppy creatures come with an embedded board which job is to control motors and a
 
 There are two ways to setup the board for your Poppy:
 * [**the easy way**](#easy-way-use-the-poppy-sd-card): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
-* [**the hard way for advanced users**](installation-for-advanced-users/README.md): install everything from scratch
+* [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
 
 *Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [TODO USE SIMU](#TODO) will guide you through all the detailed steps.*
