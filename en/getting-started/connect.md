@@ -40,7 +40,7 @@ The other way is basically to install everything needed from scratch. This basic
 
 ![Linux](../img/linux.jpg)
 
-The entire procedure is detailed in the [Chapter TODO](#TODO). Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:
+**The entire procedure is detailed in the [Installation for advanced users](installation-for-advanced-users/README.md).** Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:
 * Customize a [Raspbian](https://www.raspbian.org) install for Poppy (setup a user/hostname...).
 * Setup the Poppy utility tools (for install/update)
 * Install the [Python Anaconda distribution](https://www.continuum.io/why-anaconda).
