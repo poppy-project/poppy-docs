@@ -5,7 +5,7 @@
 
 Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
 
-This section intends at giving you hints and stressing some critical points so you aware of of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
+This section intends at giving you hints and stressing some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
 
 
 ### Assembling an Ergo Jr
@@ -34,7 +34,7 @@ Also make sure, to **configure your motors** before assembling the robot as it i
 ![Poppy Humanoid BOM](../img/humanoid/bom.jpg)
 
 
-Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is not really more complicated than building a Meccano or some Swedish furnitures. It mainly consists on those few steps:
+Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is not really more complicated than building a Meccano or some Swedish furniture. It mainly consists on those few steps:
 
 
 <!-- TODO: add links of the advanced doc -->
@@ -46,8 +46,7 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 
 Patience and precision are your allies, but in case of errors do not panic: Poppy is a robot intended to be assembled and disassembled. If you pay attention to the few **warnings** bellows, and with a few trials and errors you will have a working Poppy Torso or  POppy Humanoid:
 
-*Warning 1:
-The Poppy humanoid and torso robots are built using mainly MX-28 and MX-64 Dynamixel servomotors, which are pretty powerful and may be harmful to your fingers or materials.
+*Warning 1: The Poppy humanoid and torso robots are built using mainly MX-28 and MX-64 Dynamixel servomotors, which are pretty powerful and may be harmful to your fingers or materials.
 So be very careful and put the robot in a free space while testing them.*
 
 *Warning 2: put the dot on the horn at the same point than the dot on the servo axis*
@@ -72,4 +71,4 @@ So be very careful and put the robot in a free space while testing them.*
 * Legs + Trunk (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md#3--legstorso-asembly) [(Video demonstration)](http://youtu.be/5i0xVlrJc-8)
 * Head [(Text instruction)](https://github.com/poppy-project/poppy-docs/blob/master/poppy-humanoid/assembly_doc/head_assembly.md)
 
-Ad previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. A detailed step by step assembly can be found in their dedicated Chapter [Step-by-step assembly of a Poppy Torso](#TODO) or Chapter [Step-by-step assembly of a Poppy Humanoid](#TODO). 
+As previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. A detailed step by step assembly can be found in their dedicated Chapter [Step-by-step assembly of a Poppy Torso](#TODO) or Chapter [Step-by-step assembly of a Poppy Humanoid](#TODO). 
