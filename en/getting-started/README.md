@@ -101,13 +101,13 @@ Heol's purpose is to put a smile on ill children's faces. It has the ability to 
 Its participation in the RoboCup (World Cup football for robot) is also envisaged.
 
 
-![Heol](../img/heol.jpg){height=250px}
+![Heol](../img/heol.jpg)
 
 ##### Poppyrate
 
 Un robot humanoïde open source basé sur Poppy plus abordable grâce à une taille plus petite et à des moteurs moins chers. La réduction de taille a aussi l'avantage de le rendre plus facilement imprimable sur les imprimante 3D grand public. Il a aussi l'objectif d'être le plus nomade possible et d'être personnalisable et extensible tout en restant compatible avec le logiciel de Poppy. A terme Poppyrate sera vendu en kit avec ou sans les pièces imprimés en 3D, pour tous les publics intéressé par la robotique humanoïde. Poppyrate est réalisé par la société ZeCloud.
 
-![Poppyrate](../img/poppyrate.jpg){height=250px}
+![Poppyrate](../img/poppyrate.jpg)
 
 Poppyrate.com
 Réseaux sociaux :
