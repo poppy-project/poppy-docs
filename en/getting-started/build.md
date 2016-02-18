@@ -5,7 +5,7 @@
 
 Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
 
-This section intends at giving you hints and stressing some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
+This section intends to give you hints and an approach of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
 
 
 ### Assembling an Ergo Jr
@@ -51,11 +51,11 @@ So be very careful and put the robot in a free space while testing them.*
 
 *Warning 2: put the dot on the horn at the same point than the dot on the servo axis*
 
-![image](../img/humanoid/zero.JPG)
+![](../img/humanoid/zero.JPG)
 
 *Warning 3: adjusts the three dots of the motors with three dots of structural parts.*
 
-![image](../img/humanoid/three_dots.jpg)
+![](../img/humanoid/three_dots.jpg)
 
 *Warning 4: use thread locker to prevent vibrations from untying the screws. However, dip the extremity of the screw on the thread locker is enough (a drop for each screw hole is too much), otherwise disassembling your robot can be very hard!*
 
