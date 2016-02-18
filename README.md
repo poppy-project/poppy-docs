@@ -1,17 +1,20 @@
 # Poppy documentation
+
 This is the source code repository for the documentation of the [Poppy Project](http://poppy-project.org). The documentation is visible on [docs.poppy-project.org](http://docs.poppy-project.org/) so if you want to read it, please go there. If you want to contribute please do go further with this file.
 
 You can view the documentation in these different formats: 
-* [html version](https://poppy-project.gitbooks.io/poppy-docs/content/en/)
-* [pdf version](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs)
+* [HTML version](https://poppy-project.gitbooks.io/poppy-docs/content/en/)
+* [PDF version](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs)
 
 # How to contribute
+
 The Poppy Documentation is licensed under a Creative Commons Attribution-ShareAlike 4.0 license. Everyone is free to add, edit and correct the documentation.
 
 ## Looking for where to contribute ?
+
 If you are looking for something to contribute in the documentation, you have many choices:
 * Look at the issues in the [Github issue tracker](https://github.com/poppy-project/poppy-docs/issues)
-* Check the [TODO links or comments](https://github.com/poppy-project/poppy-docs/search?utf8=%E2%9C%93&q=TODO) in the mardkown files
+* Check the [TODO links or comments](https://github.com/poppy-project/poppy-docs/search?utf8=%E2%9C%93&q=TODO) in the markdown files
 * Check the broken links in the travis-ci logs (the ci build will fail if there is broken links) [![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs)
 
 ## Editing basics
@@ -42,9 +45,9 @@ First fork the [poppy-project/poppy-docs](https://github.com/poppy-project/poppy
 
 For simple changes like typo corrections you can use the Github online editor:
 
-* Open your local fork page on Github,
-* go to *README.md* file in any chapter,
-* press the *Edit* icon (pen)
+1. Open your local fork page on Github,
+1. Go to *README.md* file in any chapter,
+1. Press the *Edit* icon (pen)
 
 and you can edit the chapter directly on github.com.
 
@@ -62,11 +65,15 @@ For adding new chapters, writing longer snippets of text or adding images, you n
 
 Either use the Github app for your operating system (mentioned above) or `git` command line to get the repository locally. You get the repository address from the front page of your own Github repository fork:
 
-`git clone git@github.com:yourgithubusername/poppy-docs.git`
+```bash
+git clone git@github.com:yourgithubusername/poppy-docs.git
+```
 
 Then, create a branch for your new changes to sit in. It helps to call the branch something related to the changes you are going to make.
 
-`git checkout -b contributing`
+```bash
+git checkout -b contributing
+```
 
 Download the [Gitbook Editor](https://www.gitbook.com/editor/) application to your computer.
 
@@ -92,7 +99,7 @@ Then press *Create pull request*.
 Github emails will notify you for the follow up process.
 
 # Building the documentation (advanced users)
-If you want to build the html version in your computer, without installing the desktop application of the [Gitbook Editor](https://www.gitbook.com/editor/), you can also build the book with a command line tool.
+If you want to build the HTML version in your computer, without installing the desktop application of the [Gitbook Editor](https://www.gitbook.com/editor/), you can also build the book with a command line tool.
 
 You have to install npm and [calibre](https://calibre-ebook.com/download) (the way depends on your OS).
 
