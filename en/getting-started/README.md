@@ -6,17 +6,17 @@
 
 The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, deploy, and share. We promote open-source by sharing hardware, software, and web tools.
 
-The Poppy project has been originally released by the [INRIA Flowers](http://www.inria.fr/equipes/flowers/).
+The Poppy project has been originally released by the [Inria Flowers](http://www.inria.fr/equipes/flowers/).
 
-This project aims at developing a robotic open-source and open-hardware kits, for the conception and programming of robotic creatures. These kits also contain an integrated software environment, easily installable, dedicated to the use of the robot, and associated with a web platform enabling the community to share experiences and to contribute to its improvement.
+This project aims at developing a robotic open-source and open-hardware kits, for the conception and programming of robotic creatures. These kits also contain an integrated software environment, easy to install, dedicated to the use of the robot, and associated with a web platform enabling the community to share experiences and to contribute to its improvement.
 
 Recently, Poppy robots have been used as a educational and motivational tool to learn engineering and digital sciences.
 
 The Poppy project also consists of a very active and diverse community. People of different horizons collaborate to improve the project ; they add features to the core libraries, release advanced behaviors, create pedagogical contents, design artistic performances, or even new robots.
 
-To facilitate these exchanges two supports are available:
-- [the poppy-project forum](https://forum.poppy-project.org/) for help, dialogue and to share ideas
-- [github](https://github.com/poppy-project) to deposit your contributions
+To ease these exchanges two supports are available:
+- [The poppy-project forum](https://forum.poppy-project.org/) for help, dialogue and to share ideas
+- [Github](https://github.com/poppy-project) to deposit your contributions
 
 All sources of the Poppy Project (software and hardware) are available on [Github](https://github.com/poppy-project).
 
@@ -56,7 +56,9 @@ You can change them easily thanks to rivets. depending on the type of activities
 
 ![Ergo Jr tools](../img/ergo-jr/3D/multitool.gif)
 
-The Ergo Poppy Jr is ideal for start manipulating robots and for learning robotic without difficulties. It is particularly well suited for educational purposes (cheap, simple to assemble, and easily controllable) or can be a very nice desk decoration for geeks and makers...
+The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties.
+
+It is particularly well suited for educational purposes (cheap, simple to assemble, and easily controllable) or can be a very nice desk decoration for geeks and makers...
 
 You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/parts/BOM.md/)(BOM) and printing the [3D files](https://github.com/poppy-project/poppy-ergo-jr/releases/) available in the STL format.
 
@@ -92,7 +94,12 @@ The project was realized during an internship at INRIA Flowers by Joel Ortiz Sos
 
 ##### Heol
 
-Heol est un robot humanoïde de 34 cm conçus par l’association [Heol robotics](). Il est composé de 23 moteurs, le reste des pièces étant imprimées en 3D. Il est basé sur la librairie pypot qui lui permet de se mouvoir tel un petit homme. Heol qui signifie soleil en Breton, a pour but de redonner le sourire aux enfants malades, grâce à diverses applications. Il a la capacité d’être un outil pédagogique en devenant un support d’apprentissage pour des matières tel que la programmation, la conception mécanique, etc. La participation à la robocup (coupe du monde de football pour robot) est aussi envisagee.
+Heol – meaning "sun" in Breton – is a humanoid robot 34 cm tall made by association [Heol robotics](http://heol.io/). 23 motors compose it, all other parts are 3D printed. It also uses the Pypot library for its movements.
+
+Heol's purpose is to put a smile on ill children's faces. It has the ability to be an educational tool by becoming a learning support materials such as programming and mechanical design.
+
+Its participation in the RoboCup (World Cup football for robot) is also envisaged.
+
 
 ![Heol](../img/heol.jpg){height=250px}
 
