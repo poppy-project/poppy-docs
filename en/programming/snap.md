@@ -1,29 +1,30 @@
-# Programming Poppy robots using Snap!
+# Programming Poppy robots using _Snap!_
 
-Snap! is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.
+_Snap!_ is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.
 
-Snap! was inspired by Scratch (a project of
+_Snap!_ was inspired by Scratch (a project of
 the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch's features.
 
-Snap! is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip) in your personal computer and open the snap.html file in your browser.
+Snap! is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip) in your personal computer and open the `snap.html` file in your browser.
 
-**Note: Even if Snap! use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap! is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.**
+**Note: Even if _Snap!_ use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in _Snap!_ is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.**
 
-## Introduction to Snap! programming
-This chapter will focus on things necessary to understand in Snap! for using Poppy creatures.
+## Introduction to _Snap!_ programming
 
-If you want a well designed online lesson on Snap! we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students.
+This chapter will focus on things necessary to understand in _Snap!_ for using Poppy creatures.
+
+If you want a well designed online lesson on _Snap!_ we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students.
 
 Some of the snapshots and concepts of BJC have been used for writing this chapter.
 
-### Connect your robot to Snap!
+### Connect your robot to _Snap!_
 
 #### With a simulated robot with V-REP
 
 #### With a tangible robot
 
 Open the web interface of your robot in your web browser.
-Click on the "Start Snap! link"; it will start the python REST API to the robot and open the Snap! interface.
+Click on the "Start _Snap!_ link"; it will start the python REST API to the robot and open the _Snap!_ interface.
 
 Click on the file icon -> Examples -> click on "pypot snap blocks" and the "open" button.
 
@@ -31,42 +32,44 @@ Click on the file icon -> Examples -> click on "pypot snap blocks" and the "open
 
 ### Interface and general ideas
 
-### Saving in Snap!
-There is three way of saving a project in Snap!
+### Saving in _Snap!_
+
+There are three ways of saving a project in _Snap!_
+
 #### Save the project in your web browser
 
 ![Save click](../img/snap/snap_save.png)
 
-When you are not logged in Snap! cloud, the default behaviour of Snap! is to save you project in **your browser**.
+When you are not logged in _Snap! cloud_, the default behaviour of _Snap!_ is to save your project in **your browser**.
 
-Technically this use the Local Storage which is a memory space in your web browser where websites are allowed to store offline data. This is very convenient because you have not to register or to see Snap! project files, but keep in mind that **these projects are only visible in this specific web browser in this specific computer**.
+Technically this uses the Local Storage which is a memory space in your web browser where websites can store offline data. This is very convenient because you have not to register or to see _Snap!_ project files, but keep in mind that **these projects are only visible in this specific web browser in this specific computer**.
 
 #### Snap! Cloud
 
 > « There is no Cloud, it's just someone else's computer ».
 
-Instead of saving your projects on your web browser, you can save them in Snap! servers in UC Berkeley, called "cloud". Moreover, this allows you to share your project with anyone, with a simple HTML link.
+Instead of saving your projects on your web browser, you can save them in _Snap!_ servers in UC Berkeley, called "cloud". Moreover, this allows you to share your project with anyone, with a simple link.
 
-##### Create an account on Snap! cloud
+##### Create an account on _Snap!_ cloud
 
 Click on the cloud button -> "signup...".
 
 ![Create account](../img/snap/snap_cloud_1.png)
 
-Fill the required fields in the popup for signing up.
+Fill the required fields in the modal window for signing up.
 
 ![Create account](../img/snap/dialog-cloud-signup.png)
 
-You will soon receive a validation email with a random password.
-You can now login with your username and password
+You will soon receive a validation email with a random password.  
+You can now log in with your username and password.
 
 ![Login1](../img/snap/snap_login1.png)
 
-If you are in your personal computer, think to check the "stay signed in on this computer [...]" checkbox.
+If you use your personal computer, remember to check the "stay signed in on this computer [...]" checkbox.
 
 ![Login2](../img/snap/snap_login2.png)
 
-After login with your new account, you are free to change your password: click on the cloud button -> "Change Password".
+After logging in account, you are free to change your password: click on the cloud button -> "Change Password".
 
 ![Create account](../img/snap/logout-menu.png)
 
