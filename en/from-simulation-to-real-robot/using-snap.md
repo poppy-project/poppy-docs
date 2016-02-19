@@ -1,3 +1,3 @@
-## Using Snap!
+## Using _Snap!_
 
 TODO
