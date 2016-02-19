@@ -1,10 +1,8 @@
 # Poppy documentation
 
-This is the source code repository for the documentation of the [Poppy Project](http://poppy-project.org). The documentation is visible on [docs.poppy-project.org](http://docs.poppy-project.org/) so if you want to read it, please go there. If you want to contribute please do go further with this file.
+This is the source code repository for the documentation of the [Poppy Project](http://poppy-project.org). The documentation is visible on [docs.poppy-project.org](https://poppy-project.gitbooks.io/poppy-docs/content/en/) so if you want to read it, please go there. If you want to contribute please do go further with this file.
 
-You can view the documentation in these different formats: 
-* [HTML version](https://poppy-project.gitbooks.io/poppy-docs/content/en/)
-* [PDF version](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs)
+Documentation is also available to download as [PDF](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs).
 
 # How to contribute
 
