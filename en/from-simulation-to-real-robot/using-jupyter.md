@@ -1,8 +1,9 @@
 ## Using Jupyter Python Notebooks
 
-One of the advantages of working with Jupyter Notebooks is the possibility to use it as a client/server approach. Each Poppy robot hosts a Jupyter server that can be accessed via the web interface (see [section quickstart](#TODO) for details).
+One of the advantages of working with Jupyter Notebooks is the possibility to use it as a client/server approach.  
+Each Poppy robot hosts a Jupyter server accessible via the web interface (see [section quickstart](#TODO) for details).
 
-When working in simulation, everything is run and stored locally on your computer. While when working with a real robot you can program it from a web browser on your own machine but your notebooks are actually stored and run in the robot.
+When working in simulation, everything is run and stored locally on your computer. When working with a real robot you can program it from a web browser on your own machine but your notebooks are actually stored and run in the robot.
 
 Thus to switch from simulation to a real robot, you need to switch from your local instance of Jupyter to the remote one hosted by the robot. The steps are described below.
 
@@ -45,7 +46,7 @@ from poppy.creatures import PoppyHumanoid
 poppy = PoppyHumanoid(simulator='vrep')
 ```
 
-will become for a real robot:
+Will become for a real robot:
 
 ```python
 from poppy.creatures import PoppyHumanoid
@@ -53,7 +54,7 @@ from poppy.creatures import PoppyHumanoid
 poppy = PoppyHumanoid()
 ```
 
-Of course, this works for all existing poppy creatures: Humanoid, Torso and ErgoJr.
+Of course, this works for all existing Poppy creatures: Humanoid, Torso and ErgoJr.
 
 This is most of the changes that you should do.
 
@@ -77,15 +78,16 @@ def reset_position():
 
 ### Version and 3rd party libraries
 
-The main drawback of this client/server way of working is that the versions and 3rd party libraries that you used locally may differ from the one installed on the robot.
+The main drawback of this client/server way of working is that your locally installed software versions may differ from the one installed on the robot.
 
-The Python installed on the robot is Python 2.7 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed python packages will be available soon (TODO!). At the moment, the easier way to obtain it, is to used a *terminal notebook* which can be directly run from the Jupyter interface.
+The Python installed on the robot is Python 2.7 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed Python packages will be available soon (TODO!). At the moment, the easier way to get it is to used a *terminal notebook* which can be directly run from the Jupyter interface.
 
-![Launch a terminal](../img/jupyter/open-terminal.jpg)
+![Open a terminal](../img/jupyter/open-terminal.jpg)
 
 ![Jupyter terminal](../img/jupyter/terminal.jpg)
 
 
-Using the same technique, you can install 3rd pary libraries directly on the robot. The [pip](https://pip.readthedocs.org) and [conda](http://conda.pydata.org/docs/) utility tool are installed and should be used when possible.
+Using the same technique, you can install 3rd party libraries directly on the robot. The [pip](https://pip.readthedocs.org) and [conda](http://conda.pydata.org/docs/) utility tools are installed and should be used when possible.
 
-*Note that the embedded board are based on armv7 and thus some libraries may be hard to compile. We are maintaining a list of conda recipies specifically built for this platform [here](https://anaconda.org/poppy-project). Contributions are more than welcomed! *
+*Note that the embedded board are based on armv7 and thus some libraries may be hard to compile. We are maintaining a list of conda recipes specifically built for this platform [here](https://anaconda.org/poppy-project).  
+Contributions are more than welcomed! *
