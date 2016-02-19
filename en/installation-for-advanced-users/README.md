@@ -16,19 +16,21 @@ Whatever your operating system if you are getting started with Python and want t
 
 ### Install everything needed for a Poppy Board
 
-The easiest way to setup the control board of your Poppy Creature is to use one of the pre-made SD-card images. Those images come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card. This procedure is described in the [Startup section](../startup/README.md).
+The easiest way to setup the control board of your Poppy Creature is to use one of the ready-made SD-card images.  
+They come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card.  
+The [startup section](../startup/README.md) describes this procedure.
 
-Download the image of your system :
+Download the image of your system:
 
-* [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) if you are using a **Raspberry Pi 2**
-* [A special Ubuntu 14.04](http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&tag=ODROID-U3&bid=243) if you are using a Odroid U3
+* [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) if you are using a **Raspberry Pi 2**.
+* [A special Ubuntu 14.04](http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&tag=ODROID-U3&bid=243) if you are using a Odroid U3.
 
 Write the image to the SD-card with you favourite disk writer tool as explained in the [startup section](../startup/README.md).
 
-Connect to your board in SSH. Use
+Connect to your board in SSH:
 
-* `ssh pi@raspberrypi.local` password=raspberry for the Raspberry Pi
-* `ssh odroid@odroid.local` password=odroid for the Odroid U3
+* For the Raspberry Pi: `ssh pi@raspberrypi.local`, password=raspberry.
+* For the Odroid U3: `ssh odroid@odroid.local`, password=odroid.
 
 
 Download the install script:
@@ -37,15 +39,15 @@ Download the install script:
 wget https://raw.githubusercontent.com/poppy-project/poppy-installer/master/poppy-configure.sh
 ```
 
-Execute it with two parameters:
+This script takes two parameters:
 
-* the board name between {odroid, rpi}
-* the creature name between {poppy-humanoid, poppy-torso, poppy-ergo-jr}
+* The board name {odroid, rpi}.
+* The creature name {poppy-humanoid, poppy-torso, poppy-ergo-jr}.
 
-For example, if you want to build the system for a poppy-ergo-jr on a Raspberry Pi:
+To build the system for a Poppy Ergo Jr on a Raspberry Pi, one would run:
 
-```
-bash poppy-configure.sh rpi poppy-ergo-jr
+```bash
+poppy-configure.sh rpi poppy-ergo-jr
 ```
 
 Reboot after the end of the installation.  
@@ -62,11 +64,12 @@ If you want a step by step screencast of the installation of Anaconda and V-REP 
 
 #### Install Python
 
-We suggest you to use Anaconda Python distribution, but if you already have a Python distribution like Canopy with scientific packages (Numpy and Scipy) you can directly [install Poppy softwares](#install-poppy-softwares).
+We encourage the use of the Anaconda Python distribution.  
+However, if you already installed a Python distribution like Canopy (shipped with scientific packages), you can directly [install Poppy software](#install-poppy-softwares).
 
 ##### Anaconda
 
-Download Anaconda Python distribution (400Mo) [here for 64-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe).
+Download Anaconda Python distribution (400 MB) [here for 64-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe).
 
 
 Install it by clicking on "next" at each step. If you intend to install Anaconda for all users of your computer, be sure to select "all users".
