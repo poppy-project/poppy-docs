@@ -1,18 +1,18 @@
 # Installation for advanced users
 
-You may want to install Poppy softwares only if you are in one of these situations:
+You may want to install Poppy software only if you are in one of these situations:
 
-1. You want to control a simulated robot
+1. You want to control a simulated robot.
 2. [special case for advanced users] You want to install yourself the operating system of your robot instead of using a [pre-made ISO image](../installing-images/README.md).
-3. [special case for advanced users] You want to control a Poppy creature from your computer WITHOUT using the Raspberry Pi board.
+3. [special case for advanced users] You want to control a Poppy creature from your computer **without** using the Raspberry Pi board.
 
-**Note: The first situation is a "normal case" but the second and third are special usages affordable only by advanced users who have a good comprehension of the global system.**
+**Note: Though first situation is a "standard case", the second and third ones are affordable only by advanced users who have a good comprehension of the global system.**
 
 ## Install the Python Interpreter and Poppy softwares
 
-Poppy is run by Python computer code. Depending on your Operating System you will have to install Python and in any case you'll have to install the required software libraries.
+Poppy is run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries.
 
-Whatever your Operating System if you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
+Whatever your operating system if you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
 
 ### Install everything needed for a Poppy Board
 
