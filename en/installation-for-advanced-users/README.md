@@ -8,7 +8,7 @@ You may want to install Poppy software only if you are in one of these situation
 
 **Note: Though first situation is a "standard case", the second and third ones are affordable only by advanced users who have a good comprehension of the global system.**
 
-## Install the Python Interpreter and Poppy softwares
+## Install the Python Interpreter and Poppy software
 
 Poppy is run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries.
 
@@ -57,7 +57,7 @@ You can test your installation with the web interface in your web browser http:/
 If there is any issue don't hesitate to post a message on the [issue tracker on Github](https://github.com/poppy-project/poppy-installer/issues) or in the dedicated section of [the forum](https://forum.poppy-project.org/c/support).
 
 
-### Install Python and Poppy softwares on Windows
+### Install Python and Poppy software on Windows
 
 <!-- TODO ajouter Schéma installation Thibault -->
 If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see [these videos](lientodo).
@@ -65,7 +65,7 @@ If you want a step by step screencast of the installation of Anaconda and V-REP 
 #### Install Python
 
 We encourage the use of the Anaconda Python distribution.  
-However, if you already installed a Python distribution like Canopy (shipped with scientific packages), you can directly [install Poppy software](#install-poppy-softwares).
+However, if you already installed a Python distribution like Canopy (shipped with scientific packages), you can directly [install Poppy software](#install-poppy-software).
 
 ##### Anaconda
 
@@ -81,7 +81,7 @@ It is also very important that the two check-boxes of the PATH and the default P
 ![Anaconda install](../img/python/anaconda_install_path.png)
 
 
-Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
+Now you have a Python distribution ready to [install Poppy software](#install-poppy-software).
 
 
 ##### Miniconda (alternative to Anaconda)
@@ -95,9 +95,9 @@ Open the Command Prompt (press the windows key and type "Command Prompt"), type 
 
 `conda install numpy scipy ipython-notebook matplotlib`
 
-Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
+Now you have a Python distribution ready to [install Poppy software](#install-poppy-software).
 
-#### Install Poppy softwares
+#### Install Poppy software
 
 Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
 ![Anaconda all users](../img/python/lucvincent/luc_vincent-031.png).
@@ -105,9 +105,9 @@ Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anacon
 `pip install poppy-torso --user -U --no-deps`
 
 This will install everything necessary to control a Poppy Humanoid.
-Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
+Substitute "poppy-torso" with "poppy-humanoid" or "poppy-ergojr" to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
 
-In case of update, it is advised to upgrade pypot (the motor library control) and the creature package separately :
+In case of update, it is advised to upgrade Pypot (the motor library control) and the creature package separately:
 
 ```bash
 pip install pypot --user -U --no-deps
@@ -115,18 +115,18 @@ pip install poppy-torso --user -U --no-deps
 ```
 
 
-### Install Python and Poppy softwares on Mac OSX
+### Install Python and Poppy software on Mac OSX
 
-Mac OSX has a Python distribution installed by default. Before installing Poppy softwares, you need to install the Python package manager pip.  
+Mac OSX has a Python distribution installed by default. Before installing Poppy software, you need to install the Python package manager pip.  
 Open a terminal and execute the command below:
 `curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python`
 
-You can now install Poppy softwares for the creature of your choice:
+You can now install Poppy software for the creature of your choice:
 `pip install poppy-torso --user -U --no-deps`
 
-Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
+Substitute "poppy-torso" with "poppy-humanoid" or "poppy-ergojr" to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
 
-### Install Python and Poppy softwares on GNU/Linux
+### Install Python and Poppy software on GNU/Linux
 
 Most of GNU/Linux distributions, have already a Python distribution installed by default.
 
@@ -154,7 +154,7 @@ On Arch Linux:
 curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
 sudo pacman -S python2-scipy python2-numpy python2-matplotlib
 ```
-You can now [install Poppy softwares](#install-poppy-softwares).
+You can now [install Poppy software](#install-poppy-software).
 
 **Note: The downside is the Python libraries from you distribution system are very often out of date.**
 
@@ -173,10 +173,10 @@ chmod +x miniconda.sh
 ./miniconda.sh
 ```
 
-You can now install some required and other useful dependencies for Poppy softwares with conda:
+You can now install some required and other useful dependencies for Poppy software with conda:
 `conda install numpy scipy ipython-notebook matplotlib`
 
-You can now [install Poppy softwares](#install-poppy-softwares).
+You can now [install Poppy software](#install-poppy-software).
 
 ## Install the robotic simulator V-REP
 
