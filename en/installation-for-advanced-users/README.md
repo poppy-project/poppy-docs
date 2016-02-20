@@ -228,7 +228,7 @@ If you see a firewall popup like the picture below, be sure to check the "privat
 
 If everything works, a new tab have been opened on your default web-browser.
 <!-- TODO: lien doc -->
-You can program you robot in Snap! or in Python.
+You can program you robot in _Snap!_ or in Python.
 
 ![firewall](../img/vrep/lucvincent/luc_vincent-070.jpg)
 
