@@ -10,7 +10,7 @@ At the moment, only Poppy Ergo Jr can be used in the web visualizer. If you want
 
 Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulators. More detailed of what you will have to do is given in the [section below](#using-v-rep).
 
-Moreover, you will not have access to the robot web interface, but you will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the Snap! server).
+Moreover, you will not have access to the robot web interface, but you will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the _Snap!_ server).
 
 This allows the development and test of programs without having a real robot. This is particularly useful:
 
@@ -43,7 +43,7 @@ To start using V-REP for controlling Poppy robots, you will need:
 
 **Note: Details about all those steps can be found in section *[Install everything locally for using a simulator](#TODO)*.**
 
-V-REP can be used to learn how to control motors, get information from sensors but also to interact with the simulated environment. It can be used using Python, Snap! or through the REST API. Here, are some examples of what the community has already been doing using it:
+V-REP can be used to learn how to control motors, get information from sensors but also to interact with the simulated environment. It can be used using Python, _Snap!_ or through the REST API. Here, are some examples of what the community has already been doing using it:
 
 * In a pedagogical activity to discover the different motor of your robot and how they can be controlled.
 
