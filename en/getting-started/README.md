@@ -16,9 +16,9 @@ The Poppy project also consists of a very active and diverse community. People o
 
 To ease these exchanges two supports are available:
 - [The poppy-project forum](https://forum.poppy-project.org/) for help, dialogue and to share ideas
-- [Github](https://github.com/poppy-project) to deposit your contributions
+- [GitHub](https://github.com/poppy-project) to deposit your contributions
 
-All sources of the Poppy Project (software and hardware) are available on [Github](https://github.com/poppy-project).
+All sources of the Poppy Project (software and hardware) are available on [GitHub](https://github.com/poppy-project).
 
 ## The Poppy creatures
 
@@ -74,7 +74,7 @@ You can get all the parts yourself following the [bill of materials](http://popp
 
 It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is more affordable than the full kit (Poppy Humanoid), which makes it more suitable for uses in an educational, associative and makers context. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
 
-You can get all the parts yourself following the [bill of material](http://poppy-project.github.io/poppy-docs/poppy-torso/BOM.html). The 3D models for the parts can be found [in the github](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/). They are the same as Poppy Humanoid, simply without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/)).
+You can get all the parts yourself following the [bill of material](http://poppy-project.github.io/poppy-docs/poppy-torso/BOM.html). The 3D models for the parts can be found [in the GitHub](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/). They are the same as Poppy Humanoid, simply without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/)).
 
 ![Poppy Torso Vecto](../img/torso/vecto.png)
 
@@ -88,7 +88,7 @@ Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with
 
 <!-- TODO: belle photo de Poppy Right Arm -->
 
-The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa. Find more info and the sources in [the dedicated github repository](https://github.com/poppy-project/poppy-6dof-right-arm).
+The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa. Find more info and the sources in [the dedicated GitHub repository](https://github.com/poppy-project/poppy-6dof-right-arm).
 
 #### Small and low-cost humanoid
 

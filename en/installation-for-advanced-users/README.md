@@ -54,7 +54,7 @@ Reboot after the end of the installation.
 The hostname, default user and password will be all set to "poppy" (ssh poppy @poppy.local password=poppy).  
 You can test your installation with the web interface in your web browser http://poppy.local.
 
-If there is any issue don't hesitate to post a message on the [issue tracker on Github](https://github.com/poppy-project/poppy-installer/issues) or in the dedicated section of [the forum](https://forum.poppy-project.org/c/support).
+If there is any issue don't hesitate to post a message on the [issue tracker on GitHub](https://github.com/poppy-project/poppy-installer/issues) or in the dedicated section of [the forum](https://forum.poppy-project.org/c/support).
 
 
 ### Install Python and Poppy software on Windows
