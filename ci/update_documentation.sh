@@ -12,7 +12,7 @@ git_url=https://$GH_TOKEN@github.com/$GH_USERNAME/$GH_REPO.git
 # Push the broken links
 git add -A
 git commit -m "Update broken links after commit $last_commit_sha"
-git push --quiet origin git_url > /dev/null 2>&1
+git push --quiet $git_url master 
 
 
 tmp_repo=/tmp/$GH_REPO-doc
@@ -40,7 +40,7 @@ if [[ "$TRAVIS" == "true" ]]; then
             git push origin --delete --quiet gh-pages > /dev/null 2>&1
             git add -A
             git commit -m "Doc generated after commit $last_commit_sha (travis build #$TRAVIS_BUILD_NUMBER)"
-            git push --force --quiet origin gh-pages > /dev/null 2>&1
+            git push --force --quiet origin gh-pages 
         popd
     fi
 fi

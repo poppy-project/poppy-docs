@@ -25,18 +25,18 @@ The images can be found in the [github of the project](#TODO):
 * [for the Humanoid](#TODO)
 
 
-They can be writed to a SD-card (at least 8Go) by using classical utility tools. Details can be found on the procedure of <!-- TODO :lien interne -->
+They can be written to a SD-card (at least 8 Go) by using classical utility tools. Details can be found on the procedure of <!-- TODO :lien interne -->
 One the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.
 
 #### Advanced way: DIY, install everything from scratch
 
 The other way is basically to install everything needed from scratch. This basically means follow the same procedure as we are, to generate the image for SD-card. This can be useful if:
 
-* You are **working with a simulated robot** and thus have to manually install all the required softwares on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,
+* You are **working with a simulated robot** and thus have to manually install all the required software on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,
 * you want to customize the environment,
 * or simply if you like to understand how it works.
 
-**Warning:** *We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledges of how to install and setup a python environment.*
+**Warning:** *We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.*
 
 ![Linux](../img/linux.jpg)
 
@@ -52,9 +52,9 @@ The other way is basically to install everything needed from scratch. This basic
 
 Once your Poppy is built and its software is ready, the next step is to connect it to a network so you can start access it from your computer or smartphone/tablet and then control and program it.
 
-Indeed, except if you plug a keyboard and a screen to the embedded board you will not be able to directly use it. Thus, you have to connect to it to your network so you can remotely access it. This section will describe the main steps to follow in order to do that.
+Indeed, except if you plug a keyboard and a screen to the embedded board you will not be able to directly use it. Thus, you have to connect to it to your network so you can remotely access it. This section will describe the main steps to follow to do that.
 
-Poppy robots can use either ethernet (using cable) or wifi network. Yet, you first need to use an ethernet network so you can first configure the robot so it can then automatically use your specified wifi.
+Poppy robots can use either Ethernet (using cable) or wifi network. Yet, you first need to use an Ethernet network so you can first configure the robot so it can then automatically use your specified wifi.
 
 
 Poppy robots can use either Ethernet or wifi network. But first, plug the robot and your computer on the same Ethernet network.

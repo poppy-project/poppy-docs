@@ -25,6 +25,7 @@ before_install:
   - wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" > /dev/null
 
 script:
+  - set +e
   - export PATH=$PATH:$HOME/calibre-bin/calibre
   - gitbook build ./
   - gitbook pdf ./
@@ -32,7 +33,5 @@ script:
   - cd _book/ && http-server -p 8081 -s &
   - blc http://localhost:8081/en/index.html -ro --exclude poppy.local  | tee contributing/checked_links.txt
   - grep -e 'BROKEN' -e 'Getting links from' -e 'Error' contributing/checked_links.txt > contributing/broken_links.txt
-
-after_success:
   - . ./ci/update_documentation.sh
 

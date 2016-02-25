@@ -1,29 +1,30 @@
-# Programming Poppy robots using Snap!
+# Programming Poppy robots using _Snap!_
 
-Snap! is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.
+_Snap!_ is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.
 
-Snap! was inspired by Scratch (a project of
+_Snap!_ was inspired by Scratch (a project of
 the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch's features.
 
-Snap! is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip) in your personal computer and open the snap.html file in your browser.
+_Snap!_ is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip) in your personal computer and open the `snap.html` file in your browser.
 
-**Note: Even if Snap! use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap! is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.**
+**Note: Even if _Snap!_ use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in _Snap!_ is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/)(which is very similar to Chrome without tracking tools), or Google Chrome.**
 
-## Introduction to Snap! programming
-This chapter will focus on things necessary to understand in Snap! for using Poppy creatures.
+## Introduction to _Snap!_ programming
 
-If you want a well designed online lesson on Snap! we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students.
+This chapter will focus on things necessary to understand in _Snap!_ for using Poppy creatures.
+
+If you want a well designed online lesson on _Snap!_ we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students.
 
 Some of the snapshots and concepts of BJC have been used for writing this chapter.
 
-### Connect your robot to Snap!
+### Connect your robot to _Snap!_
 
 #### With a simulated robot with V-REP
 
 #### With a tangible robot
 
 Open the web interface of your robot in your web browser.
-Click on the "Start Snap! link"; it will start the python REST API to the robot and open the Snap! interface.
+Click on the "Start _Snap!_ link"; it will start the python REST API to the robot and open the _Snap!_ interface.
 
 Click on the file icon -> Examples -> click on "pypot snap blocks" and the "open" button.
 
@@ -31,48 +32,51 @@ Click on the file icon -> Examples -> click on "pypot snap blocks" and the "open
 
 ### Interface and general ideas
 
-### Saving in Snap!
-There is three way of saving a project in Snap!
+### Saving in _Snap!_
+
+There are three ways of saving a project in _Snap!_
+
 #### Save the project in your web browser
 
 ![Save click](../img/snap/snap_save.png)
 
-When you are not logged in Snap! cloud, the default behaviour of Snap! is to save you project in **your browser**.
+When you are not logged in _Snap!_ Cloud, the default behaviour of _Snap!_ is to save your project in **your browser**.
 
-Technically this use the Local Storage which is a memory space in your web browser where websites are allowed to store offline data. This is very convenient because you have not to register or to see Snap! project files, but keep in mind that **these projects are only visible in this specific web browser in this specific computer**.
+Technically this uses the Local Storage which is a memory space in your web browser where websites can store offline data. This is very convenient because you have not to register or to see _Snap!_ project files, but keep in mind that **these projects are only visible in this specific web browser in this specific computer**.
 
-#### Snap! Cloud
+#### _Snap!_ Cloud
 
 > « There is no Cloud, it's just someone else's computer ».
 
-Instead of saving your projects on your web browser, you can save them in Snap! servers in UC Berkeley, called "cloud". Moreover, this allows you to share your project with anyone, with a simple HTML link.
+Instead of saving your projects on your web browser, you can save them in _Snap!_ servers in UC Berkeley, called "cloud". Moreover, this allows you to share your project with anyone, with a simple link.
 
-##### Create an account on Snap! cloud
+##### Create an account on _Snap!_ cloud
 
 Click on the cloud button -> "signup...".
 
 ![Create account](../img/snap/snap_cloud_1.png)
 
-Fill the required fields in the popup for signing up.
+Fill the required fields in the modal window for signing up.
 
 ![Create account](../img/snap/dialog-cloud-signup.png)
 
-You will soon receive a validation email with a random password.
-You can now login with your username and password
+You will soon receive a validation email with a random password.  
+You can now log in with your username and password.
 
 ![Login1](../img/snap/snap_login1.png)
 
-If you are in your personal computer, think to check the "stay signed in on this computer [...]" checkbox.
+If you use your personal computer, remember to check the "stay signed in on this computer [...]" checkbox.
 
 ![Login2](../img/snap/snap_login2.png)
 
-After login with your new account, you are free to change your password: click on the cloud button -> "Change Password".
+After logging in account, you are free to change your password: click on the cloud button -> "Change Password".
 
 ![Create account](../img/snap/logout-menu.png)
 
-##### Share your Snap! project
-The big advantage of using Snap! cloud is the ability to share a copy of your project with anyone.
-To share a Snap! project, you first need to be logged in Snap! cloud and having your current project saved ("save" or "save as"). Go to the "open" menu:
+##### Share your _Snap!_ project
+
+The big advantage of using _Snap!_ Cloud is the ability to share a copy of your project with anyone.
+To share a _Snap!_ project, you first need to be logged in _Snap!_ Cloud and having your current project saved ("save" or "save as"). Go to the "open" menu:
 
 ![Open menu](../img/snap/snap_open.png)
 
@@ -93,25 +97,26 @@ You can copy and paste the URL and share it by the way you want to your friends 
 When you open a share project, the project is automatically opened in full screen on the sprite zone. To quit the full screen you have to click on the double arrow at the top of the snapshot below.
 ![Sharing URL](../img/snap/snap_share_full_screen.png)
 
-#### Export/Import your Snap! project
+#### Export/Import your _Snap!_ project
+
 If you have a limited access to internet and you want to share project with other people, the best way is to export it:
 ![Export section](../img/snap/snap_cloud_5.png)
 A new tab in your web browser will be opened with an XML file like the picture below.
 ![Export section](../img/snap/snap_xml_save_as.png)
-This file describe all your Snap! project in a a simple file. It's not made to be human readable so don't be afraid, you just have to save it on your computer. For that, do a right click, chose "save as" and a proper name and location on you computer for this project.
+This file describe all your _Snap!_ project in a a simple file. It's not made to be human readable so don't be afraid, you just have to save it on your computer. For that, do a right click, chose "save as" and a proper name and location on you computer for this project.
 
 If you want to import a previously exported project, you simply have to click on the import section of the file icon.
 ![import section](../img/snap/snap_import.png)
 
 ### Search Poppy blocks
 
-Every Poppy blocks in Snap! begin by a robot icon. So you can search them by the robot keyword. To search a specific block, do a right click on the block area, or use the keyboard shortcut CTRL+F.
+Every Poppy block in _Snap!_ begins by a robot icon. So you can search all of them by the robot keyword. To search a specific block, do a right click on the block area, or use the keyboard shortcut CTRL+F.
 ![find blocks](../img/snap/find_blocks.png)
 ![find blocks](../img/snap/find_blocks2.png)
 
-### First steps with Snap! and a Poppy creature
+### First steps with _Snap!_ and a Poppy creature
 
-#### Test the connection between Snap! and your creature
+#### Test the connection between _Snap!_ and your creature
 
 ##### If you are using a tangible robot
 
@@ -122,7 +127,7 @@ You have to go on the web homage of your robot with its URL. You can use its IP 
 The home page of your poppy creature should look like the snapshot below:
 ![find blocks](../img/snap/homepage.png)
 
-Click on the "Start Snap!" link to open the Snap! interface at start the connection with the Poppy robot.
+Click on the "Start Snap!" link to open the _Snap!_ interface at start the connection with the Poppy robot.
 
 Poppy special blocks are stored in the Examples. Go to "file" icon -> open -> Examples -> click on "Poppy blocks". It may take some time to load the blocks (~5-15 seconds), be patient.
 
@@ -136,19 +141,19 @@ Open V-REP, open a terminal (called *Command Prompt* on Windows), type and press
 
 If you have issues, look at the <!-- TODO --> section to see have more detailed informations.
 
-After having executed this command a tab in your web browser should have be opened to Snap! have loaded Poppy blocks.
+After having executed this command a tab in your web browser should have be opened to _Snap!_ have loaded Poppy blocks.
 
 #### Network
 
 First test your connection with the (tangible or simulated) robot with the "test connection" block.
 ![test connection](../img/snap/test_connection.png).
-if the block answer is "You may have connection troubles", your "host" variable inside the Snap! project is probably wrong. The host variable must be the IP or the hostname+".local" of your robot ; if you're using V-REP localhost is used to point to your own computer.
+if the block answer is "You may have connection troubles", your "host" variable inside the _Snap!_ project is probably wrong. The host variable must be the IP or the hostname+".local" of your robot ; if you're using V-REP localhost is used to point to your own computer.
 
 ![test connection3](../img/snap/test_connection3.png).
 
-### Build your own blocks !
+### Build your own blocks!
 
-The functionality to build your own block was the first difference between Scratch and Snap! (now it's also possible to make custom blocks in Scratch)!
+The functionality to build your own block was the first difference between Scratch and _Snap!_ (now it's also possible to make custom blocks in Scratch)!
 <!-- TODO -->
 
 ## Description of Poppy blocks

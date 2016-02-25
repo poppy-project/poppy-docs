@@ -81,13 +81,13 @@ For each notebook, we provide a short description of what it does, with which ro
 
 * **Trajectory following: [Notebook](https://github.com/poppy-project/community-notebooks/blob/master/debug/mini-4dof-arm-mini_benchmark_XL320.ipynb)** - Measure how precisely a **Poppy mini-4dof** follows a given trajectory. It measures the position, speed and load of multiple motors on a fast and a slow trajectory.
 
-* **V-REP simulation benchmark: [Notebook](#TODO)** - Check how fast the V-REP simulation is running on your computer. Can be used with the **Humanoid, Torso, and ErgoJr**.
+* **V-REP simulation benchmark: [Notebook](#TODO)** - Check how fast the V-REP simulation is running on your computer. Can be used with the **Humanoid, Torso, and Ergo Jr**.
 
 
-### Extending Poppy softwares
+### Extending Poppy software
 
 * **Define your own Poppy creature: [Notebook](#TODO)** -
 
 ## Contributing to this gallery
 
-Do not hesitate to let us know if some cool Notebooks are missing! You can directly send pull-request on github or uses the [issue tracker](https://github.com/poppy-project/poppy-docs/labels/notebooks).
+Do not hesitate to let us know if some cool Notebooks are missing! You can directly send pull-request on GitHub or uses the [issue tracker](https://github.com/poppy-project/poppy-docs/labels/notebooks).
