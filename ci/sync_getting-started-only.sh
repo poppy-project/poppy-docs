@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 
 # Copy SUMMURY.md from the getting-started-only branch to the master and push force to getting-started-only 
 
@@ -14,14 +15,14 @@ branch="getting-started-only"
 # Configure Git to push with GitHub Oauth token
 # git remote set-url origin $git_url
 
+
 git clone $git_url $tmp_repo
     
-pushd $tmp_repo/en
+pushd $tmp_repo/
     # Fix the summary
-    wget https://raw.githubusercontent.com/poppy-project/poppy-docs/getting-started-only/en/SUMMARY.md
+    curl -o ./en/SUMMARY.md https://raw.githubusercontent.com/poppy-project/poppy-docs/getting-started-only/en/SUMMARY.md
+    git add -A
     git commit -m "Auto commit after $last_commit_sha (travis build #$TRAVIS_BUILD_NUMBER)"
     git push --force  --quiet origin $branch
 popd
 
-
-# 
