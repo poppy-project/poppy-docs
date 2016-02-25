@@ -38,7 +38,7 @@ They are three main library levels:
 
 This is summarized in the diagram below:
 
-![Poppy softwares architecture](../img/python/architecture.png)
+![Poppy software architecture](../img/python/architecture.png)
 
 ## Installation
 
