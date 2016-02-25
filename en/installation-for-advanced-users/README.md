@@ -1,34 +1,36 @@
 # Installation for advanced users
 
-You may want to install Poppy softwares only if you are in one of these situations:
+You may want to install Poppy software only if you are in one of these situations:
 
-1. You want to control a simulated robot
+1. You want to control a simulated robot.
 2. [special case for advanced users] You want to install yourself the operating system of your robot instead of using a [pre-made ISO image](../installing-images/README.md).
-3. [special case for advanced users] You want to control a Poppy creature from your computer WITHOUT using the Raspberry Pi board.
+3. [special case for advanced users] You want to control a Poppy creature from your computer **without** using the Raspberry Pi board.
 
-**Note: The first situation is a "normal case" but the second and third are special usages affordable only by advanced users who have a good comprehension of the global system.**
+**Note: Though first situation is a "standard case", the second and third ones are affordable only by advanced users who have a good comprehension of the global system.**
 
-## Install the Python Interpreter and Poppy softwares
+## Install the Python Interpreter and Poppy software
 
-Poppy is run by Python computer code. Depending on your Operating System you will have to install Python and in any case you'll have to install the required software libraries.
+Poppy is run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries.
 
-Whatever your Operating System if you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
+Whatever your operating system if you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
 
 ### Install everything needed for a Poppy Board
 
-The easiest way to setup the control board of your Poppy Creature is to use one of the pre-made SD-card images. Those images come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card. This procedure is described in the [Startup section](../startup/README.md).
+The easiest way to setup the control board of your Poppy Creature is to use one of the ready-made SD-card images.  
+They come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card.  
+The [startup section](../startup/README.md) describes this procedure.
 
-Download the image of your system :
+Download the image of your system:
 
-* [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) if you are using a **Raspberry Pi 2**
-* [A special Ubuntu 14.04](http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&tag=ODROID-U3&bid=243) if you are using a Odroid U3
+* [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) if you are using a **Raspberry Pi 2**.
+* [A special Ubuntu 14.04](http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&tag=ODROID-U3&bid=243) if you are using a Odroid U3.
 
 Write the image to the SD-card with you favourite disk writer tool as explained in the [startup section](../startup/README.md).
 
-Connect to your board in SSH. Use
+Connect to your board in SSH:
 
-* `ssh pi@raspberrypi.local` password=raspberry for the Raspberry Pi
-* `ssh odroid@odroid.local` password=odroid for the Odroid U3
+* For the Raspberry Pi: `ssh pi@raspberrypi.local`, password=raspberry.
+* For the Odroid U3: `ssh odroid@odroid.local`, password=odroid.
 
 
 Download the install script:
@@ -37,36 +39,37 @@ Download the install script:
 wget https://raw.githubusercontent.com/poppy-project/poppy-installer/master/poppy-configure.sh
 ```
 
-Execute it with two parameters:
+This script takes two parameters:
 
-* the board name between {odroid, rpi}
-* the creature name between {poppy-humanoid, poppy-torso, poppy-ergo-jr}
+* The board name {odroid, rpi}.
+* The creature name {poppy-humanoid, poppy-torso, poppy-ergo-jr}.
 
-For example, if you want to build the system for a poppy-ergo-jr on a Raspberry Pi:
+To build the system for a Poppy Ergo Jr on a Raspberry Pi, one would run:
 
-```
-bash poppy-configure.sh rpi poppy-ergo-jr
+```bash
+poppy-configure.sh rpi poppy-ergo-jr
 ```
 
 Reboot after the end of the installation.  
 The hostname, default user and password will be all set to "poppy" (ssh poppy @poppy.local password=poppy).  
 You can test your installation with the web interface in your web browser http://poppy.local.
 
-If there is any issue don't hesitate to post a message on the [issue tracker on Github](https://github.com/poppy-project/poppy-installer/issues) or in the dedicated section of [the forum](https://forum.poppy-project.org/c/support).
+If there is any issue don't hesitate to post a message on the [issue tracker on GitHub](https://github.com/poppy-project/poppy-installer/issues) or in the dedicated section of [the forum](https://forum.poppy-project.org/c/support).
 
 
-### Install Python and Poppy softwares on Windows
+### Install Python and Poppy software on Windows
 
 <!-- TODO ajouter Schéma installation Thibault -->
 If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see [these videos](lientodo).
 
 #### Install Python
 
-We suggest you to use Anaconda Python distribution, but if you already have a Python distribution like Canopy with scientific packages (Numpy and Scipy) you can directly [install Poppy softwares](#install-poppy-softwares).
+We encourage the use of the Anaconda Python distribution.  
+However, if you already installed a Python distribution like Canopy (shipped with scientific packages), you can directly [install Poppy software](#install-poppy-software).
 
 ##### Anaconda
 
-Download Anaconda Python distribution (400Mo) [here for 64-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe).
+Download Anaconda Python distribution (400 MB) [here for 64-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe).
 
 
 Install it by clicking on "next" at each step. If you intend to install Anaconda for all users of your computer, be sure to select "all users".
@@ -78,7 +81,7 @@ It is also very important that the two check-boxes of the PATH and the default P
 ![Anaconda install](../img/python/anaconda_install_path.png)
 
 
-Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
+Now you have a Python distribution ready to [install Poppy software](#install-poppy-software).
 
 
 ##### Miniconda (alternative to Anaconda)
@@ -92,9 +95,9 @@ Open the Command Prompt (press the windows key and type "Command Prompt"), type 
 
 `conda install numpy scipy ipython-notebook matplotlib`
 
-Now you have a Python distribution ready to [install Poppy softwares](#install-poppy-softwares).
+Now you have a Python distribution ready to [install Poppy software](#install-poppy-software).
 
-#### Install Poppy softwares
+#### Install Poppy software
 
 Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
 ![Anaconda all users](../img/python/lucvincent/luc_vincent-031.png).
@@ -102,9 +105,9 @@ Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anacon
 `pip install poppy-torso --user -U --no-deps`
 
 This will install everything necessary to control a Poppy Humanoid.
-Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
+Substitute "poppy-torso" with "poppy-humanoid" or "poppy-ergojr" to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
 
-In case of update, it is advised to upgrade pypot (the motor library control) and the creature package separately :
+In case of update, it is advised to upgrade Pypot (the motor library control) and the creature package separately:
 
 ```bash
 pip install pypot --user -U --no-deps
@@ -112,18 +115,18 @@ pip install poppy-torso --user -U --no-deps
 ```
 
 
-### Install Python and Poppy softwares on Mac OSX
+### Install Python and Poppy software on Mac OSX
 
-Mac OSX has a Python distribution installed by default. Before installing Poppy softwares, you need to install the Python package manager pip.  
+Mac OSX has a Python distribution installed by default. Before installing Poppy software, you need to install the Python package manager pip.  
 Open a terminal and execute the command below:
 `curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python`
 
-You can now install Poppy softwares for the creature of your choice:
+You can now install Poppy software for the creature of your choice:
 `pip install poppy-torso --user -U --no-deps`
 
-Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
+Substitute "poppy-torso" with "poppy-humanoid" or "poppy-ergojr" to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
 
-### Install Python and Poppy softwares on GNU/Linux
+### Install Python and Poppy software on GNU/Linux
 
 Most of GNU/Linux distributions, have already a Python distribution installed by default.
 
@@ -151,7 +154,7 @@ On Arch Linux:
 curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
 sudo pacman -S python2-scipy python2-numpy python2-matplotlib
 ```
-You can now [install Poppy softwares](#install-poppy-softwares).
+You can now [install Poppy software](#install-poppy-software).
 
 **Note: The downside is the Python libraries from you distribution system are very often out of date.**
 
@@ -170,10 +173,10 @@ chmod +x miniconda.sh
 ./miniconda.sh
 ```
 
-You can now install some required and other useful dependencies for Poppy softwares with conda:
+You can now install some required and other useful dependencies for Poppy software with conda:
 `conda install numpy scipy ipython-notebook matplotlib`
 
-You can now [install Poppy softwares](#install-poppy-softwares).
+You can now [install Poppy software](#install-poppy-software).
 
 ## Install the robotic simulator V-REP
 
@@ -225,7 +228,7 @@ If you see a firewall popup like the picture below, be sure to check the "privat
 
 If everything works, a new tab have been opened on your default web-browser.
 <!-- TODO: lien doc -->
-You can program you robot in Snap! or in Python.
+You can program you robot in _Snap!_ or in Python.
 
 ![firewall](../img/vrep/lucvincent/luc_vincent-070.jpg)
 
