@@ -20,7 +20,7 @@ You have to choose the image to download depending on your Poppy creature and th
 
 * [Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)
 * [Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
-* [Poppy Humanoid](#TODO)
+* [Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
 The .zip file you have downloaded need to be unzipped to get the image file for writing to your SD card.
 
