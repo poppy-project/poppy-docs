@@ -36,7 +36,7 @@ poppy.snap.run()
 ### Ouverture de Snap4Arduino
 
 * Lancez Snap4Arduino et importez les blocs *pypot-snap-blocks.xml*.
-(une fenêtre avertissant que le projet importé a été créé par _Snap!_ apparaît ; elle est sans conséquence.)
+(une fenêtre avertissant que le projet importé a été créé par Snap_!_ apparaît ; elle est sans conséquence.)
 * Dans les blocs Arduino, cliquez sur *Connect Arduino* pour établir la connexion entre Snap4Arduino et votre platine.
 ![connect](../img/activity/snap4arduino/connect.png)
 
