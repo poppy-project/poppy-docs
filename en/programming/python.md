@@ -186,7 +186,7 @@ You can then instantiate the poppy-ergo-jr creature:
 poppy-services --threejs --snap --no-browser poppy-ergo-jr
 ```
 
-This will create a server for _Snap!_ on port `6969`, and a server for the visualizer on port `8080`.
+This will create a server for Snap_!_ on port `6969`, and a server for the visualizer on port `8080`.
 
 You can then head to the [visualizer page](https://poppy-project.github.io/poppy-docs).
 
