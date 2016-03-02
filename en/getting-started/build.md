@@ -3,7 +3,7 @@
 ![Poppy Assembly](../img/assembly_pretty.jpg)
 
 
-Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
+Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more than one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
 
 This section intends to give you hints and an approach of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
 
@@ -47,7 +47,7 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 Patience and precision are your allies, but in case of errors do not panic: Poppy is a robot intended to be assembled and disassembled. If you pay attention to the few **warnings** bellows, and with a few trials and errors you will have a working Poppy Torso or  POppy Humanoid:
 
 *Warning 1: The Poppy humanoid and torso robots are built using mainly MX-28 and MX-64 Dynamixel servomotors, which are pretty powerful and may be harmful to your fingers or materials.
-So be very careful and put the robot in a free space while testing them.*
+So be very careful and put the robot in a free space while testing it.*
 
 *Warning 2: put the dot on the horn at the same point than the dot on the servo axis*
 
