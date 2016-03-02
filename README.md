@@ -84,7 +84,7 @@ If you don't want to download the GitBook Editor app you can also go to the [Git
 
 ## Making a pull request
 
-After you are done editing, you have to to create [a pull request](https://help.github.com/articles/using-pull-requests)  on GitHub. PoppyGirls will get notified about the pull request, review your changes, suggest any corrections if needed and then *pull* your changes to the master version.
+After you are done editing, you have to create [a pull request](https://help.github.com/articles/using-pull-requests)  on GitHub. PoppyGirls will get notified about the pull request, review your changes, suggest any corrections if needed and then *pull* your changes to the master version.
 
 In your own repository on GitHub press do *Compare & pull request*
 
