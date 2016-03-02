@@ -10,7 +10,7 @@ We will also say a few words on how you can interface Poppy robots with other de
 ![OpenSource Logo](../img/logo/open-source.png)
 
 
-### Using _Snap!_
+### Using Snap_!_
 <!-- TODO: Didier -->
 
 ### Using Python
@@ -41,7 +41,7 @@ An update gallery of notebooks can be found [here](#TODO).
 
 ### Through the REST API
 
-On top of the _Snap!_ and Python options, it was really important for us to provide another way of accessing and controlling your robot accessible from any device or language. Thus, all our Poppy robots are providing a REST API, meaning that the most important features of the robot can be access through HTTP GET/POST requests.
+On top of the Snap_!_ and Python options, it was really important for us to provide another way of accessing and controlling your robot accessible from any device or language. Thus, all our Poppy robots are providing a REST API, meaning that the most important features of the robot can be access through HTTP GET/POST requests.
 
 From a more practical point of view, this allows to:
 
