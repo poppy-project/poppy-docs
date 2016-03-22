@@ -55,7 +55,7 @@ Yet, if you are planning to either
 
 You will have to install Poppy libraries locally. They work on Windows, Mac OS, Linux, and have been tested on:
 
-* Python >= 2.6
+* Python >= 2.7
 * Python >= 3.4
 
 Also note that if you are planning to directly plug your robot to your USB port, specific drivers should be installed.
@@ -183,12 +183,12 @@ pip install pypot>=2.12 poppy-creature>=1.8 poppy-ergo-jr>=1.6 --upgrade
 You can then instantiate the poppy-ergo-jr creature:
 
 ```bash
-poppy-services --threejs --snap --no-browser poppy-ergo-jr
+poppy-services --poppy-simu --snap --no-browser poppy-ergo-jr
 ```
 
-This will create a server for Snap_!_ on port `6969`, and a server for the visualizer on port `8080`.
+This will create a server for Snap_!_ on port 6969, and a server for the visualizer on port 8080.
 
-You can then head to the [visualizer page](https://poppy-project.github.io/poppy-docs).
+You can then head to the [visualizer page](http://poppy-project.github.io/poppy-simu/poppy-ergo-jr/).
 
 ### Access the sensors and motors
 
@@ -199,7 +199,7 @@ The robot object you just created contains two main groups of objects:
 
 that can be easily access using *poppy.motors* and *poppy.sensors*. As soon as the robot object is created it automatically starts synchronization loops which will ensure that the last available value are received/sent to the robot.
 
-> Note: The servomotors that are used in Poppy robots can be seen as both motors and sensors. Indeed, on top of being "simple" motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.
+> **Note**  Servomotors that are used in Poppy robots can be seen as both motors and sensors. Indeed, on top of being "simple" motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.
 
 #### Get data from your robot
 
@@ -208,7 +208,7 @@ that can be easily access using *poppy.motors* and *poppy.sensors*. As soon as t
 
 Now that you have created your robot object, you can directly use Python to discover which motors are attached.
 
->Note: In all examples below the results are shown for an ErgoJr. If you are using a Torso or a Humanoid you will see more motors with different names.
+> **Note** In all examples below the results are shown for an ErgoJr. If you are using a Torso or a Humanoid you will see more motors with different names.
 
 For instance, to know how many motors your robot have you can execute:
 
