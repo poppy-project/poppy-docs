@@ -50,10 +50,10 @@ What you need to install is summarized in the diagram below:
 
 Yet, if you are planning to either
 
-* use a simulator (e.g. V-REP, or web simulator),
+* Use a simulator (e.g. V-REP, or web simulator),
 * or want to directly plug the robot to your computer
 
-you will have to install Poppy libraries locally. They work on Windows, Mac OS, Linux, and have been tested on:
+You will have to install Poppy libraries locally. They work on Windows, Mac OS, Linux, and have been tested on:
 
 * Python >= 2.6
 * Python >= 3.4
