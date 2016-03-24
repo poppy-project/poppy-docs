@@ -1,3 +1,6 @@
+<!-- BOM from poppy-ergo-jr git repo -->
+{% include "git+https://github.com/poppy-project/poppy-ergo-jr.git/doc/bom.md" %}
+
 ## Mechanical Assembly
 
 ### General advices and warnings
@@ -6,12 +9,14 @@
 
 ![OLLO Rivet Assembly](../img/ergo-jr/assembly/ollo_rivet.png)
 
+> **Caution** There are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis.
+
 * Use the OLLO Tool for the rivets, it is really convenient. This tool allows to put and remove the rivets easily.
 
 ![OLLO Tool](../img/ergo-jr/assembly/ollo-tool.jpg)
 
 * Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favorite side).
-* If you want, there are slots for getting the most beautifully wires and avoid damaging them.
+
 
 ![image](../img/ergo-jr/assembly/xl320_gap.jpg)
 
