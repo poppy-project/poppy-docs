@@ -7,12 +7,12 @@ git config --global user.email $GIT_EMAIL
 git config --global user.name $GIT_NAME
 git_url=https://$GH_TOKEN@github.com/$GH_USERNAME/$GH_REPO.git
 # Configure Git to push with GitHub Oauth token
-# git remote set-url origin $git_url
+git remote set-url origin $git_url
 
 # Push the broken links
 git add -A
 git commit -m "Update broken links after commit $last_commit_sha"
-git push $git_url master 
+git push origin master 
 
 
 tmp_repo=/tmp/$GH_REPO-doc
