@@ -14,11 +14,11 @@ All Poppy libraries are open source and are released under the [GPL v3](http://w
 
 ![Python powered](../img/python/powered.png)
 
-The libraries developed for the Poppy project were designed with the aim to make it easy and fast to write code for controlling various robots based on - originally - robotis dynamixel motors. The idea was to provide access from the lower level - raw serial communication with a specific motor for instance - to higher levels such as starting and stoping primitives/behaviors (e.g. face tracking, postures, ...) or directly recording motions through learning by demonstration.
+The libraries developed for the Poppy project were designed with the aim to make it easy and fast to write code for controlling various robots based on - originally - robotis dynamixel motors. The idea was to provide access from the lower level - raw serial communication with a specific motor for instance - to higher levels such as starting and stopping primitives/behaviors (e.g. face tracking, postures, ...) or directly recording motions through learning by demonstration.
 
 We decided to write most of them in Python as its flexibility allows for fast and modular development. It was also meant to be accessible by a large audience, from developers and roboticists in general, to hobbyists, researchers, artists... Python was also chosen for the tremendous pools of existing libraries (scientific, computer vision, IO, web...) so if one is interested in adding a new feature, such as support for a new motor/sensor, it should be as easy and fast as possible.
 
-Finally, support for multi-platforms and ease of installation were also key aspects.
+Finally, support for multiplatforms and ease of installation were also key aspects.
 
 ![Anaconda Python distribution](../img/python/anaconda.png)
 
@@ -112,7 +112,7 @@ from poppy.creatures import PoppyHumanoid
 ```
 
 
-> Note: If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section TODO.
+> **Note** If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section TODO.
 
 ```python
 In [1]: from poppy.creatures import PoppyHumanoid
@@ -225,7 +225,7 @@ for m in poppy.motors:
 
 Of course, you can also access a specific motor. To do that, you need to know the name for the motor you want to access. You can find this list in the assembly documentation of your robot.
 
-You can also obtain a list of all motors name directly from python:
+You can also get a list of all motors name directly from python:
 ```python
 for m in poppy.motors:
     print(m.name)
