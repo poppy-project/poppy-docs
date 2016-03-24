@@ -10,7 +10,7 @@ git_url=https://$GH_TOKEN@github.com/$GH_USERNAME/$GH_REPO.git
 git remote set-url origin $git_url
 
 # Push the broken links
-git add -A
+git add contributing/broken_links.txt
 git commit -m "Update broken links after commit $last_commit_sha"
 git push origin master 
 
