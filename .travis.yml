@@ -1,37 +1,35 @@
 language: node_js
-# sudo: required
 node_js:
-  - "4.0"
+- '4.0'
 env:
   global:
-    - CXX=g++-4.8
-    - GH_USERNAME=poppy-project
-    - GH_REPO=poppy-docs
-    - GIT_EMAIL=poppy-bot-ci@inria.fr
-    - GIT_NAME=poppy-bot
-    - secure="rq7pyyNMfmK5oQCeL5jspFLCLuEhLFQ/fr640apMoZD+wD4ZAVPUOUR6qK9Va09LF1uNtPZFGFpleo7r2J4lEPtI0Jl70u6SVDfybYT2nwNt/6q8FJmOEqKqKRnWv3Q4UHfI4EA22vBzJV4IOsc/BA8sR9JP++DRTlyGZeJYTrPseOOmVsl2IHvpWW95D5kxxHdivXA3w60o9HU2Y7InqB5jVX1eVqcoheJs8KRqQBYlKmrrkrEuBrMao0zJsvFtROUGaAszdZpiYUsp3oliIvu4DCSKa+rs5pPkB2Y396OAakbvpWBVWGeqpPOsB5W2Vi7lEwnnzMo6Ct8sOLDSraqjGyU8xEiyGapg4fop+oj9u15wNOtjjOqm+OCzuTzpxj/LthNnGkWoYaQVQP2fKqEuHhPw6RQN4c8rKZKNl1sFO/9Irb639S7jdCvqxtipVuGOSd1KwMkC8CpxnVTtxdVRhXTfqhiq2qmMcPXCa10I19a1LcZFSFkh/YRIWwP0HmS8St46yGg4kHc5SKZUZE2ZcPAAIrCqX+a53rWUOyZaixsyW+3l9WuHCef+oIDsI15iQ4KWhjc/lPl77QzGmSmT46c9fitm2SR+XH8ooCYBrkcICLzVpVT8kU2iqErIivVIQEviQGwKZL/+Wp9CAYjpghPenVok+3WotNTmX7c="
+  - CXX=g++-4.8
+  - GH_USERNAME=poppy-project
+  - GH_REPO=poppy-docs
+  - GIT_EMAIL=poppy-bot-ci@inria.fr
+  - GIT_NAME=poppy-bot
+  - secure: OVutpst8wzg5cyPfN6G8rmQwOspHowtccO2YvIppz1uzO6m5Zyck+6LBwGa7QOdlZ6ZFFnHlkpv0jP2ERmlkfum3IlE8GTCl+1bOUKoZzP7dtViMzcXffPZlSn+2ZBoYoVoRskuII/2rO0BA2GEuKkcoY7GPxZW3R8bj0ts742NMYjh5nEcrrKeeId4vsQmh3c9a7XK1P6xZiX4kKtDsyYMY/U1OTAHnwATUYeDLKDwEkGV30qL/nzb/ZDTSFRQLRWAKp4Ilu3ihiBa1nfdzJfrEfZHVdMYePRMLhoin1ZzQw0q6SmA7E3mff8NA0k3ICvHQs8FVlSIoDgeSAl0aQgl2kU0NqLOi3EJ6xuKNnzq01kOt9YNH2SqBN3XTWNXVs1DKZe9ys5HqFRs72BztD2DpNrzZnAsiVLKsWA0BVKvp/IisxOxG60XjRJDYMhOTUtqgo1Its2WjhOPB2oTQiVO1i5QznFiA5Sp46Ok4VuBulNzmaYrZINB+P9udLew28N0WNnbDkaXDnNUNUABflm0gIexFt7GpytUbsew/+dlUUEM98QIwJ8/g8Ew/bIzkKyWnRfy6E6hIDk2o+kqG1ocNsLaRcqFfmXwsoJ3TOveroptcjcHEwoPMGJqvzdNPtJ1kW6Jvd/dwG2efUehHvN6tTHrJ9rCJvnfaEEVw/Jk=
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
-
+    - g++-4.8
 before_install:
-  - npm install gitbook-cli -g
-  - npm install broken-link-checker -g
-  - npm install http-server -g
-  - gitbook install
-  - wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main('~/calibre-bin', True)" > /dev/null
-
+- npm install gitbook-cli -g
+- npm install broken-link-checker -g
+- npm install http-server -g
+- gitbook install
+- wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py
+  | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n');
+  exec(sys.stdin.read()); main('~/calibre-bin', True)" > /dev/null
 script:
-  - set +e
-  - export PATH=$PATH:$HOME/calibre-bin/calibre
-  - gitbook build ./
-  - gitbook pdf ./
-
-  - cd _book/ && http-server -p 8081 -s &
-  - blc http://localhost:8081/en/index.html -ro --exclude poppy.local  | tee contributing/checked_links.txt
-  - grep -e 'BROKEN' -e 'Getting links from' -e 'Error' contributing/checked_links.txt > contributing/broken_links.txt
-  - . ./ci/update_documentation.sh
-
+- set +e
+- export PATH=$PATH:$HOME/calibre-bin/calibre
+- gitbook build ./
+- gitbook pdf ./
+- cd _book/ && http-server -p 8081 -s &
+- blc http://localhost:8081/en/index.html -ro --exclude poppy.local  | tee contributing/checked_links.txt
+- grep -e 'BROKEN' -e 'Getting links from' -e 'Error' contributing/checked_links.txt
+  > contributing/broken_links.txt
+- ". ./ci/update_documentation.sh"
