@@ -28,8 +28,10 @@ First, configure one XL-320 motor as "m1". To do that, connect it to your Raspbe
 Then, from the [assembly notebook](#TODO), you should run the cell #TODO. If you prefer the geek way, you can run from the Raspberry-Pi terminal command line:
 
 ```bash
-poppy-ergo-jr motorconfig m1
+poppy-configure ergo-jr m1
 ```
+
+> **Info** Poppy Ergo Jr motors are m1, m2, m3, m4, m5, m6. To configure the others motors, you have to change m1 by the name of the motor you want to configure.
 
 When it is done and everything went well, disconnect it from your Raspberry-Pi.
 
