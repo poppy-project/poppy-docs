@@ -44,7 +44,7 @@ You can also get all the parts yourself by following the bill of materials (see 
 
 The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with 3D-printed parts simple to design.
 
-![Poppy Ergo Jr](../img/ergo-jr/vecto.png)
+![Poppy Ergo Jr](../assembly-guides/ergo-jr/img/vecto.png)
 
 The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20 € each. Its electronic card access is simple. It makes it easy to connect extra sensors and is perfect for pedagogical purposes.
 
@@ -56,13 +56,15 @@ You can choose among several tools to use for the end of its arm:
 
 Rivets make them easy to change, depending on the type of activities you are planning.
 
-![Ergo Jr tools](../img/ergo-jr/3D/multitool.gif)
+![Ergo Jr tools](../assembly-guides/ergo-jr/img/ergo_tools.gif)
 
 The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties.
 
 Its low price, simple assembly, and easy control make it suited for educational purpose.
 
 You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) (BOM) and printing the [3D files](https://github.com/poppy-project/poppy-ergo-jr/releases/) available in the STL format.
+
+For more informations, check the [assembly guide of the Ergo Jr](../assembly-guides/ergo-jr/README.md)
 
 ### Poppy Humanoid
 
