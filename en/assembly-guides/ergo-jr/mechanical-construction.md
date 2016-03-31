@@ -28,7 +28,7 @@
 
 ![Align Horn](img/assembly/align-horn.png)
 
-* Every motor horns (black revolving circle) are be oriented to the left side when you look from be back of the robot to the front. It is a convention but it will define the orientation of your motors.
+* Every motor horns (black revolving circle) are **facing the left side of the robot**. It is a convention but it will define the orientation of your motors.
 
 ![Horns on left side](img/assembly/horns_on_left.jpg)
 
