@@ -10,6 +10,8 @@ This section intends to give you hints and an approach of some critical points s
 
 ### Assembling an Ergo Jr
 
+> **Note** You can find a full assembly documentation in the chapter [step by step assembly of an Ergo Jr](../assembly-guides/ergo-jr/README.md).
+
 <!-- TODO: refaire une belle photo avec la vraie BOM -->
 ![ergo-jr assembly](../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
 
@@ -27,10 +29,11 @@ Except from **checking the motor orientation**, there is not really any pitfall.
 
 Also make sure, to [**configure your motors**](../assembly-guides/ergo-jr/motor-configuration.md) before assembling the robot as it is harder to do after!
 
-> **Note** You can find a full assembly documentation in the chapter [step by step assembly of an Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
 
 ### Assembling a Torso or a Humanoid
+
+> **Note** You can find a full assembly documentation in the chapter [step by step assembly of a Poppy Humanoid](../assembly-guides/poppy-humanoid/README.md).
 
 ![Poppy Humanoid BOM](../img/humanoid/bom.jpg)
 
@@ -72,4 +75,5 @@ So be very careful and put the robot in a free space while testing it.*
 * Legs + Trunk (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md#3--legstorso-asembly) [(Video demonstration)](http://youtu.be/5i0xVlrJc-8)
 * Head [(Text instruction)](https://github.com/poppy-project/poppy-docs/blob/master/poppy-humanoid/assembly_doc/head_assembly.md)
 
-As previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. A detailed step by step assembly can be found in their dedicated Chapter [Step-by-step assembly of a Poppy Torso](#TODO) or Chapter [Step-by-step assembly of a Poppy Humanoid](#TODO). 
+As previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. 
+
