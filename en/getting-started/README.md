@@ -56,7 +56,7 @@ You can choose among several tools to use for the end of its arm:
 
 Rivets make them easy to change, depending on the type of activities you are planning.
 
-![Ergo Jr tools](../assembly-guides/ergo-jr/img/3D/multitool.gif)
+![Ergo Jr tools](../assembly-guides/ergo-jr/img/ergo_tools.gif)
 
 The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties.
 
