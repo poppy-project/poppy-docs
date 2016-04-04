@@ -4,11 +4,10 @@ In this section we will present the different options to program your robot rang
 
 We will also say a few words on how you can interface Poppy robots with other devices or any programming language using [Poppy's REST API](#through-the-rest-api).
 
-**Note: As for the rest of the project, all our libraries are open source and available on [GitHub](https://github.com/poppy-project).**
+>**Note** As for the rest of the project, all our libraries are open source and available on [GitHub](https://github.com/poppy-project).
 
-![GPLv3 Logo](../img/logo/gpl-v3.png)
-![OpenSource Logo](../img/logo/open-source.png)
-
+ <img src="../img/logo/gpl-v3.png" alt="GPLv3 Logo" width="200"> 
+  <img src="../img/logo/open-source.png" alt="OpenSource Logo" width="200"> 
 
 ### Using Snap_!_
 <!-- TODO: Didier -->
@@ -31,13 +30,14 @@ jr.m3.goal_position = 30
 <!-- Note: "Notebook documents" or “notebooks”, all lower case -->
 We are also big fan of the [Jupyter Project](http://jupyter.org) and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We really think that this is an extremely powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.
 
-![Jupyter Logo](../img/logo/jupyter.png)
 
-Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as [notebooks](#TODO-lien-notebook-de-notebook).
+ <img src="../img/logo/jupyter.png" alt="Jupyter Logo" width="100"> 
+
+Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as [notebooks](../programming/notebooks.md).
 
 ![Notebook example](../img/notebook-example.png)
 
-An update gallery of notebooks can be found [here](#TODO).
+An update gallery of notebooks can be found [here](../programming/notebooks.md).
 
 ### Through the REST API
 
