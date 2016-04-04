@@ -22,9 +22,11 @@ Finally, support for multiplatforms and ease of installation were also key aspec
 
 ![Anaconda Python distribution](../img/python/anaconda.png)
 
-We also strongly advise to use the [Anaconda Python distribution](https://www.continuum.io/why-anaconda) as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the [install section](#TODO)).
+We also strongly advise to use the [Anaconda Python distribution](https://www.continuum.io/why-anaconda) as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the [install section](../installation-for-advanced-users/README.md)).
 
 ## Overview of the different libraries
+
+> **Info** A more detailled documentation of these software libraries is available in the [software libraries section](../software-libraries/README.md)
 
 Before jumping into the code, we will briefly introduce the different existing Poppy libraries and how they interact with each other.
 
