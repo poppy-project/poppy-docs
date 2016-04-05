@@ -99,7 +99,7 @@ To finish your Ergo Jr, you need to add a tool at its end. So first choose the t
 
 > **Note** Tools they can be easily and quickly changed, so you can adapt it to the different activities.
 
-#### Lampshade and pen holder
+#### Lampshade or pen holder
 Mount *horn2horn* and *horn2side* parts on motor "m5", and mount "m6" on top of the construction.
 ![step 6](img/assembly/steps/step_14-16-17.jpg)
 
@@ -113,12 +113,8 @@ Mount the [*gripper-fixation*](https://github.com/poppy-project/poppy-ergo-jr/bl
 Mount *gripper-fixed_part* and *gripper-rotative_part* on motor "m6".
 <!-- TODO closed picture of gripper-->
 
-### Step 7 - fix you ergo-jr to the base
-Mount you ergo-jr to the wood disk-support. 
 
-Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it.
-
-### Step 8 - electronics	
+### Step 7 - electronics	
 Mount the support_camera part on the base. Fix the Raspberry Pi camera on it and move the camera flex cable between motor "m1" and the base.
 ![step 6](img/assembly/steps/step_21-22.jpg)
 
@@ -132,8 +128,16 @@ To fix the flex cable of the camera on the Raspberry Pi:
 
 If it is not already done, you can plug every motors wires. Every motor has two connectors but there is no input or output: you just have to create a chain of motors. The first motor is linked to the pixl and the second motor; the last motor is linked only to the previous one, and every other motors are linked to the one above and ahead.
 
-Connectors of the motor "m1" (in the base) are a bit hard to link, you can use the OLLO tool to help yourself.
-<!-- TODO picture of the rivet-->
+<!-- TODO picture of OLLO + base rivets -->
+> **Info** Connectors of the motor "m1" (in the base) are a bit hard to link, you can use the OLLO tool to help yourself.
+
+![step 6](img/assembly/steps/step_24.jpg)
+
+### Step 8 - fix you ergo-jr to wood disk support
+Mount you ergo-jr to the wood *disk-support*. 
+
+Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it.
+TODO: picture
 
 ### Done
 
