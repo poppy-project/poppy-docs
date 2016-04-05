@@ -137,7 +137,7 @@ If it is not already done, you can plug every motors wires. Every motor has two 
 Mount you ergo-jr to the wood *disk-support*. 
 
 Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it.
-TODO: picture
+<!-- TODO: picture of disk fixation -->
 
 ### Done
 
