@@ -30,16 +30,18 @@ Write the image to the SD-card with you favourite disk writer tool as explained 
 Connect to your board in SSH:
 
 * For the Raspberry Pi: `ssh pi@raspberrypi.local`, password=raspberry.
-* For the Odroid U3: `ssh odroid@odroid.local`, password=odroid.
+* For the Odroid U3 and XU4: `ssh odroid@odroid.local`, password=odroid.
 
 
 Download the install script:
 
 ```bash
-wget https://raw.githubusercontent.com/poppy-project/poppy-installer/master/poppy-configure.sh
+wget https://raw.githubusercontent.com/poppy-project/poppy-installer/master/poppy-configure.sh -O poppy-configure.sh
 ```
 
 This script takes two parameters:
+
+`poppy-configure.sh <board> <creature>
 
 * The board name {odroid, rpi}.
 * The creature name {poppy-humanoid, poppy-torso, poppy-ergo-jr}.
@@ -47,7 +49,7 @@ This script takes two parameters:
 To build the system for a Poppy Ergo Jr on a Raspberry Pi, one would run:
 
 ```bash
-bash poppy-configure.sh rpi poppy-ergo-jr
+sudo bash poppy-configure.sh rpi poppy-ergo-jr
 ```
 
 Reboot after the end of the installation.  
@@ -60,7 +62,7 @@ If there is any issue don't hesitate to post a message on the [issue tracker on 
 ### Install Python and Poppy software on Windows
 
 <!-- TODO ajouter Schéma installation Thibault -->
-If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see [these videos](lientodo).
+If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see [these videos](https://www.youtube.com/watch?v=kw9lQwdOlOs&list=PLT6NsCw8bf8T5FG2LGk2y_KTdexi8A5BN).
 
 #### Install Python
 
