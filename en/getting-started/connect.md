@@ -12,7 +12,7 @@ There are two ways to setup the board for your Poppy:
 * [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
 
-*Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [Installation for advanced users](installation-for-advanced-users/README.md) will guide you through all the detailed steps.*
+*Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [Installation for advanced users](../installation-for-advanced-users/README.md) will guide you through all the detailed steps.*
 
 ### Easy way: use the Poppy SD-card
 
@@ -49,7 +49,7 @@ Depending on what you want to do all steps are not necessary required. In partic
 * Setup the sensors for your creature.
 * Install the web server for the control and monitoring interface.
 
-> **Info** More details can be found in the [Installation for advanced users section](installation-for-advanced-users/README.md).
+> **Info** More details can be found in the [Installation for advanced users section](../installation-for-advanced-users/README.md).
 
 ### Setup the network
 
