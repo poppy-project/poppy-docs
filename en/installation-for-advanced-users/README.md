@@ -47,11 +47,11 @@ This script takes two parameters:
 To build the system for a Poppy Ergo Jr on a Raspberry Pi, one would run:
 
 ```bash
-poppy-configure.sh rpi poppy-ergo-jr
+bash poppy-configure.sh rpi poppy-ergo-jr
 ```
 
 Reboot after the end of the installation.  
-The hostname, default user and password will be all set to "poppy" (ssh poppy @poppy.local password=poppy).  
+The hostname, default user and password will be all set to "poppy" (ssh poppy@poppy.local password=poppy).  
 You can test your installation with the web interface in your web browser http://poppy.local.
 
 If there is any issue don't hesitate to post a message on the [issue tracker on GitHub](https://github.com/poppy-project/poppy-installer/issues) or in the dedicated section of [the forum](https://forum.poppy-project.org/c/support).

@@ -128,8 +128,12 @@ To fix the flex cable of the camera on the Raspberry Pi:
 * push the flex on the port, and push the plastic tab down
 
 <!-- TODO: add a closed picture of camera fix-->
+**Motors wires:**
 
+If it is not already done, you can plug every motors wires. Every motor has two connectors but there is no input or output: you just have to create a chain of motors. The first motor is linked to the pixl and the second motor; the last motor is linked only to the previous one, and every other motors are linked to the one above and ahead.
 
+Connectors of the motor "m1" (in the base) are a bit hard to link, you can use the OLLO tool to help yourself.
+<!-- TODO picture of the rivet-->
 
 ### Done
 
