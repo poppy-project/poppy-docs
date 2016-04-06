@@ -7,7 +7,7 @@ Insert the micro-SD card inside the Raspberry Pi: push the micro-SD in the conne
 ![Raspberry Pi micro-SD](img/electronic/rpi-sd.jpg)
 
 #### Assemble the pixl board
-> **Caution** The pixl board will be available for purchase in May 2016 at Generation robot.
+> **Warning** The pixl board will be available for purchase in May 2016 at Generation robot.
 
 [Pixl bord](https://github.com/poppy-project/pixl) allow to power up the Raspberry Pi from 7.5V DC power or battery and communicate with XL-320 motors.
 
