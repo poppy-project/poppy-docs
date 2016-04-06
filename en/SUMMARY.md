@@ -35,6 +35,8 @@
     - [Poppy Humanoid](software-libraries/poppy-humanoid.md)
     - [Poppy Torso](software-libraries/poppy-torso.md) 
 * [Appendix](appendix/README.md)
+    - [Network](appendix/network.md)
     - [Contribute](appendix/contribute.md)
-    - [Raspoppy](appendix/raspoppy.md)
+    - [FAQ](appendix/faq.md)
+    <!-- - [Raspoppy](appendix/raspoppy.md) -->
 
