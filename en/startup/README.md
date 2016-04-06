@@ -4,18 +4,17 @@
 
 Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or a Odroid for the older versions.
 
-The Operating System of this computer is hosted on a SD card.
+The operating system of this computer is hosted on a SD card.
 
 You may be in two kind of cases:
-- You already have a SD-card with the Poppy Operating System (provided by one of the Poppy distributors for example). You just have to put the SD card on the board.  
-- You have an empty SD-card, so you have to install the operating System on the SD-card (explained below) and put the SD-card on the board.
+- You already have a SD card with the Poppy operating system (provided by one of the Poppy distributors for example). You're ready to go to the [assembly section](../assembly-guides/README.md).
+- You have an empty SD-card, so you have to [download](#download-the-image) and [write](#write-an-image-to-the-sd-card) the operating system on the SD card .
 
-**Note: The Poppy creatures Operating System use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi.
+**Info: The Poppy creatures operating system use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi.
 You will only need a computer with a SD card reader to write the image on the SD card.**
 
 ## Download the image
 
-<!-- TODO: add image links (et les uploader aussi) -->
 You have to choose the image to download depending on your Poppy creature and the targeted board:
 
 * [Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)

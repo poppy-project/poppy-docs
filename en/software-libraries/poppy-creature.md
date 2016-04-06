@@ -49,9 +49,9 @@ You can remove it if you use a computer with a GUI (e.g your laptop instead of t
 
 Another example:
 ```
-    poppy-services poppy-ergo-jr --poppy-simu
+    poppy-services poppy-ergo-jr --snap --poppy-simu
 ```
-It will open a *Snap!* windows for a simulated poppy-ergo-jr.
+It will open a *Snap_!_* windows for a simulated poppy-ergo-jr.
 
 
 The way to use it is:
