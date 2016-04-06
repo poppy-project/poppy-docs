@@ -1,18 +1,37 @@
-body {
-    color: red;
+/*For https://github.com/hmarr/gitbook-plugin-numbered-headings*/
+/*h1:before {
+  width: 30px;
 }
+h2:before {
+  width: 40px;
+}
+h3:before {
+  width: 45px;
+}
+h4:before {
+  width: 60px;
+}
+h5:before{
+  width: 50px;
+}  
+*/
 
-h1 {
-    color: #00ff00;
+h1:before {
+  width: 40px;
 }
+h2:before {
+  width: 50px;
+}
+h3:before {
+  width: 55px;
+}
+h4:before {
+  width: 70px;
+}
+h5:before{
+  width: 60px;
+}  
 
-p {
-    color: rgb(0,0,255);
-}
-
-a.plugin-anchor span {
-  font-size: 15px !important;
-}
 
 blockquote.alert {
     padding-left: 0 !important;
