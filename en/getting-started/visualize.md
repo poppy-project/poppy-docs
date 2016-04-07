@@ -8,13 +8,13 @@ Connection with two main "simulators" were develop:
 * using [V-REP](http://www.coppeliarobotics.com): a virtual robot experimentation platform
 * using [a 3D web viewer](http://simu.poppy-project.org)
 
-At the moment, only Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP.
+At the moment, only the Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP.
 
-**Note: If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.**
+> **Caution** If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.
 
-Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulators. More detailed of what you will have to do is given in the [section below](#using-v-rep).
+While the physical robots come with libraries pre-installed, they are not integrated in the simulators. More detailed of what you will have to do is given in the [section below](#using-v-rep).
 
-Moreover, you will not have access to the robot web interface, but you will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the Snap_!_ server).
+You will also not have access to the robot web interface. You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the Snap_!_ server).
 
 This allows the development and test of programs without having a real robot. This is particularly useful:
 
