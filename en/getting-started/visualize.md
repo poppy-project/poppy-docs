@@ -2,7 +2,11 @@
 
 ### Simulated Poppy Creatures
 
-Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are also available.
+Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are available.
+
+Connection with two main "simulators" were develop:
+* using [V-REP](http://www.coppeliarobotics.com): a virtual robot experimentation platform
+* using [a 3D web viewer](http://simu.poppy-project.org)
 
 At the moment, only Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP.
 
@@ -52,3 +56,5 @@ V-REP can be used to learn how to control motors, get information from sensors b
 ![Torso V-REP](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
 
 *Note: Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world.*
+
+### Using the web visualisator
