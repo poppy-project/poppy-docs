@@ -2,17 +2,9 @@
 
 ![Poppy Logo](../img/logo/poppy.png)
 
-[Poppy Project](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists, who all share a vision: robots are powerful tools to learn and be creative.
+[Poppy Project](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. They all share a vision: robots are powerful tools to learn and be creative and collaborate to improve the project. They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve the software or even create new robots.
 
-The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, deploy, and share. We promote open-source by sharing hardware, software, and web tools.
-
-The Poppy project has been originally released by [Inria Flowers](http://www.inria.fr/equipes/flowers/).
-
-This project aims at developing a robotic open-source and open-hardware kits, for the conception and programming of robotic creatures. These kits also contain an integrated software environment, easy to install, dedicated to the use of the robot, and associated with a web platform enabling the community to share experiences and to contribute to its improvement.
-
-Recently, Poppy robots have been used as a educational and motivational tool to learn engineering and digital sciences.
-
-The Poppy project also consists of a very active and diverse community. People of different horizons collaborate to improve the project; they add features to the core libraries, release advanced behaviors, create pedagogical contents, design artistic performances, or even new robots.
+The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and deploy. We promote open-source by sharing hardware, software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
 
 To ease these exchanges two supports are available:
 
@@ -20,6 +12,9 @@ To ease these exchanges two supports are available:
 - [GitHub](https://github.com/poppy-project) to submit your contributions.
 
 All sources of the Poppy Project (software and hardware) are available on [GitHub](https://github.com/poppy-project).
+
+The Poppy project has been originally designed at [Inria Flowers](http://www.inria.fr/equipes/flowers/).
+
 
 ## The Poppy creatures
 
