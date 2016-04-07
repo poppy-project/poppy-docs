@@ -13,9 +13,11 @@ There are two ways to setup the board for your Poppy robot:
 
 > **Note** If you are planning to use a simulated robot, you must install the software locally. You can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [Installation for advanced users](../installation-for-advanced-users/README.md) will guide you through all the detailed steps.
 
-### Easy way: use the Poppy SD-card
+### Easy and recommended way: use the Poppy SD-card
 
 The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.
+
+> **Note** Poppy robotic kits come with a ready to use SD-card. So, you do not have anything special to do.
 
 The images can be found in the release of each creatures:
 
@@ -24,7 +26,7 @@ The images can be found in the release of each creatures:
 * [for the Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
 They can be written to a SD-card (at least 8 Go) by using classical utility tools.
-One the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.
+One the SD-card is ready, just insert it into the board. Then when you plug your robot it should automatically start and you should be able to connect to its web interface.
 
 > **Info** More details can be found in the [startup section](../startup/README.md).
 
