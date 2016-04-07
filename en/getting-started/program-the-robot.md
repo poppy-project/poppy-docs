@@ -42,10 +42,10 @@ Most of the tutorials, experiments or pedagogical activities that we and the com
 
 ### Through the REST API
 
-On top of the Snap_!_ and Python options, it was really important for us to provide another way of accessing and controlling your robot accessible from any device or language. Thus, all our Poppy robots are providing a REST API, meaning that the most important features of the robot can be access through HTTP GET/POST requests.
+On top of the Snap_!_ and Python options, we wanted to provide another way of accessing and controlling your robot from any device or language. Poppy robots are providing a REST API. The most important features of the robot can be access through HTTP GET/POST requests.
 
-From a more practical point of view, this allows to:
+From a more practical point of view, this allows you to:
 
-* **Write bridges to control Poppy robot in any language** (awesome contributors have already written [Matlab](#TODO) and [Ruby](#TODO) wrappers).
-* Easily **design web apps** connect to your robot (such as the [monitor interface](#TODO)).
-* Make your **robot interact with other connected device** such as a smartphone, intelligent sensors, or even your twitter account...
+* **Write bridges to control Poppy robot in any language** (awesome contributors have already written [Matlab](https://github.com/joelortizsosa/Connection-Poppy-Matlab) and [Ruby](https://github.com/poppy-project/pypot/tree/master/samples/REST/ruby) wrappers).
+* **Design web apps** connected to your robot, such as the [monitor interface](https://github.com/poppy-project/poppy-monitor) (also a contribution!).
+* Make your **robot interact with other connected devices** such as a smartphone, intelligent sensors, or even your twitter account...
