@@ -46,24 +46,23 @@ Depending on what you want to do all steps are not necessary required. In partic
 
 ### Setup the network
 
-Once your Poppy is built and its software is ready, the next step is to connect it to a network so you can start access it from your computer or smartphone/tablet and then control and program it.
+Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it. 
 
-Indeed, except if you plug a keyboard and a screen to the embedded board you will not be able to directly use it. Thus, you have to connect to it to your network so you can remotely access it. This section will describe the main steps to follow to do that.
+They are two main ways to connect your robot to your computer/tablet/smartphone:
+* Connect both the robot and the computer to the same network (e.g. the box of your home or the school network).
+* Directly connect your robot to your computer using an ethernet cable.
 
-Poppy robots can use either Ethernet (using cable) or wifi network. Yet, you first need to use an Ethernet network so you can first configure the robot so it can then automatically use your specified wifi.
+> **Caution:** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work. 
 
+To found the address of your robot on the network we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
+If you prefer you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
 
-Poppy robots can use either Ethernet or wifi network. But first, plug the robot and your computer on the same Ethernet network.
+To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot.
 
-Then, you need to choose among the two different possibilities:
+> **Note:** Poppy robots can all be connected to the network using Ethernet cable. Poppy humanoid and torso can also use wifi network. In the next release of the Poppy Ergo Jr we will add support for the wifi. To use wifi you have to first access the web interface using an Ethernet cable. From there you can setup the wifi access.
 
+> **Caution:** If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.
 
-*  Use the [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf) to connect to the robot using its hostname: *"poppy.local"*. This should works directly under Mac OS and GNU/Linux but required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows. This is the simplest way and should be preferred except if you do not have the administrator right on your Windows computer for instance. Note that *Bonjour Print Services for Windows* may be already installed if you have iTunes or QuickTime on your computer.
-* Know the IP address of the robot assigned by the router of your network.
-
-**Note: If you are not familiar with network configuration or have no idea what the previous paragraph clumsily tried to say, you should see with the IT network engineer, how you can do that.**
-
-![Network Schema](../img/network.png)
 
 ### Use the web interface
 
