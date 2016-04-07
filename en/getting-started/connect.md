@@ -66,21 +66,27 @@ To check that everything is setup correctly, you can go to the following url usi
 
 ### Use the web interface
 
-One you managed to have either Zeroconf working or the IP address of you robot, you can directly access the control and monitoring interface. This web interface can be used to:
+The web interface is the central point to control, program and configure your robot. It can be used to:
+* Monitor and Control the robot
+* Program it in Snap!
+* Program it in Python
+* Configure the robot (change its name, enable/disable the camera, update)
+* Reset and shutdown the robot
 
-* setup your wifi and change the name of the robot - the one you will use to connect,
-* to launch demo primitives,
-* and monitor the state of your robot (if motors are too hot for instance).
-
-To access this interface, you simply have to go to the URL using your favourite web browser:
+To access this interface, you simply have to go to the URL using your favorite web browser:
 
 * http://poppy.local (if you changed the name of your robot, simply replace *poppy* by its new name)
-* or using directly its IP address, 
+* or using directly its IP address 
 
 You should see something like:
 
-![Web interface](../img/poppy_home.png)
-
-And then if you click on the **Start Poppy-monitor** link:
+![Home Page](Screen Shot 2016-04-07 at 14.12.11.png)
+The buttons can be used to navigate to the different features. For instance, if you click on the *Monitor and Control*, you will access the monitor web app:
 
 ![Monitor interface](../img/poppy_monitor.png)
+
+This let you turn on/off the motors of your robot, monitor them, and start/stop behaviors.
+
+The *What happened* button is where you should look for more information is something goes wrong. Here is a screenshot of what you should see if everything goes well:
+
+![Screenshot of the web log interface](web-logs.png)
