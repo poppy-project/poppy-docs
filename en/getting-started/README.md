@@ -18,22 +18,24 @@ The Poppy project has been originally designed at [Inria Flowers](http://www.inr
 
 ## The Poppy creatures
 
-Poppy creatures are open-source robots, available for download and modification ([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) for the hardware and [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) for software). They were designed with the same principles in mind.
+Poppy creatures are open-source robots, available for download and modification ([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) for the hardware and [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) for the software). They were designed with the same principles in mind.
 
 All Poppy creatures:
 
 - are made from pieces of printable 3D and Dynamixel motors,
 - use an embedded board for control (a Raspberry Pi 2 or Odroid for older versions),
 - are based on a Python library, [pypot](../software-libraries/pypot.md), allowing to control Dynamixel servomotors in an easy way,
-- have a simulated version available (based on V-REP),
-- can be controlled using a visual programming language ([Snap!](http://snap.berkeley.edu) a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language (connection for Matlab and Processing already exists) - see Chapter #TODO for details,
+- have a simulated version available (based on [V-REP](http://www.coppeliarobotics.com)),
+- can be controlled using a visual programming language ([Snap!](http://snap.berkeley.edu) a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language,
 - come with associated documentation, tutorials, examples, pedagogical activities.
 
-They can be used as it is, or hacked to explore the shape of novel legs, arms, hands...
+They can be used as it is, or hacked to explore new shapes, add sensors, etc...
 
-You can buy a full Poppy Creature robot from our [official retailer](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
+To get your own Poppy robot, you can either:
+* Get all the parts yourself by following the bill of materials (see below).
+* Buy a full Poppy robotic kit from our [official retailer](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
 
-You can also get all the parts yourself by following the bill of materials (see below).
+
 
 ### Poppy Ergo Jr
 
