@@ -11,7 +11,7 @@ There are two ways to setup the board for your Poppy robot:
 * [**the easy way**](#easy-way-use-the-poppy-sdcard): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
 * [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
-*Note: If you are planning to use a simulated robot, you must install the software locally. You can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [Installation for advanced users](../installation-for-advanced-users/README.md) will guide you through all the detailed steps.*
+> **Note** If you are planning to use a simulated robot, you must install the software locally. You can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [Installation for advanced users](../installation-for-advanced-users/README.md) will guide you through all the detailed steps.
 
 ### Easy way: use the Poppy SD-card
 
