@@ -3,9 +3,9 @@
 ![Poppy Assembly](../img/assembly_pretty.jpg)
 
 
-Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more than one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
+Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should take about one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
 
-This section intends to give you hints and an approach of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
+This section intends to give you hints and a glimpse of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
 
 
 ### Assembling an Ergo Jr
@@ -19,13 +19,11 @@ The Ergo Jr robot was designed to be a simple little robot, cheap and easy to us
 
 The Ergo Jr is very easy to build and its end effector can be easily changed - you can choose among several tools: a lamp, a gripper, a pen holder...
 
-<!-- TODO: image des differents outils -->
-
 Thanks to OLLO rivets the robot is very simple to assemble. These rivets can be removed and added very quickly with the OLLO tool. It should not take more than one hour to entirely built it, which allows great design freedom.
 
 <!-- TODO: image des rivets et du tool en action -->
 
-Except from **checking the motor orientation**, there is not really any pitfall. If you are familiar with Lego bricks, you should be able to assemble an Ergo Jr without much problem! In any cases, the rivets are made to be as easy to assemble than to disassemble, so in case of problem you can just start over!
+Except from **checking the motor orientation**, there is not really any pitfall. If you are familiar with Lego bricks, you should be able to assemble an Ergo Jr without much problem! Rivets were made to be as easy to assemble than to disassemble, so in case of problem you can just start over!
 
 Also make sure, to [**configure your motors**](../assembly-guides/ergo-jr/motor-configuration.md) before assembling the robot as it is harder to do after!
 
