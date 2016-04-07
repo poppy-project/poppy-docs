@@ -57,7 +57,7 @@ They are two main ways to connect your robot to your computer/tablet/smartphone:
 To found the address of your robot on the network we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
 If you prefer you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
 
-To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot.
+To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot (something similar as http://192.168.0.42).
 
 > **Note:** Poppy robots can all be connected to the network using Ethernet cable. Poppy humanoid and torso can also use wifi network. In the next release of the Poppy Ergo Jr we will add support for the wifi. To use wifi you have to first access the web interface using an Ethernet cable. From there you can setup the wifi access.
 
@@ -75,7 +75,7 @@ One you managed to have either Zeroconf working or the IP address of you robot, 
 To access this interface, you simply have to go to the URL using your favourite web browser:
 
 * http://poppy.local (if you changed the name of your robot, simply replace *poppy* by its new name)
-* or using directly its IP address, something similar as http://192.168.0.42
+* or using directly its IP address, 
 
 You should see something like:
 
