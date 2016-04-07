@@ -46,20 +46,19 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 * do a bit of electronic for the embedded board inside the head: this can be a bit tricky if you are not familiar with electronics.
 
 
-Patience and precision are your allies, but in case of errors do not panic: Poppy is a robot intended to be assembled and disassembled. If you pay attention to the few **warnings** bellows, and with a few trials and errors you will have a working Poppy Torso or  POppy Humanoid:
+**Patience and precision** are your allies, but in case of errors do not panic: Poppy is a robot intended to be assembled and disassembled. If you pay attention to the few **warnings** bellows, and with a few trials and errors you will have a working Poppy Torso or Poppy Humanoid:
 
-*Warning 1: The Poppy humanoid and torso robots are built using mainly MX-28 and MX-64 Dynamixel servomotors, which are pretty powerful and may be harmful to your fingers or materials.
-So be very careful and put the robot in a free space while testing it.*
+*Warning 1: The Poppy humanoid and torso robots are built using mainly MX-28 and MX-64 Dynamixel servomotors. They are pretty powerful and may be harmful to your fingers or materials. So be very careful and put the robot in a free space while testing it!*
 
-*Warning 2: put the dot on the horn at the same point than the dot on the servo axis*
+*Warning 2: Put the dot on the horn at the same point than the dot on the servo axis.*
 
 ![](../img/humanoid/zero.JPG)
 
-*Warning 3: adjusts the three dots of the motors with three dots of structural parts.*
+*Warning 3: Adjusts the three dots of the motors with the three dots of the structural part.*
 
 ![](../img/humanoid/three_dots.jpg)
 
-*Warning 4: use thread locker to prevent vibrations from untying the screws. However, dip the extremity of the screw on the thread locker is enough (a drop for each screw hole is too much), otherwise disassembling your robot can be very hard!*
+*Warning 4: Use thread locker to prevent vibrations from untying the screws. However, dipping the extremity of the screw on the thread locker is enough (a drop for each screw hole is too much). Otherwise disassembling your robot can be very hard!*
 
 <!-- TODO: Add directly the youtube playlist of poppy torso and humanoid-->
 
@@ -72,6 +71,3 @@ So be very careful and put the robot in a free space while testing it.*
 * Legs (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/legs_assembly_instructions.md)[(Video demonstration)](http://youtu.be/Am1XBYv134Y)
 * Legs + Trunk (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md#3--legstorso-asembly) [(Video demonstration)](http://youtu.be/5i0xVlrJc-8)
 * Head [(Text instruction)](https://github.com/poppy-project/poppy-docs/blob/master/poppy-humanoid/assembly_doc/head_assembly.md)
-
-As previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. 
-
