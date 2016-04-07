@@ -32,7 +32,7 @@ One the SD-card is ready, just insert it into the board. Then when you plug your
 
 ### Advanced way: DIY, install everything from scratch
 
-The other way is basically to install everything needed from scratch. This basically means follow the same procedure as we are, to generate the image for SD-card. This can be useful if:
+The advanced way mainly consists in installing everything needed from scratch. This follows the same procedure as we use to generate the image for SD-cards. We mention this possibilty here as it can be useful if:
 
 * You are **working with a simulated robot** and thus have to manually install all the required software on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,
 * you want to customize the environment,
@@ -40,15 +40,7 @@ The other way is basically to install everything needed from scratch. This basic
 
 > **Caution** We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.
 
-<!-- ![Linux](../img/linux.jpg) -->
-
-Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:
-* Customize a [Raspbian](https://www.raspbian.org) install for Poppy (setup a user/hostname...).
-* Setup the Poppy utility tools (for install/update)
-* Install the [Python Anaconda distribution](https://www.continuum.io/why-anaconda).
-* Install the [python libraries](../software-libraries/README.md)) for Poppy.
-* Setup the sensors for your creature.
-* Install the web server for the control and monitoring interface.
+Depending on what you want to do all steps are not necessary required. In particular, if you want to control a simulated robot, you may just want to install the python libraries for Poppy.
 
 > **Info** More details can be found in the [Installation for advanced users section](../installation-for-advanced-users/README.md).
 
