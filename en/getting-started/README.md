@@ -79,23 +79,23 @@ You can get all the parts yourself following the [bill of material](https://gith
 
 ### Other interesting Poppy Creatures
 
-A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in this section below.
+A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.
 
 #### Poppy right arm (work in progress)
 
 Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.
 
-<!-- TODO: belle photo de Poppy Right Arm -->
+![](poppy-right-arm.jpg)
 
-The project was realized during an internship at Inria Flowers by [Joel Ortiz Sosa](https://github.com/joelortizsosa). Find more info and the sources in its [repository](https://github.com/poppy-project/poppy-6dof-right-arm).
+The project was realized during an internship at Inria Flowers by [Joel Ortiz Sosa](https://github.com/joelortizsosa). Find more info and the sources in the [repository](https://github.com/poppy-project/poppy-6dof-right-arm).
 
 #### Small and low-cost humanoids
 
 ##### Heol
 
-Heol - meaning "sun" in Breton - is a humanoid robot 34 cm tall made by association [Heol robotics](http://heol.io/). 23 motors compose it, all other parts are 3D printed. It also uses the Pypot library for its movements.
+Heol - meaning "sun" in Breton - is a 34cm tall humanoid robot made by the association [Heol robotics](http://heol.io/). 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.
 
-Heol's purpose is to put a smile on ill children's faces. It has the ability to be an educational tool by becoming a learning support materials such as programming and mechanical design.
+Heol's purpose is to put a smile on ill children's faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.
 
 Its participation in the RoboCup (World Cup football for robot) is also envisaged.
 
@@ -104,6 +104,10 @@ Its participation in the RoboCup (World Cup football for robot) is also envisage
 
 ##### Poppyrate
 
+It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.
+
+Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud. 
+
 ![Poppyrate](../img/poppyrate.jpg)
 
-[Website](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)
+For more information, check their [Website](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!
