@@ -39,29 +39,27 @@ To get your own Poppy robot, you can either:
 
 ### Poppy Ergo Jr
 
-The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with 3D-printed parts simple to design.
+The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with simple 3D-printed parts.
 
 ![Poppy Ergo Jr](../assembly-guides/ergo-jr/img/vecto.png)
 
-The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20 € each. Its electronic card access is simple. It makes it easy to connect extra sensors and is perfect for pedagogical purposes.
+The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20€ each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.
 
-You can choose among several tools to use for the end of its arm:
+You can choose among three tools at the end of its arm:
 
 * A lamp.
 * A gripper.
-* A pen holder...
+* A pen holder.
 
-Rivets make them easy to change, depending on the type of activities you are planning.
+The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.
 
 ![Ergo Jr tools](../assembly-guides/ergo-jr/img/ergo_tools.gif)
 
-The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties.
+The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.
 
-Its low price, simple assembly, and easy control make it suited for educational purpose.
+You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) (BOM) and print the [3D parts](https://github.com/poppy-project/poppy-ergo-jr/releases/) available in the STL format.
 
-You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) (BOM) and printing the [3D files](https://github.com/poppy-project/poppy-ergo-jr/releases/) available in the STL format.
-
-For more informations, check the [assembly guide of the Ergo Jr](../assembly-guides/ergo-jr/README.md)
+For more information, check the [assembly guide of the Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
 ### Poppy Humanoid
 
