@@ -49,3 +49,5 @@ From a more practical point of view, this allows you to:
 * **Write bridges to control Poppy robot in any language** (awesome contributors have already written [Matlab](https://github.com/joelortizsosa/Connection-Poppy-Matlab) and [Ruby](https://github.com/poppy-project/pypot/tree/master/samples/REST/ruby) wrappers).
 * **Design web apps** connected to your robot, such as the [monitor interface](https://github.com/poppy-project/poppy-monitor) (also a contribution!).
 * Make your **robot interact with other connected devices** such as a smartphone, intelligent sensors, or even your twitter account...
+
+> **Caution** The REST API is still a work in progress, will change and is clearly ill documented! For more information you can have a look [here](https://github.com/poppy-project/pypot) our on the [forum](https://forum.poppy-project.org). A well designed, stable and well documented REST API is expected for the next major software release.
