@@ -22,8 +22,9 @@ The [startup section](../startup/README.md) describes this procedure.
 
 Download the image of your system:
 
-* [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) if you are using a **Raspberry Pi 2**.
-* [A special Ubuntu 14.04](http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&tag=ODROID-U3&bid=243) if you are using a Odroid U3.
+* [Raspbian Jessie for Raspberry Pi](https://www.raspberrypi.org/downloads/raspbian/)
+* [Ubuntu 14.04 for Odroid U3](http://odroid.com/dokuwiki/doku.php?id=en:u3_release_linux_ubuntu)
+* [Ubuntu 14.04 for Odroid XU3/XU4](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04.1lts-lubuntu-odroid-xu3-20150212.img.xz)
 
 Write the image to the SD-card with you favourite disk writer tool as explained in the [startup section](../startup/README.md).
 
