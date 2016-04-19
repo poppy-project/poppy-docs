@@ -58,11 +58,12 @@ A quick time after, the board should restart with a new user and hostname.
 You can login with `ssh poppy@poppy.local` password=poppy.
 
 All software installation will be done after the restart, and thanks to the compilation of heavy Python packages (Scipy, Numpy) it can takes 30 to 45 minutes to complete.
-To track if the installation process is still running (in background), you can run:
+
+The log of the installation should show up when you login to the board (there is a `tail -f install_log` in the .bashrc), but you can also look if the process is still running with:
 ```
 ps up $(pgrep -f 'poppy_launcher.sh')
 ```
-
+Be patient...
 
 After this, you can update the web interface (remplace 'poppy-torso' by your creature):
 
