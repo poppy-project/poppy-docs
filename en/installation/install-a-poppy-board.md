@@ -60,6 +60,7 @@ You can login with `ssh poppy@poppy.local` password=poppy.
 All software installation will be done after the restart, and thanks to the compilation of heavy Python packages (Scipy, Numpy) it can takes 30 to 45 minutes to complete.
 To track if the installation process is still running, you can run `pgrep -lf 'poppy_launcher.sh'`.
 
+
 After this, you can update the web interface (remplace 'poppy-torso' by your creature):
 
 ```
