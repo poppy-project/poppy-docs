@@ -51,7 +51,7 @@ Login to the board in SSH: `ssh odroid@odroid.local`, password=odroid.
 Be sure that your board is connected to the Internet, and use this start this command:
 
 ```
-wget https://raw.githubusercontent.com/poppy-project/poppy_install/master/poppy_setup.sh
+wget https://raw.githubusercontent.com/poppy-project/poppy_install/master/poppy_setup.sh -O poppy_setup.sh
 sudo bash poppy_setup.sh && sudo bash poppy_setup.sh
 ```
 A quick time after, the board should restart with a new user and hostname.
