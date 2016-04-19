@@ -15,6 +15,9 @@ You have two possible states:
 - You already have a pre-formated SD card with the Poppy operating system (provided by one of the Poppy distributors). You have nothing to install, you are ready to go to the [assembly section](../assembly-guides/README.md).
 - You have an empty SD-card, **so you have to [download](burn_an_image_file.md#download-the-image) and [write](burn_an_image_file.md#write-an-image-to-the-sd-card) the operating system on the SD card.** This is the most common case.
 
+If you are a Linux rocky and want to try yourself our unstable install scripts, you can go the [*install poppy board*](install-poppy-board.md) chapter.
+
+
 ## You want to try Poppy robots in a simulator or in a web viewer
 - [Install Poppy softwares on your computer](install-poppy-softwares.md)
 - [Install V-REP simulator](install-vrep.md)
