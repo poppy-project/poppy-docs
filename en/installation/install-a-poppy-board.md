@@ -51,9 +51,14 @@ Be sure that your board is connected to the Internet, and use this start this co
 ```
 curl -L https://raw.githubusercontent.com/poppy-project/poppy_install/master/poppy_setup.sh | sudo bash
 ```
-A quick time after, the board should restart. You can login with SSH again, and see logs of the compilation of some heavy Python modules (Scipy, Numpy), it could take 30-45 minutes.
+A quick time after, the board should restart with a new user and hostname.
+You can login with `ssh poppy@poppy.local` password=poppy.
 
-After this, you can update the web interface:
+All software installation will be done after the restart, and thanks to the compilation of heavy Python packages (Scipy, Numpy) it can takes 30 to 45 minutes to complete.
+To track if the installation process is still running, you can run `pgrep -lf 'poppy_launcher.sh'.
+
+After this, you can update the web interface (remplace 'poppy-torso' by your creature):
+
 ```
 export POPPY_USER=poppy
 export POPPY_CREATURE=poppy-torso
