@@ -1,10 +1,10 @@
 # Install a Poppy board
 
-> **Caution** This chapter is only for people who want to create from scratch a Raspberry Pi or Odroid image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md)
+> **Caution** This chapter is only for people who want to create from scratch a Raspberry Pi or Odroid image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
 
 To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts. 
 
-**Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages. **If you encounter issues with these scripts, you can post a message on the [issue tracker on GitHub](https://github.com/poppy-project/poppy-installer/issues).
+**Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages.** If you encounter issues with these scripts, you can post a message on the [issue tracker on GitHub](https://github.com/poppy-project/poppy-installer/issues).
 
 
 ## For a Poppy Ergo Jr / Raspberry Pi
@@ -15,11 +15,11 @@ Download the image of your system:
 
 Write the image to the SD-card with you favorite disk writer tool as explained in the [startup section](burn-an-image-file.md#write-an-image-to-the-sd-card).
 
-> **Info** If you are using Windows, you have no native SSH client ; you have download and install [Putty](http://www.putty.org/) or [bitwise](https://www.bitvise.com/ssh-client-download) to use SSH.
+> **Info** If you are using Windows, you have no native SSH client ; you have to download and install [Putty](http://www.putty.org/) or [bitwise](https://www.bitvise.com/ssh-client-download) to use SSH.
 
 Login to the board in SSH: `ssh pi@raspberrypi.local`, password=raspberry.
 
-You will need to make sure that you have enough free space in your raspberry. The easiest way is to use the raspi-config script to expand your partition to the full SD-card. Just log into your raspberry and run:
+You will need to make sure that you have enough free space in your raspberry. The easiest way is to use the raspi-config script to expand your partition to the full SD-card. Just log into your raspberry and run (you will need to reboot it afterwards):
 
 ```bash
 sudo raspi-config --expand-rootfs
@@ -27,7 +27,7 @@ sudo raspi-config --expand-rootfs
 
 Be sure that your board is connected to the Internet, and use ["raspoppy"](https://github.com/pierre-rouanet/raspoppy) installer:
 ```bash
-curl -L https://raw.githubusercontent.com/pierre-rouanet/raspoppy/master/raspoppyfication.sh | bash -s "poppy-ergo-jr"
+curl -L https://raw.githubusercontent.com/poppy-project/raspoppy/master/raspoppyfication.sh | bash -s "poppy-ergo-jr"
 ```
 
 Reboot after the end of the installation.
