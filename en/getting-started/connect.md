@@ -8,10 +8,10 @@ Poppy creatures come with an embedded board which job is to control motors and a
 
 
 There are two ways to setup the board for your Poppy robot:
-* [**the easy way**](#easy-way-use-the-poppy-sdcard): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
+* [**the easy way**](#easy-and-recommended-way-use-the-poppy-sd-card): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
 * [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
-> **Note** If you are planning to use a simulated robot, you must install the software locally. You can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter [Installation for advanced users](../installation-for-advanced-users/README.md) will guide you through all the detailed steps.
+> **Note** If you are planning to use a simulated robot, you must install the software on your personnal computer. Follow the [simulation install path](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
 ### Easy and recommended way: use the Poppy SD-card
 
@@ -28,7 +28,7 @@ The images can be found in the release of each creatures:
 They can be written to a SD-card (at least 8 Go) by using classical utility tools.
 One the SD-card is ready, just insert it into the board. Then when you plug your robot it should automatically start and you should be able to connect to its web interface.
 
-> **Info** More details can be found in the [startup section](../startup/README.md).
+> **Info** More details can be found in the [startup section](../installation/README.md).
 
 ### Advanced way: DIY, install everything from scratch
 
@@ -42,7 +42,7 @@ The advanced way mainly consists in installing everything needed from scratch. T
 
 Depending on what you want to do all steps are not necessary required. In particular, if you want to control a simulated robot, you may just want to install the python libraries for Poppy.
 
-> **Info** More details can be found in the [Installation for advanced users section](../installation-for-advanced-users/README.md).
+> **Info** More details can be found in the [Installation for advanced users section](../installation/README.md).
 
 ### Setup the network
 
@@ -61,6 +61,7 @@ To check that everything is setup correctly, you can go to the following url usi
 
 > **Note** Poppy robots can all be connected to the network using Ethernet cable. Poppy humanoid and torso can also use wifi network. In the next release of the Poppy Ergo Jr we will add support for the wifi. To use wifi you have to first access the web interface using an Ethernet cable. From there you can setup the wifi access.
 
+---
 > **Caution** If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.
 
 
