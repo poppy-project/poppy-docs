@@ -25,7 +25,7 @@ You will need to make sure that you have enough free space in your raspberry. Th
 sudo raspi-config --expand-rootfs
 ```
 
-Be sure that your board is connected to the Internet, and use ["raspoppy"](https://github.com/pierre-rouanet/raspoppy) installer:
+Be sure that your board is connected to the Internet, and use ["raspoppy"](https://github.com/poppy-project/raspoppy) installer:
 ```bash
 curl -L https://raw.githubusercontent.com/poppy-project/raspoppy/master/raspoppyfication.sh | bash -s "poppy-ergo-jr"
 ```
