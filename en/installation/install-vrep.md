@@ -39,7 +39,7 @@ Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anacon
 ```bash
 poppy-services --snap --vrep --no-browser poppy-torso`
 ```
-After a few seconds, you will have an error like the picture below in your Command prompt.
+After a one or two seconds, you will have an error like the picture below in your Command prompt.
 ![VREP_terminal](../img/vrep/vrep3_1.png)
 
 If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. **You have to check the check-box "Do not show this message again" and press "Ok".**
@@ -47,7 +47,7 @@ If you switch to the V-REP window, a popup appeared to inform you that the simul
 
 Switch the the command prompt window. You will have to execute the last command (`poppy-services --snap --vrep --no-browser poppy-torso`) and click again to the V-REP popup (with the check-box checked). **This process will have to be done *three times* to make it works well!**
 
-> **Info** To avoid retyping the same command again and again, you can simply press the up arrow key to call the last typed line.
+> **Info** To avoid retyping the same command again and again, you can press the up arrow key to call the last typed line.
 
 When the setup of V-REP is ready, you can execute the last command without the "--no-browser" part.
 ```
@@ -55,6 +55,7 @@ poppy-services --snap --vrep poppy-torso
 ```
 
 If you see a firewall popup like the picture below, be sure to check the "private network" check-box.
+
 ![firewall](../img/vrep/vrep4.png)
 
 If everything works, a new tab have been opened on your default web-browser.
