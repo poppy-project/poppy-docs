@@ -62,7 +62,7 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 
 <!-- TODO: Add directly the youtube playlist of poppy torso and humanoid-->
 
-*Step by step guide for the asssembly*
+**Step by step guide for the asssembly :**
 
 - [Guide for the Humanoid](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md)
 - [Guide for the Torso](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md)
