@@ -2,27 +2,21 @@
 % Version 1.0
 % Jan. 2016
 
-# Introduction
+## A propos
 
-## About
+Bienvenue dans l'espace de documentation de la plateforme robotique open source [Poppy](https://www.poppy-project.org/).
 
-Welcome to the manual of the [Poppy-Project](https://www.poppy-project.org/), an open-source robotic platform.
+La documentation est actuellement uniquement disponible en anglais mais est en cours de traduction. Nous vous invitons à la [consulter](http://docs.poppy-project.org/en/index.html) et à nous contacter sur le [forum](https://forum.poppy-project.org/) si vous avez des questions.
 
-In this documentation, we will try to cover everything from the short overview of what is possible within the project to the details on how you can build a Poppy robot or reproduce one of the pedagogical activity.
-
-In the first chapter, we will give you a simple but exhaustive overview of what you can do within this project, so you can quickly focus on the following chapters that cover what you are really interested in. While some advanced chapters may require a good understanding of mechanics, electronics or computer sciences, the [Getting Started](#getting-started) section is intended to be easily accessible by all readers.
-
-This book is licensed under the Creative Commons License, BY-SA. The source can be found in [github](https://github.com/poppy-project/poppy-docs).
+Cette documentation est sous licence Creative Commons (BY-SA). Les sources sont disponibles sous [GitHub](https://github.com/poppy-project/poppy-docs) est nous vous invitons à participer à son amélioration continue en [remontant les bugs](https://github.com/poppy-project/poppy-docs/issues) et/ou [en participant](https://github.com/poppy-project/poppy-docs/pulls) à son écriture !
 
 ## Version
 
-This is the version 1.0 of the Poppy documentation.
-
-It contains the documentation for:
+Dans ce document (version 1.0) vous trouverez les documentations pour:
 
 -   Poppy Humanoid 1.0.1 hardware
 -   Poppy Torso 1.0.1 hardware
--   Poppy ErgoJr beta 6 hardware
+-   Poppy ErgoJr 1.0 hardware
 
 -   poppy_humanoid library version 1.1.1
 -   poppy_torso library version 1.1.5
