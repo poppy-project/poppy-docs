@@ -62,12 +62,7 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 
 <!-- TODO: Add directly the youtube playlist of poppy torso and humanoid-->
 
-**The assembly can be divided into seven major steps:**
+*Step by step guide for the asssembly*
 
-* Trunk [(Text instruction)](https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/5_DoFs_humanoid_spine.md) Videos demonstration [1/5](https://www.youtube.com/watch?v=83lrhXVNHYE), [2/5](https://www.youtube.com/watch?v=9oNGV9ggHaE), [3/5](https://www.youtube.com/watch?v=LXktU4MTITE), [4/5](https://www.youtube.com/watch?v=qwrgV6tKTO8), [5/5]().
-* Chest [(Text instruction)](https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/subassembly/chest_assembly_instructions.md) [(Video demonstration)](http://youtu.be/qwrgV6tKTO8)
-* Right Arm [(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/right_arm_assembly_instructions.md) Videos demonstration [1/4](https://www.youtube.com/watch?v=SUlM_mE3plc), [2/4](https://www.youtube.com/watch?v=cYhGwD6r6NQ), [3/4](https://www.youtube.com/watch?v=BdQcOAwZbMY), [4/4](https://www.youtube.com/watch?v=Oe5v21sTst8).
-* Left Arm, which is the exact symmetry of the Right Arm[(Text instruction)](https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/left_arm_assembly_instructions.md) Videos demonstration [1/4](https://www.youtube.com/watch?v=5FsPgEt4cfA), [2/4](https://www.youtube.com/watch?v=MIjfAXShLJ4), [3/4](https://www.youtube.com/watch?v=qCF_8-M5k1o), [4/4](https://www.youtube.com/watch?v=Oe5v21sTst8).
-* Legs (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/legs_assembly_instructions.md)[(Video demonstration)](http://youtu.be/Am1XBYv134Y)
-* Legs + Trunk (only for Humanoid version) [(Text instruction)](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md#3--legstorso-asembly) [(Video demonstration)](http://youtu.be/5i0xVlrJc-8)
-* Head [(Text instruction)](https://github.com/poppy-project/poppy-docs/blob/master/poppy-humanoid/assembly_doc/head_assembly.md)
+- [Guide for the Humanoid](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md)
+- [Guide for the Torso](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md)
