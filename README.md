@@ -6,7 +6,7 @@ Documentation is also available to download as [PDF](https://www.gitbook.com/dow
 
 # How to contribute
 
-The Poppy Documentation is licensed under a [Creative Commons Attribution-ShareAlike 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/). Everyone is free to add, edit and correct the documentation.
+The Poppy Documentation under the [Creative Commons Attribution-ShareAlike 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/). Everyone is free to edit, correct and share the documentation.
 
 ## Where to start
 
