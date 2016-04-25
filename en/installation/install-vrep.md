@@ -1,5 +1,5 @@
 # Install the robotic simulator V-REP
-
+> **Info** You need to install [Poppy softwares](install-poppy-softwares.md) before installing the V-REP simulator.
 
 [V-REP](http://www.coppeliarobotics.com/downloads.html) is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free license for educational entities and have a commercial license for other purposes.
 There is also an *PRO EVAL* version which limit the right to backup. As you don't need to backup the scene to use V-REP with pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.
