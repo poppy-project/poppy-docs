@@ -36,7 +36,7 @@ The sources are available on [GitHub](https://github.com/poppy-project/poppy-cre
 
 ## Poppy services
 
-Poppy-creature also provides a set of very useful services that can be launched directly from the command line inside your robot if you installed the soft from [poppy\_install](https://github.com/poppy-project/poppy_install) .
+Poppy-creature also provides a command line utility *poppy-services*.  set of very useful services that can be launched directly from the command line inside your robot if you installed the soft from [poppy\_install](https://github.com/poppy-project/poppy_install) .
 Example:
 ```
     poppy-services poppy-ergo-jr --snap --no-browser
