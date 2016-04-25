@@ -61,4 +61,4 @@ If everything works, a new tab have been opened on your default web-browser.
 <!-- TODO: lien doc -->
 You can program you robot in Snap_!_ or in Python.
 
-![firewall](../img/vrep/lucvincent/luc_vincent-070.jpg)
+![jupyter notebook](../img/vrep/lucvincent/luc_vincent-070.jpg)
