@@ -1,7 +1,7 @@
 # Poppy-creature library
 
 ## Introduction
-Poppy-creature is a small library providing an abstract interface for robots (Poppy Humanoid, Poppy Torson, Poppy Ergo Jr...). It links high level controls and pypot and Pypot, the generic, lower level library.
+Poppy-creature is a small library providing an abstract interface for robots (Poppy Humanoid, Poppy Torso, Poppy Ergo Jr...). It links high level controls and pypot, the generic low level library.
 
 It mainly contains the class definition of [poppy.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py) which takes a configuration and builds a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py#L9) out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.
 
