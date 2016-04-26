@@ -2,9 +2,9 @@
 
 > **Caution** This chapter is only for people who want to create from scratch a Raspberry Pi or Odroid image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
 
-To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts. 
+To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts.
 
-**Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages.** If you encounter issues with these scripts, you can post a message on the [issue tracker on GitHub](https://github.com/poppy-project/poppy-installer/issues).
+**Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages.** If you encounter issues with these scripts, you can post a message in the [support section](https://forum.poppy-project.org/c/support) of the forums.
 
 
 ## For a Poppy Ergo Jr / Raspberry Pi
@@ -57,7 +57,7 @@ sudo bash poppy_setup.sh poppy-humanoid
 ```
 You should lose your ssh connection because of the board reboot. This reboot is needed to proceed to the finalisation of the partition resizing. Now your board should installing all the poppy environment. **Please do not unpower the board or shut-it down.**
 
-You can see the installation process by reconnecting you to your board with your new poppy account: `ssh poppy@poppy.local` password=poppy. 
+You can see the installation process by reconnecting you to your board with your new poppy account: `ssh poppy@poppy.local` password=poppy.
 **Because of the compilation of heavy Python packages (Scipy, Numpy) it can take 30 to 45 minutes to complete.**
 
 A process will automatically take you terminal and print the installation output. You can leave it with `ctrl+c`. You can get back this print by reading the install_log file:
