@@ -71,7 +71,7 @@ the available options are:
 
 ## Create your own Poppy creature
 
-While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a [pypot.robot.robot.Robot]((https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) from Pypot directly.
+While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) from Pypot directly.
 
 But when you want to make it easily usable and available to non-geek public, the best is to create your own creature's library. It should contain a configuration file and a class that extends [poppy.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py). You can then
 add your own properties and primitives.
