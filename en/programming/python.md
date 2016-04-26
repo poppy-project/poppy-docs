@@ -22,7 +22,7 @@ Finally, support for multiplatforms and ease of installation were also key aspec
 
 ![Anaconda Python distribution](../img/python/anaconda.png)
 
-We also strongly advise to use the [Anaconda Python distribution](https://www.continuum.io/why-anaconda) as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the [install section](../installation-for-advanced-users/README.md)).
+We also strongly advise to use the [Anaconda Python distribution](https://www.continuum.io/why-anaconda) as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the [install section](../installation/install-poppy-softwares.md)).
 
 ## Overview of the different libraries
 
@@ -173,7 +173,7 @@ IOError: Connection to V-REP failed!
 
 #### Create the Robot object - with web simulator
 
-Currently only the Ergo Jr is usable within the web simulator.  
+Currently only the Ergo Jr is usable within the web simulator.
 It also requires specific versions of libraries to be used properly.
 
 To make sure you meet these requirements, you can type this command from your shell:
@@ -361,7 +361,7 @@ So, first we turn all motors of the robot compliants:
 for m in poppy.motors:
     m.compliant = True
 ```
-> **Info** You can also record a movement with motors stiff (`compliant = False`), and moving them with goal_position or goto_position commands.  
+> **Info** You can also record a movement with motors stiff (`compliant = False`), and moving them with goal_position or goto_position commands.
 
 Then, we have to include the primitive used for recording motion:
 
@@ -433,7 +433,7 @@ player = MovePlayer(poppy, my_recorded_move)
 
 As you can see, to create it you have to specify the robot (as for the MoveRecorder) and the move you want to play.
 
-> **Note** Automatically all recorded motors become stiff to be able to play the move. 
+> **Note** Automatically all recorded motors become stiff to be able to play the move.
 
 Then, you can simply start the replay:
 
