@@ -15,7 +15,7 @@ This section intends to give you hints and a glimpse of some critical points so 
 <!-- TODO: refaire une belle photo avec la vraie BOM -->
 ![ergo-jr assembly](../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
 
-The Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each. 
+The Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each.
 
 The Ergo Jr is very easy to build and its end effector can be easily changed - you can choose among several tools: a lamp, a gripper, a pen holder...
 
@@ -52,7 +52,7 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 
 *Warning 2: Put the dot on the horn at the same point than the dot on the servo axis.*
 
-![](../img/humanoid/zero.JPG)
+<img src="../img/humanoid/horn.jpg" alt="horn" style="height: 350px;"/><img src="../img/humanoid/axe.jpg" alt="axe" style="height: 350px;"/>
 
 *Warning 3: Adjusts the three dots of the motors with the three dots of the structural part.*
 
