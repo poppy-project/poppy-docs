@@ -1,3 +1,3 @@
 ## Using Snap_!_
 
-TODO
+> **Caution** This page is not currently written. Your help is welcome to fulfill it !
