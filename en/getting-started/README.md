@@ -102,11 +102,11 @@ Its participation in the RoboCup (World Cup football for robot) is also envisage
 
 ![Heol](../img/heol.jpg)
 
-##### Poppyrate
+##### [Poppyrate](http://www.poppyrate.com/)
 
 It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.
 
-Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud. 
+Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud.
 
 ![Poppyrate](../img/poppyrate.jpg)
 
