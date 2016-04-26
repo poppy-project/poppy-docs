@@ -14,9 +14,7 @@ Poppy robots are designed to be easily programmed. They are three main options p
 
 ![Snap! logo](Logo5.png)
 
-Snap_!_ is a visual programming language - a variant of the very famous Scratch language. It is a block based drag-and-drop programming language that allows for a thorough introduction of IT. 
-
-It runs in your browser as it is implemented in Javascript. You do not need to install anything to start using it. It is open sourced and actively maintained.
+Snap_!_ is a visual programming language - a variant of the very famous Scratch language. It is a block based drag-and-drop programming language that allows for a thorough introduction of IT. It runs in your browser as it is implemented in Javascript. You do not need to install anything to start using it. It is open sourced and actively maintained.
 
 ![Exemple of Snap project using Poppy](Snap.jpg)
 
@@ -61,4 +59,4 @@ From a more practical point of view, this allows you to:
 * **Design web apps** connected to your robot, such as the [monitor interface](https://github.com/poppy-project/poppy-monitor) (also a contribution!).
 * Make your **robot interact with other connected devices** such as a smartphone, intelligent sensors, or even your twitter account...
 
-> **Caution** The REST API is still a work in progress, will change and is clearly ill documented! For more information you can have a look [here](https://github.com/poppy-project/pypot) our on the [forum](https://forum.poppy-project.org). A well designed, stable and well documented REST API is expected for the next major software release.
+> **Caution** The REST API is still a work in progress, will change and is clearly ill documented! For more information you can have a look [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md) our on the [forum](https://forum.poppy-project.org). A well designed, stable and well documented REST API is expected for the next major software release.
