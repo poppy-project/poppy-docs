@@ -37,7 +37,7 @@ To start controlling a simulated Poppy robots, either using V-REP or the web vis
 
 [V-REP](http://www.coppeliarobotics.com/downloads.html) is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from [this website](http://www.coppeliarobotics.com/downloads.html) (works under Mac OS, Windows and GNU/Linux).
 
-*It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).*
+> **Caution** It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).
 
 ![Poppy Humanoid in V-REP](../img/humanoid/vrep.png)
 
@@ -52,7 +52,18 @@ V-REP can be used to learn how to control motors, get information from sensors b
 
 ![Torso V-REP](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
 
-*Note: Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).*
+> **Note** Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).
 
-### Using the web visualizer
+### Using our web visualizer
+
+Our web visualizer - based on the [Three.js](http://threejs.org) library - will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot. 
+
+![](poppy-web-visualisateur.png)
+> **Note** A mockup robot can be started via the poppy-services command. For instance: ```poppy-services --poppy-simu --snap poppy-ergo-jr```
+
+As for V-REP, you can control your Robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
+
+Here is an exemple with Python: 
+
+![](poppy-visu.gif)
 
