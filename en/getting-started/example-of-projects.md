@@ -11,7 +11,7 @@ The Poppy community gathers an interdisciplinary community of beginners and expe
 
 ### Connect Poppy and Arduino thanks to Snap4Arduino
 
-Gilles, teacher and maker at night, has developed many projects based on the Poppy Ergo Jr and Arduino. For connecting both worlds, it uses [Snap4arduino](http://s4a.cat/snap/). Then, it becomes really easy and elegant to make them communicate. You can simply mix Arduino with Poppy blocks and tadam you can control your robot with any Arduino based sensor. 
+[Gilles](https://forum.poppy-project.org/users/gilles_lassus/), teacher and maker at night, has developed many projects based on the Poppy Ergo Jr and Arduino. For connecting both worlds, it uses [Snap4arduino](http://s4a.cat/snap/). Then, it becomes really easy and elegant to make them communicate. You can simply mix Arduino with Poppy blocks and tadam you can control your robot with any Arduino based sensor. 
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen></iframe>
 
