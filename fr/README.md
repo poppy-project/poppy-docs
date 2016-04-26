@@ -1,6 +1,8 @@
+<!---
 % Poppy Documentation
 % Version 1.0
 % Jan. 2016
+-->
 
 ## A propos
 
