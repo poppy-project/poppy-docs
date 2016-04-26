@@ -4,14 +4,14 @@ In this section, we will describe how to start your robot and give an overview o
 
 ## Setup the software
 
-Poppy creatures come with an embedded board which job is to control motors and access the sensors. For simplicity purpose, this computer can be remotely access through a web interface. It makes it easy to control the robot from your own computer or a tablet without having to download/install anything.
+Poppy creatures come with an embedded board which job is to control motors and access the sensors. For simplicity purpose, this computer can be remotely access through a web interface. It makes it easy to control the robot from your own computer or tablet without having to download/install anything.
 
 
 There are two ways to setup the board for your Poppy robot:
 * [**the easy way**](#easy-and-recommended-way-use-the-poppy-sd-card): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
 * [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
-> **Note** If you are planning to use a simulated robot, you must install the software on your personnal computer. Follow the [simulation install path](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+> **Note** If you are planning to use a simulated robot, you must install the software on your personal computer. Follow the [instructions for setting up the simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
 ### Easy and recommended way: use the Poppy SD-card
 
@@ -26,7 +26,7 @@ The images can be found in the release of each creatures:
 * [for the Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
 They can be written to a SD-card (at least 8 Go) by using classical utility tools.
-One the SD-card is ready, just insert it into the board. Then when you plug your robot it should automatically start and you should be able to connect to its web interface.
+Once the SD-card is ready, just insert it into the board. Then when you switch on your robot it should automatically start and you should be able to connect to its web interface.
 
 > **Info** More details can be found in the [startup section](../installation/README.md).
 
