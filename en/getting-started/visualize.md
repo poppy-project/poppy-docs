@@ -12,7 +12,7 @@ Connection with two main "simulators" were developed:
 
 We think simulation can be a powerful tool. It allows the development and test of programs without the need of having a real robot. This is especially useful:
 
-* To discover and try the robot possibilities without having to spend money.
+* To discover and try the robot possibilities without having to spend real money.
 * In a context where multiple users share a robot. For instance in a classroom where each group can work using the simulator and validate their program on a real robot.
 * To design and run complex and time consuming experiments.
 
@@ -22,7 +22,7 @@ We try to make the **switch from a simulated Poppy robot to the real one as tran
 
 ### Install the needed software 
 
-While the physical robots come with libraries pre-installed, they are not integrated in the simulators. More details of what you will have to do is given in the [section below](#install-the-needed-software). You will also not have access to the robot web interface. You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the Snap_!_ server).
+While the physical robots come with libraries pre-installed, they are not integrated in the simulators. Thus, you need to install them on your computer. More details of what you will have to do is given in the [section below](#install-the-needed-software). You will also not have access to the robot web interface. You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap_!_ server).
 
 > **Info** We are hoping to have a one-click app for Windows/Mac/Linux with everything setup at some point. Yet, this is not expected to be available in the near future.
 
@@ -31,11 +31,11 @@ To start controlling a simulated Poppy robots, either using V-REP or the web vis
 * To have a working Python, we strongly recommend to use the [Anaconda Python distribution](https://www.continuum.io/downloads). It works with any version >=2.7 or >=3.4. Prefer Python 2.7 if you can, as it is the version we used.
 * To install the Poppy libraries: pypot and the library corresponding to your creature (e.g. poppy-ergo-jr).
 
-> **Note** details about those steps can be found in section *[Install everything locally for using a simulator](#TODO)*.
+> **Note** Details about those steps can be found in section *[Install everything locally for using a simulator](http://docs.poppy-project.org/en/getting-started/visualize.html#install-the-needed-software)*.
 
 ### Using V-REP
 
-[V-REP](http://www.coppeliarobotics.com/downloads.html) is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from [their website](http://www.coppeliarobotics.com/downloads.html) (works under Mac OS, Windows and GNU/Linux).
+[V-REP](http://www.coppeliarobotics.com/downloads.html) is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from [this website](http://www.coppeliarobotics.com/downloads.html) (works under Mac OS, Windows and GNU/Linux).
 
 *It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).*
 
@@ -55,3 +55,4 @@ V-REP can be used to learn how to control motors, get information from sensors b
 *Note: Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).*
 
 ### Using the web visualizer
+
