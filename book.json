@@ -1,6 +1,5 @@
 {
     "title": "Documentation of the Poppy Platform",
-
     "plugins": [
         "-share",
         "edit-link",
@@ -11,8 +10,8 @@
         "ga",
         "language-picker",
         "retina",
-        "numbered-headings", 
-        "copy-code-button", 
+        "numbered-headings",
+        "copy-code-button",
         "todo",
         "youtube"
     ],
@@ -35,7 +34,7 @@
             "facebook": false,
             "twitter": false,
             "all": [
-                "twitter", "facebook", "google", "instapaper"      
+                "twitter", "facebook", "google", "instapaper"
             ]
         }
     },
@@ -48,5 +47,4 @@
         "poppy-ergo-jr_hardware_version": "1.0",
         "poppy-ergo-jr_software_version": "1.0"
     }
-    
 }
