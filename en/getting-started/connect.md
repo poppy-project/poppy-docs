@@ -8,7 +8,7 @@ Poppy creatures come with an embedded board which job is to control motors and a
 
 
 There are two ways to setup the board for your Poppy robot:
-* [**the easy way**](#easy-and-recommended-way-use-the-poppy-sd-card): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
+* [**the easy way**](#easy-and-recommended-way-use-the-poppy-sdcard): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
 * [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
 > **Note** If you are planning to use a simulated robot, you must install the software on your personnal computer. Follow the [simulation install path](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
@@ -46,13 +46,13 @@ Depending on what you want to do all steps are not necessary required. In partic
 
 ### Setup the network
 
-Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it. 
+Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it.
 
 They are two main ways to connect your robot to your computer/tablet/smartphone:
 * Connect both the robot and the computer to the same network (e.g. the box of your home or the school network).
 * Directly connect your robot to your computer using an ethernet cable.
 
-> **Caution** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work. 
+> **Caution** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work.
 
 To found the address of your robot on the network we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
 If you prefer you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
@@ -77,7 +77,7 @@ The web interface is the central point to control, program and configure your ro
 To access this interface, you simply have to go to the URL using your favorite web browser:
 
 * http://poppy.local (if you changed the name of your robot, simply replace *poppy* by its new name)
-* or using directly its IP address 
+* or using directly its IP address
 
 You should see something like:
 

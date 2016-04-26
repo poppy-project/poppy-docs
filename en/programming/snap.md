@@ -20,7 +20,7 @@ Some of the snapshots and concepts of BJC have been used for writing this chapte
 ### Connect your robot to Snap_!_
 
 #### If you use a simulated robot on V-REP
-> **Info** You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the [installation for advanced users section](../installation-for-advanced-users/README.md).
+> **Info** You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the [install poppy software section](../installation/install-poppy-softwares.md).
 
 First open V-REP.
 
@@ -41,11 +41,11 @@ Instead of using `poppy-service` you can start it in full python:
 ```python
 # use PoppyTorso PoppyHumanoid or PoppyEgoJr depending on what you want
 from poppy.creatures import PoppyErgoJr
-poppy = PoppyErgoJr(simulator='vrep', use_snap=True) 
+poppy = PoppyErgoJr(simulator='vrep', use_snap=True)
 ```
 
 #### If you use a simulated robot on poppy-simu (web viewer)
-> **Info** You need to have installed Poppy software libraries on your computer. If it is not done, go to the [installation for advanced users section](../installation-for-advanced-users/README.md).
+> **Info** You need to have installed Poppy software libraries on your computer. If it is not done, go to the [install poppy software section](../installation/install-poppy-softwares.md).
 
 
 The quickest way is to use the command line utility [poppy-service](../software-libraries/poppy-creature.md#poppy-services). Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):
@@ -54,7 +54,7 @@ poppy-services poppy-ergo-jr --snap --poppy-simu
 ```
 > **Warning** poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.
 
-It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr. 
+It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr.
 If it is not automatically done, you can open Snap with preloaded blocks at **[simu.poppy-project.org/snap/](http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml)** and the robot viewer at **[simu.poppy-project.org/poppy-ergo-jr](http://simu.poppy-project.org/poppy-ergo-jr)**.
 
 
@@ -62,7 +62,7 @@ If it is not automatically done, you can open Snap with preloaded blocks at **[s
 Instead of using `poppy-service` you can start it in full python:
 ```python
 from poppy.creatures import PoppyErgoJr
-poppy = PoppyErgoJr(simulator='poppy-simu', use_snap=True) 
+poppy = PoppyErgoJr(simulator='poppy-simu', use_snap=True)
 ```
 
 #### If you have a tangible robot
@@ -109,7 +109,7 @@ Fill the required fields in the modal window for signing up.
 
 ![Create account](../img/snap/dialog-cloud-signup.png)
 
-You will soon receive a validation email with a random password.  
+You will soon receive a validation email with a random password.
 You can now log in with your username and password.
 
 ![Login1](../img/snap/snap_login1.png)
