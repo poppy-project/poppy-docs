@@ -54,14 +54,11 @@ They are two main ways to connect your robot to your computer/tablet/smartphone:
 
 > **Caution** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work. 
 
-To found the address of your robot on the network we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
-If you prefer you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
+To find the address of your robot on the network, we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
+If you prefer, you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
 
 To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot (something similar as http://192.168.0.42).
 
-> **Note** Poppy robots can all be connected to the network using Ethernet cable. Poppy humanoid and torso can also use wifi network. In the next release of the Poppy Ergo Jr we will add support for the wifi. To use wifi you have to first access the web interface using an Ethernet cable. From there you can setup the wifi access.
-
----
 > **Caution** If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.
 
 
@@ -69,8 +66,8 @@ To check that everything is setup correctly, you can go to the following url usi
 
 The web interface is the central point to control, program and configure your robot. It can be used to:
 * Monitor and Control the robot
-* Program it in Snap!
-* Program it in Python
+* Program it in [Snap!](http://snap.berkeley.edu)
+* Program it in [Python](https://www.python.org)
 * Configure the robot (change its name, enable/disable the camera, update)
 * Reset and shutdown the robot
 
