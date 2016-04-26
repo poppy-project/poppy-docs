@@ -13,7 +13,7 @@ The operating system of this computer is hosted on a SD card (you can also use a
 
 You have two possible states:
 - You already have a pre-formated SD card with the Poppy operating system (provided by one of the Poppy distributors). You have nothing to install, you are ready to go to the [assembly section](../assembly-guides/README.md).
-- You have an empty SD-card, **so you have to [download](burn_an_image_file.md#download-the-image) and [write](burn_an_image_file.md#write-an-image-to-the-sd-card) the operating system on the SD card.** This is the most common case.
+- You have an empty SD-card, **so you have to [download](burn-an-image-file.md#download-the-image) and [write](burn-an-image-file.md#write-an-image-to-the-sd-card) the operating system on the SD card.** This is the most common case.
 
 If you are a Linux rocky and want to try yourself our unstable install scripts, you can go the [*install poppy board*](install-poppy-board.md) chapter.
 
