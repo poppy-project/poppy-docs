@@ -35,7 +35,7 @@ More information:
 <iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen></iframe>
 
 
-Then the only limitation is your creativity! For instance, you can make [Poppy Ergo Jr plays TicTacToe](https://www.youtube.com/embed/usDAgvcEXJA):
+Then the only limitation is your creativity! For instance, ou can make [Poppy Ergo Jr plays TicTacToe](https://www.youtube.com/embed/usDAgvcEXJA):
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen></iframe>
 
