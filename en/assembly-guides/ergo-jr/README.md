@@ -20,7 +20,7 @@ This chapter will guide you through all steps required to entirely assemble a Po
 
 * [motors configuration](motor-configuration.md)
 * [electronic assembly](electronic-assembly.md)
-* [hardware construction](hardware-construction.md)
+* [hardware construction](mechanical-construction.md)
 
 **The entire assembly should take about one or two hours** for the first time you build one. With more practice, half an hour should be more than enough.
 
@@ -31,7 +31,7 @@ We recommend you to follow carefully the instructions. Even if the Ergo Jr can b
 <!-- BOM from poppy-ergo-jr git repo -->
 {% include "git+https://github.com/poppy-project/poppy-ergo-jr.git/doc/bom.md" %}
 
-<!-- 
+<!--
 TODO: assembly web interface
 ## Assembly web interface
 

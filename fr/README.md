@@ -1,10 +1,6 @@
-<!---
-% Poppy Documentation
-% Version 1.0
-% Jan. 2016
--->
+# Introduction
 
-## A propos
+## À propos
 
 Bienvenue dans l'espace de documentation de la plateforme robotique open source [Poppy](https://www.poppy-project.org/).
 
@@ -14,12 +10,11 @@ Cette documentation est sous licence Creative Commons (BY-SA). Les sources sont 
 
 ## Version
 
-Dans ce document (version 1.0) vous trouverez les documentations pour:
+Dans ce document (version {{ book.poppy_doc_version }}) vous trouverez les documentations pour:
 
 -   Poppy Humanoid 1.0.1 hardware
 -   Poppy Torso 1.0.1 hardware
--   Poppy ErgoJr 1.0 hardware
-
+-   Poppy ErgoJr beta 6 hardware
 -   poppy_humanoid library version 1.1.1
 -   poppy_torso library version 1.1.5
 -   poppy_ergo_jr library version 1.4.0
