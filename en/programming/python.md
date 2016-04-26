@@ -190,7 +190,7 @@ poppy-services --poppy-simu --snap --no-browser poppy-ergo-jr
 
 This will create a server for Snap_!_ on port 6969, and a server for the visualizer on port 8080.
 
-You can then head to the [visualizer page](http://poppy-project.github.io/poppy-simu/poppy-ergo-jr/).
+You can then head to the [visualizer page](http://simu.poppy-project.org/).
 
 ### Access the sensors and motors
 
