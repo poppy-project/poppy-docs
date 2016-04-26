@@ -6,6 +6,7 @@
 **Objectif** : contrôler un moteur de Poppy par un potentiomètre sur la platine Arduino.
 
 ### Préparation de Snap4Arduino
+
 * Téléchargez et installez [Snap4Arduino](http://s4a.cat/snap/).
 * Téléchargez les blocs [pypot-snap-blocks.xml](https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml). Ils devront être importés dans Snap4Arduino à chaque démarrage.
 
@@ -14,7 +15,7 @@
 * Connectez votre platine, ouvrez Arduino et téléversez le firmware StandardFirmata. (disponible via Fichier - Exemples - Firmata).
 * Branchez un potentiomètre sur la sortie analogique A0, comme illustré ci-dessous  :
 
-![montage](../../img/activity/snap4arduino/montage.jpg)
+![montage](../img/activity/snap4arduino/montage.jpg)
 
 
 ### Lancement de la simulation (dans le cas d'un Poppy simulé dans Vrep)
@@ -52,7 +53,7 @@ On peut donc alors construire l'instruction suivante, qui fera bouger le moteur 
 
 ### Remarques diverses
 
-* Il peut être utile de créer un bloc *map* (une version [ici](https://raw.githubusercontent.com/poppy-project/poppy-docs/master/resources/block_map.xml)) équivalent à la fonction éponyme d'Arduino, permettant de mettre à l'échelle automatiquement une valeur dans une plage donnée :
+* Il peut être utile de créer un bloc *map* équivalent à la fonction éponyme d'Arduino, permettant de mettre à l'échelle automatiquement une valeur dans une plage donnée :
 
 ![map](../img/activity/snap4arduino/map.png)
 

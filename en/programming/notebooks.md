@@ -15,8 +15,6 @@ This chapter presents a gallery of notebooks and tries to organize them into dif
 
 For each notebook, we provide a short description of what it does, with which robot/simulator it can be used and of course a link. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
 
-**If you see a notebook missing or want to submit your own, please [let us know](https://github.com/poppy-project/poppy-docs/labels/notebooks)!**
-
 ## Getting started
 
 * **Controlling a Poppy Humanoid in V-REP: [Notebook](https://github.com/poppy-project/poppy-humanoid/blob/master/software/samples/notebooks/Controlling%20a%20Poppy%20humanoid%20in%20V-REP%20using%20pypot.ipynb)** - Describe how to setup a Poppy Humanoid in V-REP and how to control it (motor control and sensor reading) from pypot in Python.
@@ -28,6 +26,7 @@ For each notebook, we provide a short description of what it does, with which ro
 * **10 choses à savoir avec Poppy Humanoid/ErgoJr et V-REP: [pour l'ErgoJr](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/Ergo_simulation%20prise%20en%20main.ipynb), [pour l'Humanoid](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/premier%20pas%20avec%20poppy%20humanoid%20en%20python%20-%2010%20choses%20à%20savoir.ipynb)** - 10 informations de base pour bien commencer avec Poppy Humanoid ou Poppy ErgoJr simulés dans V-REP et comment les contrôler en Python.
 
 ## Simulator
+
 ### V-REP
 
 * **Controlling a Poppy Humanoid in V-REP: [Notebook](https://github.com/poppy-project/community-notebooks/blob/master/demo/poppy-humanoid_Controlling%20in%20V-REP%20using%20pypot.ipynb)** - Describe how to setup a Poppy Humanoid in V-REP and how to control it (motor control and sensor reading) from pypot in Python.
@@ -39,7 +38,8 @@ For each notebook, we provide a short description of what it does, with which ro
 * **Learning the robot IK: [Notebook](#TODO)** - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy robots. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.
 
 #### Notebooks en français
-* **10 choses à savoir avec Poppy Humanoid/ErgoJr et V-REP [Notebook pour l'ErgoJr](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/Ergo_simulation%20prise%20en%20main.ipynb)[Notebook pour l'Humanoid](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/premier%20pas%20avec%20poppy%20en%20python%20-%2010%20choses%20à%20savoir.ipynb)** - 10 informations de base pour bien commencer avec Poppy Humanoid ou Poppy ErgoJr simulés dans V-REP et comment les contrôler en Python.
+
+* **10 choses à savoir avec Poppy Humanoid/ErgoJr et V-REP [Notebook pour l'ErgoJr](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/Ergo_simulation%20prise%20en%20main.ipynb)[Notebook pour l'Humanoid](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simul%C3%A9/premier%20pas%20avec%20poppy%20humanoid%20en%20python%20-%2010%20choses%20%C3%A0%20savoir.ipynb)** - 10 informations de base pour bien commencer avec Poppy Humanoid ou Poppy ErgoJr simulés dans V-REP et comment les contrôler en Python.
 
 
 ## HTTP REST API and remote connection
@@ -47,6 +47,7 @@ For each notebook, we provide a short description of what it does, with which ro
 * **Controlling a robot using HTTP requests: [Notebook](https://github.com/poppy-project/community-notebooks/blob/master/demo/poppy-humanoid_Accessing%20pypot%20REST%20API%20through%20HTTP%20requests.ipynb)** - Show how you can send HTTP requests to a robot, using the REST API, to control it. The notebook is based on a V-REP simulated Poppy Humanoid but can be adapted to other creatures.
 
 ## Scientific experiments
+
 ### Discover Explauto
 
 * **Learning the robot IK: [Notebook](#TODO)** - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy robots. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.
@@ -64,12 +65,15 @@ For each notebook, we provide a short description of what it does, with which ro
 #### Notebooks en français
 
 #### Initiation à l'informatique en Lycée
+
 * **Découverte: [TP1](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d'ininitiation%20à%20l'informatique%20pour%20les%20lycéens/decouverte/Decouverte%20TP1.ipynb), [TP2](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d'ininitiation%20à%20l'informatique%20pour%20les%20lycéens/decouverte/Decouverte%20TP2.ipynb), [TP3](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d'ininitiation%20à%20l'informatique%20pour%20les%20lycéens/decouverte/Decouverte%20TP3.ipynb)** - Comprendre comment faire bouger simplement le robot. Utilisation des boucles. Ces TPs utilisent un Poppy Torso simulé dans V-REP.
 
 * **Dialogue: [TP1](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d'ininitiation%20à%20l'informatique%20pour%20les%20lycéens/dialogue/Dialogue%20TP1.ipynb), [TP2](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d'ininitiation%20à%20l'informatique%20pour%20les%20lycéens/dialogue/Dialogue%20TP2.ipynb)** - Établir un dialogue entre Python et le robot. Ces TPs utilisent un Poppy Torso simulé dans V-REP.
 
 ## Going further
+
 ### Low-level communication
+
 * **Configure a new motor directly in Python: [Notebook](#TODO)** -
 
 
@@ -90,4 +94,4 @@ For each notebook, we provide a short description of what it does, with which ro
 
 ## Contributing to this gallery
 
-Do not hesitate to let us know if some cool Notebooks are missing! You can directly send pull-request on GitHub or uses the [issue tracker](https://github.com/poppy-project/poppy-docs/labels/notebooks).
+Do not hesitate to let us know if some cool Notebooks are missing! You can directly send pull-request on GitHub or use the [issue tracker](https://github.com/poppy-project/poppy-docs/issues).
