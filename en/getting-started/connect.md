@@ -1,6 +1,6 @@
 # Start and connect the robot
 
-In this section, we will describe how to start your robot and a give an overview of the possibilities to connect to it.
+In this section, we will describe how to start your robot and give an overview of the possibilities to access it.
 
 ## Setup the software
 
