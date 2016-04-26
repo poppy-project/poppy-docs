@@ -3,7 +3,7 @@
 ## Introduction
 Poppy-creature is a small library providing an abstract interface for robots (Poppy Humanoid, Poppy Torso, Poppy Ergo Jr...). It links high level controls and pypot, the generic low level library.
 
-It mainly contains the class definition of [poppy.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py) which takes a configuration and builds a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py#L9) out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.
+It mainly contains the class definition of [poppy.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py) which takes a configuration and builds a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.
 
 The arguments you can provide are:
 
@@ -44,7 +44,7 @@ Example:
 
 This will launch the SnapRemoteServer for a real Poppy Ergo Jr robot.
 
-> **Note** The `--no-browser` option avoid the automatic redirection to the *Snap!* webpage. 
+> **Note** The `--no-browser` option avoid the automatic redirection to the *Snap!* webpage.
 You can remove it if you use a computer with a GUI (e.g your laptop instead of the robot embedded board).
 
 Another example:
@@ -71,7 +71,7 @@ the available options are:
 
 ## Create your own Poppy creature
 
-While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a [pypot.robot.robot.Robot]((https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py#L9) from Pypot directly.
+While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a [pypot.robot.robot.Robot]((https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) from Pypot directly.
 
 But when you want to make it easily usable and available to non-geek public, the best is to create your own creature's library. It should contain a configuration file and a class that extends [poppy.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py). You can then
 add your own properties and primitives.
