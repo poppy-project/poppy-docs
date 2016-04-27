@@ -58,7 +58,7 @@ sudo bash poppy_setup.sh poppy-humanoid
 You should lose your ssh connection because of the board reboot. This reboot is needed to proceed to the finalisation of the partition resizing. Now your board should installing all the poppy environment. **Please do not unpower the board or shut-it down.**
 
 You can see the installation process by reconnecting you to your board with your new poppy account: `ssh poppy@poppy.local` password=poppy.
-**Because of the compilation of heavy Python packages (Scipy, Numpy) it can take 30 to 45 minutes to complete.**
+**Because of the compilation of heavy Python packages (Scipy, Numpy) it can take more than 1 hour to complete.**
 
 A process will automatically take you terminal and print the installation output. You can leave it with `ctrl+c`. You can get back this print by reading the install_log file:
 ```
