@@ -16,9 +16,7 @@ addons:
     packages:
     - g++-4.8
 before_install:
-- npm install gitbook-cli -g
-- npm install broken-link-checker -g
-- npm install http-server -g
+- npm install -g gitbook-cli broken-link-checker http-server
 - gitbook install
 - wget -nv -O- https://raw.githubusercontent.com/kovidgoyal/calibre/master/setup/linux-installer.py
   | python -c "import sys; main=lambda x,y:sys.stderr.write('Download failed\n');
