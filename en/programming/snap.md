@@ -69,7 +69,7 @@ poppy = PoppyErgoJr(simulator='poppy-simu', use_snap=True)
 
 First, you must be connected to the same network LAN area than your robot (e.g. on the same router or Wifi).
 
-You have to go on the web homepage of your robot with its URL. You can use its IP address (for example http://192.168.1.42) if you have a way to know it or its hostname like http://poppy.local. To find its IP address you can see it in your router administration web page, or with a network scanner like ["Fing"](http://www.overlooksoft.com/download) (for smartphone and desktop OS). To use directly its hostname http://poppy.local you must have a Zeroconf software installed on your computer (aka ["Bonjour print services for Windows"](https://support.apple.com/kb/DL999?locale=en_US) if you are running Windows).
+You have to go on the web homepage of your robot with its URL. You can use its IP address (for example http://192.168.1.42) if you have a way to know it or its hostname like http://poppy.local. To find its IP address look at [the zeroconf chapter](../installation/install-zeroconf.md#alternatives-to-find-the-ip-address-of-a-computer-on-your-local-network). To use directly its hostname http://poppy.local you must have a Zeroconf software installed on your computer (aka ["Bonjour print services for Windows"](https://support.apple.com/kb/DL999?locale=en_US) if you are running Windows).
 
 The home page of your poppy creature should look like the snapshot below:
 ![find blocks](../img/snap/homepage.png)
