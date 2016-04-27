@@ -15,7 +15,7 @@ Download the image of your system:
 
 Write the image to the SD-card with you favorite disk writer tool as explained in the [startup section](burn-an-image-file.md#write-an-image-to-the-sd-card).
 
-> **Info** If you are using Windows, you have no native SSH client ; you have to download and install [Putty](http://www.putty.org/) or [bitwise](https://www.bitvise.com/ssh-client-download) to use SSH.
+> **Info** If you are using Windows, you have no native SSH client ; you have to download and install [putty](http://www.putty.org/) or [mobaxterm](http://mobaxterm.mobatek.net/) to use SSH.
 
 Login to the board in SSH: `ssh pi@raspberrypi.local`, password=raspberry.
 
