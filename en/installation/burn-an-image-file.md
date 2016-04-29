@@ -1,4 +1,4 @@
-# Setup your Poppy Board
+# Startup with a Poppy robot
 
 >**Note** This chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, look at the [simulation install path](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
