@@ -17,6 +17,8 @@ For each notebook, we provide a short description of what it does, with which ro
 
 ## Getting started
 
+* **Discover your Poppy Ergo Jr:** [Notebook]() - Begin controlling your robot, launch behavior, send motor command, get values from the sensor...
+
 * **Controlling a Poppy Humanoid in V-REP: [Notebook](https://github.com/poppy-project/poppy-humanoid/blob/master/software/samples/notebooks/Controlling%20a%20Poppy%20humanoid%20in%20V-REP%20using%20pypot.ipynb)** - Describe how to setup a Poppy Humanoid in V-REP and how to control it (motor control and sensor reading) from pypot in Python.
 
 * **Record, Save, and Play Moves: [Notebook](https://github.com/poppy-project/community-notebooks/blob/master/demo/poppy-ergo_Record%2C%20Save%2C%20and%20Play%20Moves.ipynb)** - Simple introduction on how to record by demonstration moves on any Poppy Creature. It also shows how they can be re-played and saved/load to/from the disk.
