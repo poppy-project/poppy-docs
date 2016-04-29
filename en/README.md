@@ -1,3 +1,5 @@
+![poppy-logo](img/logo/poppy.png)
+
 # Introduction
 
 ## About
