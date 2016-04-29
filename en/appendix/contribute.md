@@ -1,4 +1,4 @@
-## Cetting involved in the Poppy project
+## Getting involved in the Poppy project
 
 If you want to take part of this project, maybe the first step is to become a member of the community on the [Poppy forum](https://forum.poppy-project.org).  The forum is the very central place to exchange with users and contributors. You can freely come and talk about your project or ideas with your prefered language.
 
