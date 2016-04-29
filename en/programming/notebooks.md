@@ -33,13 +33,11 @@ For each notebook, we provide a short description of what it does, with which ro
 
 * **Interacting with objects in V-REP: [Notebook](https://github.com/poppy-project/poppy-torso/blob/ff6254355ce18a26f58654f5abc82485a7a22d13/software/doc/tutorial/Poppy%20Torso%20interacting%20with%20objects%20in%20V-REP%20using%20Pypot.ipynb)** - Show how you can programtically add objects to the V-REP simulation and interact with them. This example uses a Poppy Torso but can be easily adapted to other creatures.
 
-* **V-REP simulation benchmark: [Notebook](#TODO)** - Check how fast the V-REP simulation is running on your computer. Can be used with the **Humanoid, Torso, and ErgoJr**.
-
-* **Learning the robot IK: [Notebook](#TODO)** - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy robots. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.
+* **Learning the robot IK: [Notebook](https://github.com/flowersteam/explauto/blob/master/notebook/Learning%20the%20IK%20of%20the%20arm%20of%20a%20simulated%20Poppy%20using%20Explauto.ipynb)** - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy Humanoid. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.
 
 #### Notebooks en français
 
-* **10 choses à savoir avec Poppy Humanoid/ErgoJr et V-REP [Notebook pour l'ErgoJr](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simul%C3%A9/Ergo_simulation%20prise%20en%20main.ipynb)[Notebook pour l'Humanoid](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simul%C3%A9/premier%20pas%20avec%20poppy%20humanoid%20en%20python%20-%2010%20choses%20%C3%A0%20savoir.ipynb)** - 10 informations de base pour bien commencer avec Poppy Humanoid ou Poppy ErgoJr simulés dans V-REP et comment les contrôler en Python.
+* **10 choses à savoir avec Poppy Humanoid/ErgoJr et V-REP [pour l'ErgoJr](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simul%C3%A9/Ergo_simulation%20prise%20en%20main.ipynb), [pour l'Humanoid](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simul%C3%A9/premier%20pas%20avec%20poppy%20humanoid%20en%20python%20-%2010%20choses%20%C3%A0%20savoir.ipynb)** - 10 informations de base pour bien commencer avec Poppy Humanoid ou Poppy Ergo Jr simulés dans V-REP et comment les contrôler en Python.
 
 
 ## HTTP REST API and remote connection
@@ -50,17 +48,14 @@ For each notebook, we provide a short description of what it does, with which ro
 
 ### Discover Explauto
 
-* **Learning the robot IK: [Notebook](#TODO)** - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy robots. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.
+* **Learning the robot IK: [Notebook](https://github.com/flowersteam/explauto/blob/master/notebook/Learning%20the%20IK%20of%20the%20arm%20of%20a%20simulated%20Poppy%20using%20Explauto.ipynb)** - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy Humanoid. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.
 
 
 ## Demo interface
 
-* **Primitives launcher: [Notebook](https://github.com/poppy-project/poppy-humanoid/blob/dd469c262ede0877153afd6e086f65fc85e8b729/software/samples/notebooks/Demo%20Interface.ipynb)** - Provides all codes needed to directly launched primitives (stand, sit, idle motions, limit torque...)
-
-* **Simple demo - livecoding: [Notebook](https://github.com/poppy-project/poppy-humanoid/blob/dd469c262ede0877153afd6e086f65fc85e8b729/software/samples/notebooks/TTFX.ipynb)** - Show some basic examples of what you can do with a Poppy Humanoid: start primitives, control motors, get sensor readings. It was designed for a 15 minutes live coding session (in French).
+* **Primitives launcher for Poppy Humanoid: [Notebook](https://github.com/poppy-project/poppy-humanoid/blob/dd469c262ede0877153afd6e086f65fc85e8b729/software/samples/notebooks/Demo%20Interface.ipynb)** - Provides all codes needed to directly launched primitives (stand, sit, idle motions, limit torque...)
 
 ## Education
-
 
 #### Notebooks en français
 
@@ -72,25 +67,13 @@ For each notebook, we provide a short description of what it does, with which ro
 
 ## Going further
 
-### Low-level communication
-
-* **Configure a new motor directly in Python: [Notebook](#TODO)** -
-
+### Low-level communicatio
 
 ### Debug and setup
 
-* **Configure a new motor directly in Python: [Notebook](#TODO)** -
-
 ### Benchmark
 
-* **Trajectory following: [Notebook](https://github.com/poppy-project/community-notebooks/blob/master/debug/mini-4dof-arm-mini_benchmark_XL320.ipynb)** - Measure how precisely a **Poppy mini-4dof** follows a given trajectory. It measures the position, speed and load of multiple motors on a fast and a slow trajectory.
-
-* **V-REP simulation benchmark: [Notebook](#TODO)** - Check how fast the V-REP simulation is running on your computer. Can be used with the **Humanoid, Torso, and Ergo Jr**.
-
-
 ### Extending Poppy software
-
-* **Define your own Poppy creature: [Notebook](#TODO)** -
 
 ## Contributing to this gallery
 
