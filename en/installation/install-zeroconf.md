@@ -1,7 +1,7 @@
 # Install zeroconf
 Zeroconf is a protocol which allow you to call any local computer by its hostname with the '.local' suffix instead of its IP address.
 
-With a zeroconf client, to `ping a computer called 'goldstine', you can simply do:
+With a zeroconf client, to ```ping``` a computer called 'goldstine', you can simply do:
 ```
 $ ping goldstine.local
 64 bytes from 192.168.1.42: icmp_seq=0 ttl=54 time=3.14 ms

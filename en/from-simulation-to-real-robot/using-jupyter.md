@@ -9,7 +9,7 @@ Thus to switch from simulation to a real robot, you need to switch from your loc
 
 ### Connect to the Jupyter on the robot
 
-Once connected to the robot web interface (we will assume here its hostname is *poppy*, just replace it by the new hostname if you changed it), you should see a **open Ipython notebook** link.
+Once connected to the robot web interface *http://poppy.local* (we will assume here its hostname is *poppy*, just replace it by the new hostname if you changed it), you should see a **open Ipython notebook** link.
 
 ![open notebook link](../img/poppy_home.png)
 
@@ -19,7 +19,7 @@ When clicked it will start Jupyter on the robot and redirect you to the Jupyter 
 
 This is where you can put your own notebooks. Of course, you can create folder, organize them as you want, etc...
 
-*Note: If you need finer access or more advanced configuration (such as permission for instance), you have to log directly to the robot using ssh. See [advanced section](#TODO) for details.*
+*Note: If you need finer access or more advanced configuration (such as permission for instance), you have to log directly to the robot using ssh.*
 
 ### Upload a notebook
 
