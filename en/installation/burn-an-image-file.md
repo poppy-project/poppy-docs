@@ -59,7 +59,7 @@ sudo dd bs=4M if=poppy-ergojr.img of=/dev/mmcblk0
 If you are running OSX or another BSD based OS:
 
 ```bash
-sudo dd bs=4m if=poppy-ergojr.img of=/dev/disks1
+sudo dd bs=4m if=poppy-ergojr.img of=/dev/disks8
 ``` 
 
 > **Info** The `dd` command does not give any information of its progress and so may appear to have frozen; it > could take more than five minutes to finish writing to the card. To see the progress of the copy operation you can run `sudo pkill -USR1 -n -x dd` in another terminal.
