@@ -78,7 +78,7 @@ To access this interface, you simply have to go to the URL using your favorite w
 
 You should see something like:
 
-![Home Page](Screen Shot 2016-04-07 at 14.12.11.png)
+![Home Page](../img/poppy_home.png)
 The buttons can be used to navigate to the different features. For instance, if you click on the *Monitor and Control*, you will access the monitor web app:
 
 ![Monitor interface](../img/poppy_monitor.png)
@@ -87,4 +87,4 @@ This let you turn on/off the motors of your robot, monitor them, and start/stop 
 
 The *What happened* button is where you should look for more information is something goes wrong. Here is a screenshot of what you should see if everything goes well:
 
-![Screenshot of the web log interface](web-logs.png)
+![Screenshot of the web log interface](../img/web-logs.png)

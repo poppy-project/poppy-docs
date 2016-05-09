@@ -12,11 +12,11 @@ Poppy robots are designed to be easily programmed. They are three main options p
 
 ### Using Snap_!_
 
-![Snap! logo](Logo5.png)
+![Snap! logo](../img/logo/snap.png)
 
 Snap_!_ is a visual programming language - a variant of the very famous Scratch language. It is a block based drag-and-drop programming language that allows for a thorough introduction of IT. It runs in your browser as it is implemented in JavaScript. You do not need to install anything to start using it. It is open sourced and actively maintained.
 
-![Exemple of Snap project using Poppy](Snap.jpg)
+![Exemple of Snap project using Poppy](../img/snap/presentation.jpg)
 
 We developed a set of custom blocks for Poppy robots that let you send motor commands and read values from the sensors of your robot. This let you to directly jump into controlling and programming your without any syntax/compilation issue. Thanks to Snap_!_ live interaction loop you simply have to click on a block to send its associated command to the robot. Snap_!_ also naturally scales to more complex projects.
 
