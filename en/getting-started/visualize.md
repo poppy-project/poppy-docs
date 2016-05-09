@@ -63,6 +63,6 @@ Our web visualizer - based on the [Three.js](http://threejs.org) library - will 
 
 As for V-REP, you can control your Robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
 
-Here is an exemple with Python:
+Here is an example with Python:
 
 ![Poppy Visu with Python](../img/visu/python-setup.gif)
