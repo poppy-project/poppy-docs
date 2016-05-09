@@ -58,12 +58,11 @@ V-REP can be used to learn how to control motors, get information from sensors b
 
 Our web visualizer - based on the [Three.js](http://threejs.org) library - will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot. 
 
-![](poppy-web-visualisateur.png)
+![Poppy Simu Presentation](../img/visu/presentation.png)
 > **Note** A mockup robot can be started via the poppy-services command. For instance: ```poppy-services --poppy-simu --snap poppy-ergo-jr```
 
 As for V-REP, you can control your Robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
 
-Here is an exemple with Python: 
+Here is an exemple with Python:
 
-![](poppy-visu.gif)
-
+![Poppy Visu with Python](../img/visu/python-setup.gif)
