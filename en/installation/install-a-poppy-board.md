@@ -55,7 +55,7 @@ Be sure that your board is connected to the Internet, download and run poppy_set
 wget https://raw.githubusercontent.com/poppy-project/odroid-poppysetup/master/poppy_setup.sh -O poppy_setup.sh
 sudo bash poppy_setup.sh poppy-humanoid
 ```
-You should lose your ssh connection because of the board reboot. This reboot is needed to proceed to the finalisation of the partition resizing. Now your board should installing all the poppy environment. **Please do not unpower the board or shut-it down.**
+You should lose your ssh connection because of the board reboot. This reboot is needed to proceed to the finalisation of the partition resizing. Now your board should install all the poppy environment. **Please do not unpower the board or shut-it down.**
 
 You can see the installation process by reconnecting you to your board with your new poppy account: `ssh poppy@poppy.local` password=poppy.
 **Because of the compilation of heavy Python packages (Scipy, Numpy) it can take more than 1 hour to complete.**
