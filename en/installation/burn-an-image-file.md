@@ -13,7 +13,7 @@ You may be in two kind of cases:
 > **Info** The Poppy creatures operating system use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi.
 > You will only need a computer with a SD card reader/writer to write the image on the SD card.
 
-## Download the image
+## Download the image of the operating system
 
 You have to choose the image (file in *.img.zip) to download depending on your Poppy creature and the targeted board:
 
@@ -23,7 +23,7 @@ You have to choose the image (file in *.img.zip) to download depending on your P
 
 The .zip file you have downloaded need to be unzipped to get the image file for writing to your SD card.
 
-## Write an image to the SD card
+## Write the operating system image to the SD card
 
 With the image file corresponding to your Poppy creature, you need to use an image writing tool to install it on your SD card.
 First unzip the image you have previously downloaded.
