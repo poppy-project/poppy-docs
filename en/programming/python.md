@@ -44,7 +44,7 @@ This is summarized in the diagram below:
 
 ## Installation
 
-**First, note that if you are only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the [web interface](#TODO) and have nothing to install on your machine!**
+**First, note that if you are only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the [web interface](../getting-started/program-the-robot.md) and have nothing to install on your machine!**
 
 What you need to install is summarized in the diagram below:
 
@@ -55,14 +55,14 @@ Yet, if you are planning to either
 * Use a simulator (e.g. V-REP, or web simulator),
 * or want to directly plug the robot to your computer
 
-You will have to install Poppy libraries locally. They work on Windows, Mac OS, Linux, and have been tested on:
+You will have to install Poppy libraries locally. They work on Windows, Mac OSX, Linux, and have been tested on:
 
 * Python >= 2.7
 * Python >= 3.4
 
 Also note that if you are planning to directly plug your robot to your USB port, specific drivers should be installed.
 
-All steps are detailed in the chapter [Manual installation](#TODO).
+All steps are detailed in the chapter *[install Poppy software](../installation/install-poppy-softwares.md)*.
 
 ## Quickstart: Hello Poppy world!
 
@@ -114,12 +114,11 @@ from poppy.creatures import PoppyHumanoid
 ```
 
 
-> **Note** If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section TODO.
+> **Note** If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section *[install Poppy software](../installation/install-poppy-softwares.md)*.
 
 ```python
 In [1]: from poppy.creatures import PoppyHumanoid
----------------------------------------------------------------------------
-ImportError                               Traceback (most recent call last)
+ImportError Traceback (most recent call last)
 <ipython-input-1-18e4c5a36525> in <module>()
 ----> 1 from poppy.creatures import PoppyHumanoid
 
@@ -165,7 +164,7 @@ poppy = PoppyTorso(simulated='vrep')
 
 All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with V-REP.
 
-If you see an error message like this, check that you have launched V-REP and that you have close the popup in V-REP (see #TODO for details).
+If you see an error message like this, check that you have launched V-REP and that you have close the popup in V-REP (see [this chapter](../installation/install-vrep.md#test-your-installation) for details).
 
 ```python
 IOError: Connection to V-REP failed!
@@ -178,7 +177,7 @@ It also requires specific versions of libraries to be used properly.
 
 To make sure you meet these requirements, you can type this command from your shell:
 
-```pash
+```bash
 pip install pypot>=2.12 poppy-creature>=1.8 poppy-ergo-jr>=1.6 --upgrade
 ```
 
@@ -371,7 +370,8 @@ from pypot.primitive.move import MoveRecorder
 
 To create this primitive, you have to give the following arguments:
 
-* on which robot you want to use this primitive (this can be useful if you are working with multiple robot at a time - for instance you can record a move on a robot and at the same time make it reproduce by another one: this [notebook](#TODO) will guide you on how to do this).
+* on which robot you want to use this primitive (this can be useful if you are working with multiple robot at a time - for instance you can record a move on a robot and at the same time make it reproduce by another one. 
+<!-- this [notebook](#TODO) will guide you on how to do this). -->
 * the record frequency of the move you want to register: how many position per second will be recorded - the higher the more accurate the record will be but also more data will have to be processed - good values are usually between 10Hz and 50Hz.
 * the motors that you want to record. you can record a move on a subpart of you robot, for instance only on the left arm.
 
