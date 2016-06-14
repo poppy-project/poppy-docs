@@ -1,7 +1,7 @@
 ## Using Jupyter Python Notebooks
 
 One of the advantages of working with Jupyter Notebooks is the possibility to use it as a client/server approach.  
-Each Poppy robot hosts a Jupyter server accessible via the web interface (see [section quickstart](#TODO) for details).
+Each Poppy robot hosts a Jupyter server accessible via the web interface (see [section quickstart](../getting-started/program-the-robot.md) for details).
 
 When working in simulation, everything is run and stored locally on your computer. When working with a real robot you can program it from a web browser on your own machine but your notebooks are actually stored and run in the robot.
 
@@ -80,7 +80,7 @@ def reset_position():
 
 The main drawback of this client/server way of working is that your locally installed software versions may differ from the one installed on the robot.
 
-The Python installed on the robot is Python 2.7 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed Python packages will be available soon (TODO!). At the moment, the easier way to get it is to used a *terminal notebook* which can be directly run from the Jupyter interface.
+The Python installed on the robot is Python 2.7 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed Python packages will be available soon <!-- (TODO!)-->. At the moment, the easier way to get it is to used a *terminal notebook* which can be directly run from the Jupyter interface.
 
 ![Open a terminal](../img/jupyter/open-terminal.jpg)
 
