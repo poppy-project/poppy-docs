@@ -32,7 +32,7 @@ First unzip the image you have previously downloaded.
 ### Burn the image with etcher (GUI software)
 
 Download and install [etcher](http://etcher.io/). It works for Windows, OSX, and GNU/Linux operating systems.
-![etcher](img/etcher.png)
+![etcher](img/etcher.gif)
 Select the unzipped image, select the SD-card or MMC drive, press the *burn* button, and wait until it is done.
 
 Now you are ready to [assemble your robot](../assembly-guides/README.md)!
