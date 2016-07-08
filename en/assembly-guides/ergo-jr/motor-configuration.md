@@ -18,6 +18,7 @@ Your electronic setup when configuring a motor should look like this:
 * the Raspberry Pi
 * the shield on top and the AC plugged
 * a wire from the shield to the motor you want to configure
+* a ethernet cable going from the Raspberry Pi to your computer or your router
 
 ![XL-320 configuration ; one motor at a time](img/motor_one_by_one.jpg)
 
@@ -32,7 +33,7 @@ Your electronic setup when configuring a motor should look like this:
 #### Command-line utility
 Robots come with a command line utility `poppy-configure` ; to use it you need to open a terminal on your Raspberry Pi.
 
-You can open a terminal on your robot directly from your Ipython/Jupyter notebook.  For that, open the home page of the robot in your web browser (eg. open http://poppy.local if the hostname is poppy). Click on the "Open Ipython/Jupyter Notebook window" link and select "New Terminal".
+You can access to the Raspberry Pi directly from your computer. To do so, open the page http://poppy.local in a web browser. You see the Poppy home page. Click on the "Python, Terminal" link and select "New Terminal".
 ![Jupyter terminal](img/IHM/new_terminal.png)
 
 Once the terminal is open, copy and press enter to execute the commande bellow.
@@ -42,7 +43,7 @@ poppy-configure ergo-jr m1
 ```
 
 You have now configured the m1 motor of your robot.
-Once configured - either from the web interface or the command line - and that you see the message indicating that everything went well, you can unplug the motor. Its configuration will be stored in the motor internal memory.
+Once configured and that you see the message indicating that everything went well, you can unplug the motor (you don't need to turn off the card). The configuration of the motor is stored in the motor internal memory.
 
 > **Info** Poppy Ergo Jr motors are named m1, m2, m3, m4, m5, m6. To configure the others motors, you have to change m1 by the name of the motor you want to configure in the command above.
 
