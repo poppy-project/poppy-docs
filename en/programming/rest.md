@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Poppy robots have been developed as an open platform. Their design is based on modularity and transparency. Another key feature in this direction is to allow for open communication so they can "talk" with other devices (IoT), or other softwares and languages.
+Poppy robots have been developed as an open platform. Their design is based on modularity, diversity and transparency. Another key feature in this direction is to allow for open communication so they can "talk" with other devices (IoT), or other softwares and languages.
 
 HTTP API are a great solution for this. The HTTP protocol is a standard used everywhere and can be easily accessed from any connected device and from the vast majority of existing languages.
 
