@@ -39,7 +39,7 @@ Pour obtenir votre propre robot Poppy, vous pouvez soit :
 
 ### Poppy Ergo Jr
 
-The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors \(XL-320 Dynamixel servos\) with simple 3D-printed parts.
+Le robot Poppy Ergo Jr est un petit bras robotique à cout modéré qui possède six degré de mouvements. Il est fait de 6 moteurs au prix abordable \(des servos XL-320 Dynamixel\) ainsi que de parties simples et imprimables en 3D.
 
 ![](/en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
