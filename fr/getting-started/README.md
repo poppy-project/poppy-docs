@@ -25,11 +25,10 @@ Toutes les créatures Poppy:
 
 * sont faites à partir de pièces imprimables en 3D et de moteurs Dynamixel,
 * utilisent une carte d'extension pour le contrôle \(un Raspberry Pi 2 ou Odroid pour les versions plus anciennes\),
-* 
-* are based on a Python library, [pypot](../software-libraries/pypot.md), allowing to control Dynamixel servomotors in an easy way,
-* have a simulated version available \(based on [V-REP](http://www.coppeliarobotics.com)\),
-* can be controlled using a visual programming language \([Snap!](http://snap.berkeley.edu) a variation of Scratch\) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language,
-* come with associated documentation, tutorials, examples, pedagogical activities.
+* sont basées sur une bibliothèque Python, [pypot](../software-libraries/pypot.md), qui permet le contrôle des servomoteurs Dynamixel de manière simplifiée,
+* ont une version de simulation disponible \(basée sur [V-REP](http://www.coppeliarobotics.com)\),
+* peuvent être controlées en utilisant un langage de programmation visuel \([Snap!](http://snap.berkeley.edu) une variation de Scratch\) et un langage textuel [Python](https://www.python.org). Elles sont aussi programmables par l'intermédiaire d'une API REST, ce qui permet de les contrôler à partir d'autre langages de programmation,
+* viennent avec la documentation associée, des tutoriels, exemples et activités pédagogiques.
 
 They can be used as it is, or hacked to explore new shapes, add sensors, etc...
 
