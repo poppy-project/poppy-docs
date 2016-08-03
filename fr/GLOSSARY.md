@@ -1,5 +1,5 @@
-# Glossary
+# Glossaire
 
-## Compliant (for a motor)
+## Conciliant (concernant un moteur)
 
-A motor is said [compliant](https://en.wikipedia.org/wiki/Compliant_mechanism) if it opposes no resistance to a force. The opposite state of compliant is *stiff*.
+Un moteur est dit [conciliant](https://en.wikipedia.org/wiki/Compliant_mechanism) s'il n'oppose aucune résistance à la force. L'état contraire de conciliant est *résistant*.
