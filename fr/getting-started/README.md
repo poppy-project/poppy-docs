@@ -30,12 +30,12 @@ Toutes les créatures Poppy:
 * peuvent être controlées en utilisant un langage de programmation visuel \([Snap!](http://snap.berkeley.edu) une variation de Scratch\) et un langage textuel [Python](https://www.python.org). Elles sont aussi programmables par l'intermédiaire d'une API REST, ce qui permet de les contrôler à partir d'autre langages de programmation,
 * viennent avec la documentation associée, des tutoriels, exemples et activités pédagogiques.
 
-They can be used as it is, or hacked to explore new shapes, add sensors, etc...
+Elles peuvent être utilisées telles quelles, ou modifiées pour explorer de nouvelles formes, l'ajout de senseurs, etc...
 
-To get your own Poppy robot, you can either:
+Pour obtenir votre propre robot Poppy, vous pouvez soit :
 
-* Get all the parts yourself by following the bill of materials \(see below\).
-* Buy a full Poppy robotic kit from our [official retailer](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
+* Vous procurer toutes les pièces vous-même en suivant la liste ci-dessous.
+* Acheter un kit de robotique Poppy complet auprès de notre [détaillant officiel](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
 
 ### Poppy Ergo Jr
 
