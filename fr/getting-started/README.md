@@ -1,6 +1,6 @@
 # Getting Started
 
-![Poppy Logo](../img/logo/poppy.png)
+![](/en/img/logo/poppy.png)
 
 [Poppy Project](https://www.poppy-project.org/) est un projet sous licence libre pour la création, l'utilisation et le partage de robots interactifs réalisés par impression 3D. Il rassemble une communauté inter-disciplinaire de débutants et d'experts, de scientifiques, d'enseignants, développeurs et artistes. Ils partagent une vision: les robots sont de puissants outils d'apprentissage, de création et de collaboration afin d'améliorer le projet. Ils developpent de nouveaux comportements robotiques, créent des contenus pédagogiques, conçoivent des performances artistiques, améliorent le logiciel ou même créent de nouveaux robots.
 
@@ -12,18 +12,20 @@ Pour faciliter ces échanges, deux supports sont disponibles :
 
 * [GitHub](https://github.com/poppy-project) pour soumettre vos contributions.
 
+
 Toutes les sources du projet Poppy \(logicielles et matérielles\) sont disponibles sur [GitHub](https://github.com/poppy-project).
 
 Le projet Poppy a initialement été conçu au laboratoire [Inria Flowers](http://www.inria.fr/equipes/flowers/).
 
 ## Les créatures Poppy
 
-Poppy creatures are open-source robots, available for download and modification \([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) for the hardware and [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) for the software\). They were designed with the same principles in mind.
+Les créatures Poppy sont des robots sous licence libre, disponibles au téléchargement et pour être modifiés \([Licence Creative Commons avec attribution](http://creativecommons.org/licenses/by-sa/4.0/) pour le matériel et la licence [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) pour le logiciel\). Elles ont été conçues avec ces mêmes principes directeurs.
 
-All Poppy creatures:
+Toutes les créatures Poppy:
 
-* are made from pieces of printable 3D and Dynamixel motors,
-* use an embedded board for control \(a Raspberry Pi 2 or Odroid for older versions\),
+* sont faites à partir de pièces imprimables en 3D et de moteurs Dynamixel,
+* utilisent une carte d'extension pour le contrôle \(un Raspberry Pi 2 ou Odroid pour les versions plus anciennes\),
+* 
 * are based on a Python library, [pypot](../software-libraries/pypot.md), allowing to control Dynamixel servomotors in an easy way,
 * have a simulated version available \(based on [V-REP](http://www.coppeliarobotics.com)\),
 * can be controlled using a visual programming language \([Snap!](http://snap.berkeley.edu) a variation of Scratch\) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language,
