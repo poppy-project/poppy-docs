@@ -1,6 +1,6 @@
 # Getting Started
 
-![](/en/img/logo/poppy.png)
+![](../../en/img/logo/poppy.png)
 
 [Poppy Project](https://www.poppy-project.org/) est un projet sous licence libre pour la création, l'utilisation et le partage de robots interactifs réalisés par impression 3D. Il rassemble une communauté inter-disciplinaire de débutants et d'experts, de scientifiques, d'enseignants, développeurs et artistes. Ils partagent une vision: les robots sont de puissants outils d'apprentissage, de création et de collaboration afin d'améliorer le projet. Ils developpent de nouveaux comportements robotiques, créent des contenus pédagogiques, conçoivent des performances artistiques, améliorent le logiciel ou même créent de nouveaux robots.
 
@@ -41,7 +41,7 @@ Pour obtenir votre propre robot Poppy, vous pouvez soit :
 
 Le robot Poppy Ergo Jr est un petit bras robotique à cout modéré qui possède six degré de mouvements. Il est fait de 6 moteurs au prix abordable \(des servos XL-320 Dynamixel\) ainsi que de parties simples et imprimables en 3D.
 
-![](/en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
+![](../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
 The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20€ each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.
 
@@ -53,7 +53,7 @@ You can choose among three tools at the end of its arm:
 
 The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.
 
-![Ergo Jr tools](../assembly-guides/ergo-jr/img/ergo_tools.gif)
+![Ergo Jr tools](!../../en/assembly-guides/ergo-jr/img/ergo_tools.gif)
 
 The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.
 
