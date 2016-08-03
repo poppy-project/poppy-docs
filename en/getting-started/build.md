@@ -1,4 +1,4 @@
-## Build the robot
+`## Build the robot
 
 ![Poppy Assembly](../img/assembly_pretty.jpg)
 
