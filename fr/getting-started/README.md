@@ -1,4 +1,4 @@
-# Getting Started
+# Démarrer
 
 ![](../../en/img/logo/poppy.png)
 
