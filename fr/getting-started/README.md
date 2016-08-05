@@ -41,7 +41,7 @@ Pour obtenir votre propre robot Poppy, vous pouvez soit :
 
 Le robot Poppy Ergo Jr est un petit bras robotique à cout modéré qui possède six degré de mouvements. Il est fait de 6 moteurs au prix abordable \(des servos XL-320 Dynamixel\) ainsi que de parties simples et imprimables en 3D.
 
-![](../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
+![Le Poppy Ergo Jr](../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
 Les pièces 3D ont été conçues pour être aisément imprimée sur un imprimante 3D courante. Les moteurs coûtent environ 20€ chacun. La carte électronique de contrôle est simple. Cela facilite la connexion de senseurs supplémentaires et est donc adapté à des objectifs pédagogiques.
 
@@ -56,7 +56,7 @@ Vous pouvez choisir parmi les trois outils pour équiper l'extrêmité de son br
 
 Les rivets employés rendent le montage et démontage des outils simples. Vous pouvez les adapter en fonction de l'activité choisie.
 
-![](/en/assembly-guides/ergo-jr/img/ergo_tools.gif)
+![Les outils Poppy Ergo Jr](/en/assembly-guides/ergo-jr/img/ergo_tools.gif)
 
 Le Ergo Poppy Jr est idéal pour débuter à manipuler des robots et apprendre la robotique sans difficultés. Il est simple à assembler, contrôler et d'un coût réduit.
 
@@ -70,7 +70,7 @@ Il s'agit d'un robot humanoïde à 25 degrés de liberté possédant une colonne
 
 Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) \(LDM\) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) disponibles au formats STL, STEP et Solidworks 2014.
 
-![](/en/img/humanoid/vecto.png)
+![L'Humanoïde Poppy](/en/img/humanoid/vecto.png)
 
 ### Le Torse Poppy
 
@@ -78,39 +78,39 @@ Il s'agit de la partie supérieure de l'Humanoïde Poppy \(13 degrés de libert�
 
 Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). Les [modèles 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) pour les pièces sont identiques à celles de l'Humanoïde Poppy, sans les jambes et avec un [support à ventouse supplémentaire](https://github.com/poppy-project/robot-support-toolbox/).
 
-![Poppy Torso Vecto](../img/torso/vecto.png)
+![Poppy Torso Vecto](../../en/img/torso/vecto.png)
 
-### Other interesting Poppy Creatures
+###  Autres Créatures Poppy
 
-A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.
+Un aspect clef du projet Poppy est de stimuler la créativité et l'expérimentation autour de la robotique. Nous essayons de fournir tous les outils requis pour la conception de nouveaux robots basés sur les mêmes briques technologiques. Plusieurs créatures sont en cours de développement au sein de la communauté. Certaines d'entre elles vous sont présentées ci-dessous.
 
-#### Poppy right arm \(work in progress\)
+#### Le Bras Droit Poppy \(en construction\)
 
-Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.
+Le Bras Droit Poppy est une créature basée sur le bras droit de l'Humanoïde Poppy, avec 3 moteurs XL-320 additionnels à son extrémité afin d'améliorer la portée et l'agilité du bras. Il utilise le même outil pince employé par l'Ergo Jr, conçu pour saisir des objets simples.
 
-![Poppy Right Arm](../img/poppy-right-arm.jpg)
+![Le Bras Droit Poppy](../../en/img/poppy-right-arm.jpg)
 
-The project was realized during an internship at Inria Flowers by [Joel Ortiz Sosa](https://github.com/joelortizsosa). Find more info and the sources in the [repository](https://github.com/poppy-project/poppy-6dof-right-arm).
+Le projet a été réalisé pendant le stage de [Joel Ortiz Sosa](https://github.com/joelortizsosa) au laboratoire Inria Flowers. Plus d'informations et les fichiers sources sont disponibles dans le [dépot Github correspondant](https://github.com/poppy-project/poppy-6dof-right-arm).
 
-#### Small and low-cost humanoids
+#### Humanoïdes plus petits et abordables
 
 ##### Heol
 
-Heol - meaning "sun" in Breton - is a 34cm tall humanoid robot made by the association [Heol robotics](http://heol.io/). 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.
+Heol - qui signifie "soleil" en Breton - est un humanoïde de 34cm de hauteur produit par l'association [Heol robotique](http://heol.io/). Il est composé de 23 moteurs, toutes les autres pièces sont imprimées en 3D. Il dépend aussi de la bibliothèque Pypot pour ses mouvements.
 
-Heol's purpose is to put a smile on ill children's faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.
+Le but d'Heol est de faire naître un sourire sur le visage des enfants. Il peut être un outil éducatif en devenant un support d'apprentissage de la programmation et de la conception mécanique.
 
-Its participation in the RoboCup \(World Cup football for robot\) is also envisaged.
+Sa participation à la RoboCup \(Tournoi international de football pour robots\) est aussi envisagée.
 
-![Heol](../img/heol.jpg)
+![Heol](../../en/img/heol.jpg)
 
 ##### [Poppyrate](http://www.poppyrate.com/)
 
-It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.
+Il s'agit d'un robot basé sur l'Humanoïde Poppy. Il vise le développement d'une version moins chère grâce à sa taille réduite et l'usage de moteurs moins chers. La réduction de taille le rend aussi plus facile à imprimer sur une imprimante 3D courante. D'autres buts sont de le rendre aussi mobile et personnalisable que possible tant en conservant la compatibilité avec le logiciel Poppy. 
 
-Poppyrate will be sold as a kit \(with and without the 3D parts\) It has been designed by the socity ZeCloud.
+Poppyrate peut être vendu en kit \(avec ou sans les parties 3D imprimées\). Il a été conçu par la société ZeCloud.
 
-![Poppyrate](../img/poppyrate.jpg)
+![Poppyrate](../../en/img/poppyrate.jpg)
 
-For more information, check their [Website](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!
+Pour plus d'informations, consultez le [site Web](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!
 
