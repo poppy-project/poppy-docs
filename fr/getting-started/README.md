@@ -43,33 +43,35 @@ Le robot Poppy Ergo Jr est un petit bras robotique à cout modéré qui possède
 
 ![](../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
-The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20€ each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.
+Les pièces 3D ont été conçues pour être aisément imprimée sur un imprimante 3D courante. Les moteurs coûtent environ 20€ chacun. La carte électronique de contrôle est simple. Cela facilite la connexion de senseurs supplémentaires et est donc adapté à des objectifs pédagogiques.
 
-You can choose among three tools at the end of its arm:
+Vous pouvez choisir parmi les trois outils pour équiper l'extrêmité de son bras :
 
-* A lamp.
-* A gripper.
-* A pen holder.
+* Une lampe.
 
-The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.
+* Une pince.
 
-![Ergo Jr tools](!../../en/assembly-guides/ergo-jr/img/ergo_tools.gif)
+* Un porte-stylo.
 
-The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.
+Les rivets employés rendent le montage et démontage des outils simples. Vous pouvez les adapter en fonction de l'activité choisie.
 
-You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) \(BOM\) and print the [3D parts](https://github.com/poppy-project/poppy-ergo-jr/releases/) available in the STL format.
+![](/en/assembly-guides/ergo-jr/img/ergo_tools.gif)
 
-For more information, check the [assembly guide of the Ergo Jr](../assembly-guides/ergo-jr/README.md).
+Le Ergo Poppy Jr est idéal pour débuter à manipuler des robots et apprendre la robotique sans difficultés. Il est simple à assembler, contrôler et d'un coût réduit.
 
-### Poppy Humanoid
+Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) \(LDM\) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-ergo-jr/releases/) disponibles au format STL.
 
-It is a 25-degrees of freedom humanoid robot with a fully actuated vertebral column. It is used for education, research \(walk, human-robot interaction\) or art \(dance, performances\). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.
+Pour plus d'informations, vérifiez le [guide d'assemblage de l'Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
-You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) \(BOM\) and print the [3D parts](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) available as STL, STEP and Solidworks 2014 format.
+### L'Humanoïde Poppy
 
-![Poppy Humanoid Vecto](../img/humanoid/vecto.png)
+Il s'agit d'un robot humanoïde à 25 degrés de liberté possédant une colonne vertébrale complètement motorisée. Il est utilisé pour l'éducation, la recherche \(marche, interactions entre humains et robots\) ou les arts \(danses, performances\). Du simple bras à l'humanoïde complet, cette plateforme est activement utilisée dans les laboratoires, les écoles d'ingénieur, les FabLabs, et les projets artistiques.
 
-### Poppy Torso
+Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) \(LDM\) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) disponibles au formats STL, STEP et Solidworks 2014.
+
+![](/en/img/humanoid/vecto.png)
+
+### Le Torse Poppy
 
 It is the upper part of Poppy Humanoid \(13 degrees of freedom\). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics \(STEM\).
 
