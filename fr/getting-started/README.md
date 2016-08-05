@@ -74,9 +74,9 @@ Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux]
 
 ### Le Torse Poppy
 
-It is the upper part of Poppy Humanoid \(13 degrees of freedom\). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics \(STEM\).
+Il s'agit de la partie supérieure de l'Humanoïde Poppy \(13 degrés de liberté\). Le Torse Poppy est donc plus abordable que l'Humanoïde Poppy complet. Cela en fait une solution plus appropriée aux contextes éducatifs et associatifs. Le Torse Poppy peut être un bon média pour apprendre la science, la technologie, l'ingénieurie et les mathématiques \(STEM\).
 
-You can get all the parts yourself following the [bill of material](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). The [3D models](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) for the parts are the same as Poppy Humanoid, without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/).
+Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). Les [modèles 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) pour les pièces sont identiques à celles de l'Humanoïde Poppy, sans les jambes et avec un [support à ventouse supplémentaire](https://github.com/poppy-project/robot-support-toolbox/).
 
 ![Poppy Torso Vecto](../img/torso/vecto.png)
 
