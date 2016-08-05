@@ -1,36 +1,37 @@
-# Start and connect the robot
+# Démarrer et connecter le robot
 
-In this section, we will describe how to start your robot and give an overview of the possibilities to access it.
+Dans cette section, nous allons décrire comment démarrer votre robot et vous donner un aperçu des possibilités pour y accéder.
 
-## Setup the software
+## Configurer le logiciel
 
-Poppy creatures come with an embedded board which job is to control motors and access the sensors. For simplicity purpose, this computer can be remotely access through a web interface. It makes it easy to control the robot from your own computer or tablet without having to download/install anything.
+Les créatures Poppy viennent avec une carte embarquée dont le travail est de contrôler les moteurs et d'accéder aux senseurs. Pour une plus grande simplicité, cette carte embarquée peut être contactée à travers une interface Web. cela facilite le contrôle du robot depuis votre propre ordinateur ou une tablette sans avoir à télécharger ou installer quoique ce soit.
 
+Il y a plusieurs méthodes pour configurer la carte embarquée de votre robot Poppy :
 
-There are two ways to setup the board for your Poppy robot:
-* [**the easy way**](#easy-and-recommended-way-use-the-poppy-sdcard): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
-* [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
+* [**la méthode simple**](#simplement-utiliser-la-carte-sd-poppy): utilisez une image ISO toute prête et transférez la sur une carte SD
+* [**la méthode avancée**](#plus-avance-tout-installer-vous-meme): tout installer vous-même
 
-> **Note** If you are planning to use a simulated robot, you must install the software on your personal computer. Follow the [instructions for setting up the simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+<!-- TODO: corriger le lien ci-desous pour le setup de la simulation -->
 
-### Easy and recommended way: use the Poppy SD-card
+> **Note** Si vous prévoyez d'utiliser un robot simulé, vous devez installer le logiciel sur votre propre ordinauter. Suivez les instructions pour [configurer la simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
-The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.
+### Simplement: utiliser la Carte SD Poppy
 
-> **Note** Poppy robotic kits come with a ready to use SD-card. So, you do not have anything special to do.
+Le moyen le plus simple et le plus rapide - de loin - est d'utiliser des images ISO déjà faites pour les cartes SD. Ces images ISO viennent avec tout le nécessaire déjà pré-installé pour votre robot Poppy. C'est aussi un bon moyen de vous assurer que vous utilisez exactement le même logiciel que nous Ainsi vous éviterez de nombreux problèmes.
 
-The images can be found in the release of each creatures:
+> **Note** Les kits de robotique Poppy viennent avec une carte SD prête à l'emploi. Ainsi vous n'avez rien de spécial à faire.
 
-* [for the Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)
-* [for the Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
-* [for the Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
+Les images ISO peuvent être trouvées avec les distributions de chaque créature :
 
-They can be written to a SD-card (at least 8 Go) by using classical utility tools.
-Once the SD-card is ready, just insert it into the board. Then when you switch on your robot it should automatically start and you should be able to connect to its web interface.
+* [pour le Poppy Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases)
+* [pour le Torse Poppy](https://github.com/poppy-project/poppy-torso/releases)
+* [pour l'Humanoïde Poppy](https://github.com/poppy-project/poppy-humanoid/releases/)
 
-> **Info** More details can be found in the [startup section](../installation/README.md).
+Elles peuvent être écrites sur une carte SD d'au moins 8 Go en utilisant un outil classique. Une fois la carte SD prête, vous n'avez qu'à l'insérer dans votre carte embarquée. Vous pouvez ensuite mettre votre robot sous tension, il devrait démarrer et vous pourrez ainsi vous connecter à son interface web.
 
-### Advanced way: DIY, install everything from scratch
+> **Info** Plus de détails dans la [section Démarrage](../installation/README.md).
+
+### Plus avancé: tout installer vous-même
 
 The advanced way mainly consists in installing everything needed from scratch. This follows the same procedure as we use to generate the image for SD-cards. We mention this possibilty here as it can be useful if:
 
