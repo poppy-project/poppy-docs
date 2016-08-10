@@ -47,45 +47,43 @@ Suivant ce que vous souhaitez accomplir, toutes les étapes ne sont pas nécessa
 
 ### Configurer le réseau
 
-Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it.
+Une fois que votre Poppy est assemblé et son logiciel prêt, l'étape suivante est de le connecter à un réseau. Le but est de vous permettre d'accéder au robot depuis votre ordinateur ou votre tablette/smartphone, de le contrôler et de le programmer.
 
-They are two main ways to connect your robot to your computer/tablet/smartphone:
-* Connect both the robot and the computer to the same network (e.g. the box of your home or the school network).
-* Directly connect your robot to your computer using an ethernet cable.
+Il y a deux manières de connecter votre robot à votre ordinateur/tablette/smartphone:
+* Connecter le robot et l'ordinateur au même réseau (par exemple la box wifi de votre domicile ou votre établissement scolaire).
+* Connecter directement votre robot à votre ordinateur par l'intermédiaire d'un câble ethernet.
 
-> **Caution** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work.
+> **Attention** Bien que connecter le robot et l'ordinateur marche pour la plupart des utilisateurs, il semble que dans certains cas cela ne fonctionne pas.
 
-To find the address of your robot on the network, we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
-If you prefer, you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
+Pour trouver l'adresse de votre robot sur le réseau, nous utilisons le [protocole standard Zeroconf](https://fr.wikipedia.org/wiki/Zeroconf). Il vous permet d'utiliser le nom d'hôte: *"poppy.local"* en tant qu'adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais cela nécessitera d'installer les [*Services d'impression Bonjour*](https://support.apple.com/kb/DL999) sous Windows. Si vous préférez, vous pouvez utiliser l'adresse IP assignée à votre robot à la place. Si vous n'êtes pas administrateur de votre réseau cela peut être assez difficile à déterminer. Dans ce cas, utilisez de préférence la première procédure.
 
-To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot (something similar as http://192.168.0.42).
+Pour vérifier que tout est configuré correctement, vous pouvez aller à l'adresse suivante avec votre navigateur web favori : [http://poppy.local/](http://poppy.local). Vous pouvez remplacer *poppy.local* par l'adresse IP de votre robot (par exemple http://192.168.0.42).
 
-> **Caution** If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.
+> **Attention** Si vous n'êtes pas familier avec la configuration des réseaux ou si vous n'avez aucune idée de ce que le paragraphe précédent a tenté de vous expliquer, il est préférable de consulter un ingénieur réseau afin de compléter cette étape.
 
+### Utiliser l'interface Web
 
-### Use the web interface
+L'interface web est le point central pour contrôler, programmer et configurer votre robot. Elle peut être utilisée pour:
+* Suivre l'activité du robot
+* Le programmer en utilisant [Snap!](http://snap.berkeley.edu)
+* Le programmer en utilisant [Python](https://www.python.org)
+* Configurer le robot (changer son nom, activer ou désactiver la caméra, le mettre à jour)
+* Remettre à zéro et arrêter le robot.
 
-The web interface is the central point to control, program and configure your robot. It can be used to:
-* Monitor and Control the robot
-* Program it in [Snap!](http://snap.berkeley.edu)
-* Program it in [Python](https://www.python.org)
-* Configure the robot (change its name, enable/disable the camera, update)
-* Reset and shutdown the robot
+Pour accéder à cette interface, il suffit d'aller à l'URL suivante avec votre navigateur Web favori:
 
-To access this interface, you simply have to go to the URL using your favorite web browser:
+* http://poppy.local (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
+* ou utilisez son adresse IP.
 
-* http://poppy.local (if you changed the name of your robot, simply replace *poppy* by its new name)
-* or using directly its IP address
+Vous devriez voir quelque chose comme:
 
-You should see something like:
+![Home Page](../../en/img/poppy_home.png)
+Les boutons peuvent être utilisés pour naviguer vers les différentes fonctionnalités. Par exemple, si vous cliquez sur le *Monitor and Control*, vous accéderez à l'application de monitoring:
 
-![Home Page](../img/poppy_home.png)
-The buttons can be used to navigate to the different features. For instance, if you click on the *Monitor and Control*, you will access the monitor web app:
+![Interface de Monitoring](./../en/img/poppy_monitor.png)
 
-![Monitor interface](../img/poppy_monitor.png)
+Cela vous permettra d'allumer ou d'éteindre les moteurs de votre robot, de suivre leur activité, et leur comportement d'allumage et d'extinction.
 
-This let you turn on/off the motors of your robot, monitor them, and start/stop behaviors.
+Le bouton *What happened* est là où vous devriez regarder pour plus d'information sur ce qui s'est mal passé. Voici une capture d'écran de ce que vous devriez voir si tout se passe comme prévu:
 
-The *What happened* button is where you should look for more information is something goes wrong. Here is a screenshot of what you should see if everything goes well:
-
-![Screenshot of the web log interface](../img/web-logs.png)
+![Capture d'écran de l'interface web log](../../en/img/web-logs.png)
