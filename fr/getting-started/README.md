@@ -30,7 +30,7 @@ Toutes les créatures Poppy:
 * peuvent être controlées en utilisant un langage de programmation visuel \([Snap!](http://snap.berkeley.edu) une variation de Scratch\) et un langage textuel [Python](https://www.python.org). Elles sont aussi programmables par l'intermédiaire d'une API REST, ce qui permet de les contrôler à partir d'autre langages de programmation,
 * viennent avec la documentation associée, des tutoriels, exemples et activités pédagogiques.
 
-Elles peuvent être utilisées telles quelles, ou modifiées pour explorer de nouvelles formes, l'ajout de senseurs, etc...
+Elles peuvent être utilisées telles quelles, ou modifiées pour explorer de nouvelles formes, l'ajout de capteurs, etc...
 
 Pour obtenir votre propre robot Poppy, vous pouvez soit :
 
@@ -43,7 +43,7 @@ Le robot Poppy Ergo Jr est un petit bras robotique à cout modéré qui possède
 
 ![Le Poppy Ergo Jr](../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
-Les pièces 3D ont été conçues pour être aisément imprimée sur un imprimante 3D courante. Les moteurs coûtent environ 20€ chacun. La carte électronique de contrôle est simple. Cela facilite la connexion de senseurs supplémentaires et est donc adapté à des objectifs pédagogiques.
+Les pièces 3D ont été conçues pour être aisément imprimée sur un imprimante 3D courante. Les moteurs coûtent environ 20€ chacun. La carte électronique de contrôle est simple. Cela facilite la connexion de capteurs supplémentaires et est donc adapté à des objectifs pédagogiques.
 
 Vous pouvez choisir parmi les trois outils pour équiper l'extrêmité de son bras :
 
