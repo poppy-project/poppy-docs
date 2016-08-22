@@ -1,7 +1,7 @@
 # Guide d'assemblage du Ergo Jr
 
 ![Ergo-tool](../../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
- 
+
 Le robot Poppy Ergo JR est un petit bras robotique articulé à 6 degrés de liberté. Il consiste de formes très simple qui peuvent être facilement imprimées en 3D. Elles sont assemblées avec des rivets OLLO qui peuvent être montés et démontés facilement avec l'outil OLLO.
 
 L'extrêmité du bras peut être facilement changée. Vous pouvez choisir entre plusieurs outils :
@@ -41,7 +41,7 @@ Vous trouverez ici la liste complète du matériel requis (en Anglais : Bill of 
 - 1x Disque de support [disk_support.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/disk_support.stl) (utilisant la découpe laser) le plan 2D [peut être trouvé ici](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/laser_cutting). *Vous pouvez aussi l'imprimer en 3D mais cela prendra plus de temps*.
 - Les pièces imprimés en 3D [ici au format STL](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL)
   - 1x [base.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/base.stl)
-  - 3x "Corne à Corne" [horn2horn.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl)
+  - 3x "Palonnier à Palonnier" [horn2horn.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl)
   - 3x "Côté à côté" [side2side.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/side2side.stl)
   - 1x "U Long" [long_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/long_U.stl)
   - 1x "U Court" [short_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/short_U.stl)
@@ -54,10 +54,10 @@ Vous trouverez ici la liste complète du matériel requis (en Anglais : Bill of 
     - 1x Porte-Stylo [pen-holder.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-holder.stl)
     - 1x Vis à Stylo [pen-screw.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-screw.stl)
 
-## Pièces Robotis 
+## Pièces Robotis
 - 6x moteurs Robotis dynamixel XL-320
 - 1x jeu de rivets OLLO (70 rivets de couleurs et 4 gris)
-- 1x Outil OLLO 
+- 1x Outil OLLO
 
 ## Vis
 - 4x vis M2.5x6mm (pour attacher le Raspberry Pi sur la base)
