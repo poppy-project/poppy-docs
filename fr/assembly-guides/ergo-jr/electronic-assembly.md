@@ -8,7 +8,7 @@ Insérez la carte micro-SD dans le Raspberry Pi: poussez la carte micro-SD dans 
 ![Raspberry Pi micro-SD](../../../en/assembly-guides/ergo-jr/img/electronic/rpi-sd.jpg)
 
 #### Assemblez la carte d'extension pixl
-> **Attention** La carte Pixl sera disponible auprès de Génération Robot à partir de Mai 2016.
+> **Attention** La carte Pixl peut être acheté sur le site de [Génération Robot](http://www.generationrobots.com/fr/402420-carte-pixl.html).
 
 La [Carte Pixl](https://github.com/poppy-project/pixl) vous permet d'alimenter le Raspberry Pi à partir d'une alimentation 7.5V DC ou avec des piles, et vous permet de communiquer avec les moteurs XL-320.
 
