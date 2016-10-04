@@ -8,7 +8,7 @@
 * ergo + wires
 -->
 
-* Vous pouvez assembler tous les rivets avant la construction.  Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
+* Vous pouvez assembler tous les rivets dont vous avez besoin avant la construction.  Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
 
 ![Assemblage d'un rivet OLLO](../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivet.png)
 
