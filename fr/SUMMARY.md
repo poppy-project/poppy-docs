@@ -4,7 +4,7 @@
 * [Démarrer](getting-started/README.md)
     * [Construire un robot](getting-started/build.md)
     * [Se connecter au robot](getting-started/connect.md)
-    * [Program,er le robot](getting-started/program-the-robot.md)
+    * [Programmer le robot](getting-started/program-the-robot.md)
     * [Visualiser](getting-started/visualize.md)
     * [Exemples de projets](getting-started/example-of-projects.md)
 * [Installation](installation/README.md)
