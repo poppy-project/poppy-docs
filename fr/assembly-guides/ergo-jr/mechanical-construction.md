@@ -8,7 +8,7 @@
 * ergo + wires
 -->
 
-* Vous pouvez assembler tous les rivets avant la construction.  Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
+* Vous pouvez assembler quelques rivets avant la construction.  Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
 
 ![Assemblage d'un rivet OLLO](../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivet.png)
 
@@ -139,7 +139,7 @@ Le premier moteur est connecté à la carte d'extension PIXL et au second moteur
 
 ![step 7 bis](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_24.jpg)
 
-### Etape 8 - connectez votre ergo-jr au
+### Etape 8 - connectez votre ergo-jr au Raspberry Pi
 Montez votre ergo-jr sur le *disque de support en bois*.
 
 Montez votre Raspberry Pi sur le disque de support, et utilisez une vis 4 x M2.5x6mm pour l'arrimer.
