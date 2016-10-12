@@ -72,7 +72,7 @@ Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anacon
 ![Anaconda all users](../img/python/lucvincent/luc_vincent-031.png).
 
 ```
-pip install poppy-torso --user -U --no-deps
+pip install poppy-torso --user -U
 ```
 
 This will install everything necessary to control a Poppy Humanoid.
@@ -96,7 +96,7 @@ curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo
 
 You can now install Poppy software for the creature of your choice:
 ```
-pip install poppy-torso --user -U --no-deps
+pip install poppy-torso -U
 ```
 
 Substitute "poppy-torso" with "poppy-humanoid" or "poppy-ergo-jr" to install respectively a Poppy Humanoid or a Poppy Ergo Jr.
