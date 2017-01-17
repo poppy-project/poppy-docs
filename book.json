@@ -12,7 +12,9 @@
         "retina",
         "copy-code-button",
         "todo",
-        "youtube"
+        "youtube",
+        "downloadpdf"
+
     ],
     "pluginsConfig": {
         "github": {
@@ -35,7 +37,12 @@
             "all": [
                 "twitter", "facebook", "google", "instapaper"
             ]
-        }
+        },
+          "downloadpdf": {
+            "base": "https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs",
+            "label": "Download PDF",
+            "multilingual": false
+          }
     },
     "variables": {
         "poppy_doc_version": "1.0",
