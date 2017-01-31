@@ -8,7 +8,7 @@
 * ergo + wires
 -->
 
-* You can assemble all the rivets before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
+* You can assemble all the rivets you need before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
 
 ![OLLO Rivet Assembly](img/assembly/ollo_rivet.png)
 

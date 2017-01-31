@@ -159,7 +159,7 @@ IOError: Connection to the robot failed! No suitable port found for ids [3, 5, 7
 To use a simulated robot instead of a real one, you only have to specify it when creating the Robot object. For instance, if you want to create a simulated Poppy Torso, you simply have to execute the following line:
 
 ```python
-poppy = PoppyTorso(simulated='vrep')
+poppy = PoppyTorso(simulator='vrep')
 ```
 
 All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with V-REP.
