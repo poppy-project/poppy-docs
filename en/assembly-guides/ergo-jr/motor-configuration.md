@@ -34,9 +34,11 @@ Your electronic setup when configuring a motor should look like this:
 Robots come with a command line utility `poppy-configure` ; to use it you need to open a terminal on your Raspberry Pi.
 
 You can access to the Raspberry Pi directly from your computer. To do so, open the page http://poppy.local in a web browser.
-> **Caution** if when you open the page http://poppy.local, you have this message
- ![Page doesn't exist](img/IHM/webpage_not_available.png)
- it's probably because you don't have Zeroconf on your Computer. To install Zeroconf, go to the corresponding chapter of the Doc:[Install Zeroconf](https://docs.poppy-project.org/en/installation/install-zeroconf.html)
+> **Caution** if when you open the page http://poppy.local, you have this message:
+
+![Page doesn't exist](img/IHM/webpage_not_available.jpg)
+it's probably because you don't have Zeroconf on your Computer. To install Zeroconf, go to the corresponding chapter of the Doc: [Install Zeroconf](https://docs.poppy-project.org/en/installation/install-zeroconf.html)
+
 You see the Poppy home page. Click on the "Jupyter — Python, Terminal" link and select "New Terminal".
 ![Jupyter terminal](img/IHM/new_terminal.png)
 
