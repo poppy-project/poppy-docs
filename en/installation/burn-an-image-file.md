@@ -7,23 +7,24 @@ Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or a
 The operating system of this computer is hosted on a SD card (you can also use an MMC for the Odroid).
 
 You may be in two kind of cases:
+
 - You already have a SD card with the Poppy operating system (provided by one of the Poppy distributors for example). You're ready to go to the [assembly section](../assembly-guides/README.md).
-- You have an empty SD-card, so you have to [download](#download-the-image) and [write](#write-an-image-to-the-sd-card) the operating system on the SD card .
+- You have an empty SD-card, so you have to [download](#download-the-image-of-the-operating-system) and [write](#write-the-operating-system-image-to-the-sd-card) the operating system on the SD card.
 
 > **Info** The Poppy creatures operating system use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi.
 > You will only need a computer with a SD card reader/writer to write the image on the SD card.
 
-## Download the image
+## Download the image of the operating system
 
 You have to choose the image (file in *.img.zip) to download depending on your Poppy creature and the targeted board:
 
-* [Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)
+* [Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases/download/1.0.0-gm/2017-02-21-poppy-ergo-jr.img.zip)
 * [Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
 * [Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
 The .zip file you have downloaded need to be unzipped to get the image file for writing to your SD card.
 
-## Write an image to the SD card
+## Write the operating system image to the SD card
 
 With the image file corresponding to your Poppy creature, you need to use an image writing tool to install it on your SD card.
 First unzip the image you have previously downloaded.
@@ -32,9 +33,9 @@ First unzip the image you have previously downloaded.
 
 Download and install [etcher](http://etcher.io/). It works for Windows, OSX, and GNU/Linux operating systems.
 ![etcher](img/etcher.gif)
-Select the unzipped image, select the SD-card or MMC drive, press the *burn* button, and wait until it is done. 
+Select the unzipped image, select the SD-card or MMC drive, press the *burn* button, and wait until it is done.
 
-Now you are ready to [assemble your robot](../assembly-guides/README.md) !
+Now you are ready to [assemble your robot](../assembly-guides/README.md)!
 
 ### Burn the image with `dd` (CLI software)
 
@@ -48,19 +49,21 @@ Now you are ready to [assemble your robot](../assembly-guides/README.md) !
 
 - In the terminal, write the image to the card with the command below, making sure you replace the input file `if=` argument with the path to your `.img` file, and the `/dev/sdd` in the output file `of=` argument with the right device name.
 
-> **Caution** You will lose all data on your hard drive if you provide the device name of another running partition. 
+> **Caution** You will lose all data on your hard drive if you provide the device name of another running partition.
 
-Make sure the device name is the name of the whole SD card as described above, not just a partition of it; for example `sdd`, not `sdds1` or `sddp1`; or `mmcblk0`, not `mmcblk0p1`.very important, as 
+Make sure the device name is the name of the whole SD card as described above, not just a partition of it; for example `sdd`, not `sdds1` or `sddp1`; or `mmcblk0`, not `mmcblk0p1`.
 
-If you are running a GNU/Linux OS: 
+If you are running a GNU/Linux OS:
+
 ```bash
 sudo dd bs=4M if=poppy-ergojr.img of=/dev/mmcblk0
 ```
+
 If you are running OSX or another BSD based OS:
 
 ```bash
 sudo dd bs=4m if=poppy-ergojr.img of=/dev/rdisk2
-``` 
+```
 
 > **Info** The `dd` command does not give any information of its progress and so may appear to have frozen; it > could take more than five minutes to finish writing to the card. To see the progress of the copy operation you can run `sudo pkill -USR1 -n -x dd` in another terminal.
 

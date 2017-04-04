@@ -8,7 +8,7 @@
 * ergo + wires
 -->
 
-* You can assemble all the rivets before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
+* You can assemble all the rivets you need before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
 
 ![OLLO Rivet Assembly](img/assembly/ollo_rivet.png)
 
@@ -56,11 +56,17 @@ Mount the motor on the 3D printed base.
 
 ![step 1](img/assembly/steps/step_1-2.jpg)
 
+To do so, prepare 8 small rivets. put the first part in the second part without putting them in the motor. Then, place the motor in the base, with the horn facing up and near the more open side.
+Use the Ollo to grab a rivet between the first and the second part, then put the rivet in one the assembly holes. Once the rivet is in place, lock it by pushing the part 1 of the rivet in part 2.
 
-### Step 2
-Configure the second motor, its name is "m2".
 
-Mount the *long_U* part. Be careful of the orientation of the U, the horn must be oriented in the left.
+###Step 2
+Configure the second motor, its name is "m2", with the following command in a poppy terminal:
+```bash
+poppy-configure ergo-jr m2
+```
+
+Mount the *long_U* part. Be careful wih the orientation of the U, the horn must be oriented in the left.
 Mount the motor "m2" on top of the construction.
 
 ![step 2](img/assembly/steps/step_3-4.jpg)

@@ -75,6 +75,7 @@ Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anacon
 
 ```
 pip install poppy-ergo-jr
+
 ```
 
 This will install everything necessary to control a Poppy Ergo Jr.
@@ -111,6 +112,7 @@ You can now install Poppy software for the creature of your choice:
 
 ```
 pip install poppy-ergo-jr --upgrade
+
 ```
 
 
@@ -209,3 +211,4 @@ pip install poppy-ergo-jr --upgrade --no-deps
 > - *--user* will install Python package in user directories, it avoid using `sudo` if you use the Python of your OS. 
 > - *--upgrade* will uninstall before starting the install
 > -	*--no-deps* will avoid installing dependencies, this is usefull to avoid pip to compile *scipy* as it will probably fail of you have not Fortran dependancies
+
