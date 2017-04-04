@@ -33,7 +33,9 @@ Your electronic setup when configuring a motor should look like this:
 #### Command-line utility
 Robots come with a command line utility `poppy-configure` ; to use it you need to open a terminal on your Raspberry Pi.
 
-You can access to the Raspberry Pi directly from your computer. To do so, open the page http://poppy.local in a web browser. You see the Poppy home page. Click on the "Jupyter — Python, Terminal" link and select "New Terminal".
+You can access to the Raspberry Pi directly from your computer. To do so, open the page http://poppy.local in a web browser.
+/!\ CAREFUL: if when you open the page http://poppy.local, you have this message 
+ You see the Poppy home page. Click on the "Jupyter — Python, Terminal" link and select "New Terminal".
 ![Jupyter terminal](img/IHM/new_terminal.png)
 
 Once the terminal is open, copy and press enter to execute the commande bellow.
