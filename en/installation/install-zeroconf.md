@@ -12,7 +12,8 @@
 
 You ready to follow your [installation path](README.md).
 
-## Local domain name
+## What Zeroconf does for you
+### Local domain name
 
 Zeroconf client *publishes* a decentralised local domain name (mDNS) with the '.local' top level domain. It means that you can join any local local computer by its hostname with the '.local' suffix instead of its IP address.
 
@@ -26,7 +27,7 @@ You no longer need to look for its IP address on your local network; you don't e
 
 It also work on your web browser. To open the website hosted on the robot computer called 'goldstine', you have to open: http://goldstine.local on your favorite web browser URL field.
 
-## Link-local IPv4 addresses
+### Link-local IPv4 addresses
 Among other Zeroconf tools, there is an implementation of decentralized DHCP ([IPv4LL](https://en.wikipedia.org/wiki/Zero-configuration_networking#Link-local_IPv4_addresses)), which allow computers obtain an IP and connect each others **without** a DHCP server.
 
 The auto-adressed IP is in the [APIPA](https://en.wikipedia.org/wiki/Link-local_address#IPv4) range, from 169.254.0.0 to 169.254.255.255.
