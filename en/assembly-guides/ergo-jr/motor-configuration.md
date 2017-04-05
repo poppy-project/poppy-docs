@@ -41,13 +41,13 @@ You can access to the Raspberry Pi directly from your computer. To do so, open t
 > it's probably because you don't have Zeroconf on your Computer. To install Zeroconf, go to the corresponding chapter of the Doc: [Install Zeroconf](https://docs.poppy-project.org/en/installation/install-zeroconf.html)
 
 You see the Poppy home page.
-![Poppy home page](img/IHM/accueil_poppy_local.png)
+![Poppy home page](img/IHM/accueil_poppy_local.PNG)
 
 Click on the "Jupyter — Python, Terminal" link and after, select at the left "New" and "Terminal".
 ![Jupyter terminal](img/IHM/new_terminal.png)
 
 You have access to the Terminal using for motor configuration:
-![terminal for configuration](img/IHM/terminal_for_configuration.png)
+![terminal for configuration](img/IHM/terminal_for_configuration.PNG)
 terminal_for_configuration
 Once the terminal is open, copy and press enter to execute the commande bellow.
 
