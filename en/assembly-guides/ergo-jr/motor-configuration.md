@@ -48,7 +48,8 @@ Click on the "Jupyter — Python, Terminal" link and after, select at the left "
 
 You have access to the Terminal using for motor configuration:
 ![terminal for configuration](img/IHM/terminal_for_configuration.PNG)
-terminal_for_configuration
+
+
 Once the terminal is open, copy and press enter to execute the commande bellow.
 
 ```bash
