@@ -4,16 +4,14 @@
         "-share",
         "edit-link",
         "richquotes",
-        "heading-anchors",
         "github",
-        "katex",
         "ga",
         "language-picker",
-        "retina",
         "copy-code-button",
-        "todo",
+        "downloadpdf",
+        "katex",
         "youtube",
-        "downloadpdf"
+        "retina"
 
     ],
     "pluginsConfig": {
