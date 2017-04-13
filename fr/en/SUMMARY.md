@@ -1,6 +1,6 @@
 # Summary
 
-* [Getting started](getting-started/README.md)    * [Build a robot](getting-started/build.md)    * [Connect to the robot](getting-started/connect.md)    * [Program the robot](getting-started/program-the-robot.md)    * [Visualize](getting-started/visualize.md)    * [Examples of projects](getting-started/example-of-projects.md)
+* [Mise en route](getting-started/README.md) * [Construire un robot](getting-started/build.md) * [Se connect au robot](getting-started/connect.md) * [programmer un robot](getting-started/program-the-robot.md) * [visualiser](getting-started/visualize.md) * [exemples de projets](getting-started/example-of-projects.md)
 * [Installation](installation/README.md)
     
     * [Installer un client zeroconf](installation/install-zeroconf.md)
@@ -38,5 +38,5 @@
     * [Poppy Torso](software-libraries/poppy-torso.md) 
 * [Annexe](appendix/README.md) 
     * [Réseau](appendix/network.md)
-    * [Contribute](appendix/contribute.md)
-    * [FAQ](appendix/faq.md) <!-- - [Raspoppy](appendix/raspoppy.md) -->
+    * [Contribuez](appendix/contribute.md)
+    * FAQ <!-- - [Raspoppy](appendix/raspoppy.md) -->
