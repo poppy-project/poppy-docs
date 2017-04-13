@@ -1,5 +1,7 @@
 # Programming Poppy robots in Python
 
+<!-- toc -->
+
 ![Programming in Python banner](../img/python/banner.png)
 
 This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, you will see how to access all the different levels of control, from the higher to the lower.
@@ -370,7 +372,7 @@ from pypot.primitive.move import MoveRecorder
 
 To create this primitive, you have to give the following arguments:
 
-* on which robot you want to use this primitive (this can be useful if you are working with multiple robot at a time - for instance you can record a move on a robot and at the same time make it reproduce by another one. 
+* on which robot you want to use this primitive (this can be useful if you are working with multiple robot at a time - for instance you can record a move on a robot and at the same time make it reproduce by another one.
 <!-- this [notebook](#TODO) will guide you on how to do this). -->
 * the record frequency of the move you want to register: how many position per second will be recorded - the higher the more accurate the record will be but also more data will have to be processed - good values are usually between 10Hz and 50Hz.
 * the motors that you want to record. you can record a move on a subpart of you robot, for instance only on the left arm.
