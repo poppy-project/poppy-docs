@@ -1,5 +1,7 @@
 # Programming Poppy robots using Snap_!_
 
+<!-- toc -->
+
 Snap_!_ is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.
 
 Snap_!_ was inspired by Scratch (a project of
@@ -7,7 +9,9 @@ the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both nov
 
 Snap_!_ is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/4.0.6.zip) in your personal computer and open the `snap.html` file in your browser.
 
-> **Warning** Even if Snap_!_ use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap_!_ is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/) (which is very similar to Chrome without tracking tools), or Google Chrome.**
+> **Warning** Even if Snap_!_ use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap_!_ is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/) (which is very similar to Chrome without tracking tools), or Google Chrome.
+
+
 
 ## Introduction to Snap_!_ programming
 

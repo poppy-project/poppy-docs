@@ -1,28 +1,36 @@
 {
     "title": "Documentation of the Poppy Platform",
+    "structure": {
+      "readme": "README.md",
+      "summary": "SUMMARY.md"
+    },
     "plugins": [
         "-share",
+        "-search",
         "edit-link",
         "richquotes",
+        "toggle-chapters",
+        "toggle-headers",
+        "simple-page-toc",
+        "sitemap",
+        "search-plus",
+        "youtube",
         "github",
         "ga",
         "language-picker",
-        "copy-code-button",
-        "downloadpdf",
-        "katex",
-        "youtube",
-        "retina"
-
+        "copy-code-button"
     ],
     "pluginsConfig": {
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
         },
+        "sitemap": {
+            "hostname": "https://docs.poppy-project.org/"
+        },
         "edit-link": {
                 "base": "https://github.com/poppy-project/poppy-docs/edit/master/",
                 "label": {
                     "en": "Edit this page",
-                    "de": "Seite bearbeiten",
                     "fr": "Editez cette page"
                 }
         },
