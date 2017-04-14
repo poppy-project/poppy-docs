@@ -1,4 +1,4 @@
-## Build the robot
+# Build the robot
 
 ![Poppy Assembly](../img/assembly_pretty.jpg)
 
@@ -8,7 +8,7 @@ Depending on the Poppy robots you are planning to use, the assembly time, requir
 This section intends to give you hints and a glimpse of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
 
 
-### Assembling an Ergo Jr
+## Assembling an Ergo Jr
 
 > **Note** You can find a full assembly documentation in the chapter [step by step assembly of an Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
@@ -29,7 +29,7 @@ Also make sure, to [**configure your motors**](../assembly-guides/ergo-jr/motor-
 
 
 
-### Assembling a Torso or a Humanoid
+## Assembling a Torso or a Humanoid
 
 > **Note** You can find a full assembly documentation in the chapter [step by step assembly of a Poppy Humanoid](../assembly-guides/poppy-humanoid/README.md).
 
