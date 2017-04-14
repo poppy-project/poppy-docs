@@ -11,7 +11,7 @@
         "richquotes",
         "toggle-chapters",
         "toggle-headers",
-        "simple-page-toc",
+        "page-toc",
         "sitemap",
         "search-plus",
         "youtube",
@@ -25,6 +25,10 @@
     "pluginsConfig": {
         "theme-default": {
             "showLevel": true
+        },
+        "page-toc": {
+          "position":"before-first",
+          "selector":".markdown-section h2, .markdown-section h3"
         },
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
