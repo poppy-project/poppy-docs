@@ -79,3 +79,23 @@ blockquote.alert > p {
 blockquote.alert p a {
     text-decoration: underline !important;
 }
+
+
+/** Table of contents styling **/
+.page-toc {
+  float: none;
+  padding: 10px !important;
+  width: 280px;
+  font-size: inherit;
+}
+
+.page-toc::before {
+  content: "In this section";
+  font-weight: normal;
+  font-size: smaller;
+}
+
+/** Disable ugly font settings in the top header **/
+.font-settings {
+  display: none;
+}
