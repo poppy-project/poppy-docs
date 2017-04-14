@@ -19,6 +19,7 @@
         "ga",
         "anchorjs",
         "language-picker",
+        "download-pdf-link",
         "copy-code-button"
     ],
     "pluginsConfig": {
@@ -45,13 +46,16 @@
             "facebook": false,
             "twitter": false,
             "all": [
-                "twitter", "facebook", "google", "instapaper"
+                "twitter", "facebook", "google"
             ]
         },
-          "downloadpdf": {
+          "download-pdf-link": {
             "base": "https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs",
-            "label": "Download PDF",
-            "multilingual": false
+            "label": {
+                "en": "Download PDF",
+                "fr": "Télécharger en PDF"
+            },
+            "multilingual": true
           }
     },
     "variables": {
