@@ -1,4 +1,4 @@
-## Using Jupyter Python Notebooks
+# Using Jupyter Python Notebooks
 
 One of the advantages of working with Jupyter Notebooks is the possibility to use it as a client/server approach.  
 Each Poppy robot hosts a Jupyter server accessible via the web interface (see [section quickstart](../getting-started/program-the-robot.md) for details).
@@ -7,7 +7,7 @@ When working in simulation, everything is run and stored locally on your compute
 
 Thus to switch from simulation to a real robot, you need to switch from your local instance of Jupyter to the remote one hosted by the robot. The steps are described below.
 
-### Connect to the Jupyter on the robot
+## Connect to the Jupyter on the robot
 
 Once connected to the robot web interface *http://poppy.local* (we will assume here its hostname is *poppy*, just replace it by the new hostname if you changed it), you should see a **open Ipython notebook** link.
 
@@ -21,7 +21,7 @@ This is where you can put your own notebooks. Of course, you can create folder, 
 
 *Note: If you need finer access or more advanced configuration (such as permission for instance), you have to log directly to the robot using ssh.*
 
-### Upload a notebook
+## Upload a notebook
 
 Once connected to the Jupyter server hosted by the robot, you can directly use the Jupyter interface for uploading new notebooks.
 
@@ -31,11 +31,11 @@ The circled button let you *upload* your local notebook, so stored on your own m
 
 *Be aware that at the moment, we do not deal with sessions or permissions (as [JupyterHub](https://github.com/jupyter/jupyterhub) does for instance), and thus anyone with access to the robot can use or delete all notebooks stored in the robot.*
 
-### Adapt your code
+## Adapt your code
 
 There is few places where you should actually modify your code so it works with a real robot. We try to minimize the effort needed as much as possible, yet some steps are still required.
 
-#### Instantiation
+### Instantiation
 
 When creating the robot, you actually need to specify if you are willing to work with a real or a simulated robot. This is simply done via a parameter. For instance:
 
@@ -58,7 +58,7 @@ Of course, this works for all existing Poppy creatures: Humanoid, Torso and Ergo
 
 This is most of the changes that you should do.
 
-#### Specific APIs
+### Specific APIs
 
 Some part of the API are platform specific. For instance, when using V-REP you have access to *tracking* features that let you retrieve any object 3D position. Of course, such method do not have a real world equivalent and thus are not available when working with a real robot.
 
@@ -76,7 +76,7 @@ def reset_position():
 ```
 
 
-### Version and 3rd party libraries
+## Version and 3rd party libraries
 
 The main drawback of this client/server way of working is that your locally installed software versions may differ from the one installed on the robot.
 
