@@ -7,19 +7,6 @@ This section will guide you to install Poppy softwares on your personal computer
 
 Poppy creatures are run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries. If you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
 
-
-- [Install Python and Poppy software on Windows](#install-python-and-poppy-software-on-windows)
-	- [Install Python and Poppy softwares on Windows](#install-python-and-poppy-softwares-on-windows)
-	- [Install Poppy software on Windows](#install-poppy-software-on-windows)
-	- [Upgrade Poppy software on Windows](#upgrade-poppy-software-on-windows)
-- [Install Python and Poppy software on Mac OSX](#install-python-and-poppy-software-on-mac-osx)
-- [Install Python and Poppy software on GNU/Linux](#install-python-and-poppy-software-on-gnulinux)
-	- [Install dependancies with your operating system package manager \(alternative solution to Anaconda/Miniiconda\)](#install-dependancies-with-your-operating-system-package-manager-alternative-solution-to-anacondaminiiconda)
-	- [Install Poppy software on GNU/Linux](#install-poppy-software-on-gnulinux)
-	- [Upgrade Poppy software on GNU/Linux](#upgrade-poppy-software-on-gnulinux)
-
-
-
 ## Install Python and Poppy software on Windows
 
 If you want a step by step screencast of the installation of Anaconda on Windows, you can see [these videos](https://www.youtube.com/watch?v=kw9lQwdOlOs&list=PLT6NsCw8bf8T5FG2LGk2y_KTdexi8A5BN) (this is a YouTube playlist).
@@ -29,7 +16,7 @@ If you want a step by step screencast of the installation of Anaconda on Windows
 
 ### Install Python and Poppy softwares on Windows
 
-We encourage the use of the Anaconda Python distribution. 
+We encourage the use of the Anaconda Python distribution.
 However, if you already installed a Python distribution like Canopy (shipped with scientific packages), you can directly [install Poppy software](#install-python-and-poppy-softwares-on-windows).
 
 > **Info** Poppy software libraries work in Python 2.7 and Python 3.3+. If you have no ideas on which version to install, we suggest you to use Python 2.7 as we develop in this version.
@@ -53,7 +40,7 @@ Now you have a Python distribution, you are ready to [install Poppy software](#i
 
 #### Miniconda Python (alternative to Anaconda)
 
-Miniconda is a "light" version of Anaconda which contain only Python and the conda package manager. You can install it **instead of Anaconda** and save a lot of disk space (25 Mo vs 400 Mo), but you will have to do another step in the install process, and you will not have Jupyter notebook shortcut on the desktop. 
+Miniconda is a "light" version of Anaconda which contain only Python and the conda package manager. You can install it **instead of Anaconda** and save a lot of disk space (25 Mo vs 400 Mo), but you will have to do another step in the install process, and you will not have Jupyter notebook shortcut on the desktop.
 Download miniconda [here for 64-bit](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe) computer.
 
 Install it and be sure that the two check-boxes of the PATH and the default Python are checked.
@@ -101,7 +88,7 @@ pip install poppy-ergo-jr --upgrade --no-deps
 
 ## Install Python and Poppy software on Mac OSX
 
-Mac OSX has a Python distribution installed by default. Before installing Poppy software, you need to install the Python package manager **pip**. 
+Mac OSX has a Python distribution installed by default. Before installing Poppy software, you need to install the Python package manager **pip**.
 Open a terminal copy and press enter to execute the command below:
 ```
 curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
@@ -208,7 +195,6 @@ pip install poppy-ergo-jr --upgrade --no-deps
 ```
 
 > **Info** To understand commands above
-> - *--user* will install Python package in user directories, it avoid using `sudo` if you use the Python of your OS. 
+> - *--user* will install Python package in user directories, it avoid using `sudo` if you use the Python of your OS.
 > - *--upgrade* will uninstall before starting the install
 > -	*--no-deps* will avoid installing dependencies, this is usefull to avoid pip to compile *scipy* as it will probably fail of you have not Fortran dependancies
-
