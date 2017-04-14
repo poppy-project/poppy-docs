@@ -17,10 +17,14 @@
         "youtube",
         "github",
         "ga",
+        "anchorjs",
         "language-picker",
         "copy-code-button"
     ],
     "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
         },
