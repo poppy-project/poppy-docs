@@ -90,7 +90,7 @@ blockquote.alert p a {
 }
 
 .page-toc::before {
-  content: "In this section";
+  content: "Dans cette section";
   font-weight: normal;
   font-size: smaller;
 }
