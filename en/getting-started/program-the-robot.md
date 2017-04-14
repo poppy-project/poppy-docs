@@ -1,4 +1,4 @@
-## Program the robot
+# Program the robot
 
 Poppy robots are designed to be easily programmed. They are three main options presented here:
 * using [Snap!](#using-snap), a variant of Scratch the visual programming language,
@@ -10,7 +10,7 @@ Poppy robots are designed to be easily programmed. They are three main options p
 <img src="../img/logo/open-source.png" alt="OpenSource Logo" height="100"><img src="../img/logo/gpl-v3.png" alt="GPLv3 Logo" height="100">
 
 
-### Using Snap_!_
+## Using Snap_!_
 
 ![Snap! logo](../img/logo/snap.png)
 
@@ -22,7 +22,7 @@ We developed a set of custom blocks for Poppy robots that let you send motor com
 
 A [dedicated chapter](../programming/snap.md) will guide you in what you can do with Snap_!_ and Poppy robots.
 
-### Using Python
+## Using Python
 
 ![Python Powered](../img/logo/python.png)
 
@@ -41,7 +41,7 @@ jr.m3.goal_position = 30
 We are also big fan of the [Jupyter Project](http://jupyter.org) and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We think that this is a powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.
 
 
- <img src="../img/logo/jupyter.png" alt="Jupyter Logo" width="100"> 
+ <img src="../img/logo/jupyter.png" alt="Jupyter Logo" width="100">
 
 Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as notebooks.
 
@@ -49,7 +49,7 @@ Most of the tutorials, experiments or pedagogical activities that we and the com
 
 > **Info** An updated gallery of notebooks can be found [here](../programming/notebooks.md). Contribtions welcomed!
 
-### Through the REST API
+## Through the REST API
 
 On top of the Snap_!_ and Python options, we wanted to provide another way of accessing and controlling your robot from any device or language. Poppy robots are providing a REST API. The most important features of the robot can be access through HTTP GET/POST requests.
 

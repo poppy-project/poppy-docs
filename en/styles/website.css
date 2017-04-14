@@ -90,6 +90,20 @@ blockquote.alert p a {
   font-size: inherit;
 }
 
+.page-toc ul {
+  margin-bottom: 0;
+}
+
+.page-toc ul ul {
+  padding-left: 25px;
+}
+
+.page-toc ul ul li {
+  list-style-type: disc;
+  font-size: smaller;
+  padding-top: 2px;
+}
+
 .page-toc::before {
   content: "In this section";
   font-weight: normal;

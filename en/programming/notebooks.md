@@ -69,6 +69,8 @@ For each notebook, we provide a short description of what it does, with which ro
 
 * **Dialogue: [TP1](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d'ininitiation%20%C3%A0%20l'informatique%20pour%20les%20lyc%C3%A9ens/dialogue/Dialogue%20TP1.ipynb), [TP2](https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d'ininitiation%20%C3%A0%20l'informatique%20pour%20les%20lyc%C3%A9ens/dialogue/Dialogue%20TP2.ipynb)** - Établir un dialogue entre Python et le robot. Ces TPs utilisent un Poppy Torso simulé dans V-REP.
 
+<!-- TODO
+
 ## Going further
 
 ### Low-level communicatio
@@ -79,6 +81,6 @@ For each notebook, we provide a short description of what it does, with which ro
 
 ### Extending Poppy software
 
-## Contributing to this gallery
+## Contributing to this gallery -->
 
 Do not hesitate to let us know if some cool Notebooks are missing! You can directly send pull-request on GitHub or use the [issue tracker](https://github.com/poppy-project/poppy-docs/issues).
