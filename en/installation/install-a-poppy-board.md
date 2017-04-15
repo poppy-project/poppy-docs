@@ -1,34 +1,37 @@
 # Install a Poppy board
 
-> **Caution** This chapter is only for people who want to create from scratch a Raspberry Pi or Odroid image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
+> **Warning** Warinin : this chapter is only for people who want to create from scratch a Raspberry Pi or Odroid system image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
 
 To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts.
 
 **Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages.** If you encounter issues with these scripts, you can post a message in the [support section](https://forum.poppy-project.org/c/support) of the forums.
 
-
 ## For a Poppy Ergo Jr / Raspberry Pi
-Raspberry Pi are preformated with n00b, you need to install Raspbian first.
+Raspberry Pi SD cards are pre-writed with n00b OS, you need to install Raspbian OS first.
 
 Download the image of your system:
-* [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) if you are using a **Raspberry Pi 2**.
+* [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
 
 Write the image to the SD-card with you favorite disk writer tool as explained in the [startup section](burn-an-image-file.md#write-an-image-to-the-sd-card).
 
-> **Info** If you are using Windows, you have no native SSH client ; you have to download and install [putty](http://www.putty.org/) or [mobaxterm](http://mobaxterm.mobatek.net/) to use SSH.
+Add an empty file name ".ssh" in the boot partition to activate SSH.
 
 Login to the board in SSH: `ssh pi@raspberrypi.local`, password=raspberry.
+
+> **Note** Note: If you are using Windows, you have no native SSH client. You have to download and install [putty](http://www.putty.org/) or [mobaxterm](http://mobaxterm.mobatek.net/) to use SSH.
 
 You will need to make sure that you have enough free space in your raspberry. The easiest way is to use the raspi-config script to expand your partition to the full SD-card. Just log into your raspberry and run (you will need to reboot it afterwards):
 
 ```bash
-sudo raspi-config --expand-rootfs
+sudo raspi-config
 ```
 
 Be sure that your board is connected to the Internet, and use ["raspoppy"](https://github.com/poppy-project/raspoppy) installer:
 ```bash
 curl -L https://raw.githubusercontent.com/poppy-project/raspoppy/master/raspoppyfication.sh | bash -s "poppy-ergo-jr"
 ```
+
+> **Note** Change `poppy-ergo-jr` in the command above by your desired Poppy creature you want to install on your Raspberry Pi.
 
 Reboot after the end of the installation.
 The hostname, default user and password will be all set to "poppy" (`ssh poppy@poppy.local` password=poppy).
@@ -77,4 +80,3 @@ Please share your experiences with the community : https://forum.poppy-project.o
 
 The hostname, default user and password will be all set to "poppy" (`ssh poppy@poppy.local` password=poppy).
 You can test your installation with the web interface in your web browser http://poppy.local.
-

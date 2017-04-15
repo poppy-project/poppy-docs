@@ -13,7 +13,7 @@
 ### Software installation
 
 * [Installation](installation/README.md)
-    - [Install a zeroconf client](installation/install-zeroconf.md)
+    - [Install Bonjour/Zeroconf](installation/install-zeroconf.md)
     - [Startup with a Poppy robot](installation/burn-an-image-file.md)
     - [Install Poppy softwares](installation/install-poppy-softwares.md)
     - [Install V-REP simulator](installation/install-vrep.md)

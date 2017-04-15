@@ -7,7 +7,6 @@
     "plugins": [
         "-share",
         "-search",
-        "edit-link",
         "richquotes",
         "toggle-chapters",
         "toggle-headers",
