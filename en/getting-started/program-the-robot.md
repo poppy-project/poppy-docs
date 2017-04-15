@@ -3,16 +3,16 @@
 Poppy robots are designed to be easily programmed. They are three main options presented here:
 * using [Snap!](#using-snap), a variant of Scratch the visual programming language,
 * using [Python](#using-python) and leveraging the power of the whole API,
-* through the  [REST API](#through-the-rest-api) which let you  interface Poppy robots with other devices or any programming language.
+* through the [REST API](#through-the-rest-api) which let you  interface Poppy robots with other devices or any programming language.
 
->**Info** As for the rest of the project, all our libraries are open source and available on [GitHub](https://github.com/poppy-project).
-
-<img src="../img/logo/open-source.png" alt="OpenSource Logo" height="100"><img src="../img/logo/gpl-v3.png" alt="GPLv3 Logo" height="100">
+>**Info** Info: As for the rest of the project, all our software libraries are open source (GPLv3 License) and available on [GitHub](https://github.com/poppy-project).
 
 
 ## Using Snap_!_
 
-![Snap! logo](../img/logo/snap.png)
+<p style="text-align:center">
+<img src="../img/logo/snap.png" alt="Snap! logo" height="200">
+</p>
 
 Snap_!_ is a visual programming language - a variant of the very famous Scratch language. It is a block based drag-and-drop programming language that allows for a thorough introduction of IT. It runs in your browser as it is implemented in JavaScript. You do not need to install anything to start using it. It is open sourced and actively maintained.
 
@@ -24,7 +24,9 @@ A [dedicated chapter](../programming/snap.md) will guide you in what you can do 
 
 ## Using Python
 
-![Python Powered](../img/logo/python.png)
+<p style="text-align:center">
+<img src="../img/logo/python.png" alt="Python Powered" height="170">
+</p>
 
 Poppy libraries have been written in Python, to allow for fast development and extensibility and to benefit from all existing scientific libraries. Python is also a well-known language and widely used in education or artistic fields. By programming Poppy in Python, you will have access from the very low-level API to the higher levels.
 
@@ -40,8 +42,9 @@ jr.m3.goal_position = 30
 <!-- Note: "Notebook documents" or “notebooks”, all lower case -->
 We are also big fan of the [Jupyter Project](http://jupyter.org) and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We think that this is a powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.
 
-
- <img src="../img/logo/jupyter.png" alt="Jupyter Logo" width="100">
+<p style="text-align:center">
+<img src="../img/logo/jupyter.png" alt="Jupyter Logo" height="150">
+</p>
 
 Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as notebooks.
 

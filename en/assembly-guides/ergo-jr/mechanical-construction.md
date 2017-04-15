@@ -3,7 +3,7 @@
 
 ### General advices and warnings
 
-<!-- TODO: 
+<!-- TODO:
 * picture rivet black vs grey
 * ergo + wires
 -->
@@ -39,7 +39,7 @@
 You can configure your motors before, during or after the the mechanical assembly but it is highly advised to configure each motor one by one in the construction order :
 * configure motor m1
 * assemble the base and motor m1
-* configure motor m2 
+* configure motor m2
 * ...
 
 
@@ -50,9 +50,9 @@ You can configure your motors before, during or after the the mechanical assembl
 Please consult the [motor configuration section](motor-configuration.md) for more informations.
 
 ### Step 1
-First, [configure one XL-320](motor-configuration.md) motor as "m1". 
+First, [configure one XL-320](motor-configuration.md) motor as "m1".
 
-Mount the motor on the 3D printed base. 
+Mount the motor on the 3D printed base.
 
 ![step 1](img/assembly/steps/step_1-2.jpg)
 
@@ -90,7 +90,7 @@ Mount motor "m4" and the assembled *short_U* on top of the previous assembly. Th
 ![step 4 bis](img/assembly/steps/step_9-10.jpg)
 
 ### Step 5
- 
+
 Configure the fifth motor: "m5".
 
 Mount *horn2horn* and *horn2side* parts on motor "m4", and mount "m5" on top of the construction.
@@ -120,12 +120,12 @@ Mount *gripper-fixed_part* and *gripper-rotative_part* on motor "m6".
 <!-- TODO closed picture of gripper-->
 
 
-### Step 7 - electronics	
+### Step 7 - electronics
 Mount the support_camera part on the base. Fix the Raspberry Pi camera on it and move the camera flex cable between motor "m1" and the base.
 ![step 6](img/assembly/steps/step_21-22.jpg)
 
 To fix the flex cable of the camera on the Raspberry Pi:
-* open the camera connector by pulling on the tab 
+* open the camera connector by pulling on the tab
 * make sure that connectors on the flex cable are facing away of the ethernet port
 * push the flex on the port, and push the plastic tab down
 
@@ -140,7 +140,7 @@ If it is not already done, you can plug every motors wires. Every motor has two 
 ![step 6](img/assembly/steps/step_24.jpg)
 
 ### Step 8 - fix you ergo-jr to wood disk support
-Mount you ergo-jr to the wood *disk-support*. 
+Mount you ergo-jr to the wood *disk-support*.
 
 Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it.
 <!-- TODO: picture of disk fixation -->

@@ -1,4 +1,4 @@
-## Motor configuration
+# Motor configuration
 
 The Ergo Jr is made of 6 XL-320 motors from [Robotis](http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm). Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.
 
@@ -9,32 +9,25 @@ Yet, in order for the motors to be connected and identified on the same bus (sam
 We recommend to configure motors in parallel of the hardware assembly. Meaning, that before assembling a new motor, you first configure it, then assemble to the rest of your robot. This will prevent you to swap motors. In the step-by-step assembly procedure, we will point out each time you need to configure a new motor. Furthermore, you will also be able to directly configure the motor from the assembly notebook interface.
 
 
-### Configuring motors one at a time
+## Configuring motors one at a time
 
 As explained above, all motors have the same ID by default. **Only one motor at a time should be connected to the data bus when you configure them.** Otherwise, it will not work as all motors connected will think that the order sent on the line is intended for them, they will all try to answer resulting in a big mess.
 
 Your electronic setup when configuring a motor should look like this:
 
 * the Raspberry Pi
-* the shield on top and the AC plugged
+* the Pixl shield on top and the AC plugged
 * a wire from the shield to the motor you want to configure
-* a ethernet cable going from the Raspberry Pi to your computer or your router
+* an Ethernet cable going from the Raspberry Pi to your computer or your router
 
-![XL-320 configuration ; one motor at a time](img/motor_one_by_one.jpg)
+![XL-320 configuration ; one motor at a time](img/motor_one_by_one.jpg).
 
-
-#### Web interface (user friendly)
-<!-- TODO: image du notebook  -->
-<!-- The easiest way to use it, is through the notebook interface which will show you at which step of the assembly you have to configure a new motor.
- -->
- <!-- *Note: advanced users may directly use it from the command line terminal. For instance, to configure the motor "m3":* -->
-> **Note** The web utility for configuring motors is still in the TODO stack.
-
-#### Command-line utility
+### Command-line utility
 Robots come with a command line utility `poppy-configure` ; to use it you need to open a terminal on your Raspberry Pi.
 
 You can access to the Raspberry Pi directly from your computer. To do so, open the page http://poppy.local in a web browser.
-> **Caution** If you are using Windows, you need to install [Bonjour](https://support.apple.com/kb/DL999) (look at [Zeroconf protocol](../../installation/install-zeroconf.md) for details) to be able to connect to the robot from its hostname. If Bonjour is not present, you will have an error message like the one below. If Bonjour is installed and the issue still present, please re-install it.
+
+> **Warning** If you are using Windows, you need to install [Bonjour](https://support.apple.com/kb/DL999) (look at [Zeroconf protocol](../../installation/install-zeroconf.md) for details) to be able to connect to the robot from its hostname. If Bonjour is not present, you will have an error message like the one below. If Bonjour is installed and the issue still present, please re-install it.
 >
 >![Page doesn't exist](img/IHM/webpage_not_available.jpg)
 
