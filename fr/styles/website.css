@@ -111,3 +111,27 @@ blockquote.alert p a {
 .font-settings {
   display: none;
 }
+
+
+
+/** Navigation headings **/
+.book-summary ul.summary li.header {
+  font-weight: bold;
+  color: #333;
+}
+
+li.header:hover{
+  text-decoration: underline;
+}
+
+li.chapter span:hover{
+  text-decoration: underline;
+}
+
+.book-summary ul.summary li.chapter {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.page-wrapper {
+  padding-top: 10px;

@@ -16,45 +16,34 @@ You may be in two kind of cases:
 
 ## Download the image of the operating system
 
-You have to choose the image (file in *.img.zip) to download depending on your Poppy creature and the targeted board:
+You have to choose the image (file in `*.img.zip`) to download depending on your Poppy creature and the targeted board:
 
 * [Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases/download/1.0.0-gm/2017-02-21-poppy-ergo-jr.img.zip)
 * [Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
 * [Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
-The .zip file you have downloaded need to be unzipped to get the image file for writing to your SD card.
-
 ## Write the operating system image to the SD card
 
 With the image file corresponding to your Poppy creature, you need to use an image writing tool to install it on your SD card.
-First unzip the image you have previously downloaded.
 
 ### Burn the image with etcher (GUI software)
 
-Download and install [etcher](http://etcher.io/). It works for Windows, OSX, and GNU/Linux operating systems.
+- *Download and install [etcher](http://etcher.io/).* It works for Windows (versions above Windows 7), OSX, and GNU/Linux operating systems.
+
 ![etcher](img/etcher.gif)
-Select the unzipped image, select the SD-card or MMC drive, press the *burn* button, and wait until it is done.
+- Insert the SD card into your computer.
+- Start Etcher, select the SD card drive, select the image (a file like `2017-04-13-poppy-ergo-jr.img.zip`). Start flashing. The image written to your card will be verified afterwards.
+
 
 Now you are ready to [assemble your robot](../assembly-guides/README.md)!
 
 ### Burn the image with `dd` (CLI software)
 
-> **Warning** This method works only for GNU/Linux and OSX operating systems, and is not recommended if you don't understand what you do.
+> **Danger** This method works only for GNU/Linux and OSX operating systems, and is not recommended if you don't understand what you do.
 
-- Run `df -h` to see what devices are currently mounted.
-- If your computer has a slot for SD cards, insert the card. If not, insert the card into an SD card reader, then connect the reader to your computer.
-- The new device that has appeared is your SD card. The left column gives the device name of your SD card; it will be listed as something like `/dev/mmcblk0p1` or `/dev/sdd1`. The last part (`p1` or `1` respectively) is the partition number but you want to write to the whole SD card, not just one partition. Therefore you need to remove that part from the name (getting, for example, `/dev/mmcblk0` or `/dev/sdd`) as the device for the whole SD card. Note that the SD card can show up more than once in the output of df; it will do this if you have previously written a Raspberry Pi image to this SD card, because the Raspberry Pi SD images have more than one partition.
+Insert the SD card and look for where your disk is mounted (/dev/mmcblk0 and /dev/disk2 for the following example). Adapt and execute one on these commands. *Be careful, you could erase one of your primary disk partition if you don't understand what you do*.
 
-- Run `umount /dev/sdd1`, replacing `sdd1` with the device name of your SD card (including the partition number).
-
-- In the terminal, write the image to the card with the command below, making sure you replace the input file `if=` argument with the path to your `.img` file, and the `/dev/sdd` in the output file `of=` argument with the right device name.
-
-> **Caution** You will lose all data on your hard drive if you provide the device name of another running partition.
-
-Make sure the device name is the name of the whole SD card as described above, not just a partition of it; for example `sdd`, not `sdds1` or `sddp1`; or `mmcblk0`, not `mmcblk0p1`.
-
-If you are running a GNU/Linux OS:
-
+If you are on a GNU/Linux OS:
 ```bash
 sudo dd bs=4M if=poppy-ergojr.img of=/dev/mmcblk0
 ```
