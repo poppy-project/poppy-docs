@@ -97,7 +97,7 @@ To finish your Ergo Jr, you need to add a tool at its end. So first choose the t
 
 > **Note** Tools they can be easily and quickly changed, so you can adapt it to the different activities.
 
-#### Lampshade or pen holder
+#### L'abat jour ou le stylo
 
 Mount *horn2horn* and *horn2side* parts on motor "m5", and mount "m6" on top of the construction. ![step 6](img/assembly/steps/step_14-16-17.jpg)
 
@@ -109,7 +109,7 @@ Mount the [*gripper-fixation*](https://github.com/poppy-project/poppy-ergo-jr/bl
 
 Mount *gripper-fixed_part* and *gripper-rotative_part* on motor "m6". <!-- TODO closed picture of gripper-->
 
-### Step 7 - electronics
+### Étape 7 - électronique
 
 Mount the support_camera part on the base. Fix the Raspberry Pi camera on it and move the camera flex cable between motor "m1" and the base. ![step 7](img/assembly/steps/step_21-22.jpg)
 
