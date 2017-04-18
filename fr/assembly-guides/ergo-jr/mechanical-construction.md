@@ -55,7 +55,7 @@ Mount the motor on the 3D printed base.
 
 To do so, prepare 8 small rivets. put the first part in the second part without putting them in the motor. Then, place the motor in the base, with the horn facing up and near the more open side. Use the Ollo to grab a rivet between the first and the second part, then put the rivet in one the assembly holes. Once the rivet is in place, lock it by pushing the part 1 of the rivet in part 2.
 
-### Step 2
+### Étape 2
 
 Configure the second motor, its name is "m2", with the following command in a poppy terminal:
 
