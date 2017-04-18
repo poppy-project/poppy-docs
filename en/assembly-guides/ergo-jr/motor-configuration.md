@@ -50,7 +50,7 @@ poppy-configure ergo-jr m1
 ```
 
 You have now configured the m1 motor of your robot.
-Once configured and that you see the message indicating that everything went well, you can unplug the motor (you don't need to turn off the card). The configuration of the motor is stored in the motor internal memory.
+Once configured and that you see the message indicating that everything went well, you can unplug the motor (you don't need to turn off the card). The configuration of the motor is stored in its internal memory (eprom).
 
 > **Info** Poppy Ergo Jr motors are named m1, m2, m3, m4, m5, m6. To configure the others motors, you have to change m1 by the name of the motor you want to configure in the command above.
 

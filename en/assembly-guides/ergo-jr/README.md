@@ -12,7 +12,7 @@ Its end effector can be easily changed. You can choose among several tools:
 
 Thanks to the rivets, they can be very quickly and easily swapped. This allows the adaptation of the tooltip to the different applications you plan for your robot.
 
-The engines have the same functionality as other Poppy  creatures but are slightly less powerful and less precise. The advantage being that they are also less expensive.
+XL-320 engines have the same functionalities as other Poppy creatures but are slightly less powerful and less precise. The advantage being that they are also less expensive.
 
 The electronic card is visible next to the robot, which is very advantageous to understand, manipulate, and plug extra sensors. No soldering is needed, you just need to add the shield for XL-320 motors on top of the Raspberry Pi pins.
 
@@ -26,7 +26,7 @@ This chapter will guide you through all steps required to entirely assemble a Po
 
 At the end of the process, you should have a working Poppy Ergo Jr, ready to move!
 
-We recommend you to follow carefully the instructions. Even if the Ergo Jr can be easily disassembled, it is always disappointing to need to start from scratch again because you forget to configure the motors, a wire is missing, or a motor is reversed.
+We recommend you to follow carefully the instructions. Even if the Ergo Jr can be easily disassembled, it is always disappointing to need to start again a part of the assembly because you forget to configure the motors, or a motor is reversed.
 
 <!-- Should be updated from https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md -->
 ## Bill of materials
@@ -63,9 +63,9 @@ Here you will find the complete list of material (BOM) needed to build a Poppy E
 - 1x Standoff Male/Female M2.5 10mm
 
 ## Various electronics
-- 1x Raspberry Pi 2
-- 1x micro SD 8Go
-- 1x Rasperry Pi camera
+- 1x Raspberry Pi 2 or 3
+- 1x micro SD 8Go (or larger)
+- 1x Raspberry Pi camera
 - 1x AC power 7.5V 2A with a 2.1 x 5.5 x 9.5 jack connector ([this one](http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E&relevancy-data=636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526&sra=p) for instance).
 - Short ethernet cable
 
