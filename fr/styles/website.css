@@ -199,9 +199,16 @@ img {
 }
 
 
-/* Hide GitBook link */
+/* Hide GitBook link (keep it white for they pagerank) */
 a.gitbook-link{
-  display:none;
   color: white;
   opacity:0;
+}
+
+/* Hide custom-link (head of SUMMARY, appear only on doc built by gitbok ci) */
+a.custom-link{
+  display: none !important;
+}
+.divider{
+   display: none !important;
 }
