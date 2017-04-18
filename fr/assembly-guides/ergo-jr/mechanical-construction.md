@@ -1,49 +1,49 @@
 # Mechanical Assembly
 
-## General advices and warnings
+## Avis et avertissements d'ordre général
 
 <!-- TODO:
 * picture rivet black vs grey
 * ergo + wires
 -->
 
-* You can assemble all the rivets you need before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
+* Vous pouvez assembler quelques rivets avant la construction. Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
 
 ![OLLO Rivet Assembly](img/assembly/ollo_rivet.png)
 
-* There are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis, at the opposite side of the horn.
+* Il y a deux types de rivets : les gris et les autres. Les rivets gris sont plus longs afin de pouvoir les insérer à travers l'axe du moteur, par le côté opposé aux palonniers d'assemblage.
 
 <!-- HTML link to adapt image size -->
 
 <img src="img/assembly/ollo_rivets_size.jpg" alt="OLLO Rivet size" height="200" />
 
-* Use the OLLO Tool for putting and removing rivets easily.
+* Utilisez l'outil OLLO pour pouvoir monter et démonter les rivets facilement.
 
 <!-- HTML link to adapt image size -->
 
 <img src="img/assembly/ollo-tool.jpg" alt="OLLO Tool" height="200" />
 
-* Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favourite side).
+* N'oubliez pas d'insérer les fils entre les moteurs quand vous construisez le robot ! Chaque moteur, mis à part le dernier de la chaîne, doit avoir deux fils : un connecté au moteur précédent et l'autre au moteur suivant (le sens de connexion n'a pas d'importance).
 
-* **Always align the horn with the motor before assembling them!** Otherwise your Poppy Ergo Jr will look all weird.
+* **Alignez toujours le palonnier (la roue d'entrainement noire) avec le moteur avant de les assembler !** Sinon votre Poppy Ergo Jr aura l'air tout à fait bizarre.
 
 <!-- HTML link to adapt image size -->
 
 <img src="img/assembly/align-horn.png" alt="Align Horn" height="200" />
 
-* Every motor horns (black revolving circle) are **facing the left side of the robot**. It is a convention but it will define the orientation of your motors.
+* Toutes les palonniers moteur (la roue d'entrainement noire) doivent être alignées **sur le côté gauche du robot**. C'est juste une convention mais elle définira l'orientation de vos moteurs.
 
 ![Horns on left side](img/assembly/horns_on_left.jpg)
 
 ## Step-By-Step guide
 
-### Motor configuration (for all steps)
+### Configuration des moteur (pour toutes les étapes)
 
-You can configure your motors before, during or after the the mechanical assembly but it is highly advised to configure each motor one by one in the construction order : * configure motor m1 * assemble the base and motor m1 * configure motor m2 * ...
+Vous pouvez configurer vos moteurs avant, pendant ou après le l’assemblage mécanique, mais il est vivement conseillé de configurer chaque moteur un par un dans l’ordre de construction : * configurer le moteur m1 * assembler la base et le moteur m1 * configurer le moteur m2 * etc
 
-> **Caution** To configure motors, you have to connect them separately one by one to the Raspberry Pi. If you try to configure a new motor wired to a previously configured motor, this will not work.
+> **Attention** Pour configurer les moteurs, vous devez connecter séparément un par un à la Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu'il est connecté avec le moteur précédent, cela ne fonctionnera pas.
 
-Please consult the [motor configuration section](motor-configuration.md) for more informations.
+Pour plus d’informations, consultez la [section configuration de moteur](motor-configuration.md).
 
 ### Step 1
 
