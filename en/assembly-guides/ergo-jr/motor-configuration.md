@@ -35,7 +35,7 @@ If everything goes well, you should see the Poppy home page:
 
 ![Poppy home page](img/IHM/accueil_poppy_local.PNG)
 
-Click on the **"Jupyter — Python, Terminal"** link and after, select on the left "New" and "Terminal".
+Click on the **"Jupyter — Python, Terminal"** link and after, select on the right "New" and "Terminal".
 <img src="img/IHM/jupyter_new_terminal.png" alt="Jupyter terminal" height="300">
 
 You have now access to the Terminal:
