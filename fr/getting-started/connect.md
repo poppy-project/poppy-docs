@@ -1,89 +1,76 @@
-# Démarrer et connecter le robot
+# Start and connect the robot
 
-Dans cette section, nous allons décrire comment démarrer votre robot et vous donner un aperçu des possibilités pour y accéder.
+In this section, we will describe how to start your robot and give an overview of the possibilities to access it.
 
-## Configurer le logiciel
+## Setup the software
 
-Les créatures Poppy viennent avec une carte embarquée dont le travail est de contrôler les moteurs et d'accéder aux capteurs. Pour une plus grande simplicité, cette carte embarquée peut être contactée à travers une interface Web. cela facilite le contrôle du robot depuis votre propre ordinateur ou une tablette sans avoir à télécharger ou installer quoique ce soit.
+Poppy creatures come with an embedded board which job is to control motors and access the sensors. For simplicity purpose, this computer can be remotely access through a web interface. It makes it easy to control the robot from your own computer or tablet without having to download/install anything.
 
-Il y a plusieurs méthodes pour configurer la carte embarquée de votre robot Poppy :
+There are two ways to setup the board for your Poppy robot: * [**the easy way**](#easy-and-recommended-way-use-the-poppy-sdcard): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card * [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
-* [**la méthode simple**](#simplement-utiliser-la-carte-sd-poppy): utilisez une image ISO toute prête et transférez la sur une carte SD
-* [**la méthode avancée**](#plus-avance-tout-installer-vous-meme): tout installer vous-même
+> **Note** If you are planning to use a simulated robot, you must install the software on your personal computer. Follow the [instructions for setting up the simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
-<!-- TODO: corriger le lien ci-desous pour le setup de la simulation -->
+### Easy and recommended way: use the Poppy SD-card
 
-> **Note** Si vous prévoyez d'utiliser un robot simulé, vous devez installer le logiciel sur votre propre ordinauter. Suivez les instructions pour [configurer la simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.
 
-### Simplement: utiliser la Carte SD Poppy
+> **Note** Poppy robotic kits come with a ready to use SD-card. So, you do not have anything special to do.
 
-Le moyen le plus simple et le plus rapide - de loin - est d'utiliser des images ISO déjà faites pour les cartes SD. Ces images ISO viennent avec tout le nécessaire déjà pré-installé pour votre robot Poppy. C'est aussi un bon moyen de vous assurer que vous utilisez exactement le même logiciel que nous Ainsi vous éviterez de nombreux problèmes.
+The images can be found in the release of each creatures:
 
-> **Note** Les kits de robotique Poppy viennent avec une carte SD prête à l'emploi. Ainsi vous n'avez rien de spécial à faire.
+* [for the Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)
+* [for the Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
+* [for the Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
-Les images ISO peuvent être trouvées avec les distributions de chaque créature :
+They can be written to a SD-card (at least 8 Go) by using classical utility tools. Once the SD-card is ready, just insert it into the board. Then when you switch on your robot it should automatically start and you should be able to connect to its web interface.
 
-* [pour le Poppy Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases)
-* [pour le Torse Poppy](https://github.com/poppy-project/poppy-torso/releases)
-* [pour l'Humanoïde Poppy](https://github.com/poppy-project/poppy-humanoid/releases/)
+> **Info** More details can be found in the [startup section](../installation/README.md).
 
-Elles peuvent être écrites sur une carte SD d'au moins 8 Go en utilisant un outil classique. Une fois la carte SD prête, vous n'avez qu'à l'insérer dans votre carte embarquée. Vous pouvez ensuite mettre votre robot sous tension, il devrait démarrer et vous pourrez ainsi vous connecter à son interface web.
+### Advanced way: DIY, install everything from scratch
 
-> **Info** Plus de détails dans la [section Démarrage](../installation/README.md).
+The advanced way mainly consists in installing everything needed from scratch. This follows the same procedure as we use to generate the image for SD-cards. We mention this possibilty here as it can be useful if:
 
-### Plus avancé: tout installer vous-même
+* You are **working with a simulated robot** and thus have to manually install all the required software on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,
+* you want to customize the environment,
+* or simply if you like to understand how it works.
 
-La méthode avancée consiste à installer tout le nécessaire depuis zéro. Elle suit la même procédure que nous utilisons pour générer les images ISO pour cartes SD. Nous mentionnons cette méthode car elle peut s'avérer utile si :
+> **Caution** We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.
 
-* **vous travaillez avec un robot simulé** et vous devez donc installer tout le logiciel nécessaire sur votre ordinateur, cette procédure est un bon endroit pour voir comment le faire sur un Raspberry Pi et l'adapter pour un autre ordinateur,
-* vous voulez modifier l'environnement de travail,
-* vous voulez simplement comprendre comment tout fonctionne.
+Depending on what you want to do all steps are not necessary required. In particular, if you want to control a simulated robot, you may just want to install the python libraries for Poppy.
 
-> **Attention** Nous essayons de garder cette procédure d'installation aussi générique que possible. Pour autant, certains détails peuvent varier en fonction de votre système d'exploitation ou de votre ordinateur. De plus, l'installation depuis zéro demande quelques connaissances de base pour installer et configurer un environnement Python.
+> **Info** More details can be found in the [Installation for advanced users section](../installation/README.md).
 
-Suivant ce que vous souhaitez accomplir, toutes les étapes ne sont pas nécessairement requises. En particulier, si vous souhaitez contrôler un robot simulé, il suffit d'installer les bibliothèques Python pour Poppy.
+### Setup the network
 
-> **Info** Plus de détails vous sont fournis dans le chapitre [Installation pour utilisateurs avancés](../installation/README.md).
+Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it.
 
-### Configurer le réseau
+They are two main ways to connect your robot to your computer/tablet/smartphone: * Connect both the robot and the computer to the same network (e.g. the box of your home or the school network). * Directly connect your robot to your computer using an ethernet cable.
 
-Une fois que votre Poppy est assemblé et son logiciel prêt, l'étape suivante est de le connecter à un réseau. Le but est de vous permettre d'accéder au robot depuis votre ordinateur ou votre tablette/smartphone, de le contrôler et de le programmer.
+> **Caution** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work.
 
-Il y a deux manières de connecter votre robot à votre ordinateur/tablette/smartphone:
-* Connecter le robot et l'ordinateur au même réseau (par exemple la box wifi de votre domicile ou votre établissement scolaire).
-* Connecter directement votre robot à votre ordinateur par l'intermédiaire d'un câble ethernet.
+To find the address of your robot on the network, we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows. If you prefer, you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
 
-> **Attention** Bien que connecter le robot et l'ordinateur marche pour la plupart des utilisateurs, il semble que dans certains cas cela ne fonctionne pas.
+To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot (something similar as http://192.168.0.42).
 
-Pour trouver l'adresse de votre robot sur le réseau, nous utilisons le [protocole standard Zeroconf](https://fr.wikipedia.org/wiki/Zeroconf). Il vous permet d'utiliser le nom d'hôte: *"poppy.local"* en tant qu'adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais cela nécessitera d'installer les [*Services d'impression Bonjour*](https://support.apple.com/kb/DL999) sous Windows. Si vous préférez, vous pouvez utiliser l'adresse IP assignée à votre robot à la place. Si vous n'êtes pas administrateur de votre réseau cela peut être assez difficile à déterminer. Dans ce cas, utilisez de préférence la première procédure.
+> **Caution** If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.
 
-Pour vérifier que tout est configuré correctement, vous pouvez aller à l'adresse suivante avec votre navigateur web favori : [http://poppy.local/](http://poppy.local). Vous pouvez remplacer *poppy.local* par l'adresse IP de votre robot (par exemple http://192.168.0.42).
+### Use the web interface
 
-> **Attention** Si vous n'êtes pas familier avec la configuration des réseaux ou si vous n'avez aucune idée de ce que le paragraphe précédent a tenté de vous expliquer, il est préférable de consulter un ingénieur réseau afin de compléter cette étape.
+The web interface is the central point to control, program and configure your robot. It can be used to: * Monitor and Control the robot * Program it in [Snap!](http://snap.berkeley.edu) * Program it in [Python](https://www.python.org) * Configure the robot (change its name, enable/disable the camera, update) * Reset and shutdown the robot
 
-### Utiliser l'interface Web
+To access this interface, you simply have to go to the URL using your favorite web browser:
 
-L'interface web est le point central pour contrôler, programmer et configurer votre robot. Elle peut être utilisée pour:
-* Suivre l'activité du robot
-* Le programmer en utilisant [Snap!](http://snap.berkeley.edu)
-* Le programmer en utilisant [Python](https://www.python.org)
-* Configurer le robot (changer son nom, activer ou désactiver la caméra, le mettre à jour)
-* Remettre à zéro et arrêter le robot.
+* http://poppy.local (if you changed the name of your robot, simply replace *poppy* by its new name)
+* or using directly its IP address
 
-Pour accéder à cette interface, il suffit d'aller à l'URL suivante avec votre navigateur Web favori:
+You should see something like:
 
-* http://poppy.local (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
-* ou utilisez son adresse IP.
+![Home Page](../img/poppy_home.png) The buttons can be used to navigate to the different features. For instance, if you click on the *Monitor and Control*, you will access the monitor web app:
 
-Vous devriez voir quelque chose comme:
+![Monitor interface](../img/poppy_monitor.png)
 
-![Home Page](../../en/img/poppy_home.png)
-Les boutons peuvent être utilisés pour naviguer vers les différentes fonctionnalités. Par exemple, si vous cliquez sur le *Monitor and Control*, vous accéderez à l'application de monitoring:
+This let you turn on/off the motors of your robot, monitor them, and start/stop behaviors.
 
-![Interface de Monitoring](./../en/img/poppy_monitor.png)
+The *What happened* button is where you should look for more information is something goes wrong. Here is a screenshot of what you should see if everything goes well:
 
-Cela vous permettra d'allumer ou d'éteindre les moteurs de votre robot, de suivre leur activité, et leur comportement d'allumage et d'extinction.
-
-Le bouton *What happened* est là où vous devriez regarder pour plus d'information sur ce qui s'est mal passé. Voici une capture d'écran de ce que vous devriez voir si tout se passe comme prévu:
-
-![Capture d'écran de l'interface web log](../../en/img/web-logs.png)
+![Screenshot of the web log interface](../img/web-logs.png)
