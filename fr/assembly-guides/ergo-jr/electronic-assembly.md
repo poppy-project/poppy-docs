@@ -1,8 +1,8 @@
-# Electronic assembly
+# Assemblage électronique
 
-#### Insert the microSD card in the Raspberry Pi
+#### Insérez la carte microSD dans la Raspberry Pi
 
-Make sure you use a pre-configured micro SD-card. If it not the case, you have to "burn" your micro-SD card with the ergo-jr ISO image, this is described in the [startup section](../../installation/burn-an-image-file.md).
+Assurez-vous que vous utilisez une carte micro SD pré-configurée . If it not the case, you have to "burn" your micro-SD card with the ergo-jr ISO image, this is described in the [startup section](../../installation/burn-an-image-file.md).
 
 Insert the micro-SD card inside the Raspberry Pi: push the micro-SD in the connector slot until you hear a "click" sound. ![Raspberry Pi micro-SD](img/electronic/rpi-sd.jpg)
 
