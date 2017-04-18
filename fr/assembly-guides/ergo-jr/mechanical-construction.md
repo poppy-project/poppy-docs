@@ -1,4 +1,4 @@
-# Mechanical Assembly
+# Assemblage mécanique
 
 ## Avis et avertissements d'ordre général
 
