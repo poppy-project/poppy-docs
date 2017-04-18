@@ -1,29 +1,29 @@
-# Mechanical Assembly
+# Assemblage mécanique
 
-## General advices and warnings
+## Avis et avertissements d'ordre général
 
 <!-- TODO:
 * picture rivet black vs grey
 * ergo + wires
 -->
 
-* You can assemble all the rivets you need before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
+* Vous pouvez assembler quelques rivets avant la construction. Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
 
 ![OLLO Rivet Assembly](img/assembly/ollo_rivet.png)
 
-* There are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis, at the opposite side of the horn.
+* Il y a deux types de rivets : les gris et les autres. Les rivets gris sont plus longs afin de pouvoir les insérer à travers l'axe du moteur, par le côté opposé aux palonniers d'assemblage.
 
 <!-- HTML link to adapt image size -->
 
 <img src="img/assembly/ollo_rivets_size.jpg" alt="OLLO Rivet size" height="200" />
 
-* Use the OLLO Tool for putting and removing rivets easily.
+* Utilisez l'outil OLLO pour pouvoir monter et démonter les rivets facilement.
 
 <!-- HTML link to adapt image size -->
 
 <img src="img/assembly/ollo-tool.jpg" alt="OLLO Tool" height="200" />
 
-* Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favourite side).
+* N'oubliez pas d'insérer les fils entre les moteurs quand vous construisez le robot ! Chaque moteur, mis à part le dernier de la chaîne, doit avoir deux fils : un connecté au moteur précédent et l'autre au moteur suivant (le sens de connexion n'a pas d'importance).
 
 * **Always align the horn with the motor before assembling them!** Otherwise your Poppy Ergo Jr will look all weird.
 
