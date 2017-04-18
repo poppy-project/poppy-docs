@@ -19,9 +19,14 @@
         "anchorjs",
         "language-picker",
         "download-pdf-link",
+        "localized-footer",
+        "custom-favicon",
+        "build",
         "copy-code-button"
     ],
     "pluginsConfig": {
+        "favicon": "img/logo/favicon-128.ico",
+
         "theme-default": {
             "showLevel": true
         },

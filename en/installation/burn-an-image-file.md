@@ -8,7 +8,7 @@ The operating system of this computer is hosted on a SD card (you can also use a
 
 You may be in two kind of cases:
 
-- You already have a SD card with the Poppy operating system (provided by one of the Poppy distributors for example). You're ready to go to the [assembly section](../assembly-guides/README.md).
+- You already have a SD card with the Poppy operating system (provided by one of the Poppy distributors for example). You're ready to go to the [assembly section](../assembly-guides/ergo-jr.md).
 - You have an empty SD-card, so you have to [download](#download-the-image-of-the-operating-system) and [write](#write-the-operating-system-image-to-the-sd-card) the operating system on the SD card.
 
 > **Info** The Poppy creatures operating system use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi.
@@ -35,7 +35,7 @@ With the image file corresponding to your Poppy creature, you need to use an ima
 - Start Etcher, select the SD card drive, select the image (a file like `2017-04-13-poppy-ergo-jr.img.zip`). Start flashing. The image written to your card will be verified afterwards.
 
 
-Now you are ready to [assemble your robot](../assembly-guides/README.md)!
+Now you are ready to [assemble your robot](../assembly-guides/ergo-jr.md)!
 
 ### Burn the image with `dd` (CLI software)
 
@@ -61,4 +61,4 @@ sudo dd bs=4m if=poppy-ergojr.img of=/dev/rdisk2
 - Remove the SD card from the card reader.
 
 
-Now you are ready to [assemble your robot](../assembly-guides/README.md)!
+Now you are ready to [assemble your robot](../assembly-guides/ergo-jr.md)!
