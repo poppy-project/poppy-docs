@@ -25,7 +25,7 @@
 
 * N'oubliez pas d'insérer les fils entre les moteurs quand vous construisez le robot ! Chaque moteur, mis à part le dernier de la chaîne, doit avoir deux fils : un connecté au moteur précédent et l'autre au moteur suivant (le sens de connexion n'a pas d'importance).
 
-* **Always align the horn with the motor before assembling them!** Otherwise your Poppy Ergo Jr will look all weird.
+* **Alignez toujours le palonnier (la roue d'entrainement noire) avec le moteur avant de les assembler !** Sinon votre Poppy Ergo Jr aura l'air tout à fait bizarre.
 
 <!-- HTML link to adapt image size -->
 
