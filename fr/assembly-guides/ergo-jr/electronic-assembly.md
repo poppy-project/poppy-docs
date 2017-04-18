@@ -12,10 +12,10 @@ Insérez la carte micro-SD à l’intérieur de la Raspberry Pi : poussez la ca
 
 [La Carte Pixl](https://github.com/poppy-project/pixl) vous permet d'alimenter le Raspberry Pi à partir d'une alimentation 7.5V DC ou avec des piles, et vous permet de communiquer avec les moteurs XL-320.
 
-Plug the pixl at the end of Raspberry Pi headers. ![pixl](img/electronic/pixl-step_1-2.jpg)
+Branchez la Pixl à l'extrêmité des headers du Raspberry Pi. ![pixl](img/electronic/pixl-step_1-2.jpg)
 
-Once the pixl is plugged (**and not before**), you can plug the DC power and the motors wire. ![pixl](img/electronic/pixl-step_3-4-5.jpg)
+Une fois que la pixl est branché (**et pas avant**), vous pouvez brancher l'alimentation et les fils des moteurs. ![pixl](img/electronic/pixl-step_3-4-5.jpg)
 
-> **Caution** **You need to switch off the power supply** of the Pixl board before to put in or to take off the Pixl board of the Raspberry pi. Otherwise, you risk to burn the power converter of the Pixl board.
+> **Attention** **Vous devez absolument éteindre l'alimentation** de la carte d'extension Pixl avant de la connecter ou de déconnecter du Raspberry pi. Sinon, vous risquez de griller le convertisseur de tension de la carte Pixl.
 
-You can now [configure your motors](motor-configuration.md).
+Vous pouvez à présent [configurer vos moteurs](motor-configuration.md).
