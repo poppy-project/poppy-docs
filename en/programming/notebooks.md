@@ -6,16 +6,9 @@ Most of the existing examples of using Poppy robots in Python are given as [Jupy
 
 ![Notebook Example](../img/python/notebook-example.png)
 
-This chapter presents a gallery of notebooks and tries to organize them into different categories:
-
-* Getting started
-* Simulator
-* HTTP API and remote connection
-* Scientific experiments
-* Education
-* Going further (advanced topics)
-
 For each notebook, we provide a short description of what it does, with which robot/simulator it can be used and of course a link. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
+
+This chapter presents a gallery of notebooks and tries to organize them into different categories.
 
 ## Getting started
 

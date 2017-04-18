@@ -1,6 +1,6 @@
 # Install a Poppy board
 
-> **Warning** Warinin : this chapter is only for people who want to create from scratch a Raspberry Pi or Odroid system image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
+> **Warning** Warning: this chapter is only for people who want to create from scratch a Raspberry Pi or an Odroid system image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
 
 To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts.
 
