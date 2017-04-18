@@ -1,6 +1,7 @@
-## Electronic assembly
+# Electronic assembly
 
-#### Insert the micro-SD card in the Raspberry Pi
+#### Insert the microSD card in the Raspberry Pi
+
 Make sure you use a pre-configured micro SD-card. If it not the case, you have to "burn" your micro-SD card with the ergo-jr ISO image, this is described in the [startup section](../../installation/burn-an-image-file.md).
 
 Insert the micro-SD card inside the Raspberry Pi: push the micro-SD in the connector slot until you hear a "click" sound.
@@ -9,7 +10,7 @@ Insert the micro-SD card inside the Raspberry Pi: push the micro-SD in the conne
 #### Assemble the pixl board
 > **Info** The pixl board is available for purchase at [Generation robot](http://www.generationrobots.com/en/402420-carte-pixl.html)
 
-[Pixl bord](https://github.com/poppy-project/pixl) allow to power up the Raspberry Pi from 7.5V DC power or battery and communicate with XL-320 motors.
+[Pixl board](https://github.com/poppy-project/pixl) allow to power up the Raspberry Pi from 7.5V DC power or battery and communicate with XL-320 motors.
 
 Plug the pixl at the end of Raspberry Pi headers.
 ![pixl](img/electronic/pixl-step_1-2.jpg)

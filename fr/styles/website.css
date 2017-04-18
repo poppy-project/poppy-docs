@@ -1,35 +1,33 @@
-@font-face {
-  font-family: 'SofiaPro';
-  src: url('../fonts/sofiapro/SofiaProRegular-webfont.eot');
-  src: url('../fonts/sofiapro/SofiaProRegular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/sofiapro/SofiaProRegular-webfont.woff2') format('woff2'),
-       url('../fonts/sofiapro/SofiaProRegular-webfont.woff') format('woff'),
-       url('../fonts/sofiapro/SofiaProRegular-webfont.ttf') format('truetype'),
-       url('../fonts/sofiapro/SofiaProRegular-webfont.svg#sofia_pro_regularregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SofiaPro';
-  src: url('../fonts/sofiapro/SofiaProBold-webfont.eot');
-  src: url('../fonts/sofiapro/SofiaProBold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/sofiapro/SofiaProBold-webfont.woff2') format('woff2'),
-       url('../fonts/sofiapro/SofiaProBold-webfont.woff') format('woff'),
-       url('../fonts/sofiapro/SofiaProBold-webfont.ttf') format('truetype'),
-       url('../fonts/sofiapro/SofiaProBold-webfont.svg#sofia_probold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
 
 body, .book .book-header, .book .book-summary, .book .book-body {
   font-family: 'SofiaPro', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fefefe; /* white poppy */
 }
 
-/* For better integration of https://github.com/erixtekila/gitbook-plugin-richquotes*/
-a.plugin-anchor span {
-  font-size: 15px !important;
+/* Colors near of "graphical chart" of Poppy Project */
+.markdown-section * {
+  /* black poppy */
+  color: #0a0a0a;
 }
+.markdown-section h1 {
+  color: #73bbba;
+}
+.markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5 {
+ /* bleu foncé logo */
+  color: #27506E;
+}
+.markdown-section a {
+  color:  #326481;
+}
+.markdown-section a:hover {
+  color:  #8a8a8a;
+}
+
+
+/* For better integration of https://github.com/erixtekila/gitbook-plugin-richquotes*/
+/*a.plugin-anchor span {
+  font-size: 15px !important;
+}*/
 
 blockquote.alert {
     padding-left: 0 !important;
@@ -40,21 +38,18 @@ blockquote.alert {
 }
 
 blockquote.alert-info {
-    background-color: #eff5fa;
-    color: #4b85ba !important;
-    border-color: #4b85ba !important;
+    background-color: rgba(104, 175, 176, 0.5) !important;
+    border-color: rgb(104, 175, 176) !important;
 }
 
 blockquote.alert-success {
     background-color: #f3f8ee !important;
-    color: #77ac45 !important;
     border-color: #77ac45 !important;
 }
 
 blockquote.alert-warning {
-    background-color: #fff3e0 !important;
-    color: #d68c23 !important;
-    border-color: #d68c23 !important;
+    background-color: rgba(239, 146, 82, 0.8) !important;
+    border-color: #rgb(239, 146, 82) !important;
 }
 
 blockquote.alert-danger {
@@ -63,7 +58,7 @@ blockquote.alert-danger {
     border-color: #c33 !important;
 }
 
-blockquote.alert > strong {
+/*blockquote.alert > strong {
     width: 60px;
     height: auto;
     margin-right: 0;
@@ -78,16 +73,17 @@ blockquote.alert > p {
 
 blockquote.alert p a {
     text-decoration: underline !important;
-}
+}*/
 
 
 /** Table of contents styling **/
 .page-toc {
   float: none;
   padding: 10px !important;
-  width: 280px;
+  /*width: 280px;*/
   font-size: inherit;
 }
+
 .page-toc ul {
   margin-bottom: 0;
 }
@@ -98,26 +94,48 @@ blockquote.alert p a {
 
 .page-toc ul ul li {
   list-style-type: disc;
-  font-size: smaller;
+  /*font-size: smaller;*/
   padding-top: 2px;
 }
+
 .page-toc::before {
   content: "Dans cette section";
   font-weight: normal;
-  font-size: smaller;
+  /*font-size: smaller;*/
 }
 
-/** Disable ugly font settings in the top header **/
+/** Disable font settings plugin in the top header **/
 .font-settings {
   display: none;
 }
 
 
+/** SUMMARY headings **/
 
-/** Navigation headings **/
+.book-summary{
+  border-right: : 1px solid;
+}
+
 .book-summary ul.summary li.header {
   font-weight: bold;
-  color: #333;
+  color: #27506E;
+}
+
+.book-summary ul.summary li.active > a {
+  color: #326481;
+}
+
+.book-summary ul.summary li a, .book-summary ul.summary li span {
+  color: rgb(110, 109, 108);
+}
+
+.book-summary ul.summary li.chapter {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.book-summary ul.summary li.header{
+  text-transform: none;
 }
 
 li.header:hover{
@@ -128,10 +146,62 @@ li.chapter span:hover{
   text-decoration: underline;
 }
 
-.book-summary ul.summary li.chapter {
-  padding-left: 10px;
-  padding-top: 5px;
-}
 
 .page-wrapper {
   padding-top: 10px;
+}
+
+
+
+.markdown-section blockquote {
+  padding-top: 18px !important;
+  padding-left: 25px !important;
+}
+
+/*.markdown-section code, .markdown-section pre {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace !important;
+}*/
+
+pre.language-{
+  padding:2em;
+  border-radius: 4px;
+  overflow: scroll;
+}
+
+pre{
+  overflow: scroll;
+}
+
+section.normal.markdown-section p, blockquote, ul, ol {
+  max-width: 750px !important;
+}
+
+nav{
+  padding-left: 20px;
+}
+
+
+.markdown-section {
+  padding:0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/** Image styling to center align **/
+img {
+  display: block;
+  margin: auto;
+}
+
+#page-footer img {
+  display: inline;
+  margin: 0;
+}
+
+
+/* Hide GitBook link */
+a.gitbook-link{
+  display:none;
+  color: white;
+  opacity:0;
+}

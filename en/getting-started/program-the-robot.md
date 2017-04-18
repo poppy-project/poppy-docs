@@ -10,13 +10,11 @@ Poppy robots are designed to be easily programmed. They are three main options p
 
 ## Using Snap_!_
 
-<p style="text-align:center">
 <img src="../img/logo/snap.png" alt="Snap! logo" height="200">
-</p>
 
 Snap_!_ is a visual programming language - a variant of the very famous Scratch language. It is a block based drag-and-drop programming language that allows for a thorough introduction of IT. It runs in your browser as it is implemented in JavaScript. You do not need to install anything to start using it. It is open sourced and actively maintained.
 
-![Exemple of Snap project using Poppy](../img/snap/presentation.jpg)
+![Example of Snap project using Poppy](../img/snap/presentation.png)
 
 We developed a set of custom blocks for Poppy robots that let you send motor commands and read values from the sensors of your robot. This let you to directly jump into controlling and programming your without any syntax/compilation issue. Thanks to Snap_!_ live interaction loop you simply have to click on a block to send its associated command to the robot. Snap_!_ also naturally scales to more complex projects.
 
@@ -42,15 +40,13 @@ jr.m3.goal_position = 30
 <!-- Note: "Notebook documents" or “notebooks”, all lower case -->
 We are also big fan of the [Jupyter Project](http://jupyter.org) and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We think that this is a powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.
 
-<p style="text-align:center">
 <img src="../img/logo/jupyter.png" alt="Jupyter Logo" height="150">
-</p>
 
 Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as notebooks.
 
 ![Notebook example](../img/notebook-example.png)
 
-> **Info** An updated gallery of notebooks can be found [here](../programming/notebooks.md). Contribtions welcomed!
+> **Info** An updated gallery of notebooks can be found [here](../programming/notebooks.md). Contributions welcomed!
 
 ## Through the REST API
 
@@ -62,4 +58,4 @@ From a more practical point of view, this allows you to:
 * **Design web apps** connected to your robot, such as the [monitor interface](https://github.com/poppy-project/poppy-monitor) (also a contribution!).
 * Make your **robot interact with other connected devices** such as a smartphone, intelligent sensors, or even your twitter account...
 
-> **Caution** The REST API is still a work in progress, will change and is clearly ill documented! For more information you can have a look [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md) our on the [forum](https://forum.poppy-project.org). A well designed, stable and well documented REST API is expected for the next major software release.
+> **Warning** The REST API is still a work in progress, will change and is clearly ill documented! For more information you can have a look [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md) our on the [forum](https://forum.poppy-project.org). A well designed, stable and well documented REST API is expected for the next major software release.
