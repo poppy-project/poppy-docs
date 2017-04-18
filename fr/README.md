@@ -1,22 +1,28 @@
+![poppy-logo](img/logo/poppy.png)
+
 # Introduction
 
-## À propos
+## About
 
-Bienvenue dans l'espace de documentation de la plateforme robotique open source [Poppy](https://www.poppy-project.org/).
+Welcome to the manual of the [Poppy Project](https://www.poppy-project.org/), an open-source robotic platform.
 
-La documentation est actuellement uniquement disponible en anglais mais est en cours de traduction. Nous vous invitons à la [consulter](http://docs.poppy-project.org/en/index.html) et à nous contacter sur le [forum](https://forum.poppy-project.org/) si vous avez des questions.
+In this documentation, we will try to cover everything from the short overview of what is possible within the project to the details on how you can build a Poppy robot or reproduce one of the pedagogical activity.
 
-Cette documentation est sous licence Creative Commons (BY-SA). Les sources sont disponibles sous [GitHub](https://github.com/poppy-project/poppy-docs) est nous vous invitons à participer à son amélioration continue en [remontant les bugs](https://github.com/poppy-project/poppy-docs/issues) et/ou [en participant](https://github.com/poppy-project/poppy-docs/pulls) à son écriture !
+This book is licensed under the [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). You are free to copy, modify and redistribute this document as long as you give an appropriate credit the the author and point a link to docs.poppy-project.org. The source can be found and modified on [GitHub](https://github.com/poppy-project/poppy-docs).
+
+In the first chapter, we will give you a simple but exhaustive overview of what you can do within this project, so you can quickly focus on the following chapters that cover what you are really interested in. While some advanced chapters may require a good understanding of mechanics, electronics or computer sciences, the [Getting Started](getting-started/README.md) section is intended to be easily accessible by all readers.
 
 ## Version
 
-Dans ce document (version {{ book.poppy_doc_version }}) vous trouverez les documentations pour:
+This is the version {{ book.poppy_doc_version }} of the Poppy documentation, updated at {{ file.mtime }}.
 
--   Poppy Humanoid 1.0.1 hardware
--   Poppy Torso 1.0.1 hardware
--   Poppy ErgoJr beta 6 hardware
--   poppy_humanoid library version 1.1.1
--   poppy_torso library version 1.1.5
--   poppy_ergo_jr library version 1.4.0
--   poppy.creatures library version 1.7.1
--   pypot library version 2.10.0
+It contains the documentation for:
+
+- Poppy Humanoid hardware version 1.0.1
+- Poppy Torso hardware version 1.0.1
+- Poppy ErgoJr hardware version beta 6
+- poppy_humanoid library version 1.1.1
+- poppy_torso library version 1.1.5
+- poppy_ergo_jr library version 1.4.0
+- poppy.creatures library version 1.7.1
+- pypot library version 2.10.0
