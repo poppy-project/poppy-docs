@@ -2,15 +2,15 @@
 
 #### Insérez la carte microSD dans la Raspberry Pi
 
-Assurez-vous que vous utilisez une carte micro SD pré-configurée . If it not the case, you have to "burn" your micro-SD card with the ergo-jr ISO image, this is described in the [startup section](../../installation/burn-an-image-file.md).
+Assurez-vous que vous utilisez une carte micro SD pré-configurée . Si il pas le cas, vous avez à écrire votre carte micro-SD avec l’image ISO d’Ergo Jr, ce qui est décrit dans la [section démarrage](../../installation/burn-an-image-file.md).
 
-Insert the micro-SD card inside the Raspberry Pi: push the micro-SD in the connector slot until you hear a "click" sound. ![Raspberry Pi micro-SD](img/electronic/rpi-sd.jpg)
+Insérez la carte micro-SD à l’intérieur de la Raspberry Pi : poussez la carte micro-SD dans la fente du connecteur jusqu'à entendre un « clic ». ![Raspberry Pi micro-SD](img/electronic/rpi-sd.jpg)
 
-#### Assemble the pixl board
+#### Assemblez la carte d'extension pixl
 
-> **Info** The pixl board is available for purchase at [Generation robot](http://www.generationrobots.com/en/402420-carte-pixl.html)
+> **Info** La carte Pixl peut être acheté sur le site de [Génération Robot.](http://www.generationrobots.com/en/402420-carte-pixl.html)
 
-[Pixl board](https://github.com/poppy-project/pixl) allow to power up the Raspberry Pi from 7.5V DC power or battery and communicate with XL-320 motors.
+[La Carte Pixl](https://github.com/poppy-project/pixl) vous permet d'alimenter le Raspberry Pi à partir d'une alimentation 7.5V DC ou avec des piles, et vous permet de communiquer avec les moteurs XL-320.
 
 Plug the pixl at the end of Raspberry Pi headers. ![pixl](img/electronic/pixl-step_1-2.jpg)
 
