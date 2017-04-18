@@ -1,4 +1,4 @@
-# Zeroconf
+# Zeroconf / Bonjour
 
 [Zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) also called Bonjour (name of Apple implementation) is set of technologies that allow more easily communication between computers without configuration.
 
@@ -6,30 +6,54 @@
 
 ## Installation
 
-* On Windows, you have to install *[Bonjour print services for Windows](https://support.apple.com/kb/DL999)* (yes, it is an Apple software).
-* On GNU/Linux, you have to install *avahi-daemon* (mDNS) and *avahi-autoipd* (IPv4LL), it may or may not be installed by default depending on your installation. Run `sudo apt-get install avahi-daemon avahi-autoipd` on Debian/Ubuntu or `sudo yum install avahi-daemon avahi-autoipd` on Fedora.
-* On Mac OSX it works out of the box.
+### Windows
+
+You have to install **[Bonjour print services for Windows](https://support.apple.com/kb/DL999)** (yes, it is an Apple software).
+
+If you already have installed an Apple Software like iTunes or QuickTime, Bonjour should be installed.
+
+> **Warning** Times to times, even if Bonjour is already installed on your computer you can't connect directly to your Ergo Jr. To solve the issue, un-install and re-install Bonjour.
+
+### On GNU/Linux based operating systems
+
+On GNU/Linux, you have to install *avahi-daemon* (mDNS) and *avahi-autoipd* (IPv4LL), it may or may not be installed by default depending on your installation.
+
+On Ubuntu/Debian, run
+
+```bash
+sudo apt-get install avahi-daemon avahi-autoipd
+```
+
+On Fedora / CentOS, run
+
+```bash
+sudo yum install avahi-daemon avahi-autoipd
+```
+
+### Mac OSX
+
+Bonjour is already installed with OSX. Moreover, if you plan to connect your computer directly to the robot (without a router), use a Thunderbolt to Ethernet adapter rather than a USB to Ethernet
 
 You ready to follow your [installation path](README.md).
 
 ## What Zeroconf does for you
 
-### Local domain name
+### Local domain name (mDNS)
 
-Zeroconf client *publishes* a decentralised local domain name (mDNS) with the '.local' top level domain. It means that you can join any local local computer by its hostname with the '.local' suffix instead of its IP address.
+Zeroconf client *publishes* a decentralized local domain name (mDNS) with the '.local' top level domain. It means that you can join any local local computer by its hostname with the '.local' suffix instead of its IP address.
 
-With a zeroconf client, to ```ping``` a computer called (hostname) 'goldstine', you can simply do:
+With a zeroconf client, to ```ping``` a computer called (hostname) 'ergojr', you can simply do:
 
-    $ ping goldstine.local
+    $ ping ergojr.local
     64 bytes from 192.168.1.42: icmp_seq=0 ttl=54 time=3.14 ms
     [...]
     
 
 You no longer need to look for its IP address on your local network; you don't even need to understand what an IP address is.
 
-It also work on your web browser. To open the website hosted on the robot computer called 'goldstine', you have to open: http://goldstine.local on your favorite web browser URL field.
+It also work on your web browser. To open the website hosted on the robot computer called 'ergojr', you have to open: http://ergojr.local on your favorite web browser URL field.
 
-### Link-local IPv4 addresses
+### Link-local IPv4 addresses (IPv4LL)
 
 Among other Zeroconf tools, there is an implementation of decentralized DHCP ([IPv4LL](https://en.wikipedia.org/wiki/Zero-configuration_networking#Link-local_IPv4_addresses)), which allow computers obtain an IP and connect each others **without** a DHCP server.
 
@@ -48,8 +72,3 @@ If you cannot (or doesn't want to) install a zeroconf client on your personal co
 * You can also go to your router web interface (with its IP address on your web browser like http://192.168.0.1 or http://192.168.1.1 or http://192.168.0.254 or http://192.168.1.254), you should have a section of connected hosts.
 
 <!-- TODO: talk about poppy-discover -->
-
-<!-- 
-## How zeroconf works (only for computer science culture)
-> **Caution** This paragraph is not currently written. Your help is welcome to fulfill it !
--->
