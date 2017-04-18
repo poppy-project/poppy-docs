@@ -1,7 +1,7 @@
 
-## Mechanical Assembly
+# Mechanical Assembly
 
-### General advices and warnings
+## General advices and warnings
 
 <!-- TODO:
 * picture rivet black vs grey
@@ -14,11 +14,13 @@
 
 * There are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis, at the opposite side of the horn.
 
-![OLLO Rivet size](img/assembly/ollo_rivets_size.jpg)
+<!-- HTML link to adapt image size -->
+<img src="img/assembly/ollo_rivets_size.jpg" alt="OLLO Rivet size" height="200">
 
 * Use the OLLO Tool for putting and removing rivets easily.
 
-![OLLO Tool](img/assembly/ollo-tool.jpg)
+<!-- HTML link to adapt image size -->
+<img src="img/assembly/ollo-tool.jpg" alt="OLLO Tool" height="200">
 
 
 * Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favourite side).
@@ -26,7 +28,9 @@
 
 * **Always align the horn with the motor before assembling them!** Otherwise your Poppy Ergo Jr will look all weird.
 
-![Align Horn](img/assembly/align-horn.png)
+<!-- HTML link to adapt image size -->
+<img src="img/assembly/align-horn.png" alt="Align Horn" height="200">
+
 
 * Every motor horns (black revolving circle) are **facing the left side of the robot**. It is a convention but it will define the orientation of your motors.
 
@@ -60,7 +64,7 @@ To do so, prepare 8 small rivets. put the first part in the second part without 
 Use the Ollo to grab a rivet between the first and the second part, then put the rivet in one the assembly holes. Once the rivet is in place, lock it by pushing the part 1 of the rivet in part 2.
 
 
-###Step 2
+### Step 2
 Configure the second motor, its name is "m2", with the following command in a poppy terminal:
 ```bash
 poppy-configure ergo-jr m2
@@ -122,7 +126,7 @@ Mount *gripper-fixed_part* and *gripper-rotative_part* on motor "m6".
 
 ### Step 7 - electronics
 Mount the support_camera part on the base. Fix the Raspberry Pi camera on it and move the camera flex cable between motor "m1" and the base.
-![step 6](img/assembly/steps/step_21-22.jpg)
+![step 7](img/assembly/steps/step_21-22.jpg)
 
 To fix the flex cable of the camera on the Raspberry Pi:
 * open the camera connector by pulling on the tab
@@ -137,7 +141,7 @@ If it is not already done, you can plug every motors wires. Every motor has two 
 <!-- TODO picture of OLLO + base rivets -->
 > **Info** Connectors of the motor "m1" (in the base) are a bit hard to link, you can use the OLLO tool to help yourself.
 
-![step 6](img/assembly/steps/step_24.jpg)
+![step 7 bis](img/assembly/steps/step_24.jpg)
 
 ### Step 8 - fix you ergo-jr to wood disk support
 Mount you ergo-jr to the wood *disk-support*.
@@ -149,4 +153,4 @@ Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it
 
 ![image](img/assembly/ergo-tool-2.jpg)
 
-Grab your [favorite drink](https://www.flickr.com/photos/poppy-project/16488256337/) and relax.
+Grab your [favourite drink](https://www.flickr.com/photos/poppy-project/16488256337/) and relax.
