@@ -6,7 +6,7 @@
 It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. They all share a vision: robots are powerful tools to learn and be creative, and they collaborate to improve the project.
 They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve software or even create new robots.
 
-The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and deploy.
+The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and use.
 We promote open-source by sharing hardware ans software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
 
 To ease these exchanges two supports are available:
