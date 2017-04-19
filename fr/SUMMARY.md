@@ -33,7 +33,7 @@
     * [Robots APIs](programming/rest.md)
     * [Activities](demo-activities/README.md)
     * [Link with Snap4Arduino](demo-activities/snap4arduino.md)
-* [From simulation to real robot](from-simulation-to-real-robot/README.md) 
+* [De la simulation au robot tangible](from-simulation-to-real-robot/README.md) 
     * [Program with Jupyter notebooks on the real robot](from-simulation-to-real-robot/using-jupyter.md)
     * [Snap! on the real robot](from-simulation-to-real-robot/using-snap.md)
 * [Software libraries documentation](software-libraries/README.md) 
