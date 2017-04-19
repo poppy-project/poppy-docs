@@ -7,7 +7,8 @@ It gathers an interdisciplinary community of beginners and experts, scientists, 
 They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve software or even create new robots.
 
 The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and use.
-We promote open-source by sharing hardware ans software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
+
+We promote open-source by sharing hardware and software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
 
 To ease these exchanges two supports are available:
 
