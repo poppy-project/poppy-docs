@@ -2,9 +2,9 @@
 
 # Documentation du projet Poppy
 
-## Welcome
+## Bienvenue
 
-Welcome to the manual of the [Poppy Project](https://www.poppy-project.org/), an open-source robotic platform.
+Bienvenue dans la documentation du [Projet Poppy](https://www.poppy-project.org/), une plate-forme de robotique open-source.
 
 In this documentation, we will try to cover everything from the short overview of what is possible within the project to the details on how you can build a Poppy robot or reproduce one of the pedagogical activity.
 
