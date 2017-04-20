@@ -9,7 +9,7 @@
 
 * Vous pouvez assembler quelques rivets avant la construction. Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
 
-![OLLO Rivet Assembly](img/assembly/ollo_rivet.png)
+![Assemblage des rivets OLLO](img/assembly/ollo_rivet.png)
 
 * Il y a deux types de rivets : les gris et les autres. Les rivets gris sont plus longs afin de pouvoir les insérer à travers l'axe du moteur, par le côté opposé aux palonniers d'assemblage.
 
