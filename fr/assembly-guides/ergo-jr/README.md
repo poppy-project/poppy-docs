@@ -2,7 +2,7 @@
 
 ![Outil d'Ergo Jr](img/ErgoJr.jpg)
 
-The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm. It consists of very simple shapes which can be easily 3D printed. They are assembled via OLLO rivets which can be removed and added very quickly with the OLLO tool.
+The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm. Il se compose de formes très simples qui peuvent être facilement imprimés en 3D. They are assembled via OLLO rivets which can be removed and added very quickly with the OLLO tool.
 
 Its end effector can be easily changed. You can choose among several tools: * a lampshade, * a gripper, * or a pen holder.
 
