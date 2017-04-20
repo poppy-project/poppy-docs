@@ -8,7 +8,7 @@ Poppy project is vast, there are a lot of installation paths depending on what y
 
 Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or an Odroid board. The operating system of this computer is hosted on a SD card (you can also use an MMC for the Odroid).
 
-You have two possible states: - You already have a pre-writed SD card with the Poppy operating system (provided by Generation Robots). You have nothing to install, you are ready to go to the [assembly section](../assembly-guides/README.md). This is the most common case. - You have an empty SD-card, **so you have to [download](burn-an-image-file.md#download-the-image) and [write](burn-an-image-file.md#write-an-image-to-the-sd-card) the operating system on the SD card.**
+You have two possible states: - **You already have a pre-burned SD card with the Poppy operating system (provided by Generation Robots). You have nothing to install, you are ready to go to the [assembly section](../assembly-guides/README.md).** This is the most common case. - You have an empty SD-card, so you have to [download](burn-an-image-file.md#download-the-image) and [write](burn-an-image-file.md#write-an-image-to-the-sd-card) the operating system on the SD card.
 
 If you are a Linux rocky and want to try yourself our unstable install scripts, you can go the [*install a poppy board*](install-a-poppy-board.md) chapter.
 
