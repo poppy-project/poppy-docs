@@ -63,7 +63,7 @@ Configure the second motor, its name is "m2", with the following command in a po
 poppy-configure ergo-jr m2
 ```
 
-Mount the *long_U* part. Be careful wih the orientation of the U, the horn must be oriented in the left. Mount the motor "m2" on top of the construction.
+Mount the *long_U* part. Be careful with the orientation of the U, the horn must be oriented in the left. Mount the motor "m2" on top of the construction.
 
 ![step 2](img/assembly/steps/step_3-4.jpg)
 
@@ -127,9 +127,9 @@ If it is not already done, you can plug every motors wires. Every motor has two 
 
 ![step 7 bis](img/assembly/steps/step_24.jpg)
 
-### Step 8 - fix you ergo-jr to wood disk support
+### Step 8 - fix you Ergo Jr to wood disk support
 
-Mount you ergo-jr to the wood *disk-support*.
+Mount your Ergo Jr to the wood *disk-support*.
 
 Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it. <!-- TODO: picture of disk fixation -->
 
