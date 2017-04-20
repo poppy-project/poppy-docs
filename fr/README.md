@@ -1,6 +1,6 @@
 ![poppy-logo](img/logo/poppy.png)
 
-# Poppy project documentation
+# Documentation du projet Poppy
 
 ## Welcome
 
