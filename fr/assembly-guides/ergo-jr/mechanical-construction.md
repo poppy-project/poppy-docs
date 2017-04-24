@@ -31,17 +31,17 @@
 
 <img src="img/assembly/align-horn.png" alt="Align Horn" height="200" />
 
-* Toutes les palonniers moteur (la roue d'entrainement noire) doivent être alignées **sur le côté gauche du robot**. C'est juste une convention mais elle définira l'orientation de vos moteurs.
+* Tous les palonniers des moteurs (la roue d'entrainement noire) doivent être alignés **sur le côté gauche du robot**. C'est juste une convention mais elle définira l'orientation de vos moteurs.
 
 ![Horns on left side](img/assembly/horns_on_left.jpg)
 
 ## Step-By-Step guide
 
-### Configuration des moteur (pour toutes les étapes)
+### Configuration des moteurs (pour toutes les étapes)
 
-Vous pouvez configurer vos moteurs avant, pendant ou après le l’assemblage mécanique, mais il est vivement conseillé de configurer chaque moteur un par un dans l’ordre de construction : * configurer le moteur m1 * assembler la base et le moteur m1 * configurer le moteur m2 * etc
+Vous pouvez configurer vos moteurs avant, pendant ou après l’assemblage mécanique, mais il est vivement conseillé de configurer chaque moteur un par un dans l’ordre de construction : * configurer le moteur m1 * assembler la base et le moteur m1 * configurer le moteur m2 * ...
 
-> **Attention** Pour configurer les moteurs, vous devez connecter séparément un par un à la Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu'il est connecté avec le moteur précédent, cela ne fonctionnera pas.
+> **Attention** Pour configurer les moteurs, vous devez les connecter séparément un par un à la Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu'il est connecté avec le moteur précédent, cela ne fonctionnera pas.
 
 Pour plus d’informations, consultez la [section configuration de moteur](motor-configuration.md).
 
