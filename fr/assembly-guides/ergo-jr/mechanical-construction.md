@@ -97,7 +97,7 @@ To finish your Ergo Jr, you need to add a tool at its end. So first choose the t
 
 > **Note** Tools they can be easily and quickly changed, so you can adapt it to the different activities.
 
-#### L'abat jour ou le stylo
+#### L'abat-jour ou le stylo
 
 Mount *horn2horn* and *horn2side* parts on motor "m5", and mount "m6" on top of the construction. ![step 6](img/assembly/steps/step_14-16-17.jpg)
 
