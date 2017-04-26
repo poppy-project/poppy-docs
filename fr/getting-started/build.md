@@ -1,4 +1,4 @@
-# Build the robot
+# Construire le robot
 
 ![Poppy Assembly](../img/assembly_pretty.jpg)
 
