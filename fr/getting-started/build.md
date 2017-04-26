@@ -1,18 +1,18 @@
-# Construire le robot
+# Assembler le robot
 
-![Poppy Assembly](../img/assembly_pretty.jpg)
+![Assemblage robot Poppy](../img/assembly_pretty.jpg)
 
-Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should take about one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
+Le temps d'assemblage, les compétences requises, les outils et la difficulté varient selon selon les robots Poppy que vous voulez utilisez. Alors que construire un Ergo Jr devrait vous prendre environ une heure et cela sans outil spécifique, assembler un Humanoid peut vous prendre plusieurs jours et un sacré nombre de vis !
 
-This section intends to give you hints and a glimpse of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
+Cette section permet de vous donner des astuces et quelques détails nécessaires avant de s'immerger dans l'assemblage du robot. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
 
-## Assembling an Ergo Jr
+## Assembler un Ergo Jr
 
 > **Note** You can find a full assembly documentation in the chapter [step by step assembly of an Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
 <!-- TODO: refaire une belle photo avec la vraie BOM -->
 
-![ergo-jr assembly](../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
+![assemblage ergo-jr](../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
 
 The Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each.
 
