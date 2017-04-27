@@ -30,7 +30,7 @@ Also make sure, to [**configure your motors**](../assembly-guides/ergo-jr/motor-
 
 ## Assembling a Torso or a Humanoid
 
-> **Note** You can find a full assembly documentation in the chapter [step by step assembly of a Poppy Humanoid](../assembly-guides/poppy-humanoid/README.md).
+> **Note** Vous pouvez trouver la documentation complète de l’assemblage dans le chapitre [montage pas-à-pas du robot Humanoid](../assembly-guides/poppy-humanoid/README.md).
 
 ![Poppy Humanoid BOM](../img/humanoid/bom.jpg)
 
