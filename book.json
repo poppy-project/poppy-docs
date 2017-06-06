@@ -1,8 +1,8 @@
 {
     "title": "Documentation of the Poppy Platform",
     "structure": {
-      "readme": "README.md",
-      "summary": "SUMMARY.md"
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
     },
     "plugins": [
         "-share",
@@ -16,6 +16,7 @@
         "youtube",
         "github",
         "ga",
+        "piwik",
         "anchorjs",
         "language-picker",
         "download-pdf-link",
@@ -31,8 +32,8 @@
             "showLevel": true
         },
         "page-toc": {
-          "position":"before-first",
-          "selector":".markdown-section h2, .markdown-section h3"
+            "position":"before-first",
+            "selector":".markdown-section h2, .markdown-section h3"
         },
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
@@ -41,14 +42,18 @@
             "hostname": "https://docs.poppy-project.org/"
         },
         "edit-link": {
-                "base": "https://github.com/poppy-project/poppy-docs/edit/master/",
-                "label": {
-                    "en": "Edit this page",
-                    "fr": "Editez cette page"
-                }
+            "base": "https://github.com/poppy-project/poppy-docs/edit/master/",
+            "label": {
+                "en": "Edit this page",
+                "fr": "Editez cette page"
+            }
         },
         "ga": {
             "token": "UA-44384879-5"
+        },
+        "piwik": {
+            "URL": "piwik.inria.fr/",
+            "siteId": 66
         },
         "sharing": {
             "facebook": false,
@@ -57,14 +62,14 @@
                 "twitter", "facebook", "google"
             ]
         },
-          "download-pdf-link": {
+        "download-pdf-link": {
             "base": "https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs",
             "label": {
                 "en": "Download PDF",
                 "fr": "Télécharger en PDF"
             },
             "multilingual": true
-          }
+        }
     },
     "variables": {
         "poppy_doc_version": "1.0",
