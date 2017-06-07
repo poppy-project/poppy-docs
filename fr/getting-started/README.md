@@ -1,116 +1,107 @@
-# Démarrer
+# Getting Started
 
-![](../../en/img/logo/poppy.png)
+![Poppy Logo](../img/logo/poppy.png)
 
-Le [Projet Poppy](https://www.poppy-project.org/) est un projet sous licence libre pour la création, l'utilisation et le partage de robots interactifs réalisés par impression 3D. Il rassemble une communauté inter-disciplinaire de débutants et d'experts, de scientifiques, d'enseignants, développeurs et artistes. Ils partagent une vision: les robots sont de puissants outils d'apprentissage, de création et de collaboration afin d'améliorer le projet. Ils developpent de nouveaux comportements robotiques, créent des contenus pédagogiques, conçoivent des performances artistiques, améliorent le logiciel ou même créent de nouveaux robots.
+[Poppy Project](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. They all share a vision: robots are powerful tools to learn and be creative and collaborate to improve the project. They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve the software or even create new robots.
 
-La [Communauté Poppy](https://forum.poppy-project.org/) développe des créations robotiques faciles à construire, à personnaliser et à déployer. Nous promouvons  les licences libres en partageant la matériel et le logiciel. Une plateforme Web associée permet à la communauté de partager ses expériences et de contribuer à son amélioration.
+The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and deploy. We promote open-source by sharing hardware, software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
 
-Pour faciliter ces échanges, deux supports sont disponibles :
+To ease these exchanges two supports are available:
 
-* [Le forum poppy-project](https://forum.poppy-project.org/) pour obtenir de l'aide, discuter et échanger des idées.
+* [The poppy-project forum](https://forum.poppy-project.org/) for help, discussions and sharing ideas.
+* [GitHub](https://github.com/poppy-project) to submit your contributions.
 
-* [GitHub](https://github.com/poppy-project) pour soumettre vos contributions.
+All sources of the Poppy Project (software and hardware) are available on [GitHub](https://github.com/poppy-project).
 
+The Poppy project has been originally designed at [Inria Flowers](http://www.inria.fr/equipes/flowers/).
 
-Toutes les sources du projet Poppy \(logicielles et matérielles\) sont disponibles sur [GitHub](https://github.com/poppy-project).
+## The Poppy creatures
 
-Le projet Poppy a initialement été conçu au laboratoire [Inria Flowers](http://www.inria.fr/equipes/flowers/).
+Poppy creatures are open-source robots, available for download and modification ([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) for the hardware and [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) for the software). They were designed with the same principles in mind.
 
-## Les créatures Poppy
+All Poppy creatures:
 
-Les créatures Poppy sont des robots sous licence libre, disponibles au téléchargement et pour être modifiés \([Licence Creative Commons avec attribution](http://creativecommons.org/licenses/by-sa/4.0/) pour le matériel et la licence [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) pour le logiciel\). Elles ont été conçues avec ces mêmes principes directeurs.
+* are made from pieces of printable 3D and Dynamixel motors,
+* use an embedded board for control (a Raspberry Pi 2 or Odroid for older versions),
+* are based on a Python library, [pypot](../software-libraries/pypot.md), allowing to control Dynamixel servomotors in an easy way,
+* have a simulated version available (based on [V-REP](http://www.coppeliarobotics.com)),
+* can be controlled using a visual programming language ([Snap!](http://snap.berkeley.edu) a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language,
+* come with associated documentation, tutorials, examples, pedagogical activities.
 
-Toutes les créatures Poppy:
+They can be used as it is, or hacked to explore new shapes, add sensors, etc...
 
-* sont faites à partir de pièces imprimables en 3D et de moteurs Dynamixel,
-* utilisent une carte d'extension pour le contrôle \(un Raspberry Pi 2 ou Odroid pour les versions plus anciennes\),
-* sont basées sur une bibliothèque Python, [pypot](../software-libraries/pypot.md), qui permet le contrôle des servomoteurs Dynamixel de manière simplifiée,
-* ont une version de simulation disponible \(basée sur [V-REP](http://www.coppeliarobotics.com)\),
-* peuvent être controlées en utilisant un langage de programmation visuel \([Snap!](http://snap.berkeley.edu) une variation de Scratch\) et un langage textuel [Python](https://www.python.org). Elles sont aussi programmables par l'intermédiaire d'une API REST, ce qui permet de les contrôler à partir d'autre langages de programmation,
-* viennent avec la documentation associée, des tutoriels, exemples et activités pédagogiques.
-
-Elles peuvent être utilisées telles quelles, ou modifiées pour explorer de nouvelles formes, l'ajout de capteurs, etc...
-
-Pour obtenir votre propre robot Poppy, vous pouvez soit :
-
-* Vous procurer toutes les pièces vous-même en suivant la liste ci-dessous.
-* Acheter un kit de robotique Poppy complet auprès de notre [détaillant officiel](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
+To get your own Poppy robot, you can either: * Get all the parts yourself by following the bill of materials (see below). * Buy a full Poppy robotic kit from our [official retailer](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
 
 ### Poppy Ergo Jr
 
-Le robot Poppy Ergo Jr est un petit bras robotique à cout modéré qui possède six degré de mouvements. Il est fait de 6 moteurs au prix abordable \(des servos XL-320 Dynamixel\) ainsi que de parties simples et imprimables en 3D.
+The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with simple 3D-printed parts.
 
-![Le Poppy Ergo Jr](../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
+![Poppy Ergo Jr](../assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
-Les pièces 3D ont été conçues pour être aisément imprimée sur un imprimante 3D courante. Les moteurs coûtent environ 20€ chacun. La carte électronique de contrôle est simple. Cela facilite la connexion de capteurs supplémentaires et est donc adapté à des objectifs pédagogiques.
+The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20€ each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.
 
-Vous pouvez choisir parmi les trois outils pour équiper l'extrêmité de son bras :
+You can choose among three tools at the end of its arm:
 
-* Une lampe.
+* A lamp.
+* A gripper.
+* A pen holder.
 
-* Une pince.
+The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.
 
-* Un porte-stylo.
+![Ergo Jr tools](../assembly-guides/ergo-jr/img/ergo_tools.gif)
 
+The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.
 
-Les rivets employés rendent le montage et démontage des outils simples. Vous pouvez les adapter en fonction de l'activité choisie.
+You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) (BOM) and print the [3D parts](https://github.com/poppy-project/poppy-ergo-jr/releases/) available in the STL format.
 
-![Les outils Poppy Ergo Jr](/en/assembly-guides/ergo-jr/img/ergo_tools.gif)
+For more information, check the [assembly guide of the Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
-Le Ergo Poppy Jr est idéal pour débuter à manipuler des robots et apprendre la robotique sans difficultés. Il est simple à assembler, contrôler et d'un coût réduit.
+### Poppy Humanoid
 
-Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) \(LDM\) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-ergo-jr/releases/) disponibles au format STL.
+It is a 25-degrees of freedom humanoid robot with a fully actuated vertebral column. It is used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.
 
-Pour plus d'informations, vérifiez le [guide d'assemblage de l'Ergo Jr](../assembly-guides/ergo-jr/README.md).
+You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) (BOM) and print the [3D parts](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) available as STL, STEP and Solidworks 2014 format.
 
-### L'Humanoïde Poppy
+![Poppy Humanoid Vecto](../img/humanoid/vecto.png)
 
-Il s'agit d'un robot humanoïde à 25 degrés de liberté possédant une colonne vertébrale complètement motorisée. Il est utilisé pour l'éducation, la recherche \(marche, interactions entre humains et robots\) ou les arts \(danses, performances\). Du simple bras à l'humanoïde complet, cette plateforme est activement utilisée dans les laboratoires, les écoles d'ingénieur, les FabLabs, et les projets artistiques.
+### Poppy Torso
 
-Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) \(LDM\) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) disponibles au formats STL, STEP et Solidworks 2014.
+It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
 
-![L'Humanoïde Poppy](/en/img/humanoid/vecto.png)
+You can get all the parts yourself following the [bill of material](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). The [3D models](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) for the parts are the same as Poppy Humanoid, without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/).
 
-### Le Torse Poppy
+![Poppy Torso Vecto](../img/torso/vecto.png)
 
-Il s'agit de la partie supérieure de l'Humanoïde Poppy \(13 degrés de liberté\). Le Torse Poppy est donc plus abordable que l'Humanoïde Poppy complet. Cela en fait une solution plus appropriée aux contextes éducatifs et associatifs. Le Torse Poppy peut être un bon média pour apprendre la science, la technologie, l'ingénieurie et les mathématiques \(STEM\).
+### Other interesting Poppy Creatures
 
-Vous pouvez obtenir les pièces vous-mêmes en suivant la [liste des matériaux](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). Les [modèles 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) pour les pièces sont identiques à celles de l'Humanoïde Poppy, sans les jambes et avec un [support à ventouse supplémentaire](https://github.com/poppy-project/robot-support-toolbox/).
+A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.
 
-![Poppy Torso Vecto](../../en/img/torso/vecto.png)
+#### Poppy right arm (work in progress)
 
-###  Autres Créatures Poppy
+Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.
 
-Un aspect clef du projet Poppy est de stimuler la créativité et l'expérimentation autour de la robotique. Nous essayons de fournir tous les outils requis pour la conception de nouveaux robots basés sur les mêmes briques technologiques. Plusieurs créatures sont en cours de développement au sein de la communauté. Certaines d'entre elles vous sont présentées ci-dessous.
+![Poppy Right Arm](../img/poppy-right-arm.jpg)
 
-#### Le Bras Droit Poppy \(en construction\)
+The project was realized during an internship at Inria Flowers by [Joel Ortiz Sosa](https://github.com/joelortizsosa). Find more info and the sources in the [repository](https://github.com/poppy-project/poppy-6dof-right-arm).
 
-Le Bras Droit Poppy est une créature basée sur le bras droit de l'Humanoïde Poppy, avec 3 moteurs XL-320 additionnels à son extrémité afin d'améliorer la portée et l'agilité du bras. Il utilise le même outil pince employé par l'Ergo Jr, conçu pour saisir des objets simples.
-
-![Le Bras Droit Poppy](../../en/img/poppy-right-arm.jpg)
-
-Le projet a été réalisé pendant le stage de [Joel Ortiz Sosa](https://github.com/joelortizsosa) au laboratoire Inria Flowers. Plus d'informations et les fichiers sources sont disponibles dans le [dépot Github correspondant](https://github.com/poppy-project/poppy-6dof-right-arm).
-
-#### Humanoïdes plus petits et abordables
+#### Small and low-cost humanoids
 
 ##### Heol
 
-Heol - qui signifie "soleil" en Breton - est un humanoïde de 34cm de hauteur produit par l'association [Heol robotique](http://heol.io/). Il est composé de 23 moteurs, toutes les autres pièces sont imprimées en 3D. Il dépend aussi de la bibliothèque Pypot pour ses mouvements.
+Heol - meaning "sun" in Breton - is a 34cm tall humanoid robot made by the association [Heol robotics](http://heol.io/). 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.
 
-Le but d'Heol est de faire naître un sourire sur le visage des enfants. Il peut être un outil éducatif en devenant un support d'apprentissage de la programmation et de la conception mécanique.
+Heol's purpose is to put a smile on ill children's faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.
 
-Sa participation à la RoboCup \(Tournoi international de football pour robots\) est aussi envisagée.
+Its participation in the RoboCup (World Cup football for robot) is also envisaged.
 
-![Heol](../../en/img/heol.jpg)
+![Heol](../img/heol.jpg)
 
 ##### [Poppyrate](http://www.poppyrate.com/)
 
-Il s'agit d'un robot basé sur l'Humanoïde Poppy. Il vise le développement d'une version moins chère grâce à sa taille réduite et l'usage de moteurs moins chers. La réduction de taille le rend aussi plus facile à imprimer sur une imprimante 3D courante. D'autres buts sont de le rendre aussi mobile et personnalisable que possible tant en conservant la compatibilité avec le logiciel Poppy. 
+It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.
 
-Poppyrate peut être vendu en kit \(avec ou sans les parties 3D imprimées\). Il a été conçu par la société ZeCloud.
+Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud.
 
-![Poppyrate](../../en/img/poppyrate.jpg)
+![Poppyrate](../img/poppyrate.jpg)
 
-Pour plus d'informations, consultez le [site Web](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!
-
+For more information, check their [Website](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!

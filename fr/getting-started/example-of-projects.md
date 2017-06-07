@@ -1,59 +1,44 @@
-## Aperçu des projets développés par la communauté
+# Overview of projects developed by the community
 
-La communauté Poppy rassemble une communauté interdisciplinaire de débutants et d'experts, de scientifiques, d'éducateurs, de développeurs et d'artistes. De nombreuses créations robotiques ont émergées. En voici quelques-unes illustrées ci-dessous.
+The Poppy community gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. Various and interdisciplinary robotic creations have emerged. Some of them are illustrated below.
 
-### School of Moon
+## School of Moon
 
-La pièce [School of moon](http://shonen.info/schoolofmoon/) a été créée par la troupe de danse contemporaine [Shonen](http://shonen.info) conduite par le choréographe Eric Minh Cuong Castaing.
+The [School of moon](http://shonen.info/schoolofmoon/) play has been created by the contemporary dance company [Shonen](http://shonen.info) lead by the choregrapher Eric Minh Cuong Castaing.
 
-La scène est partagée avec des enfants, deux danseurs (Gaëtan Brun Picard and Ana Pi), 3 Robots Nao et deux robots Humanoïdes Poppy. Cette pièce est une métaphore de la création d'une post-humanité en trois actes: l'Homme, l'Homme et la Machine, et la Machine.
+The stage is shared by children, two dancers (Gaëtan Brun Picard and Ana Pi), 3 Nao robots and two Poppy Humanoid robots. This play is a metaphor of the creation of a post-humanity in three acts: the Man, the Man and the machine, and the machine. <iframe src="https://player.vimeo.com/video/149653064" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen mark="crwd-mark"></iframe> 
 
-<iframe src="https://player.vimeo.com/video/149653064" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+The representations are localized, meaning that the children dancing come from the local town. They also are specific sequences depending on the robots existing in the city.
 
-Les représentations sont adaptées à l'endroit où elles se tiennent, les enfants participants à la danse appartiennent à la communauté locale. Il y a aussi des séquences spécifiques suivant les robots disponibles dans la ville.
+The artistic challenges are: - Directing children on stage - Having interaction between humans and robots on stage - Having robots on stage
 
-Les défis artistiques sont:
+The creation was focused on 4 time periods: - 2 weeks of residence in September 2015 in CDC of Toulouse (France) - 2 weeks of residence in KLAP of Marseille (France) in December 2015 - 4 weeks of residence in *Ballet National de Marseille* (France) in January 2016 - 2 weeks of residence in Düsseldorf (Germany)
 
-- de diriger des enfants sur scène
-- d'avoir des interactions entre humains et robots sur scène
-- d'avoir des robots sur scène.
+## Cherry Project
 
-La création s'est tenue sur quatre périodes de temps:
-- 2 semaines en résidence au CDC de Toulouse (France) en Septembre 2015
-- 2 semaines en résidence au KLAP de Marseille (France) en Décembre 2015
-- 4 semaines en résidence au *Ballet National de Marseille* (France) en Janvier 2016
-- 2 semaines en résidence à Düsseldorf (Germany)
+![](https://forum.poppy-project.org/uploads/default/original/2X/3/33984972217cd45f473246b130f0001df33ffcfc.png) The Cherry project is a community project to develop scenarios regarding breaking isolation of children at the hospital.
 
-### Le Projet Cherry
+This project uses Poppy robot as a companion for hospitalized children in primary school. Cherry can compensate a social rupture during hospitalization. It mediates between the child, his friends, his family and teachers and can talk to him or play some games.
 
-![](https://forum.poppy-project.org/uploads/default/original/2X/3/33984972217cd45f473246b130f0001df33ffcfc.png)
-Le projet Cherry est un projet communautaire pour déveloper des scénarios afin de réduire l'isolation des enfants à l'hôpital.
+It also acts on a pedagogical level, to encourage the child to interact with the school, by offering quizzes and educational games.
 
-Ce projet utilise le robot Poppy comme compagnon pour les enfants hospitalisés. Cherry peut compenser la rupture sociale durant l'hospitablisation. Il agit comme médiateur entre l'enfant, ses amis, sa famille et les enseignants, et peut lui parler ou jouer avec lui.
+One last prospect is to assist the hospital staff in the therapeutic education. Indeed, sometimes a message is more acceptable by the child if it is issued by the robot rather than an adult dressed as a physician.
 
-Il agit aussi au niveau pédagogique, en encourageant l'enfant à interagir avec l'école, en offrant des quizz et des jeux éducatifs.
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/URB1kDDScfM" frameborder="0" allowfullscreen></iframe>
+</div>
 
-Enfin, un dernier aspect est d'assister le personnel médical dans l'éducation thérapeutique. En effet, un message est parfois plus acceptable pour l'enfant s'il est délivré par un robot, plutôt que par un adulte habillé comme un médecin.
- 
- <div style="text-align: center;">
- <iframe width="560" height="315" src="https://www.youtube.com/embed/URB1kDDScfM" frameborder="0" allowfullscreen></iframe>
- </div>
- 
-Plus d'information:
+More information:
 
-* La page [facebook](https://www.facebook.com/projetcherry/?ref=ts&fref=ts)
-* Le flux [twitter](https://twitter.com/projetcherry)
-* Le blog [wordpress](https://projetcherry.wordpress.com/)
-* Le dépôt [github](https://github.com/Cherry-project) (avec un [wiki](https://github.com/Cherry-project/cherry-software/wiki))
+* The [facebook](https://www.facebook.com/projetcherry/?ref=ts&fref=ts) page
+* The [twitter](https://twitter.com/projetcherry)
+* The [wordpress](https://projetcherry.wordpress.com/)
+* The [github](https://github.com/Cherry-project) (with a short [wiki](https://github.com/Cherry-project/cherry-software/wiki))
 
-### Connecter Poppy et Arduino grâce à Snap4Arduino
+## Connect Poppy and Arduino thanks to Snap4Arduino
 
-[Gilles](https://forum.poppy-project.org/users/gilles_lassus/), enseignant et "maker" à ses heures perdues, a développé de nombreux projets basés sur le Poppy Ergo Jr et Arduino. Pour connecter les deux mondes, il utilise [Snap4arduino](http://s4a.cat/snap/). Alors, il devient très aisé et élégant de les faire communiquer. Vous pouvez combiner Arduino avec des blocs Poppy et voilà !! Vous pouvez contrôler votre robot avec n'importe quel capteur basé sur Arduino.
+[Gilles](https://forum.poppy-project.org/users/gilles_lassus/), teacher and maker at night, has developed many projects based on the Poppy Ergo Jr and Arduino. For connecting both worlds, it uses [Snap4arduino](http://s4a.cat/snap/). Then, it becomes really easy and elegant to make them communicate. You can simply mix Arduino with Poppy blocks and tadam you can control your robot with any Arduino based sensor. <iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-<iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen></iframe>
+Then the only limitation is your creativity! For instance, ou can make [Poppy Ergo Jr plays TicTacToe](https://www.youtube.com/embed/usDAgvcEXJA): <iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-La seule limite est alors votre créativité! Par exemple, vous pouvez faire [Poppy Ergo Jr jouer au Morpion](https://www.youtube.com/embed/usDAgvcEXJA):
-
-<iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen></iframe>
-
-La documentation détaillée peut être trouvée dans la section [Contrôler Poppy avec Arduino](#contrôler-poppy-avec-un-arduino-via-snap4arduino).
+The detailed documentation can be found in the section [Control Poppy with Arduino](#contrôler-poppy-avec-un-arduino-via-snap4arduino).
