@@ -5,25 +5,24 @@
         "summary": "SUMMARY.md"
     },
     "plugins": [
-        "-share",
         "-search",
+        "-share",
+        "anchorjs",
+        "build",
+        "copy-code-button",
+        "custom-favicon",
+        "download-pdf-link",
+        "github",
+        "language-picker",
+        "localized-footer",
+        "page-toc",
+        "piwik",
         "richquotes",
+        "search-plus",
+        "sitemap",
         "toggle-chapters",
         "toggle-headers",
-        "page-toc",
-        "sitemap",
-        "search-plus",
-        "youtube",
-        "github",
-        "ga",
-        "piwik",
-        "anchorjs",
-        "language-picker",
-        "download-pdf-link",
-        "localized-footer",
-        "custom-favicon",
-        "build",
-        "copy-code-button"
+        "youtube"
     ],
     "pluginsConfig": {
         "favicon": "img/logo/favicon-128.ico",
@@ -47,9 +46,6 @@
                 "en": "Edit this page",
                 "fr": "Editez cette page"
             }
-        },
-        "ga": {
-            "token": "UA-44384879-5"
         },
         "piwik": {
             "URL": "piwik.inria.fr/",
