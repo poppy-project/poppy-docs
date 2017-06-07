@@ -1,28 +1,28 @@
 {
     "title": "Documentation of the Poppy Platform",
     "structure": {
-      "readme": "README.md",
-      "summary": "SUMMARY.md"
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
     },
     "plugins": [
-        "-share",
         "-search",
+        "-share",
+        "anchorjs",
+        "build",
+        "copy-code-button",
+        "custom-favicon",
+        "download-pdf-link",
+        "github",
+        "language-picker",
+        "localized-footer",
+        "page-toc",
+        "piwik",
         "richquotes",
+        "search-plus",
+        "sitemap",
         "toggle-chapters",
         "toggle-headers",
-        "page-toc",
-        "sitemap",
-        "search-plus",
-        "youtube",
-        "github",
-        "ga",
-        "anchorjs",
-        "language-picker",
-        "download-pdf-link",
-        "localized-footer",
-        "custom-favicon",
-        "build",
-        "copy-code-button"
+        "youtube"
     ],
     "pluginsConfig": {
         "favicon": "img/logo/favicon-128.ico",
@@ -31,8 +31,8 @@
             "showLevel": true
         },
         "page-toc": {
-          "position":"before-first",
-          "selector":".markdown-section h2, .markdown-section h3"
+            "position":"before-first",
+            "selector":".markdown-section h2, .markdown-section h3"
         },
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
@@ -41,14 +41,15 @@
             "hostname": "https://docs.poppy-project.org/"
         },
         "edit-link": {
-                "base": "https://github.com/poppy-project/poppy-docs/edit/master/",
-                "label": {
-                    "en": "Edit this page",
-                    "fr": "Editez cette page"
-                }
+            "base": "https://github.com/poppy-project/poppy-docs/edit/master/",
+            "label": {
+                "en": "Edit this page",
+                "fr": "Editez cette page"
+            }
         },
-        "ga": {
-            "token": "UA-44384879-5"
+        "piwik": {
+            "URL": "piwik.inria.fr/",
+            "siteId": 66
         },
         "sharing": {
             "facebook": false,
@@ -57,14 +58,14 @@
                 "twitter", "facebook", "google"
             ]
         },
-          "download-pdf-link": {
+        "download-pdf-link": {
             "base": "https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs",
             "label": {
                 "en": "Download PDF",
                 "fr": "Télécharger en PDF"
             },
             "multilingual": true
-          }
+        }
     },
     "variables": {
         "poppy_doc_version": "1.0",

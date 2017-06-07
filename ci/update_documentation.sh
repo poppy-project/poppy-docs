@@ -12,7 +12,7 @@ git remote set-url origin $git_url
 # Push the broken links
 git add contributing/broken_links.txt
 git commit -m "Update broken links after commit $last_commit_sha"
-git push origin master 
+git push origin master
 
 
 tmp_repo=/tmp/$GH_REPO-doc
@@ -40,7 +40,7 @@ if [[ "$TRAVIS" == "true" ]]; then
             git push origin --delete --quiet gh-pages > /dev/null 2>&1
             git add -A
             git commit -m "Doc generated after commit $last_commit_sha (travis build #$TRAVIS_BUILD_NUMBER)"
-            git push --force --quiet origin gh-pages 
+            git push --force --quiet origin gh-pages
         popd
     fi
 fi
