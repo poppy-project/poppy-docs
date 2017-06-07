@@ -1,46 +1,50 @@
 # Summary
 
-* [Introduction](README.md)
-* [Démarrer](getting-started/README.md)
-    * [Construire un robot](getting-started/build.md)
-    * [Se connecter au robot](getting-started/connect.md)
-    * [Programmer le robot](getting-started/program-the-robot.md)
-    * [Visualiser](getting-started/visualize.md)
-    * [Exemples de projets](getting-started/example-of-projects.md)
-* [Installation](installation/README.md)
-    * [Installer un client zeroconf](installation/install-zeroconf.md)
-    * [Démarrage d'un robot Poppy](installation/burn-an-image-file.md)
-    * [Installer les logiciels Poppy](installation/install-poppy-softwares.md)
-    * [Installer le simulateur V-REP](installation/install-vrep.md)
-    * [Installer les pilots USB vers port série](installation/install-drivers.md)
-    * [Installer une carte d'extension Poppy](installation/install-a-poppy-board.md)
-* [Guides d'assemblage](assembly-guides/README.md)
-    * [Assembler le Ergo Jr](assembly-guides/ergo-jr/README.md)
-    * [Assembler l'électronique](assembly-guides/ergo-jr/electronic-assembly.md)
-    * [Configurer les moteurs](assembly-guides/ergo-jr/motor-configuration.md)
-    * [Construire la mécanique](assembly-guides/ergo-jr/mechanical-construction.md)
-    * [Assembler le Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
-    * [Assembler le Poppy Torso](assembly-guides/poppy-torso/README.md)
-* [Programmation](programming/README.md)
-    * [Programmer avec Snap!](programming/snap.md)
-    * [Utiliser Jupyter notebooks](programming/notebooks.md)
-    * [Programmer en Python](programming/python.md)
-    * [APIs Robot](programming/rest.md)
-* [Activités](demo-activities/README.md)
-    * [Se connecter avec Snap4Arduino](demo-activities/snap4arduino.md)
-* [De la simulation à un vrai robot](from-simulation-to-real-robot/README.md)
-    * [Snap! sur un vrai robot](from-simulation-to-real-robot/using-snap.md)
-    * [Programmer avec Jupyter notebooks sur un vrai robot](from-simulation-to-real-robot/using-jupyter.md)
-* [Bibliothèques Logicielles](software-libraries/README.md)
+### Getting started
+
+* [About this documentation](README.md)
+* [Getting started](getting-started/README.md)    * [Build a robot](getting-started/build.md)    * [Connect to the robot](getting-started/connect.md)    * [Program the robot](getting-started/program-the-robot.md)    * [Visualize](getting-started/visualize.md)    * [Examples of projects](getting-started/example-of-projects.md)
+
+### Software installation
+
+* [Installation](installation/README.md) 
+    * [Install Bonjour/Zeroconf](installation/install-zeroconf.md)
+    * [Startup with a Poppy robot](installation/burn-an-image-file.md)
+    * [Install Poppy softwares](installation/install-poppy-softwares.md)
+    * [Install V-REP simulator](installation/install-vrep.md)
+    * [Install USB to serial drivers](installation/install-drivers.md)
+    * [Install a Poppy Board](installation/install-a-poppy-board.md)
+
+### Robot assembly
+
+* [Assemble the Ergo Jr](assembly-guides/ergo-jr/README.md) 
+    * [Electronic assembly](assembly-guides/ergo-jr/electronic-assembly.md)
+    * [Motor configuration](assembly-guides/ergo-jr/motor-configuration.md)
+    * [Hardware construction](assembly-guides/ergo-jr/mechanical-construction.md)
+* [Assemble the Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
+* [Assemble the Poppy Torso](assembly-guides/poppy-torso/README.md)
+
+### Robot programming
+
+* [Programming](programming/README.md) 
+    * [Programming with Snap!](programming/snap.md)
+    * [Usage of Jupyter notebooks](programming/notebooks.md)
+    * [Programming in Python](programming/python.md)
+    * [Robots APIs](programming/rest.md)
+    * [Activities](demo-activities/README.md)
+    * [Link with Snap4Arduino](demo-activities/snap4arduino.md)
+* [From simulation to real robot](from-simulation-to-real-robot/README.md) 
+    * [Program with Jupyter notebooks on the real robot](from-simulation-to-real-robot/using-jupyter.md)
+    * [Snap! on the real robot](from-simulation-to-real-robot/using-snap.md)
+* [Software libraries documentation](software-libraries/README.md) 
     * [Pypot](software-libraries/pypot.md)
     * [Poppy-creature](software-libraries/poppy-creature.md)
     * [Poppy Ergo Jr](software-libraries/poppy-ergo-jr.md)
     * [Poppy Humanoid](software-libraries/poppy-humanoid.md)
     * [Poppy Torso](software-libraries/poppy-torso.md)
-* [Appendices](appendix/README.md)
-    * [Réseau](appendix/network.md)
-    * [Contribuer](appendix/contribute.md)
-    * [FAQ](appendix/faq.md)
 
------
+## Appendix
 
+* [Network](appendix/network.md)
+* [Contribute](appendix/contribute.md)
+* [FAQ](appendix/faq.md) <!-- - [Raspoppy](appendix/raspoppy.md) -->
