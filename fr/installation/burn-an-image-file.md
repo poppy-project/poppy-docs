@@ -17,7 +17,7 @@ You may be in two kind of cases:
 
 You have to choose the image (file in `*.img.zip`) to download depending on your Poppy creature and the targeted board:
 
-- [Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases/download/1.0.0-gm/2017-02-21-poppy-ergo-jr.img.zip)
+- [Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases/)
 - [Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
 - [Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
