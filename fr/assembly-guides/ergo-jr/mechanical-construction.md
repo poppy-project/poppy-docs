@@ -137,4 +137,4 @@ Monter votre Raspberry Pi sur le disque de support, et utilisez une vis 4 x M2.5
 
 ![image](img/assembly/ergo-tool-2.jpg)
 
-Grab your [favourite drink](https://www.flickr.com/photos/poppy-project/16488256337/) and relax.
+Vous pouvez désormais vous détendre en buvant [votre boisson préférée](https://www.flickr.com/photos/poppy-project/16488256337/).
