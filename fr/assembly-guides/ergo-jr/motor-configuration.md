@@ -1,54 +1,54 @@
 # Configuration des moteurs
 
-Ergo Jr is made of 6 XL-320 motors from [Robotis](http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm). Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.
+L'Ergo Jr est composé de 6 moteurs XL-320 fabriqués par [Robotis](http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm). Chacun de ces servomoteurs possèdent une carte électronique lui permettant de recevoir différents types de commandes (sur sa position, sa vitesse, son couple...) et de communiquer avec d’autres servos. Vous pouvez chainer ces servomoteurs entre eux et tous les commander depuis un bout de la chaîne.
 
 <img src="img/assembly/xl_320.jpg" alt="XL320" height="300" />
 
-Yet, in order for the motors to be connected and identified on the same bus (same line), they must have a unique ID. Out of the factory they all set to the same ID: 1. In this section, we will give you details on how you can set a new and unique ID to each of your motors.
+Cependant, afin d’être connecté et identifié sur le même bus (de donnée), ils doivent avoir un identifiant unique. Sortis de l’usine ils ont tous la même valeur d'identifiant : 1. Dans cette section, nous vous donnerons plus de détails sur comment vous pouvez définir un nouvel identifiant unique à chacun de vos moteurs.
 
-We recommend to configure motors in parallel of the hardware assembly. Meaning, that before assembling a new motor, you first configure it, then assemble to the rest of your robot. In the step-by-step assembly procedure, we will point out each time you need to configure a new motor.
+Nous vous recommandons de configurer des moteurs en parallèle de l’assemblage des pièces du robot. Ce qui signifie qu’avant d’assembler un moteur neuf, vous commencez par le configurer puis le monter sur le reste du robot. Pendant la procédure d'assemblage, nous indiquerons chaque fois qu'il faut configurer un nouveau moteur.
 
-## Configuring motors one at a time
+## Configurer les moteurs un par un
 
-As explained above, all motors have the same ID by default. **Only one motor at a time should be connected to the data bus when you configure them.** Otherwise, it will not work as all motors connected will think that the order sent on the line is intended for them, they will all try to answer resulting in a big mess.
+Comme expliqué ci-dessus, tous les moteurs ont le même identifiant par défaut. **Un seul moteur à la fois doit être connecté au bus de données lorsque vous les configurez.** Sinon, tous les moteurs connectés vont penser que l’ordre envoyé sur le bus leur est destiné, ils tenteront d'y répondre ce qui entrainera une "cacophonie" dans les réponses.
 
-Your electronic setup when configuring a motor should look like this:
+Lorsque vous configurez un moteur, vous devriez avoir ces éléments :
 
-* a Raspberry Pi
-* a Pixl shield on top and the AC plugged
-* a wire from the shield to the motor you want to configure
-* an Ethernet cable going from the Raspberry Pi to your computer or your router
+* une carte Raspberry Pi
+* une carte pixl et son alimentation électrique
+* un fil reliant la carte et le moteur que vous souhaitez configurer
+* un câble Ethernet reliant la Raspberry Pi et votre ordinateur ou votre routeur
 
-![XL-320 configuration ; one motor at a time](img/motor_one_by_one.jpg).
+![Configuration des XL-320 ; un moteur à la fois](img/motor_one_by_one.jpg).
 
-### Command-line utility
+### Utilitaire en ligne de commande
 
-Robots come with a command line utility `poppy-configure` ; to use it you need to open a terminal on your Raspberry Pi.
+Les robots viennent avec un utilitaire en ligne de commande `poppy-configure`. Pour l’utiliser, vous devrez ouvrir un terminal depuis l'interface Jupyter de votre Raspberry Pi.
 
-You can access to the Raspberry Pi directly from your computer. To do so, open the page http://poppy.local in a web browser.
+Vous pouvez accéder au Raspberry Pi directement à partir de votre ordinateur. Pour ce faire, ouvrez la page http://poppy.local dans un navigateur web.
 
-> **Warning** If you are using Windows, you need to install [Bonjour](https://support.apple.com/kb/DL999) (look at [Zeroconf protocol](../../installation/install-zeroconf.md) for details) to be able to connect to the robot from its hostname. If Bonjour is not present, you will have an error message like the one below. If Bonjour is installed and the issue still present, please re-install it.
+> **Attention** Si vous utilisez Windows, vous devrez installer [Bonjour](https://support.apple.com/kb/DL999) (voir [protocole Zeroconf](../../installation/install-zeroconf.md) pour plus de détails) afin de pouvoir vous connecter au robot en point à point en utilisant son nom (poppy. local par défaut). Si Bonjour n’est pas installé, vous aurez un message d’erreur comme celui-ci. Si Bonjour est installé et que le problème persiste, veuillez le ré-installer.
 > 
-> ![Page doesn't exist](img/IHM/webpage_not_available.jpg)
+> ![La page n'existe pas](img/IHM/webpage_not_available.jpg)
 
-If everything goes well, you should see the Poppy home page:
+Si tout se passe bien, vous devriez voir la page d’accueil du robot :
 
-![Poppy home page](img/IHM/accueil_poppy_local.PNG)
+![Page d’accueil du robot](img/IHM/accueil_poppy_local.PNG)
 
-Click on the **"Jupyter — Python, Terminal"** link and after, select on the right "New" and "Terminal". <img src="img/IHM/jupyter_new_terminal.png" alt="Jupyter terminal" height="300" />
+Cliquez sur le lien **"Jupyter — Python, Terminal"** et après, sélectionnez sur la droite "New" et "Terminal". <img src="img/IHM/jupyter_new_terminal.png" alt="Terminal Jupyter" height="300" />
 
-You have now access to the Terminal:
+Vous avez maintenant accès au Terminal :
 
-![terminal for configuration](img/IHM/terminal_for_configuration.PNG)
+![terminal pour la configuration](img/IHM/terminal_for_configuration.PNG)
 
-Once the terminal is open, copy and press enter to execute the command bellow.
+Une fois que le terminal est ouvert, copier et appuyez sur entrée pour exécuter la commande ci-dessous.
 
 ```bash
 poppy-configure ergo-jr m1
 ```
 
-You have now configured the m1 motor of your robot. Once configured and that you see the message indicating that everything went well, you can unplug the motor (you don't need to turn off the card). The configuration of the motor is stored in its internal memory (eprom).
+Vous avez maintenant configuré le moteur m1 de votre robot. Une fois configuré et que vous voyez le message indiquant que tout s’est bien passé, vous pouvez débrancher le moteur (vous n’avez pas besoin de désactiver la carte). La configuration du moteur est sauvegardée dans sa mémoire interne (Eprom).
 
-> **Info** Poppy Ergo Jr motors are named m1, m2, m3, m4, m5, m6. To configure the others motors, you have to change m1 by the name of the motor you want to configure in the command above.
+> **Info** Les moteurs du Poppy Ergo Jr sont nommées m1, m2, m3, m4, m5, m6. Pour configurer les autres moteurs, il faut changer m1 par le nom du moteur que vous souhaitez configurer dans la commande ci-dessus.
 
-<img src="img/assembly/motors.png" alt="Motors list" height="300" />
+<img src="img/assembly/motors.png" alt="Liste des moteurs" height="300" />
