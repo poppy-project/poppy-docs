@@ -1,30 +1,30 @@
-# Program the robot
+# Programmer le robot
 
-Poppy robots are designed to be easily programmed. They are three main options presented here: * using [Snap!](#using-snap), a variant of Scratch the visual programming language, * using [Python](#using-python) and leveraging the power of the whole API, * through the [REST API](#through-the-rest-api) which let you interface Poppy robots with other devices or any programming language.
+Les robots Poppy sont pensés pour être programmé facilement. Voici les trois principales façons d'y parvenir : * avec la programmation visuelle [Snap!](#using-snap), une variante de Scratch, * avec [Python](#using-python) et la possibilité de s'appuyer sur la puissance de l'API tout entière, * avec [REST API](#through-the-rest-api), qui permet de connecter les robots Poppy à d'autres outils ou d'utiliser n'importe quel langage de programmation.
 
-> **Info** Info: As for the rest of the project, all our software libraries are open source (GPLv3 License) and available on [GitHub](https://github.com/poppy-project).
+> **Important** : Tout comme le reste du projet, toute notre bibliothèque logiciel est open source (Licence GPLv3) et disponible sur [GitHub](https://github.com/poppy-project).
 
-## Using Snap_!_
+## Avec Snap_!_
 
-<img src="../img/logo/snap.png" alt="Snap! logo" height="200" />
+<img src="../img/logo/snap.png" alt="Logo Snap!" height="200" />
 
-Snap_!_ is a visual programming language - a variant of the very famous Scratch language. It is a block based drag-and-drop programming language that allows for a thorough introduction of IT. It runs in your browser as it is implemented in JavaScript. You do not need to install anything to start using it. It is open sourced and actively maintained.
+Snap_!_ est un langage de programmation visuel - une variante du déjà très connu language Scratch. C'est un langage de programmation basé sur l'utilisation de blocs facilement déplaçable, qui permet une bonne introduction à l'informatique. It runs in your browser as it is implemented in JavaScript. Vous n'avez pas besoin d'installer quoi que ce soit pour l'utiliser. Il est open source et mis à jour régulièrement.
 
-![Example of Snap project using Poppy](../img/snap/presentation.png)
+![Exemple de projet Snap! utilisant un robot Poppy](../img/snap/presentation.png)
 
-We developed a set of custom blocks for Poppy robots that let you send motor commands and read values from the sensors of your robot. This let you to directly jump into controlling and programming your without any syntax/compilation issue. Thanks to Snap_!_ live interaction loop you simply have to click on a block to send its associated command to the robot. Snap_!_ also naturally scales to more complex projects.
+Nous avons créé plusieurs blocs propre à l'utilisation des robots Poppy qui permettent de contrôler chaque moteur et de lire les valeurs rapportées par les capteurs de votre robot. This let you to directly jump into controlling and programming your robot without any syntax/compilation issue. Snap_!_ permet d'avoir une interactivité constante entre son interface et le robot. Vous n'avez qu'à cliquer sur un bloc et la commande associée se lance. La simplicité apparente de Snap_!_ n'empêche pas de développer des projets de plus en plus complexes.
 
-A [dedicated chapter](../programming/snap.md) will guide you in what you can do with Snap_!_ and Poppy robots.
+Pour avoir un aperçu de ce qu'il est possible de faire avec Snap_!_ et les robots Poppy, jetez un oeil au [chapitre dédié](../programming/snap.md).
 
-## Using Python
+## Avec Python
 
 <p style="text-align:center">
-<img src="../img/logo/python.png" alt="Python Powered" height="170">
+<img src="../img/logo/python.png" alt="Fonctionnant avec Python" height="170">
 </p>
 
-Poppy libraries have been written in Python, to allow for fast development and extensibility and to benefit from all existing scientific libraries. Python is also a well-known language and widely used in education or artistic fields. By programming Poppy in Python, you will have access from the very low-level API to the higher levels.
+Les librairies logicielles Poppy ont été écrites en Python, ce qui permet un développement et une extensibilité rapide, ainsi que de pouvoir utiliser n'importe quelle autre librairie scientifique. Python est d'ailleurs un langage très connu et largement utilisé dans les domaines de l'éducation et artistiques. En programmant Poppy en Python, vous aurez accès à tous les niveaux d'API, du plus bas au plus élevé.
 
-The API has been designed to allow for very fast prototyping. Creating a robot and starting to move motors should not take more than a few lines:
+L'API a été pensé pour du prototypage très rapide. Créer un robot et faire bouger ses moteurs ne doit pas prendre plus de quelques lignes :
 
 ```python
 from poppy.creatures import PoppyErgoJr
@@ -33,26 +33,26 @@ jr = PoppyErgoJr()
 jr.m3.goal_position = 30
 ```
 
-<!-- Note: "Notebook documents" or “notebooks”, all lower case --> We are also big fan of the 
+<!-- Note: "Notebook documents" or “notebooks”, all lower case --> Nous aimons énormément le 
 
-[Jupyter Project](http://jupyter.org) and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We think that this is a powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.
+[Jupyter Project](http://jupyter.org) et de ses notebooks. Les Notebooks sont des documents qui contiennent à la fois du code en Python et des éléments textuels tels que des équations, des photos, des vidéos. Ils peuvent être édités à partir de l'interface Jupyter Web, ce qui permet aux utilisateurs de programmer les robots Poppy directement à partir d'un site hébergé par l'ordinateur du robot. Nous pensons qu’il s’agit d’un outil puissant permettant la création et le partage de code en direct, la visualisation des résultats et des textes explicatifs, le tout combiné en un seul document.
 
-<img src="../img/logo/jupyter.png" alt="Jupyter Logo" height="150" />
+<img src="../img/logo/jupyter.png" alt="Logo Jupyter" height="150" />
 
-Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as notebooks.
+La plupart des tutoriels, expérimentations et activités pédagogiques que la communauté Poppy et nous proposons sont disponibles sous forme de notebooks.
 
-![Notebook example](../img/notebook-example.png)
+![Exemple de Notebook](../img/notebook-example.png)
 
-> **Info** An updated gallery of notebooks can be found [here](../programming/notebooks.md). Contributions welcomed!
+> **Info** Vous pouvez retrouvez une mise à jour de la galerie de noteboks [ici](../programming/notebooks.md). Toute contibution est la bienvenue !
 
-## Through the REST API
+## Avec l'API REST
 
-On top of the Snap_!_ and Python options, we wanted to provide another way of accessing and controlling your robot from any device or language. Poppy robots are providing a REST API. The most important features of the robot can be access through HTTP GET/POST requests.
+En plus de Snap_!_ et de Python, nous voulions donner la possibilité de recourir à d'autres options pour accéder et contrôler votre robot depuis n'importe quel système ou langage de programmation. Les robots Poppy fournissent une API REST. Les fonctionnalités les plus importantes sont accessibles depuis les requêtes HTTP GET/POST.
 
-From a more practical point of view, this allows you to:
+D'un point vue plus pratique, cela vous permet de :
 
-* **Write bridges to control Poppy robot in any language** (awesome contributors have already written [Matlab](https://github.com/joelortizsosa/Connection-Poppy-Matlab) and [Ruby](https://github.com/poppy-project/pypot/tree/master/samples/REST/ruby) wrappers).
-* **Design web apps** connected to your robot, such as the [monitor interface](https://github.com/poppy-project/poppy-monitor) (also a contribution!).
-* Make your **robot interact with other connected devices** such as a smartphone, intelligent sensors, or even your twitter account...
+* **créez des passerelles pour controler le robot Poppy dans n'importe quel langage** (des contributeurs géniaux ont déjà écrit des wrappers sur [Matlab](https://github.com/joelortizsosa/Connection-Poppy-Matlab) et [Ruby](https://github.com/poppy-project/pypot/tree/master/samples/REST/ruby)).
+* **Créez des des applications web** connectées à votre robot, telle qu'une [interface moniteur](https://github.com/poppy-project/poppy-monitor) (encore une contribution !).
+* Faites intéragir **votre robot avec d'autres objets connectés** tels que les smartphones, les capteurs intelligent, ou encore votre compte Twitter...
 
-> **Warning** The REST API is still a work in progress, will change and is clearly ill documented! For more information you can have a look [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md) our on the [forum](https://forum.poppy-project.org). A well designed, stable and well documented REST API is expected for the next major software release.
+> **Attention** L'API REST est encore une option en cours de développement, des changements y seront apportés, et la documentation n'est absolument pas terminée ! Pour plus d'informations, jetez un oeil [ici](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md) ou alors sur notre [forum](https://forum.poppy-project.org). Une API REST bien conçue, stable et bien documentée est prévue pour la prochaine mise à jour majeure du logiciel.
