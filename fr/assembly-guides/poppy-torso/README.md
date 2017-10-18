@@ -1,5 +1,5 @@
-# Assembly guide for the Poppy Torso
+# Guide d’assemblage pour Poppy Torso
 
 <!-- TODO: -->
 
-> **Caution** The assembly guide for the Poppy Torso has still not been merged on the new doc. You can find it on the [poppy-torso git repository](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md).
+> **Mise en garde** Le guide d’assemblage pour le robot Torso n’a toujours pas été fusionné avec nouvelle doc. Vous le retrouverez sur le [répertoire github poppy-torso](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md).
