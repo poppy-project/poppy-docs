@@ -22,17 +22,17 @@ Pour chaque robot Poppy, l'image se trouve sur sa page web de sa dernière versi
 * [pour le robot Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
 * [pour le robot Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
-They can be written to a SD-card (at least 8 Go) by using classical utility tools. Once the SD-card is ready, just insert it into the board. Then when you switch on your robot it should automatically start and you should be able to connect to its web interface.
+L'image peut être écrite sur une carte SD (d'au moins 8 Go) en utilisant un utilitaire tel qu'Etcher. Une fois que la carte SD est prête, insérez-la dans la carte embarquée (micro-ordinateur). Ensuite, lorsque vous branchez votre robot, il devrait démarrer automatiquement et vous devriez pouvoir vous connecter à son interface web.
 
-> **Info** More details can be found in the [startup section](../installation/README.md).
+> **Info** Vous trouverez plus de détails dans la [section démarrage](../installation/README.md).
 
-### Advanced way: DIY, install everything from scratch
+### Manière avancée : DIY, installez tout à partir de zéro
 
-The advanced way mainly consists in installing everything needed from scratch. This follows the same procedure as we use to generate the image for SD-cards. We mention this possibilty here as it can be useful if:
+La manière avancée consiste principalement à installer tout ce qui est nécessaire à partir de zéro. Cela suit la même procédure que nous utilisons pour générer l'image de cartes SD. Nous mentionnons cette possibilité ici car cela peut être utile si :
 
-* You are **working with a simulated robot** and thus have to manually install all the required software on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,
-* you want to customize the environment,
-* or simply if you like to understand how it works.
+* Vous ** travaillez avec un robot simulé** et devez donc installer manuellement tous les logiciels requis sur votre ordinateur, cette procédure vous montre comment cela peut être fait sur un Raspberry-Pi (carte embarquée) et l'adapter à un autre ordinateur,
+* vous voulez personnaliser l'environnement,
+* ou si vous voulez tout simplement comprendre comment ça fonctionne.
 
 > **Caution** We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.
 
