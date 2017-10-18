@@ -1,8 +1,8 @@
-# Switching from a simulated to a real Poppy robot
+# Passer du robot Poppy simulé au robot physique
 
-A key feature of the Poppy project is to let you, as seamlessly as possible, switch from a simulated robot (e.g. using V-REP) to a real one. It is particularly useful when:
+Un élément-clé du projet Poppy est de vous donner la possibilité de facilement passer d'un robot simulé (en utilisant V-REP par exemple) à un vrai robot. C'est assez utile lorsque vous :
 
-* Developing an experiment where you can setup everything using the simulation, then run it on the real robot.
-* Working in a classroom context where students can work on their own computer via the simulation and share a robot for real world tests
+* Développez une expérimentation dans laquelle vous pouvez tout configurer à partir de la simulation, pour la lancer ensuite sur le robot physique.
+* Faites travailler vos élèves dans un premier temps sur des ordinateurs grâce à une simulation pour ensuite les faire essayer leurs travaux sur un robot physique partagé
 
-While it has been designed to cut the effort needed to switch from one to the other, there are still a few steps to understand. One of the major difference is when you are working in simulation everything runs on your own computer while when you are using a real robot, the software (e.g. the Python Notebooks) actually runs in the robot.
+Cependant, même si c'est fait de façon à ce que passage d'un plan à l'autre soit aisé, il y a quelques points à assimiler. Une des différence majeure est que lorsque vous travaillez via la simulation, tout se fait depuis votre ordinateur alors que quand vous utilisez une robot physique, le logiciel (par exemple les Python Notebooks) tout se fait depuis le robot.
