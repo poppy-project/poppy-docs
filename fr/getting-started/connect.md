@@ -16,11 +16,11 @@ Le moyen le plus simple et le plus rapide - de loin - est d'utiliser une image s
 
 > **Note** Les kits robotiques Poppy sont livrés avec une carte SD prête à l'emploi. Donc, vous n'avez rien de spécial à faire.
 
-The images can be found in the release of each creatures:
+Pour chaque robot Poppy, l'image se trouve sur sa page web de sa dernière version :
 
-* [for the Poppy ErgoJr](https://github.com/poppy-project/poppy-ergo-jr/releases)
-* [for the Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
-* [for the Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
+* [pour le robot Poppy Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases)
+* [pour le robot Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
+* [pour le robot Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
 They can be written to a SD-card (at least 8 Go) by using classical utility tools. Once the SD-card is ready, just insert it into the board. Then when you switch on your robot it should automatically start and you should be able to connect to its web interface.
 
