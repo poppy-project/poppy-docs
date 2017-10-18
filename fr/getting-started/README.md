@@ -40,7 +40,7 @@ Le robot Poppy Ergo Jr est un petit bras robot à faible coût avec dôté de 6 
 
 ![Poppy Ergo Jr](../assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
-Les pièces 3D ont été conçues pour être facilement imprimable sur une imprimante 3D basique. The motors are only 20€ each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.
+Les pièces 3D ont été conçues pour être facilement imprimable sur une imprimante 3D basique. Les moteurs coûtent seulement 20€ chacun. L'accès à sa carte électronique est simple. Elle facilite la connexion des capteurs supplémentaires et est bien adaptée à des fins pédagogiques.
 
 You can choose among three tools at the end of its arm:
 
