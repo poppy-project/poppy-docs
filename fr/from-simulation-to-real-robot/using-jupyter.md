@@ -1,37 +1,37 @@
-# Using Jupyter Python Notebooks
+# À l’aide des notebooks Jupyter en Python
 
-One of the advantages of working with Jupyter Notebooks is the possibility to use it as a client/server approach.  
-Each Poppy robot hosts a Jupyter server accessible via the web interface (see [section quickstart](../getting-started/program-the-robot.md) for details).
+L'un des avantages de travailler avec les notebooks Jupyter est de pouvoir les utiliser dans une approche client/serveur.   
+Chaque robot Poppy héberge un serveur Jupyter accessible via l'interface web (voir la [section démarrage rapide](../getting-started/program-the-robot.md) pour plus de détails).
 
-When working in simulation, everything is run and stored locally on your computer. When working with a real robot you can program it from a web browser on your own machine but your notebooks are actually stored and run in the robot.
+Lorsque vous travaillez via une simulation, tout est géré et stocké sur votre ordinateur. Lorsque vous travaillez avec un robot physique vous pouvez le programmer depuis un navigateur web sur votre propre ordinateur, mais vos notebooks Jupyter sont en fait stockés et exécutés dans le robot.
 
-Thus to switch from simulation to a real robot, you need to switch from your local instance of Jupyter to the remote one hosted by the robot. The steps are described below.
+Donc pour passer de la simulation au robot physique, vous devez passer de votre instance locale Jupyter à l'instance hébergée par le robot. Les étapes sont décrites ci-dessous.
 
-## Connect to the Jupyter on the robot
+## Se connecter à Jupyter sur le robot
 
-Once connected to the robot web interface *http://poppy.local* (we will assume here its hostname is *poppy*, just replace it by the new hostname if you changed it), you should see a **open Ipython notebook** link.
+Une fois connecté à l'interface web du robot *http://poppy.local* (nous supposerons ici que son nom d’hôte est *poppy*, remplacez-le par le nouveau nom d’hôte si vous l’avez changé), vous devriez voir un lien **ouvrir notebook Ipython**.
 
-![open notebook link](../img/poppy_home.png)
+![ouvrir le lien du notebook](../img/poppy_home.png)
 
-When clicked it will start Jupyter on the robot and redirect you to the Jupyter webserver. You should then see the root of the notebook folder hosted on the robot:
+Lorsque vous cliquez dessus, Jupyter démarre sur le robot et vous redirige vers le serveur Web Jupyter. Vous devriez alors voir la racine du dossier notebook hébergé sur le robot :
 
-![notebook folder on poppy](../img/jupyter/root-folder.jpg)
+![dossier de notebook sur poppy](../img/jupyter/root-folder.jpg)
 
-This is where you can put your own notebooks. Of course, you can create folder, organize them as you want, etc...
+C'est ici que vous pouvez mettre vos propre notebooks. Bien sûr vous pouvez créer des dossier, les organiser à souhait etc.
 
-*Note: If you need finer access or more advanced configuration (such as permission for instance), you have to log directly to the robot using ssh.*
+*Note : Si vous avez besoin d'un accès plus précis ou d'une configuration plus avancée (telle qu'une autorisation), vous devez vous connecter au robot directement en utilisant SSH.*
 
-## Upload a notebook
+## Télécharger un notebook
 
-Once connected to the Jupyter server hosted by the robot, you can directly use the Jupyter interface for uploading new notebooks.
+Une fois connecté au serveur Jupyter hébergé par le robot, vous pouvez directement utiliser l’interface Jupyter pour le téléverser de nouveaux notebooks.
 
-![upload new notebooks](../img/jupyter/upload-notebooks.jpg)
+![téléverser les nouveaux notebooks](../img/jupyter/upload-notebooks.jpg)
 
-The circled button let you *upload* your local notebook, so stored on your own machine, to the robot. They can then be directly run on the robot.
+Le bouton rond permet de *télécharger* votre notebook local, stocké sur votre propre ordinateur, au robot. Ils peuvent alors être directement exécuté sur le robot.
 
-*Be aware that at the moment, we do not deal with sessions or permissions (as [JupyterHub](https://github.com/jupyter/jupyterhub) does for instance), and thus anyone with access to the robot can use or delete all notebooks stored in the robot.*
+*Sachez que pour le moment, nous ne traitons pas avec des autorisations ou des sessions (comme [JupyterHub](https://github.com/jupyter/jupyterhub) par exemple), et donc toute personne ayant accès au robot peut utiliser ou supprimer tous notebooks stockés dans le robot.*
 
-## Adapt your code
+## Adapter votre code
 
 There is few places where you should actually modify your code so it works with a real robot. We try to minimize the effort needed as much as possible, yet some steps are still required.
 
