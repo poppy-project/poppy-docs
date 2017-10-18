@@ -10,33 +10,33 @@ On peut utiliser deux « simulateurs » avec les robots Poppy : * [ V-REP](ht
 
 L'utilisation d'un simulateur est très intéressante. Cela permet de développer et d'essayer des programmes sans avoir besoin d'un vrai robot. Plus particulièrement, cela permet :
 
-* To discover and try the robot possibilities without having to spend real money.
-* In a context where multiple users share a robot. For instance in a classroom where each group can work using the simulator and validate their program on a real robot.
-* To design and run complex and time consuming experiments.
+* De découvrir et tester les possibilités du robot sans avoir à dépenser d'argent.
+* De travailler dans un contexte où plusieurs utilisateurs partagent un robot. Par exemple, dans une salle de classe, chaque élève peut travailler en utilisant le simulateur et venir valider son programme sur le robot tangible.
+* D'économiser du temps dans la conception et réalisation d'expériences.
 
-We try to make the **switch from a simulated Poppy robot to the real one as transparent and as simple as possible**. Most of the programming documentation is actually valid for both simulated and real robots. The chapter *[From simulation to real robot](../from-simulation-to-real-robot/README.md)* will guide you in the few steps to transform your program running in simulation to one working with a real robot.
+Nous essayons de faire en sorte que **le passage du robot virtuel au tangible soit aussi transparente et simple que possible**. La plupart des exemples de programmation et de la de documentation du code sont ainsi valable aussi bien pour les robots simulés que tangibles. Le chapitre *[ de la simulation au robot tangible](../from-simulation-to-real-robot/README.md)* vous guidera dans les étapes pour adapter votre programme fonctionnant dans le simulateur vers l'usage d'un robot tangible.
 
-> **Warning** If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.
+> **Attention** Si vous souhaitez utiliser des robots Poppy dans un simulateur vous devrez installer le simulateur ainsi que librairies logicielles sur votre ordinateur.
 
-## Install the needed software
+## Installer les logiciels nécéssaire
 
-> **Info** Info: A full section is dedicated on how to *[install everything locally for using a simulator](../installation/install-poppy-softwares.md)* if you need more details.
+> **Pour information** : Une section entière est dédiée à comment *[installer tout en local dans le but d'utiliser un simulateur](../installation/install-poppy-softwares.md)* si vous avez besoin de plus de renseignements.
 
-While the physical robots come with an embedded computer pre-installed, you need to install some software libraries on your computer to control simulated Poppy creatures. You will also not have access to the robot web interface. You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap_!_ server).
+Alors que les robots physiques disposent d'un ordinateur embarqué pré-installé, vous devez installer certaines bibliothèques logicielles sur votre ordinateur pour contrôler les créatures Poppy simulées. Vous n'aurez pas accès à l'interface web du robot. Vous devrez lancer manuellement les différents services pour commencer à programmer votre robot (le terminal Jupyter pour les notebooks Pyhton ou le terminal Snap_ ! _).
 
-To start controlling a simulated Poppy robots, either using V-REP or the web visualizer, you will need: * To have a working Python, we strongly recommend to use the [Anaconda Python distribution](https://www.continuum.io/downloads). It works with any version >=2.7 or >=3.4. Prefer Python 2.7 if you can, as it is the version we used. * To install the Poppy libraries: pypot and the library corresponding to your creature (e.g. poppy-ergo-jr).
+Pour commencer à contrôler un robot Poppy, que ce soit en utilisant V-REP ou le visualiseur web, vous aurez besoin : *Pour faire fontionner Python, nous recommandons fortement d’utiliser la [distribution Python Anaconda](https://www.continuum.io/downloads). Il fonctionne avec n’importe quelle version > = 2.7 ou > = 3,4. Préfèrez Python 2.7 si vous le pouvez, car c’est la version que nous avons utilisé. * Pour installer les bibliothèques Poppy : pypot et la bibliothèque correspondant à votre créature (p. ex. poppy-ergo-jr).
 
-## Using V-REP
+## Avec V-REP
 
-[V-REP](http://www.coppeliarobotics.com) is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from [this website](http://www.coppeliarobotics.com/downloads.html) (works under Mac OS, Windows and GNU/Linux).
+[ V-REP](http://www.coppeliarobotics.com) est un simulateur de robotique très populaire aux nombreuses fonctionnalités. Il est très utilisé dans pour la recherche ou des fins éducatives. De plus, il est disponible gratuitement avec la license éducative. Il peut être téléchargé depuis [ le site de Copellia Robotics](http://www.coppeliarobotics.com/downloads.html) (fonctionne sous Mac OS, Windows et GNU/Linux).
 
-> **Warning** It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).
+> **Attention** Etant donné que V-REP effectue une simulation physique ainsi qu'un rendu graphique du robot, il nécessite un ordinateur puissant (surtout pour la carte graphique).
 
-![Poppy Humanoid in V-REP](../img/humanoid/vrep.png)
+![Poppy humanoide dans V-REP](../img/humanoid/vrep.png)
 
-All main Poppy robots are available in V-REP: * Poppy Humanoid * Poppy Torso * Poppy Ergo Jr
+Tous les principaux robots Poppy sont disponibles dans V-REP : * Poppy Humanoid * Poppy Torso * Poppy Ergo Jr
 
-V-REP can be used to learn how to control motors, get information from sensors but also to interact with the simulated environment. It can be controlled using Python, Snap_!_ or through the REST API. Here, are some examples of what the community has already been doing with it: * A pedagogical activity to discover the different motor of your robot and how they can be controlled. * A scientific experiment, where a Poppy Torso is learning how to push a cube on a table in front of it
+V-REP permet d’apprendre à commander les moteurs, interroger les capteurs, mais aussi d’interagir avec l’environnement simulé. It can be controlled using Python, Snap_!_ or through the REST API. Here, are some examples of what the community has already been doing with it: * A pedagogical activity to discover the different motor of your robot and how they can be controlled. * A scientific experiment, where a Poppy Torso is learning how to push a cube on a table in front of it
 
 ![Torso V-REP](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
 
