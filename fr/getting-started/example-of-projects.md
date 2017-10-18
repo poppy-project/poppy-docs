@@ -22,23 +22,23 @@ Ce projet utilise les robots Poppy comme compagnon pour les enfants d'école pri
 
 Il agit également sur le plan pédagogique, afin d'encourager l'enfant à intéragir avec l'école, en proposant des quizzs et des jeux éducatifs.
 
-One last prospect is to assist the hospital staff in the therapeutic education. Indeed, sometimes a message is more acceptable by the child if it is issued by the robot rather than an adult dressed as a physician.
+Cherry permet aussi d'assister le personnel de l'hôpital dans l'éducation thérapeutique. En effet, parfois un message est mieux assimilé par l’enfant si il est délivrée par le robot plutôt qu’un adulte habillé comme un médecin.
 
 <div style="text-align: center;">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/URB1kDDScfM" frameborder="0" allowfullscreen></iframe>
 </div>
 
-More information:
+Pour en savoir plus :
 
-* The [facebook](https://www.facebook.com/projetcherry/?ref=ts&fref=ts) page
-* The [twitter](https://twitter.com/projetcherry)
-* The [wordpress](https://projetcherry.wordpress.com/)
-* The [github](https://github.com/Cherry-project) (with a short [wiki](https://github.com/Cherry-project/cherry-software/wiki))
+* La page [Facebook](https://www.facebook.com/projetcherry/?ref=ts&fref=ts)
+* Le compte [Twitter](https://twitter.com/projetcherry)
+* Le blog [WordPress](https://projetcherry.wordpress.com/)
+* Le [GitHub](https://github.com/Cherry-project) (avec un petit [wiki](https://github.com/Cherry-project/cherry-software/wiki))
 
-## Connect Poppy and Arduino thanks to Snap4Arduino
+## Connecter Poppy et Arduino grâce à Snap4Arduino
 
-[Gilles](https://forum.poppy-project.org/users/gilles_lassus/), teacher and maker at night, has developed many projects based on the Poppy Ergo Jr and Arduino. For connecting both worlds, it uses [Snap4arduino](http://s4a.cat/snap/). Then, it becomes really easy and elegant to make them communicate. You can simply mix Arduino with Poppy blocks and tadam you can control your robot with any Arduino based sensor. <iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+[Gilles](https://forum.poppy-project.org/users/gilles_lassus/), Enseignant le jour et bricoleur la nuit, a développé de nombreux projets basés sur Poppy Ergo Jr et Arduino. Pour connecter ces deux univers, il utilise [Snap4Arduino](http://s4a.cat/snap/). Ainsi, il devient facile et élégant de les faire communiquer entre eux. Vous pouvez tout simplement adapter Arduino aux blocs Snap! du robot Poppy et tadam, vous pouvez contrôler votre robot avec n'importe quel capteurs de l'Arduino. <iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-Then the only limitation is your creativity! For instance, ou can make [Poppy Ergo Jr plays TicTacToe](https://www.youtube.com/embed/usDAgvcEXJA): <iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+En fait, la seule limite est celle de votre créativité ! Par exemple, vous pouvez faire jouer [Poppy Ergo Jr aux Morpions](https://www.youtube.com/embed/usDAgvcEXJA) : <iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-The detailed documentation can be found in the section [Control Poppy with Arduino](#contrôler-poppy-avec-un-arduino-via-snap4arduino).
+Vous retrouverez la documentation détaillée dans la section [Contrôler les robots Poppy avec une Arduino](#contrôler-poppy-avec-un-arduino-via-snap4arduino).
