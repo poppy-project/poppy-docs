@@ -33,13 +33,13 @@ Le bouton rond permet de *télécharger* votre notebook local, stocké sur votre
 
 ## Adapter votre code
 
-There is few places where you should actually modify your code so it works with a real robot. We try to minimize the effort needed as much as possible, yet some steps are still required.
+Il y a peu d’endroits où vous devez réellement modifier votre code pour qu’il fonctionne avec un robot physique. Nous essayons de minimiser l’effort nécessaire dans la mesure du possible, cependant certaines étapes sont encore nécessaires.
 
-### Instantiation
+### Instanciation
 
-When creating the robot, you actually need to specify if you are willing to work with a real or a simulated robot. This is simply done via a parameter. For instance:
+Lorsque vous créez le robot, vous devez en fait préciser si vous êtes disposé à travailler avec un robot physique ou un robot simulé. Cela se fait simplement via un paramètre. Par exemple :
 
-When working with V-REP:
+En travaillant avec V-REP :
 
 ```python
 from poppy.creatures import PoppyHumanoid
@@ -47,7 +47,7 @@ from poppy.creatures import PoppyHumanoid
 poppy = PoppyHumanoid(simulator='vrep')
 ```
 
-Will become for a real robot:
+En travaillant avec le robot physique :
 
 ```python
 from poppy.creatures import PoppyHumanoid
@@ -55,15 +55,15 @@ from poppy.creatures import PoppyHumanoid
 poppy = PoppyHumanoid()
 ```
 
-Of course, this works for all existing Poppy creatures: Humanoid, Torso and ErgoJr.
+Bien évidemment, cela fonctionne pour tous les robots Poppy : Humanoid, Torso et Ergo Jr.
 
-This is most of the changes that you should do.
+Il s’agit de la plupart des modifications que vous aurez à faire.
 
-### Specific APIs
+### Les APIs spécifiques
 
-Some part of the API are platform specific. For instance, when using V-REP you have access to *tracking* features that let you retrieve any object 3D position. Of course, such method do not have a real world equivalent and thus are not available when working with a real robot.
+Une partie de l'API dépend des plateformes. Par exemple, en utilisant V-REP vous avez accès aux fonctionnalités de *tracking* qui vous permet de récupérer n'importe quelle position 3D de l'objet. Mais cette méthode n'a pas d'équivalent dans le monde réel et n'est donc pas réalisable avec un robot physique.
 
-A good practice if you want to write code compatible for both cases is to use the *simulated* property. It is automatically set to the correct value depending on how your instantiate your robot. For instance,
+Utiliser la propriété *simulée* est un bon entrainement si vous souhaitez écrire du code compatible pour les deux cas. Elle est automatiquement définie à la valeur correcte selon la façon dont vous instanciez votre robot. Par exemple,
 
 ```python
 poppy = PoppyHumanoid(simulator='vrep')
@@ -76,19 +76,17 @@ def reset_position():
         time.sleep(10)
 ```
 
-## Version and 3rd party libraries
+## Version et bibliothèques tierces
 
-The main drawback of this client/server way of working is that your locally installed software versions may differ from the one installed on the robot.
+Le principal inconvénient de travail avec le mode client/serveur est que les versions de vos logiciels installés localement peuvent différer de celui installé sur le robot.
 
-The Python installed on the robot is Python 2.7 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed Python packages will be available soon <!-- (TODO!)-->. At the moment, the easier way to get it is to used a 
+La version de Python installée sur le robot est Python 2.7 et dispose de la plupart des principales bibliothèques scientifiques (numpy, scipy, matplotlib, opencv). Une liste exhaustive des packages Python installés sera disponible bientôt < !--(TODO !)-->. Pour le moment, le moyen le plus simple d'y parvenir est d’utilisé un *terminal notebook* qui peut être exécuté directement depuis l’interface de Jupyter.
 
-*terminal notebook* which can be directly run from the Jupyter interface.
+![Ouvrir un terminal](../img/jupyter/open-terminal.jpg)
 
-![Open a terminal](../img/jupyter/open-terminal.jpg)
+![Terminal Jupyter](../img/jupyter/terminal.jpg)
 
-![Jupyter terminal](../img/jupyter/terminal.jpg)
+En utilisant la même technique, vous pouvez installer des bibliothèques tierces directement sur le robot. Les outils utilitaire [pip](https://pip.readthedocs.org) et [conda](http://conda.pydata.org/docs/) sont installés et devraient être utilisés lorsque cela est possible.
 
-Using the same technique, you can install 3rd party libraries directly on the robot. The [pip](https://pip.readthedocs.org) and [conda](http://conda.pydata.org/docs/) utility tools are installed and should be used when possible.
-
-*Note that the embedded board are based on armv7 and thus some libraries may be hard to compile. We are maintaining a list of conda recipes specifically built for this platform [here](https://anaconda.org/poppy-project).  
-Contributions are more than welcomed! *
+* Notez que la carte embarquée repose sur une architecture armv7 et donc certaines bibliothèques peuvent être difficiles à compiler. Nous maintenons une liste de recettes conda spécialement conçu pour cette plate-forme [ici](https://anaconda.org/poppy-project).   
+Plus de contributions sont les bienvenues ! *
