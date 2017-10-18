@@ -4,43 +4,43 @@
 
 Le temps d'assemblage, les compétences requises, les outils et la difficulté varient selon selon les robots Poppy que vous voulez utilisez. Alors que construire un Ergo Jr devrait vous prendre environ une heure et cela sans outil spécifique, assembler un Humanoid peut vous prendre plusieurs jours et un sacré nombre de vis !
 
-This section intends to give you hints and a glimpse of some critical points so you aware of them before digging into the construction.
+Cette section permet de vous donner des astuces et quelques détails nécessaires avant de s'immerger dans l'assemblage du robot.
 
-More resources and a detailed step by step assembly procedure for each robot are available in the [assembly guide](../assembly-guides/README.md) section.
+Plus de ressources et une documentation d'assemblage pas à pas sont disponible pour chaque robot dans la section [guide d'assemblage](../assembly-guides/README.md) .
 
 ## Assembler un Ergo Jr
 
-> **Note** You can find a full assembly documentation in the chapter [step by step assembly of an Ergo Jr](../assembly-guides/ergo-jr/README.md).
+> **Note** Vous retrouverez la documentation complète de l'assemblage dans le chapitre [assemblage pas-à-pas de l'Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
 <!-- TODO: refaire une belle photo avec la vraie BOM -->
 
-![ergo-jr assembly](../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
+![assemblage de l'Ergo Jr](../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
 
-The Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each.
+L'Ergo Jr a été conçu pour être un petit robot, simple, peu onéreux et facile à utiliser. Les pièces 3D ont été conçues pour être facilement imprimable en 3D et les moteurs (6 servomoteurs Dynamixel XL-320) coûtent 20€ chacun.
 
-Thanks to OLLO rivets the robot is simple to assemble. These rivets can be removed and added quickly with the OLLO tool. It should not take more than one hour to entirely built it.
+Grâce aux rivets OLLO, le robot est facile à assembler. Ces rivets peuvent être enlevés ajoutés rapidement avec l’outil OLLO. Construire ce robot ne devrait pas vous prendre plus d'une heure.
 
-You can also change easily the end effector of the robot among these tools: a lamp, a gripper, a pen holder...
+Son effecteur peut être facilement changé. Vous pouvez choisir parmi plusieurs outils : * un abat-jour, * une pince, * ou un porte-stylo.
 
 <!-- TODO: image des rivets et du tool en action -->
 
-Except from **checking the motor orientation**, there is not really any pitfall. If you are familiar with Lego bricks, you should be able to assemble an Ergo Jr without much problem! Rivets were made to be as easy to assemble than to disassemble, so in case of problem you can just start over!
+A part la **vérification de l'orientation des moteurs**, il n'y a pas vraiment de piège. Si vous êtes familier avec les briques Lego, vous devriez pouvoir assembler Ergo Jr sans trop de problème ! Les rivets ont été pensé pour que l'assemble soit aussi facile que le désassemblage. Donc en cas de problème, vous n'avez qu'à recommencer !
 
-Also make sure, to [**configure your motors**](../assembly-guides/ergo-jr/motor-configuration.md) before assembling the robot as it is harder to do after!
+Par ailleurs, faites attention à [**configurer vos moteurs**](../assembly-guides/ergo-jr/motor-configuration.md) avant d'assembler le robot, ce sera plus difficile de le faire après !
 
-## Assembling a Torso or a Humanoid
+## Assembler un Torso ou un Humanoid
 
 > **Note** Vous pouvez trouver la documentation complète de l’assemblage dans le chapitre [montage pas-à-pas du robot Humanoid](../assembly-guides/poppy-humanoid/README.md).
 
-![Poppy Humanoid BOM](../img/humanoid/bom.jpg)
+![Nomenclature du robot humanoïde Poppy](../img/humanoid/bom.jpg)
 
-Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is not really more complicated than building a Meccano or some Swedish furniture. It mainly consists on those few steps:
+Construire un Poppy Torso ou un Humanoid est beaucoup plus complexe que le robot Ergo Jr, mais ce n'est pas vraiment plus compliqué que de construire un Meccano ou des meubles suédois. Cela consiste en ces quelques étapes :
 
 <!-- TODO: add links of the advanced doc -->
 
-- assemble the horn on each motors: **you will have to be really cautious about the motor zero position!**
-- configure the motors so they match the *poppy configuration*
-- use a lot of screws to connect all 3D printed parts to the motors
+- assembler le palonnier de chaque moteur : **soyez attentif à ce que le moteur soit bien sur sa position initiale, son zéro !**
+- configurer les moteurs afin qu'ils coïncident avec la *configuration Poppy*
+- utiliser un grand nombre de vis pour connecter toutes les pièces 3D aux moteurs
 - faire un peu d'électronique pour la carte embarquée au niveau de la tête : cela peut se révéler un peu difficile si vous n'êtes pas familier avec cette discipline.
 
 **La patience et la précision** sont vos meilleurs atouts, mais en cas d'erreurs, pas de panique : les robots Poppy sont faits pour être montés et démontés. Si vous faites attention des **mises en garde** suivantes, après quelques essais/erreurs vous aurez un Poppy Torso ou Humanoid en état de marche :
