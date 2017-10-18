@@ -68,42 +68,42 @@ Vous pouvez vous procurez toutes les pièces en suivant [la nomenclature](https:
 
 ### Poppy Torso
 
-C'est la partie supérieure du robot Poppy Humanoid (13 articulations). Poppy Torso est donc plus abordable qu'un Poppy Humanoid. Ce robot offre une solution plus adaptée aux besoins de l'éducation, des associations et des bricoleurs. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
+C'est la partie supérieure du robot Poppy Humanoid (13 articulations). Poppy Torso est donc plus abordable qu'un Poppy Humanoid. Ce robot offre une solution plus adaptée aux besoins de l'éducation, des associations et des bricoleurs. Poppy Torso peut être un bon moyen pour apprendre les sciences, les technologies de l'information, l’ingénierie et les mathématiques (STIM).
 
-You can get all the parts yourself following the [bill of material](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). The [3D models](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) for the parts are the same as Poppy Humanoid, without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/).
+Vous pouvez vous procurez toutes les pièces en suivant [la nomenclature](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). Les [modèles 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) pour les pièces sont les mêmes que pour Poppy Humanoid, mais sans les jambes et avec un [support ventouse](https://github.com/poppy-project/robot-support-toolbox/) en plus.
 
 ![Poppy Torso Vecto](../img/torso/vecto.png)
 
-### Other interesting Poppy Creatures
+### Autres créatures Poppy intéressantes
 
-A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.
+Un aspect clé du projet Poppy est de stimuler la créativité et l’expérimentation autour de la robotique. Nous essayons de fournir tous les outils nécessaires pour concevoir de nouveaux robots basées sur les mêmes briques technologiques. Quelques nouvelles créatures sont en développement au sein de la communauté. Certaines d'entre elles sont illustrées ci-dessous.
 
-#### Poppy right arm (work in progress)
+#### Poppy bras droit (travail en cours)
 
-Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.
+Poppy bras droit est une créature Poppy basé sur le bras droit du robot Poppy Humanoid, avec 3 moteurs XL-320 supplémentaires pour améliorer la portée et l'agitilité du bras. Il utilise le même outil de préhension utilisé par l’Ergo Jr, conçu pour attraper des objets simples.
 
-<img src="../img/poppy-right-arm.jpg" alt="Poppy Right Arm" height="400" />
+<img src="../img/poppy-right-arm.jpg" alt="Poppy bras droit" height="400" />
 
-The project was realized during an internship at Inria Flowers by [Joel Ortiz Sosa](https://github.com/joelortizsosa). Find more info and the sources in the [repository](https://github.com/poppy-project/poppy-6dof-right-arm).
+Le projet a été réalisé lors d’un stage au sein de l'équipe Flowers de l'Inria par [Joel Ortiz Sosa](https://github.com/joelortizsosa). Pour plus d'informations et les sources jetez un coup d'oeil au [répertoire](https://github.com/poppy-project/poppy-6dof-right-arm).
 
-#### Small and low-cost humanoids
+#### Des Humanoid plus petits et moins chers
 
 ##### Heol
 
-Heol - meaning "sun" in Breton - is a 34cm tall humanoid robot made by the association [Heol robotics](http://heol.io/). 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.
+Heol - « soleil » en Breton - est un robot humanoïde haut de 34cm fait par l’association [Heol robotique](http://heol.io/). Composé de 23 moteurs, toutes les autres pièces sont imprimés en 3D. Il utilise également la bibliothèque pypot pour ses mouvements.
 
-Heol's purpose is to put a smile on ill children's faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.
+Le but de Heol est de donner le sourire aux enfants malades. Il peut être un outil pédagogique en devenant une plateforme d'apprentissage pour la conception mécanique et de programmation.
 
-Its participation in the RoboCup (World Cup football for robot) is also envisaged.
+Sa participation à la RoboCup (coupe du monde de football pour robots) est également envisagée.
 
 ![Heol](../img/heol.jpg)
 
 ##### [Poppyrate](http://www.poppyrate.com/)
 
-It a robot based on Poppy Humanoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customizable as possible while maintaining compatibility with Poppy software.
+C'est un robot basé sur le Poppy Humanoid. Il vise à développer une version plus abordable grâce à sa petite taille et l’utilisation de moteurs encore moins chers. La réduction de la taille rend également plus facile l'impression des pièces avec une imprimante 3D standard. L'objectif donné est de rendre le robot aussi mobile et customisable que possible tout en maintenant sa compatibilité avec la plateforme Poppy.
 
-Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the society ZeCloud.
+Poppyrate sera vendu en kit (avec ou sans les pièces 3D). Il a été conçu par l'entreprise ZeCloud.
 
 ![Poppyrate](../img/poppyrate.jpg)
 
-For more information, check their [Website](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!
+Pour plus d’informations, consultez leur [site Web](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/) !
