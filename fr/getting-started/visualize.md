@@ -36,48 +36,48 @@ Pour commencer à contrôler un robot Poppy, que ce soit en utilisant V-REP ou l
 
 Tous les principaux robots Poppy sont disponibles dans V-REP : * Poppy Humanoid * Poppy Torso * Poppy Ergo Jr
 
-V-REP permet d’apprendre à commander les moteurs, interroger les capteurs, mais aussi d’interagir avec l’environnement simulé. It can be controlled using Python, Snap_!_ or through the REST API. Here, are some examples of what the community has already been doing with it: * A pedagogical activity to discover the different motor of your robot and how they can be controlled. * A scientific experiment, where a Poppy Torso is learning how to push a cube on a table in front of it
+V-REP permet d’apprendre à commander les moteurs, interroger les capteurs, mais aussi d’interagir avec l’environnement simulé. On peut commander les robots simulés en Python, avec Snap_ ! _ ou par le biais de l’API REST. Voici quelques exemples de ce que la communauté a déjà pu faire avec : * Une activité pédagogique pour découvrir les différents moteurs de votre robot et comment ils peuvent être contrôlés. * Une expérience scientifique, où un Poppy Torso apprend comment pousser un cube sur une table en face de lui.
 
 ![Torso V-REP](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
 
-> **Note** Even if we try, to reproduce the robot behavior and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).
+> **Pour information** Même si nous essayons de reproduire le comportement et le fonctionnement du robot, quelques différences persistent. Par exemple, si vous faites marcher un robot dans la simulation, cela ne veut pas dire que le robot physique marchera (et vice-versa).
 
-To start the simulated robot, first open V-REP and instantiate you robot with `simulator='vrep'` argument. V-REP will open a popup that you will have to close to enable to communication between V-REP and Python.
+Pour démarrer le robot simulé, il faut dans un premier temps ouvrir V-REP et instancier le robot avec `simulateur = « vrep »`. V-REP va ouvrir une popup qui vous devrez fermer pour permettre la communication entre V-REP et Python.
 
 ```python
 from pypot.creatures import PoppyErgoJr
 robot = PoppyErgoJr(simulator='vrep')
 ```
 
-If you want to control a simulated robot from Snap, you can also start it directly from the command line interface `poppy-services` in your terminal (called command prompt on Windows):
+Si vous souhaitez contrôler un robot simulé via Snap!, vous pouvez également le lancer directement depuis l' interface de ligne de commande `poppy-services` dans votre terminal (appelée invite de commande sous Windows) :
 
 ```bash
 poppy-services --vrep --snap poppy-ergo-jr
 ```
 
-## Using our web visualizer
+## En utilisant notre visualiseur web
 
-Our web visualizer will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot.
+Notre visualiseur web permet d'afficher une représentation 3D d’un robot Poppy. Pour ce faire, vous aurez besoin de le connecter soit à un vrai robot (via l’API REST) soit à un robot simulé sur votre ordinateur. Vous devez simplement définir la variable host depuis l’interface web pour pointer sur l’adresse de votre robot.
 
-![Poppy Simu Presentation](../img/visu/presentation.png)
+![Présentation Simu Poppy](../img/visu/presentation.png)
 
-In Python, you can start the mockup robot with:
+En Python, vous pouvez démarrer le robot simulé avec :
 
 ```python
 from pypot.creatures import PoppyErgoJr
 robot = PoppyErgoJr(simulator='poppy-simu')
 ```
 
-Add a `use_snap=True` argument if you want to start Snap API.
+Ajouter un argument `use_snap = True` si vous souhaitez démarrer l'API Snap.
 
-If you want to use command the mockup robot from Snap, you can also start it directly from the command line interface `poppy-services` in your terminal (called command prompt on Windows):
+Si vous souhaitez contrôler un robot simulé avec Snap!, vous pouvez également le lancer directement avec l'outil interactif `poppy-services` dans un terminal (appelée ligne de commande sous Windows) :
 
 ```bash
 poppy-services --poppy-simu --snap poppy-ergo-jr
 ```
 
-As for V-REP, you can control your robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
+En ce qui concerne V-REP, vous pouvez contrôler votre robot en utilisant Python, Snap!, ou l’API REST. Cependant il n’y a pas de support pour la simulation physique; c'est plus léger en terme d'exécution mais vous ne serez pas en mesure d’interagir avec des objets.
 
-Here is an example with Python:
+Voici un exemple avec Python :
 
-![Poppy Visu with Python](../img/visu/python-setup.gif)
+![Poppy simu en Python](../img/visu/python-setup.gif)
