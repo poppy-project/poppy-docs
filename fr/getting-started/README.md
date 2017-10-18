@@ -1,46 +1,46 @@
-# Getting Started
+# Premiers pas
 
-![Poppy Logo](../img/logo/poppy.png)
+![Logo Poppy](../img/logo/poppy.png)
 
-[Le projet de Poppy](https://www.poppy-project.org/) est une plate-forme open-source pour la création, l'utilisation et le partage de robots interactifs imprimés en 3D. Il rassemble une communauté interdisciplinaire de débutants, d'experts, de chercheurs, d'enseignants, de développeurs et d'artistes. They all share a vision: robots are powerful tools to learn and be creative, and they collaborate to improve the project. They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve software or even create new robots.
+[Le projet de Poppy](https://www.poppy-project.org/) est une plate-forme open-source pour la création, l'utilisation et le partage de robots interactifs imprimés en 3D. Il rassemble une communauté interdisciplinaire de débutants, d'experts, de chercheurs, d'enseignants, de développeurs et d'artistes. Ils partagent tous une même vision : les robots sont de puissants outils pour apprendre et développer la créativité, et ils collaborent pour améliorer le projet. Ils développent de nouveaux comportements pour les robots, créent des contenus pédagogiques, élaborent des performances artistiques, améliorent le logiciel ou même conçoivent de nouveaux robots.
 
-The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and use.
+La [communauté Poppy](https://forum.poppy-project.org/) développe des créations robotiques qui sont faciles à construire, personnaliser et utiliser.
 
-We promote open-source by sharing hardware and software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
+Un ensemble de services web permet à la communauté de partager leurs expériences et de contribuer à l'amélioration de la plateforme Poppy.
 
-To ease these exchanges two supports are available:
+Pour faciliter ces échanges, deux supports sont disponibles :
 
-* [The poppy-project forum](https://forum.poppy-project.org/) for help, discussions and sharing ideas.
-* [GitHub](https://github.com/poppy-project) to submit your contributions.
+* [Le forum de projet Poppy](https://forum.poppy-project.org/) pour avoir de l'aide, partager ses idées et en discuter.
+* [GitHub](https://github.com/poppy-project) pour soumettre vos contributions et faire un suivi des bugs logiciels.
 
-All sources of the Poppy Project (software and hardware) are available on [GitHub](https://github.com/poppy-project).
+Toutes les sources du projet Poppy (logiciel et matériel) sont disponibles sur [ GitHub](https://github.com/poppy-project).
 
-The Poppy project has been originally designed at [Inria Flowers](http://www.inria.fr/equipes/flowers/).
+Le projet Poppy a été conçu initialement à [ Inria dans l'équipe Flowers](http://www.inria.fr/equipes/flowers/).
 
-## The Poppy creatures
+## Les robots Poppy
 
-Poppy creatures are open-source robots, available for download and modification ([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) for the hardware and [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) for the software). They were all designed with the same principles in mind.
+Les robots Poppy sont open source et libre. Leur sources sont disponible librement, il est possible de les modifier et de les redistribuer selon les termes prévus par leur licenses. Les pièces matérielles (carte électronique et modélisation 3D) sont sous license ([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) et le logiciel [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html). Ils ont été tous conçus selon les même principes.
 
-All Poppy creatures:
+Les robots Poppy:
 
-* are made from pieces of printable 3D and Dynamixel motors,
-* use an embedded board for control (a Raspberry Pi or Odroid for older versions),
-* are based on a Python library, [pypot](../software-libraries/pypot.md), allowing to control Dynamixel servomotors in an easy way,
-* have a simulated version available (based on [V-REP](http://www.coppeliarobotics.com)),
-* can be controlled using a visual programming language ([Snap!](http://snap.berkeley.edu) a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language,
-* come with associated documentation, tutorials, examples, pedagogical activities.
+* sont fabriqués à partir de pièces imprimable en 3D et des servomoteurs Dynamixel,
+* utilisent un ordinateur embarqué (Raspberry Pi ou Odroid pour les anciennes versions),
+* fonctionnent avec une bibliothèque logicielle en Python, [pypot](../software-libraries/pypot.md), qui permet de contrôler les servomoteurs Dynamixel simplement,
+* sont également contrôlable avec les même outils dans un simulateur ([V-REP](http://www.coppeliarobotics.com)),
+* peuvent être contrôlé à l’aide d’un langage de programmation visuel ([Snap !](http://snap.berkeley.edu) une variante de Scratch) et un langage textuel [Python](https://www.python.org). Ils sont également programmables via une API REST, ce qui permet se s'interfacer avec d'autres languages de programmation
+* viennent avec un documentation associée, des tutoriels, des exemples et des activités pédagogiques.
 
-They can be used as it is, or hacked to explore new shapes, add sensors, etc...
+Ils peuvent être utilisés comme tels quels ou hackés (au sens de bidouillé) pour explorer de nouvelles formes, ajouter des capteurs, etc...
 
-To get your own Poppy robot, you can either: * Get all the parts yourself by following the bill of materials (see below). * Buy a full Poppy robotic kit from our [official retailer, Generation Robots](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
+Pour obtenir votre propre robot Poppy, vous pouvez soit : * vous procurer toutes les pièces en suivant la liste du matériel (voir ci-dessous). * Acheter un des robots Poppy en kit complet chez notre [ revendeur officiel, Génération Robots](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
 
 ### Poppy Ergo Jr
 
-The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with simple 3D-printed parts.
+Le robot Poppy Ergo Jr est un petit bras robot à faible coût avec dôté de 6 articulations. Il est fait de 6 moteurs peu cher (XL-320 servomoteurs Dynamixel servos) avec des pièces simples imprimés 3D.
 
 ![Poppy Ergo Jr](../assembly-guides/ergo-jr/img/ErgoJr.jpg)
 
-The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20€ each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.
+Les pièces 3D ont été conçues pour être facilement imprimable sur une imprimante 3D basique. The motors are only 20€ each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.
 
 You can choose among three tools at the end of its arm:
 
