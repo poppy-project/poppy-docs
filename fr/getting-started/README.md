@@ -42,33 +42,33 @@ Le robot Poppy Ergo Jr est un petit bras robot à faible coût avec dôté de 6 
 
 Les pièces 3D ont été conçues pour être facilement imprimable sur une imprimante 3D basique. Les moteurs coûtent seulement 20€ chacun. L'accès à sa carte électronique est simple. Elle facilite la connexion des capteurs supplémentaires et est bien adaptée à des fins pédagogiques.
 
-You can choose among three tools at the end of its arm:
+Vous pouvez choisir parmi trois outils à la fin de son bras :
 
-* A lamp.
-* A gripper.
-* A pen holder.
+* Un abat-jour.
+* Une pince.
+* Un porte stylo.
 
-The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.
+Les rivets utilisés rendent le changement d'outil simple à faire. Vous pouvez l’adapter selon le type d’activités que vous faites.
 
-![Ergo Jr tools](../assembly-guides/ergo-jr/img/ergo_tools.gif)
+![Outils pour Ergo Jr](../assembly-guides/ergo-jr/img/ergo_tools.gif)
 
-The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.
+Poppy Ergo Jr est le robot idéal pour apprendre la robotique sans difficultés : assemblage simple, facile à contrôler et à un prix abordable.
 
-You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) (BOM) and print the [3D parts](https://github.com/poppy-project/poppy-ergo-jr/releases/) available in the STL format.
+Vous pouvez vous procurez toutes les pièces en suivant [la nomenclature](https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md) (BOM) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-ergo-jr/releases/) disponible au format STL.
 
-For more information, check the [assembly guide of the Ergo Jr](../assembly-guides/ergo-jr/README.md).
+Pour plus d'informations, jetez un coup d'oeil au [guide d'assemblage de l'Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
 ### Poppy Humanoid
 
-It is a 25-degrees of freedom humanoid robot with a fully actuated vertebral column. It is used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.
+C’est un robot humanoïde composé de 25 articulations avec une colonne vertébrale entièrement actionnée. Il est utilisé pour l'éducation, la recherche (étude de la marche, l’interaction Homme-robot) ou encore pour des performances artistiques. D'un bras au robot complet, cette plateforme est activement utilisée dans les laboratoires, les écoles d'ingénieur, les fablabs et les projets artistiques.
 
-You can get all the parts yourself following the [bill of materials](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) (BOM) and print the [3D parts](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) available as STL, STEP and Solidworks 2014 format.
+Vous pouvez vous procurez toutes les pièces en suivant [la nomenclature](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) (BOM) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) disponible au format STL.
 
 ![Poppy Humanoid Vecto](../img/humanoid/vecto.png)
 
 ### Poppy Torso
 
-It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
+C'est la partie supérieure du robot Poppy Humanoid (13 articulations). Poppy Torso est donc plus abordable qu'un Poppy Humanoid. Ce robot offre une solution plus adaptée aux besoins de l'éducation, des associations et des bricoleurs. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
 
 You can get all the parts yourself following the [bill of material](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). The [3D models](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) for the parts are the same as Poppy Humanoid, without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/).
 
