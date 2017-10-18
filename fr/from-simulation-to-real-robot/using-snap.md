@@ -1,3 +1,3 @@
-## Using Snap_!_
+## Avec Snap_!_
 
-> **Caution** This page is not currently written. Your help is welcome to fulfill it !
+> **Attention** Cette page est encore vierge. Votre aide est nécessaire pour la remplir !
