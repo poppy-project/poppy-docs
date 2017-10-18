@@ -8,13 +8,13 @@ Les robots Poppy sont équipés d'une carte embarquée (exemple : Raspberry Pi, 
 
 Il existe deux façons de configurer la carte pour votre robot Poppy: * [**la manière simple**](#easy-and-recommended-way-use-the-poppy-sdcard) : utilisez une image préprogrammée du système d'exploitation Poppy et écrivez-la (installez-la) sur la carte SD* [**la manière difficile pour les utilisateurs avancés**](#advanced-way-diy-install-everything-from-scratch) : installez tout à partir de zéro
 
-> **Note** If you are planning to use a simulated robot, you must install the software on your personal computer. Follow the [instructions for setting up the simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+> **Note** Si vous envisagez d'utiliser un robot simulé (robot virtuel), vous devez installer le logiciel sur votre ordinateur personnel. Suivez les [instructions pour le paramétrage de la simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
-### Easy and recommended way: use the Poppy SD-card
+### Manière simple et recommandée : utiliser la carte SD Poppy
 
-The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.
+Le moyen le plus simple et le plus rapide - de loin - est d'utiliser une image système déjà créée pour une carte SD. Les images ISO contiennent tous les éléments pré-installés pour votre robot Poppy. C'est aussi un bon moyen de s'assurer que vous utilisez exactement le même logiciel que nous. Ainsi, vous éviterez la plupart des problèmes.
 
-> **Note** Poppy robotic kits come with a ready to use SD-card. So, you do not have anything special to do.
+> **Note** Les kits robotiques Poppy sont livrés avec une carte SD prête à l'emploi. Donc, vous n'avez rien de spécial à faire.
 
 The images can be found in the release of each creatures:
 
