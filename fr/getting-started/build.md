@@ -41,7 +41,7 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 - assemble the horn on each motors: **you will have to be really cautious about the motor zero position!**
 - configure the motors so they match the *poppy configuration*
 - use a lot of screws to connect all 3D printed parts to the motors
-- do a bit of electronic for the embedded board inside the head: this can be a bit tricky if you are not familiar with electronics.
+- faire un peu d'électronique pour la carte embarquée au niveau de la tête : cela peut se révéler un peu difficile si vous n'êtes pas familier avec cette discipline.
 
 **Patience and precision** are your allies, but in case of errors do not panic: Poppy is a robot intended to be assembled and disassembled. If you pay attention to the few **warnings** bellows, and with a few trials and errors you will have a working Poppy Torso or Poppy Humanoid:
 
