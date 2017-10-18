@@ -1,8 +1,8 @@
-This section will provide step by step documentation of various libraries used in Poppy robots.
+Cette section fournira la documentation étape par étape des différentes bibliothèques utilisées pour les robots Poppy.
 
-- [Assemble the Ergo Jr](ergo-jr/README.md) 
-    - [Electronic assembly](ergo-jr/electronic-assembly.md)
-    - [Motor configuration](ergo-jr/motor-configuration.md)
-    - [Hardware construction](ergo-jr/mechanical-construction.md)
-- [Assemble the Poppy Humanoid](poppy-humanoid/README.md)
-- [Assemble the Poppy Torso](poppy-torso/README.md)
+- [Assembler l’Ergo Jr](ergo-jr/README.md) 
+    - [Assemblage électronique](ergo-jr/electronic-assembly.md)
+    - [Configuration des moteurs](ergo-jr/motor-configuration.md)
+    - [Assemblage des pièces mécaniques](ergo-jr/mechanical-construction.md)
+- [Assembler Poppy Humanoid](poppy-humanoid/README.md)
+- [Assembler Poppy Torso](poppy-torso/README.md)
