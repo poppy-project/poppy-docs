@@ -1,14 +1,14 @@
-# Visualize the robot in a simulator
+# Utiliser les robots dans un simulateur
 
-## Simulated Poppy Creatures
+## Robots Poppy simulés
 
-Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are available.
+Une version simulée de chaque robot Poppy est disponible (Humanoid, Torso, Ergo Jr).
 
-Connection with two main "simulators" were developed: * using [V-REP](http://www.coppeliarobotics.com): a virtual robot experimentation platform * using [a 3D web viewer](http://simu.poppy-project.org): lighter but without physics support
+On peut utiliser deux « simulateurs » avec les robots Poppy : * [ V-REP](http://www.coppeliarobotics.com) : un simulateur de robotique avec de nombreuses possibilités et très utilisé * [ un visualisateur web-3D](http://simu.poppy-project.org) : plus léger, mais sans simulation physique
 
-> **Caution** At the moment, only the Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP. Support for the other robots is planned but not expected in the near future.
+> **Attention** Pour le moment seul l'Ergo Jr peut être utilisé dans le visualiseur web. Si vous souhaitez simuler d’autres créatures, vous devez utiliser V-REP. On souhaiterai prendre en charges les autres robots, mais aucun calendrier n'est fixé sur ce point là.
 
-We think simulation can be a powerful tool. It allows the development and test of programs without the need of having a real robot. This is especially useful:
+L'utilisation d'un simulateur est très intéressante. Cela permet de développer et d'essayer des programmes sans avoir besoin d'un vrai robot. Plus particulièrement, cela permet :
 
 * To discover and try the robot possibilities without having to spend real money.
 * In a context where multiple users share a robot. For instance in a classroom where each group can work using the simulator and validate their program on a real robot.
