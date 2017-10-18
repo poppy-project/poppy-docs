@@ -34,15 +34,15 @@ La manière avancée consiste principalement à installer tout ce qui est néces
 * vous voulez personnaliser l'environnement,
 * ou si vous voulez tout simplement comprendre comment ça fonctionne.
 
-> **Caution** We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.
+> **Attention** Nous essayons de garder cette procédure d'installation aussi générique que possible. Pourtant, certains détails peuvent varier selon votre système d'exploitation ou votre ordinateur. En outre, l'installation à partir de zéro exige une bonne connaissance de comment installer et configurer un environnement python.
 
-Depending on what you want to do all steps are not necessary required. In particular, if you want to control a simulated robot, you may just want to install the python libraries for Poppy.
+Selon ce que vous voulez faire, toutes les étapes ne sont pas nécessaires. En particulier, si vous souhaitez contrôler un robot simulé, vous pouvez simplement installer les bibliothèques python pour Poppy.
 
-> **Info** More details can be found in the [Installation for advanced users section](../installation/README.md).
+> **Information** Plus de détails peuvent être trouvés dans la section [ Installation pour utilisateurs avancés](../installation/README.md).
 
-### Setup the network
+### Configuration du réseau
 
-Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it.
+Une fois que votre Poppy est assemblé et son logiciel est prêt, l'étape suivante consiste à le connecter à un réseau. L'objectif est de vous permettre d'accéder à distance au robot à partir de votre ordinateur ou votre smartphone / tablette, le contrôler et le programmer.
 
 They are two main ways to connect your robot to your computer/tablet/smartphone: * Connect both the robot and the computer to the same network (e.g. the box of your home or the school network). * Directly connect your robot to your computer using an ethernet cable.
 
