@@ -44,33 +44,33 @@ Selon ce que vous voulez faire, toutes les étapes ne sont pas nécessaires. En 
 
 Une fois que votre Poppy est assemblé et son logiciel est prêt, l'étape suivante consiste à le connecter à un réseau. L'objectif est de vous permettre d'accéder à distance au robot à partir de votre ordinateur ou votre smartphone / tablette, le contrôler et le programmer.
 
-They are two main ways to connect your robot to your computer/tablet/smartphone: * Connect both the robot and the computer to the same network (e.g. the box of your home or the school network). * Directly connect your robot to your computer using an ethernet cable.
+Il y a deux façons principales de connecter votre robot à votre ordinateur / tablette / smartphone : * Connectez à la fois le robot et l'ordinateur au même réseau (par exemple, la box internet de votre maison ou le réseau de l'école). * Connectez directement votre robot à votre ordinateur à l'aide d'un câble Ethernet.
 
-> **Caution** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work.
+> **Attention** alors que la deuxième façon (brancher directement le robot sur votre ordinateur) fonctionne pour la plupart des utilisateurs. Il semble que dans certains cas étranges, cela ne fonctionne pas.
 
-To find the address of your robot on the network, we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows. If you prefer, you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
+Pour trouver l'adresse de votre robot sur le réseau, nous utilisons le protocole Zeroconf</ 0>. Il vous permet d'utiliser le nom d'hôte du robot: *"poppy.local"* comme adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais il faudra installer les[*services d'impression Bonjour pour*](https://support.apple.com/kb/DL999) Windows. Si vous préférez, vous pouvez utiliser l'adresse IP attribuée à votre robot à la place. Si vous n'êtes pas l'administrateur de votre réseau, cela peut être une information difficile à trouver. Dans ce cas, la première procédure devrait être privilégiée.</p> 
 
-To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot (something similar as http://192.168.0.42).
+Pour vérifier que tout est correctement configuré, vous pouvez accéder à l'url suivante en utilisant votre navigateur Web préféré: [http://poppy.local/](http://poppy.local). Vous pouvez remplacer *poppy.local* par l'adresse IP de votre robot (quelque chose de similaire à http://192.168.0.42).
 
-> **Caution** If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.
+> **Attention** Si vous n'êtes pas familier avec la configuration du réseau ou si vous n'avez aucune idée de ce que le paragraphe précédent a mal essayer d'expliquer, vous devriez voir avec l'ingénieur du réseau informatique, comment cela peut être fait.
 
-### Use the web interface
+### Utiliser l'interface web
 
-The web interface is the central point to control, program and configure your robot. It can be used to: * Monitor and Control the robot * Program it in [Snap!](http://snap.berkeley.edu) * Program it in [Python](https://www.python.org) * Configure the robot (change its name, enable/disable the camera, update) * Reset and shutdown the robot
+L'interface web est le point central pour contrôler, programmer et configurer votre robot. Il peut être utilisé pour: * Surveiller et contrôler le robot * Programmer le robot en [Snap!](http://snap.berkeley.edu) * Programmer le robot en [Python](https://www.python.org) * Configurer le robot (changer son nom, activer/désactiver la caméra, faire une mise à jour) * Réinitialiser et éteindre le robot
 
-To access this interface, you simply have to go to the URL using your favorite web browser:
+Pour accéder à cette interface web, il vous suffit d'accéder à l'URL à l'aide de votre navigateur Web préféré :
 
-* http://poppy.local (if you changed the name of your robot, simply replace *poppy* by its new name)
-* or using directly its IP address
+* http://poppy.local (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
+* ou en utilisant directement l'adresse IP du robot
 
-You should see something like:
+Vous devriez voir quelque chose comme :
 
-![Home Page](../img/poppy_home.png) The buttons can be used to navigate to the different features. For instance, if you click on the *Monitor and Control*, you will access the monitor web app:
+![Page d'accueil](../img/poppy_home.png) Les boutons permettent d'accéder aux différentes fonctionnalités. Par exemple, si vous cliquez sur *Monitor and Control*, vous accédez à l'application web du moniteur :
 
-![Monitor interface](../img/poppy_monitor.png)
+![Interface du moniteur](../img/poppy_monitor.png)
 
-This let you turn on/off the motors of your robot, monitor them, and start/stop behaviors.
+Cela vous permet d’activer / désactiver les moteurs de votre robot, de les surveiller et de commencer / arrêter les comportements.
 
-The *What happened* button is where you should look for more information is something goes wrong. Here is a screenshot of what you should see if everything goes well:
+Le bouton *What happened* c'est où vous devriez regarder pour plus d'informations si quelque chose qui ne va pas. Voici une capture d'écran de ce que vous devriez voir si tout va bien :
 
-![Screenshot of the web log interface](../img/web-logs.png)
+![Capture d'écran du rapport d'erreur](../img/web-logs.png)
