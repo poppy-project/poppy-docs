@@ -1,3 +1,3 @@
 # Use the REST API to control a Poppy Robot
 
-> **Caution** This page is not currently written. Your help is welcome to fulfill it !
+> **Attention** Cette page est encore vierge. Votre aide est nécessaire pour la remplir !
