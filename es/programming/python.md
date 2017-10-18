@@ -457,10 +457,10 @@ To do that, we will free the two first motors, so they can be moved by hand. Two
 
 We need few simple steps:
 
-  1. read values from sensors (here the two free motors)
-  2. compute command from those readings
-  3. set new motor command
-  4. go back to step 1.
+1. read values from sensors (here the two free motors)
+2. compute command from those readings
+3. set new motor command
+4. go back to step 1.
 
 > **Note** This example is designed for the Ergo Jr. It could be adapted to other Poppy robots, by changing the motors used. Yet, it is not that obvious which one to use to have a "cool" result.
 
