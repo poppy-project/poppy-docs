@@ -43,23 +43,23 @@ Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is no
 - use a lot of screws to connect all 3D printed parts to the motors
 - faire un peu d'électronique pour la carte embarquée au niveau de la tête : cela peut se révéler un peu difficile si vous n'êtes pas familier avec cette discipline.
 
-**Patience and precision** are your allies, but in case of errors do not panic: Poppy is a robot intended to be assembled and disassembled. If you pay attention to the few **warnings** bellows, and with a few trials and errors you will have a working Poppy Torso or Poppy Humanoid:
+**La patience et la précision** sont vos meilleurs atouts, mais en cas d'erreurs, pas de panique : les robots Poppy sont faits pour être montés et démontés. Si vous faites attention des **mises en garde** suivantes, après quelques essais/erreurs vous aurez un Poppy Torso ou Humanoid en état de marche :
 
-*Warning 1: The Poppy humanoid and torso robots are built using mainly MX-28 and MX-64 Dynamixel servomotors. They are pretty powerful and may be harmful to your fingers or materials. So be very careful and put the robot in a free space while testing it!*
+*Mise en garde 1 : Les robots Poppy Humanoid ou Torso fonctionnent principalement avec des servomoteurs Dynamixel MX-28 et MX-64. Ils sont plutôt puissants et peuvent être dangereux si l'on s'y coince les doigts. Donc soyez prudent et mettez le robot dans un environnement dégagé pendant que vous le testez !*
 
-*Warning 2: Put the dot on the horn at the same point than the dot on the servo axis.*
+*Mise en garde 2 : Alignez le palonnier avec le repère sur l'axe du servomoteur.*
 
-<img src="../img/humanoid/horn.jpg" alt="horn" style="height: 350px;" /><img src="../img/humanoid/axe.jpg" alt="axe" style="height: 350px;" />
+<img src="../img/humanoid/horn.jpg" alt="palonnier" style="height: 350px;" /><img src="../img/humanoid/axe.jpg" alt="axe" style="height: 350px;" />
 
-*Warning 3: Adjusts the three dots of the motors with the three dots of the structural part.*
+*Mise en garde 3 : Ajustez les trois repères du palonnier avec les trois repères de la pièce 3D.*
 
 ![](../img/humanoid/three_dots.jpg)
 
-*Warning 4: Use thread locker to prevent vibrations from untying the screws. However, dipping the extremity of the screw on the thread locker is enough (a drop for each screw hole is too much). Otherwise disassembling your robot can be very hard!*
+*Mise en garde 4 : Utilisez du frein filet pour éviter le déliement des vis dues aux vibrations. Cependant, poser l'extrémité de la vis sur le frein filet est amplement suffisant. **Si vous mettez trop de frein filet vous risquez de coller définitivement vos vis et rendre très compliqué tout démontage !***
 
 <!-- TODO: Add directly the youtube playlist of poppy torso and humanoid-->
 
-**Step by step guide for the asssembly :**
+**Guide d'assemblage pas-à-pas :**
 
 - [Guide pour Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md)
 - [Guide pour Poppy Torso](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md)
