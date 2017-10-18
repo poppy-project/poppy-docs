@@ -12,7 +12,7 @@ Snap_!_ is a visual programming language - a variant of the very famous Scratch 
 
 ![Example of Snap project using Poppy](../img/snap/presentation.png)
 
-We developed a set of custom blocks for Poppy robots that let you send motor commands and read values from the sensors of your robot. This let you to directly jump into controlling and programming your without any syntax/compilation issue. Thanks to Snap_!_ live interaction loop you simply have to click on a block to send its associated command to the robot. Snap_!_ also naturally scales to more complex projects.
+We developed a set of custom blocks for Poppy robots that let you send motor commands and read values from the sensors of your robot. This let you to directly jump into controlling and programming your robot without any syntax/compilation issue. Thanks to Snap_!_ live interaction loop you simply have to click on a block to send its associated command to the robot. Snap_!_ also naturally scales to more complex projects.
 
 A [dedicated chapter](../programming/snap.md) will guide you in what you can do with Snap_!_ and Poppy robots.
 
