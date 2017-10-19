@@ -22,27 +22,27 @@ Si les versions de * Visual C++ Redistributable 2010 * ou * Visual C++ Redistrib
 
 <!-- TODO -->
 
-> **Attention** Ce paragraphe n'est pas actuellement rédigé. Votre aide est la bienvenue !
+> **Attention** Ce paragraphe doit être complété. Votre aide est la bienvenue !
 
 ## Installation sous GNU/Linux
 
 <!-- TODO -->
 
-> **Caution** This paragraph is not currently written. Your help is welcome to fulfill it !
+> **Attention** Ce paragraphe doit être complété. Votre aide est la bienvenue !
 
-## Test your installation
+## Testez votre installation
 
-Open V-REP with a double click on the desktop icon. Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
+Ouvrez V-REP avec un double clic sur l'icône du bureau. Ouvrez l'invite de commande de votre distribution Python (appelée *Anaconda prompt* pour Anaconda) ou l'*Invite de commande* de Windows, tapez et validez en appuyant sur entrée pour exécuter la commande ci-dessous :
 
 ```bash
 poppy-services --snap --vrep --no-browser poppy-torso`
 ```
 
-After a one or two seconds, you will have an error like the picture below in your Command prompt. ![VREP_terminal](../img/vrep/vrep3_1.png)
+Après une ou deux secondes, vous devez avoir une erreur dans votre invite de commande comme le montre l'image ci-dessous. ![VREP_terminal](../img/vrep/vrep3_1.png)
 
-If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. **You have to check the check-box "Do not show this message again" and press "Ok".** ![VREP_checkbox](../img/vrep/vrep3_2.png)
+Si vous passez à la fenêtre V-REP, un popup apparaît pour vous informer que la simulation utilise des paramètres personnalisés. Cette popup bloque la communication vers l'API Python de V-Rep. **Vous devez vérifier que la case "Do not show this message again" est bien coché et appuyez sur "Ok".** ![VREP_checkbox](../img/vrep/vrep3_2.png)
 
-Switch the the command prompt window. You will have to execute the last command (`poppy-services --snap --vrep --no-browser poppy-torso`) and click again to the V-REP popup (with the check-box checked). **This process will have to be done *three times* to make it works well!**
+Revenez vers l'invite de commande Windows. You will have to execute the last command (`poppy-services --snap --vrep --no-browser poppy-torso`) and click again to the V-REP popup (with the check-box checked). **This process will have to be done *three times* to make it works well!**
 
 > **Info** To avoid retyping the same command again and again, you can press the up arrow key to call the last typed line.
 
