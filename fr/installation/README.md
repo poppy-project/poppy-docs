@@ -1,14 +1,14 @@
 # Installation
 
-Whatever you want to do, all section below suppose that you have a [Zeroconf client / Bonjour](install-zeroconf.md) installed on your computer. It is not mandatory but otherwise, you will be on your robot IP address.
+En fonction de ce que vous voulez faire, toutes les sections ci-dessous supposent que vous avez [ le client Zeroconf / Bonjour ](install-zeroconf.md) d'installé sur votre ordinateur. Ce n'est pas obligatoire mais autrement, vous devrez connaitre l'adresse IP de votre robot.
 
-Poppy project is vast, there are a lot of installation paths depending on what you want to do.
+Le projet Poppy est vaste, il y a beaucoup de possibilités de chemins d'installation en fonction de ce que vous voulez faire.
 
-## You want to install a tangible Poppy robot
+## Vous voulez installer un robot Poppy physique
 
-Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or an Odroid board. The operating system of this computer is hosted on a SD card (you can also use an MMC for the Odroid).
+Les robots Poppy sont contrôlées par un petit ordinateur embarqué : un Raspberry Pi ou une carte ODROID. Le système d'exploitation de ces ordinateurs est stocké sur une carte SD (vous pouvez également utiliser un contrôleur MMC pour la carte ODROID).
 
-You have two possible states: - **You already have a pre-burned SD card with the Poppy operating system (provided by Generation Robots). You have nothing to install, you are ready to go to the [assembly section](../assembly-guides/README.md).** This is the most common case. - You have an empty SD-card, so you have to [download](burn-an-image-file.md#download-the-image) and [write](burn-an-image-file.md#write-an-image-to-the-sd-card) the operating system on the SD card.
+Vous avez deux possibilités : -** vous avez déjà une carte SD préchargée avec le système d'exploitation Poppy (fourni par Generation Robots). You have nothing to install, you are ready to go to the [assembly section](../assembly-guides/README.md).** This is the most common case. - You have an empty SD-card, so you have to [download](burn-an-image-file.md#download-the-image) and [write](burn-an-image-file.md#write-an-image-to-the-sd-card) the operating system on the SD card.
 
 If you are a Linux rocky and want to try yourself our unstable install scripts, you can go the [*install a poppy board*](install-a-poppy-board.md) chapter.
 
