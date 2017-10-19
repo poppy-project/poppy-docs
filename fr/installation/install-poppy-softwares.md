@@ -88,27 +88,27 @@ Vous pouvez maintenant installer le logiciel Poppy pour la créature de votre ch
 
 Most of GNU/Linux distributions, have already a Python distribution installed by default, but if
 
-### Install Miniconda Python distribution
+### Installer la distribution Python Miniconda
 
-> **Info** Poppy software libraries work in Python 2.7 and Python 3.3+. If you have no ideas on which version to install, we suggest you to use Python 2.7 as we develop in this version.
+> **Info** Les bibliothèques logicielles Poppy fonctionnent avec Python 2.7 et Python 3.3 +. Si vous n’êtes pas sûr(e) de la version à installer, nous vous suggérons d’utiliser Python 2.7, car nous développons avec cette version.
 
-If you want to have up-to-date numpy, scipy and jupyter without having to compile them, we suggest you to install Anaconda or at least the conda package manager distributed with miniconda. Download miniconda (64-bit) with these command below in your terminal:
+If you want to have up-to-date numpy, scipy and jupyter without having to compile them, we suggest you to install Anaconda or at least the conda package manager distributed with miniconda. Téléchargez Miniconda (64-bit) avec les commandes ci-dessous dans votre terminal :
 
     curl -o miniconda.sh http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
     
 
-If you have a 32-bit computer
+Si vous avez un ordinateur 32 bits
 
-     curl -o miniconda.sh http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86.sh
-     ```
+     curl -o miniconda.sh http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86.sh 
+    ```
     
-    Execute commands below and follow the instructions to install miniconda:
+    Exécutez les commandes ci-dessous et suivez les instructions pour installer miniconda :
     
     
 
 chmod +x miniconda.sh ./miniconda.sh
 
-    <br />You can now install some required and other useful dependencies for Poppy software with conda:
+    <br />Vous pouvez maintenant installer quelques dépendances requises ou optionnelles pour le logiciel Poppy avec conda :
     
 
 conda install numpy scipy notebook jupyter matplotlib
