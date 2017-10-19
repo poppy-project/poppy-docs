@@ -42,19 +42,19 @@ Après une ou deux secondes, vous devez avoir une erreur dans votre invite de co
 
 Si vous passez à la fenêtre V-REP, un popup apparaît pour vous informer que la simulation utilise des paramètres personnalisés. Cette popup bloque la communication vers l'API Python de V-Rep. **Vous devez vérifier que la case "Do not show this message again" est bien coché et appuyez sur "Ok".** ![VREP_checkbox](../img/vrep/vrep3_2.png)
 
-Revenez vers l'invite de commande Windows. You will have to execute the last command (`poppy-services --snap --vrep --no-browser poppy-torso`) and click again to the V-REP popup (with the check-box checked). **This process will have to be done *three times* to make it works well!**
+Revenez vers l'invite de commande Windows. Vous devez répéter la dernière commande (`poppy-services --snap --vrep --no-browser poppy-torso`) et cliquez de nouveau sur la fenêtre popup V-REP (avec la case cochée). **Ce processus devra être répété *trois fois* pour que cela fonctionne bien !**
 
-> **Info** To avoid retyping the same command again and again, you can press the up arrow key to call the last typed line.
+> **Info** Pour vous éviter de retaper la même commande encore et encore, vous pouvez appuyer sur la flèche du haut du clavier pour appeler la dernière ligne entrée.
 
-When the setup of V-REP is ready, you can execute the last command without the "--no-browser" part.
+Lorsque la configuration de V-REP est finie, vous pouvez exécuter la dernière commande sans la dernière partie : "--no-browser".
 
     poppy-services --snap --vrep poppy-torso
     
 
-If you see a firewall popup like the picture below, be sure to check the "private network" check-box.
+Si vous voyez une fenêtre popup de votre pare-feu, comme l'image ci-dessous, assurez-vous de vérifier que "réseau privé" est coché.
 
-![firewall](../img/vrep/vrep4.png)
+![pare-feu](../img/vrep/vrep4.png)
 
-If everything works, a new tab have been opened on your default web-browser. <!-- TODO: lien doc --> You can program you robot in Snap_!_ or in Python.
+Si tout fonctionne bien, un nouvel onglet a été ouvert sur votre navigateur Web par défaut. <-TODO: lien doc-> Vous pouvez débuter la programmation de votre robot dans Snap_! _ ou en Python.
 
 ![jupyter notebook](../img/vrep/lucvincent/luc_vincent-070.jpg)
