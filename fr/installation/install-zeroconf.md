@@ -1,44 +1,44 @@
 # Zeroconf / Bonjour
 
-[Zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) also called Bonjour (name of Apple implementation) is set of technologies that allow more easily communication between computers without configuration.
+[Zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) également appelé Bonjour (nom donné par Apple) est un ensemble de technologies qui facilite la communication entre les ordinateurs sans configuration préalable.
 
-> **Info** Zeroconf is not mandatory on your computer to use Poppy robots, but we will assume it is installed. It is more convenient and readable for the documentation.
+> **Info** Zeroconf n'est pas obligatoire sur votre ordinateur pour faire fonctionner les robots Poppy, mais nous allons supposer qu'il est installé. C'est plus commode et plus lisible pour la documentation.
 
 ## Installation
 
 ### Windows
 
-You have to install **[Bonjour print services for Windows](https://support.apple.com/kb/DL999)** (yes, it is an Apple software).
+Vous devez installer les**[Services d'impression Bonjour pour Windows](https://support.apple.com/kb/DL999)** (Oui, c'est un logiciel Apple).
 
-If you already have installed an Apple Software like iTunes or QuickTime, Bonjour should be installed.
+Si vous avez déjà installé un logiciel de la marque Apple comme iTunes ou QuickTime, Bonjour doit déjà être installé.
 
-> **Warning** Times to times, even if Bonjour is already installed on your computer you can't connect directly to your Ergo Jr. To solve the issue, un-install and re-install Bonjour.
+> **Attention** Parfois, même si Bonjour est déjà installé sur votre ordinateur, vous ne pouvez pas vous connecter directement à votre Ergo Jr. Pour résoudre le problème, désinstallez et réinstallez Bonjour.
 
-### On GNU/Linux based operating systems
+### Sur les systèmes GNU/Linux
 
-On GNU/Linux, you have to install *avahi-daemon* (mDNS) and *avahi-autoipd* (IPv4LL), it may or may not be installed by default depending on your installation.
+Sur GNU/Linux, vous devez installer *avahi-daemon* (mDNS) et *avahi-autoipd* (IPv4LL), il peut ou ne peut pas être installé par défaut en fonction de votre installation.
 
-On Ubuntu/Debian, run
+Sous Ubuntu/Debian, exécutez
 
 ```bash
 sudo apt-get install avahi-daemon avahi-autoipd
 ```
 
-On Fedora / CentOS, run
+Sous Fedora / CentOS, exécutez
 
 ```bash
 sudo yum install avahi-daemon avahi-autoipd
 ```
 
-### Mac OSX
+### Sous MAC OSX
 
-Bonjour is already installed with OSX. Moreover, if you plan to connect your computer directly to the robot (without a router), use a Thunderbolt to Ethernet adapter rather than a USB to Ethernet
+Bonjour est déjà installé avec OSX. De plus, si vous prévoyez de connecter votre ordinateur directement au robot (sans routeur), utilisez un adaptateur Thunderbolt vers Ethernet plutôt qu'un adaptateur USB vers Ethernet
 
-You ready to follow your [installation path](README.md).
+Vous êtes prêt à continuer votre [parcours d’installation](README.md).
 
-## What Zeroconf does for you
+## Ce que Zeroconf fait pour vous
 
-### Local domain name (mDNS)
+### Nom de domaine local (mDNS)
 
 Zeroconf client *publishes* a decentralized local domain name (mDNS) with the '.local' top level domain. It means that you can join any local local computer by its hostname with the '.local' suffix instead of its IP address.
 
