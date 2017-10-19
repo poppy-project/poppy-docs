@@ -67,24 +67,24 @@ pip install poppy-creature --upgrade --no-deps
 pip install poppy-ergo-jr --upgrade --no-deps
 ```
 
-> **Info** To understand commands above - *--upgrade* will uninstall before starting the install - *--no-deps* will avoid installing dependencies, this is usefull to avoid pip to compile *scipy* as it will probably fail of you have not GCC and Fortran dependancies.
+> **Info** Pour comprendre les commandes ci-dessus - *--upgrade* désinstallera avant de commencer l’installation - *--no-deps* évitera d’installer les dépendances, c’est utile pour éviter à pip de compiler *scipy* car cela échouera si vous n'avez pas installé les dépendances GCC et Fortran.
 
-## Install Python and Poppy software on Mac OSX
+## Installer Python et les logiciels Poppy sous Mac OSX
 
-Mac OSX has a Python distribution installed by default. Before installing Poppy software, you need to install the Python package manager **pip**. Open a terminal copy and press enter to execute the command below:
+Mac OSX est livré avec une distribution Python installée par défaut. Avant d’installer le logiciel Poppy, vous devez installer le gestionnaire de paquets Python **pip**. Ouvrez un terminal, puis appuyez sur entrée pour exécuter la commande suivante :
 
     curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
     
 
-You can now install Poppy software for the creature of your choice:
+Vous pouvez maintenant installer le logiciel Poppy pour la créature de votre choix :
 
-> **Note** Substitute "poppy-ergo-jr" with "poppy-torso" or "poppy-humanoid" to install respectively a Poppy Torso or a Poppy Humanoid.
+> **Note** Remplacez « poppy-ergo-jr » par « poppy-torso » ou « poppy-humanoid » pour installer respectivement un Poppy Torso ou un Poppy Humanoid.
 
     pip install poppy-ergo-jr --upgrade
     
     
 
-## Install Python and Poppy software on GNU/Linux
+## Installer Python et les logiciels Poppy sous GNU/Linux
 
 Most of GNU/Linux distributions, have already a Python distribution installed by default, but if
 
