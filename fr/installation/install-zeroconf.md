@@ -40,24 +40,24 @@ Vous êtes prêt à continuer votre [parcours d’installation](README.md).
 
 ### Nom de domaine local (mDNS)
 
-Zeroconf client *publishes* a decentralized local domain name (mDNS) with the '.local' top level domain. It means that you can join any local local computer by its hostname with the '.local' suffix instead of its IP address.
+Le client Zeroconf *publie* un nom de domaine local décentralisé (mDNS) avec l'extension de domaine '. local'. Cela signifie que vous pouvez joindre n'importe quel ordinateur local par son nom d'hôte suivit du suffixe '. local' au lieu de son adresse IP.
 
-With a zeroconf client, to ```ping``` a computer called (hostname) 'ergojr', you can simply do:
+Avec un client Zeroconf, pour ```ping``` un ordinateur appelé (hostname) 'ergojr', vous pouvez simplement faire:
 
-    $ ping ergojr.local
-    64 bytes from 192.168.1.42: icmp_seq=0 ttl=54 time=3.14 ms
+    $ ping ergojr.local 
+    64 bytes from 192.168.1.42: icmp_seq=0 ttl=54 time=3.14 ms 
     [...]
     
 
-You no longer need to look for its IP address on your local network; you don't even need to understand what an IP address is.
+Vous n'avez plus besoin de rechercher une adresse IP sur votre réseau local; vous n'avez même pas besoin de comprendre ce qu'est une adresse IP.
 
-It also work on your web browser. To open the website hosted on the robot computer called 'ergojr', you have to open: http://ergojr.local on your favorite web browser URL field.
+Cela fonctionne également sur votre navigateur web. Pour ouvrir le site hébergé sur l'ordinateur du robot appelé 'ergojr', vous devez ouvrir : http://ergojr.local dans le champ URL de navigateur web préféré.
 
 ### Link-local IPv4 addresses (IPv4LL)
 
-Among other Zeroconf tools, there is an implementation of decentralized DHCP ([IPv4LL](https://en.wikipedia.org/wiki/Zero-configuration_networking#Link-local_IPv4_addresses)), which allow computers obtain an IP and connect each others **without** a DHCP server.
+Parmi les autres outils de Zeroconf, il existe une implémentation de DHCP décentralisé ([IPv4LL](https://en.wikipedia.org/wiki/Zero-configuration_networking#Link-local_IPv4_addresses)), qui permettent aux ordinateurs d'obtenir une adresse IP et de se connecter les uns aux autres **sans** aucun serveur DHCP.
 
-The auto-adressed IP is in the [APIPA](https://en.wikipedia.org/wiki/Link-local_address#IPv4) range, from 169.254.0.0 to 169.254.255.255.
+La gamme [APIPA](https://en.wikipedia.org/wiki/Link-local_address#IPv4) d'adresse IP automatique se trouve comprise entre 169.254.0.0 et 169.254.255.255.
 
 You can plug a robot to your computer **directly** on your computer with an Ethernet cable, **without** any router and connect it with its local domain name (hostname.local).
 
