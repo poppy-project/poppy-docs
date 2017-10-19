@@ -1,5 +1,5 @@
-# Appendix
+# Annexe
 
-- [Network trouble](network.md)
-- [How to contribute](contribute.md)
+- [Problème réseau](network.md)
+- [Comment contribuer](contribute.md)
 - [FAQ](faq.md)
