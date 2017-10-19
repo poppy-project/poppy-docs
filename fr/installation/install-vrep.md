@@ -2,9 +2,9 @@
 
 > **Info** Vous devez installer les [logiciels Poppy](install-poppy-softwares.md) avant d'installer l'outil de simulation robotique V-REP.
 
-[V-REP](http://www.coppeliarobotics.com) est un simulateur robotique efficace principalement Open source (GNU GPL), qui est distribué sous une licence gratuite pour les établissements scolaires et propose une licence commerciale pour les autres secteurs. Il existe également une version *PRO EVAL* qui limite les sauvegardes. As you don't need to backup the scene to use V-REP with pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement. If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the [educational license](http://www.coppeliarobotics.com/licensing-plugin-edu.html)).
+[V-REP](http://www.coppeliarobotics.com) est un simulateur robotique efficace principalement Open source (GNU GPL), qui est distribué sous une licence gratuite pour les établissements scolaires et propose une licence commerciale pour les autres secteurs. Il existe également une version *PRO EVAL* qui empêche seulement de sauvegarder. Vous n'avez pas besoin de sauvegarder la scène V-REP pour l'utiliser avec pypot (la bibliothèque Python conçue pour les créatures Poppy), nous vous suggérons donc d'installer cette version sans vous inquiéter d'éventuelles violations de droit d'auteur. Si vous souhaitez modifier la scène V-REP pour ajouter ou personnaliser une créature Poppy, vous devrez utiliser la version PRO ou la version EDU (voir la [ licence éducative ](http://www.coppeliarobotics.com/licensing-plugin-edu.html)).
 
-## Install V-REP on Windows
+## Installation de V-REP sous Windows
 
 [Télécharger V-REP](http://www.coppeliarobotics.com/downloads.html) PRO EVAL ou EDU (si vous êtes un établissement scolaire). V-REP n'étant pas signé, vous devrez valider la fenêtre popup SmartScreen (sur Windows 10) pour commencer l'installation. ![VREP_smartscreen](../img/vrep/vrep2.png)
 
