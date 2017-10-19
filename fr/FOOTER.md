@@ -1,3 +1,3 @@
-#### Questions ?
+#### Des questions ?
 
-We're always happy to help with code or other questions you might have! You can ask questions and share solutions on our [community Forum](https://forum.poppy-project.org).
+Nous sommes toujours heureux de vous aider sur un problème de programmation ou sur tout autre question que vous pourriez avoir ! N'hésitez pas à poser vos questions et partager des solutions sur notre [forum communautaire](https://forum.poppy-project.org).
