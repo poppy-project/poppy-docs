@@ -6,25 +6,25 @@
 
 ## Install V-REP on Windows
 
-[Download V-REP](http://www.coppeliarobotics.com/downloads.html) PRO EVAL or EDU (if you are an educational entity). As V-REP is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation. ![VREP_smartscreen](../img/vrep/vrep2.png)
+[Télécharger V-REP](http://www.coppeliarobotics.com/downloads.html) PRO EVAL ou EDU (si vous êtes un établissement scolaire). V-REP n'étant pas signé, vous devrez valider la fenêtre popup SmartScreen (sur Windows 10) pour commencer l'installation. ![VREP_smartscreen](../img/vrep/vrep2.png)
 
-During the installation, make sure to install *Visual C++ Redistributable 2010* and *Visual C++ Redistributable 2012*. ![cpp2010](../img/vrep/lucvincent/luc_vincent-056.png)
+Pendant l'installation, veillez à installer * Visual C++ Redistributable 2010 * et * Visual C++ Redistributable 2012 *. ![cpp2010](../img/vrep/lucvincent/luc_vincent-056.png)
 
 ![cpp2012](../img/vrep/lucvincent/luc_vincent-059.png)
 
-Even if you already have *Visual C++ Redistributable 2010* or *Visual C++ Redistributable 2012*, it is advised to "repair" them (it is a re-installation process).
+Si les versions de * Visual C++ Redistributable 2010 * ou * Visual C++ Redistributable 2012 * sont déjà présent sur votre ordinateur, il est conseillé de les "réparer" (il s'agit du processus de ré-installation).
 
 ![cpp2012](../img/vrep/lucvincent/luc_vincent-060.png)
 
-**After the installation you can [test if V-REP works well](#test-your-installation)**.
+**Après l'installation, vous pouvez[ réaliser un test pour vérifier si V-REP fonctionne bien ](#test-your-installation) **.
 
-## Install on MAC OSX
+## Installation sous MAC OSX
 
 <!-- TODO -->
 
-> **Caution** This paragraph is not currently written. Your help is welcome to fulfill it !
+> **Attention** Ce paragraphe n'est pas actuellement rédigé. Votre aide est la bienvenue !
 
-## Install on GNU/Linux
+## Installation sous GNU/Linux
 
 <!-- TODO -->
 
