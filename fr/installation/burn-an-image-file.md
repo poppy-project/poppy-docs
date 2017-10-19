@@ -53,8 +53,8 @@ sudo dd bs=4m if=poppy-ergojr.img of=/dev/rdisk2
 
 > **Info** La commande `dd` ne donne aucune information sur sa progression et donc peut donner l'impression d’être gelée ; cela peut prendre plus de cinq minutes pour terminer l'écriture de la carte. Pour voir l’état d’avancement de l’opération d'écriture, vous pouvez exécuter `sudo pkill -USR1 - n - x JJ` dans un autre terminal.
 
-- Run `sync`; this will ensure the write cache is flushed and that it is safe to unmount your SD card.
+- Exécuter la commande `sync` ; cela garantira que le cache d’écriture est vidé et qu’il est possible de démonter votre carte SD sans causer de corruption des données.
 
-- Remove the SD card from the card reader.
+- Retirez la carte SD du lecteur de carte.
 
-Now you are ready to [assemble your robot](../assembly-guides/ergo-jr.md)!
+Vous êtes maintenant prêt à [assembler votre robot](../assembly-guides/ergo-jr.md) !
