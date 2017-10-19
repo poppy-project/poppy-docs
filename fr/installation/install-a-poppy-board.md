@@ -71,6 +71,6 @@ At the end of the installation, your board will reboot again. You can look at th
     Please share your experiences with the community : https://forum.poppy-project.org/
     
 
-> **Note:** If you are not sure of what going up, you can see if the install process is running with: `ps up $(pgrep -f 'poppy_launcher.sh')`
+> **Note:** Si vous n'êtes pas sûr de ce qui se passe, vous pouvez voir si le processus d'installation est en cours d'exécution avec: `ps up $(pgrep -f 'poppy_launcher.sh')`
 
 The hostname, default user and password will be all set to "poppy" (`ssh poppy@poppy.local` password=poppy). You can test your installation with the web interface in your web browser http://poppy.local.
