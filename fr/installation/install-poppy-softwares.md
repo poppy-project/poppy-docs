@@ -113,14 +113,14 @@ chmod +x miniconda.sh ./miniconda.sh
 
 conda install numpy scipy notebook jupyter matplotlib
 
-    You can now [install Poppy software](#install-poppy-software-on-gnulinux).
+    Vous pouvez maintenant [installer le logiciel Poppy](#install-poppy-software-on-gnulinux).
     
     
     ### Install dependancies with your operating system package manager (alternative solution to Anaconda/Miniiconda)
     
-    Pypot, the main library of the robot is depending (amongst some other) on two big scientific libraries *Numpy* and *Scipy* which are themselves depending on C and Fortran code. These libraries may be installed with the Python package system (pip), but because of the huge number and differences between GNU/Linux distributions pip is not able to distribute binaries for Linux so all dependencies must be compiled... The solution to avoid the compilation of numpy and scipy is to install them with your distribution package manager.
+    Pypot, the main library of the robot is depending (amongst some other) on two big scientific libraries *Numpy* and *Scipy* which are themselves depending on C and Fortran code. These libraries may be installed with the Python package system (pip), but because of the huge number and differences between GNU/Linux distributions pip is not able to distribute binaries for Linux so all dependencies must be compiled... La solution pour éviter la compilation de numpy et scipy est de les installer avec le gestionnaire de paquets présent dans votre distribution.
     
-    On Ubuntu & Debian:
+    Sur Ubuntu et Debian : 
     
     ```bash
     curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
@@ -128,7 +128,7 @@ conda install numpy scipy notebook jupyter matplotlib
     sudo pip install jupyter
     
 
-On Fedora:
+Sur Fedora :
 
 ```bash
 curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
@@ -136,7 +136,7 @@ sudo yum install gcc python-devel numpy scipy python-matplotlib
 sudo pip install jupyter
 ```
 
-On Arch Linux:
+Sur Arch Linux :
 
 ```bash
 curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python
@@ -145,26 +145,26 @@ sudo pip install jupyter
 
 ```
 
-You can now [install Poppy software](#install-poppy-software-on-gnulinux).
+Vous pouvez maintenant [installer les logiciels Poppy](#install-poppy-software-on-gnulinux).
 
-> **Note** The downside is the Python libraries from you distribution system are very often out of date.
+> **Note** L’inconvénient est que les bibliothèques Python de votre distribution sont très souvent obsolètes.
 
-### Install Poppy software on GNU/Linux
+### Installer les logiciels Poppy sous GNU/Linux
 
-Open the terminal, copy and press enter to execute the command below:
+Ouvrez un terminal, puis appuyez sur entrée pour exécuter la commande suivante :
 
-> **Note** Substitute "poppy-ergo-jr" with "poppy-torso" or "poppy-humanoid" to install respectively a Poppy Torso or a Poppy Humanoid.
+> **Note** Remplacez « poppy-ergo-jr » par « poppy-torso » ou « poppy-humanoid » pour installer respectivement un Poppy Torso ou un Poppy Humanoid.
 
     pip install poppy-ergo-jr --user
     
 
-This will install everything necessary to control a Poppy Ergo Jr.
+Ceci va installer tout le nécessaire pour contrôler un Poppy Ergo Jr.
 
-### Upgrade Poppy software on GNU/Linux
+### Mettre à jour le logiciel Poppy sous GNU/Linux
 
-In case of update, it is advised to upgrade pypot (the motor library control) and the creature package separately:
+En cas de mise à jour, il est conseillé de mettre à jour "pypot" (la bibliothèque pour le contrôle des moteurs) et le paquet "creature" séparément :
 
-> **Note** Substitute "poppy-ergo-jr" with "poppy-torso" or "poppy-humanoid" to install respectively a Poppy Torso or a Poppy Humanoid.
+> **Note** Remplacez « poppy-ergo-jr » par « poppy-torso » ou « poppy-humanoid » pour installer respectivement un torse Poppy ou un humanoïde Poppy.
 
 ```bash
 <br />pip install pypot --upgrade --no-deps
@@ -172,4 +172,4 @@ pip install poppy-creature --upgrade --no-deps
 pip install poppy-ergo-jr --upgrade --no-deps
 ```
 
-> **Info** To understand commands above - *--user* will install Python package in user directories, it avoid using `sudo` if you use the Python of your OS. - *--upgrade* will uninstall before starting the install - *--no-deps* will avoid installing dependencies, this is usefull to avoid pip to compile *scipy* as it will probably fail of you have not Fortran dependancies
+> **Info** Pour comprendre les commandes ci-dessus - *--user* va installer le paquet Python dans des répertoires utilisateur, cela évite d’utiliser `sudo` si vous utilisez l'environnement Python de votre système d'exploitation. - *--upgrade* désinstallera avant de commencer l’installation - *--no-deps* évitera d’installer les dépendances, c’est utile pour éviter à pip de compiler *scipy* car cela échouera si vous n'avez pas installé les dépendances GCC et Fortran
