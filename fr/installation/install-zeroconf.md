@@ -59,16 +59,19 @@ Parmi les autres outils de Zeroconf, il existe une implémentation de DHCP déce
 
 La gamme [APIPA](https://en.wikipedia.org/wiki/Link-local_address#IPv4) d'adresse IP automatique se trouve comprise entre 169.254.0.0 et 169.254.255.255.
 
-You can plug a robot to your computer **directly** on your computer with an Ethernet cable, **without** any router and connect it with its local domain name (hostname.local).
+Vous pouvez brancher un robot à votre ordinateur **directement** sur votre ordinateur avec un câble Ethernet, **sans** aucun routeur et le connecter avec son nom de domaine local (hostname.local).
 
-> **Warning** You will be able to use the local-link IPv4 address **only** if you installed your robots after end of May 2016. Previously *avahi-autoipd* packet was missing.
+> **Attention** Vous serez en mesure d'utiliser l'adresse IPv4 de liaison locale **seulement** si vous avez installé vos robots après la fin du mois de mai 2016. Précédemment le paquet *avahi-autoipd* était manquant.
 
-## Alternatives to find the IP address of a computer on your local network
+## Alternatives pour trouver l'adresse IP d'un ordinateur sur votre réseau local
 
-If you cannot (or doesn't want to) install a zeroconf client on your personal computer, you can use one of the following methods to find the IP address of your robot.
+Si vous ne pouvez pas (ou ne voulez pas) installer le client Zeroconf sur votre ordinateur, vous pouvez utiliser l'une des méthodes suivantes pour trouver l'adresse IP de votre robot.
 
-* You can use [Fing](https://www.fingbox.com/download), famous for its [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing) and [iOS](https://itunes.apple.com/fr/app/fing-network-scanner/id430921107?mt=8) applications,
-* [Nmap](https://nmap.org/book/man-host-discovery.html) (only GNU/Linux and MAC OSX) if you are not afraid of command line interfaces.
-* You can also go to your router web interface (with its IP address on your web browser like http://192.168.0.1 or http://192.168.1.1 or http://192.168.0.254 or http://192.168.1.254), you should have a section of connected hosts.
+* Vous pouvez utiliser [Fing](https://www.fingbox.com/download), célèbre pour ses applications [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing) et [iOS](https://itunes.apple.com/fr/app/fing-network-scanner/id430921107?mt=8),
+* [Nmap](https://nmap.org/book/man-host-discovery.html) or arp(only GNU/Linux and MAC OSX) if you are not afraid of command line interfaces. 
+        nmap -sn 192.168.1.0/24
+        arp -an | grep -i B8:27:EB
+
+* Vous pouvez également accéder à l'interface Web de votre routeur (avec l'adresse IP sur votre navigateur Web comme http://192.168.0.1 ou http://192.168.1.1 ou http://192.168.0.254 ou encore http://192.168.1.254), vous devriez voir une section d'hôtes connectés.
 
 <!-- TODO: talk about poppy-discover -->
