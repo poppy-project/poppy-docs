@@ -1,11 +1,11 @@
 # FAQ
 
-> **Caution** This Page is not currently written. Your help is welcome to fulfil it !
+> **Attention** Cette page est encore vierge. Votre aide est nécessaire pour la remplir !
 
-If you have any question please fill free to ask on the [Poppy forum](https://forum.poppy-project.org).
+Si vous avez des questions, n'hésitez pas à les poser sur le [forum Poppy](https://forum.poppy-project.org).
 
-## General issues
+## Questions générales
 
-> **Quote** Motors seems to be tired (low torque, jerky, ...), what can I do ?
+> **Citation** Les moteurs semblent fatigués (faible couple de rotation, rotation saccadée, ...) Que puis-je faire ?
 
-Change your wires !
+Changez vos câbles !
