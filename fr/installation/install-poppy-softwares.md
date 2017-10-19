@@ -1,18 +1,18 @@
-# Install Poppy softwares
+# Installer le logiciel Poppy
 
-> **Warning** If you want to install the board of a tangible robot, go to the [startup chapter](burn-an-image-file.md) instead.
+> **Mise en garde** Si vous souhaitez installer le logiciel d’un robot tangible sur une carte embarquée de type Raspberry Pi, allez plutôt au [chapitre de démarrage](burn-an-image-file.md).
 
-This section will guide you to install Poppy softwares on your personal computer. It is useful **only** if you are in one of these situations: * You want to control a simulated robot. * You want to control a Poppy creature from your computer **without** using the embedded board (Odroid or Raspberry Pi).
+Cette section vous guidera pour installer le logiciel Poppy sur votre ordinateur personnel. Elle est utile **seulement** si vous êtes dans l’une de ces situations : * vous souhaitez contrôler un robot simulé. * Vous souhaitez contrôler une créature Poppy depuis votre ordinateur **sans** utiliser la carte embarquée fournie (Odroid ou Raspberry Pi).
 
-Poppy creatures are run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries. If you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
+Les créatures Poppy sont contrôlées par du code écrit en langage Python. Selon votre système d’exploitation, vous devrez installer Python et dans tous les cas, vous devrez installer les bibliothèques logicielles requises. Si vous faites vos premiers pas avec Python et que vous souhaitez installer un environnement Python complet conçu pour l'informatique scientifique, **nous vous suggérons d’utiliser [la distribution Python Anaconda](https://www.continuum.io/why-anaconda)**.
 
-## Install Python and Poppy software on Windows
+## Installer Python et le logiciel Poppy sur Windows
 
-If you want a step by step screencast of the installation of Anaconda on Windows, you can see [these videos](https://www.youtube.com/watch?v=kw9lQwdOlOs&list=PLT6NsCw8bf8T5FG2LGk2y_KTdexi8A5BN) (this is a YouTube playlist). <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLT6NsCw8bf8T5FG2LGk2y_KTdexi8A5BN" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+Si vous voulez suivre une vidéo explicative étape par étape de l’installation de Anaconda sur Windows, vous pouvez consulter [ces vidéos](https://www.youtube.com/watch?v=kw9lQwdOlOs&list=PLT6NsCw8bf8T5FG2LGk2y_KTdexi8A5BN) (il s’agit d’une playlist YouTube). <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLT6NsCw8bf8T5FG2LGk2y_KTdexi8A5BN" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-### Install Python and Poppy softwares on Windows
+### Installer Python et les logiciels Poppy sur Windows
 
-We encourage the use of the Anaconda Python distribution. However, if you already installed a Python distribution like Canopy (shipped with scientific packages), you can directly [install Poppy software](#install-python-and-poppy-softwares-on-windows).
+Nous encourageons l’utilisation de la distribution Python Anaconda. Toutefois, si vous avez déjà installé une distribution Python telle que Canopy (livrée avec paquets scientifiques), vous pouvez directement [installer les logiciels Poppy](#install-python-and-poppy-softwares-on-windows).
 
 > **Info** Poppy software libraries work in Python 2.7 and Python 3.3+. If you have no ideas on which version to install, we suggest you to use Python 2.7 as we develop in this version.
 
