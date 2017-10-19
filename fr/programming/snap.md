@@ -159,7 +159,7 @@ Every Poppy block in Snap_!_ begins by a robot icon. So you can search all of th
 
  -->
 
-#### Network
+#### Réseau
 
 First test your connection with the (tangible or simulated) robot with the "test connection" block. ![test connection](../img/snap/test_connection.png). if the block answer is "You may have connection troubles", your "host" variable inside the Snap_!_ project is probably wrong. The host variable must be the IP or the hostname+".local" of your robot ; if you're using V-REP localhost is used to point to your own computer.
 
