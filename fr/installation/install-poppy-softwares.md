@@ -14,52 +14,52 @@ Si vous voulez suivre une vidéo explicative étape par étape de l’installati
 
 Nous encourageons l’utilisation de la distribution Python Anaconda. Toutefois, si vous avez déjà installé une distribution Python telle que Canopy (livrée avec paquets scientifiques), vous pouvez directement [installer les logiciels Poppy](#install-python-and-poppy-softwares-on-windows).
 
-> **Info** Poppy software libraries work in Python 2.7 and Python 3.3+. If you have no ideas on which version to install, we suggest you to use Python 2.7 as we develop in this version.
+> **Info** Les bibliothèques logicielles Poppy fonctionnent avec Python 2.7 et Python 3.3 +. Si vous n’êtes pas sûr·e de la version à installer, nous vous suggérons d’utiliser Python 2.7, car nous développons avec cette version.
 
-#### Anaconda Python distribution
+#### La distribution Anaconda pour Python
 
-[Download Anaconda](https://www.continuum.io/downloads) Python distribution (400 MB) [here for 64-bit](https://repo.continuum.io/archive/Anaconda2-4.0.0-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/archive/Anaconda2-4.0.0-Windows-x86.exe).
+[Téléchargez la distribution Anaconda](https://www.continuum.io/downloads) pour Python (400 Mo) [ici pour les ordinateurs 64-bit](https://repo.continuum.io/archive/Anaconda2-4.0.0-Windows-x86_64.exe) ou [ici pour les ordinateurs 32-bit](https://repo.continuum.io/archive/Anaconda2-4.0.0-Windows-x86.exe).
 
-Install it by clicking on "next" at each step. If you intend to install Anaconda for all users of your computer, be sure to select "all users".
+Installez la distribution en cliquant sur « suivant » à chaque étape. Si vous envisagez d’installer Anaconda pour tous les utilisateurs de votre ordinateur, veillez à sélectionner « all users ».
 
-![Anaconda all users](../img/python/lucvincent/luc_vincent-012.png).
+![Anaconda pour tous les utilisateurs](../img/python/lucvincent/luc_vincent-012.png).
 
-It is also very important that the two check-boxes of the PATH and the default Python are checked.
+Il est également très important que les deux cases à cocher PATH et "default Python" soient bien cochées.
 
-![Anaconda install](../img/python/anaconda_install_path.png)
+![Installation d’Anaconda](../img/python/anaconda_install_path.png)
 
-Now you have a Python distribution, you are ready to [install Poppy software](#install-python-and-poppy-softwares-on-windows).
+Maintenant que vous avez une distribution Python, vous êtes prêt à [installer le logiciel Poppy](#install-python-and-poppy-softwares-on-windows).
 
-#### Miniconda Python (alternative to Anaconda)
+#### Python Miniconda (alternative à Anaconda)
 
-Miniconda is a "light" version of Anaconda which contain only Python and the conda package manager. You can install it **instead of Anaconda** and save a lot of disk space (25 Mo vs 400 Mo), but you will have to do another step in the install process, and you will not have Jupyter notebook shortcut on the desktop. Download miniconda [here for 64-bit](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe) computer.
+Miniconda est une version « allégée » de Anaconda qui contient seulement Python et le gestionnaire de paquets conda. Vous pouvez l’installer **au lieu de Anaconda** et économiser beaucoup d’espace disque (25 Mo vs 400 Mo), mais vous devrez ajouter une nouvelle étape dans le processus d’installation, et vous n’aurez pas de raccourci Jupyter Notebook sur le bureau. Téléchargez Miniconda [ici pour les ordinateurs 64 bits](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86_64.exe) ou [ici pour les ordinateurs 32 bits](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe).
 
-Install it and be sure that the two check-boxes of the PATH and the default Python are checked.
+Il est également très important que les deux cases à cocher PATH et "default Python" soient bien cochées.
 
-Open the Command Prompt (press the windows key and type "Command Prompt"), type and press Enter to execute the command below:
+Ouvrez la ligne de commande (appuyez sur les fenêtres principales et tapez « Command Prompt »), tapez et appuyez sur entrée pour exécuter la commande suivante :
 
     conda install numpy scipy notebook jupyter matplotlib
     
 
-Now you have a Python distribution ready to [install Poppy software](#install-python-and-poppy-softwares-on-windows).
+Vous avez maintenant une distribution Python prête à [installer les logiciels Poppy](#install-python-and-poppy-softwares-on-windows).
 
-### Install Poppy software on Windows
+### Installer les logiciels Poppy sur Windows
 
-Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below: ![Anaconda all users](../img/python/lucvincent/luc_vincent-031.png).
+Ouvrez la ligne de commande de votre distribution Python (appelée *Anaconda invite* si vous avez installé Anaconda) ou de la *ligne de commande* de Windows, tapez et appuyez sur entrée pour exécuter la commande suivante : ![Anaconda all users](../img/python/lucvincent/luc_vincent-031.png).
 
-> **Note** Substitute "poppy-ergo-jr" with "poppy-torso" or "poppy-humanoid" to install respectively a Poppy Torso or a Poppy Humanoid.
+> **Note** Remplacez « poppy-ergo-jr » par « poppy-torso » ou « poppy-humanoid » pour installer respectivement un Poppy Torso ou un Poppy Humanoid.
 
     pip install poppy-ergo-jr
     
     
 
-This will install everything necessary to control a Poppy Ergo Jr.
+Ceci va installer tout le nécessaire pour contrôler un Poppy Ergo Jr.
 
-### Upgrade Poppy software on Windows
+### Mettre à jour le logiciel Poppy sous Windows
 
-In case of update, it is advised to upgrade pypot (the motor library control) and the creature package separately:
+En cas de mise à jour, il est conseillé de mettre à jour pypot (la bibliothèque pour le contrôle des moteurs) et le paquet "creature" séparément :
 
-> **Note** Substitute "poppy-ergo-jr" with "poppy-torso" or "poppy-humanoid" to install respectively a Poppy Torso or a Poppy Humanoid.
+> **Note** Remplacez « poppy-ergo-jr » par « poppy-torso » ou « poppy-humanoid » pour installer respectivement un Poppy Torso ou un Poppy Humanoid.
 
 ```bash
 <br />pip install pypot --upgrade --no-deps
