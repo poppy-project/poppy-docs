@@ -51,7 +51,7 @@ Si vous utilisez OSX ou un autre système d'exploitation basé sur BSD :
 sudo dd bs=4m if=poppy-ergojr.img of=/dev/rdisk2
 ```
 
-> **Info** The `dd` command does not give any information of its progress and so may appear to have frozen; it > could take more than five minutes to finish writing to the card. To see the progress of the copy operation you can run `sudo pkill -USR1 -n -x dd` in another terminal.
+> **Info** La commande `dd` ne donne aucune information sur sa progression et donc peut donner l'impression d’être gelée ; cela peut prendre plus de cinq minutes pour terminer l'écriture de la carte. Pour voir l’état d’avancement de l’opération d'écriture, vous pouvez exécuter `sudo pkill -USR1 - n - x JJ` dans un autre terminal.
 
 - Run `sync`; this will ensure the write cache is flushed and that it is safe to unmount your SD card.
 
