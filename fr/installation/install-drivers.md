@@ -1,15 +1,15 @@
-# Install drivers
+# Installer les pilotes
 
-> **Caution** This chapter is only for people who want to control a tangible robot **without** an embedded board (Raspberry Pi or Odroid). **It is a special case for advanced users.**
+> **Mise en garde** Ce chapitre est destiné aux personnes qui veulent contrôler un robot Poppy **sans** employer une carte embarquée (Raspberry Pi ou Odroid). **C’est un cas particulier pour les utilisateurs avancés.**
 
-If you intend to control tangible robots from your computer **without** a Raspberry Pi or a Odroid, and you use a computer with Windows (vs GNU/Linux or MAC OSX), you may need to install manually drivers for the USB2AX or the USB2Dynamixel.
+Si vous souhaitez contrôler des robots tangibles directement depuis votre ordinateur **sans** un Raspberry Pi ou un Odroid et que vous utilisez un ordinateur avec Windows (vs GNU/Linux ou MAC OSX), vous devrez peut-être installer manuellement les pilotes pour le USB2AX ou le USB2Dynamixel.
 
-## If you use a [USB2AX](http://www.xevelabs.com/doku.php?id=product:usb2ax:usb2ax)
+## Si vous utilisez un [USB2AX](http://www.xevelabs.com/doku.php?id=product:usb2ax:usb2ax)
 
-If the USB2AX is not recognized out of the box (its LED stay red after having been plugged) on your computer, you probably need to install manually its drivers. The installation process and the files to download can be found on the [USB2AX documentation](http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart). You don't need drivers for GNU/Linux or MAC OSX, but note that it doesn't works very well with MAC OSX.
+Si le USB2AX n’est pas reconnu immédiatement (sa LED reste rouge après avoir été branché) sur votre ordinateur, vous devrez probablement installer manuellement ses pilotes. Le processus d’installation et les fichiers à télécharger se trouvent sur la [documentation de USB2AX](http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart). Vous n'avez pas besoin de pilotes pour GNU/Linux ou MAC OSX, mais notez qu’il ne fonctionne pas très bien avec MAC OSX.
 
-If you want to control XL-320 motors (protocol Dynamixel v2) from an USB2AX you may need to update the firmware to the version 04 of the USB2AX.
+Si vous souhaitez commander des moteurs XL-320 (protocole servomoteurs Dynamixel v2) à partir d’une USB2AX, vous devrez peut-être mettre à jour le firmware à la version 04 de la USB2AX.
 
-## If you use a [USB2Dynamixel](http://support.robotis.com/en/product/auxdevice/interface/usb2dxl_manual.htm)
+## Si vous utilisez un [USB2Dynamixel](http://support.robotis.com/en/product/auxdevice/interface/usb2dxl_manual.htm)
 
-You need to install FTDI drivers on your computer. You have to low the "Latency Timer Value" from 16ms to 1ms (minimum allowed value) as explained in the [FTDI documentation](http://www.ftdichip.com/Support/Knowledgebase/index.html?settingacustomdefaultlaten.htm) to avoid pypot timeouts.
+Vous devez installer les pilotes FTDI sur votre ordinateur. Vous devez baisser la « valeur de latence du Timer » de 16ms à 1ms (valeur minimum autorisée) comme expliqué dans la [documentation de FTDI](http://www.ftdichip.com/Support/Knowledgebase/index.html?settingacustomdefaultlaten.htm) pour éviter que les appels pypot fassent un timeout.
