@@ -1,1 +1,1 @@
-## Raspoppy: manual setup of a Raspberry-Pi
+## Raspoppy : installation manuelle sur un Raspberry Pi
