@@ -34,38 +34,37 @@ curl -L https://raw.githubusercontent.com/poppy-project/raspoppy/master/raspoppy
 
 > **Note** Changez`poppy-ergo-jr` dans la commande ci-dessus par la créature Poppy que vous désirez installer sur votre Raspberry Pi.
 
-Redémarrez le Raspberry Pi après la fin de l’installation. Le nom d’hôte, utilisateur par défaut et le mot de passe sera « poppy » (`ssh poppy@poppy.local` mot de passe = poppy). You can test your installation with the web interface in your web browser http://poppy.local.
+Redémarrez le Raspberry Pi après la fin de l’installation. Le nom d’hôte, utilisateur par défaut et le mot de passe sera « poppy » (`ssh poppy@poppy.local` mot de passe = poppy). Vous pouvez tester votre installation avec l’interface web dans votre navigateur web en allant sur http://poppy.local.
 
-## Install a Poppy Torso / Humanoid on a Odroid U3 or Odroid XU4
+## Installer un Poppy Torso / Humanoïde sur un Odroid U3 ou Odroid XU4
 
-These boards come with a working Ubuntu base image on the MMC you can use the install scripts on it. In the case you have not a fresh installation you have download and burn default system images: * [Ubuntu 14.04 for Odroid U3](http://odroid.com/dokuwiki/doku.php?id=en:u3_release_linux_ubuntu) * [Ubuntu 14.04 for Odroid XU3/XU4](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04.1lts-lubuntu-odroid-xu3-20150212.img.xz)
+Ces ordinateurs embarqués sont équipés de base sur la mémoire MMC d'une image système Ubuntu fonctionnelle, vous pouvez utiliser les scripts d'installation sur celle-ci. Dans le cas où vous n'avez pas de nouvelle installation, vous devez télécharger et graver des images système par défaut suivante: * [Ubuntu 14,04 pour Odroid U3 ](http://odroid.com/dokuwiki/doku.php?id=en:u3_release_linux_ubuntu) * [Ubuntu 14,04 pour Odroid XU3/XU4 ](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04.1lts-lubuntu-odroid-xu3-20150212.img.xz)
 
-To burn it on the MMC/SD-card, look at the [startup section](burn-an-image-file.md#write-an-image-to-the-sd-card).
+Pour le graver le système d'exploitation sur la carte MMC/SD, regardez la [section de démarrage](burn-an-image-file.md#write-an-image-to-the-sd-card).
 
-Now you have a clean and fresh installation, you can mount your memory card to your board, plug your ethernet connection, and power up.
+Maintenant que vous avez une installation fraichement installée, vous pouvez insérer votre carte mémoire dans votre ordinateur embarqué, brancher votre connexion Ethernet, et le mettre sous tension.
 
-Login to the board in SSH: `ssh odroid@odroid.local`, password=odroid.
+Connectez-vous à la carte en SSH: `ssh odroid@odroid.local`, Mot de passe = odroid.
 
-> **Info** If you are using Windows, you have no native SSH client ; you have to download and install [putty](http://www.putty.org/) or [mobaxterm](http://mobaxterm.mobatek.net/) to use SSH.
+> **Info** Si vous utilisez Windows, vous n'avez pas de client SSH natif; vous devez télécharger et installer [putty](http://www.putty.org/) ou [mobaxterm](http://mobaxterm.mobatek.net/) pour utiliser le protocole SSH.
 
-Be sure that your board is connected to the Internet, download and run poppy_setup.sh (replace 'poppy-humanoid' below with poppy-torso' if you want to install a Poppy Torso robot):
+Assurez-vous que votre carte est connectée à Internet, télécharger et exécuter poppy_setup.sh (remplacer 'poppy-humanoïde' ci-dessous par 'poppy-torso' si vous voulez installer un robot Poppy Torso):
 
-    wget https://raw.githubusercontent.com/poppy-project/odroid-poppysetup/master/poppy_setup.sh -O poppy_setup.sh
-    sudo bash poppy_setup.sh poppy-humanoid
+    wget https://raw.githubusercontent.com/poppy-project/odroid-poppysetup/master/poppy_setup.sh -O poppy_setup.sh sudo bash poppy_setup.sh poppy-humanoid
     
 
-You should lose your ssh connection because of the board reboot. This reboot is needed to proceed to the finalisation of the partition resizing. Now your board should install all the poppy environment. **Please do not unpower the board or shut-it down.**
+Vous devriez perdre votre connexion SSH en raison du redémarrage de la carte. Ce redémarrage est nécessaire pour procéder à la finalisation du redimensionnement de la partition. Maintenant, votre carte embarqué devrait installer l'environnement Poppy. **S'il vous plaît, n’éteignez ni ne coupez pas l'alimentation de la carte.**
 
-You can see the installation process by reconnecting you to your board with your new poppy account: `ssh poppy@poppy.local` password=poppy. **Because of the compilation of heavy Python packages (Scipy, Numpy) it can take more than 1 hour to complete.**
+Vous pouvez voir le processus d'installation en vous rebranchant à votre carte avec votre nouveau compte poppy: `ssh poppy@poppy.local` Mot de passe = poppy. **En raison de la compilation de lourds paquets Python (Scipy, Numpy), le processus peut prendre plus d'une heure avant de ce terminer.**
 
-A process will automatically take you terminal and print the installation output. You can leave it with `ctrl+c`. You can get back this print by reading the install_log file:
+Un processus va automatiquement prendre le contrôle de votre terminal et afficher les informations d'installation. Vous pouvez sortir avec `Ctrl + c`. Vous pouvez récupérer les informations en lisant le fichier install_log:
 
     tail -f install_log
     
 
-Be patient...
+Soyez patient ...
 
-At the end of the installation, your board will reboot again. You can look at the log `tail -f install_log`, if everything ended well, last lines should be:
+À la fin de l'installation, votre ordinateur redémarrera. Vous pouvez consulter le log `tail-f install_log`, si tout s'est bien terminé, les dernières lignes devraient être:
 
     System install complete!
     Please share your experiences with the community : https://forum.poppy-project.org/
@@ -73,4 +72,4 @@ At the end of the installation, your board will reboot again. You can look at th
 
 > **Note:** Si vous n'êtes pas sûr de ce qui se passe, vous pouvez voir si le processus d'installation est en cours d'exécution avec: `ps up $(pgrep -f 'poppy_launcher.sh')`
 
-Le nom d’hôte, utilisateur par défaut et le mot de passe sera « poppy » (`ssh poppy@poppy.local` mot de passe = poppy). You can test your installation with the web interface in your web browser http://poppy.local.
+Le nom d’hôte, utilisateur par défaut et le mot de passe sera « poppy » (`ssh poppy@poppy.local` mot de passe = poppy). Vous pouvez tester votre installation avec l’interface web dans votre navigateur web en allant sur http://poppy.local.
