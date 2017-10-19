@@ -1,51 +1,51 @@
-# Startup with a Poppy robot
+# Démarrer avec un robot Poppy
 
-> **Note** This chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, look at the [simulation install path](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+> **Note** Ce chapitre est réservé aux personnes qui veulent contrôler un robot tangible. Si vous avez l’intention de contrôler un robot simulé par ordinateur, veuillez vous référer au [parcours d’installation pour le simulateur](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
-Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or an Odroid board.
+Les créatures Poppy sont contrôlées par un petit ordinateur embarqué : un Raspberry Pi ou un Odroid.
 
-The operating system of this computer is hosted on a SD card (you can also use an MMC for the Odroid).
+Le système d’exploitation de cet ordinateur est stocké sur une carte SD (vous pouvez également utiliser une carte MMC pour le Odroid).
 
-You may be in two kind of cases:
+Vous pouvez être dans deux types de cas :
 
-- You already have a SD card with the Poppy operating system (provided by one of the Poppy distributors for example). You're ready to go to the [assembly section](../assembly-guides/ergo-jr.md).
-- You have an empty SD-card, so you have to [download](#download-the-image-of-the-operating-system) and [write](#write-the-operating-system-image-to-the-sd-card) the operating system on the SD card.
+- Vous avez déjà une carte SD avec le système d’exploitation Poppy (fournie par l’un des distributeurs de Poppy par exemple). Vous êtes prêt à passer à la [section montage](../assembly-guides/ergo-jr.md).
+- Vous avez une carte SD vierge, il faut donc [télécharger](#download-the-image-of-the-operating-system) et [écrire](#write-the-operating-system-image-to-the-sd-card) le système d’exploitation sur la carte SD.
 
-> **Info** The Poppy creatures operating system use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi. You will only need a computer with a SD card reader/writer to write the image on the SD card.
+> **Info** Le système d’exploitation de créatures Poppy utilise une distribution GNU/Linux, mais vous n’aurez pas besoin de connaissances avancées sur Linux pour installer l’image sur le Raspberry Pi. Vous devez seulement avoir un ordinateur avec un lecteur de cartes SD pour écrire l’image sur la carte SD.
 
-## Download the image of the operating system
+## Télécharger l’image du système d’exploitation
 
-You have to choose the image (file in `*.img.zip`) to download depending on your Poppy creature and the targeted board:
+Il faut choisir l’image (fichier en `*. img.zip`) à télécharger selon la créature Poppy et la carte contrôleur souhaitée :
 
 - [Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases/)
 - [Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
 - [Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
-## Write the operating system image to the SD card
+## Graver l’image de système d’exploitation sur la carte SD
 
-With the image file corresponding to your Poppy creature, you need to use an image writing tool to install it on your SD card.
+Muni du fichier image correspondant à votre créature Poppy, vous devez utiliser un outil d’écriture pour l'installer sur votre carte SD.
 
-### Burn the image with etcher (GUI software)
+### Graver l’image avec Etcher (logiciel avec une interface graphique)
 
-- *Download and install [etcher](http://etcher.io/).* It works for Windows (versions above Windows 7), OSX, and GNU/Linux operating systems.
+- *Téléchargez et installez [Etcher](http://etcher.io/).* Ce logiciel fonctionne sur les systèmes d’exploitation Windows (versions Windows 7 ou ultérieure), MAC OSX et GNU/Linux.
 
-![etcher](img/etcher.gif) - Insert the SD card into your computer. - Start Etcher, select the SD card drive, select the image (a file like `2017-04-13-poppy-ergo-jr.img.zip`). Start flashing. The image written to your card will be verified afterwards.
+![Etcher](img/etcher.gif) - Insérez la carte SD dans votre ordinateur. -Démarrez Etcher, sélectionnez le lecteur de carte SD, sélectionnez l’image (un fichier nommé par exemple `2017-04-13-poppy-ergo-jr.img.zip`). Démarrez l'écriture. L’image écrite sur votre carte sera vérifiée automatiquement à la fin de l'opération.
 
-Now you are ready to [assemble your robot](../assembly-guides/ergo-jr.md)!
+Vous êtes maintenant prêt à [assembler votre robot](../assembly-guides/ergo-jr.md) !
 
-### Burn the image with `dd` (CLI software)
+### Graver l’image avec `dd` (logiciel en ligne de commande)
 
-> **Danger** This method works only for GNU/Linux and OSX operating systems, and is not recommended if you don't understand what you do.
+> **Danger** Cette méthode fonctionne uniquement pour GNU/Linux et les systèmes d’exploitation OSX et n’est pas recommandée si vous ne comprenez pas ce que vous faites.
 
-Insert the SD card and look for where your disk is mounted (/dev/mmcblk0 and /dev/disk2 for the following example). Adapt and execute one on these commands. *Be careful, you could erase one of your primary disk partition if you don't understand what you do*.
+Insérez la carte SD et chercher où votre carte SD est montée (/dev/mmcblk0 et/dev/disk2 dans l’exemple qui suit). Adaptez à votre cas et exécutez une de ces commandes. *Soyez prudent, vous pourriez effacer l’une de vos partitions disques si vous ne comprenez pas ce que vous faites*.
 
-If you are on a GNU/Linux OS:
+Si vous êtes sur un système d’exploitation GNU/Linux :
 
 ```bash
 sudo dd bs=4M if=poppy-ergojr.img of=/dev/mmcblk0
 ```
 
-If you are running OSX or another BSD based OS:
+Si vous utilisez OSX ou un autre système d'exploitation basé sur BSD :
 
 ```bash
 sudo dd bs=4m if=poppy-ergojr.img of=/dev/rdisk2
