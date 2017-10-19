@@ -1,7 +1,7 @@
-# Network
+# Réseau
 
-This section will contain a collection of tips for avoiding network troubles.
+Cette section contient une série d'astuces pour éviter les problèmes réseau.
 
-## Where is Poppy ?
+## Où est Poppy ?
 
-If you are looking for your robot on your network, look at the [zeroconf chapter](../installation/install-zeroconf.md).
+Si vous recherchez votre robot sur votre réseau, rendez-vous au chapitre [zeroconf](../installation/install-zeroconf.md).
