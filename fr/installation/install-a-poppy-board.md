@@ -1,40 +1,40 @@
-# Install a Poppy board
+# Installer un ordinateur embarqué pour un robot Poppy
 
-> **Warning** Warning: this chapter is only for people who want to create from scratch a Raspberry Pi or an Odroid system image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
+> **Mise en garde** : ce chapitre est destiné seulement aux personnes qui veulent créer de toutes pièces une image système pour Raspberry Pi ou Odroid. **Il est fortement conseillé** de simplement [graver une image système fournie par l'équipe Poppy pour installer les logiciels sur votre robot](burn-an-image-file.md).
 
-To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts.
+Pour installer une carte embarquée pour Poppy, nous partons d’une distribution Linux standard (Debian ou Ubuntu), nous supprimons les logiciels inutiles et lançons quelques scripts.
 
-**Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages.** If you encounter issues with these scripts, you can post a message in the [support section](https://forum.poppy-project.org/c/support) of the forums.
+**Ayez en tête pas que nos scripts d’installation n'ont pas été conçu pour les utilisateurs finaux : ils ne sont pas forcément à jour et il n’y a presque aucun messages d’erreurs pour vous guider.** Si vous rencontrez des problèmes avec ces scripts, vous pouvez poster un message dans la [section d’aide](https://forum.poppy-project.org/c/support) du forum Poppy.
 
-## For a Poppy Ergo Jr / Raspberry Pi
+## Pour un Poppy Ergo Jr / Raspberry Pi
 
-Raspberry Pi SD cards are pre-writed with n00b OS, you need to install Raspbian OS first.
+Les cartes SD Raspberry Pi du commerce sont pré-installées avec le système d'exploitation NOOBS, vous devez tout d’abord installer un système d'exploitation Raspbian.
 
-Download the image of your system: * [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
+Téléchargez l’image de votre système : * [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
 
-Write the image to the SD-card with you favorite disk writer tool as explained in the [startup section](burn-an-image-file.md#write-an-image-to-the-sd-card).
+Écrivez l’image sur la carte SD avec un outil d'écriture de disque comme cela est expliqué dans la [section démarrage](burn-an-image-file.md#write-an-image-to-the-sd-card).
 
-Add an empty file name ".ssh" in the boot partition to activate SSH.
+Ajoutez un nom de fichier vide « .ssh » dans la partition "boot" pour activer le SSH.
 
-Login to the board in SSH: `ssh pi@raspberrypi.local`, password=raspberry.
+Se connecter sur l'ordinateur embarqué par SSH : `ssh pi@raspberrypi.local`, mot de passe = raspberry.
 
-> **Note** Note: If you are using Windows, you have no native SSH client. You have to download and install [putty](http://www.putty.org/) or [mobaxterm](http://mobaxterm.mobatek.net/) to use SSH.
+> **Note** Remarque : Si vous utilisez Windows, vous n’avez pas de client SSH préinstallé. Vous devez télécharger et installer [putty](http://www.putty.org/) ou [mobaxterm](http://mobaxterm.mobatek.net/) afin d’utiliser SSH.
 
-You will need to make sure that you have enough free space in your raspberry. The easiest way is to use the raspi-config script to expand your partition to the full SD-card. Just log into your raspberry and run (you will need to reboot it afterwards):
+Vous devrez vous assurer que vous avez assez d’espace libre sur votre Raspberry Pi. Le moyen le plus simple est d’utiliser le script raspi-config pour étendre votre partition et occuper tout l'espace disque disponible sur la carte SD. Connectez-vous sur votre Raspberry et exécutez (vous devrez redémarrer ensuite) :
 
 ```bash
 sudo raspi-config
 ```
 
-Be sure that your board is connected to the Internet, and use ["raspoppy"](https://github.com/poppy-project/raspoppy) installer:
+Assurez-vous que votre carte est connectée à Internet et utilisez le programme d’installation [« raspoppy »](https://github.com/poppy-project/raspoppy) :
 
 ```bash
 curl -L https://raw.githubusercontent.com/poppy-project/raspoppy/master/raspoppyfication.sh | bash -s "poppy-ergo-jr"
 ```
 
-> **Note** Change `poppy-ergo-jr` in the command above by your desired Poppy creature you want to install on your Raspberry Pi.
+> **Note** Changez`poppy-ergo-jr` dans la commande ci-dessus par la créature Poppy que vous désirez installer sur votre Raspberry Pi.
 
-Reboot after the end of the installation. The hostname, default user and password will be all set to "poppy" (`ssh poppy@poppy.local` password=poppy). You can test your installation with the web interface in your web browser http://poppy.local.
+Redémarrez le Raspberry Pi après la fin de l’installation. Le nom d’hôte, utilisateur par défaut et le mot de passe sera « poppy » (`ssh poppy@poppy.local` mot de passe = poppy). You can test your installation with the web interface in your web browser http://poppy.local.
 
 ## Install a Poppy Torso / Humanoid on a Odroid U3 or Odroid XU4
 
@@ -73,4 +73,4 @@ At the end of the installation, your board will reboot again. You can look at th
 
 > **Note:** Si vous n'êtes pas sûr de ce qui se passe, vous pouvez voir si le processus d'installation est en cours d'exécution avec: `ps up $(pgrep -f 'poppy_launcher.sh')`
 
-The hostname, default user and password will be all set to "poppy" (`ssh poppy@poppy.local` password=poppy). You can test your installation with the web interface in your web browser http://poppy.local.
+Le nom d’hôte, utilisateur par défaut et le mot de passe sera « poppy » (`ssh poppy@poppy.local` mot de passe = poppy). You can test your installation with the web interface in your web browser http://poppy.local.
