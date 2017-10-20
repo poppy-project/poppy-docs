@@ -1,6 +1,6 @@
 ## Contribuer au Projet Poppy
 
-Si vous voulez faire partie du projet, la première étape est de devenir membre de la communauté sur le [forum Poppy](https://forum.poppy-project.org). Le forum est l'espace consacré aux échanges entre les utilisateurs et les contributeurs. You can freely come and talk about your project or ideas in your preferred language.
+Si vous voulez faire partie du projet, la première étape est de devenir membre de la communauté sur le [forum Poppy](https://forum.poppy-project.org). Le forum est l'espace consacré aux échanges entre les utilisateurs et les contributeurs. Vous êtes invités à partager votre projet et vos idées dans votre langue préférée.
 
 Le projet Poppy étant un projet pluridisciplinaire, il y a plusieurs façons d'apporter sa contribution :
 
