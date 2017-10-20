@@ -64,7 +64,7 @@ C’est un robot humanoïde composé de 25 articulations avec une colonne verté
 
 Vous pouvez vous procurez toutes les pièces en suivant [la nomenclature](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) (BOM) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) disponible au format STL.
 
-![Poppy Humanoid Vecto](../img/humanoid/vecto.png)
+![Humanoïde Poppy Vecto](../img/humanoid/vecto.png)
 
 ### Poppy Torso
 
@@ -72,7 +72,7 @@ C'est la partie supérieure du robot Poppy Humanoid (13 articulations). Poppy To
 
 Vous pouvez vous procurez toutes les pièces en suivant [la nomenclature](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). Les [modèles 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) pour les pièces sont les mêmes que pour Poppy Humanoid, mais sans les jambes et avec un [support ventouse](https://github.com/poppy-project/robot-support-toolbox/) en plus.
 
-![Poppy Torso Vecto](../img/torso/vecto.png)
+![Torse Poppy Vecto](../img/torso/vecto.png)
 
 ### Autres créatures Poppy intéressantes
 
