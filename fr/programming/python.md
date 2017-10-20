@@ -4,43 +4,43 @@ Ce chapitre vous guidera de manière à pouvoir contrôler les robots Poppy en P
 
 Nous allons détailler tout ce que vous devez savoir pour pouvoir programmer directement le robot en utilisant le Python embarqué dans le robot Poppy ou pour l'installer localement. Remarquez que ce chapitre ne prétend pas vous apprendre le langage Python ou la programmation à partir de zéro et donc si vous êtes totalement nouveau sur le langage Python, il peut être bon de commencer avec un tutoriel de Python. Pourtant, nous essayons de garder les tutoriels aussi simples que possible et nous vous avertirons toujours lorsque certaines parties ciblent les utilisateurs les plus avancés.
 
-Nous allons essayer de fournir autant d'exemples que possible et de l'axer sur l’API complète ainsi vous pouvez trouver et utiliser les fonctionnalités moins courantes. La plupart des exemples et didacticiels sont disponibles comme une collection de [Jupyter notebooks](http://jupyter.org). The next chapter, [Jupyter Notebooks Gallery](notebooks.md), presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.
+Nous allons essayer de fournir autant d'exemples que possible et de l'axer sur l’API complète ainsi vous pouvez trouver et utiliser les fonctionnalités moins courantes. La plupart des exemples et didacticiels sont disponibles comme une liste de [notebooks Jupyter](http://jupyter.org). Le prochain chapitre, [Galerie de notebooks Jupyter](notebooks.md), présente une liste descriptive de chaque notebook, de ce qu'ils contiennent, comment ils peuvent être utilisés, pour quel robot, etc.
 
-All Poppy libraries are open source and are released under the [GPL v3](http://www.gnu.org/licenses/gpl.html) license. So you can freely access the source code on [github](https://github.com/poppy-project). Do not hesitate to fork them, send pull request and contribute!
+Toutes les bibliothèques Poppy sont open source et sont distribués sous la licence [GPL v3](http://www.gnu.org/licenses/gpl.html). Ainsi, vous pouvez accéder librement le code source sur [GitHub](https://github.com/poppy-project). N’hésitez pas à créer un fork, envoyer un pull/request et à contribuer !
 
-## Why Python and Anaconda?
+## Pourquoi Python et Anaconda ?
 
 <img src="../img/python/powered.png" alt="Python powered" height="150" />
 
-The libraries developed for the Poppy project were designed with the aim to make it easy and fast to write code for controlling various robots based on - originally - robotis dynamixel motors. The idea was to provide access from the lower level - raw serial communication with a specific motor for instance - to higher levels such as starting and stopping primitives/behaviors (e.g. face tracking, postures, ...) or directly recording motions through learning by demonstration.
+Les bibliothèques développées pour le projet Poppy ont été conçus dans le but de rendre facile et rapide l’écriture du code de contrôle des différents robots basés sur - à l'origine - les servomoteurs dynamixel robotis. L’idée était de fournir un accès depuis le bas niveau -communication série brute avec un moteur spécifique par exemple- à des niveaux plus élevés tels que le démarrage et l’arrêt de primitives/comportements (p. ex. suivi de visage, postures,...) ou l'enregistrement directement des mouvements grâce à de l’apprentissage par démonstration.
 
-We decided to write most of them in Python as its flexibility allows for fast and modular development. It was also meant to be accessible by a large audience, from developers and roboticists in general, to hobbyists, researchers, artists... Python was also chosen for the tremendous pools of existing libraries (scientific, computer vision, IO, web...) so if one is interested in adding a new feature, such as support for a new motor/sensor, it should be as easy and fast as possible.
+Nous avons décidé d’écrire la plupart d'entre eux en Python, car sa souplesse permet un développement rapide et modulaire. Elles étaient également destiné à être accessible par un large public, de développeurs, de roboticiens en général, pour des amateurs, des chercheurs, des artistes... Python a également été choisi pour l'énorme choix de bibliothèques existantes (scientifique, vision par ordinateur, web...), donc si quelqu'un souhaite ajouter un nouvel élément, comme le support à un nouveau moteur/capteur, cela devrait être réalisable le plus facilement et rapidement possible.
 
-Finally, support for multiplatforms and ease of installation were also key aspects.
+Enfin, le support multiplateforme et la facilité d’installation étaient également des aspects essentiels.
 
-We also strongly advise to use the [Anaconda Python distribution](https://www.continuum.io/why-anaconda) as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the [install section](../installation/install-poppy-softwares.md)).
+Nous conseillons fortement d’utiliser la [distribution Python Anaconda](https://www.continuum.io/why-anaconda) puisqu’elle comprend déjà la plupart des bibliothèques nécessaire aux bibliothèques Poppy. Nous fournissons également toutes les bibliothèques Poppy comme conda recipes afin d'être facilement installable à l’aide de Anaconda (voir [section d’installation](../installation/install-poppy-softwares.md)).
 
-## Overview of the different libraries
+## Vue d’ensemble des différentes bibliothèques
 
-> **Info** A more detailled documentation of these software libraries is available in the [software libraries section](../software-libraries/README.md)
+> **Info** Une documentation plus détaillée de ces bibliothèques logicielles est disponible dans la [section bibliothèques logicielles](../software-libraries/README.md)
 
-Before jumping into the code, we will briefly introduce the different existing Poppy libraries and how they interact with each other.
+Avant de se lancer dans la programmation, nous allons présenter brièvement les différentes bibliothèques Poppy existantes et comment elles interagissent entre elles.
 
-They are three main library levels:
+Il y a trois principales bibliothèques logicielles :
 
-* [pypot:](https://github.com/poppy-project/pypot) This is the core of the Poppy software architecture. Pypot handles all the low level communication with the hardware (both sensors and motors), defines synchronization loops so your command are always up to date. It also provides the primitives mechanism which allows the definition of simple behavior that can be - more of less - automatically combined.
+* [pypot :](https://github.com/poppy-project/pypot) C’est le cœur de l’architecture logicielle Poppy. Pypot gère toutes les communications de bas niveau avec le matériel (capteurs et moteurs), définit les boucles de synchronisation afin que votre commande soient toujours à jour. Il fournit également les primitives du mécanisme qui permet la définition d’un comportement simple qui peut être -plus ou moins- automatiquement combinés.
 
-* [poppy-creature:](https://github.com/poppy-project/poppy-creature) This library defines the common tools shared by all Poppy robots, for instance how to automatically launch the simulator or start the HTTP API attached to any robot.
+* [poppy-creature :](https://github.com/poppy-project/poppy-creature) Cette bibliothèque définit les outils communs partagés par tous les robots Poppy, par exemple comment faire pour lancer le simulateur ou démarrer l’API HTTP automatiquement attaché à n’importe quel robot.
 
-* [poppy-ergo-jr](https://github.com/poppy-project/poppy-ergo-jr), [poppy-torso](https://github.com/poppy-project/poppy-torso), and [poppy-humanoid:](https://github.com/poppy-project/poppy-humanoid) Those libraries are specific to their respective Poppy robot. They define the particular configuration of the robot, the sensors it uses, which motors are connected to which buses... This is also were behaviors specific to a creature are defined (the stand primitive for the humanoid for instance).
+* [poppy-ergo-jr](https://github.com/poppy-project/poppy-ergo-jr), [poppy-torso](https://github.com/poppy-project/poppy-torso), and [poppy-humanoid:](https://github.com/poppy-project/poppy-humanoid) ces bibliothèques sont spécifiques à chaque robot Poppy. Elles définissent la configuration particulière du robot, les capteurs utilisés, quels moteurs sont connectés à quel bus... C’est aussi ici que des comportements spécifiques à une créature sont définis (la primitive qui fait Poppy Humanoid se tenir debout par exemple).
 
-This is summarized in the diagram below:
+Cela est résumé dans le schéma ci-dessous :
 
-![Poppy software architecture](../img/python/architecture.png)
+![Architecture logicielle Poppy](../img/python/architecture.png)
 
 ## Installation
 
-**First, note that if you are only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the [web interface](../getting-started/program-the-robot.md) and have nothing to install on your machine!**
+**Tout d’abord, notez que si vous n’envisagez d’utiliser que des robots réels, ils viennent avec Python et toutes les bibliothèques Poppy déjà installées. You can directly connect to the Jupyter notebook server via the [web interface](../getting-started/program-the-robot.md) and have nothing to install on your machine!**
 
 What you need to install is summarized in the diagram below:
 
