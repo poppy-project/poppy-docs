@@ -40,18 +40,18 @@ Cela est résumé dans le schéma ci-dessous :
 
 ## Installation
 
-**Tout d’abord, notez que si vous n’envisagez d’utiliser que des robots réels, ils viennent avec Python et toutes les bibliothèques Poppy déjà installées. You can directly connect to the Jupyter notebook server via the [web interface](../getting-started/program-the-robot.md) and have nothing to install on your machine!**
+**Tout d’abord, notez que si vous n’envisagez d’utiliser que des robots réels, ils viennent avec Python et toutes les bibliothèques Poppy déjà installées. Vous pouvez vous connecter directement au serveur Jupyter Notebook via l'[interface web](../getting-started/program-the-robot.md) et n’avez rien à installer sur votre machine !**
 
-What you need to install is summarized in the diagram below:
+Ce que vous devez installer est résumé dans le schéma ci-dessous :
 
-![What to install](../img/python/what-to-install.png)
+![Ce qu’il faut installer](../img/python/what-to-install.png)
 
-Yet, if you are planning to either
+Ainsi, si vous prévoyez de soit
 
-* Use a simulator (e.g. V-REP, or web simulator),
-* or want to directly plug the robot to your computer
+* Utiliser un simulateur (p. ex. V-REP ou simulateur web),
+* ou de brancher le robot à votre ordinateur
 
-You will have to install Poppy libraries locally. They work on Windows, Mac OSX, Linux, and have been tested on:
+Vous devrez installer les bibliothèques Poppy localement. Elles fonctionnent sur Windows, Mac OSX, Linux et ont été testées sur :
 
 * Python >= 2.7
 * Python >= 3.4
@@ -173,26 +173,26 @@ To make sure you meet these requirements, you can type this command from your sh
 pip install pypot>=2.12 poppy-creature>=1.8 poppy-ergo-jr>=1.6 --upgrade
 ```
 
-You can then instantiate the poppy-ergo-jr creature:
+Vous pouvez ensuite instancier la créature poppy-ergo-jr :
 
 ```bash
 poppy-services --poppy-simu --snap --no-browser poppy-ergo-jr
 ```
 
-This will create a server for Snap_!_ on port 6969, and a server for the visualizer on port 8080.
+Cela va créer un serveur pour Snap_ ! _ sur port 6969 et un serveur pour le visualiseur sur le port 8080.
 
-You can then head to the [visualizer page](http://simu.poppy-project.org/).
+Vous pouvez ensuite vous diriger vers la [page du visualiseur](http://simu.poppy-project.org/).
 
-### Access the sensors and motors
+### Accéder aux capteurs et aux moteurs
 
-The robot object you just created contains two main groups of objects:
+L’objet robot que vous venez de créer contient deux groupes principaux d’objets :
 
-* motors
+* moteurs
 * sensors
 
-that can be easily access using *poppy.motors* and *poppy.sensors*. As soon as the robot object is created it automatically starts synchronization loops which will ensure that the last available value are received/sent to the robot.
+auxquelles on peut facilement accéder à l’aide de *poppy.motors* et *poppy.sensors*. Dès que l’objet robot est créé, il débute automatiquement des boucles de synchronisation qui assurerons que les dernières valeurs disponibles sont reçus/envoyés au robot.
 
-> **Note** Servomotors that are used in Poppy robots can be seen as both motors and sensors. Indeed, on top of being "simple" motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.
+> **Note** Les servomoteurs qui sont utilisés dans des robots Poppy peuvent être considérés à la fois comme des moteurs ou des capteurs. Indeed, on top of being "simple" motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.
 
 #### Get data from your robot
 
