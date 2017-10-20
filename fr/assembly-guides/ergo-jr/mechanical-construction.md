@@ -1,152 +1,140 @@
+# Assemblage mécanique
 
-## Construction mécanique
-
-### Avis et avertissements d'ordre général
+## Avis et avertissements d'ordre général
 
 <!-- TODO:
 * picture rivet black vs grey
 * ergo + wires
 -->
 
-* Vous pouvez assembler quelques rivets avant la construction.  Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
+* Vous pouvez assembler quelques rivets avant la construction. Vous devez insérer la tige de la première partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si nécessaire.
 
-![Assemblage d'un rivet OLLO](../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivet.png)
+![Assemblage des rivets OLLO](img/assembly/ollo_rivet.png)
 
-* Il y a deux types de rivets: les gris et les autres. Les rivets gris sont plus longs afin de pouvoir les insérer à travers l'axe du moteur, par le côté opposé aux palonniers d'assemblage.
+* Il y a deux types de rivets : les gris et les autres. Les rivets gris sont plus longs afin de pouvoir les insérer à travers l'axe du moteur, par le côté opposé aux palonniers d'assemblage.
 
-![OLLO Rivet size](../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivets_size.jpg)
+<!-- HTML link to adapt image size -->
+
+<img src="img/assembly/ollo_rivets_size.jpg" alt="Taille des rivets OLLO" height="200" />
 
 * Utilisez l'outil OLLO pour pouvoir monter et démonter les rivets facilement.
 
-![OLLO Tool](../../../en/assembly-guides/ergo-jr/img/assembly/ollo-tool.jpg)
+<!-- HTML link to adapt image size -->
+
+<img src="img/assembly/ollo-tool.jpg" alt="Outil OLLO" height="200" />
 
 * N'oubliez pas d'insérer les fils entre les moteurs quand vous construisez le robot ! Chaque moteur, mis à part le dernier de la chaîne, doit avoir deux fils : un connecté au moteur précédent et l'autre au moteur suivant (le sens de connexion n'a pas d'importance).
 
+* **Alignez toujours le palonnier (la roue d'entrainement noire) avec le moteur avant de les assembler !** Sinon votre Poppy Ergo Jr aura l'air tout à fait bizarre.
 
-* **Alignez toujours le palonnier (la roue d'entrainement noire) avec le moteur avant de les assembler!** Sinon votre Poppy Ergo Jr aura l'air tout à fait bizarre...
+<!-- HTML link to adapt image size -->
 
-![Alignement du palonnier](../../../en/assembly-guides/ergo-jr/img/assembly/align-horn.png)
+<img src="img/assembly/align-horn.png" alt="Aligner les palonniers" height="200" />
 
-* Toutes les palonniers moteur doivent être alignées sur **le côté gauche du robot**. C'est juste une convention mais elle définira l'orientation de vos moteurs.
+* Tous les palonniers des moteurs (la roue d'entrainement noire) doivent être alignés **sur le côté gauche du robot**. C'est juste une convention mais elle définira l'orientation de vos moteurs.
 
-![Horns on left side](../../../en/assembly-guides/ergo-jr/img/assembly/horns_on_left.jpg)
+![Pallonniers sur le côté gauche](img/assembly/horns_on_left.jpg)
 
 ## Guide pas à pas
 
 ### Configuration des moteurs (pour toutes les étapes)
 
-Vous pouvez configurer les moteurs avant, pendant ou après l'assemblage mécanique mais il est hautement conseillé de configurer chaque moteur un par un dans l'ordre de construction :
+Vous pouvez configurer vos moteurs avant, pendant ou après l’assemblage mécanique, mais il est vivement conseillé de configurer chaque moteur un par un dans l’ordre de construction : * configurer le moteur m1 * assembler la base et le moteur m1 * configurer le moteur m2 * ...
 
-* Configurer moteur m1
-* Assembler la base et le moteur m1
-* Configurer le moteur m2
-* ...
+> **Attention** Pour configurer les moteurs, vous devez les connecter séparément un par un à la Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu'il est connecté avec le moteur précédent, cela ne fonctionnera pas.
 
+Pour plus d’informations, consultez la [section configuration de moteur](motor-configuration.md).
 
-> **Attention** Pour configurer les moteurs vous devez les connecter séparément un par un avec le Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu'il est connecté avec le moteur précédent, cela ne fonctionnera pas.
+### Étape 1
 
-Veuillez consulter le [chapitre configuration des moteurs](motor-configuration.md) pour plus d'informations.
+Tout d’abord, [configurez un moteur XL-320](motor-configuration.md) comme « m1 ».
 
-### Etape 1
-Tout d'abord, [configurez un moteur XL-320](motor-configuration.md) en tant que "m1".
+Monter le moteur sur la base imprimée en 3D.
 
-Montez le moteur sur la base imprimée en 3D.
+![étape 1](img/assembly/steps/step_1-2.jpg)
 
-![étape 1](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_1-2.jpg)
+Pour cela, préparez 8 petits rivets. Placez la première partie dans la seconde sans les mettre à l'intérieur du moteur. Ensuite, placez le moteur sur la base avec la palonnier faisant face au côté le plus ouvert. Utilisez l'outil Ollo pour attraper le rivet entre la première et seconde partie puis insérez le rivet dans un des trous d'assemblage. Une fois le rivet en place, verrouillez-le en poussant la première partie du rivet dans la seconde.
 
-Pour se faire, préparez 8 petits rivets. Placez la première partie dans la seconde sans les mettre à l'intérieur du moteur. Ensuite, placez le moteur sur la base avec la palonnier faisant face au côté le plus ouvert. Utilisez l'outil OLLO pour attraper le rivet entre la première et seconde partie puis insérez le rivet dans un des trous d'assemblage. Une fois le rivet en place, verrouillez-le en poussant la partie 1 du rivet dans la partie 2.
+### Étape 2
 
+Configurez le second moteur, son nom est « m2 », avec la commande suivante dans un terminal du robot :
 
-### Etape 2
-Configurez le second moteur (son nom est "m2"), avec la commande suivante dans un terminal Poppy:
 ```bash
 poppy-configure ergo-jr m2
 ```
 
-Montez la pièce en forme de *long U*. Attention avec l'orientation du U, le palonnier doit être orientée sur la gauche.
-Montez le moteur "m2" au sommet de la construction.
+Monter la partie *long_U*. Soyez prudent avec l’orientation de la la pièce, le palonnier doit être orienté vers la gauche. Monter le moteur « m2 » sur le dessus de la construction.
 
-![étape 2](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_3-4.jpg)
+![étape 2](img/assembly/steps/step_3-4.jpg)
 
+### Étape 3
 
-### Etape 3
-Configurez le moteur "m3".
+Configurer un troisième moteur : « m3 ».
 
-Montez la pièce "palonnier à palonnier" et la pièce "palonnier à côté" sur le moteur "m2" et montez "m3" au sommet de la construction.
-![étape 3](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_5-6.jpg)
+Monter les pièces *horn2horn* et *horn2side* sur moteur « m2 » et monter « m3 » sur le dessus de la construction. ![étape 3](img/assembly/steps/step_5-6.jpg)
 
+### Étape 4
 
-### Etape 4
+Configurer le quatrième moteur : « m4 ».
 
-Configurez le moteur "m4".
+Monter la pièce *short_U* sur le moteur 4. ![étape 4](img/assembly/steps/step_7-8.jpg)
 
-Montez une pièce en "U court" sur le moteur 4.
-![étape 4](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_7-8.jpg)
+Monter le moteur « m4 » et la pièce *short_U* préalablement assemblée au sommet de la construction. Le nez du moteur doit être orienté vers l'arrière de la base. ![étape 4 bis](img/assembly/steps/step_9-10.jpg)
 
-Montez le moteur "m4" et la pièce en "U court" qui y figure au sommet de la construction. Le nez du moteur devrait être sur l'autre côté de la base.
-![étape 4 bis](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_9-10.jpg)
+### Étape 5
 
-### Etape 5
+Configurer le cinquième moteur : « m5 ».
 
-Configurez le moteur "m5".
+Monter les pièces *horn2horn* et *horn2side* sur moteur « m4 » et monter « m5 » sur le dessus de la construction.
 
-Montez la pièce "palonnier à palonnier" et la pièce "palonnier à côté" sur le moteur "m4", et montez "m5" au sommet de la construction.
+![étape 5](img/assembly/steps/step_11-12-13.jpg)
 
-![étape 5](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_11-12-13.jpg)
+### Étape 6 - l’outil de votre choix
 
+Configurer le sixième moteur : « m6 ».
 
-### Etape 6 - l'outil de votre choix
-Configurez le moteur "m6".
+Pour terminer votre Ergo Jr, vous devez ajouter un outil à son extrémité. Choisissez un outil en fonction de ce que vous souhaitez faire.
 
-Pour achever votre Ergo Jr, vous devez ajouter un outil à son extrémité. Choisissez un outil en fonction de ce que vous souhaitez faire.
+> **Note** Les outils peuvent être facilement et rapidement changés, ce qui vous permet d'adapter votre robot aux différentes activités.
 
-> **Note** Les outils peuvent être facilement et rapidement changer vous pouvez donc l'adapter aux différentes activités.
+#### L'abat-jour ou le stylo
 
-#### Abat-jour ou porte-stylo
+Monter les pièces *horn2horn* et *horn2side* sur moteur « m5 » et monter « m6 » sur le sommet de la construction. ![étape 6](img/assembly/steps/step_14-16-17.jpg)
 
-Montez la pièce "palonnier à palonnier" et la pièce "palonnier à côté" sur le moteur "m5", et montez "m6" au sommet de la construction.
-![étape 6](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_14-16-17.jpg)
+Vous pouvez monter le support de stylo ou de l’abat jour sur le moteur « m6 ». ![bis de l’étape 6](img/assembly/steps/step_18-19.jpg)
 
-Vous pouvez monter le porte-stylo ou l'abat-jour sur le moteur "m6".
-![étape 6 bis](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_18-19.jpg)
+#### La pince
 
+Monter la pièce [*gripper-fixation*](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl) entre les moteurs « m5 » et « m6 ».
 
-#### Pince
-Montez l'[*attache de la pince*](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl) entre les moteurs "m5" et "m6".
+Monter la pièce *gripper-fixed_part* et *gripper-rotative_part* sur moteur « m6 ». <!-- TODO closed picture of gripper-->
 
-Montez la partie *Fixe de pince* et partie *Rotative de pince* sur le moteur "m6".
-<!-- TODO closed picture of gripper-->
+### Étape 7 - électronique
 
+Monter le support caméra sur la base. Fixez la caméra Raspberry Pi dessus et faites passer la nappe de la caméra entre le moteur « m1 » et la base. ![étape 7](img/assembly/steps/step_21-22.jpg)
 
-### Etape 7 - electronics
-Monter la partie support caméra sur la base. Attacher la caméra Raspberry Pi et bouger le câble caméra Flex entre le moteur "m1" et la base.
-![étape 7](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_21-22.jpg)
-
-Pour connecter le câble Flex de la caméra sur le Raspberry Pi, vous devez:
-
-* Ouvrir le connecteur caméra en tirant l'attache vers le haut.
-* Vous assurer que la face des connecteurs du câble Flex est dos au port Ethernet.
-* Pousser le flex dans le port et repoussez l'attache plastique du port caméra vers le bas.
+Pour fixer le câble flexible de la caméra sur la Raspberry Pi : * Ouvrez le connecteur caméra en tirant l'attache vers le haut * Assurez vous que la partie bleu de la nappe est orientée vers le port Ethernet. * Poussez l'embout de la nappe au fond du connecteur et abaissez la partie supérieure du connecteur pour le fermer
 
 <!-- TODO: add a closed picture of camera fix-->
-**Fils moteurs:**
 
-Si ca n'est pas déjà le cas, vous pouvez connecter tous les fils moteurs. Chaque moteur a deux connecteurs mais il n'y pas ni entrée ni sortie, vous devez simplement créer une chaîne de moteurs.
-Le premier moteur est connecté à la carte d'extension PIXL et au second moteur; le dernier moteur est lié seulement au moteur précédent, et tous les autres sont connectés au moteur précédent.
+**Les fils des moteurs :**
+
+Si ce n'est pas déjà le cas, vous pouvez connecter tous les fils aux moteurs. Chaque moteur a deux connecteurs mais il n'y ni entrée ni sortie, vous devez simplement créer une chaîne de moteurs. Le premier moteur est connecté à la carte d'extension pixl et au second moteur. Le dernier moteur est lié seulement au moteur précédent, et tous les autres sont connectés aux moteurs précédent et suivant.
 
 <!-- TODO picture of OLLO + base rivets -->
-> **Information**  Les connecteurs du moteur "m1" (sur la base) sont un peu difficiles à connecteur, vous pouvez utiliser l'outil OLLO pour vous aider.
 
-![step 7 bis](../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_24.jpg)
+> **Info** Les connecteurs du moteur « m1 » (à la base) sont un peu difficiles à brancher, vous pouvez utiliser l’outil OLLO pour vous aider.
 
-### Etape 8 - connectez votre ergo-jr au Raspberry Pi
-Montez votre ergo-jr sur le *disque de support en bois*.
+![étape 7 bis](img/assembly/steps/step_24.jpg)
 
-Montez votre Raspberry Pi sur le disque de support, et utilisez une vis 4 x M2.5x6mm pour l'arrimer.
-<!-- TODO: picture of disk fixation -->
+### Étape 8 - fixer votre Ergo Jr sur le disque de support en bois
 
-### C'est Fini
+Montez votre Ergo Jr sur le *disque de support* en bois.
 
-![image](../../../en/assembly-guides/ergo-jr/img/assembly/ergo-tool-2.jpg)
+Monter votre Raspberry Pi sur le disque de support, et utilisez une vis 4 x M2.5x6mm pour la fixer. <!-- TODO: picture of disk fixation -->
 
-Prenez maintenant un verre de votre [boisson préférée](https://www.flickr.com/photos/poppy-project/16488256337/) et détendez-vous.
+### C'est fini !
+
+![image](img/assembly/ergo-tool-2.jpg)
+
+Vous pouvez désormais vous détendre en buvant [votre boisson préférée](https://www.flickr.com/photos/poppy-project/16488256337/).

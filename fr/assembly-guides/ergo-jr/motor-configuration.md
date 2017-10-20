@@ -1,50 +1,54 @@
-## Configuration des moteurs
+# Configuration des moteurs
 
-Le Ergo Jr est composé de 6 moteurs XL-320 produits par [Robotis](http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm). Chacun de ces servomoteurs embarque une carte électronique lui permettant de recevoir différents types de commande (pour modifier sa position, sa vitesse ou son couple...) et de communiquer avec les autres moteurs. Ainsi vous pouvez connecter tous les servomoteurs en chaîne et les commander tous depuis le bout de la chaîne : chaque moteur passera les commandes au suivant.
+L'Ergo Jr est composé de 6 moteurs XL-320 fabriqués par [Robotis](http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm). Chacun de ces servomoteurs possèdent une carte électronique lui permettant de recevoir différents types de commandes (sur sa position, sa vitesse, son couple...) et de communiquer avec d’autres servos. Vous pouvez chainer ces servomoteurs entre eux et tous les commander depuis un bout de la chaîne.
 
-![XL-320](../../../en/assembly-guides/ergo-jr/img/assembly/xl_320.jpg)
+<img src="img/assembly/xl_320.jpg" alt="XL320" height="300" />
 
-Cependant, pour que les moteurs soient connectés et identifiés sur le même bus ils doivent avoir un identifiant unique. A la sortie de l'usine ils reçoivent tous le même identifiant: 1. Dans ce chapitre nous allons vous expliquer comment attribuer un nouvel identifiant unique à chacun des moteurs.
+Cependant, afin d’être connecté et identifié sur le même bus (de donnée), ils doivent avoir un identifiant unique. Sortis de l’usine ils ont tous la même valeur d'identifiant : 1. Dans cette section, nous vous donnerons plus de détails sur comment vous pouvez définir un nouvel identifiant unique à chacun de vos moteurs.
 
-Nous vous recommandons de configurer les moteurs au fur et à mesure en même temps que l'assemblage du robot. Cela signifie qu'avant d'assembler un nouveau moteur, vous le configurez d'abord avant de  l'assembler de suite sur le reste du robot. Cela nous empêchera d'inverser deux ou plusieurs moteurs. Durant la procédure d'assemblage pas à pas, nous vous signalerons à chaque fois qu'un moteur doit être configuré. Vous pouvez de plus configurer les moteurs à partir de l'interface **Jupyter Notebook**.
+Nous vous recommandons de configurer des moteurs en parallèle de l’assemblage des pièces du robot. Ce qui signifie qu’avant d’assembler un moteur neuf, vous commencez par le configurer puis le monter sur le reste du robot. Pendant la procédure d'assemblage, nous indiquerons chaque fois qu'il faut configurer un nouveau moteur.
 
+## Configurer les moteurs un par un
 
-### Configurer les moteurs un par un
+Comme expliqué ci-dessus, tous les moteurs ont le même identifiant par défaut. **Un seul moteur à la fois doit être connecté au bus de données lorsque vous les configurez.** Sinon, tous les moteurs connectés vont penser que l’ordre envoyé sur le bus leur est destiné, ils tenteront d'y répondre ce qui entrainera une "cacophonie" dans les réponses.
 
-Comme expliqué précédemment, tous les moteurs ont le même identifiant par défaut. **Seul un moteur à la fois doit être connecté au Bus de Données quand vous les configurez**. Sinon, cela ne fonctionnera pas et tous les moteurs connectés penseront que l'ordre envoyé sur le bus leur est destiné, ils essaieront d'y répondre ce qui sera la cause d'un sacré désordre.
+Lorsque vous configurez un moteur, vous devriez avoir ces éléments :
 
-Votre montage électronique pour configurer les moteurs devrait ressembler à ceci:
+* une carte Raspberry Pi
+* une carte pixl et son alimentation électrique
+* un fil reliant la carte et le moteur que vous souhaitez configurer
+* un câble Ethernet reliant la Raspberry Pi et votre ordinateur ou votre routeur
 
+![Configuration des XL-320 ; un moteur à la fois](img/motor_one_by_one.jpg).
 
-* un Raspberry Pi
-* la carte Pixl par dessus et son alimentation connectée
-* Un fil entre la carte Pixl et le moteur que vous souhaitez configurer
-* Un cable ethernet entre le Raspberry Pi et votre ordinateur ou votre routeur.
+### Utilitaire en ligne de commande
 
-![Configuration des moteurs XL-320 ; un moteur à la fois](../../../en/assembly-guides/ergo-jr/img/motor_one_by_one.jpg)
+Les robots viennent avec un utilitaire en ligne de commande `poppy-configure`. Pour l’utiliser, vous devrez ouvrir un terminal depuis l'interface Jupyter de votre Raspberry Pi.
 
+Vous pouvez accéder au Raspberry Pi directement à partir de votre ordinateur. Pour ce faire, ouvrez la page http://poppy.local dans un navigateur web.
 
-#### Grâce à l'interface web (plus facile)
-<!-- TODO: image du notebook  -->
-<!-- The easiest way to use it, is through the notebook interface which will show you at which step of the assembly you have to configure a new motor.
- -->
- <!-- *Note: advanced users may directly use it from the command line terminal. For instance, to configure the motor "m3":* -->
-> **Attention**  L'utilitaire Web de configuration des moteurs est toujours en cours de construction.
+> **Attention** Si vous utilisez Windows, vous devrez installer [Bonjour](https://support.apple.com/kb/DL999) (voir [protocole Zeroconf](../../installation/install-zeroconf.md) pour plus de détails) afin de pouvoir vous connecter au robot en point à point en utilisant son nom (poppy. local par défaut). Si Bonjour n’est pas installé, vous aurez un message d’erreur comme celui-ci. Si Bonjour est installé et que le problème persiste, veuillez le ré-installer.
+> 
+> ![La page n'existe pas](img/IHM/webpage_not_available.jpg)
 
-#### Utilitaire de ligne de commande
-Les robots viennent avec un utilitaire en ligne de commande intitulé  `poppy-configure` ; pour l'utiliser vous devez ouvrir un terminal ligne de commande sur votre Raspberry Pi.
+Si tout se passe bien, vous devriez voir la page d’accueil du robot :
 
-Vous pouvez accéder au Raspberry Pi directement depuis votre ordinateur. Pour se faire, ouvrez la page  [http://poppy.local] dans votre navigateur web. Vous verrez la page d'accueil Poppy. Cliquez sur le lien "Python, Terminal" et sélectionnez "New Terminal".
-![terminal Jupyter](../../../en/assembly-guides/ergo-jr/img/IHM/new_terminal.png)
+![Page d’accueil du robot](img/IHM/accueil_poppy_local.PNG)
 
-Une fois le terminal ouvert, copiez et validez avec la touche "Entrée" la commande ci-dessous: 
+Cliquez sur le lien **"Jupyter — Python, Terminal"** et après, sélectionnez sur la droite "New" et "Terminal". <img src="img/IHM/jupyter_new_terminal.png" alt="Terminal Jupyter" height="300" />
+
+Vous avez maintenant accès au Terminal :
+
+![terminal pour la configuration](img/IHM/terminal_for_configuration.PNG)
+
+Une fois que le terminal est ouvert, copier et appuyez sur entrée pour exécuter la commande ci-dessous.
 
 ```bash
 poppy-configure ergo-jr m1
 ```
 
-Vous venez de configurer le moteur "m1" de votre robot.
-Une fois configuré et que vous avez vu le message confirmant que tout s'est bien passé, vous pouvez débrancher le moteur (inutile de débrancher la carte). La configuration du moteur est stockée dans la mémoire interne du moteur même.
+Vous avez maintenant configuré le moteur m1 de votre robot. Une fois configuré et que vous voyez le message indiquant que tout s’est bien passé, vous pouvez débrancher le moteur (vous n’avez pas besoin de désactiver la carte). La configuration du moteur est sauvegardée dans sa mémoire interne (Eprom).
 
-> **Info** Les moteurs Poppy Ergo Jr sont appelés m1, m2, m3, m4, m5, m6. Pour configurer les autres moteurs, modifiez la ligne de commande ci-dessus pour remplacer "m1" par le nom du moteur que vous souhaitez configurer.
+> **Info** Les moteurs du Poppy Ergo Jr sont nommées m1, m2, m3, m4, m5, m6. Pour configurer les autres moteurs, il faut changer m1 par le nom du moteur que vous souhaitez configurer dans la commande ci-dessus.
 
+<img src="img/assembly/motors.png" alt="Liste des moteurs" height="300" />

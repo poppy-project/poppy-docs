@@ -1,77 +1,74 @@
-# Guide d'assemblage du Ergo Jr
+# Guide d’assemblage pour l'Ergo Jr
 
-![Ergo-tool](../../../en/assembly-guides/ergo-jr/img/ErgoJr.jpg)
+![Outil d'Ergo Jr](img/ErgoJr.jpg)
 
-Le robot Poppy Ergo JR est un petit bras robotique articulé à 6 degrés de liberté. Il consiste de formes très simple qui peuvent être facilement imprimées en 3D. Elles sont assemblées avec des rivets OLLO qui peuvent être montés et démontés facilement avec l'outil OLLO.
+Poppy Ergo Jr est un robot éducatif peu onéreux qui se présente sous la forme d'un petit bras robotique à 6 degrés de liberté. Il se compose de formes très simples qui peuvent être facilement imprimés en 3D. Elles sont assemblées par des rivets qui peuvent être mis ou enlevés très rapidement avec l’outil OLLO.
 
-L'extrêmité du bras peut être facilement changée. Vous pouvez choisir entre plusieurs outils :
+Son embout peut être facilement changé. Vous pouvez choisir parmi plusieurs outils : * un abat-jour, * une pince, * ou un porte-stylo.
 
-* Une lampe.
-* Une pince.
-* Un porte-stylo.
+Grâce aux rivets ils peuvent être rapidement et facilement échangés. Cela permet d’adapter l'outil en fonction en fonction de vos utilisation du robot.
 
-Les rivets employés rendent le montage et démontage des outils simples. Vous pouvez les adapter en fonction de l'activité choisie.
+Les moteurs Xl-320 ont les mêmes fonctionnalités que ceux utilisé sur les autres robots Poppy, mais sont légèrement moins puissants et moins précis. L’avantage étant qu’ils sont aussi nettement moins chers.
 
-Les moteurs ont la même fonctionnalité que d'autres créatures Poppy mais sont un peu moins puissants ou précis, l'avantage étant bien sûr qu'ils sont moins chers.
+La carte électronique est visible à côté du robot, ce qui est intéressant pour comprendre, manipuler et brancher des capteurs supplémentaires. Aucune soudure n’est nécessaire, il vous suffit d’ajouter la carte d'extension pixl sur les broches de la Raspberry Pi pour y connecter les moteurs XL-320.
 
-La carte électronique Pixl située à côté du robot est très facile d'usage et très avantageuse pour manipuler et connecter de nouveaux capteurs.
-Nul soudage n'est nécessaire, il suffit d'ajouter la carte Pixl au-dessus des connecteurs de votre Raspberry Pi.
+Ce chapitre vous guidera à travers toutes les étapes nécessaires pour assembler entièrement un Poppy Ergo Jr. Il couvrira :
 
-Ce guide vous conduira à travers toutes les étapes nécessaires pour assembler votre Robot Poppy. Il comporte les chapitres suivants :
+- [la configuration des moteurs](motor-configuration.md)
+- [l'assemblage électronique](electronic-assembly.md)
+- [l'assemblage des pièces mécaniques](mechanical-construction.md)
 
-* [Configuration des moteurs](motor-configuration.md)
-* [Assemblage de l'électronique](electronic-assembly.md)
-* [Construction mécanique](mechanical-construction.md)
+**L'assemblage complet ne devrait prendre qu'une heure ou deux** la première fois que vous en construisez un. Avec plus de pratique, une demi-heure suffit grandement.
 
-**L'assemblage complet ne devrait pas prends plus d'une ou deux heures**  la première fois. Avec plus d'entraînement une demi heure sera largement suffisante.
+À la fin du tutoriel, vous devriez avoir un Poppy Ergo Jr fonctionnel, prêt à être contrôlé !
 
-À la fin de l'assemblage vous aurez un Poppy Ergo Jr en état de fonctionnement, prêt à l'action !
-
-Nous vous recommandons de suivre à la lettre les instructions même si le Ergo Jr peut-être facilement démonté, il est toujours décevant de devoir recommencer depuis zéro parce que vous avez oublié de configurer les moteurs, qu'un fil est manquant ou qu'un moteur est mis à l'envers.
-
+Nous vous recommandons de suivre attentivement les instructions. Même si l'Ergo Jr est facilement démontable, il est toujours décevant d’avoir besoin de recommencer une partie de l'assemblage parce qu'on a oublié configurer les moteurs, ou qu'un moteur est inversé.
 
 <!-- Should be updated from https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md -->
+
 ## Liste du matériel
 
-Vous trouverez ici la liste complète du matériel requis (en Anglais : Bill of Material ou BOM) pour assembler un Poppy Ergo Jr.
+Vous trouverez ici la liste complète du matériel nécessaires pour construire un Poppy Ergo Jr.
 
-## Materiel pour Poppy
+## Matériel de l'Ergo Jr
 
-- 1x [carte d'extension Pixl](https://github.com/poppy-project/pixl) *(pour contrôler les moteurs XL320 )*
-- 1x Disque de support [disk_support.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/disk_support.stl) (utilisant la découpe laser) le plan 2D [peut être trouvé ici](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/laser_cutting). *Vous pouvez aussi l'imprimer en 3D mais cela prendra plus de temps*.
-- Les pièces imprimés en 3D [ici au format STL](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL)
-  - 1x [base.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/base.stl)
-  - 3x "Palonnier à Palonnier" [horn2horn.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl)
-  - 3x "Côté à côté" [side2side.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/side2side.stl)
-  - 1x "U Long" [long_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/long_U.stl)
-  - 1x "U Court" [short_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/short_U.stl)
-  - 1x Support caméra [support_camera.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/support_camera.stl)
-  - Les différents outils
-    - 1x Abat-jour [lamp.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/lamp.stl)
-    - 1x Attache Pince [gripper-fixation.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl)
-    - 1x Partie Fixe Pince [gripper-fixed_part.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixed_part.stl)
-    - 1x Partie Rotative Pince [gripper-rotative_part.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-rotative_part.stl)
-    - 1x Porte-Stylo [pen-holder.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-holder.stl)
-    - 1x Vis à Stylo [pen-screw.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-screw.stl)
+- 1 x [carte d'extension Pixl](https://github.com/poppy-project/pixl) *(carte électronique de contrôle des moteurs XL320 depuis une Raspberry Pi)*
+- 1 x [disk_support.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/disk_support.stl) (coupé à la découpe laser) le plan 2D peut être trouvé [ici](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/laser_cutting). *Vous pouvez également fabriquer la base avec une imprimante 3D, mais cela prendra beaucoup de temps*
+- les pièces imprimées en 3D [au format STL ici](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL) 
+  - 1 x [base.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/base.stl)
+  - 3 x [horn2horn.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl)
+  - 3 x [side2side.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/side2side.stl)
+  - 1 x [long_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/long_U.stl)
+  - 1 x [short_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/short_U.stl)
+  - 1 x [support_camera.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/support_camera.stl)
+  - les différents outils 
+    - 1 x [lamp.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/lamp.stl)
+    - 1 x [gripper-fixation.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl)
+    - 1 x [gripper-fixed_part.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixed_part.stl)
+    - 1 x [gripper-rotative_part.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-rotative_part.stl)
+    - 1 x [pen-holder.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-holder.stl)
+    - 1 x [pen-screw.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-screw.stl)
 
-## Pièces Robotis
-- 6x moteurs Robotis dynamixel XL-320
-- 1x jeu de rivets OLLO (70 rivets de couleurs et 4 gris)
-- 1x Outil OLLO
+## Pièces faites par Robotis
 
-## Vis
-- 4x vis M2.5x6mm (pour attacher le Raspberry Pi sur la base)
-- 4x vis M2x5mm  (pour attacher la caméra)
-- 4x écrous M2  (pour attacher la caméra)
-- 1x Support Male/Femelle M2.5 10mm
+- 6 x servomoteurs dynamixel XL-320
+- 1 x jeu de rivets OLLO (vous aurez besoin d'environ 70 rivets colorés et de 4 rivets gris)
+- 1 x outil OLLO
 
-## Fournitures électroniques
-- 1x Raspberry Pi 2
-- 1x micro SD 8Go
-- 1x caméra Rasperry Pi
-- 1x alimentation AC 7.5V 2A avec un connecteur jack 2.1 x 5.5 x 9.5 ([par exemple](http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E&relevancy-data=636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526&sra=p)).
-- Un cable ethernet court
+## Visserie
 
+- 4 x M2.5x6mm vis (pour fixer la Raspberry Pi sur le socle)
+- 4 x M2x5mm vis (pour fixer la caméra)
+- 4 écrous x M2 (fixation caméra)
+- 1 x entretoise M2.5 mâle/femelle 10mm
+
+## Divers Electronique
+
+- 1x Raspberry Pi 2 ou 3
+- 1x micro SD 8Go (ou plus)
+- 1x caméra Raspberry Pi
+- 1 x alimentation 7.5V 2A avec un connecteur 2.1 x 5.5 x 9,5 ([celle-ci](http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E&relevancy-data=636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526&sra=p) par exemple).
+- Câble Ethernet court
 
 <!--
 TODO: assembly web interface

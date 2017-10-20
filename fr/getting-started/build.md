@@ -1,62 +1,65 @@
-## Assembler le robot
+# Assembler le robot
 
-![Poppy](../../en/img/assembly_pretty.jpg)
+![Assemblage robot Poppy](../img/assembly_pretty.jpg)
 
-Suivant quel robot Poppy vous souhaitez utiliser, le temps d'assemblage, les compétences requises, les outils et la difficulté peuvent varier de beaucoup.
-Construire un Ergo Jr devrait prendre une heure et aucun outillage spécifique n'est requis, alors que l'assemblage de l'Humanoïde Poppy devrait prendre plusieurs jours et de nombreuses vis.
+Le temps d'assemblage, les compétences requises, les outils et la difficulté varient selon selon les robots Poppy que vous voulez utilisez. Alors que construire un Ergo Jr devrait vous prendre environ une heure et cela sans outil spécifique, assembler un Humanoid peut vous prendre plusieurs jours et un sacré nombre de vis !
 
-Cette section vise à vous donner des conseils et un aperçu de quelques points importants afin que vous en soyez familiers avant d'entamer la construction. Nous allons aussi vous diriger vers les chapitres dédiés où vous trouverez les ressources et les procédures d'assemblage détaillées pas-à-pas de chaque robot.
+Cette section permet de vous donner des astuces et quelques détails nécessaires avant de s'immerger dans l'assemblage du robot.
 
-### Assembler un Ergo Jr
+Plus de ressources et une documentation d'assemblage pas à pas sont disponible pour chaque robot dans la section [guide d'assemblage](../assembly-guides/README.md) .
 
-> **Note** Vous pouvez trouver la documentation d'assemblage complète dans le chapitre [assemblage pas-à-pas d'un Ergo Jr](../assembly-guides/ergo-jr/README.md).
+## Assembler un Ergo Jr
+
+> **Note** Vous retrouverez la documentation complète de l'assemblage dans le chapitre [assemblage pas-à-pas de l'Ergo Jr](../assembly-guides/ergo-jr/README.md).
 
 <!-- TODO: refaire une belle photo avec la vraie BOM -->
-![Assemblage ergo-jr](../../en/assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
 
-Le robot Ergo Jr a été conçu pour être un petit robot, bon marché et facile à utiliser. Les pièces 3D ont été faites pour être imprimées facilement sur une imprimante 3D standard et les moteurs (6 servos XL-320 Dynamixel) ne coûtent que 20$ chacun.
+![assemblage de l'Ergo Jr](../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif)
 
-Le Ergo Jr est très facile à construire et son appendice peut être facilement changé - vous pouvez choisir parmi plusieurs outils : une lampe, une pince, un support pour stylo...
+L'Ergo Jr a été conçu pour être un petit robot, simple, peu onéreux et facile à utiliser. Les pièces 3D ont été conçues pour être facilement imprimable en 3D et les moteurs (6 servomoteurs Dynamixel XL-320) coûtent 20€ chacun.
 
-Grâce aux rivets OLLO le robot est vraiment simple à assembler. Ces rivets peuvent être enlevés et ajoutés très facilement avec l'outil OLLO. Il ne devrait pas prendre plus d'une heure à être entièrement construit, ce qui permet une grande liberté de modification.
+Grâce aux rivets OLLO, le robot est facile à assembler. Ces rivets peuvent être enlevés ajoutés rapidement avec l’outil OLLO. Construire ce robot ne devrait pas vous prendre plus d'une heure.
+
+Son effecteur peut être facilement changé. Vous pouvez choisir parmi plusieurs outils : * un abat-jour, * une pince, * ou un porte-stylo.
 
 <!-- TODO: image des rivets et du tool en action -->
 
-Mis à part le calibrage de l'orientation des moteurs, il n'y a pas de difficulté majeure. Si vous êtes familiers avec les briques Lego, vous devriez être capable d'assembler un Ergo Jr sans trop de problèmes! Les rivets sont pensés pour être faciles à assembler et désassembler, alors en cas de problème vous pouvez simplement redémarrer à zéro!
-Assurez vous de [**configurer les moteurs**](../assembly-guides/ergo-jr/motor-configuration.md) avant d'assembler le robot car il est plus difficile de le faire après!
+A part la **vérification de l'orientation des moteurs**, il n'y a pas vraiment de piège. Si vous êtes familier avec les briques Lego, vous devriez pouvoir assembler Ergo Jr sans trop de problème ! Les rivets ont été pensé pour que l'assemble soit aussi facile que le désassemblage. Donc en cas de problème, vous n'avez qu'à recommencer !
 
-### Assembler un Torse ou un Humanoïde
+Par ailleurs, faites attention à [**configurer vos moteurs**](../assembly-guides/ergo-jr/motor-configuration.md) avant d'assembler le robot, ce sera plus difficile de le faire après !
 
-> **Note** Vous pouvez trouver la documentation d'assemblage complète dans le chapitre [assemblage pas-à-pas d'un Humanoïde Poppy](../assembly-guides/poppy-humanoid/README.md).
+## Assembler un Torso ou un Humanoid
 
-![Poppy Humanoid BOM](../../en/img/humanoid/bom.jpg)
+> **Note** Vous pouvez trouver la documentation complète de l’assemblage dans le chapitre [montage pas-à-pas du robot Humanoid](../assembly-guides/poppy-humanoid/README.md).
 
-Construire un Torse Poppy ou un Humanoïde est plus complexe qu'un Ergo Jr mais ca n'est pas plus compliqué que de monter un Meccano ou un meuble Suédois. Cela consiste en les quelques étapes suivantes:
+![Nomenclature du robot humanoïde Poppy](../img/humanoid/bom.jpg)
+
+Construire un Poppy Torso ou un Humanoid est beaucoup plus complexe que le robot Ergo Jr, mais ce n'est pas vraiment plus compliqué que de construire un Meccano ou des meubles suédois. Cela consiste en ces quelques étapes :
 
 <!-- TODO: add links of the advanced doc -->
-* assembler le support de chaque moteur: **soyez très attentif à la position zéro du moteur!**
-* configurer les moteurs afin de se conformer à la *configuration poppy*
-* utiliser de nombreuses vis pour connecter toutes les parties imprimées 3D aux moteurs
-* faire un peu d'électronique pour la carte embarquée à l'intérieur de la tête : cela peut être un peu ardu si vous n'êtes pas familier avec l'électronique.
 
+- assembler le palonnier de chaque moteur : **soyez attentif à ce que le moteur soit bien sur sa position initiale, son zéro !**
+- configurer les moteurs afin qu'ils coïncident avec la *configuration Poppy*
+- utiliser un grand nombre de vis pour connecter toutes les pièces 3D aux moteurs
+- faire un peu d'électronique pour la carte embarquée au niveau de la tête : cela peut se révéler un peu difficile si vous n'êtes pas familier avec cette discipline.
 
-La **Patience et la précision** sont vos alliées, mais en cas d'erreur, ne paniquez pas: Poppy est un robot prévu pour être monté et démonté. Si vous êtes attentifs aux quelques **avertissements** ci-dessous, et au prix de quelques essais et erreurs, vous aurez un Torse Poppy ou un Humanoïde en état de marche :
+**La patience et la précision** sont vos meilleurs atouts, mais en cas d'erreurs, pas de panique : les robots Poppy sont faits pour être montés et démontés. Si vous faites attention des **mises en garde** suivantes, après quelques essais/erreurs vous aurez un Poppy Torso ou Humanoid en état de marche :
 
-*Avertissement 1: L'Humanoïde Poppy et le Torse Poppy sont construits avec des moteurs servos de type Dynamixel MX-28 et MX-64. Il s'agit de moteurs puissants et ils peuvent représenter un risque de dommage pour vos doigts et les matériaux autour. Soyez prudent et placez le robot dans un espace non encombré pendant les tests que vous effectuerez*.
+*Mise en garde 1 : Les robots Poppy Humanoid ou Torso fonctionnent principalement avec des servomoteurs Dynamixel MX-28 et MX-64. Ils sont plutôt puissants et peuvent être dangereux si l'on s'y coince les doigts. Donc soyez prudent et mettez le robot dans un environnement dégagé pendant que vous le testez !*
 
-*Avertissement 2: Alignez le point du support moteur ("horn") et le point sur l'axe du servo.*
+*Mise en garde 2 : Alignez le palonnier avec le repère sur l'axe du servomoteur.*
 
-<img src="../../en/img/humanoid/horn.jpg" alt="horn" style="height: 350px;"/><img src="../../en/img/humanoid/axe.jpg" alt="axe" style="height: 350px;"/>
+<img src="../img/humanoid/horn.jpg" alt="palonnier" style="height: 350px;" /><img src="../img/humanoid/axe.jpg" alt="axe" style="height: 350px;" />
 
-*Avertissement 3: Ajustez les trois points des moteurs avec les trois points de la partie structurelle.*
+*Mise en garde 3 : Ajustez les trois repères du palonnier avec les trois repères de la pièce 3D.*
 
-![](../../en/img/humanoid/three_dots.jpg)
+![](../img/humanoid/three_dots.jpg)
 
-*Avertissement 4: Utilisez du freinfilet afin d'éviter que les vibrations ne desserrent les vis.  Par contre, tremper l'extrémité de la vis dans le freinfilet est suffisant (n'appliquez pas de freinfilet directement sur les trous de vis, cela serait trop et le démontage s'avèrerait très difficile!)*
+*Mise en garde 4 : Utilisez du frein filet pour éviter le déliement des vis dues aux vibrations. Cependant, poser l'extrémité de la vis sur le frein filet est amplement suffisant. **Si vous mettez trop de frein filet vous risquez de coller définitivement vos vis et rendre très compliqué tout démontage !***
 
 <!-- TODO: Add directly the youtube playlist of poppy torso and humanoid-->
 
-**Guides d'assemblage pas-à-pas :**
+**Guide d'assemblage pas-à-pas :**
 
-- [Guide pour l'Humanoïde](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md)
-- [Guide pour le Torse](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md)
+- [Guide pour Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md)
+- [Guide pour Poppy Torso](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md)

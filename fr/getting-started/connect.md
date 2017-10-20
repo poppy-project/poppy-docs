@@ -1,89 +1,76 @@
-# Démarrer et connecter le robot
+# Démarrez et connectez le robot
 
-Dans cette section, nous allons décrire comment démarrer votre robot et vous donner un aperçu des possibilités pour y accéder.
+Dans cette section, nous décrirons comment démarrer votre robot et donnerons un aperçu des possibilités d’y accéder.
 
 ## Configurer le logiciel
 
-Les créatures Poppy viennent avec une carte embarquée dont le travail est de contrôler les moteurs et d'accéder aux capteurs. Pour une plus grande simplicité, cette carte embarquée peut être contactée à travers une interface Web. cela facilite le contrôle du robot depuis votre propre ordinateur ou une tablette sans avoir à télécharger ou installer quoique ce soit.
+Les robots Poppy sont équipés d'une carte embarquée (exemple : Raspberry Pi, ODROID...) dont le rôle consiste à contrôler les moteurs et à accéder aux capteurs. À des fin de simplicité, on peut accéder à cet ordinateur à distance via une interface web. Il est facile de contrôler le robot à partir de votre propre ordinateur ou tablette sans avoir à télécharger / installer quoi que ce soit.
 
-Il y a plusieurs méthodes pour configurer la carte embarquée de votre robot Poppy :
+Il existe deux façons de configurer la carte pour votre robot Poppy: * [**la manière simple**](#easy-and-recommended-way-use-the-poppy-sdcard) : utilisez une image préprogrammée du système d'exploitation Poppy et écrivez-la (installez-la) sur la carte SD* [**la manière difficile pour les utilisateurs avancés**](#advanced-way-diy-install-everything-from-scratch) : installez tout à partir de zéro
 
-* [**la méthode simple**](#simplement-utiliser-la-carte-sd-poppy): utilisez une image ISO toute prête et transférez la sur une carte SD
-* [**la méthode avancée**](#plus-avance-tout-installer-vous-meme): tout installer vous-même
+> **Note** Si vous envisagez d'utiliser un robot simulé (robot virtuel), vous devez installer le logiciel sur votre ordinateur personnel. Suivez les [instructions pour le paramétrage de la simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
-<!-- TODO: corriger le lien ci-desous pour le setup de la simulation -->
+### Manière simple et recommandée : utiliser la carte SD Poppy
 
-> **Note** Si vous prévoyez d'utiliser un robot simulé, vous devez installer le logiciel sur votre propre ordinauter. Suivez les instructions pour [configurer la simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+Le moyen le plus simple et le plus rapide - de loin - est d'utiliser une image système déjà créée pour une carte SD. Les images ISO contiennent tous les éléments pré-installés pour votre robot Poppy. C'est aussi un bon moyen de s'assurer que vous utilisez exactement le même logiciel que nous. Ainsi, vous éviterez la plupart des problèmes.
 
-### Simplement: utiliser la Carte SD Poppy
+> **Note** Les kits robotiques Poppy sont livrés avec une carte SD prête à l'emploi. Donc, vous n'avez rien de spécial à faire.
 
-Le moyen le plus simple et le plus rapide - de loin - est d'utiliser des images ISO déjà faites pour les cartes SD. Ces images ISO viennent avec tout le nécessaire déjà pré-installé pour votre robot Poppy. C'est aussi un bon moyen de vous assurer que vous utilisez exactement le même logiciel que nous Ainsi vous éviterez de nombreux problèmes.
+Pour chaque robot Poppy, l'image se trouve sur sa page web de sa dernière version :
 
-> **Note** Les kits de robotique Poppy viennent avec une carte SD prête à l'emploi. Ainsi vous n'avez rien de spécial à faire.
+* [pour le robot Poppy Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases)
+* [pour le robot Poppy Torso](https://github.com/poppy-project/poppy-torso/releases)
+* [pour le robot Poppy Humanoid](https://github.com/poppy-project/poppy-humanoid/releases/)
 
-Les images ISO peuvent être trouvées avec les distributions de chaque créature :
+L'image peut être écrite sur une carte SD (d'au moins 8 Go) en utilisant un utilitaire tel qu'Etcher. Une fois que la carte SD est prête, insérez-la dans la carte embarquée (micro-ordinateur). Ensuite, lorsque vous branchez votre robot, il devrait démarrer automatiquement et vous devriez pouvoir vous connecter à son interface web.
 
-* [pour le Poppy Ergo Jr](https://github.com/poppy-project/poppy-ergo-jr/releases)
-* [pour le Torse Poppy](https://github.com/poppy-project/poppy-torso/releases)
-* [pour l'Humanoïde Poppy](https://github.com/poppy-project/poppy-humanoid/releases/)
+> **Info** Vous trouverez plus de détails dans la [section démarrage](../installation/README.md).
 
-Elles peuvent être écrites sur une carte SD d'au moins 8 Go en utilisant un outil classique. Une fois la carte SD prête, vous n'avez qu'à l'insérer dans votre carte embarquée. Vous pouvez ensuite mettre votre robot sous tension, il devrait démarrer et vous pourrez ainsi vous connecter à son interface web.
+### Manière avancée : DIY, installez tout à partir de zéro
 
-> **Info** Plus de détails dans la [section Démarrage](../installation/README.md).
+La manière avancée consiste principalement à installer tout ce qui est nécessaire à partir de zéro. Cela suit la même procédure que nous utilisons pour générer l'image de cartes SD. Nous mentionnons cette possibilité ici car cela peut être utile si :
 
-### Plus avancé: tout installer vous-même
+* Vous ** travaillez avec un robot simulé** et devez donc installer manuellement tous les logiciels requis sur votre ordinateur, cette procédure vous montre comment cela peut être fait sur un Raspberry-Pi (carte embarquée) et l'adapter à un autre ordinateur,
+* vous voulez personnaliser l'environnement,
+* ou si vous voulez tout simplement comprendre comment ça fonctionne.
 
-La méthode avancée consiste à installer tout le nécessaire depuis zéro. Elle suit la même procédure que nous utilisons pour générer les images ISO pour cartes SD. Nous mentionnons cette méthode car elle peut s'avérer utile si :
+> **Attention** Nous essayons de garder cette procédure d'installation aussi générique que possible. Pourtant, certains détails peuvent varier selon votre système d'exploitation ou votre ordinateur. En outre, l'installation à partir de zéro exige une bonne connaissance de comment installer et configurer un environnement python.
 
-* **vous travaillez avec un robot simulé** et vous devez donc installer tout le logiciel nécessaire sur votre ordinateur, cette procédure est un bon endroit pour voir comment le faire sur un Raspberry Pi et l'adapter pour un autre ordinateur,
-* vous voulez modifier l'environnement de travail,
-* vous voulez simplement comprendre comment tout fonctionne.
+Selon ce que vous voulez faire, toutes les étapes ne sont pas nécessaires. En particulier, si vous souhaitez contrôler un robot simulé, vous pouvez simplement installer les bibliothèques python pour Poppy.
 
-> **Attention** Nous essayons de garder cette procédure d'installation aussi générique que possible. Pour autant, certains détails peuvent varier en fonction de votre système d'exploitation ou de votre ordinateur. De plus, l'installation depuis zéro demande quelques connaissances de base pour installer et configurer un environnement Python.
+> **Information** Plus de détails peuvent être trouvés dans la section [ Installation pour utilisateurs avancés](../installation/README.md).
 
-Suivant ce que vous souhaitez accomplir, toutes les étapes ne sont pas nécessairement requises. En particulier, si vous souhaitez contrôler un robot simulé, il suffit d'installer les bibliothèques Python pour Poppy.
+### Configuration du réseau
 
-> **Info** Plus de détails vous sont fournis dans le chapitre [Installation pour utilisateurs avancés](../installation/README.md).
+Une fois que votre Poppy est assemblé et son logiciel est prêt, l'étape suivante consiste à le connecter à un réseau. L'objectif est de vous permettre d'accéder à distance au robot à partir de votre ordinateur ou votre smartphone / tablette, le contrôler et le programmer.
 
-### Configurer le réseau
+Il y a deux façons principales de connecter votre robot à votre ordinateur / tablette / smartphone : * Connectez à la fois le robot et l'ordinateur au même réseau (par exemple, la box internet de votre maison ou le réseau de l'école). * Connectez directement votre robot à votre ordinateur à l'aide d'un câble Ethernet.
 
-Une fois que votre Poppy est assemblé et son logiciel prêt, l'étape suivante est de le connecter à un réseau. Le but est de vous permettre d'accéder au robot depuis votre ordinateur ou votre tablette/smartphone, de le contrôler et de le programmer.
+> **Attention** alors que la deuxième façon (brancher directement le robot sur votre ordinateur) fonctionne pour la plupart des utilisateurs. Il semble que dans certains cas étranges, cela ne fonctionne pas.
 
-Il y a deux manières de connecter votre robot à votre ordinateur/tablette/smartphone:
-* Connecter le robot et l'ordinateur au même réseau (par exemple la box wifi de votre domicile ou votre établissement scolaire).
-* Connecter directement votre robot à votre ordinateur par l'intermédiaire d'un câble ethernet.
+Pour trouver l'adresse de votre robot sur le réseau, nous utilisons le protocole Zeroconf</ 0>. Il vous permet d'utiliser le nom d'hôte du robot: *"poppy.local"* comme adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais il faudra installer les[*services d'impression Bonjour pour*](https://support.apple.com/kb/DL999) Windows. Si vous préférez, vous pouvez utiliser l'adresse IP attribuée à votre robot à la place. Si vous n'êtes pas l'administrateur de votre réseau, cela peut être une information difficile à trouver. Dans ce cas, la première procédure devrait être privilégiée.</p> 
 
-> **Attention** Bien que connecter le robot et l'ordinateur marche pour la plupart des utilisateurs, il semble que dans certains cas cela ne fonctionne pas.
+Pour vérifier que tout est correctement configuré, vous pouvez accéder à l'url suivante en utilisant votre navigateur Web préféré: [http://poppy.local/](http://poppy.local). Vous pouvez remplacer *poppy.local* par l'adresse IP de votre robot (quelque chose de similaire à http://192.168.0.42).
 
-Pour trouver l'adresse de votre robot sur le réseau, nous utilisons le [protocole standard Zeroconf](https://fr.wikipedia.org/wiki/Zeroconf). Il vous permet d'utiliser le nom d'hôte: *"poppy.local"* en tant qu'adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais cela nécessitera d'installer les [*Services d'impression Bonjour*](https://support.apple.com/kb/DL999) sous Windows. Si vous préférez, vous pouvez utiliser l'adresse IP assignée à votre robot à la place. Si vous n'êtes pas administrateur de votre réseau cela peut être assez difficile à déterminer. Dans ce cas, utilisez de préférence la première procédure.
+> **Attention** Si vous n'êtes pas familier avec la configuration du réseau ou si vous n'avez aucune idée de ce que le paragraphe précédent a mal essayer d'expliquer, vous devriez voir avec l'ingénieur du réseau informatique, comment cela peut être fait.
 
-Pour vérifier que tout est configuré correctement, vous pouvez aller à l'adresse suivante avec votre navigateur web favori : [http://poppy.local/](http://poppy.local). Vous pouvez remplacer *poppy.local* par l'adresse IP de votre robot (par exemple http://192.168.0.42).
+### Utiliser l'interface web
 
-> **Attention** Si vous n'êtes pas familier avec la configuration des réseaux ou si vous n'avez aucune idée de ce que le paragraphe précédent a tenté de vous expliquer, il est préférable de consulter un ingénieur réseau afin de compléter cette étape.
+L'interface web est le point central pour contrôler, programmer et configurer votre robot. Il peut être utilisé pour: * Surveiller et contrôler le robot * Programmer le robot en [Snap!](http://snap.berkeley.edu) * Programmer le robot en [Python](https://www.python.org) * Configurer le robot (changer son nom, activer/désactiver la caméra, faire une mise à jour) * Réinitialiser et éteindre le robot
 
-### Utiliser l'interface Web
-
-L'interface web est le point central pour contrôler, programmer et configurer votre robot. Elle peut être utilisée pour:
-* Suivre l'activité du robot
-* Le programmer en utilisant [Snap!](http://snap.berkeley.edu)
-* Le programmer en utilisant [Python](https://www.python.org)
-* Configurer le robot (changer son nom, activer ou désactiver la caméra, le mettre à jour)
-* Remettre à zéro et arrêter le robot.
-
-Pour accéder à cette interface, il suffit d'aller à l'URL suivante avec votre navigateur Web favori:
+Pour accéder à cette interface web, il vous suffit d'accéder à l'URL à l'aide de votre navigateur Web préféré :
 
 * http://poppy.local (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
-* ou utilisez son adresse IP.
+* ou en utilisant directement l'adresse IP du robot
 
-Vous devriez voir quelque chose comme:
+Vous devriez voir quelque chose comme :
 
-![Home Page](../../en/img/poppy_home.png)
-Les boutons peuvent être utilisés pour naviguer vers les différentes fonctionnalités. Par exemple, si vous cliquez sur le *Monitor and Control*, vous accéderez à l'application de monitoring:
+![Page d'accueil](../img/poppy_home.png) Les boutons permettent d'accéder aux différentes fonctionnalités. Par exemple, si vous cliquez sur *Monitor and Control*, vous accédez à l'application web du moniteur :
 
-![Interface de Monitoring](./../en/img/poppy_monitor.png)
+![Interface du moniteur](../img/poppy_monitor.png)
 
-Cela vous permettra d'allumer ou d'éteindre les moteurs de votre robot, de suivre leur activité, et leur comportement d'allumage et d'extinction.
+Cela vous permet d’activer / désactiver les moteurs de votre robot, de les surveiller et de commencer / arrêter les comportements.
 
-Le bouton *What happened* est là où vous devriez regarder pour plus d'information sur ce qui s'est mal passé. Voici une capture d'écran de ce que vous devriez voir si tout se passe comme prévu:
+Le bouton *What happened* c'est où vous devriez regarder pour plus d'informations si quelque chose qui ne va pas. Voici une capture d'écran de ce que vous devriez voir si tout va bien :
 
-![Capture d'écran de l'interface web log](../../en/img/web-logs.png)
+![Capture d'écran du rapport d'erreur](../img/web-logs.png)
