@@ -14,9 +14,9 @@ Dans le [premier chapitre](getting-started/README.md) nous vous donnerons un ape
 
 ## À propos et contributions
 
-Cette documentation est maintenue par l’équipe Poppy et de [super contributeurs](https://github.com/poppy-project/poppy-docs/blob/master/CONTRIBUTORS.md). Si vous trouvez des erreurs ou que vous souhaitez mettre à jour le document veuillez suivre le [guide de contribution](https://github.com/poppy-project/poppy-docs/blob/master/README.md).
+Cette documentation est maintenue par l’équipe Poppy avec l'aide de nombreux [contributeurs bénévole](https://github.com/poppy-project/poppy-docs/blob/master/CONTRIBUTORS.md). Si vous trouvez des erreurs ou que vous souhaitez mettre à jour le document veuillez suivre le [guide de contribution](https://github.com/poppy-project/poppy-docs/blob/master/README.md).
 
-Ce livre est sous [licence CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Vous êtes libre de copier, modifier et redistribuer ce document tant que vous donnez un crédit approprié aux auteurs et un lien vers le site original [docs.poppy-Project.org](https://docs.poppy-project.org).** Il est écrit en markdown, hébergé sur [GitHub](https://github.com/poppy-project/poppy-docs), et [GitBook](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs) est utilisé pour générer le site Web.
+Ce document est sous [licence CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Vous êtes libre de copier, modifier et redistribuer ce document tant que vous donnez un crédit approprié aux auteurs et un lien vers le site original [docs.poppy-Project.org](https://docs.poppy-project.org).** Il est écrit en markdown, hébergé sur [GitHub](https://github.com/poppy-project/poppy-docs), et [GitBook](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs) est utilisé pour générer le site Web.
 
 ## Version
 
