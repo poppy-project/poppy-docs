@@ -16,19 +16,24 @@ We think simulation can be a powerful tool. It allows the development and test o
 * In a context where multiple users share a robot. For instance in a classroom where each group can work using the simulator and validate their program on a real robot.
 * To design and run complex and time consuming experiments.
 
-We try to make the **switch from a simulated Poppy robot to the real one as transparent and as simple as possible**. Most of the programming documentation is actually valid for both simulated and real robots. The chapter *[From simulation to real robot](../from-simulation-to-real-robot/README.md)* will guide you in the few steps to transform your program running in simulation to one working with a real robot.
+We try to make the **switch from a simulated Poppy robot to the real one as transparent and as simple as possible**.
+Most of the programming documentation is actually valid for both simulated and real robots.
+The chapter *[From simulation to real robot](../from-simulation-to-real-robot/README.md)* will guide you in the few steps to transform your program running in simulation to one working with a real robot.
 
 > **Warning** If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.
 
 ## Install the needed software
 
-While the physical robots come with libraries pre-installed, they are not integrated in the simulators. Thus, you need to install them on your computer. More details of what you will have to do is given in the [section below](#install-the-needed-software). You will also not have access to the robot web interface. You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap_!_ server).
+> **Info** Info: A full section is dedicated on how to *[install everything locally for using a simulator](../installation/install-poppy-softwares.md)* if you need more details.
+
+While the physical robots come with an embedded computer pre-installed, you need to install some software libraries on your computer to control simulated Poppy creatures.
+You will also not have access to the robot web interface.
+You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap_!_ server).
 
 To start controlling a simulated Poppy robots, either using V-REP or the web visualizer, you will need:
 * To have a working Python, we strongly recommend to use the [Anaconda Python distribution](https://www.continuum.io/downloads). It works with any version >=2.7 or >=3.4. Prefer Python 2.7 if you can, as it is the version we used.
 * To install the Poppy libraries: pypot and the library corresponding to your creature (e.g. poppy-ergo-jr).
 
-> **Info** Info: Details about those steps can be found in section *[Install everything locally for using a simulator](../installation/install-poppy-softwares.md)*.
 
 ## Using V-REP
 
@@ -43,7 +48,9 @@ All main Poppy robots are available in V-REP:
 * Poppy Torso
 * Poppy Ergo Jr
 
-V-REP can be used to learn how to control motors, get information from sensors but also to interact with the simulated environment. It can be controlled using Python, Snap_!_ or through the REST API. Here, are some examples of what the community has already been doing with it:
+V-REP can be used to learn how to control motors, get information from sensors but also to interact with the simulated environment.
+It can be controlled using Python, Snap_!_ or through the REST API.
+Here, are some examples of what the community has already been doing with it:
 * A pedagogical activity to discover the different motor of your robot and how they can be controlled.
 * A scientific experiment, where a Poppy Torso is learning how to push a cube on a table in front of it
 
@@ -65,7 +72,9 @@ poppy-services --vrep --snap poppy-ergo-jr
 
 ## Using our web visualizer
 
-Our web visualizer will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot.
+Our web visualizer will show you a 3D representation of a Poppy robot.
+For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer.
+You simply have to set the host variable from within the web interface to match the address of your robot.
 
 ![Poppy Simu Presentation](../img/visu/presentation.png)
 
@@ -81,7 +90,7 @@ If you want to use command the mockup robot from Snap, you can also start it dir
 poppy-services --poppy-simu --snap poppy-ergo-jr
 ```
 
-As for V-REP, you can control your Robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
+As for V-REP, you can control your robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
 
 Here is an example with Python:
 

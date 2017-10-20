@@ -2,9 +2,13 @@
 
 ![Poppy Logo](../img/logo/poppy.png)
 
-[Poppy Project](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. They all share a vision: robots are powerful tools to learn and be creative and collaborate to improve the project. They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve the software or even create new robots.
+[Poppy Project](https://www.poppy-project.org/) is an open-source platform for the creation, use and sharing of interactive 3D printed robots.
+It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. They all share a vision: robots are powerful tools to learn and be creative, and they collaborate to improve the project.
+They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve software or even create new robots.
 
-The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and deploy. We promote open-source by sharing hardware, software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
+The [Poppy community](https://forum.poppy-project.org/) develops robotic creations that are easy to build, customize, and use.
+
+We promote open-source by sharing hardware and software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.
 
 To ease these exchanges two supports are available:
 
@@ -18,12 +22,12 @@ The Poppy project has been originally designed at [Inria Flowers](http://www.inr
 
 ## The Poppy creatures
 
-Poppy creatures are open-source robots, available for download and modification ([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) for the hardware and [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) for the software). They were designed with the same principles in mind.
+Poppy creatures are open-source robots, available for download and modification ([Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/4.0/) for the hardware and [GPLv3](http://www.gnu.org/licenses/gpl-3.0.en.html) for the software). They were all designed with the same principles in mind.
 
 All Poppy creatures:
 
 - are made from pieces of printable 3D and Dynamixel motors,
-- use an embedded board for control (a Raspberry Pi 2 or Odroid for older versions),
+- use an embedded board for control (a Raspberry Pi or Odroid for older versions),
 - are based on a Python library, [pypot](../software-libraries/pypot.md), allowing to control Dynamixel servomotors in an easy way,
 - have a simulated version available (based on [V-REP](http://www.coppeliarobotics.com)),
 - can be controlled using a visual programming language ([Snap!](http://snap.berkeley.edu) a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language,
@@ -33,7 +37,7 @@ They can be used as it is, or hacked to explore new shapes, add sensors, etc...
 
 To get your own Poppy robot, you can either:
 * Get all the parts yourself by following the bill of materials (see below).
-* Buy a full Poppy robotic kit from our [official retailer](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
+* Buy a full Poppy robotic kit from our [official retailer, Generation Robots](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
 
 
 
@@ -71,7 +75,10 @@ You can get all the parts yourself following the [bill of materials](https://git
 
 ### Poppy Torso
 
-It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
+It is the upper part of Poppy Humanoid (13 degrees of freedom).
+Poppy Torso is thus more affordable than the complete Poppy Humanoid.
+It makes it a more suitable solution for educational, associative and makers contexts.
+Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).
 
 You can get all the parts yourself following the [bill of material](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md). The [3D models](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) for the parts are the same as Poppy Humanoid, without the legs and with an extra [suction cup support](https://github.com/poppy-project/robot-support-toolbox/).
 
@@ -79,13 +86,17 @@ You can get all the parts yourself following the [bill of material](https://gith
 
 ### Other interesting Poppy Creatures
 
-A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.
+A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics.
+We try to provide all the tools needed to design new robots based on the same technological bricks.
+Some new creatures are in development within the community.
+Some of them are presented in the section below.
 
 #### Poppy right arm (work in progress)
 
-Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.
+Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm.
+It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.
 
-![Poppy Right Arm](../img/poppy-right-arm.jpg)
+<img src="../img/poppy-right-arm.jpg" alt="Poppy Right Arm" height="400">
 
 The project was realized during an internship at Inria Flowers by [Joel Ortiz Sosa](https://github.com/joelortizsosa). Find more info and the sources in the [repository](https://github.com/poppy-project/poppy-6dof-right-arm).
 
@@ -104,9 +115,12 @@ Its participation in the RoboCup (World Cup football for robot) is also envisage
 
 ##### [Poppyrate](http://www.poppyrate.com/)
 
-It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.
+It a robot based on Poppy Humanoid.
+It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors.
+The size reduction also makes it easier to print the parts on a standard 3D-printer.
+Goals also involved making it as mobile and customizable as possible while maintaining compatibility with Poppy software.
 
-Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud.
+Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the society ZeCloud.
 
 ![Poppyrate](../img/poppyrate.jpg)
 

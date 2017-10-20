@@ -63,7 +63,11 @@ You can plug a robot to your computer **directly** on your computer with an Ethe
 If you cannot (or doesn't want to) install a zeroconf client on your personal computer, you can use one of the following methods to find the IP address of your robot.
 
 * You can use [Fing](https://www.fingbox.com/download), famous for its [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing) and [iOS](https://itunes.apple.com/fr/app/fing-network-scanner/id430921107?mt=8) applications,
-* [Nmap](https://nmap.org/book/man-host-discovery.html) (only GNU/Linux and MAC OSX) if you are not afraid of command line interfaces.
+* [Nmap](https://nmap.org/book/man-host-discovery.html) or arp(only GNU/Linux and MAC OSX) if you are not afraid of command line interfaces.
+  ```
+  nmap -sn 192.168.1.0/24
+  arp -an | grep -i B8:27:EB
+  ```
 * You can also go to your router web interface (with its IP address on your web browser like http://192.168.0.1 or http://192.168.1.1 or http://192.168.0.254 or http://192.168.1.254), you should have a section of connected hosts.
 
 <!-- TODO: talk about poppy-discover -->

@@ -5,7 +5,9 @@
 
 Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should take about one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!
 
-This section intends to give you hints and a glimpse of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.
+This section intends to give you hints and a glimpse of some critical points so you aware of them before digging into the construction.
+
+More resources and a detailed step by step assembly procedure for each robot are available in the [assembly guide](../assembly-guides/README.md) section.
 
 
 ## Assembling an Ergo Jr
@@ -17,9 +19,9 @@ This section intends to give you hints and a glimpse of some critical points so 
 
 The Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each.
 
-The Ergo Jr is very easy to build and its end effector can be easily changed - you can choose among several tools: a lamp, a gripper, a pen holder...
+Thanks to OLLO rivets the robot is simple to assemble. These rivets can be removed and added quickly with the OLLO tool. It should not take more than one hour to entirely built it.
 
-Thanks to OLLO rivets the robot is very simple to assemble. These rivets can be removed and added very quickly with the OLLO tool. It should not take more than one hour to entirely built it, which allows great design freedom.
+You can also change easily the end effector of the robot among these tools: a lamp, a gripper, a pen holder...
 
 <!-- TODO: image des rivets et du tool en action -->
 

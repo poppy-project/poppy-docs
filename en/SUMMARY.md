@@ -14,7 +14,7 @@
 
 * [Installation](installation/README.md)
     - [Install Bonjour/Zeroconf](installation/install-zeroconf.md)
-    - [Startup with a Poppy robot](installation/burn-an-image-file.md)
+    - [Download and burn the system image](installation/burn-an-image-file.md)
     - [Install Poppy softwares](installation/install-poppy-softwares.md)
     - [Install V-REP simulator](installation/install-vrep.md)
     - [Install USB to serial drivers](installation/install-drivers.md)
