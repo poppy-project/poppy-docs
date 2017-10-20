@@ -5,6 +5,16 @@ import os
 destination = ["fr", "de", "es", "nl"]
 extensions = [".jpg", ".gif", ".png", ".JPG", ".PNG", ".GIF"]
 
+# Delete symlinks of old pictures
+for lang in destination:
+    for ext in extensions:
+        for f in glob.iglob('%s/**/*%s' % (lang, ext), recursive=True):
+            if not os.path.isfile(f):
+                print("Remove old symlink %s" % f)
+                os.remove(f)
+
+
+# Create symlinks
 for ext in extensions:
     for src in glob.iglob('en/**/*%s' % ext, recursive=True):
         for lang in destination:
@@ -22,5 +32,4 @@ for ext in extensions:
                 print("%s already exist" % dst)
                 break
 
-            print(relative_path)
             os.symlink(relative_path, dst)
