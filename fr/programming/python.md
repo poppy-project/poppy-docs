@@ -1,10 +1,10 @@
-# Programming Poppy robots in Python
+# Programmation des robots Poppy en Python
 
-This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, you will see how to access all the different levels of control, from the higher to the lower.
+Ce chapitre vous guidera de manière à pouvoir contrôler les robots Poppy en Python. Comme c'est le langage actuel pour écrire des librairies Poppy, vous verrez comment accéder tous les différents niveaux de contrôle, du plus haut vers le plus bas.
 
-We will detail everything you need to know to directly program you robot using the Python embedded in the Poppy robot or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.
+Nous allons détailler tout ce que vous devez savoir pour pouvoir programmer directement le robot en utilisant le Python embarqué dans le robot Poppy ou pour l'installer localement. Remarquez que ce chapitre ne prétend pas vous apprendre le langage Python ou la programmation à partir de zéro et donc si vous êtes totalement nouveau sur le langage Python, il peut être bon de commencer avec un tutoriel de Python. Pourtant, nous essayons de garder les tutoriels aussi simples que possible et nous vous avertirons toujours lorsque certaines parties ciblent les utilisateurs les plus avancés.
 
-We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of [Jupyter notebooks](http://jupyter.org). The next chapter, [Jupyter Notebooks Gallery](notebooks.md), presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.
+Nous allons essayer de fournir autant d'exemples que possible et de l'axer sur l’API complète ainsi vous pouvez trouver et utiliser les fonctionnalités moins courantes. La plupart des exemples et didacticiels sont disponibles comme une collection de [Jupyter notebooks](http://jupyter.org). The next chapter, [Jupyter Notebooks Gallery](notebooks.md), presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.
 
 All Poppy libraries are open source and are released under the [GPL v3](http://www.gnu.org/licenses/gpl.html) license. So you can freely access the source code on [github](https://github.com/poppy-project). Do not hesitate to fork them, send pull request and contribute!
 
