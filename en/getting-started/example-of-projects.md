@@ -5,11 +5,11 @@ The Poppy community gathers an interdisciplinary community of beginners and expe
 
 ## School of Moon
 
-The [School of moon](http://shonen.info/schoolofmoon/) play has been created by the contemporary dance company [Shonen](http://shonen.info) lead by the choregrapher Eric Minh Cuong Castaing.
+The [School of moon](http://shonen.info/schoolofmoon/) play has been created by the contemporary dance company [Shonen](http://shonen.info) lead by the choreographer Eric Minh Cuong Castaing.
 
 The stage is shared by children, two dancers (Gaëtan Brun Picard and Ana Pi), 3 Nao robots and two Poppy Humanoid robots. This play is a metaphor of the creation of a post-humanity in three acts: the Man, the Man and the machine, and the machine.
 
-<iframe src="https://player.vimeo.com/video/149653064" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="http://player.vimeo.com/video/149653064" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 The representations are localized, meaning that the children dancing come from the local town. They also are specific sequences depending on the robots existing in the city.
 
@@ -27,7 +27,7 @@ The creation was focused on 4 time periods:
 
 ## Cherry Project
 
-![](https://forum.poppy-project.org/uploads/default/original/2X/3/33984972217cd45f473246b130f0001df33ffcfc.png)
+![](../img/cherry.png)
 The Cherry project is a community project to develop scenarios regarding breaking isolation of children at the hospital.
 
  This project uses Poppy robot as a companion for hospitalized children in primary school. Cherry can compensate a social rupture during hospitalization. It mediates between the child, his friends, his family and teachers and can talk to him or play some games.
@@ -45,7 +45,7 @@ More information:
 * The [facebook](https://www.facebook.com/projetcherry/?ref=ts&fref=ts) page
 * The [twitter](https://twitter.com/projetcherry)
 * The [wordpress](https://projetcherry.wordpress.com/)
-* The [github](https://github.com/Cherry-project) (with a short [wiki](https://github.com/Cherry-project/cherry-software/wiki))
+* The [github](https://github.com/Cherry-project) (with a short [wiki](https://github.com/Cherry-project/wiki/wiki))
 
 ## Connect Poppy and Arduino thanks to Snap4Arduino
 
@@ -54,7 +54,7 @@ More information:
 <iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen></iframe>
 
 
-Then the only limitation is your creativity! For instance, ou can make [Poppy Ergo Jr plays TicTacToe](https://www.youtube.com/embed/usDAgvcEXJA):
+Then the only limitation is your creativity! For instance, you can make [Poppy Ergo Jr plays TicTacToe](https://www.youtube.com/embed/usDAgvcEXJA):
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen></iframe>
 
