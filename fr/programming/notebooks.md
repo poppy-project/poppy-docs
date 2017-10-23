@@ -74,4 +74,4 @@ This chapter presents a gallery of notebooks and tries to organize them into dif
 
 ## Contributing to this gallery -->
 
-Do not hesitate to let us know if some cool Notebooks are missing! You can directly send pull-request on GitHub or use the [issue tracker](https://github.com/poppy-project/poppy-docs/issues).
+N'hésitez pas à nous faire savoir s'il manque certaines références d'ordinateurs portables! Vous pouvez directement envoyer une pull-request sur GitHub ou utiliser [le gestionnaire de bug](https://github.com/poppy-project/poppy-docs/issues).

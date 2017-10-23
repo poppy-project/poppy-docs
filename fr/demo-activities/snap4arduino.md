@@ -1,6 +1,6 @@
 ## Contrôler Poppy avec un Arduino via Snap4Arduino
 
-*Written by [Gilles Lassus](https://forum.poppy-project.org/users/gilles_lassus).*
+*Rédigé par [Gilles Lassus](https://forum.poppy-project.org/users/gilles_lassus).*
 
 **Objectif** : contrôler un moteur de Poppy par un potentiomètre sur la platine Arduino.
 
@@ -18,7 +18,7 @@
 
 ### Lancement de la simulation (dans le cas d'un Poppy simulé dans Vrep)
 
-* Lancez Vrep .
+* Lancez V-REP.
 * Exécutez les commandes python suivantes :
 
 ```python

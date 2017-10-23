@@ -6,18 +6,18 @@
 
 Bienvenue dans la documentation du [Projet Poppy](https://www.poppy-project.org/), une plate-forme de robotique open-source.
 
-In this documentation, we will try to cover everything from the short overview of what is possible within the project to the details on how you can build a Poppy robot or reproduce one of the pedagogical activity.
+Dans cette documentation, nous allons essayer de tout couvrir, en partant d'un bref aperçu de ce qui est possible avec les outils du projet, et en passant par tous les détails nécessaires pour construire un robot Poppy ou de reproduire une des activités pédagogiques.
 
 ## Introduction
 
-In the [first chapter](getting-started/README.md), we will give you a simple but exhaustive overview of what you can do within this project, so you can quickly focus on the following chapters that cover what you are really interested in. While some advanced chapters may require a good understanding of mechanics, electronics or computer sciences, the [Getting Started](getting-started/README.md) section is intended to be easily accessible by all readers.
+Dans le [premier chapitre](getting-started/README.md) nous vous donnerons un aperçu simple mais exhaustif de ce que vous pouvez faire dans ce projet, ainsi vous pourrez rapidement vous concentrer sur les chapitres suivants qui couvrent les points qui vous intéressent. Tandis que certains chapitres avancés peuvent nécessiter des connaissances en mécanique, électronique ou informatique, la section [Mise en route](getting-started/README.md), est destinée à être facilement accessible par tous les lecteurs.
 
-## About and contributing
+## À propos et contributions
 
-This documentation is maintained by Poppy team and [awesome contributors](https://github.com/poppy-project/poppy-docs/blob/master/CONTRIBUTORS.md). If you find mistakes or want to update the document please follow the [contributing guidelines](https://github.com/poppy-project/poppy-docs/blob/master/README.md).
+Cette documentation est maintenue par l’équipe Poppy avec l'aide de nombreux [contributeurs bénévole](https://github.com/poppy-project/poppy-docs/blob/master/CONTRIBUTORS.md). Si vous trouvez des erreurs ou que vous souhaitez mettre à jour le document veuillez suivre le [guide de contribution](https://github.com/poppy-project/poppy-docs/blob/master/README.md).
 
-This book is licensed under the [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). **You are free to copy, modify and redistribute this document as long as you give an appropriate credit the the author and point a link to original website [docs.poppy-project.org](https://docs.poppy-project.org).** It is written in markdown, hosted on [GitHub](https://github.com/poppy-project/poppy-docs), and we use [GitBook](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs) to generate the website.
+Ce document est sous [licence CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Vous êtes libre de copier, modifier et redistribuer ce document tant que vous donnez un crédit approprié aux auteurs et un lien vers le site original [docs.poppy-Project.org](https://docs.poppy-project.org).** Il est écrit en markdown, hébergé sur [GitHub](https://github.com/poppy-project/poppy-docs), et [GitBook](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs) est utilisé pour générer le site Web.
 
 ## Version
 
-This document has been updated on {{ file.mtime|date('MMM Do YY') }}.
+Ce document a été mis à jour le {{file.mtime|date ('dd MMMM yy')}}.

@@ -1,3 +1,3 @@
-# Gallery of activities
+# Galerie d’activités
 
-> **Caution** This section is not currently written. Your help is welcome to fulfil it !
+> **Attention** Cette page est encore vierge. Votre aide est nécessaire pour la remplir !
