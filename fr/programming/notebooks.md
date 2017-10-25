@@ -1,8 +1,8 @@
-# Jupyter Notebooks Gallery: using Python
+# Gallerie de notebooks Jupyter : programmer en Python
 
 <!-- toc -->
 
-Most of the existing examples of using Poppy robots in Python are given as [Jupyter Notebooks](http://jupyter.org). We strongly encourage the use of this web application as it allows "the creation and sharing of documents that contain live code, visualization and explanatory text". Furthermore, they also permit the design of interface for live controlling a robot thanks to widgets.
+La plupart des exemples d'utilisation de Python avec les robots Poppy sont donnés avec les [notebooks Jupyter](http://jupyter.org). Nous encourageons fortement l’utilisation de cette application web, car elle permet la création et le partage de documents mélangeant du code, des éléments visuels et du texte explicatif. Furthermore, they also permit the design of interface for live controlling a robot thanks to widgets.
 
 ![Notebook Example](../img/python/notebook-example.png)
 
