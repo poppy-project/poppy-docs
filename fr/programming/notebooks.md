@@ -8,7 +8,7 @@ La plupart des exemples d'utilisation de Python avec les robots Poppy sont donn�
 
 Pour chaque notebook, nous fournissons une courte description de qu'il fait, avec quel robot / simulateur il peut être utilisé et bien sûr un lien. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
 
-This chapter presents a gallery of notebooks and tries to organize them into different categories.
+Ce chapitre présente une série de notebooks et tente de les organiser en différentes catégories.
 
 ## Getting started
 
