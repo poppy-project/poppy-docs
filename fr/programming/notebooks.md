@@ -2,11 +2,11 @@
 
 <!-- toc -->
 
-La plupart des exemples d'utilisation de Python avec les robots Poppy sont donnés avec les [notebooks Jupyter](http://jupyter.org). Nous encourageons fortement l’utilisation de cette application web, car elle permet la création et le partage de documents mélangeant du code, des éléments visuels et du texte explicatif. Furthermore, they also permit the design of interface for live controlling a robot thanks to widgets.
+La plupart des exemples d'utilisation de Python avec les robots Poppy sont donnés avec les [notebooks Jupyter](http://jupyter.org). Nous encourageons fortement l’utilisation de cette application web, car elle permet la création et le partage de documents mélangeant du code, des éléments visuels et du texte explicatif. Par ailleurs, les notebooks permettent également la conception d'interface pour contrôler le robot en direct grâce à des widgets.
 
-![Notebook Example](../img/python/notebook-example.png)
+![Exemple de notebooks](../img/python/notebook-example.png)
 
-For each notebook, we provide a short description of what it does, with which robot/simulator it can be used and of course a link. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
+Pour chaque notebook, nous fournissons une courte description de qu'il fait, avec quel robot / simulateur il peut être utilisé et bien sûr un lien. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
 
 This chapter presents a gallery of notebooks and tries to organize them into different categories.
 
