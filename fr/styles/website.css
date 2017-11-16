@@ -193,12 +193,6 @@ img {
   margin: auto;
 }
 
-#page-footer img {
-  display: inline;
-  margin: 0;
-}
-
-
 /* Hide GitBook link (keep it white for they pagerank) */
 a.gitbook-link{
   color: white;
