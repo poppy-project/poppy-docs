@@ -32,7 +32,7 @@ Maintenant que vous avez une distribution Python, vous êtes prêt à [installer
 
 #### Python Miniconda (alternative à Anaconda)
 
-Miniconda est une version « allégée » de Anaconda qui contient seulement Python et le gestionnaire de paquets conda. Vous pouvez l’installer **au lieu de Anaconda** et économiser beaucoup d’espace disque (25 Mo vs 400 Mo), mais vous devrez ajouter une nouvelle étape dans le processus d’installation, et vous n’aurez pas de raccourci Jupyter Notebook sur le bureau. Téléchargez Miniconda [ici pour les ordinateurs 64 bits](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86_64.exe) ou [ici pour les ordinateurs 32 bits](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe).
+Miniconda est une version « allégée » de Anaconda qui contient seulement Python et le gestionnaire de paquets conda. Vous pouvez l’installer **au lieu de Anaconda** et économiser beaucoup d’espace disque (25 Mo vs 400 Mo), mais vous devrez ajouter une nouvelle étape dans le processus d’installation, et vous n’aurez pas de raccourci Jupyter Notebook sur le bureau. Download miniconda [here for 64-bit](https://repo.continuum.io/miniconda/Miniconda2-latest-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/miniconda/Miniconda2-latest-Windows-x86.exe) computer.
 
 Il est également très important que les deux cases à cocher PATH et "default Python" soient bien cochées.
 
