@@ -41,7 +41,7 @@ Now you have a Python distribution, you are ready to [install Poppy software](#i
 #### Miniconda Python (alternative to Anaconda)
 
 Miniconda is a "light" version of Anaconda which contain only Python and the conda package manager. You can install it **instead of Anaconda** and save a lot of disk space (25 Mo vs 400 Mo), but you will have to do another step in the install process, and you will not have Jupyter notebook shortcut on the desktop.
-Download miniconda [here for 64-bit](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe) computer.
+Download miniconda [here for 64-bit](https://repo.continuum.io/miniconda/Miniconda2-latest-Windows-x86_64.exe) computer or [here for 32-bit](https://repo.continuum.io/miniconda/Miniconda2-latest-Windows-x86.exe) computer.
 
 Install it and be sure that the two check-boxes of the PATH and the default Python are checked.
 
