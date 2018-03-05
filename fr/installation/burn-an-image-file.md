@@ -8,7 +8,7 @@ Le système d’exploitation de cet ordinateur est stocké sur une carte SD (vou
 
 Vous pouvez être dans deux types de cas :
 
-- Vous avez déjà une carte SD avec le système d’exploitation Poppy (fournie par l’un des distributeurs de Poppy par exemple). Vous êtes prêt à passer à la [section montage](../assembly-guides/ergo-jr.md).
+- Vous avez déjà une carte SD avec le système d’exploitation Poppy (fournie par l’un des distributeurs de Poppy par exemple). You're ready to go to the [assembly section](../assembly-guides/ergo-jr/README.md).
 - Vous avez une carte SD vierge, il faut donc [télécharger](#download-the-image-of-the-operating-system) et [écrire](#write-the-operating-system-image-to-the-sd-card) le système d’exploitation sur la carte SD.
 
 > **Info** Le système d’exploitation de créatures Poppy utilise une distribution GNU/Linux, mais vous n’aurez pas besoin de connaissances avancées sur Linux pour installer l’image sur le Raspberry Pi. Vous devez seulement avoir un ordinateur avec un lecteur de cartes SD pour écrire l’image sur la carte SD.
@@ -31,7 +31,7 @@ Muni du fichier image correspondant à votre créature Poppy, vous devez utilise
 
 ![Etcher](img/etcher.gif) - Insérez la carte SD dans votre ordinateur. -Démarrez Etcher, sélectionnez le lecteur de carte SD, sélectionnez l’image (un fichier nommé par exemple `2017-04-13-poppy-ergo-jr.img.zip`). Démarrez l'écriture. L’image écrite sur votre carte sera vérifiée automatiquement à la fin de l'opération.
 
-Vous êtes maintenant prêt à [assembler votre robot](../assembly-guides/ergo-jr.md) !
+Now you are ready to [assemble your robot](../assembly-guides/ergo-jr/README.md)!
 
 ### Graver l’image avec `dd` (logiciel en ligne de commande)
 

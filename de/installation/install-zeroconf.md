@@ -1,8 +1,8 @@
 # Zeroconf / Bonjour
 
-[Zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) also called Bonjour (name of Apple implementation) is set of technologies that allow more easily communication between computers without configuration.
+[Zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) also called Bonjour (name of Apple implementation) is set of technologies that allow more easily communication between computers without configuration. To be short: - It makes able to reach the robot on your local network **without** having to know its IP address - It makes able to connect the robot to your computer directly with an Ethernet wire **without using a router**, and without a DHCP server.
 
-> **Info** Zeroconf is not mandatory on your computer to use Poppy robots, but we will assume it is installed. It is more convenient and readable for the documentation.
+> **Info** Zeroconf is not mandatory on your computer to use Poppy robots, it is strongly recommended, and the documentation will assume it is installed. Otherwise replace all *poppy.local* occurrences by the IP address of the robot given by your router.
 
 ## Installation
 
@@ -29,6 +29,8 @@ On Fedora / CentOS, run
 ```bash
 sudo yum install avahi-daemon avahi-autoipd
 ```
+
+To connect to your robot directly with an Ethernet wire, you need to select **local link only** on the IPv4 configuration of your Network manager.
 
 ### Mac OSX
 

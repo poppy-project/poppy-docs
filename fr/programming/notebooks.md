@@ -1,18 +1,18 @@
-# Jupyter Notebooks Gallery: using Python
+# Gallerie de notebooks Jupyter : programmer en Python
 
 <!-- toc -->
 
-Most of the existing examples of using Poppy robots in Python are given as [Jupyter Notebooks](http://jupyter.org). We strongly encourage the use of this web application as it allows "the creation and sharing of documents that contain live code, visualization and explanatory text". Furthermore, they also permit the design of interface for live controlling a robot thanks to widgets.
+La plupart des exemples d'utilisation de Python avec les robots Poppy sont donnés avec les [notebooks Jupyter](http://jupyter.org). Nous encourageons fortement l’utilisation de cette application web, car elle permet la création et le partage de documents mélangeant du code, des éléments visuels et du texte explicatif. Par ailleurs, les notebooks permettent également la conception d'interface pour contrôler le robot en direct grâce à des widgets.
 
-![Notebook Example](../img/python/notebook-example.png)
+![Exemple de notebooks](../img/python/notebook-example.png)
 
-For each notebook, we provide a short description of what it does, with which robot/simulator it can be used and of course a link. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
+Pour chaque notebook, nous fournissons une courte description de qu'il fait, avec quel robot / simulateur il peut être utilisé et bien sûr un lien. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).
 
-This chapter presents a gallery of notebooks and tries to organize them into different categories.
+Ce chapitre présente une série de notebooks et tente de les organiser en différentes catégories.
 
-## Getting started
+## Premiers pas
 
-* **Discover your Poppy Ergo Jr:** [Notebook]() - Begin controlling your robot, launch behavior, send motor command, get values from the sensor...
+* **Découvrez votre Poppy Ergo Jr** : [Notebook]() - Comment contrôler le robot, démarrer un comportement préprogrammé, envoyer des commandes moteur, obtenir les valeurs de capteurs ...
 
 * **Controlling a Poppy Humanoid in V-REP: [Notebook](https://github.com/poppy-project/poppy-humanoid/blob/master/software/samples/notebooks/Controlling%20a%20Poppy%20humanoid%20in%20V-REP%20using%20pypot.ipynb)** - Describe how to setup a Poppy Humanoid in V-REP and how to control it (motor control and sensor reading) from pypot in Python.
 

@@ -1,8 +1,8 @@
-# Programming
+# Programmation
 
-There is different way to program you Poppy robot. This choices depend of your programming skills and your hown preferences!
+Il y a différentes façons de programmer votre robot Poppy. Ce choix dépend de vos compétences et de vos préférences !
 
-- If this is your first experience in programming you should probably start by [Programming with Snap!](snap.md).
-- If you want to use python without any stark command line and editor your should look at the [Usage of Jupyther notebooks section](notebooks.md).
-- If you want to lear how to use your robot through python look at the [Programming in Python section](python.md).
-- If you want to remote control your robot with external runing code look at the [Robots APIs section](rest.md).
+- Si c'est votre première expérience dans la programmation, vous devriez probablement commencer par [programmer avec Snap!](snap.md).
+- Si vous voulez utiliser Python sans aucune ligne de commande ni d'éditeur, vous devriez regarder la section [utiliser Jupyther](notebooks.md).
+- Si vous voulez apprendre comment utiliser votre robot à travers Python, regarder la section [programmer en Python](python.md).
+- Si vous voulez contrôler à distance votre robot, regardez la section [API des robots](rest.md).
