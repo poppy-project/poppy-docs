@@ -63,6 +63,6 @@ Bravo ! vous avez configuré le moteur m1 !
 
 Une fois configuré, vous pouvez débrancher le moteur du cable et en brancher un autre, jusqu'à les avoir tous configurés. La configuration est enregistrée dans la memoire du moteur (eprom).
 
-> **Info** Les moteurs sont appelés m1, m2, m3, m4, m5, m6. 
+> **Info** Les moteurs sont appelés m1, m2, m3, m4, w1, w2. 
 
 <img src="img/assembly/motors.png" alt="Motors list" height="300" />

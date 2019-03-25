@@ -30,42 +30,46 @@ Vous pouvez configurer les moteurs avant, pendant ou apres l'assemblage. **Il es
 
 Pour plus d’informations, consultez la [section configuration de moteur](motor-configuration.md).
 
-### Étape 1 - moteur 1 et 2
+### Étape 1 - roues w1 et w2
 
-Tout d’abord montez le plot avant avc 4 petits rivets, puis [configurez un moteur XL-320](motor-configuration.md) comme « m1 », il sera relié à la raspberry, et un autre comme « m2 ». Ces deux moteurs seront les roues du Dragster. Fixez les roues sur ces moteurs avec 4 petits rivets pour chaque roue. Vérifiez que les paloniers sont bien alignés.
+Rappel configuration de moteur:
+```bash
+poppy-configure ergo-jr w1
+```
+Tout d’abord montez le plot avant avc 4 petits rivets, puis [configurez un moteur XL-320](motor-configuration.md) comme « w1 », il sera relié à la raspberry, et un autre comme « w2 ». Ces deux moteurs seront les roues du Dragster. Fixez les roues sur ces moteurs avec 4 petits rivets pour chaque roue. Vérifiez que les paloniers sont bien alignés.
 
 Montez les moteurs sur la base imprimée en 3D en les fixant avec des rivets.
 
 ![étape 1](img/assembly/steps/Etape1.png)
 
 
-### Étape 2 - moteur 3 et camera
+### Étape 2 - moteur m1 et camera
 
 Placez la camera dans son encoche et branchez la à la Raspberry.
-Configurez le second moteur, son nom est « m3 », avec la commande suivante dans un terminal du robot :
+Configurez le second moteur, son nom est « m1 », avec la commande suivante dans un terminal du robot :
 
 ```bash
-poppy-configure ergo-jr m3
+poppy-configure ergo-jr m1
 ```
 Vérifiez que le palonier est bien aligné.
-Branchez les cables de m2 vers m3 et de m3 vers m4 que vous monterez juste apres, puis fixez le avec 4 petits rivets de chaque coté (la partie circulaire du coté de la caméra)
+Branchez les cables de w2 vers m1 et de m1 vers m2 que vous monterez juste apres, puis fixez le avec 4 petits rivets de chaque coté (la partie circulaire du coté de la caméra)
 Une fois fixé, montez la partie *long_U* sur la partie circulaire du moteur.
 
 ![étape 2](img/assembly/steps/Etape2.png)
 
-### Étape 3 - moteur 4 et 5
+### Étape 3 - moteur m2 et 3
 
-Configurez les moteurs « m4 » et « m5 ». Vérifiez que les paloniers sont bien alignés.
+Configurez les moteurs « m2 » et « m3 ». Vérifiez que les paloniers sont bien alignés.
 Montez les pièces deux pièces *4dofs-side2side.stl* sur les moteur avec 16 rivets, puis fixez m4 sur la partie *long_U* avec 1 rivet gris à fixer du coté non mobile. 4 petits rivets sont à fixer sur la partie circulaire de l'autre coté du *long_U*.
 
 ![étape 3](img/assembly/steps/Etape3.png)
 
-### Étape 4 - moteur 6
+### Étape 4 - moteur m4
 
-Configurez le sixième (et dernier!) moteur : « m6 ».
+Configurez le sixième (et dernier!) moteur : « m4 ».
 
-Montez les pièces deux pièces *4dofs-horn2horn-5holes.stl* sur le moteur m6 avec 4 rivets d'un coté (sur la partie circulaire) et un de l'autre coté.
-Fixez par le meme procédé, le moteur m5 à l'autre bout de la pièce *4dofs-horn2horn-5holes.stl*
+Montez les pièces deux pièces *4dofs-horn2horn-5holes.stl* sur le moteur m4 avec 4 rivets d'un coté (sur la partie circulaire) et un de l'autre coté.
+Fixez par le meme procédé, le moteur m3 à l'autre bout de la pièce *4dofs-horn2horn-5holes.stl*
 Vous pouvez ensuite ajouter un embout de votre choix.
 
 
@@ -77,7 +81,7 @@ Retrouvez quelques activités avec le Poppy Ergo Jr :
 
 Montez les pièces *horn2horn* et *horn2side* sur moteur « m5 » et monter « m6 » sur le sommet de la construction. ![étape 6](img/assembly/steps/Etape4.png)
 
-Vous pouvez monter le support de stylo ou de l’abat jour sur le moteur « m6 ». ![bis de l’étape 6](img/assembly/steps/step_18-19.jpg)
+Vous pouvez monter le support de stylo ou de l’abat jour sur le moteur « m4 ». ![bis de l’étape 6](img/assembly/steps/step_18-19.jpg)
 
 A la meme manière de l'abat-jour, il est possible de monter le porte-stylo. <img src="img/assembly/steps/pen_holder.jpg" alt="step 6 pen" height="300" />
 
