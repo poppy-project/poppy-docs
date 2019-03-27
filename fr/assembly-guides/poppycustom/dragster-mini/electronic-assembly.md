@@ -1,4 +1,4 @@
-# Assemblage électronique
+# Electronic assembly
 
 #### Insert the microSD card into the Raspberry Pi
 
