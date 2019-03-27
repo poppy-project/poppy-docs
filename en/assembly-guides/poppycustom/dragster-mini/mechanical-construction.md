@@ -40,7 +40,7 @@ First mount the front stud with 4 small rivets, then [configure an XL-320 engine
 
 Mount the motors on the 3D printed base by fixing them with rivets.
 
-![step 1](img/assembly/steps/Etape1.png)
+![step 1](img/assembly/steps/Step1.jpg)
 
 
 ### Step 2 - m1 engine and camera
@@ -55,14 +55,14 @@ Check that the crane is well aligned.
 Connect the cables from w2 to m1 and from m1 to m2 that you will mount right after, then fix it with 4 small rivets on each side (the circular part of the side of the camera)
 Once attached, mount the *long_U* part on the circular part of the motor.
 
-![step 2](img/assembly/steps/Etape2.png)
+![step 2](img/assembly/steps/Step2.jpg)
 
 ### Step 3 - m2 engine and 3
 
 Configure the "m2" and "m3" motors. Check that the pallets are aligned.
 Mount the two-piece *4dofs-side2side.stl* parts on the engine with 16 rivets, then fix m4 on the *long_U* part with 1 gray rivet to be fixed on the non-moving side. 4 small rivets are to fix on the circular part of the other side of *long_U*.
 
-![step 3](img/assembly/steps/Etape3.png)
+![step 3](img/assembly/steps/Step3.jpg)
 
 ### Step 4 - m4 engine
 
@@ -78,7 +78,7 @@ Find some activities with the Poppy Ergo Jr:
 
 #### The lampshade or the pen
 
-Mount the *horn2horn* and *horn2side* parts on the "m5" engine and mount "m6" on top of the construction. ![step 6](img/assembly/steps/Etape4.png)
+Mount the *horn2horn* and *horn2side* parts on the "m5" engine and mount "m6" on top of the construction. ![step 6](img/assembly/steps/Step4.jpg)
 
 You can mount the pen holder or shade on the "m4" motor. [bis from step 6](img/assembly/steps/step_18-19.jpg)
 
@@ -111,10 +111,10 @@ If it is not done, connect all the motors together. Each motor has two connector
 
 ### Step 6 - plug in and test your robot
 
-![Dragster](img/dragsterfinal.png)
+![Dragster](img/dragsterfinal.jpg)
 Bravo !!! if your robot looks like this, you have finished assembling! You can now connect it, for that plug the power cable to the Pixl card and the ethernet cable to the Raspberry.
 
-![Connections](img/cables.png)
+![Connections](img/cables.jpg)
 
 When you plug it in, all the motors are supposed to turn on. If this is not the case, check that you have all connected to each other.
 

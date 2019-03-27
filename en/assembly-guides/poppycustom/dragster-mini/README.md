@@ -12,7 +12,7 @@ The XL-320 motors have the same features as those used on other Poppy robots, bu
 
 The electronic board is visible next to the robot, which is interesting for understanding, manipulating and connecting additional sensors. No soldering is necessary, just add the pixl expansion board to the pins of the Raspberry Pi to connect the XL-320 motors.
 
-![Carte Pixl](img/pixl.png)
+![Carte Pixl](img/pixl.jpg)
 
 
 
@@ -39,10 +39,11 @@ We recommend that you follow the instructions carefully. Even if the Dragster is
   - 1 x [dragster-base.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/dragster-base.stl)
   - 1 x [dragster-basefront.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/dragster-basefront.stl)
   - 2 x [dragster-wheel.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/dragster-wheel.stl)
+  - 1 x [base.stl](https://github.com/poppy-project/poppy-ergo-jr/raw/master/hardware/STL/base.stl)  
   - 2 x [4dofs-horn2horn-5holes.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/4dofs-horn2horn-5holes.stl)
   - 2 x [4dofs-side2side.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/4dofs-side2side.stl)
   - 1 x [long_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/long_U.stl)
-  - les différents outils (facultatif) 
+  - the tools (optional) 
     - 1 x [lamp.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/lamp.stl)
     - 1 x [gripper-fixation.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl)
     - 1 x [gripper-fixed_part.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixed_part.stl)
