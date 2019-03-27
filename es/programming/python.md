@@ -374,7 +374,7 @@ To create this primitive, you have to give the following arguments:
 Here, we will record a move on the whole robot at 50Hz:
 
 ```python
-recorder = MoveRecorder(poppy, 50, poppy.motors)
+record = MoveRecorder(poppy, 50, poppy.motors)
 ```
 
 > **Note** We used *poppy.motors* to specify that we want all motors if you only want let's say the two first motors of an Ergo Jr you could have used *[poppy.m1, poppy.m2]* instead.

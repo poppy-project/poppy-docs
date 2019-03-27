@@ -26,6 +26,8 @@
     * [Assemblage électronique](assembly-guides/ergo-jr/electronic-assembly.md)
     * [Configuration des moteurs](assembly-guides/ergo-jr/motor-configuration.md)
     * [Assemblage des pièces mécaniques](assembly-guides/ergo-jr/mechanical-construction.md)
+* [Custom your Ergo Jr](assembly-guides/poppycustom/README.md) 
+    * [Assemble the Dragster Mini](assembly-guides/poppycustom/dragster-mini/README.md)
 * [Assembler Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
 * [Assembler Poppy Torso](assembly-guides/poppy-torso/README.md)
 
