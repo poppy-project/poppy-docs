@@ -42,7 +42,7 @@ First mount the front stud with 4 small rivets, then [configure an XL-320 engine
 
 Mount the motors on the 3D printed base by fixing them with rivets.
 
-![étape 1](img/assembly/steps/Step1.jpg)
+![step 1](img/assembly/steps/Step1.jpg)
 
 ### Step 2 - m1 engine and camera
 
@@ -54,13 +54,13 @@ poppy-configure ergo-jr m1
 
 Check that the crane is well aligned. Connect the cables from w2 to m1 and from m1 to m2 that you will mount right after, then fix it with 4 small rivets on each side (the circular part of the side of the camera) Once attached, mount the *long_U* part on the circular part of the motor.
 
-![étape 2](img/assembly/steps/Step2.jpg)
+![step 2](img/assembly/steps/Step2.jpg)
 
 ### Step 3 - m2 engine and 3
 
 Configure the "m2" and "m3" motors. Check that the pallets are aligned. Mount the two-piece *4dofs-side2side.stl* parts on the engine with 16 rivets, then fix m4 on the *long_U* part with 1 gray rivet to be fixed on the non-moving side. 4 small rivets are to fix on the circular part of the other side of *long_U*.
 
-![étape 3](img/assembly/steps/Step3.jpg)
+![step 3](img/assembly/steps/Step3.jpg)
 
 ### Step 4 - m4 engine
 
@@ -72,7 +72,7 @@ Mount the two-piece parts *4dofs-horn2horn-5holes.stl* on the m4 engine with 4 r
 
 #### The lampshade or the pen
 
-Mount the *horn2horn* and *horn2side* parts on the "m5" engine and mount "m6" on top of the construction. ![étape 6](img/assembly/steps/Step4.jpg)
+Mount the *horn2horn* and *horn2side* parts on the "m5" engine and mount "m6" on top of the construction. ![step 6](img/assembly/steps/Step4.jpg)
 
 You can mount the pen holder or shade on the "m4" motor. [bis from step 6](img/assembly/steps/step_18-19.jpg)
 
