@@ -57,9 +57,9 @@ We recommend that you follow the instructions carefully. Even if the Dragster is
 
 ## Miscellaneous Electronics
 
-- 1x Raspberry Pi 2 ou 3
+- 1x Raspberry Pi 2 or 3
 - 1x micro SD 8GB (or more)
-- 1x caméra Raspberry Pi
+- 1x Raspberry Pi camera
 - 1 x 7.5V 2A power supply with a 2.1 x 5.5 x 9.5 connector ([this one](http://fr.rs-online.com/web/p/alimentations-enficables/7262814/?searchTerm=ECP-15-7.5E&relevancy-636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526data=&p=sRA) for instance).
 - Ethernet cable
 
