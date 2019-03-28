@@ -21,7 +21,7 @@ The electronic board is visible next to the robot, which is interesting for unde
 This chapter will guide you through all the steps necessary to fully assemble a mini Poppy Dragster. It will cover:
 
 - [the configuration of the motors](motor-configuration.md)
-- [l'assemblage électronique](electronic-assembly.md)
+- [electronic assembly](electronic-assembly.md)
 - [assembly of mechanical parts](mechanical-construction.md)
 
 **Complete assembly should take an hour or two** the first time you build one. With more practice, half an hour is enough.
