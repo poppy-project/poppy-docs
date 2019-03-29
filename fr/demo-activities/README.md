@@ -1,3 +1,3 @@
 # Gallery of activities
 
-> **Attention** Cette page est encore vierge. Votre aide est nécessaire pour la remplir !
+> **Caution** This section is not currently written. Your help is welcome to fulfil it !
