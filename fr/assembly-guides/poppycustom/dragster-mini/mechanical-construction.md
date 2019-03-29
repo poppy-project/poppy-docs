@@ -18,7 +18,7 @@
 
 * Alignez toujours le palonnier (la roue d'entrainement noire) avec le moteur avant de les assembler ! Sinon votre robot risque de ne pas bouger comme vous le souhaitez puisqu'il sera décalé au démarrage.
 
-<img src = "img/assembly/align-horn.jpg" alt = "Align the pedals" height = "200" />
+<img src = "img/assembly/align-horn.jpg" alt = "Aligner les plonniers" height = "200" />
 
 ## Guide pas à pas
 
@@ -42,7 +42,7 @@ Tout d’abord montez le plot avant avc 4 petits rivets, puis [configurez un mot
 
 Monter les moteurs sur la base imprimée 3D en les fixant avec des rivets.
 
-![step 1](img/assembly/steps/Step1.jpg)
+![étape 1](img/assembly/steps/Step1.jpg)
 
 ### Etape 2 - moteur m1 et caméra
 
@@ -54,13 +54,13 @@ poppy-configure ergo-jr m1
 
 Vérifiez que les palonniers sont bien alignés. Connectez les câbles de w2 à m1 et de m1 à m2 que vous monterez juste après, puis fixez-le avec 4 rives de chaque côté (la partie circulaire du côté de la caméra) Une fois attachée, montez la partie *long_U* sur la partie circulaire du moteur.
 
-![step 2](img/assembly/steps/Step2.jpg)
+![étape 2](img/assembly/steps/Step2.jpg)
 
 ### Etape 3 - moteur m2 et caméra
 
 Configurez les moteurs "m2" et "m3". Vérifiez que les palonniers sont bien alignés. Montez les parties *4dofs-side2side.stl* sur le moteur avec 16 rivets, puis fixez m4 sur la partie *long_U* avec 1 rivet gris à régler sur le côté non-mobile. 4 petits rivets doivent fixer sur la partie circulaire de l'autre côté du *long_U*.
 
-![step 3](img/assembly/steps/Step3.jpg)
+![étape 3](img/assembly/steps/Step3.jpg)
 
 ### Étape 4 - moteur m4 
 
@@ -72,11 +72,11 @@ Montez les pièces à deux pièces *4dofs-horn2horn-5holes.stl* sur le moteur m4
 
 #### L'abat-jour ou le stylo
 
-Monter les pièces *horn2horn* et *horn2side* sur moteur « m5 » et monter « m6 » sur le sommet de la construction. ![step 6](img/assembly/steps/Step4.jpg)
+Monter les pièces *horn2horn* et *horn2side* sur moteur « m5 » et monter « m6 » sur le sommet de la construction. ![étape 6](img/assembly/steps/Step4.jpg)
 
 Vous pouvez monter le support de stylo ou de l’abat jour sur le moteur « m4 ». [bis de l'étape 6](img/assembly/steps/step_18-19.jpg)
 
-De la même façon que l'ombre, il est possible de monter le porte-stylo. <img src = "img/assembly/steps/pen_holder.jpg" alt = "step 6 pen" height = "300" />
+De la même façon que l'ombre, il est possible de monter le porte-stylo. <img src = "img/assembly/steps/pen_holder.jpg" alt = "étape 6 stylo" height = "300" />
 
 #### La pince
 
@@ -86,7 +86,7 @@ Monter la pièce *gripper-fixed_part* et *gripper-rotative_part* sur moteur « 
 
 Il y a deux façon de monter la pince, verticalement! [Step gripper](img/assembly/steps/grip1.jpg)
 
-Ou horizontalement ![Step gripper](img/assembly/steps/grip2.jpg)
+Ou horizontalement ![étape pince](img/assembly/steps/grip2.jpg)
 
 ### Étape 5 - Vérification électronique
 
@@ -94,7 +94,7 @@ Si vous n'avez pas fixé votre camera à votre Raspberry lors de l'étape 2 ou v
 
 **Fixer la camera**
 
-Pour fixer la camera sur la Raspberry Pi avec le cable flex (bande de cable) ouvrez le connecteur de la camera situé sur la Raspberry en tirant legerement l'encoche vers le haut. Assurez-vous que les connecteurs sont en face du port Ethernet. Repoussez l'encoche vers le bas pour coincer le cable flex. ![step 7](img/assembly/steps/camera.jpg)
+Pour fixer la camera sur la Raspberry Pi avec le cable flex (bande de cable) ouvrez le connecteur de la camera situé sur la Raspberry en tirant legerement l'encoche vers le haut. Assurez-vous que les connecteurs sont en face du port Ethernet. Repoussez l'encoche vers le bas pour coincer le cable flex. ![étape 7](img/assembly/steps/camera.jpg)
 
 **Câbles reliant les moteurs**
 
@@ -104,22 +104,22 @@ Si ce n'est pas fait, connectez tous les moteurs entre eux. Chaque moteur a deux
 
 ### Étape 6 - branchez et testez votre robot
 
-![Dragster](img/dragsterfinal.jpg) Bravo !!! si votre robot ressemble à cela, vous avez fini de l'assemblage ! You can now connect it, for that plug the power cable to the Pixl card and the ethernet cable to the Raspberry.
+![Dragster](img/dragsterfinal.jpg) Bravo !!! si votre robot ressemble à cela, vous avez fini de l'assemblage ! Vous pouvez maintenant le brancher, pour cela branchez le cables d'alimentation à la carte Pixl et le cable ethernet à la Raspberry.
 
-![Connections](img/cables.jpg)
+![Connexions](img/cables.jpg)
 
-When you plug it in, all the motors are supposed to turn on. If this is not the case, check that you have all connected to each other.
+Lorsque vous le branchez, tous les moteurs sont sensés s'allumer. Si ce n'est pas le cas, vérifiez que vous les avez bien tous branchés les uns aux autres.
 
-You can now go to <http://poppy.local> (this is the homepage of your robot)
+Vous pouvez maintenant aller à <http://poppy.local> (c'est la page d'accueil de votre robot)
 
-Click *Reboot the robot* to restart the engines <img src = "img/HMI/home_page_reboot.png" alt = "test installation" height = "250" />
+Cliquez *Reboot the robot* pour redémarrer les moteurs <img src = "img/HMI/home_page_reboot.png" alt = "test installation" height = "250" />
 
-Then click on *Monitor and Control* to get information about your robot and check that it works properly <img src = "img / HMI / home_page_monitor.png" alt = "test installation" height = "250" />
+Cliquez ensuite sur *Monitor and controle* pour obtenir des informations sur votre robot et vérifier qu'il fonctionne correctement <img src = "img / HMI / home_page_monitor.png" alt = "test installation" height = "250" />
 
-If so, you should see the little green chain logo (in the middle at the top). You can then choose from the predefined actions. <img src = "img / GUI / monitor_full.png" alt = "test installation" />
+Si c'est le cas, vous devriez voir le petit logo de chaine verte (au milieu en haut). Vous pouvez ensuite choisir parmi les actions prédéfinies. <img src = "img / GUI / monitor_full.png" alt = "test installation" />
 
-If instead of the green connection logo, you see instead **the red "broken chain" logo** is that there is a problem of configuration. You can go to *What append?* For more information. Most of the time, a cable is disconnected or a motor is not configured. <img src = "img / HMI / home_page_logs.png" alt = "test installation" height = "250" />
+Si au lieu du logo de connexion verte, vous voyez à la place **le logo rouge "brisé" ** est qu'il y a un problème de configuration. Vous pouvez aller voir dans *What Happened ?* pour plus d'informations. La plupart du temps, un câble est déconnecté ou un moteur n'est pas configuré. <img src = "img / HMI / home_page_logs.png" alt = "test installation" height = "250" />
 
-### To explore
+### Explorer
 
-Explore activities with your robot or another robot like Ergo Jr for example. You can also imagine your own robot, what shape would it have? how many engines? wheels, legs? machine-shaped, animal-shaped? What would he serve and what would his movements be? Let yourself be guided by your imagination :) ![Image](img/assembly/ergo-tool-2.jpg)
+Explorez les activités avec votre robot ou un autre robot comme Ergo Jr par exemple. Vous pouvez aussi imaginer votre propre robot, quelle forme aurait il ? combien de moteurs? roues, jambes? en forme de machine, en forme d'animal? A quoi servirait il et quels seraient ses mouvements ? Laissez-vous guider par votre imagination :) ![Image](img/assembly/ergo-tool-2.jpg)
