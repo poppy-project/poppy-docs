@@ -1,3 +1,3 @@
-This section will provide the documentation for modify your Ergo Jr
+Cette section fournira la documentation pour modifier votre Ergo Jr
 
-- [Dragster Mini](dragster-mini/README.md)
+- [Dragster mini](dragster-mini/README.md)
