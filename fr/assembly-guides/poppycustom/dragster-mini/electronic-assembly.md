@@ -1,21 +1,21 @@
-# Electronic assembly
+# Assemblage électronique
 
-#### Insert the microSD card into the Raspberry Pi
+#### Insérez la carte microSD dans la Raspberry Pi
 
-Make sure you are using a pre-configured micro SD card. If this is not the case, you must "engrave" your micro-SD card with the ISO image of Ergo Jr, which is explained in the [start section](../../installation/burn-an-image-file.md).
+Assurez-vous que vous utilisez une carte micro SD pré-configurée . Si ce n'est pas le cas, vous devez "graver" votre carte micro-SD avec l’image ISO d’Ergo Jr, ce qui est expliqué dans la [section démarrage](../../installation/burn-an-image-file.md).
 
-Insert the micro-SD card inside the Raspberry Pi: push the micro-SD card into the slot of the connector until you hear a "click". ! [Raspberry Pi micro-SD](img/electronic/rpi-sd.jpg)
+Insérez la carte micro-SD à l’intérieur de la Raspberry Pi : poussez la carte micro-SD dans la fente du connecteur jusqu'à entendre un « clic ». ! [MicroSD Raspberry Pi](img/electronic/rpi-sd.jpg)
 
-#### Assemble the pixl expansion card
+#### Assembler la carte d'extension pixl
 
-> **Info** The Pixl card can be purchased on the website of [Génération Robot.](http://www.generationrobots.com/en/402420-carte-pixl.html)
+> **Info** La carte Pixl peut être achetée sur le site de [Génération Robot.](http://www.generationrobots.com/en/402420-carte-pixl.html)
 
-[The pixl card](https://github.com/poppy-project/pixl) allows you to power the Raspberry Pi from a 7.5V DC power supply or with batteries, and allows you to communicate with the motors XL-320.
+[La carte pixl](https://github.com/poppy-project/pixl) vous permet d'alimenter la Raspberry Pi à partir d'une alimentation 7.5V DC ou avec des batteries, et vous permet de communiquer avec les moteurs XL-320.
 
-Plug the pixl into the end of the Raspberry Pi headers.! [Pixl](img/electronic/pixl-step_1-2.jpg)
+Branchez la pixl à l’extrémité des headers du Raspberry Pi. [Pixl](img/electronic/pixl-step_1-2.jpg)
 
-Once the pixl is plugged in (**and not before**), you can connect the power and the wires of the motors. ![Pixl](img/electronic/pixl-step_3-4-5.jpg)
+Une fois que la pixl est branchée (**et pas avant**), vous pouvez brancher l'alimentation et les fils des moteurs. ![Pixl](img/electronic/pixl-step_3-4-5.jpg)
 
-> **Warning** **You must absolutely turn off the power** on the pixl expansion card before connecting or disconnecting it from the Raspberry pi. Otherwise, you may burn the voltage converter on the Pixl card.
+> **Attention** **Vous devez absolument éteindre l'alimentation** de la carte d'extension pixl avant de la connecter ou de la déconnecter de la Raspberry pi. Sinon, vous risquez de griller le convertisseur de tension de la carte Pixl.
 
-You can now [configure your engines](motor-configuration.md).
+Vous pouvez à présent [configurer vos moteurs](motor-configuration.md).
