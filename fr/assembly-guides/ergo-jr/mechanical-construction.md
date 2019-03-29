@@ -2,7 +2,7 @@
 
 ## Avis et avertissements d'ordre général
 
-* You can assemble all the rivets you need before the construction. The **orientation is important**, you have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
+* Vous pouvez assembler tous les rivets dont vous avez besoin avant la construction. L' **orientation est importante**, vous devez mettre les bords de la première partie dans les trous de la seconde. Vous serez ainsi en mesure de les enlever facilement si nécessaire.
 
 ![Assemblage des rivets OLLO](img/assembly/ollo_rivet.png)
 
