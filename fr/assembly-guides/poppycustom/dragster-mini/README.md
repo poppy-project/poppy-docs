@@ -1,16 +1,16 @@
-# Assembly guide for the Dragster mini
+# Guide d’assemblage pour le Dragster mini
 
 ![Outil d'Ergo Jr](img/Dragster.jpg)
 
-Poppy Dragster mini is a small inexpensive educational robot based on the Ergo Jr that is a combination of a small robotic arm with 3 degrees of freedom mounted on a platform with two wheels. It is made of simple shapes that can be printed in 3D. They are assembled by small plastic screws which can be put or removed very quickly with the OLLO tool.
+Poppy Dragster mini est un petit robot éducatif peu coûteux basé sur l'Ergo Jr qui est une combinaison d'un petit bras robotique avec 3 degrés de liberté monté sur une plate-forme avec deux roues. Il est fait de formes simples qui peuvent être imprimées en 3D. Ils sont assemblés par de petites vis en plastique (rivets) qui peuvent être mis ou enlevés très rapidement avec l'outil OLLO.
 
-Its tip can be easily changed. You can choose from several tools: * a lamp shade, * a clip, * or a pen holder.
+Son extrémité peut être facilement modifiée. Vous pouvez choisir parmi plusieurs outils : * une lampe, * une pince, * ou un porte-stylo.
 
-Thanks to the screws the tools can be quickly and easily exchanged. This makes it possible to adapt the tool according to your use of the robot and to assemble / disassemble your robot easily.
+Grâce aux vis, les outils peuvent être rapidement et facilement échangés. Cela permet d'adapter l'outil selon votre utilisation du robot et de assembler / démonter votre robot facilement.
 
-The XL-320 motors have the same features as those used on other Poppy robots, but are slightly less powerful and less accurate. The advantage is that they are also much cheaper.
+Les moteurs XL-320 ont les mêmes caractéristiques que celles utilisées sur d'autres robots Poppy, mais sont légèrement moins puissants et moins précis. L'avantage est qu'ils sont aussi beaucoup moins chers.
 
-The electronic board is visible next to the robot, which is interesting for understanding, manipulating and connecting additional sensors. No soldering is necessary, just add the pixl expansion board to the pins of the Raspberry Pi to connect the XL-320 motors.
+Le tableau électronique est visible à côté du robot, ce qui est intéressant pour comprendre, manipuler et connecter des capteurs supplémentaires. Aucun soudage n'est nécessaire, il suffit d'ajouter la carte d'extension pixl aux pins du Raspberry Pi pour connecter les moteurs XL-320.
 
 ![Carte Pixl](img/pixl.jpg)
 
@@ -18,30 +18,30 @@ The electronic board is visible next to the robot, which is interesting for unde
 
 ## Instructions
 
-This chapter will guide you through all the steps necessary to fully assemble a mini Poppy Dragster. It will cover:
+Ce chapitre vous guidera à travers toutes les étapes nécessaires pour assembler un Poppy Dragster mini . Il couvrira :
 
-- [the configuration of the motors](motor-configuration.md)
-- [electronic assembly](electronic-assembly.md)
-- [assembly of mechanical parts](mechanical-construction.md)
+- [la configuration des moteurs](motor-configuration.md)
+- [l'assemblage électronique](electronic-assembly.md)
+- [assemblage de pièces mécaniques](mechanical-construction.md)
 
-**Complete assembly should take an hour or two** the first time you build one. With more practice, half an hour is enough.
+**L'assemblage complet doit prendre une heure ou deux** la première fois que vous en construisez un. Avec plus de pratique, une demi-heure suffit.
 
-At the end of the tutorial, you should have a functional Poppy Dragster Mini, ready to be runned !
+À la fin du tutoriel, vous devriez avoir un Poppy Dragster Mini fonctionnel, prêt à fonctionner !
 
-We recommend that you follow the instructions carefully. Even if the Dragster is easily removable, it is always disappointing to have to restart a part of the assembly because we forgot to configure the engines, or a motor is reversed.
+Nous vous recommandons de suivre attentivement les instructions. Même si l'Ergo Jr est facilement démontable, il est toujours décevant d’avoir besoin de recommencer une partie de l'assemblage parce qu'on a oublié configurer les moteurs, ou qu'un moteur est inversé.
 
-## Dragster mini material list
+## Liste du matériel pour le Dragster mini 
 
-- 1 x [Pixl expansion board](https://github.com/poppy-project/pixl) *(XL320 engine control board from a Raspberry Pi)*
+- 1 x [Panneau d'extension Pixl](https://github.com/poppy-project/pixl) *(Tableau de contrôle du moteur XL320 à partir d'un Raspberry Pi)*
 - les pièces imprimées en 3D [au format STL ici](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl) 
   - 1 x [dragster-base.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/dragster-base.stl)
   - 1 x [dragster-basefront.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/dragster-basefront.stl)
   - 2 x [dragster-wheel.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/dragster-wheel.stl)
   - 1 x [base.stl](https://github.com/poppy-project/poppy-ergo-jr/raw/master/hardware/STL/base.stl) 
   - 2 x [4dofs-horn2horn-5holes.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/4dofs-horn2horn-5holes.stl)
-  - 2 x [4dofs-side2side.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/4dofs-side2side.stl)
+  - 4 x [side2side.stl](https://github.com/tgll/poppy-dragster-mini/tree/master/doc/stl/4dofs-side2side.stl)
   - 1 x [long_U.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/long_U.stl)
-  - the tools (optional) 
+  - les outils (optionnel) 
     - 1 x [lamp.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/lamp.stl)
     - 1 x [gripper-fixation.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl)
     - 1 x [gripper-fixed_part.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixed_part.stl)
@@ -49,19 +49,19 @@ We recommend that you follow the instructions carefully. Even if the Dragster is
     - 1 x [pen-holder.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-holder.stl)
     - 1 x [pen-screw.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-screw.stl)
 
-## Parts made by Robotis
+## Pièces fabriquées par Robotis
 
-- 6 x dynamixel XL-320 servomotors
-- 1 x set of OLLO rivets (you will need about 70 colored rivets screws and 1 gray rivet screw)
-- 1 x OLLO tool
+- 6 x servomoteurs dynamixel XL-320
+- 1 x ensemble de rivets OLLO (vous aurez besoin d'environ 70 rivets colorée et 1 rivet gris)
+- 1 x outil OLLO
 
-## Miscellaneous Electronics
+## Electronique Divers
 
-- 1x Raspberry Pi 2 or 3
-- 1x micro SD 8GB (or more)
-- 1x Raspberry Pi camera
-- 1 x 7.5V 2A power supply with a 2.1 x 5.5 x 9.5 connector ([this one](http://fr.rs-online.com/web/p/alimentations-enficables/7262814/?searchTerm=ECP-15-7.5E&relevancy-636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526data=&p=sRA) for instance).
-- Ethernet cable
+- 1x Raspberry Pi 2 ou 3
+- 1x micro SD 8Go (ou plus)
+- 1x caméra Raspberry Pi
+- 1 x alimentation 7.5V 2A avec un connecteur 2.1 x 5.5 x 9,5 ([celle-ci](http://fr.rs-online.com/web/p/alimentations-enficables/7262814/?searchTerm=ECP-15-7.5E&relevancy-636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526data=&p=sRA) par exemple).
+- câble Ethernet
 
 <!--
 TODO: assembly web interface
