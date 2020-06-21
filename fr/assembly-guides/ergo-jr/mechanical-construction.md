@@ -2,11 +2,13 @@
 
 ## Avis et avertissements d'ordre général
 
-* You can assemble all the rivets you need before the construction. The **orientation is important**, you have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
+* **Toutes les orientations des pièces sont très importantes**. Regarez les photos très précisément pour reproduire le même assemblage avec les pièces dans le même sens. Si vous vous trompez, vous vous en rendrez compte car votre robot réalisera des mouvements différents que ceux que vous lui demanderez. Le cas échéant n'ayez pas d'inquiétude, vous pourrez toujours le démonter puis le remonter.
+
+* Vous pouvez pré-assembler tous les rivets dont vous avez besoin avant la construction du robot. Chaque rivet consiste en l'assemblage de deux éléments l'un dans l'autre comme ceci :
 
 ![Assemblage des rivets OLLO](img/assembly/ollo_rivet.png)
 
-* There are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis, at the opposite side of the horn (black revolving circle).
+* Il y a 2 sortes de rivetsThere are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis, at the opposite side of the horn (black revolving circle).
 
 <img src="img/assembly/ollo_rivets_size.jpg" alt="Taille des rivets OLLO" height="200" />
 
@@ -14,7 +16,7 @@
 
 <img src="img/assembly/ollo-tool.jpg" alt="Outil OLLO" height="200" />
 
-* Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (there is no importance on the connector choice).
+* N'oubliez pas de passer les fils pendant l'assemblage de votre robot. Chaque moteur, excepté le dernier doit avoir ses 2 connecteurs occupés: l'un connecté au moteur précédent, l'autre connecté au moteur suivant. Il n'y a cependant pas d'importance quant-à quel connecteur est connecté au moteur suivant ou précédent.
 
 * **Alignez toujours le palonnier (la roue d'entrainement noire) avec le moteur avant de les assembler !** Sinon votre Poppy Ergo Jr aura l'air tout à fait bizarre.
 
@@ -26,25 +28,25 @@
 
 ## Guide pas à pas
 
-### Configuration des moteurs (pour toutes les étapes)
+### Configuration des moteurs 
 
-You can configure your motors before, during or after the the mechanical assembly but **it is highly advised to configure each motor one by one in the construction order**: * configure motor m1 * assemble the base and motor m1 * configure motor m2 * ...
+Les moteurs doivent être individuellement configurés. Vous pouvez faire cela avant ou après la construction de votre robot mais dans la mesure ou cela nécessite d'avoir un seul moteur branché à la carte Pixl à la fois, il est généralement plus pratique de configurer les moteurs un-par-un, se souvenir du nom qu'il leur a été attribué, et assembler ce moteur au bon endroit dans le robot ensuite.
 
 > **Attention** Pour configurer les moteurs, vous devez les connecter séparément un par un à la Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu'il est connecté avec le moteur précédent, cela ne fonctionnera pas.
 
 Pour plus d’informations, consultez la [section configuration de moteur](motor-configuration.md).
 
-### Step 1 - motor 1
+### Etape 1 - motor 1
 
-Tout d’abord, [configurez un moteur XL-320](motor-configuration.md) comme « m1 ».
+Tout d’abord, démarrez votre robot et [configurez un moteur XL-320](motor-configuration.md) sous le nom « m1 ».
 
-Monter le moteur sur la base imprimée en 3D.
+Montez ensuite le moteur sur la base imprimée en 3D.
 
 ![étape 1](img/assembly/steps/step_1-2.jpg)
 
-Pour cela, préparez 8 petits rivets. Placez la première partie dans la seconde sans les mettre à l'intérieur du moteur. Ensuite, placez le moteur sur la base avec la palonnier faisant face au côté le plus ouvert. Utilisez l'outil Ollo pour attraper le rivet entre la première et seconde partie puis insérez le rivet dans un des trous d'assemblage. Une fois le rivet en place, verrouillez-le en poussant la première partie du rivet dans la seconde.
+Pour cela, préparez 8 petits rivets. Placez la première partie dans la seconde sans les mettre à l'intérieur du moteur. Ensuite, placez le moteur sur la base avec le palonnier (= la roue du moteur) faisant face au côté le plus ouvert. Utilisez l'outil Ollo pour attraper le rivet entre la première et la seconde partie du rivet puis insérez le rivet dans un des trous d'assemblage. Une fois le rivet en place, verrouillez-le en poussant la première partie du rivet vers la seconde.
 
-### Step 2 - motor 2
+### Étape 2 - moteur 2
 
 Configurez le second moteur, son nom est « m2 », avec la commande suivante dans un terminal du robot :
 
@@ -56,23 +58,23 @@ Monter la partie *long_U*. Soyez prudent avec l’orientation de la la pièce, l
 
 ![étape 2](img/assembly/steps/step_3-4.jpg)
 
-### Step 3 - motor 3
+### Étape 3 - moteur 3
 
-Configurer un troisième moteur : « m3 ».
+Configurer un troisième moteur nommé « m3 ».
 
 Monter les pièces *horn2horn* et *horn2side* sur moteur « m2 » et monter « m3 » sur le dessus de la construction. ![étape 3](img/assembly/steps/step_5-6.jpg)
 
-### Step 4 - motor 4
+### Étape 4 - moteur 4
 
-Configurer le quatrième moteur : « m4 ».
+Configurer le quatrième moteur nommé « m4 ».
 
 Monter la pièce *short_U* sur le moteur 4. ![étape 4](img/assembly/steps/step_7-8.jpg)
 
 Monter le moteur « m4 » et la pièce *short_U* préalablement assemblée au sommet de la construction. Le nez du moteur doit être orienté vers l'arrière de la base. ![étape 4 bis](img/assembly/steps/step_9-10.jpg)
 
-### Step 5 - motor 5
+### Étape 5 - moteur 5
 
-Configurer le cinquième moteur : « m5 ».
+Configurer le cinquième moteur nommé « m5 ».
 
 Monter les pièces *horn2horn* et *horn2side* sur moteur « m4 » et monter « m5 » sur le dessus de la construction.
 
@@ -80,7 +82,7 @@ Monter les pièces *horn2horn* et *horn2side* sur moteur « m4 » et monter «
 
 ### Étape 6 - l’outil de votre choix
 
-Configurer le sixième moteur : « m6 ».
+Configurer le sixième moteur nommé « m6 ».
 
 Pour terminer votre Ergo Jr, vous devez ajouter un outil à son extrémité. Choisissez un outil en fonction de ce que vous souhaitez faire.
 

@@ -3,7 +3,9 @@
 
 ## General advices and warnings
 
-* You can assemble all the rivets you need before the construction. The **orientation is important**, you have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.
+* **All orientations of all parts are very important**. Observe the pictures very carefully in order to reproduce the exact same assembly with the parts in the same orientation. If you make a mistake, you will realize it because your robot will perform motions different from what you'll ask. In that case do not worry, you will be able to unmount an remount your robot.
+
+* You can pre-assembly all riverts you need before building your robot. Rivets are composed of 2 elements inserted into each other this way:
 
 ![OLLO Rivet Assembly](img/assembly/ollo_rivet.png)
 
