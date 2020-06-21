@@ -1,6 +1,6 @@
 # Engine configuration
 
-The Mini Dragster is made up of 6 XL-320 engines manufactured by [Robotis](http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm). Each of these servomotors have an electronic card allowing it to receive different types of commands (on its position, its speed, its torque ...) and to communicate with other servos. You can chain these servomotors together and order them from one end of the chain.
+The Mini Dragster is made up of 6 XL-320 engines manufactured by [Robotis](http://www.robotis.us/dynamixel-xl-320/). Each of these servomotors have an electronic card allowing it to receive different types of commands (on its position, its speed, its torque ...) and to communicate with other servos. You can chain these servomotors together and order them from one end of the chain.
 
 <img src = "img/assembly/xl_320.jpg" alt = "XL320" height = "150" />
 

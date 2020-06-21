@@ -1,6 +1,6 @@
 # Motor configuration
 
-Ergo Jr is made of 6 XL-320 motors from [Robotis](http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm). Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.
+Ergo Jr is made of 6 XL-320 motors from [Robotis](http://www.robotis.us/dynamixel-xl-320/). Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.
 
 <img src="img/assembly/xl_320.jpg" alt="XL320" height="150" />
 
