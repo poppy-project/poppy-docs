@@ -24,7 +24,7 @@
 * Exécutez les commandes python suivantes :
 
 ```python
-from poppy.creatures import PoppyHumanoid
+from pypot.creatures import PoppyHumanoid
 
 poppy = PoppyHumanoid(simulator='vrep', use_snap=True)
 ```

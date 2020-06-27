@@ -42,7 +42,7 @@ Lorsque vous créez le robot, vous devez en fait préciser si vous êtes dispos�
 En travaillant avec V-REP :
 
 ```python
-from poppy.creatures import PoppyHumanoid
+from pypot.creatures import PoppyHumanoid
 
 poppy = PoppyHumanoid(simulator='vrep')
 ```
@@ -50,7 +50,7 @@ poppy = PoppyHumanoid(simulator='vrep')
 En travaillant avec le robot physique :
 
 ```python
-from poppy.creatures import PoppyHumanoid
+from pypot.creatures import PoppyHumanoid
 
 poppy = PoppyHumanoid()
 ```

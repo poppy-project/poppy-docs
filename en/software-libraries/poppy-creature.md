@@ -3,7 +3,7 @@
 ## Introduction
 Poppy-creature is a small library providing an abstract interface for robots (Poppy Humanoid, Poppy Torso, Poppy Ergo Jr...). It links high level controls and pypot, the generic low level library.
 
-It mainly contains the class definition of [poppy.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/pypot/tree/master/pypot/creatures/abstractcreature.py) which takes a configuration and builds a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.
+It mainly contains the class definition of [pypot.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/pypot/tree/master/pypot/creatures/abstractcreature.py) which takes a configuration and builds a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.
 
 The arguments you can provide are:
 
@@ -73,7 +73,7 @@ the available options are:
 
 While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) from Pypot directly.
 
-But when you want to make it easily usable and available to non-geek public, the best is to create your own creature's library. It should contain a configuration file and a class that extends [poppy.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/pypot/tree/master/pypot/creatures/abstractcreature.py). You can then
+But when you want to make it easily usable and available to non-geek public, the best is to create your own creature's library. It should contain a configuration file and a class that extends [pypot.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/pypot/tree/master/pypot/creatures/abstractcreature.py). You can then
 add your own properties and primitives.
 
 Example from Poppy Humanoid:

@@ -42,7 +42,7 @@ It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr. If
 
 ```python
 # use PoppyTorso PoppyHumanoid or PoppyEgoJr depending on what you want
-from poppy.creatures import PoppyErgoJr
+from pypot.creatures import PoppyErgoJr
 poppy = PoppyErgoJr(simulator='vrep', use_snap=True)
 ```
 
@@ -63,7 +63,7 @@ It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr. If
 **Alternative method**: Instead of using `poppy-service` you can start it in full python:
 
 ```python
-from poppy.creatures import PoppyErgoJr
+from pypot.creatures import PoppyErgoJr
 poppy = PoppyErgoJr(simulator='poppy-simu', use_snap=True)
 ```
 

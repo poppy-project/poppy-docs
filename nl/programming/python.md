@@ -84,7 +84,7 @@ The very first step you have to do to start programming Poppy robots in Python i
 To do that, you write something similar to:
 
 ```python
-from poppy.creatures import *
+from pypot.creatures import *
 ```
 
 This will actually import all Poppy robots installed on the Python distribution you are using. If you want to use a specific robot, you can replace the *\** (which means all here) by the name of the robot you want.
@@ -92,28 +92,28 @@ This will actually import all Poppy robots installed on the Python distribution 
 For the ErgoJr:
 
 ```python
-from poppy.creatures import PoppyErgoJr
+from pypot.creatures import PoppyErgoJr
 ```
 
 For the Torso:
 
 ```python
-from poppy.creatures import PoppyTorso
+from pypot.creatures import PoppyTorso
 ```
 
 For the Humanoid:
 
 ```python
-from poppy.creatures import PoppyHumanoid
+from pypot.creatures import PoppyHumanoid
 ```
 
 > **Note** If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section *[install Poppy software](../installation/install-poppy-softwares.md)*.
 
 ```python
-In [1]: from poppy.creatures import PoppyHumanoid
+In [1]: from pypot.creatures import PoppyHumanoid
 ImportError Traceback (most recent call last)
 <ipython-input-1-18e4c5a36525> in <module>()
-----> 1 from poppy.creatures import PoppyHumanoid
+----> 1 from pypot.creatures import PoppyHumanoid
 
 ImportError: cannot import name PoppyHumanoid
 ```
@@ -469,7 +469,7 @@ We need few simple steps:
 Before writing the sensori-motor loop, we will first set the Ergo Jr in a base position.
 
 ```python
-from poppy.creatures import PoppyErgoJr
+from pypot.creatures import PoppyErgoJr
 
 jr = PoppyErgoJr()
 

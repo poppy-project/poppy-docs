@@ -42,7 +42,7 @@ When creating the robot, you actually need to specify if you are willing to work
 When working with V-REP:
 
 ```python
-from poppy.creatures import PoppyHumanoid
+from pypot.creatures import PoppyHumanoid
 
 poppy = PoppyHumanoid(simulator='vrep')
 ```
@@ -50,7 +50,7 @@ poppy = PoppyHumanoid(simulator='vrep')
 Will become for a real robot:
 
 ```python
-from poppy.creatures import PoppyHumanoid
+from pypot.creatures import PoppyHumanoid
 
 poppy = PoppyHumanoid()
 ```

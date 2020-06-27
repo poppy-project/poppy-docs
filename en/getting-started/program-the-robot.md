@@ -31,7 +31,7 @@ Poppy libraries have been written in Python, to allow for fast development and e
 The API has been designed to allow for very fast prototyping. Creating a robot and starting to move motors should not take more than a few lines:
 
 ```python
-from poppy.creatures import PoppyErgoJr
+from pypot.creatures import PoppyErgoJr
 
 jr = PoppyErgoJr()
 jr.m3.goal_position = 30
