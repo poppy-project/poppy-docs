@@ -1,7 +1,7 @@
-# Programming Poppy robots in Python
+# Programming Poppy robots in Python 3
 
 
-This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, you will see how to access all the different levels of control, from the higher to the lower.
+This chapter will guide you through how to control Poppy robots in Python 3. As it is actually the language used for writing Poppy core libraries, you will see how to access all the different levels of control, from the higher to the lower.
 
 We will detail everything you need to know to directly program you robot using the Python embedded in the Poppy robot or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.
 
@@ -9,7 +9,7 @@ We will try to provide as many examples as possible and point to the complete AP
 
 All Poppy libraries are open source and are released under the [GPL v3](http://www.gnu.org/licenses/gpl.html) license. So you can freely access the source code on [github](https://github.com/poppy-project). Do not hesitate to fork them, send pull request and contribute!
 
-## Why Python and Anaconda?
+## Why Python?
 <img src="../img/python/powered.png" alt="Python powered" height="150">
 
 The libraries developed for the Poppy project were designed with the aim to make it easy and fast to write code for controlling various robots based on - originally - robotis dynamixel motors. The idea was to provide access from the lower level - raw serial communication with a specific motor for instance - to higher levels such as starting and stopping primitives/behaviors (e.g. face tracking, postures, ...) or directly recording motions through learning by demonstration.
@@ -17,9 +17,6 @@ The libraries developed for the Poppy project were designed with the aim to make
 We decided to write most of them in Python as its flexibility allows for fast and modular development. It was also meant to be accessible by a large audience, from developers and roboticists in general, to hobbyists, researchers, artists... Python was also chosen for the tremendous pools of existing libraries (scientific, computer vision, IO, web...) so if one is interested in adding a new feature, such as support for a new motor/sensor, it should be as easy and fast as possible.
 
 Finally, support for multiplatforms and ease of installation were also key aspects.
-
-
-We also strongly advise to use the [Anaconda Python distribution](https://www.continuum.io/why-anaconda) as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the [install section](../installation/install-poppy-softwares.md)).
 
 ## Overview of the different libraries
 
@@ -52,10 +49,7 @@ Yet, if you are planning to either
 * Use a simulator (e.g. V-REP, or web simulator),
 * or want to directly plug the robot to your computer
 
-You will have to install Poppy libraries locally. They work on Windows, Mac OSX, Linux, and have been tested on:
-
-* Python >= 2.7
-* Python >= 3.4
+You will have to install Poppy libraries locally. They work on Windows, Mac OSX, Linux, and have been tested on Python >= 3.5. Python 2 and Anaconda recipes are no longer supported starting from pypot >= 4.0.
 
 Also note that if you are planning to directly plug your robot to your USB port, specific drivers should be installed.
 
