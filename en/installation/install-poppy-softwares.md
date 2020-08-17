@@ -5,7 +5,7 @@ This section will guide you to install Poppy software on your personal computer.
 *  You want to control a simulated robot.
 *  You want to control a Poppy creature from your computer **without** using the embedded board (Odroid or Raspberry Pi).
 
-Poppy creatures are run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries. If you are getting started with Python and want to install a full Python environment for scientific computing, **we suggest you to use [Anaconda Python distribution](https://www.continuum.io/why-anaconda)**.
+Poppy creatures are run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries. 
 
 
 ## 1. Install Python...

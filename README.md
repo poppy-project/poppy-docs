@@ -73,7 +73,7 @@ Then, create a branch for your new changes to sit in. Naming the branch in relat
 git checkout -b contributing
 ```
 
-Download the [GitBook Editor](https://www.gitbook.com/editor/) application to your computer.
+Download the [GitBook Editor](https://www.gitbook.com/) application to your computer.
 
 Then you can open the documentation in GitBook Editor (*File* > *Open book*).
 
@@ -98,7 +98,7 @@ GitHub emails will notify you for the follow up process.
 
 # Building the documentation (advanced users)
 
-If you want to build the HTML version on your computer, without installing the desktop application of the [GitBook Editor](https://www.gitbook.com/editor/), you can also build the book with a command line tool.
+If you want to build the HTML version on your computer, without installing the desktop application of the [GitBook Editor](https://www.gitbook.com/), you can also build the book with a command line tool.
 
 You have to install npm and [calibre](https://calibre-ebook.com/download) (the way depends on your OS).
 

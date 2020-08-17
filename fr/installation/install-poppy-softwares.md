@@ -4,7 +4,7 @@
 
 Cette section vous guidera pour installer le logiciel Poppy sur votre ordinateur personnel. Elle est utile **seulement** si vous êtes dans l’une de ces situations : * vous souhaitez contrôler un robot simulé. * Vous souhaitez contrôler une créature Poppy depuis votre ordinateur **sans** utiliser la carte embarquée fournie (Odroid ou Raspberry Pi).
 
-Les créatures Poppy sont contrôlées par du code écrit en langage Python. Selon votre système d’exploitation, vous devrez installer Python et dans tous les cas, vous devrez installer les bibliothèques logicielles requises. Si vous faites vos premiers pas avec Python et que vous souhaitez installer un environnement Python complet conçu pour l'informatique scientifique, **nous vous suggérons d’utiliser [la distribution Python Anaconda](https://www.continuum.io/why-anaconda)**.
+Les créatures Poppy sont contrôlées par du code écrit en langage Python. Selon votre système d’exploitation, vous devrez installer Python et dans tous les cas, vous devrez installer les bibliothèques logicielles requises. 
 
 ## 1. Installer Python ...
 ### ... sur Windows

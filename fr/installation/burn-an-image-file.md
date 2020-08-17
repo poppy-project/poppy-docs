@@ -57,4 +57,4 @@ sudo dd bs=4m if=poppy-ergojr.img of=/dev/rdisk2
 
 - Retirez la carte SD du lecteur de carte.
 
-Vous êtes maintenant prêt à [assembler votre robot](../assembly-guides/ergo-jr.md) !
+Vous êtes maintenant prêt à [assembler votre robot](../assembly-guides/ergo-jr/README.md) !

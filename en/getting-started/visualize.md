@@ -31,8 +31,9 @@ You will also not have access to the robot web interface.
 You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap_!_ server).
 
 To start controlling a simulated Poppy robots, either using V-REP or the web visualizer, you will need:
-* To have a working Python, we strongly recommend to use the [Anaconda Python distribution](https://www.continuum.io/downloads). It works with any version >=2.7 or >=3.4. Prefer Python 2.7 if you can, as it is the version we used.
-* To install the Poppy libraries: pypot and the library corresponding to your creature (e.g. poppy-ergo-jr).
+* Python >= 3.5
+* The Python library **pypot**
+* The Python library corresponding to your creature (e.g. **poppy-ergo-jr**)
 
 
 ## Using V-REP

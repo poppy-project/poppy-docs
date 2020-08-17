@@ -8,7 +8,7 @@ Nous allons essayer de fournir autant d'exemples que possible et de l'axer sur l
 
 Toutes les bibliothèques Poppy sont open source et sont distribués sous la licence [GPL v3](http://www.gnu.org/licenses/gpl.html). Ainsi, vous pouvez accéder librement le code source sur [GitHub](https://github.com/poppy-project). N’hésitez pas à créer un fork, envoyer un pull/request et à contribuer !
 
-## Pourquoi Python et Anaconda ?
+## Pourquoi Python?
 
 <img src="../img/python/powered.png" alt="Python powered" height="150" />
 
@@ -18,8 +18,6 @@ Nous avons décidé d’écrire la plupart d'entre eux en Python, car sa souples
 
 Enfin, le support multiplateforme et la facilité d’installation étaient également des aspects essentiels.
 
-Nous conseillons fortement d’utiliser la [distribution Python Anaconda](https://www.continuum.io/why-anaconda) puisqu’elle comprend déjà la plupart des bibliothèques nécessaire aux bibliothèques Poppy. Nous fournissons également toutes les bibliothèques Poppy comme conda recipes afin d'être facilement installable à l’aide de Anaconda (voir [section d’installation](../installation/install-poppy-softwares.md)).
-
 ## Vue d’ensemble des différentes bibliothèques
 
 > **Info** Une documentation plus détaillée de ces bibliothèques logicielles est disponible dans la [section bibliothèques logicielles](../software-libraries/README.md)
@@ -28,9 +26,7 @@ Avant de se lancer dans la programmation, nous allons présenter brièvement les
 
 Il y a trois principales bibliothèques logicielles :
 
-* [pypot :](https://github.com/poppy-project/pypot) C’est le cœur de l’architecture logicielle Poppy. Pypot gère toutes les communications de bas niveau avec le matériel (capteurs et moteurs), définit les boucles de synchronisation afin que votre commande soient toujours à jour. Il fournit également les primitives du mécanisme qui permet la définition d’un comportement simple qui peut être -plus ou moins- automatiquement combinés.
-
-* [poppy-creature :](https://github.com/poppy-project/poppy-creature) Cette bibliothèque définit les outils communs partagés par tous les robots Poppy, par exemple comment faire pour lancer le simulateur ou démarrer l’API HTTP automatiquement attaché à n’importe quel robot.
+* [pypot](https://github.com/poppy-project/pypot) : C’est le cœur de l’architecture logicielle Poppy. Pypot gère toutes les communications de bas niveau avec le matériel (capteurs et moteurs), définit les boucles de synchronisation afin que votre commande soient toujours à jour. Il fournit également les primitives du mécanisme qui permet la définition d’un comportement simple qui peut être -plus ou moins- automatiquement combinés.
 
 * [poppy-ergo-jr](https://github.com/poppy-project/poppy-ergo-jr), [poppy-torso](https://github.com/poppy-project/poppy-torso), and [poppy-humanoid:](https://github.com/poppy-project/poppy-humanoid) ces bibliothèques sont spécifiques à chaque robot Poppy. Elles définissent la configuration particulière du robot, les capteurs utilisés, quels moteurs sont connectés à quel bus... C’est aussi ici que des comportements spécifiques à une créature sont définis (la primitive qui fait Poppy Humanoid se tenir debout par exemple).
 
@@ -51,63 +47,60 @@ Ainsi, si vous prévoyez de soit
 * Utiliser un simulateur (p. ex. V-REP ou simulateur web),
 * ou de brancher le robot à votre ordinateur
 
-Vous devrez installer les bibliothèques Poppy localement. Elles fonctionnent sur Windows, Mac OSX, Linux et ont été testées sur :
+Vous devrez installer les bibliothèques Poppy localement. Elles fonctionnent sur Windows, Mac OSX, Linux et ont été testées sur Python >= 3.5
 
-* Python >= 2.7
-* Python >= 3.4
+Si vous planifiez de brancher votre robot directement suir votre port USB, des pilotes additionnelles devront être installés.
 
-Also note that if you are planning to directly plug your robot to your USB port, specific drivers should be installed.
+Les étapes sont détaillées dans [ce chapitre](../installation/install-poppy-softwares.md).
 
-All steps are detailed in the chapter *[install Poppy software](../installation/install-poppy-softwares.md)*.
+## Pour démarrer : Bonjour Poppy !
 
-## Quickstart: Hello Poppy world!
+Afin de vous donner une vue d'ensemble de ce que vous pouvez faire avec Poppy et Python, cette section va vous montrer comment :
 
-To give you a rapid overview of what you can do using Python to program Poppy robots, this section will show you how to:
+* Crer et connecter votre robot
+* Consulter les valeurs renvoyées par les capteurs et les moteurs
+* Utiliser les primitives en enregistrant des mouvements
 
-* Create and connect your robot
-* Retrieve values from the sensor and send motor commands
-* Start playing with primitive by recording motions by demonstration
+Cette section ne prétend pas tout couvrir ce qui est possible mais vous donne un bon bagage de départ. Pour un usage avancé, la section suivante vous présente des cahiers Jupyter Notebook à suivre.
 
-This section does not intend to cover everything that can be done in Python with Poppy but to give you sneak peaks of the most common features. For more advanced use, you should refer to the next section where we present a list of Jupyter notebooks each detailing a specific aspect or feature.
+Dans ces exemples, nous supposons que vous disposez d'un environnement fonctionnel, càd que vous avez soit :
 
-In the following examples, we assume that you have a working environment meaning that you either:
+* un robot branché avec sa Raspberry Pi : vous utiliser sont interpréteur Python préinstallé via le Jupyter Notebook
+* installé les bibliothèques logicielles de votre créature sur votre ordinateur pour utiliser le simulateur
+* installé les bibliothèques logicielles de votre créature sur votre ordinateur pour utiliser le robot branché en USB
 
-* are using the Python embedded in your robot: through the Jupyter Notebook server,
-* or you have installed everything locally to work with a simulator.
+### Créer et se connecter au robot
 
-### Create and connect to a Poppy robot
+#### Importer la bilbiothèque
 
-#### Import the library
+La toute première étape est d'importer la bilbiothèque. Dans Python elles s'appellent des [modules ou packages](https://docs.python.org/3/tutorial/modules.html).
 
-The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called [module or package](https://docs.python.org/2/tutorial/modules.html).
-
-To do that, you write something similar to:
-
+Pour ce faire, la syntaxe est la suivante:
 ```python
 from pypot.creatures import *
 ```
 
-This will actually import all Poppy robots installed on the Python distribution you are using. If you want to use a specific robot, you can replace the *\** (which means all here) by the name of the robot you want.
+L'étoile signifie "*tout*", ce qui veut dire que nous allons importer toutes les créatures Poppy installées sur votre ordinateur. Mais il est possible d'en improter qu'une seule ...
 
-For the ErgoJr:
+... par exemple celle de l'Ergo Jr :
 
 ```python
 from pypot.creatures import PoppyErgoJr
 ```
 
-For the Torso:
+... par exemple celle de Torso :
 
 ```python
 from pypot.creatures import PoppyTorso
 ```
 
-For the Humanoid:
+... par exemple celle d'Humanoid :
 
 ```python
 from pypot.creatures import PoppyHumanoid
 ```
 
-> **Note** If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section *[install Poppy software](../installation/install-poppy-softwares.md)*.
+> **Note** Si une erreur similaire à cette capture d'écran apparaît (erreur nommée `Import Error`), alors votre installation des bibliothèque Python a probablement échoué. Reportez-vous à la section d'[installation](../installation/install-poppy-softwares.md) pour recommencer.
 
 ```python
 In [1]: from pypot.creatures import PoppyHumanoid
@@ -118,36 +111,35 @@ ImportError Traceback (most recent call last)
 ImportError: cannot import name PoppyHumanoid
 ```
 
-#### Create the Robot object - with a real robot
+#### Créer l'objet "Robot" (avec un robot réel)
 
-Then, you can actually create the Python object that will represent your robot. Depending on the Poppy robot you are using:
+L'objet Robot est celui qui représente votre robot en Pyton. Selon votre créature, vous devez créer un objet différent ...
 
+... pour importer l'objet de l'Ergo Jr :
 ```python
-# if you are using an Ergo Jr
 poppy = PoppyErgoJr()
 ```
 
-or
-
+... pour importer l'objet de Torso :
 ```python
-# if you are using a Torso
 poppy = PoppyTorso()
 ```
 
-or
-
+... pour importer l'objet de l'Humanoid :
 ```python
 # if you are using a Humanoid
 poppy = PoppyHumanoid()
 ```
 
-And that's it, if you did not see any error message it means that you are connected to your robot. If you see an exception like the one shown below, you should check the wire connection and try again:
+Si aucune erreur n'apparaît, alors votre interpréteur Python est correctement connecté. En revanche si une erreur similaire à ceci apparait, alors certains de vos moteurs (voire tous) sont peut-être mal connectés ou défecteueux. Vérifiez leur connectique et le schéma de montage.
+
+**Note** Lorsqu'elle survient, cette erreur vous indiquer le numéro du ou des moteur(s) posant problème entre les crochets, cela peut vous aider à situer la source du problème. 
 
 ```python
 IOError: Connection to the robot failed! No suitable port found for ids [3, 5, 7, 11, 13, 17]. These ids are missing [3, 5, 7, 11, 13, 17] !
 ```
 
-#### Create the Robot object - with V-REP
+#### Créer l'objet Robot - avec CoppeliaSim (V-REP)
 
 To use a simulated robot instead of a real one, you only have to specify it when creating the Robot object. For instance, if you want to create a simulated Poppy Torso, you simply have to execute the following line:
 

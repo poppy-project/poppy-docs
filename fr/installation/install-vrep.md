@@ -1,12 +1,12 @@
-# Installation de l'environnement de simulation robotique V-REP
+# Installation de l'environnement de simulation robotique V-REP (CoppeliaSim)
 
 > **Info** Vous devez installer les [logiciels Poppy](install-poppy-softwares.md) avant d'installer l'outil de simulation robotique V-REP.
 
-[V-REP](http://www.coppeliarobotics.com) est un simulateur robotique efficace principalement Open source (GNU GPL), qui est distribué sous une licence gratuite pour les établissements scolaires et propose une licence commerciale pour les autres secteurs. Il existe également une version *PRO EVAL* qui empêche seulement de sauvegarder. Vous n'avez pas besoin de sauvegarder la scène V-REP pour l'utiliser avec pypot (la bibliothèque Python conçue pour les créatures Poppy), nous vous suggérons donc d'installer cette version sans vous inquiéter d'éventuelles violations de droit d'auteur. Si vous souhaitez modifier la scène V-REP pour ajouter ou personnaliser une créature Poppy, vous devrez utiliser la version PRO ou la version EDU (voir la [ licence éducative ](http://www.coppeliarobotics.com/licensing-plugin-edu.html)).
+[V-REP](http://www.coppeliarobotics.com) est un simulateur robotique efficace principalement Open source (GNU GPL), qui est distribué sous une licence gratuite pour les établissements scolaires et propose une licence commerciale pour les autres secteurs. Il existe également une version *PRO EVAL* qui empêche seulement de sauvegarder. Vous n'avez pas besoin de sauvegarder la scène V-REP pour l'utiliser avec pypot (la bibliothèque Python conçue pour les créatures Poppy), nous vous suggérons donc d'installer cette version sans vous inquiéter d'éventuelles violations de droit d'auteur. Si vous souhaitez modifier la scène V-REP pour ajouter ou personnaliser une créature Poppy, vous devrez utiliser la version PRO ou la version EDU (la licence éducative).
 
 ## Installation de V-REP sous Windows
 
-[Télécharger V-REP](http://www.coppeliarobotics.com/downloads.html) PRO EVAL ou EDU (si vous êtes un établissement scolaire). V-REP n'étant pas signé, vous devrez valider la fenêtre popup SmartScreen (sur Windows 10) pour commencer l'installation. ![VREP_smartscreen](../img/vrep/vrep2.png)
+[Télécharger V-REP](http://www.coppeliarobotics.com/) PRO EVAL ou EDU (si vous êtes un établissement scolaire). V-REP n'étant pas signé, vous devrez valider la fenêtre popup SmartScreen (sur Windows 10) pour commencer l'installation. ![VREP_smartscreen](../img/vrep/vrep2.png)
 
 Pendant l'installation, veillez à installer * Visual C++ Redistributable 2010 * et * Visual C++ Redistributable 2012 *. ![cpp2010](../img/vrep/lucvincent/luc_vincent-056.png)
 
@@ -32,7 +32,7 @@ Si les versions de * Visual C++ Redistributable 2010 * ou * Visual C++ Redistrib
 
 ## Testez votre installation
 
-Ouvrez V-REP avec un double clic sur l'icône du bureau. Ouvrez l'invite de commande de votre distribution Python (appelée *Anaconda prompt* pour Anaconda) ou l'*Invite de commande* de Windows, tapez et validez en appuyant sur entrée pour exécuter la commande ci-dessous :
+Ouvrez V-REP avec un double clic sur l'icône du bureau. Ouvrez l'invite de commande de votre distribution Python (appelé l'*Invite de commande* de Windows), tapez et validez en appuyant sur entrée pour exécuter la commande ci-dessous :
 
 ```bash
 poppy-services --snap --vrep --no-browser poppy-torso`

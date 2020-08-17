@@ -4,9 +4,9 @@ La communauté Poppy rassemble une communauté interdisciplinaire de débutants,
 
 ## School of Moon
 
-The [School of moon](http://shonen.info/schoolofmoon/) play has been created by the contemporary dance company [Shonen](http://shonen.info) lead by the choreographer Eric Minh Cuong Castaing.
+La pièce School of moon a été créer par la troupe [Shonen](http://shonen.info) sous la direction du chorégraphe Eric Minh Cuong Castaing.
 
-Elle présente par ailleurs un certain nombre d'artistes : des enfants, deux danseurs (Gaëtan Brun Picard et Ana Pi), trois robots Nao et deux robots Poppy Humanoid. Cette pièce est une métaphore de la création d’une post-humanité en trois actes : l’Homme, l’Homme et la machine et la machine. <iframe src="http://player.vimeo.com/video/149653064" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen mark="crwd-mark"></iframe> 
+Elle présente un certain nombre d'artistes : des enfants, deux danseurs (Gaëtan Brun Picard et Ana Pi), trois robots Nao et deux robots Poppy Humanoid. Cette pièce est une métaphore de la création d’une post-humanité en trois actes : l’Homme, l’Homme et la machine et la machine. <iframe src="http://player.vimeo.com/video/149653064" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen mark="crwd-mark"></iframe> 
 
 Les représentations sont locales, c'est à dire que les enfants participant aux différentes résidences de la troupe viennent des villes choisies. Certaines séquences de la pièce dépendent aussi des robots disponibles dans ces mêmes villes.
 

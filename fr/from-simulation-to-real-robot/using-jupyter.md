@@ -80,13 +80,13 @@ def reset_position():
 
 Le principal inconvénient de travail avec le mode client/serveur est que les versions de vos logiciels installés localement peuvent différer de celui installé sur le robot.
 
-La version de Python installée sur le robot est Python 2.7 et dispose de la plupart des principales bibliothèques scientifiques (numpy, scipy, matplotlib, opencv). Une liste exhaustive des packages Python installés sera disponible bientôt < !--(TODO !)-->. Pour le moment, le moyen le plus simple d'y parvenir est d’utilisé un *terminal notebook* qui peut être exécuté directement depuis l’interface de Jupyter.
+La version de Python installée sur le robot est Python 3 et dispose de la plupart des principales bibliothèques scientifiques (numpy, scipy, matplotlib, opencv). Une liste exhaustive des packages Python installés sera disponible bientôt < !--(TODO !)-->. Pour le moment, le moyen le plus simple d'y parvenir est d’utilisé un *terminal notebook* qui peut être exécuté directement depuis l’interface de Jupyter.
 
 ![Ouvrir un terminal](../img/jupyter/open-terminal.jpg)
 
 ![Terminal Jupyter](../img/jupyter/terminal.jpg)
 
-En utilisant la même technique, vous pouvez installer des bibliothèques tierces directement sur le robot. Les outils utilitaire [pip](https://pip.readthedocs.org) et [conda](http://conda.pydata.org/docs/) sont installés et devraient être utilisés lorsque cela est possible.
+En utilisant la même technique, vous pouvez installer des bibliothèques tierces directement sur le robot. L' outils utilitaire [pip](https://pip.readthedocs.org) est installé dans un environnement virtuel Python et devrait être utilisé lorsque cela est possible.
 
 * Notez que la carte embarquée repose sur une architecture armv7 et donc certaines bibliothèques peuvent être difficiles à compiler. Nous maintenons une liste de recettes conda spécialement conçu pour cette plate-forme [ici](https://anaconda.org/poppy-project).   
 Plus de contributions sont les bienvenues ! *

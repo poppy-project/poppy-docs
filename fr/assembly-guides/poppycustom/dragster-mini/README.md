@@ -1,6 +1,6 @@
 # Assembly guide for the Dragster mini
 
-![Outil d'Ergo Jr](img/Dragster.jpg)
+![Outil d'Ergo Jr](img/dragsterfinal.jpg)
 
 Poppy Dragster mini is a small inexpensive educational robot based on the Ergo Jr that is a combination of a small robotic arm with 3 degrees of freedom mounted on a platform with two wheels. It is made of simple shapes that can be printed in 3D. They are assembled by small plastic screws which can be put or removed very quickly with the OLLO tool.
 

@@ -104,7 +104,7 @@ The project was realized during an internship at Inria Flowers by [Joel Ortiz So
 
 ##### Heol
 
-Heol - meaning "sun" in Breton - is a 34cm tall humanoid robot made by the association [Heol robotics](http://heol.io/). 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.
+Heol - meaning "sun" in Breton - is a 34cm tall humanoid robot made by the association Heol robotics. 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.
 
 Heol's purpose is to put a smile on ill children's faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.
 
@@ -113,7 +113,7 @@ Its participation in the RoboCup (World Cup football for robot) is also envisage
 
 ![Heol](../img/heol.jpg)
 
-##### [Poppyrate](http://www.poppyrate.com/)
+##### Poppyrate
 
 It a robot based on Poppy Humanoid.
 It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors.
@@ -124,4 +124,4 @@ Poppyrate will be sold as a kit (with and without the 3D parts) It has been desi
 
 ![Poppyrate](../img/poppyrate.jpg)
 
-For more information, check their [Website](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!
+For more information, check their [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!

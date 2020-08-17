@@ -90,7 +90,7 @@ Le projet a été réalisé lors d’un stage au sein de l'équipe Flowers de l'
 
 ##### Heol
 
-Heol - « soleil » en Breton - est un robot humanoïde haut de 34cm fait par l’association [Heol robotique](http://heol.io/). Composé de 23 moteurs, toutes les autres pièces sont imprimés en 3D. Il utilise également la bibliothèque pypot pour ses mouvements.
+Heol - « soleil » en Breton - est un robot humanoïde haut de 34cm fait par l’association Heol robotique. Composé de 23 moteurs, toutes les autres pièces sont imprimés en 3D. Il utilise également la bibliothèque pypot pour ses mouvements.
 
 Le but de Heol est de donner le sourire aux enfants malades. Il peut être un outil pédagogique en devenant une plateforme d'apprentissage pour la conception mécanique et de programmation.
 
@@ -98,7 +98,7 @@ Sa participation à la RoboCup (coupe du monde de football pour robots) est éga
 
 ![Heol](../img/heol.jpg)
 
-##### [Poppyrate](http://www.poppyrate.com/)
+##### Poppyrate
 
 C'est un robot basé sur le Poppy Humanoid. Il vise à développer une version plus abordable grâce à sa petite taille et l’utilisation de moteurs encore moins chers. La réduction de la taille rend également plus facile l'impression des pièces avec une imprimante 3D standard. L'objectif donné est de rendre le robot aussi mobile et customisable que possible tout en maintenant sa compatibilité avec la plateforme Poppy.
 
@@ -106,4 +106,4 @@ Poppyrate sera vendu en kit (avec ou sans les pièces 3D). Il a été conçu par
 
 ![Poppyrate](../img/poppyrate.jpg)
 
-Pour plus d’informations, consultez leur [site Web](http://www.poppyrate.com/) - [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/) !
+Pour plus d’informations, consultez leur [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/) !

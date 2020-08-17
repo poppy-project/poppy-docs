@@ -42,7 +42,7 @@ You can test your installation with the web interface in your web browser http:/
 
 These boards come with a working Ubuntu base image on the MMC you can use the install scripts on it.
 In the case you have not a fresh installation you have download and burn default system images:
-* [Ubuntu 14.04 for Odroid U3](http://odroid.com/dokuwiki/doku.php?id=en:u3_release_linux_ubuntu)
+* Ubuntu 14.04 for Odroid U3
 * [Ubuntu 14.04 for Odroid XU3/XU4](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04.1lts-lubuntu-odroid-xu3-20150212.img.xz)
 
 To burn it on the MMC/SD-card, look at the [startup section](burn-an-image-file.md#write-an-image-to-the-sd-card).

@@ -80,14 +80,14 @@ def reset_position():
 
 The main drawback of this client/server way of working is that your locally installed software versions may differ from the one installed on the robot.
 
-The Python installed on the robot is Python 2.7 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed Python packages will be available soon <!-- (TODO!)-->. At the moment, the easier way to get it is to used a *terminal notebook* which can be directly run from the Jupyter interface.
+The Python installed on the robot is Python 3 and comes with most of the scientific main libraries (numpy, scipy, matplotlib, opencv). An exhaustive list of the installed Python packages will be available soon <!-- (TODO!)-->. At the moment, the easier way to get it is to used a *terminal notebook* which can be directly run from the Jupyter interface.
 
 ![Open a terminal](../img/jupyter/open-terminal.jpg)
 
 ![Jupyter terminal](../img/jupyter/terminal.jpg)
 
 
-Using the same technique, you can install 3rd party libraries directly on the robot. The [pip](https://pip.readthedocs.org) and [conda](http://conda.pydata.org/docs/) utility tools are installed and should be used when possible.
+Using the same technique, you can install 3rd party libraries directly on the robot. The [pip](https://pip.readthedocs.org) utility is installed in a virtual environment and should be used when possible.
 
 *Note that the embedded board are based on armv7 and thus some libraries may be hard to compile. We are maintaining a list of conda recipes specifically built for this platform [here](https://anaconda.org/poppy-project).  
 Contributions are more than welcomed! *

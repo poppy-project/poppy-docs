@@ -1,14 +1,14 @@
-# Install the robotic simulator V-REP
+# Install the robotic simulator V-REP (CoppeliaSim)
 > **Info** You need to install [Poppy softwares](install-poppy-softwares.md) before installing the V-REP simulator.
 
 [V-REP](http://www.coppeliarobotics.com) is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free license for educational entities and have a commercial license for other purposes.
 There is also an *PRO EVAL* version which limit the right to backup. As you don't need to backup the scene to use V-REP with pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.
-If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the [educational license](http://www.coppeliarobotics.com/licensing-plugin-edu.html)).
+If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the educational licence.
 
 
 ## Install V-REP on Windows
 
-[Download V-REP](http://www.coppeliarobotics.com/downloads.html) PRO EVAL or EDU (if you are an educational entity).
+[Download V-REP](http://www.coppeliarobotics.com/) PRO EVAL or EDU (if you are an educational entity).
 As V-REP is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation.
 ![VREP_smartscreen](../img/vrep/vrep2.png)
 
@@ -34,7 +34,7 @@ Even if you already have *Visual C++ Redistributable 2010* or *Visual C++ Redist
 ## Test your installation
 
 Open V-REP with a double click on the desktop icon.
-Open the prompt of your Python Distribution (called *Anaconda Prompt* for Anaconda) or the *Command Prompt* of Windows, type and press Enter to execute the command below:
+Open the prompt of your Python Distribution (called the *Command Prompt* of Windows), type and press Enter to execute the command below:
 
 ```bash
 poppy-services --snap --vrep --no-browser poppy-torso`

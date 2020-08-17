@@ -76,7 +76,7 @@ In the following examples, we assume that you have a working environment meaning
 
 #### Import the library
 
-The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called [module or package](https://docs.python.org/2/tutorial/modules.html).
+The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called [module or package](https://docs.python.org/3/tutorial/modules.html).
 
 To do that, you write something similar to:
 
