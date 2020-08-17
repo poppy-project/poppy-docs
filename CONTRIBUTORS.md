@@ -4,12 +4,14 @@
 
 These people have contributed to this documentation (sorted by alphabetic order):
 
+* Jean-Luc Charles (ENSAM)
 * Brice Copy (Cern robotics club)
 * Manon Cortial (Génération Robots)
 * Marie Demangeat
 * Thibault Deprez
 * Matthieu Lapeyre
 * Gilles Lassus (Éducation Nationale)
+* Yoan Mollard
 * Stéphanie Noirpoudre
 * Nicolas Rabault
 * Pierre Rouanet
