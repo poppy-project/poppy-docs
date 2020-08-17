@@ -16,11 +16,4 @@ before_install:
 - npm install -g gitbook-cli broken-link-checker http-server
 - gitbook install
 script:
-- gitbook build -d ./
-- gitbook pdf -d ./
 - ". ./ci/update_documentation.sh"
-
-after_success: # Check links
-- cd _book/ && http-server -p 8081 -s &
-- blc http://localhost:8081/ -ro --exclude *.local* --exclude *192.168* --exclude *.127.0.0.1 --exclude *forum.poppy-project.org* --user-agent "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:79.0) Gecko/20100101 Firefox/79.0" --get > contributing/checked_links.txt
-- grep -e 'BROKEN' -e 'Getting links from' -e 'Error' contributing/checked_links.txt

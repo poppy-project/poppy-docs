@@ -1,7 +1,20 @@
 #!/bin/bash
 die(){ echo "Coudn't $*" >&2; exit 1; }
 
-echo -e "\e[34mStarting update_documentation.sh\e[39m : git config"
+echo -e "\e[34mStarting update_documentation.sh\e[39m : build"
+
+gitbook build -d ./ || die "Build the documentation in HTML"
+gitbook pdf -d ./   || die "Build the documentation in PDF"
+
+echo -e "\e[34mupdate_documentation.sh\e[39m : check links"
+
+pushd _book
+    http-server -p 8081 -s &
+    blc http://localhost:8081/ -ro --exclude *.local* --exclude *192.168* --exclude *.127.0.0.1 --exclude *forum.poppy-project.org* --user-agent "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:79.0) Gecko/20100101 Firefox/79.0" --get > contributing/checked_links.txt
+    grep -e 'BROKEN' -e 'Getting links from' -e 'Error' contributing/checked_links.txt
+popd
+
+echo -e "\e[34mupdate_documentation.sh\e[39m : git config"
 
 last_commit_sha=$(git rev-parse --short HEAD)
 
@@ -11,13 +24,7 @@ git_url=https://$GH_TOKEN@github.com/$GH_USERNAME/$GH_REPO.git
 # Configure Git to push with GitHub Oauth token
 git remote set-url origin $git_url
 
-echo -e "\e[34mupdate_documentation.sh\e[39m : git push"
-
-# Push the broken links
-git add contributing/broken_links.txt
-git commit -m "Update broken links after commit $last_commit_sha"  || die "commit broken links"
-git push origin master  || die "push to master"
-
+echo -e "\e[34mupdate_documentation.sh\e[39m : Create local repo"
 
 tmp_repo=/tmp/$GH_REPO-doc
 
