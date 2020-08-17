@@ -28,4 +28,4 @@ after_success: # Check links
 - kill $PID
 - grep -e 'BROKEN' -e 'Getting links from' -e 'Error' contributing/checked_links.txt
 - cat  contributing/checked_links.txt # display logs at the end to facilitate the reading of the output
-". ./ci/update_documentation.sh"
+- ". ./ci/update_documentation.sh"
