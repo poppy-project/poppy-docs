@@ -3,8 +3,7 @@
 ### Getting started
 
 * [About this documentation](README.md)
-* [Getting started](getting-started/README.md)
-    * [Build a robot](getting-started/build.md)
+* [Use my robot](getting-started/README.md)
     * [Connect to the robot](getting-started/connect.md)
     * [Program the robot](getting-started/program-the-robot.md)
     * [Visualize](getting-started/visualize.md)
@@ -25,8 +24,6 @@
     * [Electronic assembly](assembly-guides/ergo-jr/electronic-assembly.md)
     * [Motor configuration](assembly-guides/ergo-jr/motor-configuration.md)
     * [Hardware construction](assembly-guides/ergo-jr/mechanical-construction.md)
-- [Custom your Ergo Jr](assembly-guides/poppycustom/README.md)
-    * [Assemble the Dragster Mini](assembly-guides/poppycustom/dragster-mini/README.md)
 - [Assemble the Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
     * [PRIMORDIAL warnings](assembly-guides/poppy-humanoid/warnings.md)
     * [Bill Of Material (BOM)](assembly-guides/poppy-humanoid/bom.md)

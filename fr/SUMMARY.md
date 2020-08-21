@@ -3,12 +3,11 @@
 ### Premiers pas
 
 * [À propos de cette documentation](README.md)
-* [Mise en route](getting-started/README.md)
-* [Construire un robot](getting-started/build.md)
-* [Se connecter au robot](getting-started/connect.md)
-* [Programmer un robot](getting-started/program-the-robot.md)
-* [Visualiser](getting-started/visualize.md)
-* [Exemples de projets](getting-started/example-of-projects.md)
+* [Exploiter mon robot](getting-started/README.md)
+    * [Se connecter au robot](getting-started/connect.md)
+    * [Programmer un robot](getting-started/program-the-robot.md)
+    * [Visualiser ou simuler](getting-started/visualize.md)
+    * [Exemples de projets](getting-started/example-of-projects.md)
 
 ### Installation des logiciels
 
@@ -26,8 +25,6 @@
     * [Assemblage électronique](assembly-guides/ergo-jr/electronic-assembly.md)
     * [Configuration des moteurs](assembly-guides/ergo-jr/motor-configuration.md)
     * [Assemblage des pièces mécaniques](assembly-guides/ergo-jr/mechanical-construction.md)
-* [Custom your Ergo Jr](assembly-guides/poppycustom/README.md) 
-    * [Assemble the Dragster Mini](assembly-guides/poppycustom/dragster-mini/README.md)
 * [Assembler Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
 * [Assembler Poppy Torso](assembly-guides/poppy-torso/README.md)
 
