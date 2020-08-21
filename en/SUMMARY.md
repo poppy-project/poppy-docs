@@ -28,6 +28,15 @@
 - [Custom your Ergo Jr](assembly-guides/poppycustom/README.md)
     * [Assemble the Dragster Mini](assembly-guides/poppycustom/dragster-mini/README.md)
 - [Assemble the Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
+    * [PRIMORDIAL warnings](assembly-guides/poppy-humanoid/warnings.md)
+    * [Bill Of Material (BOM)](assembly-guides/poppy-humanoid/bom.md)
+    * [Dynamixel hardware](assembly-guides/poppy-humanoid/dynamixel_hardware.md)
+    * [Configuring the Dynamixel motors](assembly-guides/poppy-humanoid/addressing_dynamixel.md)
+    * [Arms assembly](assembly-guides/poppy-humanoid/arms_assembly.md)
+    * [Trunk assembly](assembly-guides/poppy-humanoid/trunk_assembly.md)
+    * [Legs assembly](assembly-guides/poppy-humanoid/legs_assembly.md)
+    * [Head assembly](assembly-guides/poppy-humanoid/head_assembly.md)
+    * [Wiring arrangement](assembly-guides/poppy-humanoid/wiring_arrangement.md)
 - [Assemble the Poppy Torso](assembly-guides/poppy-torso/README.md)
 
 ### Robot programming
