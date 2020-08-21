@@ -1,66 +1,85 @@
 # 8. Poppy Humanoid: Head Assembly
 
-This page will guide you through the process of assembling the head of your Poppy.
+## Bill of Material for the head
+3D printed parts:
+* Neck (U-shaped part)
+<img src="img/head_bom_1.jpg" title="Neck" style="width: 250px;" />
+* head-face and back
+<img src="img/head_bom_2.jpg" title="Head face and back" style="width: 350px;" />
+* speaker right and left (if applicable)
+<img src="img/head_bom_3.jpg" title="Fake manga screen" style="width: 250px;" />
+* camera_support
+<img src="img/head_bom_4.jpg" title="Camera support" style="width: 250px;" />
+* screen_support
+<img src="img/head_bom_5.jpg" title="Screen support" style="width: 250px;" />
+* screen
+<img src="img/head_bom_6.jpg" title="Screen" style="width: 250px;" />
+* fake_manga_screen
+<img src="img/head_bom_7.jpg" title="Fake flat manga screen" style="width: 250px;" />
 
-**Note:** sorry, no video or images available for the head
+Actuators :
+* 1x Robotis Dynamixel AX12A
 
-## 8.1. Insert hex nuts in the head face
+Cables:
+* 1x 3P 140mm
 
-Prepare the *head_face* part for assembly by putting all hex nuts in 
-You may have to use a small screwdriver or a pliers to help you *clip* nuts inside holes.
+Robotis parts:
+* 13x Nuts M2
+* 4x Nuts M2.5
+* 18x bolts S1
+* 1x bolts S-B
+* 4x Bolts M2.5x6
+* 3x Bolts S2
 
-## 8.2. Insert the screen
+## Head assembly instructions
 
-Your kit is either equipped with a screen *manga screen* or a *3D printed fake screen*.
-To fix it, use 2x M2.5x6mm bolts.
+Prepare and configure this motor:
 
-## 8.3. Fix the camera
-First you have to put 3x hex nut M2 in the hex holes of the *camera_support* part:
-![](img/assembly/camera_support_nuts.jpg)
+| Sub-assembly name |   Motor name   |   Type  | ID |  Free horn |
+|-------------------|:--------------:|:-------:|:--:|:----------:|
+| Head              |     head\_y    |  AX-12A | 37 | No         |
 
-Then you can assemble the *support_camera* part on the *head_face* with 2x **M2x4mm bolt (/!\ if you use longer bolt it may go through the head and create holes on the front side...)**:
+Fix the neck on the head_y motor with 4 S1 Bolts.
 
-![](img/assembly/head_face_camera_support_parts.jpg)
+<img src="img/head_1.jpg" title="Neck on top of head_z" style="width: 250px;" />
 
-With 3 M2x5 screws, you can fix the camera on the *support_camera* part:
-![](img/assembly/head_face_camera_parts.jpg)
+Fix head_y on the neck with 4 S1 Bolts and a S-B Bolts.
+Plug head_y on the 3P PCB HUB with the 100mm cable
 
-![](img/assembly/head_face_assembled_camera_back.jpg)
+<img src="img/head_2.jpg" title="Cable connection" style="width: 350px;" />
 
-And you got your Poppy with the camera !
-![](img/assembly/head_face_assembled_camera_front.jpg)
+Insert the back part of the head on top of head_y. Make sure the axis of head_y is in zero position at this moment: Rely on the marks drawn on the horn and on the motor chassis: they must be aligned.
 
+<img src="img/head_3.jpg" title="head_back mounted" style="width: 350px;" />
 
-## 8.4: Add the speakers (if relevant)
-If you have speakers in your kit, there are two different 3D parts, one for the right side and one for the left side. Don't worry, it's written on each part. Use 2x M2x5mm screws to fix each speaker.
+Fix the motor and the head back with 6 S1 bolts.
 
+<img src="img/head_4.jpg" title="head_back mounted" style="width: 350px;" />
 
-## 8.5: Assemble the motor with the head_back
-Take 6 M2 hex nuts and put them on the Dynamixel AX-12. Then you need 6 M2x5 screws to fix the motor with the head. Beware of putting the AX-12 in the correct position.
+Take the head front, and insert the screen.
+Insert 4 nuts M2.5 on the top and bottom of the front head.
+Insert 2 nuts M2 on each side of the front head.
+Insert the screen support and the fake screen, then fix them with 2 M2.5x6 bolts.
+Insert the camera support and fix it with 2 M2.5x6 bolts.
+Fix the left and right speakers on their side with 2 S1 Bolts each.
 
+<img src="img/head_5.jpg" title="Head face interior" style="width: 350px;" />
+<img src="img/head_6.jpg" title="Head face interior" style="width: 350px;" />
+<img src="img/head_7.jpg" title="Head face interior" style="width: 350px;" />
 
-## 8.7: assemble the head with the body
+Insert the Raspberry Pi 3 with USB/Ethernet ports facing the rear of the head, on top of its 4 pillars of the head_back part. Use bolts and nuts to fix it as well.
 
-* Take the body and the head of your Poppy.
+## Do not close the head before full startup
+As you might expect, the last part is to add the head_face in order to close the head. However, since the first startup may require debugging, we advise you to keep the head open till you are guaranteed your robot is assembled the right way. Go on with the wiring arrangement.
 
-* Put the head motor on the neck (U shape part), align the mark of the motor to ensure the initial position is correct.
+Once you're done with debugging, close the head: Insert a nut M2 on the top, on the bottom left and, on the bottom right of the head front and join the 2 parts of the head and fix them with 3 S2 Bolts.
 
-* Use 4x M2x5 screws to assemble the motor with the neck (use threadlock):
+<img src="img/head_8.jpg" title="Head closure" style="width: 350px;" />
 
-* Turn the neck and fix the other side with the big Robotis screw M3 (use threadlock).
+[**Next: 9. Wiring arrangement >>**](wiring_arrangement.md)
 
-* Close the head gently and take care all wires fit inside.
-
-* Use 3 long M2 screw to assemble the back and the face together:
-
-* There are 3 holes, one on each side and one on the top.
-
-## 8.8: Do not close the head before full startup
-As you might expect, the last part is to add the head_face in order to close the head. However, since the first startup may require debugging, we advise you to keep the head open till you are guaranteed your robot is assembled the right way.
+[**<< Back to menu**](README.md)
 
 ## Older head versions with Odroid
 Former versions of Poppy Humanoid were shipped with Odroid U3 or Odroid U4 boards.
 These boards are no longer supported. If you have such boards, please refer to the archieved documentation [for U3](https://github.com/poppy-project/Poppy-minimal-head-design/blob/odroid-xu4-integration/doc/head_back_U3.md#u3-version-assembly) or [for XU4](https://github.com/poppy-project/Poppy-minimal-head-design/blob/odroid-xu4-integration/doc/head_back_xu4.md).
-
-[**Next: 9. First startup >>**](wiring_arrangement.md)
-[**<< Back to menu**](README.md)
