@@ -19,7 +19,7 @@ Prepare your workbench and tools and then follow the guide step-by-step. Enjoy t
 3. [**Dynamixel Hardware**](dynamixel_hardware.md)
 4. [**Addressing Dynamixel**](addressing_dynamixel.md)
 5. [**Arms assembly**](arms_assembly.md)
-6. [**Trunk assembly**](trunk_assembly.md)
+6. [**Full torso assembly**](trunk_assembly.md)
 7. [**Legs assembly**](legs_assembly.md)
 8. [**Head assembly**](head_assembly.md)
 9. [**Wiring arrangement**](wiring_arrangement.md)

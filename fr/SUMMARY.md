@@ -3,7 +3,7 @@
 ### Premiers pas
 
 * [À propos de cette documentation](README.md)
-* [Exploiter mon robot](getting-started/README.md)
+* [Exploiter mon robot assemblé](getting-started/README.md)
     * [Se connecter au robot](getting-started/connect.md)
     * [Programmer un robot](getting-started/program-the-robot.md)
     * [Visualiser ou simuler](getting-started/visualize.md)

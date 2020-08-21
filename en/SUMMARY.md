@@ -30,7 +30,7 @@
     * [Dynamixel hardware](assembly-guides/poppy-humanoid/dynamixel_hardware.md)
     * [Configuring the Dynamixel motors](assembly-guides/poppy-humanoid/addressing_dynamixel.md)
     * [Arms assembly](assembly-guides/poppy-humanoid/arms_assembly.md)
-    * [Trunk assembly](assembly-guides/poppy-humanoid/trunk_assembly.md)
+    * [Full torso assembly](assembly-guides/poppy-humanoid/trunk_assembly.md)
     * [Legs assembly](assembly-guides/poppy-humanoid/legs_assembly.md)
     * [Head assembly](assembly-guides/poppy-humanoid/head_assembly.md)
     * [Wiring arrangement](assembly-guides/poppy-humanoid/wiring_arrangement.md)
