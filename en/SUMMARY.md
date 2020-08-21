@@ -3,7 +3,7 @@
 ### Getting started
 
 * [About this documentation](README.md)
-* [Use my robot](getting-started/README.md)
+* [Use my assembled robot](getting-started/README.md)
     * [Connect to the robot](getting-started/connect.md)
     * [Program the robot](getting-started/program-the-robot.md)
     * [Visualize](getting-started/visualize.md)

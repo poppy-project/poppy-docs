@@ -41,11 +41,11 @@ Instructions for Windows ar available [here](http://www.xevelabs.com/doku.php?id
 ## Use a software to configure the connected motor
 
 There are 3 different software tools to configure your motors one-by-one:
--   [Poppy Configure](TODO.md): Command-line tool that only requires to provide the motor name
--   [Herborist](http://poppy-project.github.io/pypot/herborist.html): Graphical tool used in the videos in place of Poppy Configure
+-   Poppy Configure: Command-line tool that only requires to provide the motor name
+-   Herborist: Graphical tool used in the videos in place of Poppy Configure
 -   [Dynamixel Wizard](http://support.robotis.com/en/software/roboplus/dynamixel_monitor/quickstart/dynamixel_monitor_connection.htm): windows-only tool provided by Robotis.
 
-You can use whichever one as long as you manage to configure your motor, but we advise Poppy Configure.
+You can use whichever one as long as you manage to configure your motor, but we advise Poppy Configure:
 
 ### Poppy Configure
 Poppy Configure is a command-line tool to configure Poppy motors that is handy because it only requires the name of the motor to configure it.
@@ -74,19 +74,14 @@ herborist
 
 ![image](img/herborist.png)
 
-Connect each motor **one by one** to the USB2AX and use the ’scan’
-button in Herborist or Dynamixel Wizard to detect it. If it’s a new
-motor, it should have ID 1 and baudrate 57600bps, apart from AX-12A
-servos which already have a 1000000 baudrate.
+Connect each motor **one by one** to the USB2AX and use the ’scan’ button in Herborist or Dynamixel Wizard to detect it. If it’s a new motor, it should have ID 1 and baudrate 57600bps, apart from AX-12A servos which already have a 1000000 baudrate.
 
 You have to set:
-
--   ID corresponding to the naming convention
+-   The digital ID corresponding to the naming convention
 -   Baudrate to 1 000 000 bps
 -   Return delay time to 0 ms instead of 0.5 ms
 
-In Herborist, don’t forget to click on the ’Update EEPROM’ button so the
-changes are taken in account.
+In Herborist, don’t forget to click on the ’Update EEPROM’ button so the changes are taken in account.
 
 ## When should I configure a motor?
 
