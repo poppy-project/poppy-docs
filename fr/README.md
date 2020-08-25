@@ -20,4 +20,4 @@ Ce document est sous [licence CC-BY 4.0](https://creativecommons.org/licenses/by
 
 ## Version
 
-Ce document a été mis à jour le {{file.mtime|date ('dd MMMM yy')}}.
+Ce document a été mis à jour le {{file.mtime|date ('DD/MM/YYYY')}}.

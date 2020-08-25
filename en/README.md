@@ -20,4 +20,4 @@ It is written in markdown, hosted on [GitHub](https://github.com/poppy-project/p
 
 
 ## Version
-This document has been updated on {{ file.mtime|date('MMM Do YY') }}.
+This document has been updated on {{ file.mtime|date('MM/DD/YYYY') }}.
