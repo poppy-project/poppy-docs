@@ -39,4 +39,4 @@ Authors:
 * Matthieu Lapeyre
 * Théo Segonds
 * Yoan Mollard
-![image](img/poppy-logo.png) ![image](img/GR-logo.png)
+![image](img/GR-logo.png)

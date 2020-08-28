@@ -66,8 +66,11 @@ Fix the left and right speakers on their side with 2 S1 Bolts each.
 <img src="img/head_5.jpg" title="Head face interior" style="width: 350px;" />
 <img src="img/head_6.jpg" title="Head face interior" style="width: 350px;" />
 <img src="img/head_7.jpg" title="Head face interior" style="width: 350px;" />
+<img src="img/head_10.jpg" title="Camera placeholder" style="width: 350px;" />
 
 Insert the Raspberry Pi 3 with USB/Ethernet ports facing the rear of the head, on top of its 4 pillars of the head_back part. Use bolts and nuts to fix it as well.
+
+<img src="img/head_9.jpg" title="Raspberry Pi placeholder" style="width: 350px;" />
 
 ## Do not close the head before full startup
 As you might expect, the last part is to add the head_face in order to close the head. However, since the first startup may require debugging, we advise you to keep the head open till you are guaranteed your robot is assembled the right way. Go on with the wiring arrangement.

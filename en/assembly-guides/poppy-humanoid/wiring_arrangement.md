@@ -16,6 +16,8 @@ The drawing below shows the 2 data and power buses: cables connecting motors are
 
 Both USB2AX adapters have to be plugged to the USB sockets of the Raspi3 at the bottom of the head. If you mess up with wiring, at first startup, software will report missing motors or too much motors or the same bus.
 
+<img src="img/wires_1.jpg" title="Rear wiring" style="width: 435px;" />
+
 ## 9.2. Power supplies for Poppy Humanoid
 The robot requires 3 power supply cables:
 * 12V power supply for the SMPS2Dynamixel of the upper body
