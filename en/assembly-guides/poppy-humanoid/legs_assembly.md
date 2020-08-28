@@ -69,4 +69,5 @@ If you received your Poppy kit from Generation Robots, you can use the custom 22
 #### [VIDEO INSTRUCTIONS](http://youtu.be/5i0xVlrJc-8)
 
 [**Next: 8. Head assembly >>**](head_assembly.md)
+
 [**<< Back to menu**](README.md)

@@ -20,11 +20,11 @@
     - [Install a Poppy Board](installation/install-a-poppy-board.md)
 
 ### Robot assembly
-- [Assemble the Ergo Jr](assembly-guides/ergo-jr/README.md)
+- [Assemble Poppy Ergo Jr](assembly-guides/ergo-jr/README.md)
     * [Electronic assembly](assembly-guides/ergo-jr/electronic-assembly.md)
     * [Motor configuration](assembly-guides/ergo-jr/motor-configuration.md)
     * [Hardware construction](assembly-guides/ergo-jr/mechanical-construction.md)
-- [Assemble the Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
+- [Assemble Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
     * [PRIMORDIAL warnings](assembly-guides/poppy-humanoid/warnings.md)
     * [Bill Of Material (BOM)](assembly-guides/poppy-humanoid/bom.md)
     * [Dynamixel hardware](assembly-guides/poppy-humanoid/dynamixel_hardware.md)
@@ -34,7 +34,7 @@
     * [Legs assembly](assembly-guides/poppy-humanoid/legs_assembly.md)
     * [Head assembly](assembly-guides/poppy-humanoid/head_assembly.md)
     * [Wiring arrangement](assembly-guides/poppy-humanoid/wiring_arrangement.md)
-- [Assemble the Poppy Torso](assembly-guides/poppy-torso/README.md)
+- [Assemble Poppy Torso](assembly-guides/poppy-torso/README.md)
 
 ### Robot programming
 

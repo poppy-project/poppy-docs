@@ -1,5 +1,5 @@
-# Guide d’assemblage pour Poppy Humanoid
+# Guide d’assemblage de Poppy Humanoid
 
-<!-- TODO: -->
+> **Mise en garde** Le guide d'assemblage de Poppy Humanoid n'est disponible qu'en anglais [à cet emplacement](../../../en/assembly-guides/poppy-humanoid/README.md). Si vous souhaitez aider à la traduction, consultez [ce document](https://github.com/poppy-project/poppy-docs#how-to-contribute).
 
-> **Mise en garde** Le guide d’assemblage pour le robot Humanoid n’a toujours pas été fusionné avec nouvelle documentation. Vous le retrouverez sur le [répertoire github poppy-humaoid](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/en/assemblyGuide.md).
+Bon assemblage !

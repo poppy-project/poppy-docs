@@ -254,7 +254,7 @@ Plug the SMPS2Dynamixel on the last pin of the 3P PCB HUB with the 60mm wire.
 Fix the shoulders on their side with 16 M2x3 bolts.
 Fix the right arm on the right shoulder with 32 M2x3 bolts. Repeat on the other side
 
-> **Note** **IMPORTANT**: When you fixed the arm, it must be perpendicular to the body
+> **Note** **IMPORTANT**: When you assemble the arm, it must be perpendicular to the body, so that the 3 dots match as usual
 
 <img src="img/torso_1.jpg" title="Rear view of the arm connection to the chest" style="width: 350px;" />
 

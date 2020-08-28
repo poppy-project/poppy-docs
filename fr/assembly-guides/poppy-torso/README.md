@@ -1,5 +1,5 @@
-# Guide d’assemblage pour Poppy Torso
+# Guide d’assemblage de Poppy Torso
 
-<!-- TODO: -->
+> **Mise en garde** Le guide d'assemblage de Poppy Torso n'est disponible qu'en anglais [à cet emplacement](../../../en/assembly-guides/poppy-torso/README.md). Si vous souhaitez aider à la traduction, consultez [ce document](https://github.com/poppy-project/poppy-docs#how-to-contribute).
 
-> **Mise en garde** Le guide d’assemblage pour le robot Torso n’a toujours pas été fusionné avec nouvelle doc. Vous le retrouverez sur le [répertoire github poppy-torso](https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/Poppy_Torso_assembly_instructions.md).
+Bon assemblage !
