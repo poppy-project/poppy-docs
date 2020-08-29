@@ -4,7 +4,7 @@ Here is the overview of the robot you are about to assemble, its 25 motor names 
 ![](../../img/humanoid/humanoid-motors.png)
 
 ## Videos
-This assembly guide can be assembled by following videos splitted in 25 steps (25 consecutive videos). You will find the relevant video links in the detailed steps, however, if you prefer to follow only the video playlist, here is the link to the [Poppy Humanoid assembly video playlist](https://www.youtube.com/watch?v=SUlM_mE3plc&list=PL8wg9_Kkof8wwqgfFu0iCij73C-4gt95x&index=1).
+The assembly guide can be followed by the means of videos splitted in 25 steps (25 consecutive videos). You will find the relevant video links in the detailed steps, however, if you prefer to follow only the video playlist, here is the link to the [Poppy Humanoid assembly video playlist](https://www.youtube.com/watch?v=SUlM_mE3plc&list=PL8wg9_Kkof8wwqgfFu0iCij73C-4gt95x&index=1).
 
 Just note that your kit and the Poppy software may differ a bit from what you see in the videos. In particular:
 * The MX-28 motor is now obsolete and is being replaced by MX-28AT, almost identical except that one of its side is already threaded: then it won't be necessary to use nuts on this side if you must insert a screw there.

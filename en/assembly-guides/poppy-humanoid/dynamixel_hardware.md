@@ -35,7 +35,7 @@ Then you can force on the horn to insert it and use a screw (the longest model) 
 
 ### If you are unsure that you have well aligned the active horn
 
-If you are unsure that you have well aligned the horn: Install [Poppy software](../../installation/install-poppy-softwares.md) and invoke [Poppy Configure](../../TODO) with the name of a motor of the same model (MX28/MX-28AT or MX-64) so that it goes to its zero angle.
+If you are unsure that you have well aligned the horn: Install [Poppy software](../../installation/install-poppy-softwares.md) and invoke [Poppy Configure](./addressing_dynamixel.md) with the name of a motor of the same model (MX28/MX-28AT or MX-64) so that it goes to its zero angle.
 
 If, after setting your motor to zero angle, the horn does not point upwards as in the image below, then you made a mistake in horn alignment.
 
