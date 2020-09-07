@@ -51,7 +51,19 @@ You can use whichever one as long as you manage to configure your motor, but we 
 Poppy Configure is a command-line tool to configure Poppy motors that is handy because it only requires the name of the motor to configure it.
 It is pre-installed on the Raspberry Pi image, so you can plug a HDMI monitor and use it in a terminal, but you may also use another computer, as long as you first install [Poppy software](../../installation/poppy-softwares.md).
 
-Open a terminal<!-- TODO shall we tell how here? Via the Jupyter notebook terminal of poppy.local?--> and type the command `poppy-configure humanoid <motor-name>` in which you replace the motor name by the corresponding one.
+**Open a terminal**
+In order to use Poppy Configure you need a terminal:
+* If you installed Poppy software by yourself, you probably know how to locate your system terminal and open it
+* If your robot software was preinstalled, open the welcome page at **http://poppy.local**, select **Python, terminal** or **Programming, Python** and then click on **New, terminal** as shown below:
+
+![image](../../img/jupyter/open-terminal.jpg)
+
+Your terminal is the black area that you see, in which you can type commands and visualize their output:
+![image](../../img/jupyter/terminal.jpg)
+
+
+**Configure a motor**
+To configure a motor with Poppy Configure, type the command `poppy-configure humanoid <motor-name>` in which you replace the motor name by the corresponding one. It will only work if either a Pixl board or a USB2AX adapter is connected to a motor (and only one).
 
 ![image](img/poppy-configure-humanoid.png)
 
