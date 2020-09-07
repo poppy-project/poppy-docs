@@ -6,8 +6,6 @@ The other servomotors are MX-64T which are bigger and stronger, and AX-12A or AX
 
 Each Dynamixel servomotor embeds an electronic board allowing it to receive different kind of orders (about goal, torque...) and communicate with other Dynamixel servos. Therefore, you can chain up several Dynamixel servomotors (each with a different ID) and command them all from one end of the chain: each servomotor will pass the orders to the next one.
 
-![image](img/daisy_link.JPG)
-
 ## Parts used along with Dynamixel motors 
 Here is a table of the parts needed to mount the horns of the motors.
 
@@ -31,7 +29,6 @@ On top of the active motor axis (the axis that is driven by the motor), you will
 <img src="img/zero2.JPG" title="Align the motor horn with axis" style="width: 350px;" />
 
 Then you can force on the horn to insert it and use a screw (the longest model) with very few thread locker to fix it. But, again, **this is definitive**.
-<img src="img/MX28N.JPG" title="Active horn assembled in zero position with a screw" style="width: 350px;" />
 
 ### If you are unsure that you have well aligned the active horn
 

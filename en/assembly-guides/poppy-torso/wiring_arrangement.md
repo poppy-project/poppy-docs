@@ -16,8 +16,8 @@ The robot requires 2 power supply cables:
 For now you can plug both cables to the robot but wait a bit before connecting them to the wall socket. Indeed, there's a few things we need to setup before we can start the software.
 
 ## 8.3. Connect to the robot
-Let's getting started with software! Please checkout the dedicated section: [Getting started with Poppy software](../getting-started/connect.md). Psst, before you leave: don't forget to fasten the last screws to fix your head face after you got it working from software.
+Let's getting started with software! Please checkout the dedicated section: [Getting started with Poppy software](../../getting-started/connect.md). Psst, before you leave: don't forget to fasten the last screws to fix your head face after you got it working from software.
 
-[**Next: 9. Getting started with Poppy software >>**](../getting-started/connect.md)
+[**Next: 9. Getting started with Poppy software >>**](../../getting-started/connect.md)
 
 [**<< Back to the assembly guide**](README.md)

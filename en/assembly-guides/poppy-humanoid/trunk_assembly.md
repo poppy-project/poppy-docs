@@ -65,7 +65,7 @@ Plug the 3 cables on the 3P Extension PCB, with hot glue, fix it behind the ches
 <img src="img/2mx28_bom_2.jpg" title="double_rotation_MX28_link" style="width: 350px;" />
 
 Actuators:
-* -2x Robotis Dynamixel MX28-AT
+* 2x Robotis Dynamixel MX28-AT
 
 Cables:
 * 1x 3P 60mm

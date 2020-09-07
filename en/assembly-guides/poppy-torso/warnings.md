@@ -5,7 +5,7 @@ It is primordial that **your read and understand these warnings below** before d
 
 ## PRIMORDIAL warning #1 : Align the horn with the motor axis
 
-When a Dynamixel motor is sold, its horns (the metallic wheels) are shipped separately from the motor iself. It is your role to assemble them on the axis. The active horn has to be assembled **by respecting precisely the alignment thanks to the marking** as in the pictures below. 
+When a Dynamixel motor is sold, its horn (the metallic wheel) is shipped separately from the motor iself. It is your role to assemble it on the axis. The active horn has to be assembled **by respecting precisely the alignment thanks to the marking** as in the pictures below. 
 
 With MX-28 and MX-28AT motors, the horn is assembled by forcing on it. Hence, if you make a mistake, **you will not be able to come back**. Be sure of the alignement before forcing with the central screw.
 
@@ -17,7 +17,7 @@ Thread locker is included in your kit. Place some thread locker at the tip of al
 
 
 ## PRIMORIDAL warning #3: Align the horn with 3D-printed parts
-Notice that horna all have 3 dots and that the 3D-printed parts also have them close to motor axes. Generally, the opposite axis of the motor axis is a free wheel and 3D-printed parts do not have any point in that side ; except for symmetrical parts such as the legs, that have 3 points on both sides. According to the 3D printing technique, the 3 dots might not been easily visible. Some parts, such as the feet, only have 1 visible point because the parts are hollowed the other side.
+Notice that horns all have 3 dots and that the 3D-printed parts also have them close to motor axes. Generally, the opposite axis of the motor axis is a free wheel and 3D-printed parts do not have any point in that side ; except for symmetrical parts such as the legs, that have 3 points on both sides. According to the 3D printing technique, the 3 dots might not been easily visible. Some parts, such as the feet, only have 1 visible point because the parts are hollowed the other side.
 
 You must align the horn with the 3D-printed parts by matching the 3 points as the picture below.
 
@@ -29,7 +29,7 @@ It is very easy to get trapped by inserting a motor or a part the wrong way. If 
 
 In order to minimize the risk of mistakes, compare scrupulously your sub-assembly with pictures and videos at each assembly step. These prominent visual elements should help:
 
-* The position of motor axis vs the position of the free wheel
+* The position of motor axis (active wheel) vs the position of the free wheel
 * The position of the motor's sticker
 * The position of the motor's electrical connector
 * The curvature of 3D-printed parts

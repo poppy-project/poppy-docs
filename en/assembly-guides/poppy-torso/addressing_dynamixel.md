@@ -5,7 +5,7 @@ Every Dynamixel motor has its own configuration including:
 * its baudrate: the speed of communication
 * its return delay time:
 
-By default all brand new motors have an id = 1 with defautl communication parameters, so all motors need to be configured one-by-one in order to be attributed their right parameters.
+By default all brand new motors have an id = 1 with default communication parameters, so all motors need to be configured one-by-one in order to be attributed their right parameters.
 
 ## Naming convention
 To simplify the configuration, all Poppy motors are named (e.g. `right_shoulder_x`) as shown on the naming convention below. It means that given a motor name, software can deduce the right configuration parameters.
