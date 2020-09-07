@@ -1,5 +1,4 @@
 # 5. Poppy humanoid: Arms assembly
-<!--![image](img/parts_arms.JPG)-->
 
 ## Right arm
 ### Bill of Material for the right arm

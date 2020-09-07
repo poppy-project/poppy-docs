@@ -1,7 +1,6 @@
 # 6. Poppy Humanoid: Torso assembly
 ## 6.1. Chest
 ### Bill of Material for the Chest
-<!--![image](../img/parts_chest.JPG)-->
 
 3D printed parts: Chest
 <img src="img/chest_bom_1.jpg" title="Chest parts" style="width: 350px;" />
