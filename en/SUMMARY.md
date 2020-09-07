@@ -21,9 +21,10 @@
 
 ### Robot assembly
 - [Assemble Poppy Ergo Jr](assembly-guides/ergo-jr/README.md)
+    * [Bill Of Material (BOM)](assembly-guides/ergo-jr/bom.md)
     * [Electronic assembly](assembly-guides/ergo-jr/electronic-assembly.md)
     * [Motor configuration](assembly-guides/ergo-jr/motor-configuration.md)
-    * [Hardware construction](assembly-guides/ergo-jr/mechanical-construction.md)
+    * [Mechanical construction](assembly-guides/ergo-jr/mechanical-construction.md)
 - [Assemble Poppy Torso](assembly-guides/poppy-torso/README.md)
     * [PRIMORDIAL warnings](assembly-guides/poppy-torso/warnings.md)
     * [Bill Of Material (BOM)](assembly-guides/poppy-torso/bom.md)
