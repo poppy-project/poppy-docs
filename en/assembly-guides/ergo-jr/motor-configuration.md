@@ -6,7 +6,7 @@ Ergo Jr is made of 6 XL-320 motors from [Robotis](http://www.robotis.us/dynamixe
 
 Yet, in order for the motors to be connected and identified on the same bus, they must have an unique identifier (i.e. an unique name). Out of the factory they all set to the same identifier. In this section, we will give you details on how you can set a new and unique ID to each of your motors.
 
-We recommend to configure motors in parallel of the mechanical assembly. Meaning that you shouldn't configure all motors right now: just read this page carefully and make some configuration attempts to get your hand in configuring motors, but you will actually configure all motors during the next step (the mechanical assembly).
+We recommend to configure motors in parallel of the mechanical assembly. Meaning that you shouldn't configure all motors right now: just read this page carefully and make some configuration attempts to get your hand in configuring motors, but you will actually configure all motors during the next step (the mechanical assembly). Note that a motor can be reconfigured as many times as necessary.
 
 ## 3.1. Connect to the robot software
 
@@ -20,11 +20,11 @@ Look at [Bonjour/Zeroconf protocol](../../installation/install-zeroconf.md) dedi
 
 **Note:** Although it is possible to connect the Ethernet cable directly from the robot to your computer, this method requires additional network configuration with [Zeroconf](../../installation/install-zeroconf.md) so we do not recommend it 
 
-Your robot boots up... check that the green LED **ACT** of the Raspberry Pi flickers during about 30 seconds. If it doesn't, then your SD card might be missing or faulty.
+Your robot boots up... check that the green LED **ACT** of the Raspberry Pi flickers during about 45 seconds. If it doesn't, then your SD card might be missing or faulty.
 
 From your computer, you can now open a web browser (Mozilla Firefox, Chrome, Edge, ...) and load the following URL in the address bar: [http://poppy.local](http://poppy.local).
 
-The robot's first page should load. If it does not and shows an error like below, check that you did not miss the **http://** prefix, and check that [Bonjour](../../installation/install-zeroconf.md) is installed if you are running Windows. Otherwise your network might be misconfigured: try with another router or try a direct connection of the robot to your computer.
+The robot's first page should load. If it does not and shows an error like below, check that you did not miss the **http://** prefix, and check that [Bonjour](../../installation/install-zeroconf.md) is installed if you are running Windows. With GNU/Linux, it might be necessary to enable the "local link only" mode in your Ethernet settings. Otherwise your network might be misconfigured: try with another router or try a direct connection of the robot to your computer.
 
 ![Page doesn't exist](img/IHM/webpage_not_available.jpg)
 
@@ -37,14 +37,14 @@ Motor configuration is **an individual process**, it means that during the confi
 In order to configure a motor, you will have to connect **only** the following elements:
 * the Raspberry Pi
 * the Pixl board with its DC power supply
-* Only 1 motor cable (black cable with 3 wires) coming from the Pixl board to the unique motor to be configured
+* Only 1 motor cable coming from the Pixl board to the unique motor to be configured
 * the Ethernet cable connecting your Raspberry Pi to the network
 
 At first boot, an assistant guides you for the initial configuration of the robot. Follow the proposed steps until you reach **step 2: motor configuration**:
 
 ![The assistant for motor configuration](img/IHM/motor_config_assistant.png)
 
-**Note:** If your robot does not show the initial configuration steps but brings you directly to the robot homepage, you might be using a former root software version. In that case the assistant is not available, use the **3.2.bis.** section below instead to configure your motors.
+**Note:** If your robot does not show the initial configuration steps but brings you directly to the robot homepage, you might be using a former robot software version. In that case the assistant is not available, use the **3.2.bis.** section below instead to configure your motors.
 
 Let's try to configure a motor now: Connect a single motor to the Pixl board, pick up some motor name in the list (say **m5**) and click the **Configure** button. You will see a log telling what's going on. If no error happened, the last log line must be **Done!**. Otherwise, the error explanation might help you find the issue.
 
@@ -69,7 +69,7 @@ The terminal is the black area that you see, in which you can type commands and 
 
 **Configure a motor**
 
-To configure a motor with Poppy Configure, type the command `poppy-configure ergo-jr <motor-name>` in which you replace the motor name by the corresponding one from **m1** to **m6**. Check that no error happens when the command is over.
+To configure a motor with Poppy Configure, type the command `poppy-configure ergo-jr <motor-name>` in which you replace the motor name by the corresponding one from **m1** to **m6**. Check that no error happens when the command is over and that the last line is **Done!**.
 
 ![image](img/IHM/poppy-configure-terminal-output.png)
 

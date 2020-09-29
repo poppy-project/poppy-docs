@@ -1,49 +1,77 @@
-# Configuration des moteurs
+# 3. Configuration des moteurs
 
-L'Ergo Jr est composé de 6 moteurs XL-320 fabriqués par [Robotis](http://www.robotis.us/dynamixel-xl-320/). Chacun de ces servomoteurs possèdent une carte électronique lui permettant de recevoir différents types de commandes (sur sa position, sa vitesse, son couple ...) et de communiquer avec d’autres servos. Vous pouvez chainer ces servomoteurs entre eux et tous les commander depuis un bout de la chaîne.
+L'Ergo Jr est composé de 6 moteurs XL-320 motors du constructeur [Robotis](http://www.robotis.us/dynamixel-xl-320/). Chacun de ces servomoteurs embarque un circuit électronique lui permettant de recevoir différents types de commandes (en position angulaire, en vitesse, ou en force) et de communiquer avec les autres servomoteurs. Ainsi, vous pouvez chaîner plusieurs servomoteurs et tous els commander depuis un seul câble branché au début de la chaîne : chaque servomoteur transmettra les commandes au moteur suivant et ainsi de suite.
 
-<img src="img/assembly/xl_320.jpg" alt="XL320" height="150" />
+<img src="img/assembly/xl_320.jpg" alt="XL320" height="150">
 
-Cependant, afin d’être connecté et identifié sur le même bus (de donnée), ils doivent avoir un identifiant unique. En sortie d'usine, ils ont tous le même identifiant, c'est à dire le numéro 1. Dans cette section, nous vous donnerons plus de détails sur comment vous pouvez définir un nouvel identifiant unique à chacun de vos moteurs.
+Cependant, avant de pouvoir chainer ces moteurs les uns aux autres, il va falloir d'abord leur attribuer un identifiant unique (càd un nom unique). En sortie d'usine, tous les moteurs ont le même identifiant, ce qu'il faudra donc corriger dans cette section.
 
-Nous vous recommandons de configurer des moteurs en parallèle de l’assemblage des pièces du robot. Ce qui signifie qu’avant d’assembler un moteur neuf, vous commencez par le configurer puis le monter sur le reste du robot. Pendant la procédure d'assemblage, nous indiquerons chaque fois qu'il faut configurer un nouveau moteur.
+Nous vous recommandons de configurer les moteurs en parallèle de l'assemblage mécanique de l'étape suivante. Ce qui signifie que vous ne devriez pas configurer tous les moteurs dans l'étape actuelle : il est seulement nécessaire de lire cette page attentivement et de faire quelques essais de configuration de moteur pour vous faire la main, mais vous configurerez tous les moteurs durant l'étape prochaine. Sachez qu'un moteur peut être reconfiguré autant de fois que vous le souhaitez.
 
-## Allumez le robot
+## 3.1. Se connecter au logiciel
 
-Si vous utilisez Windows ou Linux (ce n'est pas nécessaire sous MacOS), vous aurez d'abord besoin d'installer **le service d'impression Bonjour pour Windows (Zeroconf) ([téléchargement Windows ici](https://support.apple.com/kb/DL999))** ou bien **avahi** pour pouvoir vous connecter au robot. Pour plus de détails consultez la page d'information sur [le protocole Bonjour/Zeroconf](../../installation/install-zeroconf.md).
+Si vous utilisez Windows (ce n'est pas nécessaire sur GNU/Linux ou Mac OSX), vous devez d'abord **isntaller Bonjour/Zeroconf ([Lien de téléchargement pour Windows](https://support.apple.com/kb/DL999))** ou bien **avahi** pour pouvoir vous connecter au robot.
+Consultez la page [Bonjour/Zeroconf](../../installation/install-zeroconf.md) pour plus de détails.
 
-Pour allumer votre robot avec ou sans moteur connecté :
+**Mettez en marche le robot**, avec ou sans moteur connecté :
 
-* Branchez le câble Ethernet (RJ45) fourni du robot préférablement sur votre box Internet ou routeur. Note : Il est aussi possible de connecter ce câble directement à votre ordinateur mais un paramétrage supplémentaire est parfois nécessaire selon votre système d'exploitation pour obtenir une adresse IPv4LL avec Zeroconf donc la première option est préférable
-* Branchez l'adptateur secteur sur la carte Pixl
+- connectez le câble Ethernet (RJ45) entre le robot et **vous box Internet ou routeur** 
+- connectez l'alimentation secteur
 
-**Note :** Ne branchez JAMAIS une autre alimentation à votre Raspberry Pi (comme un câble micro-USB) si l'adaptateur secteur est branché. 
+**Note :** Bien qu'il est possible de connecter le câble Ethernet directement entre le robot et votre ordinateur sans utiliser de box/routeur. Mais cette méthode nécessite des étapes de configuration réseau supplémentaire avec [Zeroconf](../../installation/install-zeroconf.md) donc nous ne la recommandons pas au premier abord.
 
-Votre robot démarre  ... vérifiez que la LED verte ACT vacille durant environ 30 secondes le temps du démarrage, puis sur votre ordinateur vous pouvez ouvrir un navigateur (Firefox, Chrome, Edge, ...) à l'adresse **http://poppy.local**.
+Votre robot démarre ... vérifiez que la LED vert **ACT** de la Raspberry Pi vacille environ 45 secondes. Si ce n'est pas le cas, vérifiez que la carte SD est bien munie d'une image valide du logiciel, ou bien [essayez de la re-flasher](../../installation/burn-an-image-file.md).
 
-Si cette adresse aboutit à une erreur similaire à l'image ci-dessous, vérifiez que vous tapez le préfixe **http://**, et que Bonjour est bien installé sous Windows. Votre configuration réseau pourrait être défectueuse : testez avec un autre routeur ou en connexion directe.
+Depuis votre ordinateur, ouvrez maintenant un navigateur Web (Mozilla Firefox, Chrome, Edge, ...) et chargez l'URL suivante dans la barre d'adresse : [http://poppy.local](http://poppy.local).
 
-[Page doesn't exist](img/IHM/webpage_not_available.jpg)
+La page d'accueil du robot doit apparaître. Si ce n'est pas le cas et qu'une erreur de votre navigateur comme ci-dessous apparaît, vérifiez que vous n'avez pas omis le préfixe **http://**, et vérifiez que [Bonjour](../../installation/install-zeroconf.md) est correctement installé sous Windows. Sur GNU/Linux, il peut être nécessaire de paramétrer le réseau Ethernet en mode "Réseau local seulement". Si le problème persiste, il s'agît d'un problème réseau, testez avec ou sans routeur entre le robot et l'ordinateur, ou avec un autre routeur.
 
-## Configurez votre robot
+![La page n'existe pas](img/IHM/webpage_not_available.jpg)
 
-Au premier démarrage, votre robot vous guide pour sa configuration, suivez simplement les étapes. Une étape importante est la configuration des moteurs.
+## 3.2. Configurer les moteurs un-par-un
 
-Lors de cette étape, un moteur doit être connecté **seul** à la carte Pixl afin de le configurer avec son nom de moteur **m1, m2, m3, m4, m5 ou m6** comme montré sur le schéma ci-dessous.
+La configuration d'un moteur est **une configuration individuelle** pour chaque moteur. Cela signifie que durant la configuration d'un moteur, **seulement le moteur en cours de configuration doit être branché à la Pixl**. Configurer un moteur revient à lui attribuer un nom **m1, m2, m3, m4, m5 ou bien m6** en suivant la convention de nommage suivante :
 
-<img src="img/assembly/motors.png" alt="Motors list" height="300">
+<img src="img/assembly/motors.png" alt="Liste des noms de moteurs" width="700">
 
-Chaque moteur doit être branché seul et configuré tour-à-tour en sélectionnant son nom et en cliquant sur le bouton **Configurer**. Les moteurs sortis d'usine sont identiques, à vous de vous souvenir quel nom vous avez attribué à chaque moteur pour l'assembler ensuite au bon endroit.
+En vue de configurer un moteur, vous aurez à connecter seulement les éléments suivants :
+* La Raspberry Pi
+* La carte Pixl
+* L'alimentation secteur
+* 1 seul câble de moteur allant de la carte Pixl jusqu'à l'unique moteur en cours de configuration
+* le câble Ethernet connectant votre Raspberry Pi au réseau
 
-Durant la configuration des moteurs, vous ne devez avoir branché **que** ces éléments :
+AU premier démarrage, un assistant vous guide dans la configuration initiale du robot. Suivez les étapes jusqu'à atteindre **Etape 2 : configuration des moteurs** :
 
-* la Raspberry Pi
-* la carte Pixl avec son adaptateur secteur
-* 1 seul câble de moteur (câble noir à 3 fils) partant de la carte Pixl jusqu'à l'unique moteur à configurer
-* le câble Ethernet reliant votre Raspberry Pi au réseau
+![L'assistant de la configuration moteur](img/IHM/motor_config_assistant.png)
 
-![XL-320 configuration ; one motor at a time](img/motor_one_by_one.jpg).
+**Note :** Si vous robot affiche une toute autre page mais pas l'assistant, il se peut que vous ayant un ancien logiciel chargé sur votre robot. Dans ce cas consultez la section **3.2.bis.** ci-dessous pour configurer vos moteurs.
 
-A la fin de la configuration de chacun des moteurs, vous pouvez les rebrancher normalement avec les câbles de moteurs, chaînés les uns aux autres. Puis, cliquez sur le bouton proposé par l'interface pour tester de faire danser votre robot. Si la danse ne fonctionne pas, reprenez pas-à-pas la configuration individuelle de chacun des moteurs ; aidez-vous également des éventuels messages d'erreurs qui indiquent ce qu'il se passe.
+Configurons un moteur maintenant : connectez un seul moteur à la carte Pixl, choisissez un nom de moteur dans la liste (par exemple **m5**) et cliquez sur le bouton **Configurer**. Vous verrez un descriptif de ce qu'il se passe s'afficher dessous le bouton. Si aucune erreur ne survient, la dernière ligne doit être **Done!**. Sinon, le détail de l'erreur anglophone peut vous aider à lcoaliser le problème. 
 
-A l'issue de votre première connexion, vous tombez sur la page d'accueil définitive de votre robot. Amusez-vous bien !
+Chaque fois qu'un moteur est correctement configuré, son palonnier (la roue noire) est placée en position zéro, donc si vous voyer tourner c'est généralement bon signe ; mais s'il ne bouge pas ne vous inquiétez pas, il était peut-être déjà en position zéro. Vous aurez besoin de débrancher le moteur pour pouvoir le bouger à la main et le rebrancher si vous souhaitez le voir bouger en position zéro.
+
+Rappelez-vous que vous ne devriez pas configurer tous les moteurs maintenant. Si vous l'avez déjà fait n'ayant pas d'inquiétude, les moteurs peuvent être reconfigurés un nombre de fois illimité si vous avez besoin de recommencer pendant l'étape de construction mécanique qui suit ...
+
+[**>> Etape suivante : construction mécanique**](mechanical-construction.md)
+
+## 3.2.bis. Configurer les moteurs si vous avez une ancienne version de logiciel
+
+Avant Octobre 2020 l'Ergo Jr n'avait pas d'assistant au premier démarrage, dans ce cas vous voyez directement s'afficher la page d'accueil. Dans ce cas, la configuration  des moteurs se déroule avec l'outil nommé **Poppy Configure**. Suivez ces étapes :
+
+**Ouvrez un terminal**
+
+Premièrement ouvrez la page d'accueil sur **http://poppy.local**, sélectionnez **terminal Python** ou bien **Programmation Python** et ouvrez ensuite **Nouveau terminal** comme montré ci-dessous :
+
+![image](../../img/jupyter/open-terminal.jpg)
+
+Le terminal est l'encart noire qui s'affiche à lécran, dans lequel vous povuez taper des commandes et visualiser leur résultat :
+![image](img/IHM/terminal_for_configuration.PNG)
+
+**Configurer un motor**
+
+Pour configurer un moteur avec Poppy Configure, tapez la commande `poppy-configure ergo-jr <nom-du-moteur>` dans laquelle vous remplacez `<nom-du-moteur>` par un nom de moteur entre **m1** et **m6**. Vérifiez qu'aucune erreur n'appraît lorsque la commande se termine et que la dernière ligne est **Done!**.
+
+![image](img/IHM/poppy-configure-terminal-output.png)
+
+[**>> Etape suivante : construction mécanique**](mechanical-construction.md)

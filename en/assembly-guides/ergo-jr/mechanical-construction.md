@@ -30,7 +30,7 @@
 
 ![Horns on left side](img/assembly/horns_on_left.jpg)
 
-## Step-By-Step guide
+## 4.2. Step-By-Step guide
 ### Step 1 - motor 1
 First, [configure one XL-320](motor-configuration.md) motor as "m1".
 
@@ -146,7 +146,7 @@ It is first needed to Start Robot API: The API (Application Programming Interfac
 
 ![Test your robot](img/IHM/start_api.png)
 
-**Now the best moment has come**: click on the **START DANCE** button. If your robot is dancing congratulations, you're done with the assembly!
+Click on the **START DANCE** button. If your robot is dancing congratulations, you're done with the assembly!
 
 Feel free to discover the whole robot software on your own. In particular, have a look at these important elements:
 * **The logs**: they record all events happening on your robot. If something goes wrong the logs will be very useful to understand what the issue is

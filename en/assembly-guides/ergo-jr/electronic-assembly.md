@@ -6,7 +6,7 @@ Before building any part of the robot, we will first plug electronics and connec
 
 If you bought a kit, Poppy software is preloaded on your SD card. If it not the case, you have to "burn" your micro-SD card with the ergo-jr ISO image, this is described in [this section](../../installation/burn-an-image-file.md).
 
-First insert the micro-SD card inside the Raspberry Pi: push the micro-SD in the connector slot.
+Then insert the micro-SD card inside the Raspberry Pi: push the micro-SD in the connector slot.
 ![Raspberry Pi micro-SD](img/electronic/rpi-sd.jpg)
 
 ## 2.2. Mount the Pixl board
@@ -41,7 +41,7 @@ Please read them carefully to protect your equipment from damages.
 
 ## 2.4. First power up!
 
-Then plug the motor cable (leave the other side of this cable empty for now) ; and ultimately connect the AC adapter to the wall socket.
+Then, plug a motor cable (one of those provided in the motor's bag) by leaving the other side of this cable empty for now. And ultimately, connect the AC adapter to the wall socket.
 ![pixl](img/electronic/pixl-step_3-4-5.jpg)
 
 Then pay attention to the 2 LEDs of the Raspberry Pi:

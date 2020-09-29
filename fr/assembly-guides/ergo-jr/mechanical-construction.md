@@ -1,6 +1,6 @@
-# Assemblage mécanique
+# 4. Assemblage mécanique
 
-## Avis et avertissements d'ordre général
+## 4.1. Avis et avertissements d'ordre général
 
 * **Toutes les orientations des pièces sont très importantes**. Regarez les photos très précisément pour reproduire le même assemblage avec les pièces dans le même sens. Si vous vous trompez, vous vous en rendrez compte car votre robot réalisera des mouvements différents que ceux que vous lui demanderez. Le cas échéant n'ayez pas d'inquiétude, vous pourrez toujours le démonter puis le remonter.
 
@@ -18,15 +18,15 @@
 
 * N'oubliez pas de passer les fils pendant l'assemblage de votre robot. Chaque moteur, excepté le dernier doit avoir ses 2 connecteurs occupés: l'un connecté au moteur précédent, l'autre connecté au moteur suivant. Il n'y a cependant pas d'importance quant-à quel connecteur est connecté au moteur suivant ou précédent.
 
-* **Alignez toujours le palonnier (la roue d'entrainement noire) avec le moteur avant de les assembler !** Sinon votre Poppy Ergo Jr aura l'air tout à fait bizarre.
+* **vérifiez que le palonnier (la roue noire) du moteur est toujours dirigée vers le haut du moteur avant de l'assembler**, c'est à dire qu'il est en position zéro comme après une configuration. Sinon votre Poppy Ergo Jr aura l'air tout à fait bizarre.
 
 <img src="img/assembly/align-horn.jpg" alt="Aligner les palonniers" height="200" />
 
-* Tous les palonniers des moteurs (la roue d'entrainement noire) doivent être alignés **sur le côté gauche du robot**. C'est juste une convention mais elle définira l'orientation de vos moteurs.
+* Tous les palonniers des moteurs (la roue noire) doivent être alignés **sur le côté gauche du robot** :
 
 ![Pallonniers sur le côté gauche](img/assembly/horns_on_left.jpg)
 
-## Guide pas à pas
+## 4.2. Guide pas à pas
 
 ### Configuration des moteurs 
 
@@ -34,9 +34,9 @@ Les moteurs doivent être individuellement configurés. Vous pouvez faire cela a
 
 > **Attention** Pour configurer les moteurs, vous devez les connecter séparément un par un à la Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu'il est connecté avec le moteur précédent, cela ne fonctionnera pas.
 
-Pour plus d’informations, consultez la [section configuration de moteur](motor-configuration.md).
+Pour plus d’informations, consultez la section précédente [configuration de moteur](motor-configuration.md).
 
-### Etape 1 - motor 1
+### Etape 1 - moteur 1
 
 Tout d’abord, démarrez votre robot et [configurez un moteur XL-320](motor-configuration.md) sous le nom « m1 ».
 
@@ -48,11 +48,7 @@ Pour cela, préparez 8 petits rivets. Placez la première partie dans la seconde
 
 ### Étape 2 - moteur 2
 
-Configurez le second moteur, son nom est « m2 », avec la commande suivante dans un terminal du robot :
-
-```bash
-poppy-configure ergo-jr m2
-```
+Configurez le second moteur, son nom est « m2 ».
 
 Monter la partie *long_U*. Soyez prudent avec l’orientation de la la pièce, le palonnier doit être orienté vers la gauche. Monter le moteur « m2 » sur le dessus de la construction.
 
@@ -84,39 +80,47 @@ Monter les pièces *horn2horn* et *horn2side* sur moteur « m4 » et monter «
 
 Configurer le sixième moteur nommé « m6 ».
 
-Pour terminer votre Ergo Jr, vous devez ajouter un outil à son extrémité. Choisissez un outil en fonction de ce que vous souhaitez faire.
+Pour terminer votre Ergo Jr, vous devez ajouter l'outil de votre choix (effecteur) à son extrémité : un abat-jour, un porte stylo ou une pince. Suivez les instructions appropriées à l'outil choisi.
 
 > **Note** Les outils peuvent être facilement et rapidement changés, ce qui vous permet d'adapter votre robot aux différentes activités.
 
-#### L'abat-jour ou le stylo
+#### Étape 6 Option 1 : L'abat-jour ou le stylo
 
 Monter les pièces *horn2horn* et *horn2side* sur moteur « m5 » et monter « m6 » sur le sommet de la construction. ![étape 6](img/assembly/steps/step_14-16-17.jpg)
 
 Vous pouvez monter le support de stylo ou de l’abat jour sur le moteur « m6 ». ![bis de l’étape 6](img/assembly/steps/step_18-19.jpg)
 
-In the same way you mount the lampshade, you can also mount the pen holder. <img src="img/assembly/steps/pen_holder.jpg" alt="step 6 pen" height="300" />
+L'abat jour et le porte-stylo s'installent de la même manière.
 
-#### La pince
+<img src="img/assembly/steps/pen_holder.jpg" alt="step 6 pen" height="300" />
 
-Mount the [*gripper-fixation*](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl) between motors "m5" and "m6".
+#### Étape 6 Option 2 : La pince
 
-Mount *gripper-fixed_part* and *gripper-rotative_part* on motor "m6".
+Montez la pièce [*gripper-fixation*](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl) entre les moteurs "m5" et "m6".
 
-There is two way to mount the gripper, vertically ![step gripper](img/assembly/steps/grip1.jpg)
+Monter la pièce *gripper-fixed_part* et *gripper-rotative_part* sur le moteur "m6".
 
-Or Horizontally ![step gripper](img/assembly/steps/grip2.jpg)
+Il y a deux façons de monter la pince, verticalement ![pince verticale](img/assembly/steps/grip1.jpg)
+
+ou horizontalement ![pince horizontale](img/assembly/steps/grip2.jpg)
 
 ### Étape 7 - électronique
 
-Mount the support_camera part on the base. Fix the Raspberry Pi camera on it and move the camera flex cable between motor "m1" and the base. ![step 7](img/assembly/steps/step_21-22.jpg)
+Monter la pièce *support_camera* sur la base. Fixez la caméra de Raspberry Pi sur le support et  camera on it and move the camera flex cable between motor "m1" and the base. ![step 7](img/assembly/steps/step_21-22.jpg)
 
-**Camera flex wire**
+**Nappe de caméra**
 
-To fix the flex cable of the camera on the Raspberry Pi: * open the camera connector by pulling on the tab to the top * make sure that connectors on the flex cable are facing away of the Ethernet port * push the flex on the port, and push the plastic tab down to close it ![step 7](img/assembly/steps/camera.jpg)
+Pour connecter la caméra :
+* ouvrez le connecteur de nappe en tirant le levier en plastique autour du connecteur
+* vérifiez que la partie métallique du connecteur tournent le dos au porte Ethernet de la Raspberry Pi (RJ45)
+* insérez la nappe dans le connecteur
+* refermez le loquet en plastique
 
-**Motors wires:**
+![step 7](img/assembly/steps/camera.jpg)
 
-If it is not already done, you can plug every motors wires. Every motor has two connectors but there is no input or output: you just have to create a chain of motors. The first motor is linked to the pixl and the second motor; the last motor is linked only to the previous one, and every other motors are linked to the one above and ahead.
+**Cales moteurs :**
+
+Vous povuez maintenant chainer tous les moteurs les uns aux autres. Chaque moteur a au final ses deux connecteurs de branchés, le premier au moteur précédent et le deuxième au moteur suivant. Sauf le tout premier moteur, qui est connecté à la Pixl, et le dernier moteur qui n'a donc pas de moteur suivant.
 
 > **Info** Les connecteurs du moteur « m1 » (à la base) sont un peu difficiles à brancher, vous pouvez utiliser l’outil OLLO pour vous aider.
 
@@ -124,30 +128,24 @@ If it is not already done, you can plug every motors wires. Every motor has two 
 
 ### Étape 8 - fixer votre Ergo Jr sur le disque de support en bois
 
-Mount your Ergo Jr to the wood *disk-support*.
+Montez votre Ergo Jr sur le disque en bois *disk-support*.
 
-Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it. <!-- TODO: picture of disk fixation -->
+Montez la Raspberry Pi sur le disque, et utilisez des vis 4 x M2.5x6mm pour la fixer. <!-- TODO: picture of disk fixation -->
 
-### Step 9 - test your Robot !
+### Step 9 - Test final de votre robot !
 
-Congratulation, you achieve the robot assembly! Now, it is almost done, it is time to test it!
+Félicitations, vous avez réussi l'assemblage, il est temps de tester !
 
-Go to your robot home page <http://poppy.local>.
+Terminez de suivre l'assistant de premier démarrage sur <http://poppy.local> :
+* Cliquez sur *Démarrer l'API* 
+* Cliquez sur *Démarrer une danse*
 
-Click on *Reboot the robot* button to be sure that the robot software was started with all motors wired in. <img src="img/IHM/home_page_reboot.png" alt="test installation" height="250" />
+![Tester votre robot](img/IHM/start_api.png)
 
-You can go to the monitor, click on *Monitor and Control* button. <img src="img/IHM/home_page_monitor.png" alt="test installation" height="250" />
+Votre robot doit désormais bouger, sans rentrer en collision avec le sol ni avec lui-même. S'il créé des collisions, vérifiez que toutes les pièces et les positions zéros des moteurs sont précisément comme sur les photos. Terminez de parcourir l'assistant de premier démarrage et découvrez tranquillement votre robot.
 
-If the robot software is correctly started, you should see the green connection logo, otherwise it will be red. <img src="img/IHM/monitor_full.png" alt="test installation" />
+## 4.3. Programmer
 
-You can start a pre-defined behavior by clicking on the play logo.
-
-**If the connection logo is red**, you can see what is wrong by looking on messages in *What append?* page. <img src="img/IHM/home_page_logs.png" alt="test installation" height="250" />
-
-Most of the time, it's because a wire is unplugged or because you forgot to configure a motor.
-
-### Done
+Pour programmer votre robot consultez [la section dédiée](../../programming/)
 
 ![image](img/assembly/ergo-tool-2.jpg)
-
-Grab your [favorite drink](https://www.flickr.com/photos/poppy-project/16488256337/) and relax.
