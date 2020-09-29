@@ -16,7 +16,6 @@
         "language-picker",
         "localized-footer",
         "page-toc",
-        "piwik",
         "richquotes",
         "search-plus",
         "sitemap",
@@ -46,10 +45,6 @@
                 "en": "Edit this page",
                 "fr": "Editez cette page"
             }
-        },
-        "piwik": {
-            "URL": "piwik.inria.fr/",
-            "siteId": 66
         },
         "sharing": {
             "facebook": false,
