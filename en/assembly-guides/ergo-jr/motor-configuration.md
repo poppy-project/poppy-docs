@@ -8,7 +8,7 @@ Yet, in order for the motors to be connected and identified on the same bus, the
 
 We recommend to configure motors in parallel of the mechanical assembly. Meaning that you shouldn't configure all motors right now: just read this page carefully and make some configuration attempts to get your hand in configuring motors, but you will actually configure all motors during the next step (the mechanical assembly). Note that a motor can be reconfigured as many times as necessary.
 
-## 3.1. Connect to the robot software
+## 3.1. Prepare the configuration
 
 If you use Windows (not needed on GNU/Linux or Mac OSX) you first **need to install Bonjour/Zeroconf ([download link for Windows](https://support.apple.com/kb/DL999))** or **avahi** to be able to connect to the robot.
 Look at [Bonjour/Zeroconf protocol](../../installation/install-zeroconf.md) dedicated page for more details.
@@ -22,13 +22,13 @@ Look at [Bonjour/Zeroconf protocol](../../installation/install-zeroconf.md) dedi
 
 Your robot boots up... check that the green LED **ACT** of the Raspberry Pi flickers during about 45 seconds. If it doesn't, then your SD card might be missing or faulty.
 
+## 3.2. Configuring motors one at a time (nominal case for robots acquired after October 2020)
+
 From your computer, you can now open a web browser (Mozilla Firefox, Chrome, Edge, ...) and load the following URL in the address bar: [http://poppy.local](http://poppy.local).
 
 The robot's first page should load. If it does not and shows an error like below, check that you did not miss the **http://** prefix, and check that [Bonjour](../../installation/install-zeroconf.md) is installed if you are running Windows. With GNU/Linux, it might be necessary to enable the "local link only" mode in your Ethernet settings. Otherwise your network might be misconfigured: try with another router or try a direct connection of the robot to your computer.
 
 ![Page doesn't exist](img/IHM/webpage_not_available.jpg)
-
-## 3.2. Configuring motors one at a time
 
 Motor configuration is **an individual process**, it means that during the configuration of a motor, **only this motor must be connected to the Pixl board**. By configuring a motor, you will name it **m1, m2, m3, m4, m5 or m6** by following this naming convention:
 
@@ -54,7 +54,7 @@ Recall that you shouldn't proceed with the configuration of all motors right now
 
 [**>> Next step: mechanical construction**](mechanical-construction.md)
 
-## 3.2.bis. Configure the motors if you have a former robot version
+## 3.2.bis. Configuring motors one at a time (for robots acquired before October 2020)
 
 Before October, 2020, the Ergo Jr had no assistant at first boot but the robot directly showed the welcome page. In that case the motor configuration needs to be achieved with Poppy Configure:
 
@@ -70,6 +70,27 @@ The terminal is the black area that you see, in which you can type commands and 
 **Configure a motor**
 
 To configure a motor with Poppy Configure, type the command `poppy-configure ergo-jr <motor-name>` in which you replace the motor name by the corresponding one from **m1** to **m6**. Check that no error happens when the command is over and that the last line is **Done!**.
+
+![image](img/IHM/poppy-configure-terminal-output.png)
+
+[**>> Next step: mechanical construction**](mechanical-construction.md)
+
+## 3.2.ter. Configuring motors one at a time (if you are using the ROS image)
+
+If you don't know what ROS (Robot Operating System) is, this option is presumably not the one you're looking for. The ROS image for Poppy Ergo Jr does not embed the regular `http://poppy.local` graphical user interface. In order to configure the motors we will connect through SSH and use the *Poppy Configure* tool.
+
+**Open a terminal through SSH**
+
+From a Linux or MacOS workstation, open a temrinal and type `ssh poppy@poppy.local`:
+* You will be first asked to confirm the connection by answering `yes`
+* You will then have to type the default password `raspberry`
+* Your shell prompt must now display `poppy@poppy` instead of your regular prompt, which confirm that connection to the robot was successful via SSH
+
+**Note:**  If you meet this error: `ssh: Could not resolve hostname poppy.local: Name or service not known`, it means that you have a network issue.
+
+**Configure a motor**
+
+To configure a motor with Poppy Configure, type in the SSH terminal the command `poppy-configure ergo-jr <motor-name>` in which you replace the motor name by the corresponding one from **m1** to **m6**. Check that no error happens when the command is over and that the last line is **Done!**.
 
 ![image](img/IHM/poppy-configure-terminal-output.png)
 
