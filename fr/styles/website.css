@@ -113,7 +113,8 @@ blockquote.alert p a {
 /** SUMMARY headings **/
 
 .book-summary{
-  border-right: : 1px solid;
+  border-right: 1px solid;
+  width: 25%;
 }
 
 .book-summary ul.summary li.header {

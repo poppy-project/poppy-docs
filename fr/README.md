@@ -8,7 +8,7 @@ Cette documentation est organisée comme suit:
 * [Premiers pas](getting-started/README.md): un aperçu de comment peut s'utiliser un robot Poppy assemblé et ce qu'on peut faire avec
 * [Guides d'assemblage](assembly-guides/README.md): certainement la prochaine section à lire si avez hâte d'assembler votre nouveau robot !
 * [Installation](installation/README.md): une explicaiton plus en profondeur du logiciel, pour voir comment il peut être utilisé dans tous les cas d'usage possibles
-* [Programming](programming/README.md): une explication plus en profondeur des langages de programmation de Poppy et de ses interfaces de communication
+* [Programmation](programming/README.md): une explication plus en profondeur des langages de programmation de Poppy et de ses interfaces de communication
 
 ## À propos et contributions
 

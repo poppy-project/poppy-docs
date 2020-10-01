@@ -11,14 +11,14 @@
     * [Exemples de projets](getting-started/example-of-projects.md)
 
 ### Assemblage du robot
-
-* [Assembler l’Ergo Jr](assembly-guides/ergo-jr/README.md)
-    * [La liste des composants (BOM)](assembly-guides/ergo-jr/bom.md)
-    * [Assemblage électronique](assembly-guides/ergo-jr/electronic-assembly.md)
-    * [Configuration des moteurs](assembly-guides/ergo-jr/motor-configuration.md)
-    * [Assemblage des pièces mécaniques](assembly-guides/ergo-jr/mechanical-construction.md)
-* [Assembler Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
-* [Assembler Poppy Torso](assembly-guides/poppy-torso/README.md)
+* [Guides d'assemblage](assembly-guides/README.md)
+    * [Assembler l’Ergo Jr](assembly-guides/ergo-jr/README.md)
+        * [La liste des composants (BOM)](assembly-guides/ergo-jr/bom.md)
+        * [Assemblage électronique](assembly-guides/ergo-jr/electronic-assembly.md)
+        * [Configuration des moteurs](assembly-guides/ergo-jr/motor-configuration.md)
+        * [Assemblage des pièces mécaniques](assembly-guides/ergo-jr/mechanical-construction.md)
+    * [Assembler Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
+    * [Assembler Poppy Torso](assembly-guides/poppy-torso/README.md)
 
 ### Installation des logiciels
 
