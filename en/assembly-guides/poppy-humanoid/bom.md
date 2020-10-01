@@ -90,6 +90,13 @@ Please note that you will also need:
 * tweezer
 * hot glue
 
+## 5. STL files for Poppy Humanoid 3D printing
+If you are in the process of 3D-printing the parts from this BOM by yourselves, download the latest STL files from:
+* [Poppy minimal head design STLs](https://github.com/poppy-project/Poppy-minimal-head-design/releases)
+* [Poppy Humanoid STLs](https://github.com/poppy-project/poppy-humanoid/releases)
+
+In order to clone these repositories, please use [git lfs](https://git-lfs.github.com/) to retrieve assets such as 3D parts and images. By cloning the repositories with git only, **the assets would appear to be corrupted/invalid files**.
+
 [**Next >> 3. Dynamixel hardware**](dynamixel_hardware.md)
 
 [**<< Back to menu**](README.md)

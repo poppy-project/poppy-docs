@@ -25,12 +25,11 @@ Prepare your workbench and tools and then follow the guide step-by-step, in the 
 8. [Wiring arrangement](wiring_arrangement.md)
 9. Assembly is over, check out the [Programming](../../programming) section.
 
-## Sources and additional information
-The 2 repositories below host the sources (Soliworks files, STL files, plans) and additional information in their respective directory `doc` that you might want to read:
+## Additional information
+The repositories below host older documentation that you your might also checkout:
 * [Poppy minimal head design](https://github.com/poppy-project/Poppy-minimal-head-design/tree/raspberry-pi-integration/)
 * [Poppy multiarticulated torso](https://github.com/poppy-project/Poppy-multiarticulated-torso/tree/master/)
-
-If you need to clone these projects, please use [git lfs](https://git-lfs.github.com/) to retrieve assets such as 3D parts and images. By cloning the repositories with git only, **the assets would appear to be corrupted/invalid files**.
+* [Poppy Torso](https://github.com/poppy-project/poppy-torso)
 
 ## Credits
 Authors:
