@@ -1,23 +1,14 @@
 # Summary
 
-### Premiers pas
-
 * [À propos de cette documentation](README.md)
-* [Exploiter mon robot assemblé](getting-started/README.md)
+
+### Premiers pas avec Poppy
+
+* [Premiers pas](getting-started/README.md)
     * [Se connecter au robot](getting-started/connect.md)
     * [Programmer un robot](getting-started/program-the-robot.md)
     * [Visualiser ou simuler](getting-started/visualize.md)
     * [Exemples de projets](getting-started/example-of-projects.md)
-
-### Installation des logiciels
-
-* [Installation](installation/README.md)
-    * [Installez Bonjour/Zeroconf](installation/install-zeroconf.md)
-    * [Télécharger et graver l'image système](installation/burn-an-image-file.md)
-    * [Installer les logiciels Poppy](installation/install-poppy-softwares.md)
-    * [Installation du simulateur V-REP](installation/install-vrep.md)
-    * [Installer les pilotes USB vers port série](installation/install-drivers.md)
-    * [Installer un ordinateur embarqué pour un robot Poppy](installation/install-a-poppy-board.md)
 
 ### Assemblage du robot
 
@@ -28,6 +19,16 @@
     * [Assemblage des pièces mécaniques](assembly-guides/ergo-jr/mechanical-construction.md)
 * [Assembler Poppy Humanoid](assembly-guides/poppy-humanoid/README.md)
 * [Assembler Poppy Torso](assembly-guides/poppy-torso/README.md)
+
+### Installation des logiciels
+
+* [Installation](installation/README.md)
+    * [Installez Bonjour/Zeroconf](installation/install-zeroconf.md)
+    * [Télécharger et graver l'image système](installation/burn-an-image-file.md)
+    * [Installer les logiciels Poppy](installation/install-poppy-softwares.md)
+    * [Installation du simulateur V-REP](installation/install-vrep.md)
+    * [Installer les pilotes USB vers port série](installation/install-drivers.md)
+    * [Installer un ordinateur embarqué pour un robot Poppy](installation/install-a-poppy-board.md)
 
 ### Programmation du robot
 

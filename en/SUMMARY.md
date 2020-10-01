@@ -1,23 +1,14 @@
 # Summary
 
+* [About this documentation](README.md)
+
 ### Getting started
 
-* [About this documentation](README.md)
-* [Use my assembled robot](getting-started/README.md)
+* [Getting started](getting-started/README.md)
     * [Connect to the robot](getting-started/connect.md)
     * [Program the robot](getting-started/program-the-robot.md)
     * [Visualize](getting-started/visualize.md)
     * [Examples of projects](getting-started/example-of-projects.md)
-
-### Software installation
-
-* [Installation](installation/README.md)
-    - [Install Bonjour/Zeroconf](installation/install-zeroconf.md)
-    - [Download and burn the system image](installation/burn-an-image-file.md)
-    - [Install Poppy softwares](installation/install-poppy-softwares.md)
-    - [Install V-REP simulator](installation/install-vrep.md)
-    - [Install USB to serial drivers](installation/install-drivers.md)
-    - [Install a Poppy Board](installation/install-a-poppy-board.md)
 
 ### Robot assembly
 - [Assemble Poppy Ergo Jr](assembly-guides/ergo-jr/README.md)
@@ -44,6 +35,16 @@
     * [Legs assembly](assembly-guides/poppy-humanoid/legs_assembly.md)
     * [Head assembly](assembly-guides/poppy-humanoid/head_assembly.md)
     * [Wiring arrangement](assembly-guides/poppy-humanoid/wiring_arrangement.md)
+
+### Software installation
+
+* [Installation](installation/README.md)
+    - [Install Bonjour/Zeroconf](installation/install-zeroconf.md)
+    - [Download and burn the system image](installation/burn-an-image-file.md)
+    - [Install Poppy softwares](installation/install-poppy-softwares.md)
+    - [Install V-REP simulator](installation/install-vrep.md)
+    - [Install USB to serial drivers](installation/install-drivers.md)
+    - [Install a Poppy Board](installation/install-a-poppy-board.md)
 
 ### Robot programming
 
