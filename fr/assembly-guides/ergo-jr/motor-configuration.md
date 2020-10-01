@@ -1,6 +1,6 @@
 # 3. Configuration des moteurs
 
-L'Ergo Jr est composé de 6 moteurs XL-320 motors du constructeur [Robotis](http://www.robotis.us/dynamixel-xl-320/). Chacun de ces servomoteurs embarque un circuit électronique lui permettant de recevoir différents types de commandes (en position angulaire, en vitesse, ou en force) et de communiquer avec les autres servomoteurs. Ainsi, vous pouvez chaîner plusieurs servomoteurs et tous els commander depuis un seul câble branché au début de la chaîne : chaque servomoteur transmettra les commandes au moteur suivant et ainsi de suite.
+L'Ergo Jr est composé de 6 moteurs XL-320 motors du constructeur [Robotis](http://www.robotis.us/dynamixel-xl-320/). Chacun de ces servomoteurs embarque un circuit électronique lui permettant de recevoir différents types de commandes (en position angulaire, en vitesse, ou en force) et de communiquer avec les autres servomoteurs. Ainsi, vous pouvez chaîner plusieurs servomoteurs et tous les commander depuis un seul câble branché au début de la chaîne : chaque servomoteur transmettra les commandes au moteur suivant et ainsi de suite.
 
 <img src="img/assembly/xl_320.jpg" alt="XL320" height="150">
 
@@ -8,9 +8,9 @@ Cependant, avant de pouvoir chainer ces moteurs les uns aux autres, il va falloi
 
 Nous vous recommandons de configurer les moteurs en parallèle de l'assemblage mécanique de l'étape suivante. Ce qui signifie que vous ne devriez pas configurer tous les moteurs dans l'étape actuelle : il est seulement nécessaire de lire cette page attentivement et de faire quelques essais de configuration de moteur pour vous faire la main, mais vous configurerez tous les moteurs durant l'étape prochaine. Sachez qu'un moteur peut être reconfiguré autant de fois que vous le souhaitez.
 
-## 3.1. Se connecter au logiciel
+## 3.1. Préparer le matériel
 
-Si vous utilisez Windows (ce n'est pas nécessaire sur GNU/Linux ou Mac OSX), vous devez d'abord **isntaller Bonjour/Zeroconf ([Lien de téléchargement pour Windows](https://support.apple.com/kb/DL999))** ou bien **avahi** pour pouvoir vous connecter au robot.
+Si vous utilisez Windows (ce n'est pas nécessaire sur GNU/Linux ou Mac OSX), vous devez d'abord **installer Bonjour/Zeroconf ([Lien de téléchargement pour Windows](https://support.apple.com/kb/DL999))** ou bien **avahi** pour pouvoir vous connecter au robot.
 Consultez la page [Bonjour/Zeroconf](../../installation/install-zeroconf.md) pour plus de détails.
 
 **Mettez en marche le robot**, avec ou sans moteur connecté :
@@ -22,13 +22,13 @@ Consultez la page [Bonjour/Zeroconf](../../installation/install-zeroconf.md) pou
 
 Votre robot démarre ... vérifiez que la LED vert **ACT** de la Raspberry Pi vacille environ 45 secondes. Si ce n'est pas le cas, vérifiez que la carte SD est bien munie d'une image valide du logiciel, ou bien [essayez de la re-flasher](../../installation/burn-an-image-file.md).
 
+## 3.2. Configurer les moteurs un-par-un (cas nominal d'un robot acquis après Octobre 2020)
+
 Depuis votre ordinateur, ouvrez maintenant un navigateur Web (Mozilla Firefox, Chrome, Edge, ...) et chargez l'URL suivante dans la barre d'adresse : [http://poppy.local](http://poppy.local).
 
 La page d'accueil du robot doit apparaître. Si ce n'est pas le cas et qu'une erreur de votre navigateur comme ci-dessous apparaît, vérifiez que vous n'avez pas omis le préfixe **http://**, et vérifiez que [Bonjour](../../installation/install-zeroconf.md) est correctement installé sous Windows. Sur GNU/Linux, il peut être nécessaire de paramétrer le réseau Ethernet en mode "Réseau local seulement". Si le problème persiste, il s'agît d'un problème réseau, testez avec ou sans routeur entre le robot et l'ordinateur, ou avec un autre routeur.
 
 ![La page n'existe pas](img/IHM/webpage_not_available.jpg)
-
-## 3.2. Configurer les moteurs un-par-un
 
 La configuration d'un moteur est **une configuration individuelle** pour chaque moteur. Cela signifie que durant la configuration d'un moteur, **seulement le moteur en cours de configuration doit être branché à la Pixl**. Configurer un moteur revient à lui attribuer un nom **m1, m2, m3, m4, m5 ou bien m6** en suivant la convention de nommage suivante :
 
@@ -41,7 +41,7 @@ En vue de configurer un moteur, vous aurez à connecter seulement les éléments
 * 1 seul câble de moteur allant de la carte Pixl jusqu'à l'unique moteur en cours de configuration
 * le câble Ethernet connectant votre Raspberry Pi au réseau
 
-AU premier démarrage, un assistant vous guide dans la configuration initiale du robot. Suivez les étapes jusqu'à atteindre **Etape 2 : configuration des moteurs** :
+Au premier démarrage, un assistant vous guide dans la configuration initiale du robot. Suivez les étapes jusqu'à atteindre **Etape 2 : configuration des moteurs** :
 
 ![L'assistant de la configuration moteur](img/IHM/motor_config_assistant.png)
 
@@ -55,11 +55,11 @@ Rappelez-vous que vous ne devriez pas configurer tous les moteurs maintenant. Si
 
 [**>> Etape suivante : construction mécanique**](mechanical-construction.md)
 
-## 3.2.bis. Configurer les moteurs si vous avez une ancienne version de logiciel
+## 3.2.bis. Configurer les moteurs un-par-un (si vous avez une ancienne version de logiciel)
 
 Avant Octobre 2020 l'Ergo Jr n'avait pas d'assistant au premier démarrage, dans ce cas vous voyez directement s'afficher la page d'accueil. Dans ce cas, la configuration  des moteurs se déroule avec l'outil nommé **Poppy Configure**. Suivez ces étapes :
 
-**Ouvrez un terminal**
+**Ouvrir un terminal**
 
 Premièrement ouvrez la page d'accueil sur **http://poppy.local**, sélectionnez **terminal Python** ou bien **Programmation Python** et ouvrez ensuite **Nouveau terminal** comme montré ci-dessous :
 
@@ -75,3 +75,25 @@ Pour configurer un moteur avec Poppy Configure, tapez la commande `poppy-configu
 ![image](img/IHM/poppy-configure-terminal-output.png)
 
 [**>> Etape suivante : construction mécanique**](mechanical-construction.md)
+
+## 3.2.ter. Configurer les moteurs un-par-un (si vous utilisez une image ROS)
+
+Si vous ne savez pas ce qu'est ROS, cette procédure n'est probablement pas pour vous. L'image ROS pour Poppy Ergo Jr est dépourvue d'interface graphique. Pour se connecter au logiciel et configurer les moteurs nous allons utiliser SSH depuis un terminal de votre station de travail.
+
+**Ouvrir un terminal via SSH**
+
+Depuis votre station de travail Linux ou MacOS, ouvrez un terminal puis tapez la commande `ssh poppy@poppy.local` :
+* Il vous sera d'abord demandé de confirmer la connexion en tapant `yes`
+* Puis vous devrez taper le mot de passe `poppy`
+* Votre invite de commande doit désormais afficher `poppy@poppy` au lieu de votre invite habituel, ce qui confirme que vous êtes connecté au robot via SSH
+
+**Note :**  Si l'erreur `ssh: Could not resolve hostname poppy.local: Name or service not known` apparait, vous avez un défaut de connexion réseau
+
+**Configurer un motor**
+
+Pour configurer un moteur avec Poppy Configure, tapez la commande `poppy-configure ergo-jr <nom-du-moteur>` dans laquelle vous remplacez `<nom-du-moteur>` par un nom de moteur entre **m1** et **m6**. Vérifiez qu'aucune erreur n'appraît lorsque la commande se termine et que la dernière ligne est **Done!**.
+
+![image](img/IHM/poppy-configure-terminal-output.png)
+
+[**>> Etape suivante : construction mécanique**](mechanical-construction.md)
+
