@@ -91,7 +91,7 @@ Depuis votre station de travail Linux ou MacOS, ouvrez un terminal puis tapez la
 
 **Configurer un motor**
 
-Pour configurer un moteur avec Poppy Configure, tapez dans le terminal SSH la commande `poppy-configure ergo-jr <nom-du-moteur>` dans laquelle vous remplacez `<nom-du-moteur>` par un nom de moteur entre **m1** et **m6**. Vérifiez qu'aucune erreur n'appraît lorsque la commande se termine et que la dernière ligne est **Done!**.
+Pour configurer un moteur avec Poppy Configure, branchez **un unique moteur** à la carte Pixl puis tapez dans le terminal SSH la commande `poppy-configure ergo-jr <nom-du-moteur>` en remplaçant le nom du moteur par le bon nom entre **m1** et **m6**. Vérifiez qu'aucune erreur n'apparaît lorsque la commande se termine et que la dernière ligne est **Done!**. Vous pouvez ensuite passer au moteur suivant.
 
 ![image](img/IHM/poppy-configure-terminal-output.png)
 
