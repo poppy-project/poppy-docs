@@ -40,15 +40,17 @@ Selon ce que vous voulez faire, toutes les étapes ne sont pas nécessaires. En 
 
 > **Information** Plus de détails peuvent être trouvés dans la section [ Installation pour utilisateurs avancés](../installation/README.md).
 
-### Configuration du réseau
+### Configuration du réseau Wifi ou Ethernet
 
 Une fois que votre Poppy est assemblé et son logiciel est prêt, l'étape suivante consiste à le connecter à un réseau. L'objectif est de vous permettre d'accéder à distance au robot à partir de votre ordinateur ou votre smartphone / tablette, le contrôler et le programmer.
 
-Il y a deux façons principales de connecter votre robot à votre ordinateur / tablette / smartphone : * Connectez à la fois le robot et l'ordinateur au même réseau (par exemple, la box internet de votre maison ou le réseau de l'école). * Connectez directement votre robot à votre ordinateur à l'aide d'un câble Ethernet.
+Il y a 4 méthodes principales de connecter votre robot à votre ordinateur / tablette / smartphone :
+* Connecter votre ordinateur en Wifi au hotspot du robot **Poppy-Hotspot**, avec la clé Wifi **poppyproject** (le plus facile, mais ne donne pas accès à Internet)
+* Connecter votre robot en Wifi à votre routeur (par exemple, la box internet de votre maison ou le réseau de l'école). Cela nécessite néanmoins d'avoir une première fois accès à l'interface de réglages du robot via une autre méthode pour lui indiquer le nom du réseau et la clé Wifi
+* Connecter le câble RJ45 (Ethernet) fourni à un routeur disposant d'un serveur DHCP (c'est le cas de toutes les box Internet et sur la plupart des réseaux d'entreprise, mais dans ce dernier cas il pourrait y avoir aussi un contrôle d'accès n'autorisant que les ordinateurs connu à se connecter) 
+* Connecter directement votre robot à votre ordinateur à l'aide du câble RJ45 fourni (une configuration plutôt pratique, mais qui créé parfois des complications dans le paramétrage réseau selon votre système d'exploitation et vos logiciels installés)
 
-> **Attention** alors que la deuxième façon (brancher directement le robot sur votre ordinateur) fonctionne pour la plupart des utilisateurs. Il semble que dans certains cas étranges, cela ne fonctionne pas.
-
-Pour trouver l'adresse de votre robot sur le réseau, nous utilisons le protocole Zeroconf</ 0>. Il vous permet d'utiliser le nom d'hôte du robot: *"poppy.local"* comme adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais il faudra installer les[*services d'impression Bonjour pour*](https://support.apple.com/kb/DL999) Windows. Si vous préférez, vous pouvez utiliser l'adresse IP attribuée à votre robot à la place. Si vous n'êtes pas l'administrateur de votre réseau, cela peut être une information difficile à trouver. Dans ce cas, la première procédure devrait être privilégiée.</p> 
+Une fois que vous êtes connecté via une de ces méthodes, pour trouver l'adresse de votre robot sur le réseau, nous utilisons le protocole Zeroconf. Il vous permet d'utiliser le nom d'hôte du robot: *"poppy.local"* comme adresse dans votre navigateur. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais il faudra installer les[*services d'impression Bonjour pour*](https://support.apple.com/kb/DL999) Windows. Si vous préférez, vous pouvez utiliser l'adresse IP attribuée à votre robot à la place. Si vous n'êtes pas l'administrateur de votre réseau, cela peut être une information difficile à trouver. Dans ce cas, la première procédure devrait être privilégiée.</p> 
 
 Pour vérifier que tout est correctement configuré, vous pouvez accéder à l'url suivante en utilisant votre navigateur Web préféré: [http://poppy.local/](http://poppy.local). Vous pouvez remplacer *poppy.local* par l'adresse IP de votre robot (quelque chose de similaire à http://192.168.0.42).
 
@@ -56,7 +58,11 @@ Pour vérifier que tout est correctement configuré, vous pouvez accéder à l'u
 
 ### Utiliser l'interface web
 
-L'interface web est le point central pour contrôler, programmer et configurer votre robot. Il peut être utilisé pour: * Surveiller et contrôler le robot * Programmer le robot en [Snap!](http://snap.berkeley.edu) * Programmer le robot en [Python](https://www.python.org) * Configurer le robot (changer son nom, activer/désactiver la caméra, faire une mise à jour) * Réinitialiser et éteindre le robot
+L'interface web est le point central pour contrôler, programmer et configurer votre robot. Il peut être utilisé pour:
+* Surveiller et contrôler le robot * Programmer le robot en [Snap!](http://snap.berkeley.edu)
+* Programmer le robot en [Python](https://www.python.org)
+* Configurer le robot (changer son nom, activer/désactiver la caméra, faire une mise à jour)
+* Réinitialiser et éteindre le robot
 
 Pour accéder à cette interface web, il vous suffit d'accéder à l'URL à l'aide de votre navigateur Web préféré :
 

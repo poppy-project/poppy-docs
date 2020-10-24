@@ -44,22 +44,22 @@ Depending on what you want to do all steps are not necessary required. In partic
 
 > **Info** More details can be found in the [Installation for advanced users section](../installation/README.md).
 
-### Setup the network
+### Setup the network via Ethernet or Wifi
 
 Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it.
 
-They are two main ways to connect your robot to your computer/tablet/smartphone:
-* Connect both the robot and the computer to the same network (e.g. the box of your home or the school network).
-* Directly connect your robot to your computer using an ethernet cable.
+They are 4 methods to connect your robot to your computer/tablet/smartphone:
+* Connect your computer to the Wifi network **Poppy-Hotspot** with password **poppyproject** (easiest method, but does not allow to connect to Internet)
+* Connect your robot to your existing Wifi network (e.g. the router from your ISP at home, your school's Wifi network...). However this method requires to use another method first to open the settings interface and provide the Wifi name and password to your robot. 
+* Connect both the robot and the computer to a DHCP-capable router with the provided RJ45 (Ethernet) cable (most routers are DHCP-capable, but in some situation, access control could reject your robot)
+* Directly connect your robot to your computer with the provided RJ45 cable (handy method in some situations, but often tricky because it requires advanced network configuration according to your Operating system and installed software)
 
-> **Caution** While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work.
-
-To find the address of your robot on the network, we use the standard [Zeroconf protocol](https://fr.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
-If you prefer, you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.
+Once you're connected with any of these methods, to find the address of your robot on the network, we use the standard [Zeroconf protocol](https://en.wikipedia.org/wiki/Zeroconf). It allows you to use the robot hostname: *"poppy.local"* as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install [*Bonjour Print Services*](https://support.apple.com/kb/DL999) on Windows.
+You could also use the robot's IP address but this information is not easy to find if you're not familiar with computer networks.
 
 To check that everything is setup correctly, you can go to the following url using your favorite web browser: [http://poppy.local/](http://poppy.local). You can replace *poppy.local* by the IP address of your robot (something similar as http://192.168.0.42).
 
-> **Caution** If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.
+> **Caution** If you are not familiar with network configuration or have no idea what the previous paragraph explained, you should see with the IT network engineer, how this can be done.
 
 
 ### Use the web interface
