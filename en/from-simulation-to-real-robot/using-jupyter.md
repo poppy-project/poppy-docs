@@ -39,7 +39,7 @@ There is few places where you should actually modify your code so it works with 
 
 When creating the robot, you actually need to specify if you are willing to work with a real or a simulated robot. This is simply done via a parameter. For instance:
 
-When working with V-REP:
+When working with CoppeliaSim:
 ```python
 from pypot.creatures import PoppyHumanoid
 
@@ -60,7 +60,7 @@ This is most of the changes that you should do.
 
 ### Specific APIs
 
-Some part of the API are platform specific. For instance, when using V-REP you have access to *tracking* features that let you retrieve any object 3D position. Of course, such method do not have a real world equivalent and thus are not available when working with a real robot.
+Some part of the API are platform specific. For instance, when using CoppeliaSim you have access to *tracking* features that let you retrieve any object 3D position. Of course, such method do not have a real world equivalent and thus are not available when working with a real robot.
 
 A good practice if you want to write code compatible for both cases is to use the *simulated* property. It is automatically set to the correct value depending on how your instantiate your robot. For instance,
 

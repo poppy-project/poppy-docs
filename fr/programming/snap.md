@@ -1,157 +1,156 @@
-# Programming Poppy robots using Snap_!_
+# Programmer Poppy avec Snap
 
 <!-- toc -->
 
-Snap_!_ is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.
+Snap est un langage de programmation visuel permettant de créer des animations et jeux interactifs, et bien plus. Il est directement inspiré de Scratch et permet les mêmes fonctionnalités.
 
-Snap_!_ was inspired by Scratch (a project of the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch's features.
+C'est le langage de programmation visuel de votre robot Poppy, qui permet aux débutants de découvrir des concepts de logique mathématique et de programmation informatique grâce à des activités ludiques et accessibles.
 
-Snap_!_ is open-source and it is entirely written in javascript, you can use it from the [official website](http://snap.berkeley.edu/snapsource/snap.html) but you can also use a [copy of the website](https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/4.0.6.zip) in your personal computer and open the `snap.html` file in your browser.
+Cette courte introduction est librement inspirée du cours ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC: Beauté et joie de la calculabilité) de l'Université de Berkeley.
 
-> **Warning** Even if Snap_!_ use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap_!_ is far faster in a web browser based on Webkit engine. We strongly recommend you to use [Chromium Browser](http://chromium.woolyss.com/) (which is very similar to Chrome without tracking tools), or Google Chrome.
+### 1. Démarrer Snap sur votre robot
 
-## Introduction to Snap_!_ programming
+#### 1.a. Si vous n'avez pas de robot mais souhaitez en simuler un avec poppy-simu
 
-This chapter will focus on things necessary to understand in Snap_!_ for using Poppy creatures.
+Il n'est **même pas nécessaire d'avoir un vrai robot Poppy** entre vos mains pour programmer un robot avec Snap ! Vous pourrez ainsi vous entrainer avant d'avoir un robot tangible. Nous allons utiliser un visualisateur de robot nommé poppy-simu.
 
-If you want a well designed online lesson on Snap_!_ we strongly encourage you to look at the ["Beauty and Joy of Computing"](http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html) (BJC) course made by the University of Berkeley for New York high school students.
+> **Warning** poppy-simu est seulement compatible avec poppy-ergo-jr. Les autres créatures nécessitent une simulation dans CoppeliaSim (cf 1.c)
 
-Some of the snapshots and concepts of BJC have been used for writing this chapter.
+Il vous suffit d'ouvrir dans 2 onglets différents de votre navigateur :
+* L'interface de programmation Snap sur ***[simu.poppy-project.org/snap/](http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml)** 
+* Et le visualisateur de robot sur **[simu.poppy-project.org/poppy-ergo-jr](http://simu.poppy-project.org/poppy-ergo-jr)**.
 
-### Connect your robot to Snap_!_
+Passez ensuite au titre 2 ci-dessous pour découvrir l'interface Snap.
 
-#### If you use a simulated robot on V-REP
+#### 1.b. Si vous avez un robot tangible entre les mains
 
-> **Info** You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the [install poppy software section](../installation/install-poppy-softwares.md).
+Si vous avez déjà démarré votre robot vous connaissez la page `http://poppy.local`. Si vous ne parvenez pas ou plus à charger cette page reprenez l'étape de connexion du [guide d'assemblage](../../fr/assembly-guides/).
 
-First open V-REP.
+Cliquez simplement sur le bouton **Programmation** puis "Snap" pour démarrer Snap sur votre robot tangible.
 
-The quickest way is to use the command line utility [poppy-service](../software-libraries/poppy-creature.md#poppy-services). Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):
+Si vous venez de démarrer votre robot une popup vous indique que l'API de votre robot est arrêtée et doit être démarrée pour faire fonctionner Snap. Cliquez simplement sur le bouton proposé pour la démarrer.
+
+Vous pouvez ensuite charger un projet Poppy : **Cliquez sur l'icône `Fichier` puis `Open (Ouvrir)` puis `Examples (Exemples)` puis ouvrez l'un des projets Poppy**. Cela peut prendre 5 à 15 secondes pour le charger.
+
+Passez ensuite au titre 2 ci-dessous pour découvrir l'interface Snap.
+
+#### 1.c. Si vous voulez simuler aussi l'environnement physique avec CoppeliaSim (avancé)
+
+Cette option est réservée aux utilisateurs avancés qui veulent non seulement simuler le robot mais aussi les interactions physiques avec son environnement tel que des balles et des cubes qui pourraient s'entrechoquer via des forces physiques. Poppy utilise le simulateur physique nommé CoppeliaSim.
+
+> **Info** Il est d'abord nécessaire avoir installé les bibliothèques Poppy ainsi que CoppeliaSim sur votre ordinateur, consultez [le chapitre d'installation](../installation/install-poppy-softwares.md).
+
+Ouvrez d'abord CoppeliaSim.
+
+Pour lancer le Snap et le connecter à CoppeliaSim, utilisez [poppy-service](../software-libraries/poppy-creature.md#poppy-services). Ouvrez votre terminal système Windows, OX ou Linux puis copiez/collez la commande :
 
 ```bash
 poppy-services poppy-ergo-jr --snap --vrep
 ```
 
-*Substitute 'poppy-ergo-jr' with 'poppy-humanoid' or 'poppy-torso' to launch respectively a Poppy Humanoid or a Poppy Torso*.
+*Si nécessaire, substituez 'poppy-ergo-jr' par 'poppy-humanoid' ou 'poppy-torso' pour simuler respectivement un Poppy Humanoid ou un Poppy Torso*.
 
-It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr. If it is not automatically done, you can open Snap with preloaded blocks at [simu.poppy-project.org/snap/](http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml)
+Au premier démarrage, un téléchargement automatique de Snap est nécessaire, si vous êtes connecté à Internet il suffit de le laisser fonctionner seul.
 
-> **Warning** Every popup in V-REP will block the communication to the robot interface. If a popup appear, close it and restart the command above.
+Quand le téléchargement est effectué, un onglet Snap s'ouvrira dans votre navigateur Vous pouvez aussi ouvrir Snap pour simulateur sur [simu.poppy-project.org/snap/](http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml)
 
-**Alternative method**: Instead of using `poppy-service` you can start it in full python:
+A présent tout ce que vous ferez dans Snap fera bouger votre robot simulé dans CoppeliaSim.
 
-```python
-# use PoppyTorso PoppyHumanoid or PoppyEgoJr depending on what you want
-from pypot.creatures import PoppyErgoJr
-poppy = PoppyErgoJr(simulator='vrep', use_snap=True)
-```
+> **Attention** Toutes les popup d'information du simulateur vont mettre en pause la connexion avec Snap. Dans ce cas vous pourriez avoir besoin de tuer poppy-services avec les touches Ctrl+C puis les redémarrer.
 
-#### If you use a simulated robot on poppy-simu (web viewer)
-
-> **Info** You need to have installed Poppy software libraries on your computer. If it is not done, go to the [install poppy software section](../installation/install-poppy-softwares.md).
-
-The quickest way is to use the command line utility [poppy-service](../software-libraries/poppy-creature.md#poppy-services). Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):
-
+Notez que vous pourriez aussi démarrer poppy-simu de la même manière que pour CoppeliaSim :
 ```bash
 poppy-services poppy-ergo-jr --snap --poppy-simu
 ```
+poppy-simu est beaucoup plus léger et simple que CoppeliaSim, mais il n'est pas capable de simuler l'environnement physique autour du robot.
 
-> **Warning** poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.
+### 2. Découverte de l'interface de programmation
 
-It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr. If it is not automatically done, you can open Snap with preloaded blocks at **[simu.poppy-project.org/snap/](http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml)** and the robot viewer at **[simu.poppy-project.org/poppy-ergo-jr](http://simu.poppy-project.org/poppy-ergo-jr)**.
+### Ouvrir un projet Snap
 
-**Alternative method**: Instead of using `poppy-service` you can start it in full python:
+Quand vous créer un programme Snap, vous pouvez enregistrer et recharger votre programmer dans un fichier-projet pour le retrouver plus tard. La première chose à faire est d'ouvrir un fichier-projet Poppy si ce n'est pas déjà fait : **Cliquez sur l'icône `Fichier` puis `Open (Ouvrir)` puis `Examples (Exemples)` puis ouvrez l'un des projets Poppy**. La toute première fois ouvrir un fichier d'exemple et plus tard vous rouvrirez vos propres fichiers projets que vous aurez sauvegardés.
 
-```python
-from pypot.creatures import PoppyErgoJr
-poppy = PoppyErgoJr(simulator='poppy-simu', use_snap=True)
-```
+### Sauvegarder un projet Snap
 
-#### If you have a tangible robot
+Il y a 3 façons de sauvegarder en cliquant sur l'icône `Fichier` en haut à gauche de l'itnerface graphique Snap :
 
-First, you must be connected to the same network LAN area than your robot (e.g. on the same router or Wifi).
+#### Enregistrer le projet dans le navigateur
+![Cliquer sur Save (Sauvegarder)](../img/snap/snap_save.png)
 
-You have to go on the web homepage of your robot with its URL. You can use its IP address (for example http://192.168.1.42) if you have a way to know it or its hostname like http://poppy.local. To find its IP address look at [the zeroconf chapter](../installation/install-zeroconf.md#alternatives-to-find-the-ip-address-of-a-computer-on-your-local-network). To use directly its hostname http://poppy.local you must have a Zeroconf software installed on your computer (aka ["Bonjour print services for Windows"](https://support.apple.com/kb/DL999?locale=en_US) if you are running Windows).
+Cliquez simplement sur `Save (Sauvegarder)`. Ce programme pourra ensuite être rechargé depuis le même ordinateur et le même navigateur. Il existe un risque que ce programme soit effacé si vous utilisez la fonciton "Supprimer mes traces de navigation ou cookies" de votre navigateur.
 
-The home page of your poppy creature should look like the snapshot below: ![find blocks](../img/snap/homepage.png)
+#### Le cloud Snap
 
-Click on the "Start Snap!" link to open the Snap_!_ interface at start the connection with the Poppy robot.
+Snap vous permet d'enregistrer votre programme sur son cloud, ce qui nécessite de créer un compte. Cela a l'avantage de vous permettre de pouvoir repartager de programme à d'autres personnes en leur communiquant tout simplement le lien vers votre cloud.
 
-Poppy special blocks are stored in the Examples. Go to "file" icon -> open -> Examples -> click on "Poppy blocks". It may take some time to load the blocks (~5-15 seconds), be patient.
+##### Créer un compte sur le cloud Snap
 
-### Interface and general ideas
-
-### Saving in Snap_!_
-
-There are three ways of saving a project in Snap_!_
-
-#### Save the project in your web browser
-
-![Save click](../img/snap/snap_save.png)
-
-When you are not logged in Snap_!_ Cloud, the default behaviour of Snap_!_ is to save your project in **your browser**.
-
-Technically this uses the Local Storage which is a memory space in your web browser where websites can store offline data. This is very convenient because you have not to register or to see Snap_!_ project files, but keep in mind that **these projects are only visible in this specific web browser in this specific computer**.
-
-#### Snap_!_ Cloud
-
-> « There is no Cloud, it's just someone else's computer ».
-
-Instead of saving your projects on your web browser, you can save them in Snap_!_ servers in UC Berkeley, called "cloud". Moreover, this allows you to share your project with anyone, with a simple link.
-
-##### Create an account on Snap_!_ cloud
-
-Click on the cloud button -> "signup...".
+Cliquer sur le bouton -> "signup...".
 
 ![Create account](../img/snap/snap_cloud_1.png)
 
-Fill the required fields in the modal window for signing up.
+Complétez les champs demandés.
 
 ![Create account](../img/snap/dialog-cloud-signup.png)
 
-You will soon receive a validation email with a random password. You can now log in with your username and password.
+Vous recevrez un e-mail de validation avec un mot de passe aléatoire imposé. Vous pouvez ensuite vous connecter avec ce mot de passe.
 
 ![Login1](../img/snap/snap_login1.png)
 
-If you use your personal computer, remember to check the "stay signed in on this computer [...]" checkbox.
+Il est pratique de cocher la case permettant de rester connecté à votre compte cloud sur votre ordinateur.
 
 ![Login2](../img/snap/snap_login2.png)
 
-After logging in account, you are free to change your password: click on the cloud button -> "Change Password".
-
+Vous pouvez aussi changer de mot de passe pour en mettre un plus aisé à retenir.
 ![Create account](../img/snap/logout-menu.png)
 
-##### Share your Snap_!_ project
+##### Partager votre projet Snap
 
-The big advantage of using Snap_!_ Cloud is the ability to share a copy of your project with anyone. To share a Snap_!_ project, you first need to be logged in Snap_!_ Cloud and having your current project saved ("save" or "save as"). Go to the "open" menu:
+Le principal avantage du cloud SNap est de vous permettre de partager votre projet avec quelqu'un d'autre en partageant un lien. Vous devez d'abord être connecté à votre compte.
+
+Puis allez dans le menu `Open (Ouvrir)`
 
 ![Open menu](../img/snap/snap_open.png)
 
-In the cloud section, select the project you want to share and click on "Share" button.
+Dans la section "cloud", sélectionnez le projet à partager puis cliquez sur `Share (Partager)`.
 
 ![Share](../img/snap/snap_cloud_3.png)
 
-**Here is the trick step:** to see the share link, you have to click on the "Open" button.
+Cliquez de nouveau sur `Open (Ouvrir)` ...
 
 ![Open share](../img/snap/snap_cloud_4.png)
 
-And this will re-open your project with the public sharing URL.
-
+... puis vous pourrez visualiser et partage votre lien à diffuser à vos collègues ou élèves par un simple copier/coller !
 ![Sharing URL](../img/snap/snap_cloud_5.png)
 
-You can copy and paste the URL and share it by the way you want to your friends or to the Poppy community with the forum [forum.poppy-project.org](https://forum.poppy-project.org/).
+Lorsque quelqu'un ouvrira votre projet de votre cloud, votre projet s'ouvrira en plein écran sur la zone de droite nommée "Sprite". Cliquez sur la double-flèche pour restaurer l'interface de programmation Snap habituelle.
 
-When you open a share project, the project is automatically opened in full screen on the sprite zone. To quit the full screen you have to click on the double arrow at the top of the snapshot below. ![Sharing URL](../img/snap/snap_share_full_screen.png)
+ ![Sharing URL](../img/snap/snap_share_full_screen.png)
 
-#### Export/Import your Snap_!_ project
+#### Importer/Exporter votre projet Snap
 
-If you have a limited access to internet and you want to share project with other people, the best way is to export it: ![Export section](../img/snap/snap_cloud_5.png) A new tab in your web browser will be opened with an XML file like the picture below. ![Export section](../img/snap/snap_xml_save_as.png) This file describe all your Snap_!_ project in a a simple file. It's not made to be human readable so don't be afraid, you just have to save it on your computer. For that, do a right click, chose "save as" and a proper name and location on you computer for this project.
+L'import/export est la façon la plus basique de sauvegarde et réouverture d'un projet Snap via un fichier, tout comme vous sauvegarderiez et réouvririez un document dans un traitement de texte, sauf que c'est un projet Snap pour Poppy !
 
-If you want to import a previously exported project, you simply have to click on the import section of the file icon. ![import section](../img/snap/snap_import.png)
+![Export section](../img/snap/snap_cloud_5.png)
 
-### Search Poppy blocks
+Les fichiers projet Snap sont de type XML (ils se terminent par `.xml`). N'essayez pas d'ouvrir ce fichier en le chargeant dans votre navigateur, vous verriez son contenu complètement illisible pour un être humain.
 
-Every Poppy block in Snap_!_ begins by a robot icon. So you can search all of them by the robot keyword. To search a specific block, do a right click on the block area, or use the keyboard shortcut CTRL+F. ![find blocks](../img/snap/find_blocks.png) ![find blocks](../img/snap/find_blocks2.png)
+![Export section](../img/snap/snap_xml_save_as.png)
+
+Si vous voyez le contenu du fichier alors que vous essayez de le sauvegarder néanmoins, faîtes juste un clic droit au milieu du texte puis cliquez sur "Enregistrer sous". Le fichier que vous enregistrerez est un export de votre projet Snap !
+
+Lorsque vous souhaitez réouvrir ce projet (importer), ne double-cliquez pas dessus mais ouvrez Snap comme précédemment expliqué puis allez dans le menu d'import de projet de l'icône `Fichier` :
+
+![import section](../img/snap/snap_import.png)
+
+### Chercher les blocs qui concernent Poppy
+
+Snap possède dans la barre de gauche tous les blocs qui permettent de programmer Poppy ... et bien plus ! Pour y voir plus clair, ils sont organisé en catégories de couleur. La catégorie jaune `Control (Contrôle)` comprend une bonne partie des blocs qui permettent de contrôler Poppy.
+
+Il est également pratique de taper Ctrl+F ou bien de cliquer sur "Find blocks" pour de taper un mot et ainsi filtrer tous les blocs pour trouver celui que vous cherchez.
+
+![find blocks](../img/snap/find_blocks.png)
+![find blocks](../img/snap/find_blocks2.png)
 
 <!-- ### First steps with Snap_!_ and a Poppy creature
 
@@ -159,50 +158,64 @@ Every Poppy block in Snap_!_ begins by a robot icon. So you can search all of th
 
  -->
 
-#### Réseau
+#### Tester la communication avec le robot
 
-First test your connection with the (tangible or simulated) robot with the "test connection" block. ![test connection](../img/snap/test_connection.png). if the block answer is "You may have connection troubles", your "host" variable inside the Snap_!_ project is probably wrong. The host variable must be the IP or the hostname+".local" of your robot ; if you're using V-REP localhost is used to point to your own computer.
+Cliquer sur le bloc "test connection". ![test connection](../img/snap/test_connection.png) est pratique pour vérifier que tout va bien au tout début.
+
+Il doit afficher une bulle "Connection OK". S'il affiche "You may have connection troubles", alors vous avez surement oublié de démarrer l'API du robot dans l'en-tête de la page ou bien si vous utilisez un simulateur la variables "host" pourrait être incorrecte. 
 
 ![test connection3](../img/snap/test_connection3.png).
 
-### Build your own blocks!
+### Liste des blocs pour contrôler Poppy
 
-The functionality to build your own block was the first difference between Scratch and Snap_!_ (now it's also possible to make custom blocks in Scratch)! <!-- TODO -->
+Pour programmer votre robot Poppy avec Snap, vous pouvez utiliser les blocs suivants provenant de la liste à gauche, les faire glisser dans l'espace de composition du programme au centre et les imbriquer les uns dans les autres ou les uns à la suite des autres pour créer le comportement logique souhaité de votre robot.
 
-## Description of Poppy blocks
+Pour mieux les comprendre en détail, il est conseillé de suivre [le livret d'activités pédagogiques fourni avec votre robot](https://www.poppy-education.org/wp-content/uploads/2020/08/Apprendre-a-programmer-Poppy-Ergo-Jr-en-Snap.pdf) puis ensuite suivre les [activités avancées en ligne](https://www.poppy-education.org/activites/initiation-ergo-jr-et-snap/).
 
 |                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../img/snap/snap_blocks/set_host.png)                  | This block allows you to connect Snap! to your robot. The host input can accept : - robot_name.local (e.g. : poppy.local if your robot’s name is poppy)- the IP address (e.g. 123.124.145.176)                                                                                                                                                                                                                                                                                  |
-| ![](../img/snap/snap_blocks/test_connection.png)           | Click on this block to verify that you are connected to your robot.                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ![](../img/snap/snap_blocks/set_motors_compliant.png)      | Put one or many motors in compliant or stiff mode. Motors are hand-drivable in compliant mode but must be in stiff mode to controlled with Snap!.The “motor(s)” input can accept:- string of a motor name (e.g. m1)- string of many motors separated with spaces (e.g. m1 m2 m4)- a Snap! list of motors like the reporter block "$robot all motors"" or the block “list”"                                                                                                      |
-| ![](../img/snap/snap_blocks/set_position.png)              | Put one or many motors in a position (angle in degree) in a given time.The “motor(s)” input can accept: - string of a motor name (e.g. m1) - string of many motors separated with spaces (e.g. m1 m2 m4) - a Snap! list of motors like the reporter block "$robot all motors"" or the block “list”. “Wait” can be true or false. If it’s on True, the action will wait the end of the previous action. If it’s on False, then the action will proceed during the previous one." |
-| ![](../img/snap/snap_blocks/reset.png)                     | Restart the software inside the robot.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ![](../img/snap/snap_blocks/set_register_of_motor.png)     | Put the value to one register (position, speed, max torque, …) of one or many motors.                                                                                                                                                                                                                                                                                                                                                                                           |
-| ![](../img/snap/snap_blocks/set_led.png)                   | Activate/deactivate color leds of motors and choose the color of your choice.The “motor(s)” input can accept: - string of a motor name (e.g. m1) - string of many motors separated with spaces (e.g. m1 m2 m4) - a Snap! list of motors like the reporter block "$robot all motors"" or the block “list”                                                                                                                                                                        |
-| ![](../img/snap/snap_blocks/play_move_reporter.png)        | Play a movement at a given speed. It is necessary to indicate the exact name of the movement previously recorded. This block can be nested in the “concurrent/sequential” block."                                                                                                                                                                                                                                                                                               |
-| ![](../img/snap/snap_blocks/sequence.png)                  | All blocks in input are run one after each other.You can use this block to play concurrently many sequently move.                                                                                                                                                                                                                                                                                                                                                               |
-| ![](../img/snap/snap_blocks/concurrent.png)                | All reports input are run simultaneously.You can use this block to play concurrently many recorded move.                                                                                                                                                                                                                                                                                                                                                                        |
-| ![](../img/snap/snap_blocks/create_and_start_record.png)   | Create and start a movement recorded by demonstration to the given motors.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ![](../img/snap/snap_blocks/stop_record_and_save_move.png) | Stop a record and save the recorded move in the robot.Be careful, you must have previously defined a move record with the "create & start record move ..."" block.                                                                                                                                                                                                                                                                                                              |
-| ![](../img/snap/snap_blocks/stop_move.png)                 | Stop a movement that is being played.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ![](../img/snap/snap_blocks/play_concurently_moves.png)    | Play movements at the same time (can be nested to concurrent block). Inputs can be : - move name (string) - any reporter block, like sequential or play sequentially"                                                                                                                                                                                                                                                                                                           |
+| ![](../img/snap/snap_blocks/test_connection.png)           | Le bloc à cliquer en premier pour tester la communication avec le robot.                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ![](../img/snap/snap_blocks/set_motors_compliant.png)      | Passer un ou plusieurs moteurs en mode mou (compliant) ou rigide (stiff). Si vous souhaiter bouger un moteur manuellement il doit être mou, alors que si vous souhaitez le bouger via des blocs Snap il doit être rigide. Vous devez taper le nom d'un moteur ou bien fournir une list des moteurs à passer en mou ou rigide, grâce au bloc "list"
+                                                         |
+| ![](../img/snap/snap_blocks/set_position.png)              | Bouger un ou plusieurs moteur à une certainement position angulaire en lui fournissant un angle cible en degrés. Le champ “motor(s)” accepte : - le nom d'un unique moteur ( par ex **m1**) - une série de plusieurs noms de moteurs séparés par des espaces (par ex **m1 m2 m3 m4**) - un bloc Snap de type "list" comme par ex "$robot all motors". “Wait” peut être activé ou désactiver selon s'il faut attendre que le mouvement soit terminé ou non pour passer au bloc suivant." |
+                                                                                                              |
+| ![](../img/snap/snap_blocks/set_led.png)                   | Changer la couleur de LED d'un ou plusieurs moteurs. Le champs “motor(s)” accepte : - le nom d'un unique moteur ( par ex **m1**) - une série de plusieurs noms de moteurs séparés par des espaces (par ex **m1 m2 m3 m4**) - un bloc Snap de type "list" comme par ex "$robot all motors".
+                           |
+| ![](../img/snap/snap_blocks/play_move_reporter.png)        | Rejouer le mouvement enregistré sous le nom spécifié en indiquant la vitesse de lecture (1 pour garder la même vitesse, 0.5 pour allez 2 fois plus lentement ou 2 pour aller 2 fois plus vite).                                                                                                                                                                                                                                                                                               |
+| ![](../img/snap/snap_blocks/sequence.png)                  | Jouer simultanément une série de mouvements.                                                                                                                                                          |
+| ![](../img/snap/snap_blocks/concurrent.png)                | Jouer consécutiement les uns après les autres une série de mouvements.                                                                                                                                                                                                           |
+| ![](../img/snap/snap_blocks/create_and_start_record.png)   | Démarrer l'enregistrement d'un mouvement sous un certain nom (n'oubliez pas d'arrêter l'enregistrement !)   |
+
+| ![](../img/snap/snap_blocks/stop_record_and_save_move.png) | Arrêter l'enregistrement et le sauvegarder sous le nom spécifié.                                                                                                                                                                                                                                                                                                           |
+| ![](../img/snap/snap_blocks/stop_move.png)                 | Arrêter un mouvement en cours de rejeu.                                                                                                                                                                                                                                                                                                                                                                                   |
+| ![](../img/snap/snap_blocks/play_concurently_moves.png)    | Jouer les mouvements en même temps                                                                                                                                                                                                                                                    |
 |                                                            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ![](../img/snap/snap_blocks/play_sequentially_moves.png)   | Play movements following in order (can be nested to sequential block). Inputs can be : - move name (string) - any reporter block, like sequential or play sequentially                                                                                                                                                                                                                                                                                                          |
-| ![](../img/snap/snap_blocks/start_behaviours.png)          | Start/Stop/Pause/Resume an integrated behaviour of the robot. It can be a position, a movement, a sensorimotor loop, high level camera feature..                                                                                                                                                                                                                                                                                                                                |
-| ![](../img/snap/snap_blocks/play_move_in_reverse.png)      | Play a move in reverse at a given speed (reporter block)                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ![](../img/snap/snap_blocks/play_move_command.png)         | Play a move at a given speed (command block)                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ![](../img/snap/snap_blocks/motors_in_group.png)           | Give motors which are in a given group. You can know groups name with the block “all motors groups”.                                                                                                                                                                                                                                                                                                                                                                            |
-| ![](../img/snap/snap_blocks/all_motors.png)                | Return a list with the name of every motors in the robot.                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ![](../img/snap/snap_blocks/get_register.png)              | Give the value of a register (position, speed, load, ... ) of one or many motors.                                                                                                                                                                                                                                                                                                                                                                                               |
-| ![](../img/snap/snap_blocks/get_all_motors_position.png)   | Give the position of every motors. It is a shortcut to the block above. It is useful to make a snapshot of pose of the robot.                                                                                                                                                                                                                                                                                                                                                   |
-| ![](../img/snap/snap_blocks/index_of_motor.png)            | Return the index of a motor name in the "all motors" block list.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ![](../img/snap/snap_blocks/robot_URL.png)                 | Give the URL of the robot. For internal use only.                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ![](../img/snap/snap_blocks/all_recorded_moves.png)        | Give all records stored in this robot.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ![](../img/snap/snap_blocks/get_all_behaviours.png)        | Give the list of all attached/running behaviours .                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ![](../img/snap/snap_blocks/get_all_motors.png)                          | Give all existing motors groups.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ![](../img/snap/snap_blocks/get_function_of_behaviour.png) | Get all methods or functions which are runnable in a behavior.It is an advanced block.                                                                                                                                                                                                                                                                                                                                                                                          |
-| ![](../img/snap/snap_blocks/card_is_detected.png)          | Return a boolean (true/false) depending if the selected card is detected by the camera of the robot.                                                                                                                                                                                                                                                                                                                                                                            |
+| ![](../img/snap/snap_blocks/play_sequentially_moves.png)   | Jouer les mouvements les uns à la luiste des autres                                                                                                                                                                                                                                                                                        |
+| ![](../img/snap/snap_blocks/start_behaviours.png)          | Démarrer/Arrêter/ettre en Pause/ ou Reprendre un comportement préenregistré dans le robot. Les comportements sont soit des mouvements, soit des positions cibles, soit des analyses de caméra, soit des boucles sensorimotrices (qui connectent les moteurs sur des capteurs)..                                                                                                                                                                                                                                                                                                                                |
+| ![](../img/snap/snap_blocks/play_move_in_reverse.png)      | Jouer un mouvement à l'envers à la vitesse indiquée                                                                                                                                                                                                                                                                                                                                                                 |
+| ![](../img/snap/snap_blocks/play_move_command.png)         | Jouer un mouvement à la vitesse indiquée                                                                                                                                                                                                                                                                                                                                       |
+| ![](../img/snap/snap_blocks/motors_in_group.png)           | Retourne les moteurs appartenant à un groupe..                                                                                                                                                                                                                                                                                                                                                                            |
+| ![](../img/snap/snap_blocks/all_motors.png)                | Groupe de tous les noms de moteur du robot                                                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                  |
+| ![](../img/snap/snap_blocks/get_all_motors_position.png)   | Donne la position actuelle de tous les moteurs. Très utile pour enregistrer la position actuelle de tout le robot.                                                                                                                                                                                                                                                                                          |
+| ![](../img/snap/snap_blocks/index_of_motor.png)            | Retourne l'indice d'un nom de moteur dans la liste "all motors" list.                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ![](../img/snap/snap_blocks/all_recorded_moves.png)        | Donne tous les noms de mouvements enregistrés                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ![](../img/snap/snap_blocks/get_all_behaviours.png)        | Donne la liste de tous les comportements actuellement démarrés .                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ![](../img/snap/snap_blocks/get_all_motors.png)                          | Donne la liste de tous les groupes moteurs.                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ![](../img/snap/snap_blocks/get_function_of_behaviour.png) | Donne toutes les fonctions qui peuvent être utilisées dans un comportement (avancé)                                                                                                                                                                                                                                                                                                                                                                                      |
+| ![](../img/snap/snap_blocks/card_is_detected.png)          | Renvoie VRAI ou FAUX selon si le QR Code de la carte choisie est actuellement dé&tecté devant la caméra.                                                                                                                                                                                                                                                                                                                                                                            |
+| ![](../img/snap/snap_blocks/robot_URL.png)                 | Donne l'URL du robot (usage avancé)                                                                                                                                                                                                                                                                                                                                                                                                                              |
+
+
+| ![](../img/snap/snap_blocks/reset.png)                     | Redémarrer le logiciel du robot                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ![](../img/snap/snap_blocks/set_register_of_motor.png)     | Changer la valeur d'un registre moteur (position, speed, max torque, …) ou de plusieurs moteurs. Le champs “motor(s)” accepte : - le nom d'un unique moteur ( par ex **m1**) - une série de plusieurs noms de moteurs séparés par des espaces (par ex **m1 m2 m3 m4**) - un bloc Snap de type "list" comme par ex "$robot all motors".   
+
+
+| ![](../img/snap/snap_blocks/get_register.png)              | Lire la valeur d'un registrer moteur (position, speed, load, ...) (avancé)                
+
+| ![](../img/snap/snap_blocks/set_host.png)                  | Indiquer l'adresse du robot Poppy à contrôler. ça peut être :
+- robot_name.local (par ex `poppy.local`)
+- une adresse IP (par ex `123.124.145.176`)
+Il est recommandé de ne pas le modifier si vous ne comprenez pas à quoi cela sert (avancé) |
 
 <!-- TODO
 

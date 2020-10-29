@@ -23,10 +23,10 @@ Some of the snapshots and concepts of BJC have been used for writing this chapte
 
 ### Connect your robot to Snap_!_
 
-#### If you use a simulated robot on V-REP
-> **Info** You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the [install poppy software section](../installation/install-poppy-softwares.md).
+#### If you use a simulated robot on CoppeliaSim
+> **Info** You need to have installed Poppy software libraries and CoppeliaSim simulator on your computer. If it is not done, go to the [install poppy software section](../installation/install-poppy-softwares.md).
 
-First open V-REP.
+First open CoppeliaSim.
 
 The quickest way is to use the command line utility [poppy-service](../software-libraries/poppy-creature.md#poppy-services). Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):
 ```bash
@@ -37,7 +37,7 @@ poppy-services poppy-ergo-jr --snap --vrep
 It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr.
 If it is not automatically done, you can open Snap with preloaded blocks at [simu.poppy-project.org/snap/](http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml)
 
-> **Warning** Every popup in V-REP will block the communication to the robot interface. If a popup appear, close it and restart the command above.
+> **Warning** Every popup in CoppeliaSim will block the communication to the robot interface. If a popup appear, close it and restart the command above.
 
 
 **Alternative method**:
@@ -56,7 +56,7 @@ The quickest way is to use the command line utility [poppy-service](../software-
 ```bash
 poppy-services poppy-ergo-jr --snap --poppy-simu
 ```
-> **Warning** poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.
+> **Warning** poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in CoppeliaSim.
 
 It will open a Snap_!_ tab in your web browser for a simulated poppy-ergo-jr.
 If it is not automatically done, you can open Snap with preloaded blocks at **[simu.poppy-project.org/snap/](http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml)** and the robot viewer at **[simu.poppy-project.org/poppy-ergo-jr](http://simu.poppy-project.org/poppy-ergo-jr)**.
@@ -177,7 +177,7 @@ Every Poppy block in Snap_!_ begins by a robot icon. So you can search all of th
 
 First test your connection with the (tangible or simulated) robot with the "test connection" block.
 ![test connection](../img/snap/test_connection.png).
-if the block answer is "You may have connection troubles", your "host" variable inside the Snap_!_ project is probably wrong. The host variable must be the IP or the hostname+".local" of your robot ; if you're using V-REP localhost is used to point to your own computer.
+if the block answer is "You may have connection troubles", your "host" variable inside the Snap_!_ project is probably wrong. The host variable must be the IP or the hostname+".local" of your robot ; if you're using CoppeliaSim localhost is used to point to your own computer.
 
 ![test connection3](../img/snap/test_connection3.png).
 

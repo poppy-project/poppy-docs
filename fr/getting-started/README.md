@@ -26,7 +26,7 @@ Les robots Poppy:
 * sont fabriqués à partir de pièces imprimable en 3D et des servomoteurs Dynamixel,
 * utilisent un ordinateur embarqué (Raspberry Pi ou Odroid pour les anciennes versions),
 * fonctionnent avec une bibliothèque logicielle en Python, [pypot](../software-libraries/pypot.md), qui permet de contrôler les servomoteurs Dynamixel simplement,
-* sont également contrôlable avec les même outils dans un simulateur ([V-REP](http://www.coppeliarobotics.com)),
+* sont également contrôlable avec les même outils dans un simulateur ([ CoppeliaSim](http://www.coppeliarobotics.com)),
 * peuvent être contrôlé à l’aide d’un langage de programmation visuel ([Snap !](http://snap.berkeley.edu) une variante de Scratch) et un langage textuel [Python](https://www.python.org). Ils sont également programmables via une API REST, ce qui permet se s'interfacer avec d'autres languages de programmation
 * viennent avec un documentation associée, des tutoriels, des exemples et des activités pédagogiques.
 

@@ -5,10 +5,10 @@
 Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are available.
 
 Connection with two main "simulators" were developed:
-* using [V-REP](http://www.coppeliarobotics.com): a virtual robot experimentation platform
+* using [ CoppeliaSim](http://www.coppeliarobotics.com): a virtual robot experimentation platform
 * using [a 3D web viewer](http://simu.poppy-project.org): lighter but without physics support
 
-> **Caution** At the moment, only the Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP. Support for the other robots is planned but not expected in the near future.
+> **Caution** At the moment, only the Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use CoppeliaSim. Support for the other robots is planned but not expected in the near future.
 
 We think simulation can be a powerful tool. It allows the development and test of programs without the need of having a real robot. This is especially useful:
 
@@ -30,21 +30,21 @@ While the physical robots come with an embedded computer pre-installed, you need
 You will also not have access to the robot web interface.
 You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap_!_ server).
 
-To start controlling a simulated Poppy robots, either using V-REP or the web visualizer, you will need:
+To start controlling a simulated Poppy robots, either using CoppeliaSim or the web visualizer, you will need:
 * Python >= 3.5
 * The Python library **pypot**
 * The Python library corresponding to your creature (e.g. **poppy-ergo-jr**)
 
 
-## Using V-REP
+## Using CoppeliaSim (Formerly named V-REP)
 
-[V-REP](http://www.coppeliarobotics.com) is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from [this website](http://www.coppeliarobotics.com/downloads.html) (works under Mac OS, Windows and GNU/Linux).
+[ CoppeliaSim](http://www.coppeliarobotics.com) is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from [this website](http://www.coppeliarobotics.com/downloads.html) (works under Mac OS, Windows and GNU/Linux).
 
-> **Warning** It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).
+> **Warning** It is important to note that as CoppeliaSim is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).
 
-![Poppy Humanoid in V-REP](../img/humanoid/vrep.png)
+![Poppy Humanoid in  CoppeliaSim](../img/humanoid/vrep.png)
 
-All main Poppy robots are available in V-REP:
+All main Poppy robots are available in CoppeliaSim:
 * Poppy Humanoid
 * Poppy Torso
 * Poppy Ergo Jr
@@ -55,11 +55,11 @@ Here, are some examples of what the community has already been doing with it:
 * A pedagogical activity to discover the different motor of your robot and how they can be controlled.
 * A scientific experiment, where a Poppy Torso is learning how to push a cube on a table in front of it
 
-![Torso V-REP](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
+![Torso  CoppeliaSim](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
 
 > **Note** Even if we try, to reproduce the robot behavior and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).
 
-To start the simulated robot, first open V-REP and instantiate you robot with `simulator='vrep'` argument. V-REP will open a popup that you will have to close to enable to communication between V-REP and Python.
+To start the simulated robot, first open CoppeliaSim and instantiate you robot with `simulator='vrep'` argument. CoppeliaSim will open a popup that you will have to close to enable to communication between CoppeliaSim and Python.
 
 ```python
 from pypot.creatures import PoppyErgoJr
@@ -91,7 +91,7 @@ If you want to use command the mockup robot from Snap, you can also start it dir
 poppy-services --poppy-simu --snap poppy-ergo-jr
 ```
 
-As for V-REP, you can control your robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
+As for CoppeliaSim, you can control your robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
 
 Here is an example with Python:
 

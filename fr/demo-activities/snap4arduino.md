@@ -18,7 +18,7 @@
 
 ### Lancement de la simulation (dans le cas d'un Poppy simulé dans Vrep)
 
-* Lancez V-REP.
+* Lancez CoppeliaSim.
 * Exécutez les commandes python suivantes :
 
 ```python

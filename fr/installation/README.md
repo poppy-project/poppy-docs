@@ -15,7 +15,7 @@ Si vous êtes familier à Linux et que vous voulez essayer vous-même nos script
 ## Vous voulez essayer des robots Poppy dans un simulateur ou dans le visualiseur web
 
 - [Installation des programmes Poppy sur votre ordinateur](install-poppy-softwares.md)
-- [Installation du simulateur V-REP](install-vrep.md)
+- [Installation du simulateur  CoppeliaSim](install-vrep.md)
 
 ## Vous voulez réaliser des travaux avancés avec un robot tangible
 

@@ -44,7 +44,7 @@ Ce que vous devez installer est résumé dans le schéma ci-dessous :
 
 Ainsi, si vous prévoyez de soit
 
-* Utiliser un simulateur (p. ex. V-REP ou simulateur web),
+* Utiliser un simulateur (p. ex. CoppeliaSim ou simulateur web),
 * ou de brancher le robot à votre ordinateur
 
 Vous devrez installer les bibliothèques Poppy localement. Elles fonctionnent sur Windows, Mac OSX, Linux et ont été testées sur Python >= 3.5
@@ -147,12 +147,12 @@ To use a simulated robot instead of a real one, you only have to specify it when
 poppy = PoppyTorso(simulator='vrep')
 ```
 
-All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with V-REP.
+All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with CoppeliaSim.
 
-If you see an error message like this, check that you have launched V-REP and that you have close the popup in V-REP (see [this chapter](../installation/install-vrep.md#test-your-installation) for details).
+If you see an error message like this, check that you have launched CoppeliaSim and that you have close the popup in CoppeliaSim (see [this chapter](../installation/install-vrep.md#test-your-installation) for details).
 
 ```python
-IOError: Connection to V-REP failed!
+IOError: Connection to CoppeliaSim failed!
 ```
 
 #### Create the Robot object - with web simulator

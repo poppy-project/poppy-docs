@@ -43,7 +43,7 @@
     - [Install Bonjour/Zeroconf](installation/install-zeroconf.md)
     - [Download and burn the system image](installation/burn-an-image-file.md)
     - [Install Poppy softwares](installation/install-poppy-softwares.md)
-    - [Install V-REP simulator](installation/install-vrep.md)
+    - [Install CoppeliaSim simulator](installation/install-vrep.md)
     - [Install USB to serial drivers](installation/install-drivers.md)
     - [Install a Poppy Board](installation/install-a-poppy-board.md)
 

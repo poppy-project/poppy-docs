@@ -17,7 +17,7 @@ If you are a Linux rocky and want to try yourself our unstable install scripts, 
 
 ## You want to try Poppy robots in a simulator or in a web viewer
 - [Install Poppy softwares on your computer](install-poppy-softwares.md)
-- [Install V-REP simulator](install-vrep.md)
+- [Install CoppeliaSim simulator](install-vrep.md)
 
 
 ## You want to do some advanced stuff with a tangible robot

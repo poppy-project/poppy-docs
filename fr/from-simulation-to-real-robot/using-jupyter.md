@@ -39,7 +39,7 @@ Il y a peu d’endroits où vous devez réellement modifier votre code pour qu�
 
 Lorsque vous créez le robot, vous devez en fait préciser si vous êtes disposé à travailler avec un robot physique ou un robot simulé. Cela se fait simplement via un paramètre. Par exemple :
 
-En travaillant avec V-REP :
+En travaillant avec CoppeliaSim :
 
 ```python
 from pypot.creatures import PoppyHumanoid
@@ -61,7 +61,7 @@ Il s’agit de la plupart des modifications que vous aurez à faire.
 
 ### Les APIs spécifiques
 
-Une partie de l'API dépend des plateformes. Par exemple, en utilisant V-REP vous avez accès aux fonctionnalités de *tracking* qui vous permet de récupérer n'importe quelle position 3D de l'objet. Mais cette méthode n'a pas d'équivalent dans le monde réel et n'est donc pas réalisable avec un robot physique.
+Une partie de l'API dépend des plateformes. Par exemple, en utilisant CoppeliaSim vous avez accès aux fonctionnalités de *tracking* qui vous permet de récupérer n'importe quelle position 3D de l'objet. Mais cette méthode n'a pas d'équivalent dans le monde réel et n'est donc pas réalisable avec un robot physique.
 
 Utiliser la propriété *simulée* est un bon entrainement si vous souhaitez écrire du code compatible pour les deux cas. Elle est automatiquement définie à la valeur correcte selon la façon dont vous instanciez votre robot. Par exemple,
 

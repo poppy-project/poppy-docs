@@ -46,7 +46,7 @@ What you need to install is summarized in the diagram below:
 
 Yet, if you are planning to either
 
-* Use a simulator (e.g. V-REP, or web simulator),
+* Use a simulator (e.g. CoppeliaSim, or web simulator),
 * or want to directly plug the robot to your computer
 
 You will have to install Poppy libraries locally. They work on Windows, Mac OSX, Linux, and have been tested on Python >= 3.5. Python 2 and Anaconda recipes are no longer supported starting from pypot >= 4.0.
@@ -145,7 +145,7 @@ And that's it, if you did not see any error message it means that you are connec
 IOError: Connection to the robot failed! No suitable port found for ids [3, 5, 7, 11, 13, 17]. These ids are missing [3, 5, 7, 11, 13, 17] !
 ```
 
-#### Create the Robot object - with V-REP
+#### Create the Robot object - with CoppeliaSim
 
 To use a simulated robot instead of a real one, you only have to specify it when creating the Robot object. For instance, if you want to create a simulated Poppy Torso, you simply have to execute the following line:
 
@@ -153,12 +153,12 @@ To use a simulated robot instead of a real one, you only have to specify it when
 poppy = PoppyTorso(simulator='vrep')
 ```
 
-All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with V-REP.
+All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with CoppeliaSim.
 
-If you see an error message like this, check that you have launched V-REP and that you have close the popup in V-REP (see [this chapter](../installation/install-vrep.md#test-your-installation) for details).
+If you see an error message like this, check that you have launched CoppeliaSim and that you have close the popup in CoppeliaSim (see [this chapter](../installation/install-vrep.md#test-your-installation) for details).
 
 ```python
-IOError: Connection to V-REP failed!
+IOError: Connection to CoppeliaSim failed!
 ```
 
 #### Create the Robot object - with web simulator

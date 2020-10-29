@@ -1,15 +1,15 @@
-# Install the robotic simulator V-REP (CoppeliaSim)
-> **Info** You need to install [Poppy softwares](install-poppy-softwares.md) before installing the V-REP simulator.
+# Install the robotic simulator CoppeliaSim (CoppeliaSim)
+> **Info** You need to install [Poppy softwares](install-poppy-softwares.md) before installing the CoppeliaSim simulator.
 
-[V-REP](http://www.coppeliarobotics.com) is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free license for educational entities and have a commercial license for other purposes.
-There is also an *PRO EVAL* version which limit the right to backup. As you don't need to backup the scene to use V-REP with pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.
-If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the educational licence.
+[ CoppeliaSim](http://www.coppeliarobotics.com) is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free license for educational entities and have a commercial license for other purposes.
+There is also an *PRO EVAL* version which limit the right to backup. As you don't need to backup the scene to use CoppeliaSim with pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.
+If you want to modify the CoppeliaSim scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the educational licence.
 
 
-## Install V-REP on Windows
+## Install CoppeliaSim on Windows
 
-[Download V-REP](http://www.coppeliarobotics.com/) PRO EVAL or EDU (if you are an educational entity).
-As V-REP is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation.
+[Download  CoppeliaSim](http://www.coppeliarobotics.com/) PRO EVAL or EDU (if you are an educational entity).
+As CoppeliaSim is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation.
 ![VREP_smartscreen](../img/vrep/vrep2.png)
 
 During the installation, make sure to install *Visual C++ Redistributable 2010* and *Visual C++ Redistributable 2012*.
@@ -21,7 +21,7 @@ Even if you already have *Visual C++ Redistributable 2010* or *Visual C++ Redist
 
 ![cpp2012](../img/vrep/lucvincent/luc_vincent-060.png)
 
-**After the installation you can [test if V-REP works well](#test-your-installation)**.
+**After the installation you can [test if CoppeliaSim works well](#test-your-installation)**.
 
 ## Install on MAC OSX
 <!-- TODO -->
@@ -33,7 +33,7 @@ Even if you already have *Visual C++ Redistributable 2010* or *Visual C++ Redist
 
 ## Test your installation
 
-Open V-REP with a double click on the desktop icon.
+Open CoppeliaSim with a double click on the desktop icon.
 Open the prompt of your Python Distribution (called the *Command Prompt* of Windows), type and press Enter to execute the command below:
 
 ```bash
@@ -42,14 +42,14 @@ poppy-services --snap --vrep --no-browser poppy-torso`
 After a one or two seconds, you will have an error like the picture below in your Command prompt.
 ![VREP_terminal](../img/vrep/vrep3_1.png)
 
-If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. **You have to check the check-box "Do not show this message again" and press "Ok".**
+If you switch to the CoppeliaSim window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of CoppeliaSim. **You have to check the check-box "Do not show this message again" and press "Ok".**
 ![VREP_checkbox](../img/vrep/vrep3_2.png)
 
-Switch the the command prompt window. You will have to execute the last command (`poppy-services --snap --vrep --no-browser poppy-torso`) and click again to the V-REP popup (with the check-box checked). **This process will have to be done *three times* to make it works well!**
+Switch the the command prompt window. You will have to execute the last command (`poppy-services --snap --vrep --no-browser poppy-torso`) and click again to the CoppeliaSim popup (with the check-box checked). **This process will have to be done *three times* to make it works well!**
 
 > **Info** To avoid retyping the same command again and again, you can press the up arrow key to call the last typed line.
 
-When the setup of V-REP is ready, you can execute the last command without the "--no-browser" part.
+When the setup of CoppeliaSim is ready, you can execute the last command without the "--no-browser" part.
 ```
 poppy-services --snap --vrep poppy-torso
 ```

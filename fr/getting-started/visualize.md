@@ -4,9 +4,9 @@
 
 Une version simulée de chaque robot Poppy est disponible (Humanoid, Torso, Ergo Jr).
 
-On peut utiliser deux « simulateurs » avec les robots Poppy : * [ V-REP](http://www.coppeliarobotics.com) : un simulateur de robotique avec de nombreuses possibilités et très utilisé * [ un visualisateur web-3D](http://simu.poppy-project.org) : plus léger, mais sans simulation physique
+On peut utiliser deux « simulateurs » avec les robots Poppy : * [CoppeliaSim](http://www.coppeliarobotics.com) : un simulateur de robotique avec de nombreuses possibilités et très utilisé * [un visualisateur web-3D](http://simu.poppy-project.org) : plus léger, mais sans simulation physique
 
-> **Attention** Pour le moment seul l'Ergo Jr peut être utilisé dans le visualiseur web. Si vous souhaitez simuler d’autres créatures, vous devez utiliser V-REP. On souhaiterai prendre en charges les autres robots, mais aucun calendrier n'est fixé sur ce point là.
+> **Attention** Pour le moment seul l'Ergo Jr peut être utilisé dans le visualiseur web. Si vous souhaitez simuler d’autres créatures, vous devez utiliser CoppeliaSim. On souhaiterai prendre en charges les autres robots, mais aucun calendrier n'est fixé sur ce point là.
 
 L'utilisation d'un simulateur est très intéressante. Cela permet de développer et d'essayer des programmes sans avoir besoin d'un vrai robot. Plus particulièrement, cela permet :
 
@@ -24,28 +24,28 @@ Nous essayons de faire en sorte que **le passage du robot virtuel au tangible so
 
 Alors que les robots physiques disposent d'un ordinateur embarqué pré-installé, vous devez installer certaines bibliothèques logicielles sur votre ordinateur pour contrôler les créatures Poppy simulées. Vous n'aurez pas accès à l'interface web du robot. Vous devrez lancer manuellement les différents services pour commencer à programmer votre robot (le terminal Jupyter pour les notebooks Pyhton ou le terminal Snap_ ! _).
 
-Pour commencer à contrôler un robot Poppy, que ce soit en utilisant V-REP ou le visualiseur web, vous aurez besoin : 
+Pour commencer à contrôler un robot Poppy, que ce soit en utilisant CoppeliaSim ou le visualiseur web, vous aurez besoin : 
 * de Python > = 3.5
 * de la bilbiothèque Python nommée **pypot**
 * de la bibliothèque Python correspondant à votre créature (p. ex. **poppy-ergo-jr**).
 
-## Avec V-REP
+## Avec CoppeliaSim (anciennement V-REP)
 
-[ V-REP](http://www.coppeliarobotics.com) est un simulateur de robotique très populaire aux nombreuses fonctionnalités. Il est très utilisé dans pour la recherche ou des fins éducatives. De plus, il est disponible gratuitement avec la license éducative. Il peut être téléchargé depuis [ le site de Copellia Robotics](http://www.coppeliarobotics.com/downloads.html) (fonctionne sous Mac OS, Windows et GNU/Linux).
+[  CoppeliaSim](http://www.coppeliarobotics.com) est un simulateur de robotique très populaire aux nombreuses fonctionnalités. Il est très utilisé dans pour la recherche ou des fins éducatives. De plus, il est disponible gratuitement avec la license éducative. Il peut être téléchargé depuis [ le site de Copellia Robotics](http://www.coppeliarobotics.com/downloads.html) (fonctionne sous Mac OS, Windows et GNU/Linux).
 
-> **Attention** Etant donné que V-REP effectue une simulation physique ainsi qu'un rendu graphique du robot, il nécessite un ordinateur puissant (surtout pour la carte graphique).
+> **Attention** Etant donné que CoppeliaSim effectue une simulation physique ainsi qu'un rendu graphique du robot, il nécessite un ordinateur puissant (surtout pour la carte graphique).
 
-![Poppy humanoide dans V-REP](../img/humanoid/vrep.png)
+![Poppy humanoide dans  CoppeliaSim](../img/humanoid/vrep.png)
 
-Tous les principaux robots Poppy sont disponibles dans V-REP : * Poppy Humanoid * Poppy Torso * Poppy Ergo Jr
+Tous les principaux robots Poppy sont disponibles dans CoppeliaSim : * Poppy Humanoid * Poppy Torso * Poppy Ergo Jr
 
 V-REP permet d’apprendre à commander les moteurs, interroger les capteurs, mais aussi d’interagir avec l’environnement simulé. On peut commander les robots simulés en Python, avec Snap_ ! _ ou par le biais de l’API REST. Voici quelques exemples de ce que la communauté a déjà pu faire avec : * Une activité pédagogique pour découvrir les différents moteurs de votre robot et comment ils peuvent être contrôlés. * Une expérience scientifique, où un Poppy Torso apprend comment pousser un cube sur une table en face de lui.
 
-![Torso V-REP](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
+![Torso  CoppeliaSim](../img/torso/explauto-vrep.png)![Torso Explauto Res](../img/torso/explauto-res.png)
 
 > **Pour information** Même si nous essayons de reproduire le comportement et le fonctionnement du robot, quelques différences persistent. Par exemple, si vous faites marcher un robot dans la simulation, cela ne veut pas dire que le robot physique marchera (et vice-versa).
 
-Pour démarrer le robot simulé, il faut dans un premier temps ouvrir V-REP et instancier le robot avec `simulateur = « vrep »`. V-REP va ouvrir une popup qui vous devrez fermer pour permettre la communication entre V-REP et Python.
+Pour démarrer le robot simulé, il faut dans un premier temps ouvrir CoppeliaSim et instancier le robot avec `simulateur = « vrep »`. CoppeliaSim va ouvrir une popup qui vous devrez fermer pour permettre la communication entre CoppeliaSim et Python.
 
 ```python
 from pypot.creatures import PoppyErgoJr
@@ -79,7 +79,7 @@ Si vous souhaitez contrôler un robot simulé avec Snap!, vous pouvez également
 poppy-services --poppy-simu --snap poppy-ergo-jr
 ```
 
-En ce qui concerne V-REP, vous pouvez contrôler votre robot en utilisant Python, Snap!, ou l’API REST. Cependant il n’y a pas de support pour la simulation physique; c'est plus léger en terme d'exécution mais vous ne serez pas en mesure d’interagir avec des objets.
+En ce qui concerne CoppeliaSim, vous pouvez contrôler votre robot en utilisant Python, Snap!, ou l’API REST. Cependant il n’y a pas de support pour la simulation physique; c'est plus léger en terme d'exécution mais vous ne serez pas en mesure d’interagir avec des objets.
 
 Voici un exemple avec Python :
 

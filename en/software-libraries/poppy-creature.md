@@ -60,7 +60,7 @@ The way to use it is:
 
 the available options are:
 
--   `--vrep`: creates the specified creature for using with V-REP simulator
+-   `--vrep`: creates the specified creature for using with CoppeliaSim simulator
 -   `--poppy-simu`: creates the specified creature for using with web simulator and also launches the HTTP server needed by poppy-simu. Poppy-simu is only available for poppy-erg-jr for now.
 -   `--snap`: launches the Snap! server and directly imports the specific Poppy blocks.
 -   `-nb` or `--no-browser`: avoid automatic start of Snap! in web

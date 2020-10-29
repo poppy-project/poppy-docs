@@ -26,7 +26,7 @@
     * [Installez Bonjour/Zeroconf](installation/install-zeroconf.md)
     * [Télécharger et graver l'image système](installation/burn-an-image-file.md)
     * [Installer les logiciels Poppy](installation/install-poppy-softwares.md)
-    * [Installation du simulateur V-REP](installation/install-vrep.md)
+    * [Installation du simulateur  CoppeliaSim](installation/install-vrep.md)
     * [Installer les pilotes USB vers port série](installation/install-drivers.md)
     * [Installer un ordinateur embarqué pour un robot Poppy](installation/install-a-poppy-board.md)
 

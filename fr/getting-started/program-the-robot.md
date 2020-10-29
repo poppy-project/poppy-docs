@@ -14,7 +14,7 @@ Snap_!_ est un langage de programmation visuel - une variante du déjà très co
 
 Nous avons créé plusieurs blocs propre à l'utilisation des robots Poppy qui permettent de contrôler chaque moteur et de lire les valeurs rapportées par les capteurs de votre robot. This let you to directly jump into controlling and programming your robot without any syntax/compilation issue. Snap_!_ permet d'avoir une interactivité constante entre son interface et le robot. Vous n'avez qu'à cliquer sur un bloc et la commande associée se lance. La simplicité apparente de Snap_!_ n'empêche pas de développer des projets de plus en plus complexes.
 
-Pour avoir un aperçu de ce qu'il est possible de faire avec Snap_!_ et les robots Poppy, jetez un oeil au [chapitre dédié](../programming/snap.md).
+Pour découvrir comment foncitonne Snap et la programmation visuelle par blocs avec Poppy, [rdv dans le chapitre dédié](../programming/snap.md).
 
 ## Avec Python
 
@@ -24,7 +24,7 @@ Pour avoir un aperçu de ce qu'il est possible de faire avec Snap_!_ et les robo
 
 Les librairies logicielles Poppy ont été écrites en Python, ce qui permet un développement et une extensibilité rapide, ainsi que de pouvoir utiliser n'importe quelle autre librairie scientifique. Python est d'ailleurs un langage très connu et largement utilisé dans les domaines de l'éducation et artistiques. En programmant Poppy en Python, vous aurez accès à tous les niveaux d'API, du plus bas au plus élevé.
 
-L'API a été pensé pour du prototypage très rapide. Créer un robot et faire bouger ses moteurs ne doit pas prendre plus de quelques lignes :
+L'API a été pensée pour du prototypage très rapide. Créer un robot et faire bouger ses moteurs ne doit pas prendre plus de quelques lignes :
 
 ```python
 from pypot.creatures import PoppyErgoJr
