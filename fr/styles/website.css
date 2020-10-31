@@ -117,6 +117,10 @@ blockquote.alert p a {
   width: 25%;
 }
 
+.book.with-summary .book-body {
+    left: 25vw;
+}
+
 .book-summary ul.summary li.header {
   font-weight: bold;
   color: #27506E;
