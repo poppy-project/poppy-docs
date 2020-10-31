@@ -11,7 +11,6 @@
         "build",
         "copy-code-button",
         "custom-favicon",
-        "download-pdf-link",
         "github",
         "language-picker",
         "localized-footer",
@@ -52,14 +51,6 @@
             "all": [
                 "twitter", "facebook", "google"
             ]
-        },
-        "download-pdf-link": {
-            "base": "https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs",
-            "label": {
-                "en": "Download PDF",
-                "fr": "Télécharger en PDF"
-            },
-            "multilingual": true
         }
     },
     "variables": {
