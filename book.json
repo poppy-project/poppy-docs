@@ -23,7 +23,7 @@
         "youtube"
     ],
     "pluginsConfig": {
-        "favicon": "img/logo/favicon-128.ico",
+        "favicon": "favicon.ico",
 
         "theme-default": {
             "showLevel": true
