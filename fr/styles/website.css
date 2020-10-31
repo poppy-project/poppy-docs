@@ -114,7 +114,8 @@ blockquote.alert p a {
 
 .book-summary{
   border-right: 1px solid;
-  width: 25%;
+  width: 25vw;
+  left: -25vw;
 }
 
 .book.with-summary .book-body {
