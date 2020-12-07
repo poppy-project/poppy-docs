@@ -5,7 +5,7 @@ Before you can startup your robot, let's have a look at the cables. You must con
 * Upper body (from `head_y` to `abs_x`)
 * Lower body (from `r_hip_z` and `l_hip_z` to `r_ankle_y` and `l_ankle_y`)
 
-These 2 buses are fully disconnected from each other, they have their own:
+These 2 buses are fully disconnected from each other (1), they have their own:
 * Power supply (SMPS2Dynamixel + wall socket)
 * Dynamixel hub to plug up to 6x motors
 * USB2AX
@@ -13,6 +13,8 @@ These 2 buses are fully disconnected from each other, they have their own:
 The drawing below shows the 2 data and power buses: cables connecting motors are in red, data hubs and SMPS power injection in green. 
 
 ![](../../img/humanoid/humanoid-wires.png)
+
+(1) N.B.: In some situations it may be useful to connect both power buses together by adding a 4-wire cable and cutting out its data bus, as shown [in the video](https://youtu.be/LEHLdoBEr4Q?t=1474), but this is unnecessary in most cases.  
 
 Both USB2AX adapters have to be plugged to the USB sockets of the Raspi3 at the bottom of the head. If you mess up with wiring, at first startup, software will report missing motors or too much motors or the same bus.
 
