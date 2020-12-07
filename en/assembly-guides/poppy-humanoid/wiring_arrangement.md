@@ -14,7 +14,7 @@ The drawing below shows the 2 data and power buses: cables connecting motors are
 
 ![](../../img/humanoid/humanoid-wires.png)
 
-(1) N.B.: In some situations it may be useful to connect both power buses together by adding a 4-wire cable and cutting out its data bus, as shown [in the video](https://youtu.be/LEHLdoBEr4Q?t=1474), but this is unnecessary in most cases.  
+(1) N.B.: If you own a single power supply unit, you may connect both power buses together by adding a 4-wire cable and cutting out its data bus so that only 1 SMPS2Dynamixel is powered, as shown [in the video](https://youtu.be/LEHLdoBEr4Q?t=1474). But this is unnecessary in most cases since robots are sold with 2 power supply units.
 
 Both USB2AX adapters have to be plugged to the USB sockets of the Raspi3 at the bottom of the head. If you mess up with wiring, at first startup, software will report missing motors or too much motors or the same bus.
 
