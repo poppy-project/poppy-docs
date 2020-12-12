@@ -1,10 +1,11 @@
 # Zeroconf / Bonjour
-[Zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) also called Bonjour (name of Apple implementation) is set of technologies that allow more easily communication between computers without configuration.
+[Zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) also called **Bonjour** (name of Apple implementation) or **Avahi** (name of Linux implementation), is a set of technologies that allow more easily communication between computers without configuration.
+
 To be short:
 - It makes able to reach the robot on your local network **without** having to know its IP address
 - It makes able to connect the robot to your computer directly with an Ethernet wire **without using a router**, and without a DHCP server.
 
-> **Info** Zeroconf is not mandatory on your computer to use Poppy robots, it is strongly recommended, and the documentation will assume it is installed. Otherwise replace all *poppy.local* occurrences by the IP address of the robot given by your router.
+> **Info** Zeroconf is not mandatory on your computer to use Poppy robots, but it is strongly recommended, and the documentation will assume it is installed. Otherwise replace all *poppy.local* occurrences by the IP address of the robot given by your router.
 
 ## Installation
 
@@ -21,7 +22,7 @@ On GNU/Linux, you have to install *avahi-daemon* (mDNS) and *avahi-autoipd* (IPv
 
 On Ubuntu/Debian, run
 ```bash
-sudo apt-get install avahi-daemon avahi-autoipd
+sudo apt install avahi-daemon avahi-autoipd
 ```
 
 On Fedora / CentOS, run
@@ -35,9 +36,7 @@ To connect to your robot directly with an Ethernet wire, you need to select **lo
 ### Mac OSX
 Bonjour is already installed with OSX. Moreover, if you plan to connect your computer directly to the robot (without a router), use a Thunderbolt to Ethernet adapter rather than a USB to Ethernet
 
-You ready to follow your [installation path](README.md).
-
-## What Zeroconf does for you
+## Advanced information: What Zeroconf does for you
 ### Local domain name (mDNS)
 
 Zeroconf client *publishes* a decentralized local domain name (mDNS) with the '.local' top level domain. It means that you can join any local local computer by its hostname with the '.local' suffix instead of its IP address.
@@ -57,15 +56,16 @@ Among other Zeroconf tools, there is an implementation of decentralized DHCP ([I
 
 The auto-adressed IP is in the [APIPA](https://en.wikipedia.org/wiki/Link-local_address#IPv4) range, from 169.254.0.0 to 169.254.255.255.
 
-You can plug a robot to your computer **directly** on your computer with an Ethernet cable, **without** any router and connect it with its local domain name (hostname.local).
+This is why you may see thiese unusual IP addressses when connecting your robot to your computer. Whereas, in presence of a DHCP server, IP addresses of computers and robots are from 10.0.0.0 to 10.255.255.255 or 172.16.0.0 to 172.31.255.255 or, more frequently, 192.168.0.0 to 192.168.255.255. You might observe that, if you enable the internal hotspot of Poppy, addresses are from 10.0.0.0 to 10.255.255.255.
 
-> **Warning** You will be able to use the local-link IPv4 address **only** if you installed your robots after end of May 2016. Previously *avahi-autoipd* packet was missing.
+This way, it is possible to connect your robot directly to your computer with a single Ethernet cable because no intermediary device like a router or any DHCP server is needed to provide the IP addresses, they are self-assigned.
 
 
 ## Alternatives to find the IP address of a computer on your local network
 If you cannot (or doesn't want to) install a zeroconf client on your personal computer, you can use one of the following methods to find the IP address of your robot.
 
-* You can use [Fing](https://www.fingbox.com/download), famous for its [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing) and [iOS](https://itunes.apple.com/fr/app/fing-network-scanner/id430921107?mt=8) applications,
+* You can use [Fing](https://www.fingbox.com/download), famous for its [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing) and [iOS](https://itunes.apple.com/fr/app/fing-network-scanner/id430921107?mt=8) applications
+* If you are connected in Wifi through a smartphone via its accept point feature (Android or iOS), most access points display a list of connected clients as well as their associated IP address 
 * [Nmap](https://nmap.org/book/man-host-discovery.html) or arp(only GNU/Linux and MAC OSX) if you are not afraid of command line interfaces.
   ```
   nmap -sn 192.168.1.0/24

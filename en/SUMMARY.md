@@ -68,7 +68,5 @@
 
 ## Appendix
 
-* [Network](appendix/network.md)
+* [Troubleshooting](appendix/faq.md)
 * [Contribute](appendix/contribute.md)
-* [FAQ](appendix/faq.md)
-    <!-- - [Raspoppy](appendix/raspoppy.md) -->

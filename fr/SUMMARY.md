@@ -49,8 +49,7 @@
     * [Poppy Humanoid](software-libraries/poppy-humanoid.md)
     * [Poppy Torso](software-libraries/poppy-torso.md)
 
-## Annexe
+## Annexes
 
-* [Réseau](appendix/network.md)
+* [Résolution des problèmes](appendix/faq.md)
 * [Contribuez](appendix/contribute.md)
-* FAQ <!-- - [Raspoppy](appendix/raspoppy.md) -->
