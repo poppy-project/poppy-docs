@@ -58,3 +58,7 @@ This may be due to old cables. Especially if you feel that cables are rigid comp
 ## Problem 3: My robot makes weird motions or auto-collides
 
 If you robot makes motions that are not those that you expect or even collides with itself, it is probably because you assembled the robot the wrong way. Open the assembly guide again, and observe carefully that every part of your assembly matches the pictures. It is very easy to build a robot that looks properly assembled but that is not.
+
+## Problem 4 : What is the default SSH password of my robot?
+
+A password is needed only for SSH access (advanced users). With the regular Poppy image, the username is `poppy` and the password is `poppy`. With the ROS image, the username is  `pi` and the password is `raspberry`.
