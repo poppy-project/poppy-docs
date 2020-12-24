@@ -6,10 +6,10 @@ PROD_BRANCH=netlify
 echo -e "\e[34mStarting update_documentation.sh\e[39m : install deps"
 
 npm install -g gitbook-cli broken-link-checker http-server || die "install gitbook-cli"
-npm install -g gitbook@3.2.3 || die "install gitbook@3.2.3"
+#npm install -g gitbook@3.2.3 || die "install gitbook@3.2.3"
 gitbook install || die "run gitbook install"
 
-echo -e "\e[34mStarting update_documentation.sh\e[39m : build"
+echo -e "\e[34mupdate_documentation.sh\e[39m : build"
 
 gitbook build -d ./ || die "Build the documentation in HTML"
 
