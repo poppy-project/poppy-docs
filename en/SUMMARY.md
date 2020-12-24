@@ -5,10 +5,10 @@
 ### Getting started
 
 * [Getting started](getting-started/README.md)
-    * [Connect to the robot](getting-started/connect.md)
-    * [Program the robot](getting-started/program-the-robot.md)
-    * [Visualize](getting-started/visualize.md)
-    * [Examples of projects](getting-started/example-of-projects.md)
+    * [Connect to the robot](getting-started/connect.md)
+    * [Program the robot](getting-started/program-the-robot.md)
+    * [Visualize](getting-started/visualize.md)
+    * [Examples of projects](getting-started/example-of-projects.md)
 
 ### Robot assembly
 
