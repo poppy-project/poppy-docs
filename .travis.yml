@@ -1,6 +1,7 @@
 language: node_js
+dist: focal
 node_js:
-- 13
+- 10
 env:
   global:
   - GH_USERNAME=poppy-project
