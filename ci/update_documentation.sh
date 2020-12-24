@@ -6,7 +6,6 @@ PROD_BRANCH=netlify
 echo -e "\e[34mStarting update_documentation.sh\e[39m : build"
 
 gitbook build -d ./ || die "Build the documentation in HTML"
-gitbook pdf -d ./   || die "Build the documentation in PDF"
 
 echo -e "\e[34mupdate_documentation.sh\e[39m : check links"
 
@@ -39,7 +38,6 @@ echo -e "\e[34mupdate_documentation.sh\e[39m : Move the build to $PROD_BRANCH lo
 
 git clone -b $PROD_BRANCH $git_url $tmp_repo || die "clone branch $PROD_BRANCH"
 cp -r _book/* $tmp_repo/
-cp *.pdf $tmp_repo/
 
 echo -e "\e[34mupdate_documentation.sh\e[39m : Move the build to $PROD_BRANCH remote repo"
 
