@@ -9,12 +9,5 @@ env:
   - GIT_EMAIL=poppy-bot-ci@inria.fr
   - GIT_NAME=poppy-bot
   - secure: "Iz851CSp75Lh+PaZwvZxoQuW+RsoRg5EpjOtCBRujFjempLgo3D1tFN5ygU1RjKbqf/DmBNVuJOnOvh+7M4HmgbVv5OXDgx1fMyxiDpaV2p8ASUk97I2cT/SOKh5hgCj1l8/2U9SLhSz8QImUVqh0q47AIFtS4D4u6lb8v29im0R/LqnAtZLg9UON/QsLMu8uFAQD1QZpT8qqlBojW+cWQemOdM5285OX6Y/wWld+xvBnboojUkjr5HUU8k2CjvyRdELchojadDhc+7PIRswN9m8lyQ0IDMdrux77CM4uCSPNyFRvqqQZEpC9ZUi4p/o7RT022R/kxEGCir1JdYqQlIPDbM6KtYjnY9+UofsCev2CDpUD3WZvLkIjf1L08I88qMUgf+ayTUJWj43vv4jMURU6KscYOgkF/p2owE1jmEOZc5FWcXjvuQxkM4xolLVm1GUKNfyikOyPjfNY/HYDYTc/uU7XdqOPzYWvdAx9Se3QXPxgeOSjZhrcFFX9HDrHE2/TjGwyyXqQDG4c1Q0IcsWKOTnfiUCGSCKNZ8i6wkA0nS5oGpDN9I9ugdhlNgTU8oTpOlVpLLBtHzEInICO2ZK55HAnpL3KEaadkd2Tswp54ed1CkX4fhXeXwJ/maa78TkwHs1LNuxjXtNfF9WC0j8neDb8pV7k4Vn9bwuUV8="
-addons:
-  apt:
-    packages:
-    - calibre
-before_install:
-- npm install -g gitbook@3.2.3 gitbook-cli broken-link-checker http-server
-- gitbook install
 script:
 - ". ./ci/update_documentation.sh"
