@@ -55,10 +55,20 @@ D. If the green led `ACT` 🟢 flashes **irregularly** during about 45 seconds a
 
 This may be due to old cables. Especially if you feel that cables are rigid compared to brand new cables, while they should be flexible. Old cable may cause communication issues. Change them with brand new cables.
 
-## Problem 3: My robot makes weird motions or auto-collides
+## Problem 3: I can see frequent errors about the pos/speed/load sync loop
+
+The pos/speed/load sync loop is responsible for the communication with the motors. Any error dealing with it may result from an altered signal from the motors.
+
+Most of the time, such errors happen punctually and will be fixed after a motor reboot (disconnect and disconnect the power supply of the motors) or just a new connection attempt from the software (by restarting the Robot API or from Jupyter Notebook if you are using Python).
+
+If these errors are frequent, here are a few hints to identify (and then fix) the issue:
+* Replace the power supply (wall adapter) by a new one. Make sure you use a good quality power supply, cheap ones may generate an unstable power that could interfere with electronics.
+* Replace the motor cables (check problem 2 for more information) 
+
+## Problem 4: My robot makes weird motions or auto-collides
 
 If you robot makes motions that are not those that you expect or even collides with itself, it is probably because you assembled the robot the wrong way. Open the assembly guide again, and observe carefully that every part of your assembly matches the pictures. It is very easy to build a robot that looks properly assembled but that is not.
 
-## Problem 4 : What is the default SSH password of my robot?
+## Problem 5: What is the default SSH password of my robot?
 
 A password is needed only for SSH access (advanced users). With the regular Poppy image, the username is `poppy` and the password is `poppy`. With the ROS image, the username is  `pi` and the password is `raspberry`.

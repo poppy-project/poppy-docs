@@ -53,10 +53,21 @@ D. Si la LED verte `ACT` 🟢 vacille de manière **irrégulière** pendant envi
 
 Ceci est souvent dû à des câbles déteriorés. C'est d'autant plus flagrant si vous sentez en les manipulant que les câbles sont rigides par rapport à des câbles neufs, alors qu'ils devraient être souples. Ceci cause des problèmes de communication. Changez les câbles par des câbles neufs.
 
-## Problème 3 : Mon robot fait des mouvements bizarres ou s'auto-collisionne
+## Problème 3: Je visualize des erreurs fréquentes à propos de la boucle "pos/speed/load sync loop"
+
+La boucle "pos/speed/load sync loop" est la routine du robot responsable de la communication avec les moteurs. Toute erreur de cette routine peut survenir d'un signal altéré en provenance des moteurs.
+
+La plupart du temps, de telles erreurs sont ponctuelles et sont résolues après un reboot des moteurs (débrancher puis rebrancher l'alimentation des moteurs) ou une simple reconnexion logicielle (en redémarrant l'API du robot via les boutons prévus dans l'interface graphique ou en ré-établissant une connexion via Jupyter si vous utilisez Python).
+
+Si ces erreurs sont trop fréquentes, voici quelques pistes pour vous aider à identifier (et ensuite régler) le problème :
+
+* Remplacez le bloc secteur par un nouveau. Utilisez un adaptateur secteur qualitatif, ceux de qualité moyenne peuvent générer un courant instable qui pourrait interférer avec la communication électronique
+* Remplacez les câbles de connexion des moteurs (cf le problème 2 pour plus d'information)
+
+## Problème 4 : Mon robot fait des mouvements bizarres ou s'auto-collisionne
 
 Si votre robot fait des mouvements qui ne correspondent pas à ce que vous attendez ou qui font que poppy s'auto-collisionne, c'est probablement que vous avez assemblé votre robot à l'envers. Reprenez chacune des étapes une par une et vérifiez attentivement que votre les pièces de votre robot sont en tout point positionnées identiquement au photos ou schémas. Il est assez facile de se tromper et d'obtenir un robot qui a l'air bien assemblé, alors qu'il ne l'est pas.
 
-## Problème 4 : Quels est le mot de passe SSH par défaut de mon robot ?
+## Problème 5 : Quels est le mot de passe SSH par défaut de mon robot ?
 
 Un mot de passe est demandé exclusivement pour l'accès à votre robot via SSH, pour les utilisateurs avancés. Avec l'image Poppy standard, le nom d'utilisateur est `poppy` et son mot de passe est `poppy`. Avec l'image ROS, le nom d'utilisateur est `pi` et son mot de passe est `raspberry`.
