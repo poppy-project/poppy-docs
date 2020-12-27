@@ -1,0 +1,3 @@
+[build]
+  publish = "_book"
+  command = "./ci/deploy-to-netlify.sh"
