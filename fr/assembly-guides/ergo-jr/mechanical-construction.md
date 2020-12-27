@@ -8,7 +8,7 @@
 
 ![Assemblage des rivets OLLO](img/assembly/ollo_rivet.png)
 
-* Il y a 2 sortes de rivetsThere are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis, at the opposite side of the horn (black revolving circle).
+* Il y a 2 sortes de rivets : les rivets gris, et tous les autres. Les rivets gris sont plus long, de manière à pouvoir être insérés dans les axes, à l'opposé du palonnier (la roue noire du moteur).
 
 <img src="img/assembly/ollo_rivets_size.jpg" alt="Taille des rivets OLLO" height="200" />
 

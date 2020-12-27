@@ -68,6 +68,6 @@ Si ces erreurs sont trop fréquentes, voici quelques pistes pour vous aider à i
 
 Si votre robot fait des mouvements qui ne correspondent pas à ce que vous attendez ou qui font que poppy s'auto-collisionne, c'est probablement que vous avez assemblé votre robot à l'envers. Reprenez chacune des étapes une par une et vérifiez attentivement que votre les pièces de votre robot sont en tout point positionnées identiquement au photos ou schémas. Il est assez facile de se tromper et d'obtenir un robot qui a l'air bien assemblé, alors qu'il ne l'est pas.
 
-## Problème 5 : Quels est le mot de passe SSH par défaut de mon robot ?
+## Problème 5 : Quel est le mot de passe SSH par défaut de mon robot ?
 
 Un mot de passe est demandé exclusivement pour l'accès à votre robot via SSH, pour les utilisateurs avancés. Avec l'image Poppy standard, le nom d'utilisateur est `poppy` et son mot de passe est `poppy`. Avec l'image ROS, le nom d'utilisateur est `pi` et son mot de passe est `raspberry`.
