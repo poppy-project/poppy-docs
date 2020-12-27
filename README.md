@@ -14,7 +14,6 @@ There are some of places where you can find something to contribute to:
 
 * The issues in the [issue tracker](https://github.com/poppy-project/poppy-docs/issues).
 * The [TODO links or comments](https://github.com/poppy-project/poppy-docs/search?utf8=%E2%9C%93&q=TODO) in the markdown files.
-* The broken links in the travis-ci logs (the ci build will fail if there are broken links) [![Build Status](https://travis-ci.org/poppy-project/poppy-docs.svg?branch=master)](https://travis-ci.org/poppy-project/poppy-docs).
 
 ## Editing basics
 
