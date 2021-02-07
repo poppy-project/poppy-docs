@@ -72,3 +72,11 @@ If you robot makes motions that are not those that you expect or even collides w
 ## Problem 5: What is the default SSH password of my robot?
 
 A password is needed only for SSH access (advanced users). With the regular Poppy image, the username is `poppy` and the password is `poppy`. With the ROS image, the username is  `pi` and the password is `raspberry`.
+
+## problem 6: The STL files seem corrupted
+
+In all Poppy repositories, heavy resources -such as STL files- are stored via [Git Large File Storage (LFS)](https://git-lfs.github.com/). Hence, you must use Git LFS to download them.
+
+Some git clients support LFS, some others do not ([including the `Download ZIP` button from Github](https://github.com/git-lfs/git-lfs/issues/903)). In that case, the files that you download will appear to be corrupted and with a very low size (a few Bytes).
+
+**Solution:** [download a LFS-compatible git client](https://github.com/git-lfs/git-lfs/releases/latest), install it, and use that client in order to grab STL files from Poppy repositories.

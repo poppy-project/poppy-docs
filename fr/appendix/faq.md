@@ -71,3 +71,11 @@ Si votre robot fait des mouvements qui ne correspondent pas à ce que vous atten
 ## Problème 5 : Quel est le mot de passe SSH par défaut de mon robot ?
 
 Un mot de passe est demandé exclusivement pour l'accès à votre robot via SSH, pour les utilisateurs avancés. Avec l'image Poppy standard, le nom d'utilisateur est `poppy` et son mot de passe est `poppy`. Avec l'image ROS, le nom d'utilisateur est `pi` et son mot de passe est `raspberry`.
+
+## Problème 6 : les fichiers STL que je télécharge semblent corrompus
+
+Sur les dépôts Poppy, les ressources lourdes -dont les fichiers STL- sont stockées via [Git Large File Storage (LFS)](https://git-lfs.github.com/). A ce titre, il est nécessaire d'utiliser Git LFS pour les télécharger.
+
+Certains clients git prennent en charge LFS, d'autres non ([y compris le bouton `Download ZIP` de Github](https://github.com/git-lfs/git-lfs/issues/903)). Dans ce dernier cas les fichiers que vous téléchargerez sembleront corrompus et de petite taille (une centaine d'octets). 
+
+**Solution :** Veuillez [télécharger un client compatible LFS](https://github.com/git-lfs/git-lfs/releases/latest), l'installer, puis utiliser ce client pour récupérer les fichiers STL des dépôts Poppy.
