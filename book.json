@@ -18,7 +18,6 @@
         "page-toc",
         "richquotes",
         "search-plus",
-        "sitemap",
         "toggle-chapters",
         "toggle-headers",
         "youtube"
@@ -35,9 +34,6 @@
         },
         "github": {
             "url": "https://github.com/poppy-project/poppy-docs"
-        },
-        "sitemap": {
-            "hostname": "https://docs.poppy-project.org/"
         },
         "edit-link": {
             "base": "https://github.com/poppy-project/poppy-docs/edit/master/",
