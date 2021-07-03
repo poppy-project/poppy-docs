@@ -1,34 +1,12 @@
-# Installation de l'environnement de simulation robotique CoppeliaSim (CoppeliaSim)
+# Installation de l'environnement de simulation robotique CoppeliaSim (anciennement V-REP)
 
 > **Info** Vous devez installer les [logiciels Poppy](install-poppy-softwares.md) avant d'installer l'outil de simulation robotique CoppeliaSim.
 
 [ CoppeliaSim](http://www.coppeliarobotics.com) est un simulateur robotique efficace principalement Open source (GNU GPL), qui est distribué sous une licence gratuite pour les établissements scolaires et propose une licence commerciale pour les autres secteurs. Il existe également une version *PRO EVAL* qui empêche seulement de sauvegarder. Vous n'avez pas besoin de sauvegarder la scène CoppeliaSim pour l'utiliser avec pypot (la bibliothèque Python conçue pour les créatures Poppy), nous vous suggérons donc d'installer cette version sans vous inquiéter d'éventuelles violations de droit d'auteur. Si vous souhaitez modifier la scène CoppeliaSim pour ajouter ou personnaliser une créature Poppy, vous devrez utiliser la version PRO ou la version EDU (la licence éducative).
 
-## Installation de CoppeliaSim sous Windows
+## Installation de CoppeliaSim
 
-[Télécharger  CoppeliaSim](http://www.coppeliarobotics.com/) PRO EVAL ou EDU (si vous êtes un établissement scolaire). CoppeliaSim n'étant pas signé, vous devrez valider la fenêtre popup SmartScreen (sur Windows 10) pour commencer l'installation. ![VREP_smartscreen](../img/vrep/vrep2.png)
-
-Pendant l'installation, veillez à installer * Visual C++ Redistributable 2010 * et * Visual C++ Redistributable 2012 *. ![cpp2010](../img/vrep/lucvincent/luc_vincent-056.png)
-
-![cpp2012](../img/vrep/lucvincent/luc_vincent-059.png)
-
-Si les versions de * Visual C++ Redistributable 2010 * ou * Visual C++ Redistributable 2012 * sont déjà présent sur votre ordinateur, il est conseillé de les "réparer" (il s'agit du processus de ré-installation).
-
-![cpp2012](../img/vrep/lucvincent/luc_vincent-060.png)
-
-**Après l'installation, vous pouvez[ réaliser un test pour vérifier si CoppeliaSim fonctionne bien ](#test-your-installation) **.
-
-## Installation sous MAC OSX
-
-<!-- TODO -->
-
-> **Attention** Ce paragraphe doit être complété. Votre aide est la bienvenue !
-
-## Installation sous GNU/Linux
-
-<!-- TODO -->
-
-> **Attention** Ce paragraphe doit être complété. Votre aide est la bienvenue !
+[Télécharger  CoppeliaSim](http://www.coppeliarobotics.com/) en suivant les instructions pour votre système. Selon la version de votre système, il se peut que vous deviez utiliser avec Poppy une ancienne version de CoppeliaSim/V-REP. Sous Windows utilisez [V-REP 3.3.0](https://v-rep-pro-edu.software.informer.com/download/). Sous Linux utilisez la toute dernière version de CoppeliaSim (dernier essai avec CoppeliaSIM 4.2.0 + python3.6.12  + Ubuntu 20.04).
 
 ## Testez votre installation
 
@@ -51,10 +29,12 @@ Lorsque la configuration de CoppeliaSim est finie, vous pouvez exécuter la dern
     poppy-services --snap --vrep poppy-torso
     
 
-Si vous voyez une fenêtre popup de votre pare-feu, comme l'image ci-dessous, assurez-vous de vérifier que "réseau privé" est coché.
+Un nouvel onglet s'ouvre sur votre navigateur Web par défaut. Vous pouvez débuter la programmation de votre robot dans Snap_! _ ou en Python comme avec un robot tangible.
+
+![jupyter notebook](../img/vrep/lucvincent/luc_vincent-070.jpg)
+
+Note : Sous Windows, si vous voyez une fenêtre popup de votre pare-feu, comme l'image ci-dessous, assurez-vous de vérifier que "réseau privé" est coché.
 
 ![pare-feu](../img/vrep/vrep4.png)
 
-Si tout fonctionne bien, un nouvel onglet a été ouvert sur votre navigateur Web par défaut. <-TODO: lien doc-> Vous pouvez débuter la programmation de votre robot dans Snap_! _ ou en Python.
 
-![jupyter notebook](../img/vrep/lucvincent/luc_vincent-070.jpg)
