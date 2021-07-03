@@ -1,5 +1,5 @@
 #!/bin/bash
-die(){ echo "Coudn't $*" >&2; exit 1; }
+die(){ echo "Couldn't $*" >&2; exit 1; }
 
 echo -e "\e[36mStarting update_documentation.sh\e[39m: install deps"
 
