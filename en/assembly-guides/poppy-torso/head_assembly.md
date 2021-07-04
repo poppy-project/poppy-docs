@@ -1,5 +1,10 @@
 # 7. Poppy Torso: Head Assembly
 
+## Warning about head version
+
+This is the assembly guide of the original Poppy head version, based on Raspberry Pi 4 with Manga screen v1 that is no longer manufactured and replaced by a plastic cover.
+If you have a Raspberry Pi 4 based head with a screen, please consult the **documentation and configuration instructions of Poppy Eve head**.
+
 ## Bill of Material for the head
 3D printed parts:
 * Neck (U-shaped part)

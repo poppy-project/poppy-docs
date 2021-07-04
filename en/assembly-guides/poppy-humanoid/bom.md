@@ -63,12 +63,12 @@ Prepare a clear workbench that you may keep busy for a few days with all of thes
 - 1x 12V power supply
 - 1x USB2AX
 
-## 3. Head BOM (Raspberry Pi 3 version)
+## 3. Head BOM option A: Raspberry Pi 3 version, no screen
 
 **3D Printed parts**:
 - 1x Head face
 - 1x Head back
-- 1x Fake manga screen (flat fake screen if no actual screen is mounted)
+- 1x Fake manga screen (replaces Manga screen that is no longer manufactured)
 - 1x Screen support
 - 1x Camera support
 - 1x Speaker left support
@@ -82,6 +82,10 @@ Prepare a clear workbench that you may keep busy for a few days with all of thes
 - 2x Speaker
 - 1x Audio amp
 - 1x Raspberry Pi 3 + its SD card
+
+## 3. Head BOM option B: Raspberry Pi 4 version, including screen (aka **Poppy Eve**)
+
+This head version has its own documentation online, please refer to [the documentation of **Poppy Eve** for the assembly and software configuration](https://github.com/poppy-project/Poppy-eve-head-design#poppy-eve-head-design).
 
 ## 4. Tools
 Please note that you will also need:
