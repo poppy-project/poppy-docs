@@ -65,6 +65,8 @@ If these errors are frequent, here are a few hints to identify (and then fix) th
 * Replace the power supply (wall adapter) by a new one. Make sure you use a good quality power supply, cheap ones may generate an unstable power that could interfere with electronics.
 * Replace the motor cables (check problem 2 for more information) 
 
+Similar communication troubles may trigger errors of type `DxlError`. With the Torso or Humanoid, you may try to [cut the central wire of the cable directly connected to the USB2AX](../assembly-guides/poppy-humanoid/warnings.html#warning-5-your-robot-is-sensitive-to-interferences).
+
 ## Problem 4: My robot makes weird motions or auto-collides
 
 If you robot makes motions that are not those that you expect or even collides with itself, it is probably because you assembled the robot the wrong way. Open the assembly guide again, and observe carefully that every part of your assembly matches the pictures. It is very easy to build a robot that looks properly assembled but that is not.

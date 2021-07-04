@@ -64,6 +64,8 @@ Si ces erreurs sont trop fréquentes, voici quelques pistes pour vous aider à i
 * Remplacez le bloc secteur par un nouveau. Utilisez un adaptateur secteur qualitatif, ceux de qualité moyenne peuvent générer un courant instable qui pourrait interférer avec la communication électronique
 * Remplacez les câbles de connexion des moteurs (cf le problème 2 pour plus d'information)
 
+Des problèmes de communicaiton similaires peuvent déclencher des exceptions de type `DxlError`. Avec Poppy Torso ou Humanoid, vous pouvez essayer de [couper le fil central du cable directement connecté à l'USB2AX](../en/assembly-guides/poppy-humanoid/warnings.html#warning-5-your-robot-is-sensitive-to-interferences).
+
 ## Problème 4 : Mon robot fait des mouvements bizarres ou s'auto-collisionne
 
 Si votre robot fait des mouvements qui ne correspondent pas à ce que vous attendez ou qui font que poppy s'auto-collisionne, c'est probablement que vous avez assemblé votre robot à l'envers. Reprenez chacune des étapes une par une et vérifiez attentivement que votre les pièces de votre robot sont en tout point positionnées identiquement au photos ou schémas. Il est assez facile de se tromper et d'obtenir un robot qui a l'air bien assemblé, alors qu'il ne l'est pas.
