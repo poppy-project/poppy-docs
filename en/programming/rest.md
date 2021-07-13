@@ -1,18 +1,8 @@
-# Pypot API
+# Pypot's REST API
 
-> **Caution** REST API has recently been updated. This page presents the documentation for the new API version (12/07/2021)
+> **Caution** REST API has been updated in v4.0.0. This page presents the documentation of the v4.0.0 API.
 
 The Pypot API is organized around [REST](https://en.wikipedia.org/wiki/Representational_state_transfer "Representational state transfer"). Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes.
-
-# :book: Summary
-
-1. [Errors](#errors)
-2. [Endpoints](#endpoints)
-    1. [Miscellaneous](#electric_plug-miscellaneous)
-    2. [Motors](#gear-motors)
-    3. [Sensors](#camera-sensors)
-    4. [Records](#mechanical_arm-records)
-    5. [Primitives](#robot-primitives)
 
 # Errors
 
@@ -28,9 +18,9 @@ Pypot uses conventional HTTP response codes to indicate the success or failure o
 
 # Endpoints
 
-## :electric_plug: Miscellaneous
+## 🔌 Miscellaneous
 
-#### :book: Summary
+#### 📕 Summary
 
 ```nginx
 GET /
@@ -54,11 +44,48 @@ Gives all endpoints of the REST API in an HTML format
 `curl http://poppy.local:8080/`
 
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
-<b>All url paths availables:</b><br><b>Get method url:</b><br>/<br>/robot.json<br>/ip.json<br>/motors/list.json<br>/motors/aliases/list.json<br>/motors/<alias>/list.json<br>/motors/<motor_name>/registers/list.json<br>/motors/<motor_name>/registers/<register_name>/value.json<br>/motors/registers/<register_name>/list.json<br>/sensors/list.json<br>/sensors/<sensor_name>/registers/list.json<br>/sensors/<sensor_name>/registers/<register_name>/value.json<br>/records/list.json<br>/records/<move_name>/value.json<br>/primitives/list.json<br>/primitives/running/list.json<br>/primitives/<primitive_name>/start.json<br>/primitives/<primitive_name>/stop.json<br>/primitives/<primitive_name>/pause.json<br>/primitives/<primitive_name>/resume.json<br>/primitives/<primitive_name>/properties/list.json<br>/primitives/<primitive_name>/properties/<prop>/value.json<br>/primitives/<primitive_name>/methods/list.json<br><br><b>Post method url:</b><br>/motors/<motor_name>/registers/<register_name>/value.json<br>/motors/<motor_name>/goto.json<br>/motors/goto.json<br>/sensors/<sensor_name>/registers/<register_name>/value.json<br>/records/<move_name>/record.json<br>/records/<move_name>/save.json<br>/records/<move_name>/play.json<br>/records/<move_name>/stop.json<br>/records/<move_name>/delete.json<br>/primitives/<primitive_name>/properties/<prop>/value.json<br>/primitives/<primitive_name>/methods/<method_name>/args.json<br>
-</details>
+```
+All url paths availables:
+
+Get method url:
+/robot.json
+/ip.json
+/motors/list.json
+/motors/aliases/list.json
+/motors/<alias>/list.json
+/motors/<motor_name>/registers/list.json
+/motors/<motor_name>/registers/<register_name>/value.json
+/motors/registers/<register_name>/list.json
+/sensors/list.json<br>/sensors/<sensor_name>/registers/list.json
+/sensors/<sensor_name>/registers/<register_name>/value.json
+/records/list.json
+/records/<move_name>/value.json
+/primitives/list.json
+/primitives/running/list.json
+/primitives/<primitive_name>/start.json
+/primitives/<primitive_name>/stop.json
+/primitives/<primitive_name>/pause.json
+/primitives/<primitive_name>/resume.json
+/primitives/<primitive_name>/properties/list.json
+/primitives/<primitive_name>/properties/<prop>/value.json
+/primitives/<primitive_name>/methods/list.json
+
+Post method url:
+/motors/<motor_name>/registers/<register_name>/value.json
+/motors/<motor_name>/goto.json
+/motors/goto.json
+/sensors/<sensor_name>/registers/<register_name>/value.json
+/records/<move_name>/record.json
+/records/<move_name>/save.json
+/records/<move_name>/play.json
+/records/<move_name>/stop.json
+/records/<move_name>/delete.json
+/primitives/<primitive_name>/properties/<prop>/value.json
+/primitives/<primitive_name>/methods/<method_name>/args.json
+```
+
 
 - - -
 
@@ -76,8 +103,7 @@ Get all robot values, such as motors attribute values, or primitive methods.
 
 `curl http://poppy.local:8080/robot.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 On a Poppy Torso:
 ```json
@@ -855,7 +881,7 @@ On a Poppy Torso:
 }
 ```
 
-</details>
+
 
 - - -
 
@@ -872,19 +898,19 @@ Gets the ip of the robot.
 
 `curl http://poppy.local:8080/ip.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "ip": "10.2.11.54"
 }
 ```
-</details>
 
-## :gear: Motors
 
-#### :book: Summary
+
+## ⚙ Motors
+
+#### 📕 Summary
 
 ```nginx
 GET /motors/list.json
@@ -910,10 +936,10 @@ Gives the list of all Poppy's motors.
 
 `curl http://poppy.local:8080/motors/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 On a Poppy Torso:
+
 ```json
 {
     "motors":
@@ -935,8 +961,6 @@ On a Poppy Torso:
 }
 ```
 
-</details>
-
 - - -
 
 ### Getting the list of motor aliases
@@ -952,8 +976,7 @@ Aliases define a group of motors. This get request will give you all alias names
 
 `curl http://poppy.local:8080/motors/aliases/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 On a Poppy Torso:
 ```json
@@ -968,8 +991,6 @@ On a Poppy Torso:
     ]
 }
 ```
-
-</details>
 
 - - -
 
@@ -986,8 +1007,7 @@ Gives all the motor names list of motors of an alias
 
 `curl http://poppy.local:8080/motors/head/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 On a Poppy Torso:
 ```json
@@ -999,9 +1019,6 @@ On a Poppy Torso:
     ]
 }
 ```
-
-
-</details>
 
 - - -
 
@@ -1018,8 +1035,7 @@ Gives the list of all registers of a motor.
 
 `curl http://poppy.local:8080/motors/head_z/registers/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 On a Poppy Torso:
 ```json
@@ -1050,8 +1066,6 @@ On a Poppy Torso:
 }
 ```
 
-</details>
-
 - - -
 
 ### Getting the value of a motor register
@@ -1067,16 +1081,13 @@ Gives the value of a register of a motor. Motor name and register name are given
 
 `curl http://poppy.local:8080/motors/head_z/registers/present_temperature/value.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "present_temperature": 37.0
 }
 ```
-
-</details>
 
 - - -
 
@@ -1098,16 +1109,13 @@ curl -X POST \
      http://poppy.local:8080/motors/head_z/registers/compliant/value.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "compliant": true
 }
 ```
-
-</details>
 
 - - -
 
@@ -1124,8 +1132,7 @@ It gives the value of a register for all motors.
 
 `curl http://poppy.local:8080/motors/registers/angle_limit/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 On a Poppy Torso:
 ```json
@@ -1201,8 +1208,6 @@ On a Poppy Torso:
 }
 ```
 
-</details>
-
 - - -
 
 ### Moving a motor
@@ -1227,8 +1232,7 @@ curl -X POST \
      http://localhost\:8080/motors/bust_y/goto.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1240,8 +1244,6 @@ curl -X POST \
     "waiting": true
 }
 ```
-
-</details>
 
 - - -
 
@@ -1265,8 +1267,7 @@ curl -X POST \
      http://localhost\:8080/motors/goto.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1280,11 +1281,9 @@ curl -X POST \
 }
 ```
 
-</details>
+## 📷 Sensors
 
-## :camera: Sensors
-
-#### :book: Summary
+#### 📕 Summary
 
 ```nginx
 GET /sensors/list.json
@@ -1308,8 +1307,7 @@ Gives the list of all sensors the Poppy robot.
 
 `curl http://poppy.local:8080/sensors/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1320,8 +1318,6 @@ Gives the list of all sensors the Poppy robot.
     ]
 }
 ```
-
-</details>
 
 - - -
 
@@ -1338,8 +1334,7 @@ Gives the list of register names of a sensor.
 
 `curl http://poppy.local:8080/sensors/camera/registers/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1352,8 +1347,6 @@ Gives the list of register names of a sensor.
     ]
 }
 ```
-
-</details>
 
 - - -
 
@@ -1370,8 +1363,7 @@ Gives the value of a register of a sensor.
 
 `curl http://poppy.local:8080/sensors/camera/registers/resolution/value.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1382,8 +1374,6 @@ Gives the value of a register of a sensor.
     ]
 }
 ```
-
-</details>
 
 - - -
 
@@ -1396,7 +1386,7 @@ POST /sensors/<sensor_name>/registers/<register_name>/value.json + new_value
 
 Changes the value of a register of a sensor. Sensor name and register name are given in the url. The new value is given in the body request.
 
-**:warning: This post request could not be tested because our Poppies only have read-only sensor registers :warning:**
+**⚠ This post request could not be tested because our Poppies only have read-only sensor registers ⚠**
 
 <b>cURL command example</b>
 
@@ -1407,25 +1397,21 @@ curl -X POST \
      http://poppy.local:8080/sensors/camera/registers/fps/value.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 Returns the following error:
 ```json
 {
     "error": "Either sensor 'camera' or register 'fps' does not exist. Or you want to change a read-only register value",
     "tip": "You can find the list of sensors with /sensors/list.json and their registers with /sensors/<sensor_name>/registers/list.json",
-    "details": "can't set attribute"
+   
+: "can't set attribute"
 }
 ```
 
+## 🦾 Records
 
-</details>
-
-
-## :mechanical_arm: Records
-
-#### :book: Summary
+#### 📕 Summary
 
 ```nginx
 GET /records/list.json
@@ -1450,8 +1436,7 @@ Gives the list of all recorded moves by the user.
 
 `curl http://poppy.local:8080/records/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1463,8 +1448,6 @@ Gives the list of all recorded moves by the user.
     ]
 }
 ```
-
-</details>
 
 - - -
 
@@ -1483,8 +1466,7 @@ The answer will give all positions for each recorded motor every 0.2 second in t
 
 `curl http://poppy.local:8080/records/my_move/value.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1690,8 +1672,6 @@ The answer will give all positions for each recorded motor every 0.2 second in t
 }
 ```
 
-</details>
-
 - - -
 
 ### Recording a move
@@ -1715,16 +1695,13 @@ curl -X POST \
      http://localhost:8080/records/my_move/record.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "my_move": "recording"
 }
 ```
-
-</details>
 
 - - -
 
@@ -1747,16 +1724,13 @@ curl -X POST \
      http://localhost:8080/records/my_move/save.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "my_move": "saved"
 }
 ```
-
-</details>
 
 - - -
 
@@ -1782,16 +1756,13 @@ curl -X POST \
      http://localhost:8080/records/my_move/play.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "my_move": "started replay"
 }
 ```
-
-</details>
 
 - - -
 
@@ -1814,8 +1785,7 @@ curl -X POST \
      http://localhost:8080/records/my_move/stop.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1823,11 +1793,9 @@ curl -X POST \
 }
 ```
 
-</details>
+## 🤖 Primitives
 
-## :robot: Primitives
-
-#### :book: Summary
+#### 📕 Summary
 
 ```nginx
 GET /primitives/list.json
@@ -1858,8 +1826,7 @@ Primitives are predefined behaviours of our Poppy robots. You can add your own p
 
 `curl http://poppy.local:8080/primitives/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1879,8 +1846,6 @@ Primitives are predefined behaviours of our Poppy robots. You can add your own p
 }
 ```
 
-</details>
-
 - - -
 
 ### Getting the list of all running primitives
@@ -1896,8 +1861,7 @@ Same request as above but only gives the running primitives
 
 `curl http://poppy.local:8080/primitives/running/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -1907,9 +1871,6 @@ Same request as above but only gives the running primitives
     ]
 }
 ```
-
-
-</details>
 
 - - -
 
@@ -1928,16 +1889,13 @@ All existing primitives can be found with `GET /primitives/list.json` (described
 
 `curl http://poppy.local:8080/primitives/init_position/start.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "init_position": "started"
 }
 ```
-
-</details>
 
 - - -
 
@@ -1954,16 +1912,13 @@ Stops a previously running primitive.
 
 `curl http://poppy.local:8080/primitives/init_position/stop.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "init_position": "stopped"
 }
 ```
-
-</details>
 
 - - -
 
@@ -1980,16 +1935,13 @@ Pauses a previously running primitive.
 
 `curl http://poppy.local:8080/primitives/init_position/pause.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "init_position": "paused"
 }
 ```
-
-</details>
 
 - - -
 
@@ -2006,16 +1958,13 @@ Resumes a previously paused primitive.
 
 `curl http://poppy.local:8080/primitives/init_position/resume.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
     "init_position": "resumed"
 }
 ```
-
-</details>
 
 - - -
 
@@ -2032,8 +1981,7 @@ Gives the list of property names of a primitive.
 
 `curl http://poppy.local:8080/init_position/properties/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 Unfortunately, my primitives don't have any property.
 
@@ -2042,8 +1990,6 @@ Unfortunately, my primitives don't have any property.
     "property": []
 }
 ```
-
-</details>
 
 - - -
 
@@ -2062,12 +2008,9 @@ Unfortunately, my primitives don't have any property.
 
 `curl http://poppy.local:8080/primitives/init_position/properties/<prop>/value.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 Unfortunately, my primitives don't have any property.
-
-</details>
 
 - - -
 
@@ -2090,12 +2033,9 @@ curl -X POST \
      -d 'new_value' \
      http://poppy.local:8080/primitives/init_position/properties/<prop>/value.json
 ```
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 Unfortunately, my primitives don't have any property.
-
-</details>
 
 - - -
 
@@ -2112,8 +2052,7 @@ Gives the list of methods names of a primitive.
 
 `curl http://poppy.local:8080/primitives/init_position/methods/list.json`
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 ```json
 {
@@ -2126,8 +2065,6 @@ Gives the list of methods names of a primitive.
     ]
 }
 ```
-
-</details>
 
 - - -
 
@@ -2152,8 +2089,7 @@ curl -X POST \
      http://poppy.local:8080/primitives/init_position/methods/speed/args.json
 ```
 
-<details>
-    <summary><b>Returned value</b></summary>
+<b>Returned value</b>
 
 Previous example will return an error, because start method cannot take optionnal arguments.
 
@@ -2162,4 +2098,3 @@ But if it was the case, it would give an answer like :
 {"init_position:start": 1.0}
 ``` 
 As 1.0 being the return value of start function. Currently, start function doesn't return anything. 
-</details>
