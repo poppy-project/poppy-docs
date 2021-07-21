@@ -1,11 +1,17 @@
 # 8. Poppy Humanoid: Head Assembly
 
-## Warning about head version
+## Warning about Poppy Eve head version with Raspberry Pi 4
 
-This is the assembly guide of the original Poppy head version, based on Raspberry Pi 4 with Manga screen v1 that is no longer manufactured and replaced by a plastic cover.
-If you have a Raspberry Pi 4 based head with a screen, please consult the **documentation and configuration instructions of Poppy Eve head**.
+If you have a Raspberry Pi 4 based head with a screen, please consult the [documentation of **Poppy Eve** for the assembly and software configuration](https://github.com/poppy-project/Poppy-eve-head-design#poppy-eve-head-design).
 
-## Bill of Material for the head
+<img src="img/eve_head.jpg" title="Poppy Eve head design" style="width: 250px;" />
+
+## Bill of Material for the regular Raspberry Pi 3 head
+
+<img src="img/raspi3_head.jpg" title="Raspberry Pi 3 head" style="width: 500px;" />
+
+The following is the BOM of the original Poppy head version, based on Raspberry Pi 3 with Manga screen v1 that is no longer manufactured and replaced by a blank plastic cover.
+
 3D printed parts:
 * Neck (U-shaped part)
 <img src="img/head_bom_1.jpg" title="Neck" style="width: 250px;" />
