@@ -35,7 +35,7 @@ Pour découvrir comment fonctionne Snap et la programmation visuelle par blocs a
 <img src="../img/logo/python.png" alt="Fonctionnant avec Python" height="170">
 </p>
 
-Les librairies logicielles Poppy ont été écrites en Python, ce qui permet un développement et une extensibilité rapide, ainsi que de pouvoir utiliser n'importe quelle autre librairie scientifique. Python est d'ailleurs un langage très connu et largement utilisé dans les domaines de l'éducation et artistiques. En programmant Poppy en Python, vous aurez accès à tous les niveaux d'API, du plus bas au plus élevé.
+Les bibliothèques logicielles Poppy ont été écrites en Python, ce qui permet un développement et une extensibilité rapide, ainsi que de pouvoir utiliser n'importe quelle autre bibliothèque scientifique. Python est d'ailleurs un langage très connu et largement utilisé dans les domaines de l'éducation et artistiques. En programmant Poppy en Python, vous aurez accès à tous les niveaux d'API, du plus bas au plus élevé.
 
 L'API a été pensée pour du prototypage très rapide. Créer un robot et faire bouger ses moteurs ne doit pas prendre plus de quelques lignes :
 
