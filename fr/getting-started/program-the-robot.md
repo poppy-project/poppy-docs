@@ -14,7 +14,7 @@ Scratch est un langage de programmation visuel. C'est un langage de programmatio
 
 Nous avons créé plusieurs blocs propre à l'utilisation des robots Poppy qui permettent de contrôler chaque moteur et de lire les valeurs rapportées par les capteurs de votre robot. Scratch permet d'avoir une interactivité constante entre son interface et le robot. Vous n'avez qu'à cliquer sur un bloc et la commande associée se lance. La simplicité apparente de Scratch n'empêche pas de développer des projets de plus en plus complexes.
 
-Pour découvrir comment fonctionne Snap et la programmation visuelle par blocs avec Poppy, [rdv dans le chapitre dédié](../programming/scratch.md).
+Pour découvrir comment fonctionne Scratch et la programmation visuelle par blocs avec Poppy, [rdv dans le chapitre dédié](../programming/scratch.md).
 
 
 ## Avec Snap_!_

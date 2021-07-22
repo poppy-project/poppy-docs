@@ -43,4 +43,4 @@ Pour en savoir plus :
 
 Then the only limitation is your creativity! For instance, you can make [Poppy Ergo Jr plays TicTacToe](https://www.youtube.com/embed/usDAgvcEXJA): <iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-Vous retrouverez la documentation détaillée dans la section [Contrôler les robots Poppy avec une Arduino](#contrôler-poppy-avec-un-arduino-via-snap4arduino).
+Vous retrouverez la documentation détaillée dans la section [Contrôler les robots Poppy avec une Arduino](../demo-activities/snap4arduino.md).

@@ -6,7 +6,7 @@ L'API Pypot est organisée autour de [REST](https://fr.wikipedia.org/wiki/Repres
 
 # Les erreurs
 
-Pypot utilise des codes de réponse HTTP conventionnels pour indiquer le succès ou l'échec d'une requête API. En général: les codes de la plage «2xx» indiquent le succès. Les codes de la plage «4xx» indiquent une erreur qui a échoué compte tenu des informations fournies (par exemple, un paramètre requis a été omis, une charge a échoué, etc.). Les codes de la gamme `5xx` indiquent une erreur avec les serveurs de Poppy (c'est rare).
+Pypot utilise des codes de réponse HTTP conventionnels pour indiquer le succès ou l'échec d'une requête API. En général: les codes de la plage `2xx` indiquent le succès. Les codes de la plage `4xx` indiquent une erreur qui a échoué compte tenu des informations fournies (par exemple, un paramètre requis a été omis, une charge a échoué, etc.). Les codes de la gamme `5xx` indiquent une erreur avec les serveurs de Poppy (c'est rare).
 
 | Code | Signification |
 | ----:|:------- |
