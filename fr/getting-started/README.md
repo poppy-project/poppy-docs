@@ -27,12 +27,14 @@ Les robots Poppy:
 * utilisent un ordinateur embarqué (Raspberry Pi ou Odroid pour les anciennes versions),
 * fonctionnent avec une bibliothèque logicielle en Python, [pypot](../software-libraries/pypot.md), qui permet de contrôler les servomoteurs Dynamixel simplement,
 * sont également contrôlable avec les même outils dans un simulateur ([ CoppeliaSim](http://www.coppeliarobotics.com)),
-* peuvent être contrôlé à l’aide d’un langage de programmation visuel ([Snap !](http://snap.berkeley.edu) une variante de Scratch) et un langage textuel [Python](https://www.python.org). Ils sont également programmables via une API REST, ce qui permet se s'interfacer avec d'autres languages de programmation
+* peuvent être contrôlé à l’aide des langages de programmation visuels [Scratch](https://scratch.mit.edu/) et ([Snap!](http://snap.berkeley.edu) une variante de Scratch) et un langage textuel [Python](https://www.python.org). Ils sont également programmables via une [API REST](../programming/rest.md), ce qui permet se s'interfacer avec d'autres languages de programmation
 * viennent avec un documentation associée, des tutoriels, des exemples et des activités pédagogiques.
 
 Ils peuvent être utilisés comme tels quels ou hackés (au sens de bidouillé) pour explorer de nouvelles formes, ajouter des capteurs, etc...
 
-Pour obtenir votre propre robot Poppy, vous pouvez soit : * vous procurer toutes les pièces en suivant la liste du matériel (voir ci-dessous). * Acheter un des robots Poppy en kit complet chez notre [ revendeur officiel, Génération Robots](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
+Pour obtenir votre propre robot Poppy, vous pouvez soit:
+* vous procurer toutes les pièces en suivant la liste du matériel (voir ci-dessous).
+* Acheter un des robots Poppy en kit complet chez notre [ revendeur officiel, Génération Robots](http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform).
 
 ### Poppy Ergo Jr
 
@@ -42,7 +44,7 @@ Le robot Poppy Ergo Jr est un petit bras robot à faible coût avec dôté de 6 
 
 Les pièces 3D ont été conçues pour être facilement imprimable sur une imprimante 3D basique. Les moteurs coûtent seulement 20€ chacun. L'accès à sa carte électronique est simple. Elle facilite la connexion des capteurs supplémentaires et est bien adaptée à des fins pédagogiques.
 
-Vous pouvez choisir parmi trois outils à la fin de son bras :
+Vous pouvez choisir parmi trois outils à la fin de son bras:
 
 * Un abat-jour.
 * Une pince.
