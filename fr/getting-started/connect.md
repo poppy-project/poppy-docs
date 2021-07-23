@@ -59,14 +59,17 @@ Pour vérifier que tout est correctement configuré, vous pouvez accéder à l'u
 ### Utiliser l'interface web
 
 L'interface web est le point central pour contrôler, programmer et configurer votre robot. Il peut être utilisé pour:
-* Surveiller et contrôler le robot * Programmer le robot en [Snap!](http://snap.berkeley.edu)
-* Programmer le robot en [Python](https://www.python.org)
-* Configurer le robot (changer son nom, activer/désactiver la caméra, faire une mise à jour)
-* Réinitialiser et éteindre le robot
+* contrôler le robot
+* Programmer le robot avec [Scratch](https://scratch.mit.edu/), [Snap!](http://snap.berkeley.edu) ou [Python](https://www.python.org).
+* Configurer le robot (changer son nom, configurer le wifi, activer/désactiver la caméra, faire une mise à jour, redémarrer le robot)
+* Accéder au fichiers du robot
+* Lire la doc
+* Observer les logs
+* Éteindre le robot
 
-Pour accéder à cette interface web, il vous suffit d'accéder à l'URL à l'aide de votre navigateur Web préféré :
+Pour accéder à cette interface web, il vous suffit dans votre navigateur Web d'aller sur l'URL:
 
-* http://poppy.local (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
+* [http://poppy.local](http://poppy.local) (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
 * ou en utilisant directement l'adresse IP du robot
 
 Vous devriez voir quelque chose comme :

@@ -62,7 +62,7 @@ La plupart des tutoriels, expérimentations et activités pédagogiques que la c
 
 En plus de Scratch, de Snap_!_ et de Python, nous voulions donner la possibilité de recourir à d'autres options pour accéder et contrôler votre robot depuis n'importe quel système ou langage de programmation. Les robots Poppy fournissent une API REST. Les fonctionnalités les plus importantes sont accessibles depuis les requêtes HTTP GET/POST.
 
-Vous pouvez retrouver la documentation relative à cette API [ici](../programming/rest.md)
+Vous pouvez retrouver la documentation relative à cette API [ici](../programming/rest.md).
 
 D'un point vue plus pratique, cela vous permet de :
 

@@ -66,10 +66,12 @@ To check that everything is setup correctly, you can go to the following url usi
 
 The web interface is the central point to control, program and configure your robot. It can be used to:
 * Monitor and Control the robot
-* Program it in [Snap!](http://snap.berkeley.edu)
-* Program it in [Python](https://www.python.org)
-* Configure the robot (change its name, enable/disable the camera, update)
-* Reset and shutdown the robot
+* Program it in [Scratch](https://scratch.mit.edu/), [Snap!](http://snap.berkeley.edu) or [Python](https://www.python.org).
+* Configure the robot (change its name, enable wifi, enable/disable the camera, update, reboot)
+* Access robot files
+* Read the doc
+* Read the logs
+* Shutdown the robot
 
 To access this interface, you simply have to go to the URL using your favorite web browser:
 

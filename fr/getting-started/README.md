@@ -2,13 +2,13 @@
 
 ![Logo Poppy](../img/logo/poppy.png)
 
-[Le projet de Poppy](https://www.poppy-project.org/) est une plate-forme open-source pour la création, l'utilisation et le partage de robots interactifs imprimés en 3D. Il rassemble une communauté interdisciplinaire de débutants, d'experts, de chercheurs, d'enseignants, de développeurs et d'artistes. Ils partagent tous une même vision : les robots sont de puissants outils pour apprendre et développer la créativité, et ils collaborent pour améliorer le projet. Ils développent de nouveaux comportements pour les robots, créent des contenus pédagogiques, élaborent des performances artistiques, améliorent le logiciel ou même conçoivent de nouveaux robots.
+[Le projet de Poppy](https://www.poppy-project.org/) est une plate-forme open-source pour la création, l'utilisation et le partage de robots interactifs imprimés en 3D. Il rassemble une communauté interdisciplinaire de débutants, d'experts, de chercheurs, d'enseignants, de développeurs et d'artistes. Ils partagent tous une même vision : les robots sont de puissants outils pour apprendre et développer la créativité, et ils collaborent pour améliorer le projet. Ils développent de nouveaux comportements pour les robots, créent des contenus pédagogiques, élaborent des performances artistiques, améliorent le logiciel ou même conçoivent de nouveaux robots.
 
 La [communauté Poppy](https://forum.poppy-project.org/) développe des créations robotiques qui sont faciles à construire, personnaliser et utiliser.
 
 Un ensemble de services web permet à la communauté de partager leurs expériences et de contribuer à l'amélioration de la plateforme Poppy.
 
-Pour faciliter ces échanges, deux supports sont disponibles :
+Pour faciliter ces échanges, deux supports sont disponibles :
 
 * [Le forum de projet Poppy](https://forum.poppy-project.org/) pour avoir de l'aide, partager ses idées et en discuter.
 * [GitHub](https://github.com/poppy-project) pour soumettre vos contributions et faire un suivi des bugs logiciels.
@@ -66,7 +66,7 @@ C’est un robot humanoïde composé de 25 articulations avec une colonne verté
 
 Vous pouvez vous procurez toutes les pièces en suivant [la nomenclature](https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md) (BOM) et imprimer les [pièces 3D](https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/) disponible au format STL.
 
-![Humanoïde Poppy Vecto](../img/humanoid/vecto.png)
+![Humanoid Poppy Vecto](../img/humanoid/vecto.png)
 
 ### Poppy Torso
 
@@ -92,7 +92,7 @@ Le projet a été réalisé lors d’un stage au sein de l'équipe Flowers de l'
 
 ##### Heol
 
-Heol - « soleil » en Breton - est un robot humanoïde haut de 34cm fait par l’association Heol robotique. Composé de 23 moteurs, toutes les autres pièces sont imprimés en 3D. Il utilise également la bibliothèque pypot pour ses mouvements.
+Heol - « soleil » en Breton - est un robot humanoïde haut de 34cm fait par l’association Heol robotique. Composé de 23 moteurs, toutes les autres pièces sont imprimés en 3D. Il utilise également la bibliothèque pypot pour ses mouvements.
 
 Le but de Heol est de donner le sourire aux enfants malades. Il peut être un outil pédagogique en devenant une plateforme d'apprentissage pour la conception mécanique et de programmation.
 
@@ -108,4 +108,4 @@ Poppyrate sera vendu en kit (avec ou sans les pièces 3D). Il a été conçu par
 
 ![Poppyrate](../img/poppyrate.jpg)
 
-Pour plus d’informations, consultez leur [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/) !
+Pour plus d’informations, consultez leur [Twitter](https://twitter.com/poppyratproject) - [Facebook](https://www.facebook.com/Poppyrate/)!
