@@ -30,7 +30,7 @@ All Poppy creatures:
 - use an embedded board for control (a Raspberry Pi or Odroid for older versions),
 - are based on a Python library, [pypot](../software-libraries/pypot.md), allowing to control Dynamixel servomotors in an easy way,
 - have a simulated version available (based on [ CoppeliaSim](http://www.coppeliarobotics.com)),
-- can be controlled using a visual programming language ([Snap!](http://snap.berkeley.edu) a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a REST API, which enables the control with other programming language,
+- can be controlled using visual programming languages [Scratch](https://scratch.mit.edu/) and [Snap!](http://snap.berkeley.edu) (a variation of Scratch) and a textual language [Python](https://www.python.org). They are also programmable through a [REST API](../programming/rest.md), which enables the control with other programming language,
 - come with associated documentation, tutorials, examples, pedagogical activities.
 
 They can be used as it is, or hacked to explore new shapes, add sensors, etc...

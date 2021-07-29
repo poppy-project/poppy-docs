@@ -58,4 +58,4 @@ Then the only limitation is your creativity! For instance, you can make [Poppy E
 
 <iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen></iframe>
 
-The detailed documentation can be found in the section [Control Poppy with Arduino](#contrôler-poppy-avec-un-arduino-via-snap4arduino).
+The detailed documentation can be found in the section [Control Poppy with Arduino](../demo-activities/snap4arduino.md)

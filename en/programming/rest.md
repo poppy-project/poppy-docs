@@ -6,7 +6,7 @@ The Pypot API is organized around [REST](https://en.wikipedia.org/wiki/Represent
 
 # Errors
 
-Pypot uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the `2xx` range indicate success. Codes in the `4xx` range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a charge failed, etc.). Codes in the `5xx` range indicate an error with Poppy's servers (these are rare).
+Pypot uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the `2xx` range indicate success. Codes in the `4xx` range indicate an error that failed given the information provided (e.g. a required parameter was omitted, a charge failed, etc.). Codes in the `5xx` range indicate an error with Poppy's servers (these are rare).
 
 | Code | Meaning |
 | ----:|:------- |
@@ -22,7 +22,7 @@ Pypot uses conventional HTTP response codes to indicate the success or failure o
 
 #### 📕 Summary
 
-```nginx
+```apache
 GET /
 GET /robot.json
 GET /ip.json
@@ -31,7 +31,7 @@ GET /ip.json
 
 ### Getting all endpoints
 
-```nginx
+```apache
 GET /
 ```
 
@@ -91,13 +91,13 @@ Post method url:
 
 ### Getting all robot values
 
-```nginx
+```apache
 GET /robot.json
 ```
 
 <b>Description</b>
 
-Get all robot values, such as motors attribute values, or primitive methods.
+Get all robot values, such as motors attribute values, or behaviour methods.
 
 <b>cURL command</b>
 
@@ -886,7 +886,7 @@ On a Poppy Torso:
 - - -
 
 ### Resolving the robot ip
-```nginx
+```apache
 GET /ip.json
 ```
 
@@ -912,7 +912,7 @@ Gets the ip of the robot.
 
 #### 📕 Summary
 
-```nginx
+```apache
 GET /motors/list.json
 GET /motors/aliases/list.json
 GET /motors/<alias>/list.json
@@ -924,13 +924,13 @@ GET /motors/registers/<register_name>/list.json
 - - -
 
 ### Getting the list of motors
-```nginx
+```apache
 GET /motors/list.json
 ```
 
 <b>Description</b>
 
-Gives the list of all Poppy's motors.
+Gives the list of all Poppy robot motors.
 
 <b>cURL command</b>
 
@@ -964,7 +964,7 @@ On a Poppy Torso:
 - - -
 
 ### Getting the list of motor aliases
-```nginx
+```apache
 GET /motors/aliases/list.json
 ```
 
@@ -995,13 +995,13 @@ On a Poppy Torso:
 - - -
 
 ### Getting the list of motors of an alias
-```nginx
+```apache
 GET /motors/<alias>/list.json
 ```
 
 <b>Description</b>
 
-Gives all the motor names list of motors of an alias
+Gives all the motor names list of motors of an alias.
 
 <b>cURL command example</b>
 
@@ -1023,7 +1023,7 @@ On a Poppy Torso:
 - - -
 
 ### Getting the list of registers of a motor
-```nginx
+```apache
 GET /motors/<motor_name>/registers/list.json
 ```
 
@@ -1069,7 +1069,7 @@ On a Poppy Torso:
 - - -
 
 ### Getting the value of a motor register
-```nginx
+```apache
 GET /motors/<motor_name>/registers/<register_name>/value.json
 ```
 
@@ -1092,7 +1092,7 @@ Gives the value of a register of a motor. Motor name and register name are given
 - - -
 
 ### Setting the value of a motor register
-```nginx
+```apache
 POST /motors/<motor_name>/registers/<register_name>/value.json + new_value
 ```
 
@@ -1120,7 +1120,7 @@ curl -X POST \
 - - -
 
 ### Getting the register values for all motors
-```nginx
+```apache
 GET /motors/registers/<register_name>/list.json
 ```
 
@@ -1211,16 +1211,16 @@ On a Poppy Torso:
 - - -
 
 ### Moving a motor
-```nginx
+```apache
 POST /motors/<motor_name>/goto.json + position + duration + wait
 ```
 
 <b>Description</b>
 
 
-Sets a motor's `position`, in `duration` seconds and if wait is set to true, il will only return it answer after the move is complete.
+Sets a motor's `position`, in `duration` seconds and if wait is set to true, it will only return its answer after the move is complete.
 
-Position should be given as a float value (it corresponds to the angle value to reach). Duration should be given as float, in seconds. And wait should be either `true`, `True` or `1` if you want to wait, anything else otherwise. Wait is set to `false` by default. 
+Position should be given as a float value (it corresponds to the angle value to reach). Duration should be given as float, in seconds. And wait should be either `true`, `True` or `1` if you want to wait, anything else otherwise. Wait is set to `false` by default.
 
 <b>cURL command example</b>
 
@@ -1248,15 +1248,15 @@ curl -X POST \
 - - -
 
 ### Moving several motors
-```nginx
+```apache
 POST /motors/goto.json + motors + positions + duration + wait
 ```
 
 <b>Description</b>
 
-Sets the `position` of `motors`, in `duration` seconds and if wait is set to true, il will only return it answer after the move is complete.
+Sets the `position` of `motors`, in `duration` seconds and if wait is set to true, it will only return it answer after the move is complete.
 
-Motors should be given as a list of motor names. Position should be given as a list of float values (it corresponds to the angle values to reach for each motor). Duration should be given as float, in seconds. And wait should be either `true`, `True` or `1` if you want to wait, anything else otherwise. Wait is set to `false` by default. 
+Motors should be given as a list of motor names. Position should be given as a list of float values (it corresponds to the angle values to reach for each motor). Duration should be given as float, in seconds. And wait should be either `true`, `True` or `1` if you want to wait, anything else otherwise. Wait is set to `false` by default.
 
 <b>cURL command example</b>
 
@@ -1285,7 +1285,7 @@ curl -X POST \
 
 #### 📕 Summary
 
-```nginx
+```apache
 GET /sensors/list.json
 GET /sensors/<sensor_name>/registers/list.json
 GET /sensors/<sensor_name>/registers/<register_name>/value.json
@@ -1295,7 +1295,7 @@ POST /sensors/<sensor_name>/registers/<register_name>/value.json + new_value
 - - -
 
 ### Getting the list of sensors
-```nginx
+```apache
 GET /sensors/list.json
 ```
 
@@ -1322,7 +1322,7 @@ Gives the list of all sensors the Poppy robot.
 - - -
 
 ### Getting the list of registers of a sensor
-```nginx
+```apache
 GET /sensors/<sensor_name>/registers/list.json
 ```
 
@@ -1351,7 +1351,7 @@ Gives the list of register names of a sensor.
 - - -
 
 ### Getting the value of a sensor register
-```nginx
+```apache
 GET /sensors/<sensor_name>/registers/<register_name>/value.json
 ```
 
@@ -1378,7 +1378,7 @@ Gives the value of a register of a sensor.
 - - -
 
 ### Setting the value of a sensor register
-```nginx
+```apache
 POST /sensors/<sensor_name>/registers/<register_name>/value.json + new_value
 ```
 
@@ -1404,8 +1404,7 @@ Returns the following error:
 {
     "error": "Either sensor 'camera' or register 'fps' does not exist. Or you want to change a read-only register value",
     "tip": "You can find the list of sensors with /sensors/list.json and their registers with /sensors/<sensor_name>/registers/list.json",
-   
-: "can't set attribute"
+    "details" : "can't set attribute"
 }
 ```
 
@@ -1413,7 +1412,7 @@ Returns the following error:
 
 #### 📕 Summary
 
-```nginx
+```apache
 GET /records/list.json
 POST /records/<move_name>/record.json
 POST /records/<move_name>/save.json
@@ -1424,7 +1423,7 @@ POST /records/<move_name>/stop.json
 - - -
 
 ### Getting available records
-```nginx
+```apache
 GET /records/list.json
 ```
 
@@ -1452,7 +1451,7 @@ Gives the list of all recorded moves by the user.
 - - -
 
 ###  Getting all positions of a record
-```nginx
+```apache
 GET records/<move_name>/value.json
 ```
 
@@ -1675,19 +1674,19 @@ The answer will give all positions for each recorded motor every 0.2 second in t
 - - -
 
 ### Recording a move
-```nginx
+```apache
 POST /records/<move_name>/record.json + motors
 ```
 
 <b>Description</b>
 
-If your motors are compliant, you will be able to move your robot motors are records some moves. This request starts a record.
+If your motors are compliant, you will be able to move your robot motors and record some moves. This request starts a record.
 
-Motor names in the body are optional. If yout body is empty, it will by default record the move with all motors. Motors should be given as follows: `{"motors": ["head_z", "l_arm_z"]}` or `{"motors": "head_z,l_arm_z"]}`.
+Motor names in the body are optional. If your body is empty, it will by default record the move with all motors. Motors should be given as follows: `{"motors": ["head_z", "l_arm_z"]}` or `{"motors": "head_z,l_arm_z"]}`.
 
-If a move of the same name has already been defined, it will be overwritten !
+⚠ If a move of the same name has already been defined, it will be overwritten !
 
-<b>cURL command example example</b>
+<b>cURL command example</b>
 ```bash
 curl -X POST \
      -H 'Content-Type: application/json' \
@@ -1706,7 +1705,7 @@ curl -X POST \
 - - -
 
 ### Saving a move
-```nginx
+```apache
 POST /records/<move_name>/save.json
 ```
 
@@ -1735,7 +1734,7 @@ curl -X POST \
 - - -
 
 ### Playing a recorded move
-```nginx
+```apache
 POST /records/<move_name>/play.json + speed
 ```
 
@@ -1743,7 +1742,7 @@ POST /records/<move_name>/play.json + speed
 
 Replays a recorded move.
 
-The speed parameter is a float value. It can be negative to play the move backwards. it should be given as follows: `{"speed":-1.0}` or `{"speed":0.5}`.
+The speed parameter is a float value. It can be negative to play the move backwards. It should be given as follows: `{"speed":-1.0}` or `{"speed":0.5}`.
 
 > `1.0` is the speed to give to replay the move at the same speed as it was recorded.
 
@@ -1766,14 +1765,14 @@ curl -X POST \
 
 - - -
 
-### Stopping the replay of a recorded move 
-```nginx
+### Stopping the replay of a recorded move
+```apache
 POST /records/<move_name>/stop.json
 ```
 
 <b>Description</b>
 
-Stops the replay a of a record move.
+Stops the replay of a recorded move.
 
 This request does not need data in its body.
 
@@ -1797,7 +1796,7 @@ curl -X POST \
 
 #### 📕 Summary
 
-```nginx
+```apache
 GET /primitives/list.json
 GET /primitives/running/list.json
 GET /primitives/<primitive_name>/start.json
@@ -1814,7 +1813,7 @@ POST /primitives/<primitive_name>/methods/<method_name>/args.json
 - - -
 
 ### Getting the list of all primitives
-```nginx
+```apache
 GET /primitives/list.json
 ```
 
@@ -1849,7 +1848,7 @@ Primitives are predefined behaviours of our Poppy robots. You can add your own p
 - - -
 
 ### Getting the list of all running primitives
-```nginx
+```apache
 GET /primitives/running/list.json
 ```
 
@@ -1875,7 +1874,7 @@ Same request as above but only gives the running primitives
 - - -
 
 ### Running a primitive
-```nginx
+```apache
 GET /primitives/<primitive_name>/start.json
 ```
 
@@ -1900,13 +1899,13 @@ All existing primitives can be found with `GET /primitives/list.json` (described
 - - -
 
 ### Stopping a primitive
-```nginx
+```apache
 GET /primitives/<primitive_name>/stop.json
 ```
 
 <b>Description</b>
 
-Stops a previously running primitive.
+Stops a running primitive.
 
 <b>cURL command example</b>
 
@@ -1923,13 +1922,13 @@ Stops a previously running primitive.
 - - -
 
 ### Pausing a primitive
-```nginx
+```apache
 GET /primitives/<primitive_name>/pause.json
 ```
 
 <b>Description</b>
 
-Pauses a previously running primitive.
+Pauses a running primitive.
 
 <b>cURL command example</b>
 
@@ -1946,7 +1945,7 @@ Pauses a previously running primitive.
 - - -
 
 ### Resuming a primitive
-```nginx
+```apache
 GET /primitives/<primitive_name>/resume.json
 ```
 
@@ -1969,7 +1968,7 @@ Resumes a previously paused primitive.
 - - -
 
 ### Getting the list of all properties of a primitive
-```nginx
+```apache
 GET /primitives/<primitive_name>/properties/list.json
 ```
 
@@ -1994,7 +1993,7 @@ Unfortunately, my primitives don't have any property.
 - - -
 
 ### Getting the value of a property of a primitive
-```nginx
+```apache
 GET /primitives/<primitive_name>/properties/<prop>/value.json
 ```
 
@@ -2002,7 +2001,7 @@ GET /primitives/<primitive_name>/properties/<prop>/value.json
 
 It would give the value of a property of a primitive.
 
-Unfortunately, my primitives don't have any property.
+**⚠ This get request could not be tested because our primitives don't have any property ⚠**
 
 <b>cURL command</b>
 
@@ -2015,7 +2014,7 @@ Unfortunately, my primitives don't have any property.
 - - -
 
 ### Setting the value of a property of a primitive
-```nginx
+```apache
 POST /primitives/<primitive_name>/properties/<prop>/value.json + new_value
 ```
 
@@ -2023,7 +2022,7 @@ POST /primitives/<primitive_name>/properties/<prop>/value.json + new_value
 
 It would set the value of a property of a primitive.
 
-Unfortunately, my primitives don't have any property.
+**⚠ This post request could not be tested because our primitives don't have any property ⚠**
 
 <b>cURL command</b>
 
@@ -2040,7 +2039,7 @@ Unfortunately, my primitives don't have any property.
 - - -
 
 ### Getting the list of all methods of a primitive
-```nginx
+```apache
 GET /primitives/<primitive_name>/methods/list.json
 ```
 
@@ -2069,18 +2068,18 @@ Gives the list of methods names of a primitive.
 - - -
 
 ### Calling a method of a primitive with arguments
-```nginx
+```apache
 POST /primitives/<primitive_name>/methods/<method_name>/args.json
 ```
 
 <b>Description</b>
 
 Calls a method of a primitive with optionnal arguments. Unfortunately, currently our primitives don't have methods with optionnal arguments.
- 
+
 
 <b>cURL command example (not tested)</b>
 
-Assuming that the start method of the init_position primitive can take optional arguments, such as a speed (this is currently not the case).
+Assuming that the `start` method of the `init_position` primitive can take optional arguments, such as a speed (this is currently not the case).
 
 ```bash
 curl -X POST \
@@ -2091,10 +2090,10 @@ curl -X POST \
 
 <b>Returned value</b>
 
-Previous example will return an error, because start method cannot take optionnal arguments.
+Previous example will return an error, because `start` method cannot take optionnal arguments.
 
 But if it was the case, it would give an answer like :
 ```json
 {"init_position:start": 1.0}
-``` 
-As 1.0 being the return value of start function. Currently, start function doesn't return anything. 
+```
+As 1.0 being the return value of `start` function. Currently, `start` function doesn't return anything.
