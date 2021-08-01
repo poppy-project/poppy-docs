@@ -77,21 +77,26 @@ Our web visualizer will show you a 3D representation of a Poppy robot.
 For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer.
 You simply have to set the host variable from within the web interface to match the address of your robot.
 
-![Poppy Simu Presentation](../img/visu/presentation.png)
+![Poppy Simu Presentation](../img/visu/capture.png)
 
 In Python, you can start the mockup robot with:
 ```python
 from pypot.creatures import PoppyErgoJr
 robot = PoppyErgoJr(simulator='poppy-simu')
 ```
+
 Add a `use_snap=True` argument if you want to start Snap API.
 
-If you want to use command the mockup robot from Snap, you can also start it directly from the command line interface `poppy-services` in your terminal (called command prompt on Windows):
+If you want to command the mockup robot from Snap or Scratch, you can also start it directly from the command line interface `poppy-services` in your terminal (called command prompt on Windows):
+
 ```bash
 poppy-services --poppy-simu --snap poppy-ergo-jr
+poppy-services --poppy-simu --scratch poppy-ergo-jr
 ```
 
-As for CoppeliaSim, you can control your robot using Python, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
+You should select the API you want to use with the API checkbox. By default, REST API is used (for Scratch), but you should select the Snap API to control your robot with Snap.
+
+As for CoppeliaSim, you can control your robot using Python, Scratch, Snap_!_, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.
 
 Here is an example with Python:
 
