@@ -60,6 +60,8 @@ Get method url:
 /motors/registers/<register_name>/list.json
 /sensors/list.json<br>/sensors/<sensor_name>/registers/list.json
 /sensors/<sensor_name>/registers/<register_name>/value.json
+/sensors/camera/frame.png
+/sensors/code/<code_name>.json
 /records/list.json
 /records/<move_name>/value.json
 /primitives/list.json
@@ -71,6 +73,8 @@ Get method url:
 /primitives/<primitive_name>/properties/list.json
 /primitives/<primitive_name>/properties/<prop>/value.json
 /primitives/<primitive_name>/methods/list.json
+/ik/<chain_name>/value.json
+/ik/<chain_name>/rpy.json
 
 Post method url:
 /motors/<motor_name>/registers/<register_name>/value.json
@@ -84,6 +88,7 @@ Post method url:
 /records/<move_name>/delete.json
 /primitives/<primitive_name>/properties/<prop>/value.json
 /primitives/<primitive_name>/methods/<method_name>/args.json
+/ik/<chain_name>/goto.json 
 ```
 
 
@@ -1290,6 +1295,8 @@ GET /sensors/list.json
 GET /sensors/<sensor_name>/registers/list.json
 GET /sensors/<sensor_name>/registers/<register_name>/value.json
 POST /sensors/<sensor_name>/registers/<register_name>/value.json + new_value
+GET /sensors/camera/frame.png
+GET /sensors/code/<code_name>.json
 ```
 
 - - -
@@ -1405,6 +1412,62 @@ Cette requête retourne l'erreur suivante:
     "error": "Either sensor 'camera' or register 'fps' does not exist. Or you want to change a read-only register value",
     "tip": "You can find the list of sensors with /sensors/list.json and their registers with /sensors/<sensor_name>/registers/list.json",
     "details" : "can't set attribute"
+}
+```
+
+- - -
+
+### Obtenir l'image de la caméra.
+```apache
+GET /sensors/camera/frame.png
+```
+
+<b>Description</b>
+
+Récupère une image grâce à la caméra embarquée du robot
+
+<b>Exemple d'une commande cURL</b>
+
+`curl http://poppy.local:8080/sensors/camera/frame.png -o camera.png`
+
+<b>Valeur de retour</b>
+
+Une image camera.png
+
+- - -
+
+### Obtenir les QR codes détectés par la caméra
+```apache
+GET /sensors/code/<code_name>.json
+```
+
+<b>Description</b>
+
+Utilise la primitive marker_detector pour analyser l'image de la caméra et détecter les QR codes.
+Les noms des QR codes peuvent être *tertis*, *caribou*, *lapin*, *rabbit*. Vous pouvez également donner **list** dans le champ *code_name* pour obtenir la liste des QR codes détectés. 
+
+<b>Exemple 1 d'une commande cURL</b>
+
+`curl http://poppy.local:8080/sensors/code/tetris.json`
+
+<b>Valeur de retour</b>
+
+```json
+{
+    "found": true
+}
+```
+
+<b>Exemple 2 d'une commande cURL</b>
+
+`curl http://poppy.local:8080/sensors/code/list.json`
+
+<b>Valeur de retour</b>
+
+
+```json
+{
+    "codes": ["caribou", "lapin", "rabbit"]
 }
 ```
 
@@ -2095,3 +2158,129 @@ Mais si c'était le cas, cela donnerait une réponse comme :
 {"init_position:start": 1.0}
 ```
 Avec 1.0 étant la valeur de retour de la méthode `start`. Actuellement, la méthode `start` ne renvoie rien.
+
+## 🇽 🇾 🇿 Cinématique Inverse (IK)
+
+#### 📕 Summary
+
+```apache
+GET /ik/<chain_name>/value.json
+POST /ik/<chain_name>/goto.json + xyz, duration, wait, [rotation] 
+GET /ik/<chain_name>/rpy.json + r, p, y
+```
+
+- - -
+
+
+### Obtenir les coordonnées cartésiennes des bras
+```apache
+GET /ik/<chain_name>/value.json
+```
+
+<b>Description</b>
+
+Donne les coordonnées x, y et z de la chaîne de votre choix.
+- Poppy Ergo Jr a 1 chaîne : **chain**,
+- Poppy Torso a 2 chaines : **l_arm_chain** et **r_arm_chain**,
+- Poppy Humanoid n'a pas encore de chaîne IK.
+
+Les unités sont en mètres pour x, y, z.
+
+La rotation (*rot*) est donnée pour le débogage car l'orientation IK n'est pas totalement opérationnelle. Donner des valeurs x,y,z à la requête IK-goto fonctionne bien, mais lorsqu'une orientation est donnée en complément, la position atteinte peut être très éloignée des coordonnées cartésiennes données.
+
+<b>Exemple d'une commande cURL (Ergo Jr)</b>
+
+`curl http://poppy.local:8080/ik/chain>/value.json`
+
+<b>Valeur de retour</b>
+
+```json
+{
+    "xyz": "-0.0067,-0.1744,0.1508",
+    "rot": "-0.0012,-0.0296,0.9996"
+}
+```
+
+- - -
+
+### Déplacement de la chaîne IK vers une position cartésienne
+```apache
+POST /ik/<chain_name>/goto.json
+```
+
+<b>Description</b>
+
+Déplace la chaîne cinématique inverse aux coordonnées x, y et z.
+- Poppy Ergo Jr a 1 chaîne : **chain**,
+- Poppy Torso a 2 chaines : **l_arm_chain** et **r_arm_chain**,
+- Poppy Humanoid n'a pas encore de chaîne IK.
+Les unités sont en mètres pour x, y, z.
+
+Vous pouvez donner une rotation ou un tuple roll/pitch/yaw (roulis/tangage/lacet) pour ajouter une orientation à la position cible. Attention, l'orientation IK n'est pas totalement opérationnelle. Donner des valeurs x,y,z à la requête IK-goto fonctionne bien, mais lorsqu'une orientation est donnée en complément, la position atteinte peut être très éloignée des coordonnées cartésiennes données.
+
+<b>Exemple d'une commande cURL (Ergo Jr)</b>
+
+```bash
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"xyz": "-0.0091,-0.1744,0.1484","rot": "-0.0018,-0.0471,0.9989","duration":"3","wait":"true"}' \
+     http://poppy.local:8080/ik/chain/goto.json
+```
+
+<b>Valeur de retour</b>
+
+La réponse est la position atteinte par le bras
+
+```json
+{
+    "xyz": "-0.003,-0.1744,0.1475",
+    "rot": "-0.001,-0.0593,0.9982"
+}
+```
+
+- - -
+
+### Obtenir la matrice de rotation à partir des valeurs RPY
+```apache
+GET /ik/<chain_name>/rpy.json
+```
+
+<b>Description</b>
+
+Convertit un tuple rpy en une [matrice de rotation](https://www.brainvoyager.com/bv/doc/UsersGuide/CoordsAndTransforms/SpatialTransformationMatrices.html).
+
+Les chaînes IK disponibles sont :
+- Poppy Ergo Jr a 1 chaîne : **chain**,
+- Poppy Torso a 2 chaines : **l_arm_chain** et **r_arm_chain**,
+- Poppy Humanoid n'a pas encore de chaîne IK.
+
+Les arguments requis sont :
+- **"r"** : roll/roulis (rad)
+- **"p"** : pitch/tangage (rad)
+- **"y"** : yaw/lacet (rad)
+
+Vous pouvez utiliser ce site pour visualiser les valeurs de roulis, de tangage et de lacet : [Euler Angles Gimbal Visualization](https://compsci290-s2016.github.io/CoursePage/Materials/EulerAnglesViz/). Ce [site web](https://danceswithcode.net/engineeringnotes/rotations_in_3d/demo3D/rotations_in_3d_tool.html) vous permet de calculer la matrice de rotation à partir des valeurs rpy données en degrés.
+
+> **Attention** les unités rpy sont en **radians**. Dans la plupart des exemples, vous trouverez ces valeurs en degrés. Une future mise à jour peut permettre l'utilisation de rpy avec des degrés.
+
+<b>Exemple d'une commande cURL (Ergo Jr)</b>
+
+```bash
+curl -X GET \
+     -H 'Content-Type: application/json' \
+     -d '{"r":"90", "p":"0", "y":"0"}' \
+     http://localhost:8080/ik/chain/rpy.json
+
+```
+
+<b>Valeur de retour</b>
+
+Donne la matrice de rotation à partir des valeurs rpy.
+
+```json
+{
+    "rpy": [[ 1.0, 0.0,  0.0 ],
+            [ 0.0, 0.0, -1.0 ],
+            [ 0.0, 1.0,  0.0 ]]
+}
+```
