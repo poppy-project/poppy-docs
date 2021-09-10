@@ -80,7 +80,6 @@ A new set of blocks will appear on the left panel.
 | ![](../img/scratch/PRIMITIVE_getMethodOfPrimitive.PNG) | Get all methods or functions which are runnable in a behaviour. |
 | ![](../img/scratch/API_get.PNG) | Makes a GET request to the robot API. All API endpoints are availble on the page [REST API](rest.md) |
 | ![](../img/scratch/API_post.PNG) | Makes a POST request to the robot API. All API endpoints are availble on the page [REST API](rest.md) |
-| ![](../img/scratch/MISC_alert.PNG) | Raises an error alert which will make the program stop. |
 
 ## Some examples
 

@@ -80,7 +80,7 @@ De nouveaux blocs apparaîtront sur le panneau de gauche.
 | ![](../img/scratch/PRIMITIVE_getMethodOfPrimitive.PNG) | Obtenez toutes les méthodes ou fonctions exécutables dans un comportement. |
 | ![](../img/scratch/API_get.PNG) | Fait une requête GET à l'API du robot. Tous les points de terminaison de l'API sont disponibles sur la page [REST API](rest.md) |
 | ![](../img/scratch/API_post.PNG) | Fait une requête POST à l'API du robot. Tous les points de terminaison de l'API sont disponibles sur la page [REST API](rest.md) |
-| ![](../img/scratch/MISC_alert.PNG) | Déclenche une alerte d'erreur qui entraînera l'arrêt du programme. |
+
 
 ## Quelques exemples
 
