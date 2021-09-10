@@ -65,7 +65,7 @@ De nouveaux blocs apparaîtront sur le panneau de gauche.
 | ![](../img/scratch/MOTOR_getVarOfMotor.PNG) | Donne la valeur d'un registre (position, vitesse, charge, ...) d'un moteur. |
 | ![](../img/scratch/MOTOR_getAllMotorPositions.PNG) | Donne la position de tous les moteurs. Il peut servir à enregister la pose du robot et la réutiliser plus tard. |
 | ![](../img/scratch/MOTOR_index.PNG) | Renvoie l'index d'un nom de moteur dans la liste de blocs "tous les moteurs". |
-| ![](../img/scratch/MOTOR_setCompliant.PNG) | Met un ou plusieurs moteurs en mode mou ou rigide. Les moteurs peuvent être déplacés à la main en mode mou mais doivent être en mode rigide pour être contrôlés avec Scratch. L'entrée "motor_name" peut accepter : un nom de moteur (par exemple m1); une liste de plusieurs moteurs séparés par des virgules (par exemple: m1,m2,m4); une liste Scratch de moteurs comme le bloc reporter "tous les moteurs" |
+| ![](../img/scratch/MOTOR_setCompliant.PNG) | Met un ou plusieurs moteurs en mode flexible ou rigide. Les moteurs peuvent être déplacés à la main en mode flexible mais doivent être en mode rigide pour être contrôlés avec Scratch. L'entrée "motor_name" peut accepter : un nom de moteur (par exemple m1); une liste de plusieurs moteurs séparés par des virgules (par exemple: m1,m2,m4); une liste Scratch de moteurs comme le bloc reporter "tous les moteurs" |
 | ![](../img/scratch/MOTOR_setVarOfMotor.PNG) | Définit la valeur d'un registre (position, vitesse, couple max, ...) d'un moteur. |
 | ![](../img/scratch/MOTOR_goto.PNG) | Définit la "position" d'un moteur en secondes "durée" et si "attendre" est défini sur vrai, il n'exécutera le bloc suivant qu'une fois le déplacement terminé. Les moteurs doivent être indiqués sous forme de liste de noms de moteurs. La position doit être donnée sous forme de liste de valeurs flottantes (elle correspond aux valeurs d'angle à atteindre pour chaque moteur). La durée doit être donnée sous forme de flottant, en secondes.
 | ![](../img/scratch/SENSOR_cardDetection.PNG) | Renvoie un booléen (vrai/faux) selon si la carte sélectionnée est détectée par la caméra du robot. |
@@ -86,10 +86,10 @@ De nouveaux blocs apparaîtront sur le panneau de gauche.
 
 ### Mettez tous les moteurs en mode mou
 
-Ce programme mettra tous vos moteurs en mode mou dès que vous appuierez sur votre touche **c**.
+Ce programme mettra tous vos moteurs en mode flexible dès que vous appuierez sur votre touche **c**.
 ![EXEMPLES_compliant](../img/scratch/EXAMPLES_compliant.png)
 
-> **info** L'opposé du mode mou est le mode rigide. Les moteurs seront verrouillés dans leur position actuelle, mais ils peuvent recevoir des commandes telles que goto.
+> **info** L'opposé du mode flexible est le mode rigide. Les moteurs seront verrouillés dans leur position actuelle, mais ils peuvent recevoir des commandes telles que goto.
 
 ### Ouvrez et fermez votre effecteur.
 
