@@ -8,12 +8,12 @@ ROS is a toolbox for creating robots, very popular in academia. It is designed f
 
 In order to use your Poppy robot with ROS you need **ROS 1 Noetic** with **Ubuntu 20.04**. Version ROS 2 supports Windows ans MacOS, but Poppy is not yet compatible.
 
-Only Poppy Ergo Jr has a total compatibility with ROS from software v4.0.0. Check your software version number in the top right of your robot's homepage [http://poppy.local](http://poppy.local).
+Only Poppy Ergo Jr has a total compatibility with ROS with [software above v4.0.0](https://github.com/poppy-project/poppy-ergo-jr/releases). Previous version numbers do not support ROS. Check your software version number in the top right of your robot's homepage [http://poppy.local](http://poppy.local).
 
 For Torso and Humanoid, some [packages](https://poppy.discourse.group/t/support-of-ros-available-for-poppy-ergo-jr/) are available though, for advanced users.
 
 
-## Installation 
+## 3-steps installation 
 ### 1. Install ROS Noetic
 
 Please refer to [the installing procecure of ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu). The procedure is successful when typing command `roscore` starts a ROS master sucessfully, that you can stop by pressing Ctrl+C.
@@ -26,6 +26,7 @@ Please refer to [the installing procedure of MoveIt](https://moveit.ros.org/inst
 
 ### 3. Download the integration of Poppy robots in ROS
 
+Finally, you need to download the 3 required ROS packages in your ROS workspace and to compile them with catkin_make: 
 ```bash
 cd ~/catkin_ws/src
 git clone https://github.com/poppy-project/poppy_ergo_jr_description/
