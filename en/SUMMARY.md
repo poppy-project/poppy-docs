@@ -52,9 +52,10 @@
 
 * [Programming](programming/README.md)
     * [Programming with Snap!](programming/snap.md)
+    * [Programming with Scratch](programming/scratch.md)
     * [Usage of Jupyter notebooks](programming/notebooks.md)
     * [Programming in Python](programming/python.md)
-    * [Robots APIs](programming/rest.md)
+    * [Robots API](programming/rest.md)
     * [Activities](demo-activities/README.md)
     * [Link with Snap4Arduino](demo-activities/snap4arduino.md)
 * [From simulation to real robot](from-simulation-to-real-robot/README.md)

@@ -1,20 +1,33 @@
 # Programmer le robot
 
-Les robots Poppy sont pensés pour être programmé facilement. Voici les trois principales façons d'y parvenir : * avec la programmation visuelle [Snap!](#using-snap), une variante de Scratch, * avec [Python](#using-python) et la possibilité de s'appuyer sur la puissance de l'API tout entière, * avec [REST API](#through-the-rest-api), qui permet de connecter les robots Poppy à d'autres outils ou d'utiliser n'importe quel langage de programmation.
+Les robots Poppy sont pensés pour être programmé facilement. Voici les trois principales façons d'y parvenir : * avec la programmation visuelle [Scratch](#avec-scratch), * avec la programmation visuelle [Snap!](#avec-snap__), une variante de Scratch, * avec [Python](#avec-python) et la possibilité de s'appuyer sur la puissance de l'API tout entière, * avec [REST API](#avec-lapi-rest), qui permet de connecter les robots Poppy à d'autres outils ou d'utiliser n'importe quel langage de programmation.
 
 > **Important** : Tout comme le reste du projet, toute notre bibliothèque logiciel est open source (Licence GPLv3) et disponible sur [GitHub](https://github.com/poppy-project).
+
+## Avec Scratch
+
+<img src="../img/scratch/main_menu_scratch.png" alt="Scratch" height="200" />
+
+Scratch est un langage de programmation visuel. C'est un langage de programmation basé sur l'utilisation de blocs facilement déplaçables, qui permet une bonne introduction à l'informatique. Vous n'avez pas besoin d'installer quoi que ce soit pour l'utiliser. Il est open source et mis à jour régulièrement.
+
+![Exemple de projet Scratch utilisant un robot Poppy](../img/scratch/EXAMPLES_openClose.png)
+
+Nous avons créé plusieurs blocs propre à l'utilisation des robots Poppy qui permettent de contrôler chaque moteur et de lire les valeurs rapportées par les capteurs de votre robot. Scratch permet d'avoir une interactivité constante entre son interface et le robot. Vous n'avez qu'à cliquer sur un bloc et la commande associée se lance. La simplicité apparente de Scratch n'empêche pas de développer des projets de plus en plus complexes.
+
+Pour découvrir comment fonctionne Scratch et la programmation visuelle par blocs avec Poppy, [rdv dans le chapitre dédié](../programming/scratch.md).
+
 
 ## Avec Snap_!_
 
 <img src="../img/logo/snap.png" alt="Logo Snap!" height="200" />
 
-Snap_!_ est un langage de programmation visuel - une variante du déjà très connu language Scratch. C'est un langage de programmation basé sur l'utilisation de blocs facilement déplaçable, qui permet une bonne introduction à l'informatique. It runs in your browser as it is implemented in JavaScript. Vous n'avez pas besoin d'installer quoi que ce soit pour l'utiliser. Il est open source et mis à jour régulièrement.
+Snap_!_ est un langage de programmation visuel - une variante du déjà très connu language Scratch. C'est un langage de programmation basé sur l'utilisation de blocs facilement déplaçables, qui permet une bonne introduction à l'informatique. It runs in your browser as it is implemented in JavaScript. Vous n'avez pas besoin d'installer quoi que ce soit pour l'utiliser. Il est open source et mis à jour régulièrement.
 
 ![Exemple de projet Snap! utilisant un robot Poppy](../img/snap/presentation.png)
 
 Nous avons créé plusieurs blocs propre à l'utilisation des robots Poppy qui permettent de contrôler chaque moteur et de lire les valeurs rapportées par les capteurs de votre robot. This let you to directly jump into controlling and programming your robot without any syntax/compilation issue. Snap_!_ permet d'avoir une interactivité constante entre son interface et le robot. Vous n'avez qu'à cliquer sur un bloc et la commande associée se lance. La simplicité apparente de Snap_!_ n'empêche pas de développer des projets de plus en plus complexes.
 
-Pour découvrir comment foncitonne Snap et la programmation visuelle par blocs avec Poppy, [rdv dans le chapitre dédié](../programming/snap.md).
+Pour découvrir comment fonctionne Snap et la programmation visuelle par blocs avec Poppy, [rdv dans le chapitre dédié](../programming/snap.md).
 
 ## Avec Python
 
@@ -22,7 +35,7 @@ Pour découvrir comment foncitonne Snap et la programmation visuelle par blocs a
 <img src="../img/logo/python.png" alt="Fonctionnant avec Python" height="170">
 </p>
 
-Les librairies logicielles Poppy ont été écrites en Python, ce qui permet un développement et une extensibilité rapide, ainsi que de pouvoir utiliser n'importe quelle autre librairie scientifique. Python est d'ailleurs un langage très connu et largement utilisé dans les domaines de l'éducation et artistiques. En programmant Poppy en Python, vous aurez accès à tous les niveaux d'API, du plus bas au plus élevé.
+Les bibliothèques logicielles Poppy ont été écrites en Python, ce qui permet un développement et une extensibilité rapide, ainsi que de pouvoir utiliser n'importe quelle autre bibliothèque scientifique. Python est d'ailleurs un langage très connu et largement utilisé dans les domaines de l'éducation et artistiques. En programmant Poppy en Python, vous aurez accès à tous les niveaux d'API, du plus bas au plus élevé.
 
 L'API a été pensée pour du prototypage très rapide. Créer un robot et faire bouger ses moteurs ne doit pas prendre plus de quelques lignes :
 
@@ -51,7 +64,9 @@ poru les utilisateurs avancés, les robots Poppy peuvent aussi être programmés
 
 ## Avec l'API REST
 
-En plus de Snap_!_ et de Python, nous voulions donner la possibilité de recourir à d'autres options pour accéder et contrôler votre robot depuis n'importe quel système ou langage de programmation. Les robots Poppy fournissent une API REST. Les fonctionnalités les plus importantes sont accessibles depuis les requêtes HTTP GET/POST.
+En plus de Scratch, de Snap_!_, de Python et de ROS, nous voulions donner la possibilité de recourir à d'autres options pour accéder et contrôler votre robot depuis n'importe quel système ou langage de programmation. Les robots Poppy fournissent une API REST. Les fonctionnalités les plus importantes sont accessibles depuis les requêtes HTTP GET/POST.
+
+Vous pouvez retrouver la documentation relative à cette API [ici](../programming/rest.md).
 
 D'un point vue plus pratique, cela vous permet de :
 

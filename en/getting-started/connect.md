@@ -8,10 +8,10 @@ Poppy creatures come with an embedded board which job is to control motors and a
 
 
 There are two ways to setup the board for your Poppy robot:
-* [**the easy way**](#easy-and-recommended-way-use-the-poppy-sdcard): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
+* [**the easy way**](#easy-and-recommended-way-use-the-poppy-sd-card): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card
 * [**the hard way for advanced users**](#advanced-way-diy-install-everything-from-scratch): install everything from scratch
 
-> **Note** If you are planning to use a simulated robot, you must install the software on your personal computer. Follow the [instructions for setting up the simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+> **Note** If you are planning to use a simulated robot, you must install the software on your personal computer. Follow the [instructions for setting up the simulation](../installation/install-vrep.md).
 
 ### Easy and recommended way: use the Poppy SD-card
 
@@ -66,10 +66,12 @@ To check that everything is setup correctly, you can go to the following url usi
 
 The web interface is the central point to control, program and configure your robot. It can be used to:
 * Monitor and Control the robot
-* Program it in [Snap!](http://snap.berkeley.edu)
-* Program it in [Python](https://www.python.org)
-* Configure the robot (change its name, enable/disable the camera, update)
-* Reset and shutdown the robot
+* Program it in [Scratch](https://scratch.mit.edu/), [Snap!](http://snap.berkeley.edu) or [Python](https://www.python.org).
+* Configure the robot (change its name, enable wifi, enable/disable the camera, update, reboot)
+* Access robot files
+* Read the doc
+* Read the logs
+* Shutdown the robot
 
 To access this interface, you simply have to go to the URL using your favorite web browser:
 

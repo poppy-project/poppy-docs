@@ -6,9 +6,9 @@ Dans cette section, nous décrirons comment démarrer votre robot et donnerons u
 
 Les robots Poppy sont équipés d'une carte embarquée (exemple : Raspberry Pi, ODROID...) dont le rôle consiste à contrôler les moteurs et à accéder aux capteurs. À des fin de simplicité, on peut accéder à cet ordinateur à distance via une interface web. Il est facile de contrôler le robot à partir de votre propre ordinateur ou tablette sans avoir à télécharger / installer quoi que ce soit.
 
-Il existe deux façons de configurer la carte pour votre robot Poppy: * [**la manière simple**](#easy-and-recommended-way-use-the-poppy-sdcard) : utilisez une image préprogrammée du système d'exploitation Poppy et écrivez-la (installez-la) sur la carte SD* [**la manière difficile pour les utilisateurs avancés**](#advanced-way-diy-install-everything-from-scratch) : installez tout à partir de zéro
+Il existe deux façons de configurer la carte pour votre robot Poppy: * [**la manière simple**](#manière-simple-et-recommandée--utiliser-la-carte-sd-poppy) : utilisez une image préprogrammée du système d'exploitation Poppy et écrivez-la (installez-la) sur la carte SD* [**la manière difficile pour les utilisateurs avancés**](#manière-avancée--diy-installez-tout-à-partir-de-zéro) : installez tout à partir de zéro
 
-> **Note** Si vous envisagez d'utiliser un robot simulé (robot virtuel), vous devez installer le logiciel sur votre ordinateur personnel. Suivez les [instructions pour le paramétrage de la simulation](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
+> **Note** Si vous envisagez d'utiliser un robot simulé (robot virtuel), vous devez installer le logiciel sur votre ordinateur personnel. Suivez les [instructions pour le paramétrage de la simulation](../installation/install-vrep.md).
 
 ### Manière simple et recommandée : utiliser la carte SD Poppy
 
@@ -59,14 +59,17 @@ Pour vérifier que tout est correctement configuré, vous pouvez accéder à l'u
 ### Utiliser l'interface web
 
 L'interface web est le point central pour contrôler, programmer et configurer votre robot. Il peut être utilisé pour:
-* Surveiller et contrôler le robot * Programmer le robot en [Snap!](http://snap.berkeley.edu)
-* Programmer le robot en [Python](https://www.python.org)
-* Configurer le robot (changer son nom, activer/désactiver la caméra, faire une mise à jour)
-* Réinitialiser et éteindre le robot
+* contrôler le robot
+* Programmer le robot avec [Scratch](https://scratch.mit.edu/), [Snap!](http://snap.berkeley.edu) ou [Python](https://www.python.org).
+* Configurer le robot (changer son nom, configurer le wifi, activer/désactiver la caméra, faire une mise à jour, redémarrer le robot)
+* Accéder au fichiers du robot
+* Lire la doc
+* Observer les logs
+* Éteindre le robot
 
-Pour accéder à cette interface web, il vous suffit d'accéder à l'URL à l'aide de votre navigateur Web préféré :
+Pour accéder à cette interface web, il vous suffit dans votre navigateur Web d'aller sur l'URL:
 
-* http://poppy.local (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
+* [http://poppy.local](http://poppy.local) (si vous avez changé le nom de votre robot, remplacez simplement *poppy* par son nouveau nom)
 * ou en utilisant directement l'adresse IP du robot
 
 Vous devriez voir quelque chose comme :
