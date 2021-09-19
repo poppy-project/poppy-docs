@@ -55,6 +55,7 @@
     * [Programming with Scratch](programming/scratch.md)
     * [Usage of Jupyter notebooks](programming/notebooks.md)
     * [Programming in Python](programming/python.md)
+    * [Use with ROS](programming/ros.md)
     * [Robots API](programming/rest.md)
     * [Activities](demo-activities/README.md)
     * [Link with Snap4Arduino](demo-activities/snap4arduino.md)
