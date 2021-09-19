@@ -70,7 +70,11 @@ roslaunch poppy_controllers control.launch       # Il s'agit du launchfile habit
 ```
 
 
-### 1. Set the robot in compliance mode:
+### Déclencher la compliance, la prise d'image ou la fermeture de la pince
+
+La compliance, la prise d'image et la fermeture de la pince sont déclenchées par un appel de service ROS, depuis un client de service Python, ou bien en ligne de commande comme présenté ci-dessous :
+
+
 ```bash
 rosservice call /set_compliant "data: true" 
 
@@ -79,6 +83,23 @@ rosservice call /set_compliant "data: true"
 #   message: "Robot compliance has been enabled"
 ```
 
+La prise d'image renvoyant une image au format `sensor_msgs/Image`, elle ne peut pas être affichée dans un terminal et il est donc plus adapté de faire l'appel de service depuis Python :
+
+
+```python
+import cv2
+from poppy_controllers.srv import GetImage
+from cv_bridge import CvBridge
+
+get_image = rospy.ServiceProxy("get_image", GetImage)
+response = get_image()
+bridge = CvBridge()
+image = bridge.imgmsg_to_cv2(response.image)
+cv2.imshow("Poppy camera", image)
+cv2.waitKey(200)
+```
+
+**Important** : Prenez soin de vérifier si l'image que vous avez récupérée n'est pas vide avant de l'exploiter. Ceci peut se produire si votre caméra est défectueuse ou non-connectée.
 
 ### Planifier et exécuter des trajectoires avec MoveIt
 
@@ -155,41 +176,27 @@ commander.go()
 commander.execute(my_motion)
 ```
 
-### Prendre une image de la caméra Poppy
-
-Voici un code Python pour prendre une iamge Poppy depuis ROS.
-Prenez soin de vérifier si l'image que vous avez récupérée n'est pas vide avant de l'exploiter.
-
-```python
-import cv2
-from poppy_controllers.srv import GetImage
-from cv_bridge import CvBridge
-
-get_image = rospy.ServiceProxy("get_image", GetImage)
-response = get_image()
-bridge = CvBridge()
-image = bridge.imgmsg_to_cv2(response.image)
-cv2.imshow("Poppy camera", image)
-cv2.waitKey(200)
-```
 
 ### Travaux pratiques avec MoveIt
 
 Pour découvrir toutes les fonctionnalités de MoveIt comme l'évitement d'obstacle, nous vous conseillons de suivre [cette activité de travaux pratiques](https://learn.e.ros4.pro/fr/manipulation/ergo-jr/).
 
-## Troubleshooting
+## Résolution des problèmes
 #### `Invalid Trajectory: start point deviates from current robot state more than 0.2`
-You're probably trying to replay a trajectory while your robot didn't reach the starting point first. Make sure you reach it with `set_joint_value_target`.
+Vous essayez d'exécuter une trajectoire dont le premier point est beaucoup trop loin de la configuration actuelle du robot.
+Vous pouvez atteindre ce premier point d'abord avec `set_joint_value_target`.
+La flexibilité des pièces mécaniques de Poppy Ergo Jr cause une perte de précision et peut provoquer cette erreur en particulier dans les configurations avec un bras de levier et une charge qui évoluent rapidement. Un re-planning résoud généralement le problème.
 
 #### `ABORTED: Solution found but controller failed during execution`
-Is your robot compliance disabled? No trajectory can be executed with compliance.
+La compliance de votre robot est-elle désactivée ? Les trajectoires ne peuvent pas être exécutée avec la compliance active.
 
-#### Robot makes abrupt trajectories
+#### Le robot fait des acoups abruts
 * If you are replaying a recorded trajectory, make you you first join its initial point before starting replay: use `set_joint_value_target` first before `execute`
-* Poppy Ergo Jr's motors have a range of [-170°, +170°] = [-0.94 rad, +0.94 rad], if your trajectories don't fit this interval, you will likely have erratic movements, thus:
-* keep away from U-turns (~ 180° = 3.14 rad) for each motor when recording a trajectory
-* make sure your motors are not mounted backwards : `set_joint_value_target([0, 0, 0, 0, 0, 0])` must bring your robot in [that exact configuration](https://camo.githubusercontent.com/bda29f64b2e37ca0471eefff12f7981300e167c8/687474703a2f2f646f63732e706f7070792d70726f6a6563742e6f72672f656e2f617373656d626c792d6775696465732f6572676f2d6a722f696d672f6572676f5f746f6f6c732e676966).
+* Les moteurs de Poppy Ergo Jr ont un intervalle angulaire valide de [-170°, +170°] = [-0.94 rad, +0.94 rad]. Si votre trajctoire les fait sortir de cette intervalle, le comportement qui d'être ératique, ainsi :
+* Eloignez-vous des moteurs en demi-tour (à un angle d'environ ~ 180° = 3.14 rad) lorsque vous enregistrez une trajectoire
+* Vérifiez que vos moteurs ne sont pas montés à l'envers. Pour vérifier utilisez `set_joint_value_target([0, 0, 0, 0, 0, 0])`  ce qui doit amener votre robot dans cette très exacte configuration :
 
+<img src="https://camo.githubusercontent.com/bda29f64b2e37ca0471eefff12f7981300e167c8/687474703a2f2f646f63732e706f7070792d70726f6a6563742e6f72672f656e2f617373656d626c792d6775696465732f6572676f2d6a722f696d672f6572676f5f746f6f6c732e676966" alt="Configuration attendue du robot avec tous les joints à 0" />
 
 
 

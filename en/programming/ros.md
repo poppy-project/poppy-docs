@@ -69,7 +69,10 @@ roslaunch poppy_controllers control.launch       # It is the regular launchfile 
 ```
 
 
-### Example: Set the robot in compliance mode:
+###  Trigger compliance, an image shot, or the gripper closure via a service call
+
+Activating the compliance, an image shot, or the gripper closure and opening are trigger via a service call, either from a Python node, or from command line as presented below:
+
 ```bash
 rosservice call /set_compliant "data: true" 
 
@@ -78,6 +81,21 @@ rosservice call /set_compliant "data: true"
 #   message: "Robot compliance has been enabled"
 ```
 
+The following piece of Python code (in a ROS node) allows to grab an image from the Poppy's camera and convert it to OpenCV's image format:
+
+```python
+import cv2
+from poppy_controllers.srv import GetImage
+from cv_bridge import CvBridge
+
+get_image = rospy.ServiceProxy("get_image", GetImage)
+response = get_image()
+bridge = CvBridge()
+image = bridge.imgmsg_to_cv2(response.image)
+cv2.imshow("Poppy camera", image)
+cv2.waitKey(200)
+```
+**Warning**: Make sure you control if the image has a correct size before using it. A fault camera would return an iamge with no dimension.
 
 ### Example: Plan trajectories with MoveIt
 
@@ -153,26 +171,6 @@ commander.go()
 commander.execute(my_motion)
 ```
 
-### Grab an image
-The following piece of Python code (in a ROS node) allows to grab an image from the Poppy's camera. Make sure you control if the image has a correct size before using it. A fault camera would return an iamge with no diemnsion.
-
-```python
-import cv2
-from poppy_controllers.srv import GetImage
-from cv_bridge import CvBridge
-
-get_image = rospy.ServiceProxy("get_image", GetImage)
-response = get_image()
-bridge = CvBridge()
-image = bridge.imgmsg_to_cv2(response.image)
-cv2.imshow("Poppy camera", image)
-cv2.waitKey(200)
-```
-
-### Practical labs with MoveIt (in French)
-
-Pour découvrir toutes les fonctionnalités de MoveIt comme l'évitement d'obstacle, nous vous conseillons de suivre [cette activité de travaux pratiques](https://learn.e.ros4.pro/fr/manipulation/ergo-jr/).
-
 ## Troubleshooting
 #### `Invalid Trajectory: start point deviates from current robot state more than 0.2`
 You're probably trying to replay a trajectory while your robot didn't reach the starting point first. Make sure you reach it with `set_joint_value_target`.
@@ -184,7 +182,9 @@ Is your robot compliance disabled? No trajectory can be executed with compliance
 * If you are replaying a recorded trajectory, make you you first join its initial point before starting replay: use `set_joint_value_target` first before `execute`
 * Poppy Ergo Jr's motors have a range of [-170°, +170°] = [-0.94 rad, +0.94 rad], if your trajectories don't fit this interval, you will likely have erratic movements, thus:
 * keep away from U-turns (~ 180° = 3.14 rad) for each motor when recording a trajectory
-* make sure your motors are not mounted backwards : `set_joint_value_target([0, 0, 0, 0, 0, 0])` must bring your robot in [that exact configuration](https://camo.githubusercontent.com/bda29f64b2e37ca0471eefff12f7981300e167c8/687474703a2f2f646f63732e706f7070792d70726f6a6563742e6f72672f656e2f617373656d626c792d6775696465732f6572676f2d6a722f696d672f6572676f5f746f6f6c732e676966).
+* make sure your motors are not mounted backwards : `set_joint_value_target([0, 0, 0, 0, 0, 0])` must bring your robot in that exact configuration:
+
+<img src="https://camo.githubusercontent.com/bda29f64b2e37ca0471eefff12f7981300e167c8/687474703a2f2f646f63732e706f7070792d70726f6a6563742e6f72672f656e2f617373656d626c792d6775696465732f6572676f2d6a722f696d672f6572676f5f746f6f6c732e676966" alt="Expected configuration of Poppy Ergo Jr with 0 target angles" />
 
 
 
