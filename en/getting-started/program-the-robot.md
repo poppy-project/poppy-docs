@@ -48,6 +48,10 @@ Most of the tutorials, experiments or pedagogical activities that we and the com
 
 > **Info** An updated gallery of notebooks can be found [here](../programming/notebooks.md). Contributions welcomed!
 
+## Using ROS (Robot Operating System)
+
+For advanced users, Poppy robots can also be used with ROS Noetic. Consult the [dedicated chapter](../programming/ros.md).
+
 ## Through the REST API
 
 On top of the Snap_!_ and Python options, we wanted to provide another way of accessing and controlling your robot from any device or language. Poppy robots are providing a REST API. The most important features of the robot can be access through HTTP GET/POST requests.
@@ -58,4 +62,3 @@ From a more practical point of view, this allows you to:
 * **Design web apps** connected to your robot, such as the [monitor interface](https://github.com/poppy-project/poppy-monitor) (also a contribution!).
 * Make your **robot interact with other connected devices** such as a smartphone, intelligent sensors, or even your twitter account...
 
-> **Warning** The REST API is still a work in progress, will change and is clearly ill documented! For more information you can have a look [here](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md) our on the [forum](https://forum.poppy-project.org). A well designed, stable and well documented REST API is expected for the next major software release.

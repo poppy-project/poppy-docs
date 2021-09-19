@@ -45,6 +45,10 @@ La plupart des tutoriels, expérimentations et activités pédagogiques que la c
 
 > **Info** Vous pouvez retrouvez une mise à jour de la galerie de noteboks [ici](../programming/notebooks.md). Toute contibution est la bienvenue !
 
+## Avec ROS (Robot Operating System)
+
+poru les utilisateurs avancés, les robots Poppy peuvent aussi être programmés avec ROS Noetic. Consultez le [chapitre dédié](../programming/ros.md).
+
 ## Avec l'API REST
 
 En plus de Snap_!_ et de Python, nous voulions donner la possibilité de recourir à d'autres options pour accéder et contrôler votre robot depuis n'importe quel système ou langage de programmation. Les robots Poppy fournissent une API REST. Les fonctionnalités les plus importantes sont accessibles depuis les requêtes HTTP GET/POST.
@@ -55,4 +59,3 @@ D'un point vue plus pratique, cela vous permet de :
 * **Créez des des applications web** connectées à votre robot, telle qu'une [interface moniteur](https://github.com/poppy-project/poppy-monitor) (encore une contribution !).
 * Faites intéragir **votre robot avec d'autres objets connectés** tels que les smartphones, les capteurs intelligent, ou encore votre compte Twitter...
 
-> **Attention** L'API REST est encore une option en cours de développement, des changements y seront apportés, et la documentation n'est absolument pas terminée ! Pour plus d'informations, jetez un oeil [ici](https://github.com/poppy-project/pypot/blob/master/REST-APIs.md) ou alors sur notre [forum](https://forum.poppy-project.org). Une API REST bien conçue, stable et bien documentée est prévue pour la prochaine mise à jour majeure du logiciel.

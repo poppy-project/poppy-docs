@@ -1,0 +1,195 @@
+# Programmation des robots Poppy en ROS
+
+ROS est une boîte à outils logicielle pour la création de robots, très populaire dans le milieu académique. Il est plutôt destiné aux utilisateurs avancés.
+
+<img src="https://raw.githubusercontent.com/poppy-project/poppy_ergo_jr_description/master/doc/img/rviz.png" alt="Poppy dans ROS Noetic" />
+
+## Compatibilité des versions de robots et de ROS
+
+Pour pouvoir utiliser votre robot avec ROS vous devez impérativement installer **ROS 1 Noetic** sur **Ubuntu 20.04**. La version ROS 2 supporte Windows et MacOS, cependant Poppy n'est pas encore compatible.
+
+Seul Poppy Ergo Jr dispose d'une compatibilité avec ROS totale à partir de la version 4.0.0. Observez votre numéro de version toute en haut à droite de la page d'accueil du robot.
+
+Pour Torso et Humanoid, des [packages](https://poppy.discourse.group/t/support-of-ros-available-for-poppy-ergo-jr/) sont toutefois disponibles pour les utilisateurs les plus avancés.
+
+
+## Installation 
+### 1. Installer ROS Noetic
+
+Veuillez vous réferer à la [procédure d'installation de ROS Noetic](https://wiki.ros.org/noetic/Installation/Ubuntu). La procédure est réussie lorsque la commande `roscore` démarre un ROS master que vous pouvez ensuite interrompre avec Ctrl+C.
+
+### 2. Installer MoveIt 1.0
+
+MoveIt est un ensemble d'outils pour ROS permettant de faciliter la création de robots manipulateurs. il dispose d'outils de planification de trajectoires, de perception 3D, de cinématique et de contrôle moteur.
+
+Veuillez vous réferer à la [procédure d'installation de MoveIt](https://moveit.ros.org/install/). 
+
+### 3. Télécharger l'intégration de Poppy Ergo Jr dans ROS
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/poppy-project/poppy_ergo_jr_description/
+git clone https://github.com/poppy-project/poppy_ergo_jr_moveit_config
+git clone https://github.com/poppy-project/poppy_controllers
+cd ~/catkin_ws && catkin_make
+source ~/catkin_ws/devel/setup.bash
+```
+
+## Utiliser Poppy sous ROS
+### Aperçu de l'API ROS pour Poppy
+
+Le robot Poppy dispose des topics et services suivants :
+
+* Le topic `/joint_states` publient l'état courant des joints
+* Le action server `/follow_joint_trajectory` permet de contrôler le robot par envoi de trajectoires de type `trajectory_msgs/JointTrajectory`
+* Le service `/set_compliant` eprmet de (dés)activer la compliance du robot (robot mou)
+* Le service `/get_image` permet de prendre une photo via la caméra de Poppy (il renverra une image de dimension 0 si la caméra n'est pas foncitonnelle)
+* Le service `/close_gripper` permet d'ouvrir et fermer la pince de Poppy Ergo Jr si le robot a été monté avec cet effecteur (il s'agit de son moteur m6)
+* Les paramètres `/gripper/angles/aperture` et `/gripper/angles/closure` définissent l'intervalle d'ouvrture et de fermeture de la pince(en degrés d'environ -20° à +30°)
+* Le paramètre `/gripper/speed` définnie la vitesse d'ouverture et de fermeture de 0.05 (le plus lent) à 1 (le plus rapide)
+
+
+### Démarrer les contrôleurs Poppy d'un robot tangible (aka les services ROS)
+
+Démarrez les services ROS en vous connectant à la page d'accueil du robot [http://poppy.local](http://poppy.local) puis en sélectionnant **Programmer** puis **ROS** :
+
+<img src="/en/img/4.0.0/ros-start.png" alt="Démarrage des services ROS" />
+
+Ce bouton a pour effet de démarrer les contrôleurs ROS pour Poppy sur le robot lui-même. Dans ce cas le robot sera le ROS master et vous devrez l'utiliser comme ROS master avec la variable d'envrionnement suivante sur votre poste de travail :
+
+```bash
+export ROS_MASTER_URI=http://poppy.local:11311
+# remplacer poppy.local par le nom de votre robot si vous l'avez changé
+``` 
+
+**Note** : Dans le cas particulier où vous  ne souhaiteriez pas que Poppy soit le ROS master ou si vous souhaitez personnaliser le launchfile à lancer sur le robot, n'utilisez pas le bouton de démarrage de ROS et vérifiez que l'API du robot est arrêtée. Ensuite vous pouvez vous connecter au robot en ssh avec la commande puis lancer le launchfile manuellement afin de le personnaliser :
+```
+ssh poppy@poppy.local                            # password poppy
+export ROS_MASTER_URI=http://poppy.local:11311   # Définissez ici votre ROS master
+roslaunch poppy_controllers control.launch       # Il s'agit du launchfile habituellement démarré par le bouton "Démarrer ROS"
+```
+
+
+### 1. Set the robot in compliance mode:
+```bash
+rosservice call /set_compliant "data: true" 
+
+# The service must return a success message:
+#   success: True
+#   message: "Robot compliance has been enabled"
+```
+
+
+### Planifier et exécuter des trajectoires avec MoveIt
+
+MoveIt vous permet de décrire les obstacles à proximité du robot (en dur ou provenant d'un capteur) et générer des trajectoires avec évitement d'obstacle.
+
+<img src="https://github.com/poppy-project/poppy_ergo_jr_moveit_config/blob/36ffb295cf115a080b81aa6475ae512e88c9957a/doc/img/MoveIt.gif" alt="Poppy Ergo Jr dans MoveIt" />
+
+### Démarrer MoveIt avec un robot simulé
+
+Démarrez MoveIt avec le paramètre `fake_execution` à true pour simuler un robot :
+```
+roslaunch poppy_ergo_jr_moveit_config demo.launch fake_execution:=true gripper:=true
+```
+
+Ou bien avec l'effecteur abat-jour :
+```
+roslaunch poppy_ergo_jr_moveit_config demo.launch fake_execution:=true lamp:=true
+```
+
+### Démarrer MoveIt un robot tangible
+
+Avec un robot tangible, démarrez les services ROS sur le robot puis sur votre poste de travail démarrez MoveIt en passant `fake_execution` à false:
+```
+roslaunch poppy_ergo_jr_moveit_config demo.launch fake_execution:=false lamp:=true
+```
+La boule bleue de l'effecteur vous permet de définir une cible cartésienne à atteindre et le bouton "Plan and Execute" lance une planification de trajectoire avec évitement d'obstacle et l'exécute sur le robot.
+
+
+### Fonctionnalité d'enregistrement et rejeu de trajectoire à l'identique
+
+Avant d'enregistrer une trajectoire, commencez par activer la compliance :
+```bash
+rosservice call /set_compliant "data: true" 
+```
+Cependant il est aussi possible d'enregistrer la trajectoire sans compliance en générant la trajectoire à enregistrer par MoveIt par exemple.
+
+Ensuite, utilisez par exemple ce code Python pour enregistrer :
+```python
+import rospy
+from poppy_ros_control.recorder import Recorder
+
+rospy.init_node("trajectory_recorder")
+r = Recorder()
+r.start_recording()
+
+# Move your robot with your hands in compliant mode to record its trajectory
+rospy.sleep(5)
+
+r.stop_and_save("my_motion_name")
+```
+
+Les trajectoires sont enregistrées dans des fichiers du dossier `poppy_controllers/data`.
+
+Ensuite vous pourrez les charger et les rejouer ainsi :
+
+
+```python
+import rospy
+from poppy_ros_control.recorder import Player
+from moveit_commander.move_group import MoveGroupCommander
+
+rospy.init_node("trajectory_player")
+commander = MoveGroupCommander("arm_and_finger")
+player = Player()
+
+# This returns a moveit_msgs/RobotTrajectory object representing the recorded trajectory
+my_motion = player.load("my_motion_name")
+
+# Go to the start position before replaying the motion
+commander.set_joint_value_target(my_motion.joint_trajectory.points[0].positions)
+commander.go()
+
+# Replay the exact same motion
+commander.execute(my_motion)
+```
+
+### Prendre une image de la caméra Poppy
+
+Voici un code Python pour prendre une iamge Poppy depuis ROS.
+Prenez soin de vérifier si l'image que vous avez récupérée n'est pas vide avant de l'exploiter.
+
+```python
+import cv2
+from poppy_controllers.srv import GetImage
+from cv_bridge import CvBridge
+
+get_image = rospy.ServiceProxy("get_image", GetImage)
+response = get_image()
+bridge = CvBridge()
+image = bridge.imgmsg_to_cv2(response.image)
+cv2.imshow("Poppy camera", image)
+cv2.waitKey(200)
+```
+
+### Travaux pratiques avec MoveIt
+
+Pour découvrir toutes les fonctionnalités de MoveIt comme l'évitement d'obstacle, nous vous conseillons de suivre [cette activité de travaux pratiques](https://learn.e.ros4.pro/fr/manipulation/ergo-jr/).
+
+## Troubleshooting
+#### `Invalid Trajectory: start point deviates from current robot state more than 0.2`
+You're probably trying to replay a trajectory while your robot didn't reach the starting point first. Make sure you reach it with `set_joint_value_target`.
+
+#### `ABORTED: Solution found but controller failed during execution`
+Is your robot compliance disabled? No trajectory can be executed with compliance.
+
+#### Robot makes abrupt trajectories
+* If you are replaying a recorded trajectory, make you you first join its initial point before starting replay: use `set_joint_value_target` first before `execute`
+* Poppy Ergo Jr's motors have a range of [-170°, +170°] = [-0.94 rad, +0.94 rad], if your trajectories don't fit this interval, you will likely have erratic movements, thus:
+* keep away from U-turns (~ 180° = 3.14 rad) for each motor when recording a trajectory
+* make sure your motors are not mounted backwards : `set_joint_value_target([0, 0, 0, 0, 0, 0])` must bring your robot in [that exact configuration](https://camo.githubusercontent.com/bda29f64b2e37ca0471eefff12f7981300e167c8/687474703a2f2f646f63732e706f7070792d70726f6a6563742e6f72672f656e2f617373656d626c792d6775696465732f6572676f2d6a722f696d672f6572676f5f746f6f6c732e676966).
+
+
+
+
