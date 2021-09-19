@@ -8,7 +8,7 @@ ROS est une boîte à outils logicielle pour la création de robots, très popul
 
 Pour pouvoir utiliser votre robot avec ROS vous devez impérativement installer **ROS 1 Noetic** sur **Ubuntu 20.04**. La version ROS 2 supporte Windows et MacOS, cependant Poppy n'est pas encore compatible.
 
-Seul Poppy Ergo Jr dispose d'une compatibilité avec ROS totale à partir de la version 4.0.0. Observez votre numéro de version toute en haut à droite de la page d'accueil du robot.
+Seul Poppy Ergo Jr dispose d'une compatibilité avec ROS totale à partir de la version 4.0.0. Observez votre numéro de version toute en haut à droite de la page d'accueil du robot [http://poppy.local](http://poppy.local).
 
 Pour Torso et Humanoid, des [packages](https://poppy.discourse.group/t/support-of-ros-available-for-poppy-ergo-jr/) sont toutefois disponibles pour les utilisateurs les plus avancés.
 
@@ -26,7 +26,7 @@ Veuillez vous réferer à la [procédure d'installation de MoveIt](https://movei
 
 ### 3. Télécharger l'intégration de Poppy Ergo Jr dans ROS
 
-```
+```bash
 cd ~/catkin_ws/src
 git clone https://github.com/poppy-project/poppy_ergo_jr_description/
 git clone https://github.com/poppy-project/poppy_ergo_jr_moveit_config
@@ -53,7 +53,7 @@ Le robot Poppy dispose des topics et services suivants :
 
 Démarrez les services ROS en vous connectant à la page d'accueil du robot [http://poppy.local](http://poppy.local) puis en sélectionnant **Programmer** puis **ROS** :
 
-<img src="/en/img/4.0.0/ros-start.png" alt="Démarrage des services ROS" />
+<img src="/img/4.0.0/ros-start.png" alt="Démarrage des services ROS" />
 
 Ce bouton a pour effet de démarrer les contrôleurs ROS pour Poppy sur le robot lui-même. Dans ce cas le robot sera le ROS master et vous devrez l'utiliser comme ROS master avec la variable d'envrionnement suivante sur votre poste de travail :
 
@@ -84,24 +84,24 @@ rosservice call /set_compliant "data: true"
 
 MoveIt vous permet de décrire les obstacles à proximité du robot (en dur ou provenant d'un capteur) et générer des trajectoires avec évitement d'obstacle.
 
-<img src="https://github.com/poppy-project/poppy_ergo_jr_moveit_config/blob/36ffb295cf115a080b81aa6475ae512e88c9957a/doc/img/MoveIt.gif" alt="Poppy Ergo Jr dans MoveIt" />
+<img src="https://github.com/poppy-project/poppy_ergo_jr_moveit_config/raw/36ffb295cf115a080b81aa6475ae512e88c9957a/doc/img/MoveIt.gif" alt="Poppy Ergo Jr dans MoveIt" />
 
 ### Démarrer MoveIt avec un robot simulé
 
 Démarrez MoveIt avec le paramètre `fake_execution` à true pour simuler un robot :
-```
+```bash
 roslaunch poppy_ergo_jr_moveit_config demo.launch fake_execution:=true gripper:=true
 ```
 
 Ou bien avec l'effecteur abat-jour :
-```
+```bash
 roslaunch poppy_ergo_jr_moveit_config demo.launch fake_execution:=true lamp:=true
 ```
 
 ### Démarrer MoveIt un robot tangible
 
 Avec un robot tangible, démarrez les services ROS sur le robot puis sur votre poste de travail démarrez MoveIt en passant `fake_execution` à false:
-```
+```bash
 roslaunch poppy_ergo_jr_moveit_config demo.launch fake_execution:=false lamp:=true
 ```
 La boule bleue de l'effecteur vous permet de définir une cible cartésienne à atteindre et le bouton "Plan and Execute" lance une planification de trajectoire avec évitement d'obstacle et l'exécute sur le robot.
