@@ -8,9 +8,7 @@ ROS est une boîte à outils logicielle pour la création de robots, très popul
 
 Pour pouvoir utiliser votre robot avec ROS vous devez impérativement installer **ROS 1 Noetic** sur **Ubuntu 20.04**. La version ROS 2 supporte Windows et MacOS, cependant Poppy n'est pas encore compatible.
 
-Seul Poppy Ergo Jr dispose d'une compatibilité avec ROS totale à partir de la [version 4.0.0](https://github.com/poppy-project/poppy-ergo-jr/releases). Les versions précédentes ne supportent pas ROS. Observez votre numéro de version tout en haut à droite de la page d'accueil du robot [http://poppy.local](http://poppy.local).
-
-Pour Torso et Humanoid, des [packages](https://poppy.discourse.group/t/support-of-ros-available-for-poppy-ergo-jr/) sont toutefois disponibles pour les utilisateurs les plus avancés.
+Seul Poppy Ergo Jr dispose d'une compatibilité avec ROS totale à partir de la [version 4.0.0](https://github.com/poppy-project/poppy-ergo-jr/releases). Les versions précédentes ne supportent pas ROS. Observez votre numéro de version tout en haut à droite de la page d'accueil du robot [http://poppy.local](http://poppy.local). Pour Torso et Humanoid, veuillez consulter la [section dédiée en bas de page](#utiliser-poppy-torso-et-poppy-humanoid-avec-ros).
 
 
 ## Installation en 3 étapes
@@ -199,5 +197,12 @@ La compliance de votre robot est-elle désactivée ? Les trajectoires ne peuvent
 
 <img src="https://camo.githubusercontent.com/bda29f64b2e37ca0471eefff12f7981300e167c8/687474703a2f2f646f63732e706f7070792d70726f6a6563742e6f72672f656e2f617373656d626c792d6775696465732f6572676f2d6a722f696d672f6572676f5f746f6f6c732e676966" alt="Configuration attendue du robot avec tous les joints à 0" />
 
+## Utiliser Poppy Torso et Poppy Humanoid avec ROS
+Le support ROS pour Poppy Humanoid et Poppy Torso sous ROS étant incomplet, si cela convient à votre usage nous vous recommandons d'utiliser `pypot` dans un noeud ROS en Python de la façon suivante :
 
+1. Retirer l'adaptateur USB2AX du robot branché sur la tête du robot pour le connecter à votre station de travail ROS Noetic
+2. Sur votre station de travail taper `pip3 install poppy-torso` (ou `pip3 install poppy-humanoid`)
+3. Pour programmer votre robot, créez un noeud ROS et importez votre robot `from pypot.creatures import PoppyTorso`
+4. Déclarez ensuite une instance de robot puis manipulez votre robot via `pypot` conformément à la [documentation Poppy pour Python](./python.md). Vous pouvez utiliser toutes les fonctionnalités `pypot` pour piloter votre robot : le `MoveRecorder`, les primitives, les commandes moteur, ... ainsi que les topics, services et paramètres ROS pour communiquer avec ce noeud.
 
+**Utilisateurs avancés uniquement :** vous trouverez des [packages](https://poppy.discourse.group/t/support-of-ros-available-for-poppy-ergo-jr/) disponibles si vous cherchez l'URDF ou l'intégration MoveIt de Poppy Torso. Toutefois les contrôleurs n'étant pas disponibles, ces packages ne vous permettront pas de faire bouger votre robot tangible.
