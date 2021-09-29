@@ -76,24 +76,3 @@ Pour configurer un moteur avec Poppy Configure, tapez la commande `poppy-configu
 
 [**>> Etape suivante : construction mécanique**](mechanical-construction.md)
 
-## 3.2.ter. Configurer les moteurs un-par-un (si vous utilisez une image ROS)
-
-Si vous ne savez pas ce qu'est ROS, cette procédure n'est probablement pas pour vous. L'image ROS pour Poppy Ergo Jr est dépourvue d'interface graphique. Pour se connecter au logiciel et configurer les moteurs nous allons utiliser SSH depuis un terminal de votre station de travail.
-
-**Ouvrir un terminal via SSH**
-
-Depuis votre station de travail Linux ou MacOS, ouvrez un terminal puis tapez la commande `ssh poppy@poppy.local` :
-* Il vous sera d'abord demandé de confirmer la connexion en tapant `yes`
-* Puis vous devrez taper le mot de passe `poppy`
-* Votre invite de commande doit désormais afficher `poppy@poppy` au lieu de votre invite habituel, ce qui confirme que vous êtes connecté au robot via SSH
-
-**Note :**  Si l'erreur `ssh: Could not resolve hostname poppy.local: Name or service not known` apparait, vous avez un défaut de connexion réseau
-
-**Configurer un motor**
-
-Pour configurer un moteur avec Poppy Configure, branchez **un unique moteur** à la carte Pixl puis tapez dans le terminal SSH la commande `poppy-configure ergo-jr <nom-du-moteur>` en remplaçant le nom du moteur par le bon nom entre **m1** et **m6**. Vérifiez qu'aucune erreur n'apparaît lorsque la commande se termine et que la dernière ligne est **Done!**. Vous pouvez ensuite passer au moteur suivant.
-
-![image](img/IHM/poppy-configure-terminal-output.png)
-
-[**>> Etape suivante : construction mécanique**](mechanical-construction.md)
-

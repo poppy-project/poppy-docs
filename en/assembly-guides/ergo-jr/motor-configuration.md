@@ -74,24 +74,3 @@ To configure a motor with Poppy Configure, type the command `poppy-configure erg
 ![image](img/IHM/poppy-configure-terminal-output.png)
 
 [**>> Next step: mechanical construction**](mechanical-construction.md)
-
-## 3.2.ter. Configuring motors one at a time (if you are using the ROS image)
-
-If you don't know what ROS (Robot Operating System) is, this option is presumably not the one you're looking for. The ROS image for Poppy Ergo Jr does not embed the regular `http://poppy.local` graphical user interface. In order to configure the motors we will connect through SSH and use the *Poppy Configure* tool.
-
-**Open a terminal through SSH**
-
-From a Linux or MacOS workstation, open a temrinal and type `ssh poppy@poppy.local`:
-* You will be first asked to confirm the connection by answering `yes`
-* You will then have to type the default password `raspberry`
-* Your shell prompt must now display `poppy@poppy` instead of your regular prompt, which confirm that connection to the robot was successful via SSH
-
-**Note:**  If you meet this error: `ssh: Could not resolve hostname poppy.local: Name or service not known`, it means that you have a network issue.
-
-**Configure a motor**
-
-To configure a motor with Poppy Configure, type in the SSH terminal the command `poppy-configure ergo-jr <motor-name>` in which you replace the motor name by the corresponding one from **m1** to **m6**. Check that no error happens when the command is over and that the last line is **Done!**.
-
-![image](img/IHM/poppy-configure-terminal-output.png)
-
-[**>> Next step: mechanical construction**](mechanical-construction.md)
