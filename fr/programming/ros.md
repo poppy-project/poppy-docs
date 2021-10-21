@@ -129,6 +129,16 @@ La boule bleue de l'effecteur vous permet de définir une cible cartésienne à 
 
 ### Fonctionnalité d'enregistrement et rejeu de trajectoire à l'identique
 
+Deux méthodes existe pour enregistrer et rejouer des trajectoires :
+1. Via `pypot` dans un noeud ROS, si vous n'utilisez pas MoveIt ni les contrôleurs Poppy
+2. Via les contrôleurs Poppy, qui nécessitent l'utilisation de MoveIt
+
+#### Méthode 1 via pypot dans un noeud ROS
+
+1. Importez votre robot `from pypot.creatures import PoppyTorso`
+2. Déclarez ensuite une instance de robot puis manipulez votre robot via `pypot` conformément à la [documentation Poppy pour Python](./python.md). Vous pouvez utiliser toutes les fonctionnalités `pypot` pour piloter votre robot, incluant le `MoveRecorder` pour l'enregistrement/rejeu de trajectoires
+
+#### Méthode 2 via les contrôleurs Poppy
 Avant d'enregistrer une trajectoire, commencez par activer la compliance :
 ```bash
 rosservice call /set_compliant "data: true" 
