@@ -66,15 +66,38 @@ Si ces erreurs sont trop fréquentes, voici quelques pistes pour vous aider à i
 
 Des problèmes de communicaiton similaires peuvent déclencher des exceptions de type `DxlError`. Avec Poppy Torso ou Humanoid, vous pouvez essayer de [couper le fil central du cable directement connecté à l'USB2AX](../en/assembly-guides/poppy-humanoid/warnings.html#warning-5-your-robot-is-sensitive-to-interferences).
 
-## Problème 4 : Mon robot fait des mouvements bizarres ou s'auto-collisionne
+## Problème 4: Les moteurs ne sont pas détectés
+
+Si certains moteurs ne sont pas détectés, vérifiez d'abord qu'ils sont configurés avec le bon protocole : Protocole 2.0 pour XL-320 mais 1.0 pour tous les autres modèles. Vous pourriez avoir besoin de réinitialiser le firmware de vos moteurs non détectés également. Consultez la [documentation Dynamixel](https://emanual.robotis.com/docs/en/dxl/protocol2/) pour réinitialiser ou changer le protocole avec Robot Plus ou Dynamixel Wizard.
+
+Vous pouvez utiliser [Herborist](https://github.com/poppy-project/herborist#herborist) pour scanner tous les motors sur le bus et détecter automatiquement leur ID et baudrate.
+
+Si le problème survient toujours, vous pouvez utiliser le mode DEBUG pour obtenir plus de détails. Il nécessite d'utiliser Python :
+
+```python
+import logging, sys
+logging.basicConfig(stream=sys.stderr, level="DEBUG")
+
+# Ensuite connectez-vous à vos moteurs via la méthode la plus appropriée, par exemple :
+import pypot.dynamixel.io
+pypot.dynamixel.io.DxlIO("COM3", baudrate=57600).scan()
+
+import poppy_torso
+poppy_torso.PoppyTorso()
+```
+
+Vous verrez apparaitre les messages de déboguage dans votre terminal, incluant les paquets envoyés aux moteurs (et les réponses des moteurs, s'il y en a).
+
+
+## Problème 5 : Mon robot fait des mouvements bizarres ou s'auto-collisionne
 
 Si votre robot fait des mouvements qui ne correspondent pas à ce que vous attendez ou qui font que poppy s'auto-collisionne, c'est probablement que vous avez assemblé votre robot à l'envers. Reprenez chacune des étapes une par une et vérifiez attentivement que votre les pièces de votre robot sont en tout point positionnées identiquement au photos ou schémas. Il est assez facile de se tromper et d'obtenir un robot qui a l'air bien assemblé, alors qu'il ne l'est pas.
 
-## Problème 5 : Quel est le mot de passe SSH par défaut de mon robot ?
+## Problème 6 : Quel est le mot de passe SSH par défaut de mon robot ?
 
 Un mot de passe est demandé exclusivement pour l'accès à votre robot via SSH, pour les utilisateurs avancés. Avec l'image Poppy standard, le nom d'utilisateur est `poppy` et son mot de passe est `poppy`. Avec l'image ROS, le nom d'utilisateur est `pi` et son mot de passe est `raspberry`.
 
-## Problème 6 : les fichiers STL que je télécharge semblent corrompus
+## Problème 7 : les fichiers STL que je télécharge semblent corrompus
 
 Sur les dépôts Poppy, les ressources lourdes -dont les fichiers STL- sont stockées via [Git Large File Storage (LFS)](https://git-lfs.github.com/). A ce titre, il est nécessaire d'utiliser Git LFS pour les télécharger.
 

@@ -67,15 +67,37 @@ If these errors are frequent, here are a few hints to identify (and then fix) th
 
 Similar communication troubles may trigger errors of type `DxlError`. With the Torso or Humanoid, you may try to [cut the central wire of the cable directly connected to the USB2AX](../assembly-guides/poppy-humanoid/warnings.html#warning-5-your-robot-is-sensitive-to-interferences).
 
-## Problem 4: My robot makes weird motions or auto-collides
+## Problem 4: Motors are not detected
+
+If some of your motors are not detected, first make sure that your motors use the expected protocol: Protocol 2.0 for XL-320 but 1.0 for any other model. You may also want to reset the firmware of your motor. Consult the [Dynamixel documentation](https://emanual.robotis.com/docs/en/dxl/protocol2/) to reset or change its protocol with Robot Plus or Dynamixel Wizard.
+
+You may use [Herborist](https://github.com/poppy-project/herborist#herborist) to scan all motors on the bus and detect their baudrate automatically.
+
+If the problem still occurs, you can use the DEBUG mode to get more information. It requires to use Python:
+
+```python
+import logging, sys
+logging.basicConfig(stream=sys.stderr, level="DEBUG")
+
+# Then connect to the motors with the version that applies. Examples:
+import pypot.dynamixel.io
+pypot.dynamixel.io.DxlIO("COM3", baudrate=57600).scan()
+
+import poppy_torso
+poppy_torso.PoppyTorso()
+```
+
+You will see debug messages printed in your terminal, including packets sent to motors (and received from them, if any).
+
+## Problem 5: My robot makes weird motions or auto-collides
 
 If you robot makes motions that are not those that you expect or even collides with itself, it is probably because you assembled the robot the wrong way. Open the assembly guide again, and observe carefully that every part of your assembly matches the pictures. It is very easy to build a robot that looks properly assembled but that is not.
 
-## Problem 5: What is the default SSH password of my robot?
+## Problem 6: What is the default SSH password of my robot?
 
-A password is needed only for SSH access (advanced users). With the regular Poppy image, the username is `poppy` and the password is `poppy`. With the ROS image, the username is  `pi` and the password is `raspberry`.
+A password is needed only for SSH access (advanced users). The username is `poppy` and the password is `poppy`.
 
-## problem 6: The STL files seem corrupted
+## Problem 7: The STL files seem corrupted
 
 In all Poppy repositories, heavy resources -such as STL files- are stored via [Git Large File Storage (LFS)](https://git-lfs.github.com/). Hence, you must use Git LFS to download them.
 
