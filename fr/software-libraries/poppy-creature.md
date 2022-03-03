@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Poppy-creature is a small library providing an abstract interface for robots (Poppy Humanoid, Poppy Torso, Poppy Ergo Jr...). It links high level controls and pypot, the generic low level library.
+Poppy-creature est une petite bilbiothèque fournissant une interace générique de contrôle de votre robot (que ce soit un Poppy Humanoid, Poppy Torso, Poppy Ergo Jr...).
 
-It mainly contains the class definition of [pypot.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/pypot/tree/master/pypot/creatures/abstractcreature.py) which takes a configuration and builds a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.
+Le coeur de Poppy-creature est la classe Python [pypot.creatures.abstractcreature.AbstractPoppyCreature](https://github.com/poppy-project/pypot/tree/master/pypot/creatures/abstractcreature.py) qui prend en entrée une configuration et construit une instance de [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py), tout en y ajoutant quelques additions pratiques comme un serveur REST et Snap qui permettent de programmer en Scratch en Snap, ou encore un paramètre pour se connecter à un simulateur (CoppaliaSim ou visualisateur en ligne).
 
-The arguments you can provide are:
+L'instance de `AbstractPoppyCreature` prend en paramètres :
 
 - `base_path` default: None Path where the creature sources are. The librarie looks in the default PATH if not set.
 - `config` default: None Path to the configuration file with respect to the base-path
@@ -27,41 +27,41 @@ The arguments you can provide are:
 - `remote_port` default: 4242 Port of the Remote Robot server
 - `sync` default: True Should we launch the synchronization loop for motor communication
 
-The sources are available on [GitHub](https://github.com/poppy-project/pypot/tree/master/pypot/creatures).
+Les sources sont disponibles sur [GitHub](https://github.com/poppy-project/pypot/tree/master/pypot/creatures).
 
 ## Poppy services
 
-Poppy-creature also provides a command line utility *poppy-services*. It provides shortcuts to start services like SnapRemoteServer and HTTPRemoteServer from your terminal. Example:
+Poppy-creature fournit également un utilitaire en ligne de commande *poppy-services*. Celui-ci fournit des outils pratiques pour démarrer tous les services de votre robot sur votre ordinateur. Habituellement cela n'est pas nécessaire car ces services démarrent automatiquement sur la Raspberry Pi. Cependant cela est très utile si vous n'utilisez pas de Raspberry Pi et connectez ainsi votre robot directement à votre ordinateur en branchant l'adaptateur USB2AX sur un de ses ports USB. 
 
-        poppy-services poppy-ergo-jr --snap --no-browser
+Vous pouvez ensuite démarrer différents services de votre robot, par exemple pour programmer votre Ergo Jr avec Scratch :
+        poppy-services poppy-ergo-jr --scratch
+
+
+Ou encore programmer votre Torso avec Snap :
+
+        poppy-services poppy-torso --snap
     
-
-This will launch the SnapRemoteServer for a real Poppy Ergo Jr robot.
-
-> **Note** The `--no-browser` option avoid the automatic redirection to the *Snap!* webpage. You can remove it if you use a computer with a GUI (e.g your laptop instead of the robot embedded board).
-
-Another example:
+Un autre exemple pour utiliser le simulateur avec *Snap!*:
 
         poppy-services poppy-ergo-jr --snap --poppy-simu
     
 
-It will open a *Snap_!_* windows for a simulated poppy-ergo-jr.
+La façon générique d'utiliser Poppy-services est la suivante :
 
-The way to use it is:
-
-    poppy-services <creature_name> <options>
+        poppy-services <creature_name> <options>
     
 
-the available options are:
+Les options disponibles sont :
 
-- `--vrep`: creates the specified creature for using with CoppeliaSim simulator
-- `--poppy-simu`: creates the specified creature for using with web simulator and also launches the HTTP server needed by poppy-simu. Poppy-simu is only available for poppy-erg-jr for now.
-- `--snap`: launches the Snap! server and directly imports the specific Poppy blocks.
-- `-nb` or `--no-browser`: avoid automatic start of Snap! in web browser, use only with --snap
-- `--http`: start a http robot server
-- `--remote`: start a remote robot server
-- `-v` or `--verbose`: start services in verbose mode (more logs)
-
+- `--vrep`: ouvre la connexion au simulateur CoppeliaSim. Vous devez démarrer le simualteur vous-même et charger un fichier de scène
+- `--poppy-simu`: ouvre la connexion au visualisateur en ligne (uniquement Ergo Jr)
+- `--scratch`: démarre l'interface de programmation visuelle Scratch 
+- `--snap`: démarre l'interface de programmation visuelle *Snap!*
+- `-nb` or `--no-browser`: ne pas ouvrir la page Web du langage de programmation graphique. Ce paramètre est surtout utile si votre ordinateur n'a pas d'interface graphique.
+- `--http`: Démarrer l'API REST du robot (utilisateurs avancés)
+- `--remote`: Démarrer un serveur de robot distant (utilisateurs avancés)
+- `-v` or `--verbose`: Activer le mode verbeux pour faciliter le déboguage
+<!-- TODO translate
 ## Create your own Poppy creature
 
 While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a [pypot.robot.robot.Robot](https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py) from Pypot directly.
@@ -99,21 +99,9 @@ For a better integration with the Poppy installer scripts, please have in the ro
 - a folder named poppy\_yourcreaturename containing your actual code
 
 At the end, don't forget to share it to the community! Most interesting creatures will be added to this documentation!
+-->
 
-## Installing
+## Installation
 
-> **Info** poppy-creature library is a dependancy of any Poppy robots libraries, so you don't have to install it by hand in a normal case.
+Poppy-creature et Poppy-services sont automatiquement installés avec les logiciels Poppy. Pour faire simple, il suffit de taper `pip install poppy-torso` ou `pip install poppy-ergo-jr` par exemple. Référez-vous à la section [Installer les logiciels Poppy](../installation/install-poppy-softwares.md) pour plus de détails.
 
-To install the poppy-creature library, you can use pip:
-
-        pip install poppy-creature
-    
-
-Then you can update it with:
-
-        pip install --upgrade poppy-creature
-    
-
-If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from [GitHub](https://github.com/poppy-project/pypot/tree/master/pypot) and install them with (in the software folder):
-
-        python setup.py install

@@ -37,6 +37,7 @@ The sources are available on [GitHub](https://github.com/poppy-project/pypot/tre
 ## Poppy services
 
 Poppy-creature also provides a command line utility *poppy-services*. It provides shortcuts to start services like SnapRemoteServer and HTTPRemoteServer from your terminal.
+
 Example:
 ```
     poppy-services poppy-ergo-jr --snap --no-browser
@@ -47,11 +48,16 @@ This will launch the SnapRemoteServer for a real Poppy Ergo Jr robot.
 > **Note** The `--no-browser` option avoid the automatic redirection to the *Snap!* webpage.
 You can remove it if you use a computer with a GUI (e.g your laptop instead of the robot embedded board).
 
+If you want to program with Scratch:
+```
+    poppy-services poppy-ergo-jr --scratch
+```
+
 Another example:
 ```
     poppy-services poppy-ergo-jr --snap --poppy-simu
 ```
-It will open a *Snap_!_* windows for a simulated poppy-ergo-jr.
+It will open a *Snap_!_* window for a simulated poppy-ergo-jr.
 
 
 The way to use it is:
@@ -62,12 +68,19 @@ the available options are:
 
 -   `--vrep`: creates the specified creature for using with CoppeliaSim simulator
 -   `--poppy-simu`: creates the specified creature for using with web simulator and also launches the HTTP server needed by poppy-simu. Poppy-simu is only available for poppy-erg-jr for now.
--   `--snap`: launches the Snap! server and directly imports the specific Poppy blocks.
+-   `--snap`: launches the Snap! visual programming interface
+-   `--scratch`: launches the Scratch visual programming interface
 -   `-nb` or `--no-browser`: avoid automatic start of Snap! in web
-    browser, use only with --snap
+    browser, use only with --snap or --scratch
 -   `--http`: start a http robot server
 -   `--remote`: start a remote robot server
 -   `-v` or `--verbose`: start services in verbose mode (more logs)
+
+## Installing
+
+
+Poppy-creature and Poppy-services are automatically installed when you install Poppy software. In short, just type `pip install poppy-torso` or `pip install poppy-ergo-jr` for instance. Refer to the section [Install Poppy software](../installation/install-poppy-softwares.md) for more details.
+
 
 ## Create your own Poppy creature
 
@@ -109,20 +122,3 @@ For a better integration with the Poppy installer scripts, please have in the ro
 
 At the end, don't forget to share it to the community! Most interesting
 creatures will be added to this documentation!
-
-## Installing
-
-> **Info** poppy-creature library is a dependancy of any Poppy robots libraries, so you don't have to install it by hand in a normal case.
-
-To install the poppy-creature library, you can use pip:
-```
-    pip install poppy-creature
-```
-Then you can update it with:
-```
-    pip install --upgrade poppy-creature
-```
-If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from [GitHub](https://github.com/poppy-project/pypot/tree/master/pypot) and install them with (in the software folder):
-```
-    python setup.py install
-```

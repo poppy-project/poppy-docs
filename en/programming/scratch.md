@@ -18,7 +18,7 @@ First, you must be connected to the same network LAN area than your robot (e.g. 
 
 > **Info** Be careful, wifi is not enabled by default on Poppy robots, you may need to connect your poppy with ethernet to configure wifi.
 
-You have to go on the web homepage of your robot with its URL. You can use its IP address (for example http://192.168.1.42) if you have a way to know it or its hostname like http://poppy.local. To find its IP address look at [the zeroconf chapter](../installation/install-zeroconf.md#alternatives-to-find-the-ip-address-of-a-computer-on-your-local-network). To use directly its hostname http://poppy.local you must have a Zeroconf software installed on your computer (aka ["Bonjour print services for Windows"](https://support.apple.com/kb/DL999?locale=en_US) if you are running Windows).
+You have to go on the web homepage of your robot with its URL. You can use its IP address (for example http://192.168.1.42) if you have a way to know it or its hostname like http://poppy.local. To find its IP address look at [the zeroconf chapter](../installation/install-zeroconf.md#alternatives-to-find-the-ip-address-of-a-computer-on-your-local-network). To use directly its hostname http://poppy.local you must have a Zeroconf software installed on your computer (aka ["Bonjour print services for Windows"](https://support.apple.com/kb/DL999?locale=en_US) if you are running Windows). It is also possible not to use a Raspberry Pi by connecting an USB2AX adapter directly in a USB port of your computer, in that case run [Poppy Services](../software-libraries/poppy-creature.html#poppy-services) with parameter `--scratch` to program your robot with Scratch.
 
 The home page of your poppy creature should look like the snapshot below:
 ![Poppy Home](../img/scratch/INTERFACE_home.png)
@@ -56,7 +56,7 @@ A new set of blocks will appear on the left panel.
 
 |   | Description |
 | - | ----------- |
-| ![](../img/scratch/MISC_setHost.PNG) | This block allows you to connect Scratch to your robot. The host input can accept : - robot_name.local (e.g. poppy.local if your robot’s name is poppy)- the IP address (e.g. 123.124.145.176) |
+| ![](../img/scratch/MISC_setHost.PNG) | This block allows you to connect Scratch to your robot. The host input can be: `poppy.local` byt default, or `your_name.local` if you have changed its name, or the IP address of the robot (e.g. 123.124.145.146), or `localhost` if you are directly connected to the robot in USB using [Poppy Services](../software-libraries/poppy-creature.html#poppy-services) without Raspberry Pi |
 | ![](../img/scratch/MISC_testConnection.PNG) | Click on this block to verify that you are connected to your robot. |
 | ![](../img/scratch/MISC_robotURL.PNG) | Gives the URL of the robot. |
 | ![](../img/scratch/MOTOR_allMotors.PNG) | Returns a list with the name of every motors in the robot, separated by commas. |

@@ -12,13 +12,13 @@ Ce chapitre se concentrera sur les choses nécessaires à comprendre pour pouvoi
 
 ### Connectez votre robot à Scratch
 
-#### 🤖 Si vous avez un robot Poppy
+#### 🤖 Si vous avez un robot Poppy tangible
 
-Tout d'abord, vous devez être connecté au même réseau LAN que votre robot (par exemple sur le même routeur ou Wifi).
+Tout d'abord, si votre robot possède une Raspberry PI interne, vous devez être connecté au même réseau LAN que votre robot (par exemple sur le même routeur ou Wifi).
 
 > **Info** Attention, le wifi n'est pas activé par défaut sur les robots Poppy, vous devrez peut-être connecter votre poppy en ethernet pour configurer le wifi.
 
-Vous devez vous rendre sur la page d'accueil web de votre robot avec son URL. Vous pouvez utiliser son adresse IP (par exemple http://192.168.1.42) si vous avez un moyen de la connaître ou son nom d'hôte comme http://poppy.local. Pour trouver son adresse IP, regardez [le chapitre zeroconf](../installation/install-zeroconf.md#alternatives-pour-trouver-ladresse-ip-dun-ordinateur-sur-votre-réseau-local) . Pour utiliser directement son nom d'hôte http://poppy.local vous devez avoir un logiciel Zeroconf installé sur votre ordinateur (alias ["Bonjour print services for Windows"](https://support.apple.com/kb/DL999?locale=en_US) si vous utilisez Windows).
+Vous devez vous rendre sur la page d'accueil web de votre robot avec son URL. Vous pouvez utiliser son adresse IP (par exemple http://192.168.1.42) si vous avez un moyen de la connaître ou son nom d'hôte comme http://poppy.local. Pour trouver son adresse IP, regardez [le chapitre zeroconf](../installation/install-zeroconf.md#alternatives-pour-trouver-ladresse-ip-dun-ordinateur-sur-votre-réseau-local) . Pour utiliser directement son nom d'hôte http://poppy.local vous devez avoir un logiciel Zeroconf installé sur votre ordinateur (alias ["Bonjour print services for Windows"](https://support.apple.com/kb/DL999?locale=en_US) si vous utilisez Windows). Il est aussi possible de ne pas utiliser de Raspberry Pi en connectant l'adaptateur USB2AX directement à votre ordinateur en USB, dans ce cas utilisez [Poppy Services](../software-libraries/poppy-creature.html#poppy-services) avec le paramètre `--scratch` pour le programmer avec Scratch.
 
 La page d'accueil de votre Poppy devrait ressembler à l'image ci-dessous:
 ![Poppy Home](../img/scratch/INTERFACE_home.png)
@@ -56,7 +56,7 @@ De nouveaux blocs apparaîtront sur le panneau de gauche.
 
 | | Descriptif |
 | - | ----------- |
-| ![](../img/scratch/MISC_setHost.PNG) | Ce bloc vous permet de connecter Scratch à votre robot. Les valeurs acceptées peuvent être : - nom_du_robot.local (ex. poppy.local si le nom de votre robot est poppy)- l'adresse IP (ex. 123.124.145.176) |
+| ![](../img/scratch/MISC_setHost.PNG) | Ce bloc vous permet de connecter Scratch à votre robot. Les valeurs acceptées peuvent être : `poppy.local` par défaut ou bien `votre_robot.local` si vous avez changé son nom ; l'adresse IP de Poppy (par ex. 123.124.145.176) ; ou bien `localhost` si vous êtes connecté à votre robot en USB avec [Poppy Services](../software-libraries/poppy-creature.html#poppy-services) sans Raspberry Pi |
 | ![](../img/scratch/MISC_testConnection.PNG) | Cliquez sur ce bloc pour vérifier que vous êtes connecté à votre robot. |
 | ![](../img/scratch/MISC_robotURL.PNG) | Donne l'URL du robot. |
 | ![](../img/scratch/MOTOR_allMotors.PNG) | Renvoie une liste avec le nom de tous les moteurs du robot, séparés par des virgules. |
