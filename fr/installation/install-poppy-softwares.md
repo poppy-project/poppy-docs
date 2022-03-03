@@ -48,7 +48,6 @@ N'effectuez pas cette étape si c'est votre première installation. Si vous avez
 
 ```bash
 pip install pypot --upgrade --no-deps
-pip install poppy-creature --upgrade --no-deps
 pip install poppy-ergo-jr --upgrade --no-deps
 ```
 

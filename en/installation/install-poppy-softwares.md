@@ -44,7 +44,6 @@ Skip this step if this is your first install. In case of update, it is advised t
 ```bash
 
 pip install pypot --upgrade --no-deps
-pip install poppy-creature --upgrade --no-deps
 pip install poppy-ergo-jr --upgrade --no-deps
 ```
 
