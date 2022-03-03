@@ -188,6 +188,10 @@ Fix the right arm on the right shoulder with 32 M2x3 bolts. Repeat on the other 
 
 > **Note** **IMPORTANT**: When you assemble the arm, it must be perpendicular to the body, so that the 3 dots match as usual
 
+## 6.5. Assembly of the suction pad
+
+Place the circular suction pad in the placeholder in the trunk at fix it with the M6 screw. User the lever to stick and unstick the robot to the table.
+
 <img src="img/torso_1.jpg" title="Rear view of the arm connection to the chest" style="width: 350px;" />
 
 

@@ -10,26 +10,22 @@ Prepare a clear workbench that you may keep busy for a few days with all of thes
 **3D Printed parts**:
 - Chest
 - Spine
-- Abdomen
-- Double rotation MX64 Set (3 parts)
 - Double rotation MX28 Set (3 parts)
 
 **Actuators:**
 - 1x Robotis Dynamixel AX12-A (or AX18-A)
 - 5x Robotis Dynamixel MX28-AT (or MX28-T)
-- 2x Robotis Dynamixel MX64-AT (or MX64-T)
 
 **Robotis parts:**
 - 5x HN07-N101
 - 3x HN07-I101
-- 2x HN05-N102
-- 2x HN05-I102
 - 1x Bioloid 3P PCB HUB
-- 2x SMPS2Dynamixel
-
-**Motor configuration:**
+- 1x SMPS2Dynamixel
 - 1x 12V power supply
 - 1x USB2AX
+
+**Other:**
+- 1x Circular suction pad + its M6 screw with large head
 
 ## 2. Head BOM option A: Raspberry Pi 3 version, no screen
 
@@ -47,13 +43,12 @@ Prepare a clear workbench that you may keep busy for a few days with all of thes
 - 1x AX-12 or AX-18
 
 **Electronics:**
-- 2x Speaker
-- 1x Audio amp
 - 1x Raspberry Pi 3 + its SD card
+- 1x Camera for Raspberry Pi + its flat cable
 
-## 2. Head BOM option B: Raspberry Pi 4 version, including screen (aka **Poppy Eve**)
+## 2. Head BOM option B: Raspberry Pi 4 version, including screen (aka **Poppy Eva**)
 
-This head version has its own documentation online, please refer to [the documentation of **Poppy Eve** for the assembly and software configuration](https://github.com/poppy-project/Poppy-eve-head-design#poppy-eve-head-design).
+This head version has its own documentation online, please refer to [the documentation of **Poppy Eva** for the assembly and software configuration](https://github.com/poppy-project/Poppy-eva-head-design#poppy-eva-head-design).
 
 ## 3. Tools
 Please note that you will also need:

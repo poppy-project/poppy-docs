@@ -50,7 +50,7 @@ Insert 5 nuts M2.5 on motor `r_elbow_y` on the bottom, 4 on the other side.
 
 <img src="img/arm_3.jpg" title="Nuts in r_elbow_y" style="width: 700px;" />
 
-Plug a 140mm cable to r_elbow_y, drag it in the upper-arm and fix it with 18 bolts M2.5.
+Plug a 140mm cable to r_elbow_y, drag it in the upper-arm and fix it with 9 bolts M2.5.
 
 <img src="img/arm_4.jpg" title="Drag r_elbow_y" style="width: 250px;" />
 
