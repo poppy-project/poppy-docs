@@ -206,8 +206,7 @@ Pour mieux les comprendre en détail, il est conseillé de suivre [le livret d'a
 | ![](../img/snap/snap_blocks/reset.png)                     | Redémarrer le logiciel du robot                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ![](../img/snap/snap_blocks/set_register_of_motor.png)     | Changer la valeur d'un registre moteur (position, speed, max torque, …) ou de plusieurs moteurs. Le champs “motor(s)” accepte : - le nom d'un unique moteur ( par ex **m1**) - une série de plusieurs noms de moteurs séparés par des espaces (par ex **m1 m2 m3 m4**) - un bloc Snap de type "list" comme par ex "$robot all motors".   
 | ![](../img/snap/snap_blocks/get_register.png)              | Lire la valeur d'un registrer moteur (position, speed, load, ...) (avancé)                
-| ![](../img/snap/snap_blocks/set_host.png)                  | Indiquer l'adresse du robot Poppy à contrôler. ça peut être : robot_name.local (par ex `poppy.local`) ; une adresse IP (par ex `123.124.145.176`) ou `localhost` si vous utilisez Poppy-Services
-Il est recommandé de ne pas le modifier si vous ne comprenez pas à quoi cela sert (avancé) |
+| ![](../img/snap/snap_blocks/set_host.png)                  | Indiquer l'adresse du robot Poppy à contrôler. ça peut être : robot_name.local (par ex `poppy.local`) ; une adresse IP (par ex `123.124.145.176`) ou `localhost` si vous utilisez Poppy-Services. Il est recommandé de ne pas le modifier si vous ne comprenez pas à quoi cela sert (avancé) |
 
 <!-- TODO
 
