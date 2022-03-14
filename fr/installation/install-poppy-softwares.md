@@ -2,7 +2,9 @@
 
 > **Mise en garde** Si vous souhaitez installer le logiciel d’un robot réel sur une carte embarquée de type Raspberry Pi, allez plutôt au [chapitre de démarrage](burn-an-image-file.md).
 
-Cette section vous guidera pour installer le logiciel Poppy sur votre ordinateur personnel. Elle est utile **seulement** si vous êtes dans l’une de ces situations : * vous souhaitez contrôler un robot simulé. * Vous souhaitez contrôler une créature Poppy depuis votre ordinateur **sans** utiliser la carte embarquée fournie (Odroid ou Raspberry Pi).
+Cette section vous guidera pour installer le logiciel Poppy sur votre ordinateur personnel. Elle est utile **seulement** si vous êtes dans l’une de ces situations :
+* vous souhaitez contrôler un robot simulé.
+* Vous souhaitez contrôler une créature Poppy Torso ou Humanoid depuis votre ordinateur **sans** utiliser la carte Raspberry Pi embarquée dans la tête. Dans ce cas connectez l'adaptateur USB2AX des moteurs directement à votre ordinateur en USB, sans oublier l'alimentation des moteurs via le SMS2Dynamixel.
 
 Les créatures Poppy sont contrôlées par du code écrit en langage Python. Selon votre système d’exploitation, vous devrez installer Python et dans tous les cas, vous devrez installer les bibliothèques logicielles requises. 
 
@@ -32,12 +34,12 @@ Maintenant que Python est installé sur votre système, ouvrez un terminal, puis
 
 
 ```bash
-pip install poppy-ergo-jr 
+pip install poppy-torso
 ```
 
 Cela demande à Python d'installer la bilbiothèque relative à Poppy Ergo Jr.
 
-> **Note** Remplacez « poppy-ergo-jr » par « poppy-torso » ou « poppy-humanoid » pour installer respectivement un Poppy Torso ou un Poppy Humanoid
+> **Note** Remplacez « poppy-torso » par « poppy-ergo-jr ou « poppy-humanoid » pour installer respectivement un Poppy Torso ou un Poppy Humanoid
 
 
 ### Mettre à jour le logiciel Poppy sous GNU/Linux
@@ -60,4 +62,7 @@ pip install poppy-ergo-jr --upgrade --no-deps
 
 Si vous avez réalisé les étapes 1 et 2 et qu'il n'y a pas eu d'erreur spécifique, Poppy est installé sur votre ordinateur !
 
+Vous pouvez ensuite démarrer les [services Poppy](../software-libraries/poppy-creature.md) pour démarrer en [Scratch](../programming/scratch.html) sur votre ordinateur ou bien vous connecter au robot via [Python](../getting-started/program-the-robot.md).
+
+Toutefois, si votre robot est flambant neuf, il faudra au préalable passer par une [configuration un-à-un des moteurs](../../en/assembly-guides/poppy-torso/addressing_dynamixel.html) avant de programmer en Scratch ou en Python.
 

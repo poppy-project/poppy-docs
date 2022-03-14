@@ -36,9 +36,9 @@ curl -L https://raw.githubusercontent.com/poppy-project/raspoppy/master/raspoppy
 
 Redémarrez le Raspberry Pi après la fin de l’installation. Le nom d’hôte, utilisateur par défaut et le mot de passe sera « poppy » (`ssh poppy@poppy.local` mot de passe = poppy). Vous pouvez tester votre installation avec l’interface web dans votre navigateur web en allant sur http://poppy.local.
 
-## Installer un Poppy Torso / Humanoïde sur un Odroid U3 ou Odroid XU4
+## Installer un Poppy Torso / Humanoïde sur un Odroid U3 ou Odroid XU4 (déprécié)
 
-Ces ordinateurs embarqués sont équipés de base sur la mémoire MMC d'une image système Ubuntu fonctionnelle, vous pouvez utiliser les scripts d'installation sur celle-ci. Dans le cas où vous n'avez pas de nouvelle installation, vous devez télécharger et graver des images système par défaut suivante: 
+Les ordinateurs embarqués Odroid ne sont plus supportés, mais vous trouverez ici les instructions archivées. Les Odroid sont équipés de base sur la mémoire MMC d'une image système Ubuntu fonctionnelle, vous pouvez utiliser les scripts d'installation sur celle-ci. Dans le cas où vous n'avez pas de nouvelle installation, vous devez télécharger et graver des images système par défaut suivante: 
 
 * Ubuntu 14,04 pour Odroid U3
 * [Ubuntu 14,04 pour Odroid XU3/XU4 ](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04.1lts-lubuntu-odroid-xu3-20150212.img.xz)

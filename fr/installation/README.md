@@ -6,7 +6,7 @@ Le projet Poppy est vaste, il y a beaucoup de possibilités de chemins d'install
 
 ## Vous voulez installer un robot Poppy physique
 
-Les robots Poppy sont contrôlées par un petit ordinateur embarqué : un Raspberry Pi ou une carte ODROID. Le système d'exploitation de ces ordinateurs est stocké sur une carte SD (vous pouvez également utiliser un contrôleur MMC pour la carte ODROID).
+Les robots Poppy sont contrôlées par un petit ordinateur embarqué : un Raspberry Pi. Le système d'exploitation de ces ordinateurs est stocké sur une carte SD.
 
 Vous avez deux possibilités : -** vous avez déjà une carte SD préchargée avec le système d'exploitation Poppy (fourni par Generation Robots). Vous n'avez rien à installer, vous êtes prêt à aller vers la section [assemblage](../assembly-guides/README.md).** C'est le cas le plus fréquent. - Vous avez une carte SD vierge, vous devez donc [ télécharger ](burn-an-image-file.md#download-the-image) et [graver](burn-an-image-file.md#write-an-image-to-the-sd-card) le système d'exploitation sur la carte SD.
 

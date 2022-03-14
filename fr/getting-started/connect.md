@@ -4,9 +4,11 @@ Dans cette section, nous décrirons comment démarrer votre robot et donnerons u
 
 ## Configurer le logiciel
 
-Les robots Poppy sont équipés d'une carte embarquée (exemple : Raspberry Pi, ODROID...) dont le rôle consiste à contrôler les moteurs et à accéder aux capteurs. À des fin de simplicité, on peut accéder à cet ordinateur à distance via une interface web. Il est facile de contrôler le robot à partir de votre propre ordinateur ou tablette sans avoir à télécharger / installer quoi que ce soit.
+Les robots Poppy sont équipés d'une carte embarquée Raspberry Pi dont le rôle consiste à contrôler les moteurs et à accéder aux capteurs. À des fin de simplicité, on peut accéder à cet ordinateur à distance via une interface web. Il est facile de contrôler le robot à partir de votre propre ordinateur ou tablette sans avoir à télécharger / installer quoi que ce soit.
 
-Il existe deux façons de configurer la carte pour votre robot Poppy: * [**la manière simple**](#manière-simple-et-recommandée--utiliser-la-carte-sd-poppy) : utilisez une image préprogrammée du système d'exploitation Poppy et écrivez-la (installez-la) sur la carte SD* [**la manière difficile pour les utilisateurs avancés**](#manière-avancée--diy-installez-tout-à-partir-de-zéro) : installez tout à partir de zéro
+Il existe deux façons de configurer la carte pour votre robot Poppy: 
+* [**la manière simple**](#manière-simple-et-recommandée--utiliser-la-carte-sd-poppy) : utilisez une image préprogrammée du système d'exploitation Poppy et écrivez-la (installez-la) sur la carte SD
+* [**la manière difficile pour les utilisateurs avancés**](#manière-avancée--diy-installez-tout-à-partir-de-zéro) : installez tout à partir de zéro
 
 > **Note** Si vous envisagez d'utiliser un robot simulé (robot virtuel), vous devez installer le logiciel sur votre ordinateur personnel. Suivez les [instructions pour le paramétrage de la simulation](../installation/install-vrep.md).
 

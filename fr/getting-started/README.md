@@ -24,7 +24,7 @@ Les robots Poppy sont open source et libre. Leur sources sont disponible libreme
 Les robots Poppy:
 
 * sont fabriqués à partir de pièces imprimable en 3D et des servomoteurs Dynamixel,
-* utilisent un ordinateur embarqué (Raspberry Pi ou Odroid pour les anciennes versions),
+* utilisent un ordinateur embarqué Raspberry Pi,
 * fonctionnent avec une bibliothèque logicielle en Python, [pypot](../software-libraries/pypot.md), qui permet de contrôler les servomoteurs Dynamixel simplement,
 * sont également contrôlable avec les même outils dans un simulateur ([ CoppeliaSim](http://www.coppeliarobotics.com)),
 * peuvent être contrôlé à l’aide des langages de programmation visuels [Scratch](https://scratch.mit.edu/) et ([Snap!](http://snap.berkeley.edu) une variante de Scratch) et un langage textuel [Python](https://www.python.org). Ils sont également programmables via une [API REST](../programming/rest.md), ce qui permet se s'interfacer avec d'autres languages de programmation

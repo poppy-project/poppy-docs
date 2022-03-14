@@ -2,9 +2,9 @@
 
 > **Note** Ce chapitre est réservé aux personnes qui veulent contrôler un robot tangible. Si vous avez l’intention de contrôler un robot simulé par ordinateur, veuillez vous référer au [parcours d’installation pour le simulateur](README.md#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer).
 
-Les créatures Poppy sont contrôlées par un petit ordinateur embarqué : un Raspberry Pi ou un Odroid.
+Les créatures Poppy sont contrôlées par un petit ordinateur embarqué : un Raspberry Pi.
 
-Le système d’exploitation de cet ordinateur est stocké sur une carte SD (vous pouvez également utiliser une carte MMC pour le Odroid).
+Le système d’exploitation de cet ordinateur est stocké sur une carte SD.
 
 Vous pouvez être dans 2 cas :
 

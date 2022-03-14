@@ -1,8 +1,8 @@
 # Installer les pilotes
 
-> **Mise en garde** Ce chapitre est destiné aux personnes qui veulent contrôler un robot Poppy **sans** employer une carte embarquée (Raspberry Pi ou Odroid). **C’est un cas particulier pour les utilisateurs avancés.**
+> **Mise en garde** Ce chapitre est destiné aux personnes qui veulent contrôler un robot Poppy **sans** employer une carte embarquée Raspberry Pi. **C’est un cas particulier pour les utilisateurs avancés.**
 
-Si vous souhaitez contrôler des robots tangibles directement depuis votre ordinateur **sans** un Raspberry Pi ou un Odroid et que vous utilisez un ordinateur avec Windows (vs GNU/Linux ou MAC OSX), vous devrez peut-être installer manuellement les pilotes pour le USB2AX ou le USB2Dynamixel.
+Si vous souhaitez contrôler des robots tangibles directement depuis votre ordinateur **sans** un Raspberry Pi et que vous utilisez un ordinateur avec Windows (vs GNU/Linux ou MAC OSX), vous devrez peut-être installer manuellement les pilotes pour le USB2AX ou le USB2Dynamixel.
 
 ## Si vous utilisez un [USB2AX](http://www.xevelabs.com/doku.php?id=product:usb2ax:usb2ax)
 

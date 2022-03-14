@@ -1,8 +1,6 @@
 # Install a Poppy board
 
-> **Warning** Warning: this chapter is only for people who want to create from scratch a Raspberry Pi or an Odroid system image. **It is strongly advised** to simply [burn a pre-made system image on your robot](burn-an-image-file.md).
-
-To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts.
+> **Warning** Warning: this chapter is only for people who want to create from scratch a Raspberry Pi system image. **It is strongly advised** to simply [flash a ready-to-go system image on your robot](burn-an-image-file.md).
 
 **Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages.** If you encounter issues with these scripts, you can post a message in the [support section](https://forum.poppy-project.org/c/support) of the forums.
 
@@ -37,10 +35,10 @@ Reboot after the end of the installation.
 The hostname, default user and password will be all set to "poppy" (`ssh poppy@poppy.local` password=poppy).
 You can test your installation with the web interface in your web browser http://poppy.local.
 
-## Install a Poppy Torso / Humanoid on a Odroid U3 or Odroid XU4
+## Install a Poppy Torso / Humanoid on a Odroid U3 or Odroid XU4 (deprecated)
 
 
-These boards come with a working Ubuntu base image on the MMC you can use the install scripts on it.
+These boards are now deprecated. They come with a working Ubuntu base image on the MMC you can use the install scripts on it.
 In the case you have not a fresh installation you have download and burn default system images:
 * Ubuntu 14.04 for Odroid U3
 * [Ubuntu 14.04 for Odroid XU3/XU4](http://odroid.in/ubuntu_14.04lts/ubuntu-14.04.1lts-lubuntu-odroid-xu3-20150212.img.xz)

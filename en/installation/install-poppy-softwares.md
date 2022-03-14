@@ -3,7 +3,7 @@
 
 This section will guide you to install Poppy software on your personal computer. It is useful **only** if you are in one of these situations:
 *  You want to control a simulated robot.
-*  You want to control a Poppy creature from your computer **without** using the embedded board (Odroid or Raspberry Pi).
+*  You want to control a Poppy creature from your computer **without** using the embedded board (Raspberry Pi).
 
 Poppy creatures are run by Python computer code. Depending on your operating system you will have to install Python and in any case you'll have to install the required software libraries. 
 
@@ -56,3 +56,6 @@ pip install poppy-ergo-jr --upgrade --no-deps
 
 If you followed steps 1 and 2 and met no specific error during the process, you successfully installed Python libraries for Poppy robot on your computer. 
 
+You can then start [Poppy services](../software-libraries/poppy-creature.md) on your computer to program with [Scratch](../programming/scratch.html) or connect to the robot via [Python](../getting-started/program-the-robot.md).
+
+However, if your robot is brand new, you will need first to [configure motors one-by-one](../../en/assembly-guides/poppy-torso/addressing_dynamixel.html) before you can program in Scratch or Python.

@@ -2,7 +2,7 @@
 
 > **Caution** This chapter is only for people who want to control a tangible robot **without** an embedded board (Raspberry Pi or Odroid). **It is a special case for advanced users.**
 
-If you intend to control tangible robots from your computer **without** a Raspberry Pi or a Odroid, and you use a computer with Windows (vs GNU/Linux or MAC OSX), you may need to install manually drivers for the USB2AX or the USB2Dynamixel.
+If you intend to control tangible robots from your computer **without** a Raspberry Pi, and you use a computer with Windows (vs GNU/Linux or MAC OSX), you may need to install manually drivers for the USB2AX or the USB2Dynamixel.
 
 ## If you use a [USB2AX](http://www.xevelabs.com/doku.php?id=product:usb2ax:usb2ax)
 
