@@ -4,7 +4,7 @@
 
 Cette section vous guidera pour installer le logiciel Poppy sur votre ordinateur personnel. Elle est utile **seulement** si vous êtes dans l’une de ces situations :
 * vous souhaitez contrôler un robot simulé.
-* Vous souhaitez contrôler une créature Poppy Torso ou Humanoid depuis votre ordinateur **sans** utiliser la carte Raspberry Pi embarquée dans la tête. Dans ce cas connectez l'adaptateur USB2AX des moteurs directement à votre ordinateur en USB, sans oublier l'alimentation des moteurs via le SMS2Dynamixel.
+* Vous souhaitez contrôler une créature Poppy Torso ou Humanoid depuis votre ordinateur **sans** utiliser la carte Raspberry Pi embarquée dans la tête. Dans ce cas connectez l'adaptateur USB2AX des moteurs directement à votre ordinateur en USB, sans oublier l'alimentation des moteurs via le SMPS2Dynamixel.
 
 Les créatures Poppy sont contrôlées par du code écrit en langage Python. Selon votre système d’exploitation, vous devrez installer Python et dans tous les cas, vous devrez installer les bibliothèques logicielles requises. 
 
