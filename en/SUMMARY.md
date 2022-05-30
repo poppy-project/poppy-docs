@@ -48,6 +48,7 @@
     * [Install USB to serial drivers](installation/install-drivers.md)
     * [Install a Poppy Board](installation/install-a-poppy-board.md)
 
+
 ### Robot programming
 
 * [Programming](programming/README.md)
@@ -59,6 +60,7 @@
     * [Robots API](programming/rest.md)
     * [Activities](demo-activities/README.md)
     * [Link with Snap4Arduino](demo-activities/snap4arduino.md)
+    * [Edit the robot look or behaviour](programming/edit-robot-behaviour.md)
 * [From simulation to real robot](from-simulation-to-real-robot/README.md)
     * [Program with Jupyter notebooks on the real robot](from-simulation-to-real-robot/using-jupyter.md)
     * [Snap! on the real robot](from-simulation-to-real-robot/using-snap.md)

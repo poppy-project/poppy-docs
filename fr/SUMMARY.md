@@ -41,6 +41,7 @@
     * [API des robots](programming/rest.md)
     * [Activités](demo-activities/README.md)
     * [Lien avec Snap4Arduino](demo-activities/snap4arduino.md)
+    * [Changer le look ou le comportement du robot](programming/edit-robot-behaviour.md)
 * [De la simulation au robot tangible](from-simulation-to-real-robot/README.md)
     * [Programmer avec les notebooks Jupyter](from-simulation-to-real-robot/using-jupyter.md)
     * [Snap! sur le robot tangible](from-simulation-to-real-robot/using-snap.md)
