@@ -71,6 +71,29 @@ Ici, nous vous montrons comment activer la **détection de visage humain** via l
 
 Ensuite redémarrez votre robot. La primitive est maintenant utilisable en Python via `poppy.face_detector` comme n'importe quelle autre primitive.
 
-## Cas d'utilisation
+### utiliser un autre port série / Utiliser un autre FTDI tel que U2D2
+
+Les FTDI sont des composants en charge de la conversion du signal USB en signal série. L'USB2AX (pour les moteurs AX et MX) et la [carte Pixl](https://github.com/poppy-project/pixl) (pour Raspberry Pi) sont les 2 FTDI officiels vendus avec votre robot Poppy. 
+
+Robotis vend également le modèle [U2D2](https://emanual.robotis.com/docs/en/parts/interface/u2d2/) qui est compatible avec de multiples connecteurs moteurs (TTL et RS-485).
+
+Tous les robots Poppy et pypot sont compatibles avec U2D2 mais nécessitent des changements matériels et logiciels :
+
+#### changements matériels
+
+Les connecteurs JST de vos câbles moteurs peuvent être différents côté U2D2 et côté moteurs. Cependant, tant qu'ils sont compatibles avec le protocole TTL, vous ouvez connecter vos moteurs au connecteur TTL de l'U2D2 avec des files Dupont.
+
+* Connectez `GND` à `GND`
+* Connectez `Data` à `Data`
+* La broche centrale (`+12V power`) n'est pas utilisée par l'U2D2, vous devez alimenter les moteurs avec une autre source d'alimentation 12V (par ex via SMPS2Dynamixel)
+
+**Attention:** prenez soin de vérifiez que vous n'intervertissez pas les fils GND, 12V et Data.
+
+#### Changements logiciels du fichier de configuration
+
+1. Passez `"sync_read": true` à `"sync_read": false,` (car l'U2D2 est seulement compatible avec les lectures BULK)
+2. Changez `"port": "/dev/ttyAMA0"` en `"port": "/dev/ttyUSB0"` (car l'U2D2 est reconnu sous un nom différent par le noyau Linux)
+
+Ensuite redémarrez votre Raspberry Pi ou reconnectez-vous à votre robot.
 
 
