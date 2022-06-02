@@ -27,7 +27,8 @@ In that case your own computer is driving the motors, in that case you can eithe
 * provide a new configuration file by using `r = pypot.from_json("path/to/my/configuration/file.json")` instead of `r = PoppyTorso()` (only for Python users)
 * edit the configuration file of the Python library of your robot. This path is different according to the way you installed the software. Some Linux users may find it in `~/.local/lib/python3.9/site-packages/poppy_ergo_jr/configuration/poppy_ergo_jr.json`
 
-## Usecase A: Add a new motor
+## Some usecases
+### Add a new motor
 
 Add the following fields to your configuration file and customize the name, model, id, and limits of your added motor:
 
@@ -51,7 +52,7 @@ Supported motor models are MX-106, MX-64, MX-28, MX-12, AX-12, AX-18, RX-24, RX-
 
 Make sure you do not make any syntax error and save your file. Then your new motor will be controlled as any other motor in pypot.
 
-## Usecase B: Add a sensor
+### Add a sensor
 
 Here, we are showing how to enable **human face detection** via the primitive `face_detector` that is already implemented in your robot but not enabled by default (because it uses CPU):
 
@@ -69,7 +70,6 @@ Here, we are showing how to enable **human face detection** via the primitive `f
 ```
 
 Then restart your robot. The primitive is now usable in Python via `poppy.face_detector` like any other primitive.
-
 
 
 
