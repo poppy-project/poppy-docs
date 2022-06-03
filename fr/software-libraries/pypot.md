@@ -53,7 +53,7 @@ If you do not know what API is best for you, use the consider starting with the 
 | Manual access to Dynamixel registers                    |    Yes    |     -     |
 | Record and replay trajectories                          |     -     |    Yes    |
 | Implement motor behaviours (primitives)                 |     -     |    Yes    |
-| Program in Python                                       |           |           |
+| Program in Python                                       |    Yes    |    Yes    |
 | Program in Scratch or Snap visual programming languages |     -     |    Yes    |
 | Control a simulated robot in Coppelia Sim               |     -     |    Yes    |
 
