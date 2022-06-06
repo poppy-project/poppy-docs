@@ -235,5 +235,51 @@ while True:
 Your robot should start dancing for ten seconds. Now, that you have seen the very basic things that you can do with pypot. It is time to jump on the tutorial to get a complete overview of the possibility.
 ```
 
+### Record/replay motions with the high-level library
+
+The move module contains utility classes to help you record and play moves. Those Move is simply defined as a sequence of positions.
+
+
+The `MoveRecorder` and `MovePlayer` classes are regular pypot primitives that can be started and stopped. For instance, if you want to record a 50Hz move on all the motor of an ergo-robot you can simply use the following code:
+
+```python
+import time
+import pypot.robot
+
+from pypot.primitive.move import MoveRecorder, Move, MovePlayer
+
+ergo = pypot.robot.from_config(...)  # Load your robot here e.g. PoppyErgoJr
+
+move_recorder = MoveRecorder(ergo, 50, ergo.motors)
+
+ergo.compliant = True
+
+move_recorder.start()
+time.sleep(5)
+move_recorder.stop()
+```
+
+This move can then be saved on disk:
+
+```python
+with open('my_nice_move.move', 'w') as f:
+    move_recorder.move.save(f)
+```
+And loaded and replayed:
+
+```python
+with open('my_nice_move.move') as f:
+    m = Move.load(f)
+
+ergo.compliant = False
+
+move_player = MovePlayer(ergo, m)
+move_player.start()
+```
+
+
+**Warning:** It is important to note that you should be sure that you primitive actually runs at the same speed that the move has been recorded. If the player can not run as fast as the framerate of the recorded Move, it will be played slowly resulting in a slower version of your move.
+
+
 ## Previous version of this documentation
 Find it at [poppy-project.github.io/pypot/](http://poppy-project.github.io/pypot/)
