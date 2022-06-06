@@ -70,7 +70,9 @@ More precisely, this class can be used to:
 Here is a quickstart that scans the motor bus connected on `/dev/USB0` (only for Linux), displays the current angular position of all the found motors, and move them to their initiale angular position (0 degree):
 
 ```python
-with DxlIO('/dev/USB0') as dxl_io:
+from pypot.dynamixel.io import DxlIO
+
+with DxlIO('/dev/ttyUSB0') as dxl_io:
     motor_IDs = dxl_io.scan()
     num_motors = len(motor_IDs)
     print("Found", num_motors, "motors with current angles",  dxl_io.get_present_position(motor_IDs))
@@ -112,7 +114,7 @@ dxl_io.set_goal_position({4: 0, 7: -90})
 
 **Warning:** The motors are handled in degrees where 0 is considered the central point of the motor turn. For the MX motors, the end points are -180° and 180°. For the AX and RX motors, these end points are -150° to 150°.
 
-### More complete example using the low-level API
+### More complete example using the low-level API
 
 In this example we are going to apply a sinusoid motion on two motors.
 
