@@ -12,8 +12,8 @@ Si vous imprimrez votre propre robot en 3D, cette liste vous aidera également �
 - 1x câble Ethernet court pour communiquer avec le robot avant d'activer le Wifi
 - 6x moteurs XL-320: ces moteurs, accompagnés d'un câble noir chacun, s'appellent des **servomoteurs** : ils sont plus intelligents qu'un moteur basique car ils sont capables de respecter une consigne de position angulaire ou de vitesse de rotation
 - 1x [carte Pixl](https://github.com/poppy-project/pixl): cette petite carte s'enfile sur le connecteur supérieur de la Raspberry Pi pour lui permettre de communiquer avec les moteurs XL-320
-- 1x sac de rivets Ollo (environ 70 de couleur et 4 gris)
-- 1x outil Ollo: cet outil noir permet d'enfiler et retirer des rivets Ollo
+- 1x sachet de [rivets RS-10](https://www.robotis.us/rivet-set-rs-10/) ; ou bien [mini rivets](https://www.robotis.us/robotis-mini-rivet-set/) (rivets transparents légèrement plus résistants)
+- 1x [outil de (dé)montage de rivets](https://www.robotis.us/tool-stl/)
 - **Pièces en impression 3D**: Soit à imprimer vous-mêmes grâce aux [fichiers STL](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL) soit vous les avez dans votre kit :
     - 1x [base.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/base.stl)
     - 3x [horn2horn.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl)
@@ -30,7 +30,7 @@ Si vous imprimrez votre propre robot en 3D, cette liste vous aidera également �
         - 1x [pen-screw.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-screw.stl)
     - 1x [disk_support.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/disk_support.stl) c'est un disque découpé par une machine laser pour reevoir votre robot ([plans ici](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/laser_cutting)).
 - **Screws**:
-    - 4x vis M2.5x6mm pour fixer la RAspberry Pi sur la base
+    - 4x vis M2.5x6mm pour fixer la Raspberry Pi sur la base
     - 4x vis M2x5mm pour fixer la caméra
     - 4x écrous M2 pour fixer la caméra
     - 1x entretoise Male/Femelle M2.5 10mm pour empêcher la carte Pixl de bouger

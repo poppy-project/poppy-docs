@@ -8,12 +8,13 @@ If you are 3D-printing your own Ergo Jr this step will also allow you to check t
 - 1x Raspberry Pi board: this board is the mini-computer acting as the brain of your robot
 - 1x microSD card with pre-loaded Poppy software: this one goes in the Raspberry Pi
 - 1x Raspberry Pi camera: as you may expect it, this camera is made especiallly for the Raspberry Pi. It comes with its interface cable.
-- 1x AC power 7.5V 2A with a 2.1 x 5.5 x 9.5 jack connector (usually [this mode](http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E))
+- 1x AC power 7.5V 2A with a 2.1 x 5.5 x 9.5 jack connector (usually [this model](http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E))
 - 1x short ethernet cable to communicate with your robot before you setup the wifi
 - 6x XL-320 motors: these motors, coming with a cable each, are called **servomotors**: they're smarter than a regular motor because they are able to follow a setpoint position or speed
 - 1x [Pixl board](https://github.com/poppy-project/pixl): this tiny board goes on top of the Raspberry Pi and allows it to talk to the XL-320 motors
-- 1x bag of Ollo rivets (about 70 colored and 4 grey)
-- 1x Ollo tool: made to clip and unclip rivets
+- 1x set of [RS-10 rivets](https://www.robotis.us/rivet-set-rs-10/) ; or [mini rivet set](https://www.robotis.us/robotis-mini-rivet-set/) (slightly stronger clear rivets)
+- 1x [rivet tool](https://www.robotis.us/tool-stl/)
+
 - **3D-printed parts**: either you printed them yourselves from [STL files](https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL) or they're included in your kit:
     - 1x [base.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/base.stl)
     - 3x [horn2horn.stl](https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl)
