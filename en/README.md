@@ -11,9 +11,9 @@ The documentation is organized as follow:
 * [Programming](programming/README.md): deeper look at the programming languages compatible with Poppy robots and their APIs
 
 ## About and contributing
-This documentation is maintained by Poppy team and [contributors](https://github.com/poppy-project/poppy-docs/blob/master/CONTRIBUTORS.md). DO not hesistate to [contribute](https://github.com/poppy-project/poppy-docs/blob/master/README.md).
+This documentation is maintained by Poppy team and [contributors](https://github.com/poppy-project/poppy-docs/blob/master/CONTRIBUTORS.md). Do not hesistate to [contribute](https://github.com/poppy-project/poppy-docs/blob/master/README.md).
 
-This book is licensed under the [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). **You are free to copy, modify and redistribute this document as long as you give an appropriate credit the the author and point a link to original website [docs.poppy-project.org](https://docs.poppy-project.org).**
+This book is licensed under the [CC-BY-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). **You are free to copy, modify and redistribute this document under the same license, as long as you give an appropriate credit the the author and point a link to original website [docs.poppy-project.org](https://docs.poppy-project.org).**
 
 
 ## Version

@@ -14,7 +14,7 @@ Cette documentation est organisée comme suit:
 
 Cette documentation est maintenue par l’équipe Poppy avec l'aide de nombreux [contributeurs](https://github.com/poppy-project/poppy-docs/blob/master/CONTRIBUTORS.md). Sentez-vous libres de [contribuer](https://github.com/poppy-project/poppy-docs/blob/master/README.md) !
 
-Ce document est sous [licence CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Vous êtes libre de copier, modifier et redistribuer ce document tant que vous donnez un crédit approprié aux auteurs et un lien vers le site original [docs.poppy-project.org](https://docs.poppy-project.org).**
+Ce document est sous [licence CC-BY-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr). **Vous êtes libre de copier, modifier et redistribuer ce document dans les mêmes conditions, tant que vous donnez un crédit approprié aux auteurs et un lien vers le site original [docs.poppy-project.org](https://docs.poppy-project.org).**
 
 ## Version
 

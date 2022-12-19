@@ -4,10 +4,6 @@ This is the source code repository for the documentation of the [Poppy Project](
 
 Documentation is also available to download as [PDF](https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs).
 
-# How to contribute
-
-The Poppy Documentation under the [Creative Commons Attribution-ShareAlike 4.0 license](http://creativecommons.org/licenses/by-sa/4.0/). Everyone is free to edit, correct and share the documentation.
-
 ## Where to start
 
 There are some of places where you can find something to contribute to:
